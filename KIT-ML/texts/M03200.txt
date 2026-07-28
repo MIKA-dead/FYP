@@ -1,0 +1,1 @@
+A human is walking and then shaking hands#A/DET human/NOUN is/AUX walk/VERB and/CCONJ then/ADV shake/VERB hand/NOUN#0.0#0.0

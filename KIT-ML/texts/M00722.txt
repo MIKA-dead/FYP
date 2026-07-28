@@ -1,0 +1,2 @@
+A person turns 180° to the left.#A/DET person/NOUN turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person takes to steps forward, turns around on one leg, then walks back to the starting point.#A/DET person/NOUN take/VERB to/ADP step/NOUN forward/ADV turn/VERB around/ADP on/ADP one/NUM leg/NOUN then/ADV walk/VERB back/ADV to/ADP the/DET starting/NOUN point/NOUN#0.0#0.0

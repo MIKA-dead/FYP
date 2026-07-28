@@ -1,0 +1,6 @@
+After a while the person steps to the side.#After/ADP a/DET while/NOUN the/DET person/NOUN step/VERB to/ADP the/DET side/NOUN#0.0#0.0
+a person steps to the right side#a/DET person/NOUN step/VERB to/ADP the/DET right/ADJ side/NOUN#0.0#0.0
+A human is doing a step to the right while staying in the same orientation#A/DET human/NOUN is/AUX do/VERB a/DET step/NOUN to/ADP the/DET right/NOUN while/SCONJ stay/VERB in/ADP the/DET same/ADJ orientation/NOUN#0.0#0.0
+Person takes one big step to the right side.#person/NOUN take/VERB one/NUM big/ADJ step/NOUN to/ADP the/DET right/ADJ side/NOUN#0.0#0.0
+A person side stepping to the right#A/DET person/NOUN side/NOUN step/VERB to/ADP the/DET right/NOUN#0.0#0.0
+Somebody goes a step to the right.#Somebody/PRON go/VERB a/DET step/NOUN to/ADP the/DET right/NOUN#0.0#0.0

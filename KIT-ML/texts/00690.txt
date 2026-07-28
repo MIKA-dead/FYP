@@ -1,0 +1,2 @@
+A person punches five times, beginning with the left hand and ending with the left hand.#A/DET person/NOUN punch/VERB five/NUM time/NOUN begin/VERB with/ADP the/DET left/ADJ hand/NOUN and/CCONJ end/VERB with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
+A person punches alternatively in front of him.#A/DET person/NOUN punch/VERB alternatively/ADV in/ADP front/NOUN of/ADP him/PRON#0.0#0.0

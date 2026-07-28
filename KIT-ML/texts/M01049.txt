@@ -1,0 +1,5 @@
+A human ambles a few centimeters right of center.#A/DET human/ADJ amble/NOUN a/DET few/ADJ centimeter/NOUN right/ADV of/ADP center/NOUN#0.0#0.0
+Someone walks forward#Someone/PRON walk/VERB forward/ADV#0.0#0.0
+a person walks straight forwards#a/DET person/NOUN walk/VERB straight/ADV forwards/ADV#0.0#0.0
+A person walks fast forwards.#A/DET person/NOUN walk/VERB fast/ADJ forwards/ADV#0.0#0.0
+A person walks 4 steps forward.#A/DET person/NOUN walk/VERB step/NOUN forward/ADV#0.0#0.0

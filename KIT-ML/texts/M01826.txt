@@ -1,0 +1,6 @@
+Person stumbling backwards after being pushed#person/NOUN stumble/VERB backwards/ADV after/ADP being/AUX push/VERB#0.0#0.0
+A person is pushed backwards.#A/DET person/NOUN is/AUX push/VERB backwards/ADV#0.0#0.0
+A person gets pushed from in front of him and stumbles back 1 step.#A/DET person/NOUN get/VERB push/VERB from/ADP in/ADP front/NOUN of/ADP him/PRON and/CCONJ stumble/VERB back/ADV step/NOUN#0.0#0.0
+a person gets pushed backwards#a/DET person/NOUN get/VERB push/VERB backwards/ADV#0.0#0.0
+A person stumbles a step back.#A/DET person/NOUN stumble/VERB a/DET step/NOUN back/ADV#0.0#0.0
+The human jumps backwards#The/DET human/ADJ jump/VERB backwards/ADV#0.0#0.0

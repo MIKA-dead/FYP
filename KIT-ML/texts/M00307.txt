@@ -1,0 +1,2 @@
+A person walks forward while turning to the left#A/DET person/NOUN walk/VERB forward/ADV while/SCONJ turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person goes to the left, where it passes through a quarter circle line along.#A/DET person/NOUN go/VERB to/ADP the/DET left/NOUN where/ADV it/PRON pass/VERB through/ADP a/DET quarter/NOUN circle/NOUN line/NOUN along/ADP#0.0#0.0

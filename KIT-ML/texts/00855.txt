@@ -1,0 +1,2 @@
+A person walks forward in a fast fashion.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET fast/ADJ fashion/NOUN#0.0#0.0
+A human makes 4 fast steps forward.#A/DET human/NOUN make/VERB fast/ADJ step/NOUN forward/ADV#0.0#0.0

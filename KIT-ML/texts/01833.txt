@@ -1,0 +1,3 @@
+A person is pushed from behind#A/DET person/NOUN is/AUX push/VERB from/ADP behind/ADV#0.0#0.0
+human is pushed from behind by an invisible force and counterbalances the pushing force by stepping forward#human/PROPN is/AUX push/VERB from/ADP behind/ADV by/ADP an/DET invisible/ADJ force/NOUN and/CCONJ counterbalance/VERB the/DET push/VERB force/NOUN by/ADP step/VERB forward/ADV#0.0#0.0
+A person getting shoved from behind stumbles forward a few small steps.#A/DET person/NOUN get/VERB shove/VERB from/ADP behind/ADP stumble/NOUN forward/ADV a/DET few/ADJ small/ADJ step/NOUN#0.0#0.0

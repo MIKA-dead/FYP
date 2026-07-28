@@ -1,0 +1,2 @@
+A person walking in a quarter circle to the left#A/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+a person walks a few steps forwards and the turn to the left#a/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN forwards/ADV and/CCONJ the/DET turn/NOUN to/ADP the/DET left/NOUN#0.0#0.0

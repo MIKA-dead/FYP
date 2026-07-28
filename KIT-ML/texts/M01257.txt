@@ -1,0 +1,3 @@
+human seems to throw something with his right hand#human/NOUN seem/VERB to/PART throw/VERB something/PRON with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0
+A human is performing a slap (volleyball serving)#A/DET human/NOUN is/AUX perform/VERB a/DET slap/NOUN volleyball/NOUN serve/VERB#0.0#0.0
+Somebody throws something with his right hand.#Somebody/PRON throw/VERB something/PRON with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

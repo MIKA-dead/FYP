@@ -1,0 +1,1 @@
+A person steers a car with occasional gear shifts.#A/DET person/NOUN steer/VERB a/DET car/NOUN with/ADP occasional/ADJ gear/NOUN shift/NOUN#0.0#0.0

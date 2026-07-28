@@ -1,0 +1,1 @@
+the person is waving both hands#the/DET person/NOUN is/AUX wave/VERB both/DET hand/NOUN#0.0#0.0

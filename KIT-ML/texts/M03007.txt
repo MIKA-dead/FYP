@@ -1,0 +1,1 @@
+A human runs a 90°rightwards curve while playing basketball.#A/DET human/NOUN run/VERB a/DET rightwards/ADP curve/NOUN while/SCONJ play/VERB basketball/NOUN#0.0#0.0

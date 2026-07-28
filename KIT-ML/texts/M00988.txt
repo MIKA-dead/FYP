@@ -1,0 +1,3 @@
+A human walks to the right.#A/DET human/NOUN walk/VERB to/ADP the/DET right/NOUN#0.0#0.0
+Someone is walking forward and then performing a right turn.#Someone/PRON is/AUX walk/VERB forward/ADV and/CCONJ then/ADV perform/VERB a/DET right/ADJ turn/NOUN#0.0#0.0
+A human is walking a quarter of a cirlce to its right.#A/DET human/NOUN is/AUX walk/VERB a/DET quarter/NOUN of/ADP a/DET cirlce/NOUN to/ADP its/DET right/NOUN#0.0#0.0

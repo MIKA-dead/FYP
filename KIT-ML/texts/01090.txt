@@ -1,0 +1,1 @@
+a person is doing a left u-turn while walking#a/DET person/NOUN is/AUX do/VERB a/DET left/ADJ uturn/NOUN while/SCONJ walk/VERB#0.0#0.0

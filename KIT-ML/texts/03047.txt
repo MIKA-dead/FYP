@@ -1,0 +1,1 @@
+A man standing and drinking a bottle of water#A/DET man/NOUN stand/VERB and/CCONJ drink/VERB a/DET bottle/NOUN of/ADP water/NOUN#0.0#0.0

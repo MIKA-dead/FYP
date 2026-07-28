@@ -1,0 +1,5 @@
+A person stomps down his left foot.#A/DET person/NOUN stomp/VERB down/ADP his/DET left/ADJ foot/NOUN#0.0#0.0
+human stomps its left foot on the ground#human/ADJ stomps/PROPN its/DET left/ADJ foot/NOUN on/ADP the/DET ground/NOUN#0.0#0.0
+A person lifts the left foot and sets it back to the ground again.#A/DET person/NOUN lift/VERB the/DET left/ADJ foot/NOUN and/CCONJ set/VERB it/PRON back/ADV to/ADP the/DET ground/NOUN again/ADV#0.0#0.0
+A human lifts its left foot and stomps with the foot on the ground.#A/DET human/ADJ lift/VERB its/DET left/ADJ foot/NOUN and/CCONJ stomp/NOUN with/ADP the/DET foot/NOUN on/ADP the/DET ground/NOUN#0.0#0.0
+A person stamps the ground with his left foot.#A/DET person/NOUN stamp/VERB the/DET ground/NOUN with/ADP his/DET left/ADJ foot/NOUN#0.0#0.0

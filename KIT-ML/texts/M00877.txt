@@ -1,0 +1,6 @@
+A person walks forward, turns on the spot and walk backwards.#A/DET person/NOUN walk/VERB forward/ADV turn/VERB on/ADP the/DET spot/NOUN and/CCONJ walk/VERB backwards/ADV#0.0#0.0
+A human walks a few steps before turning swiftly around on his left foot#A/DET human/NOUN walk/VERB a/DET few/ADJ step/NOUN before/ADP turn/VERB swiftly/ADV around/ADV on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0
+A person is spining around a 180 degrees to the left while walking.#A/DET person/NOUN is/AUX spin/VERB around/ADP a/DET degree/NOUN to/ADP the/DET left/ADJ while/SCONJ walk/VERB#0.0#0.0
+A person turns 180 degrees on his left foot.#A/DET person/NOUN turn/VERB degree/NOUN on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0
+some one turns counterclockwise back on his left foot.#some/DET one/NOUN turn/VERB counterclockwise/VERB back/ADV on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0
+Someone walks two steps forward, then turns around by 180° to the left and makes two steps again.#Someone/PRON walk/VERB two/NUM step/NOUN forward/ADV then/ADV turn/VERB around/ADP by/ADP to/ADP the/DET left/NOUN and/CCONJ make/VERB two/NUM step/NOUN again/ADV#0.0#0.0

@@ -1,0 +1,3 @@
+A human walks forward for seven steps and then stops.#A/DET human/NOUN walk/VERB forward/ADV for/ADP seven/NUM step/NOUN and/CCONJ then/ADV stop/VERB#0.0#0.0
+A person takes eight forward steps on a straight line.#A/DET person/NOUN take/VERB eight/NUM forward/ADV step/NOUN on/ADP a/DET straight/ADJ line/NOUN#0.0#0.0
+A person is walking slowly, looking down#A/DET person/NOUN is/AUX walk/VERB slowly/ADV look/VERB down/ADV#0.0#0.0

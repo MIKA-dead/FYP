@@ -1,0 +1,1 @@
+A person kicks with the right foot.#A/DET person/NOUN kick/VERB with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0

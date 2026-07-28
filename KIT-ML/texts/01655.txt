@@ -1,0 +1,7 @@
+A person is standing straight upright with their arms streched out sideways.#A/DET person/NOUN is/AUX stand/VERB straight/ADV upright/ADV with/ADP their/DET arm/NOUN streche/VERB out/ADP sideways/ADV#0.0#0.0
+human stands with its arm being streched out sideways#human/ADJ stand/VERB with/ADP its/DET arm/NOUN being/AUX streche/VERB out/ADP sideways/ADV#0.0#0.0
+A human is balancing with its hands streched out, in a static position.#A/DET human/NOUN is/AUX balance/VERB with/ADP its/DET hand/NOUN streche/VERB out/ADP in/ADP a/DET static/ADJ position/NOUN#0.0#0.0
+a person has both arms raised to both side like wings#a/DET person/NOUN has/AUX both/DET arm/NOUN raise/VERB to/ADP both/DET side/NOUN like/SCONJ wing/NOUN#0.0#0.0
+A person holds his arms on the height of his shoulders.#A/DET person/NOUN hold/VERB his/DET arm/NOUN on/ADP the/DET height/NOUN of/ADP his/DET shoulder/NOUN#0.0#0.0
+A person is balancing while holding out his arms#A/DET person/NOUN is/AUX balance/VERB while/SCONJ hold/VERB out/ADP his/DET arm/NOUN#0.0#0.0
+Someone stands with his arms raised to the side.#Someone/PRON stand/VERB with/ADP his/DET arm/NOUN raise/VERB to/ADP the/DET side/NOUN#0.0#0.0

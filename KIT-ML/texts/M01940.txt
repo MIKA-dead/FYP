@@ -1,0 +1,1 @@
+A person goes one step forward.#A/DET person/NOUN go/VERB one/NUM step/NOUN forward/ADV#0.0#0.0

@@ -1,0 +1,5 @@
+Someone shakes hands#Someone/PRON shake/VERB hand/NOUN#0.0#0.0
+a person shakes anothers person's hand with its right hand#a/DET person/NOUN shake/VERB anothers/PROPN person/NOUN hand/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
+A person makes a motion as if shaking hands with another person.#A/DET person/NOUN make/VERB a/DET motion/NOUN as/SCONJ if/SCONJ shake/VERB hand/NOUN with/ADP another/DET person/NOUN#0.0#0.0
+human performs a motion which resembles shaking hands#human/PROPN perform/VERB a/DET motion/NOUN which/DET resemble/VERB shake/VERB hand/NOUN#0.0#0.0
+Someone is shaking hands.#Someone/PRON is/AUX shake/VERB hand/NOUN#0.0#0.0

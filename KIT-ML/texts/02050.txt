@@ -1,0 +1,4 @@
+A person kneels down on the floor, using the right hand as support.#A/DET person/NOUN kneel/VERB down/ADP on/ADP the/DET floor/NOUN use/VERB the/DET right/ADJ hand/NOUN as/SCONJ support/NOUN#0.0#0.0
+A person stretching both arms then going down to his knees.#A/DET person/NOUN stretch/VERB both/DET arm/NOUN then/ADV go/VERB down/ADP to/ADP his/DET knee/NOUN#0.0#0.0
+A person raising his arms to the height of his shoulders before getting down on his knees.#A/DET person/NOUN raise/VERB his/DET arm/NOUN to/ADP the/DET height/NOUN of/ADP his/DET shoulder/NOUN before/ADP get/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0
+a person raises its hands like wings and then goes down on its knees#a/DET person/NOUN raise/VERB its/DET hand/NOUN like/SCONJ wing/NOUN and/CCONJ then/ADV go/VERB down/ADP on/ADP its/DET knee/NOUN#0.0#0.0

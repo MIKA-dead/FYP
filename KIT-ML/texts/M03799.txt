@@ -1,0 +1,1 @@
+A person is jumping forward.#A/DET person/NOUN is/AUX jump/VERB forward/ADV#0.0#0.0

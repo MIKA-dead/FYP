@@ -1,0 +1,5 @@
+A human is leaning forward.#A/DET human/NOUN is/AUX lean/VERB forward/ADV#0.0#0.0
+A human is slightly bowing down#A/DET human/NOUN is/AUX slightly/ADV bow/VERB down/ADP#0.0#0.0
+A person is bowing.#A/DET person/NOUN is/AUX bow/VERB#0.0#0.0
+A person bows gently.#A/DET person/NOUN bow/VERB gently/ADV#0.0#0.0
+A person bows slightly.#A/DET person/NOUN bow/VERB slightly/ADV#0.0#0.0

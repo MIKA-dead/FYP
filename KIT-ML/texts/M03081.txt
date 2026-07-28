@@ -1,0 +1,1 @@
+A person is looking around with his head and upper body.#A/DET person/NOUN is/AUX look/VERB around/ADP with/ADP his/DET head/NOUN and/CCONJ upper/ADJ body/NOUN#0.0#0.0

@@ -1,0 +1,3 @@
+a person is turning right while walking.#a/DET person/NOUN is/AUX turn/VERB right/ADV while/SCONJ walk/VERB#0.0#0.0
+Walking four steps in a slight curve to the right.#walk/VERB four/NUM step/NOUN in/ADP a/DET slight/ADJ curve/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+A person walks in a quarter circle.#A/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0

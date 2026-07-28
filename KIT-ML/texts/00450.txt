@@ -1,0 +1,3 @@
+A person is doing a short sprint#A/DET person/NOUN is/AUX do/VERB a/DET short/ADJ sprint/NOUN#0.0#0.0
+A person joggs forward.#A/DET person/NOUN joggs/NOUN forward/ADV#0.0#0.0
+A person is jogging and stops.#A/DET person/NOUN is/AUX jog/VERB and/CCONJ stop/NOUN#0.0#0.0

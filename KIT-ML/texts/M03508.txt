@@ -1,0 +1,1 @@
+A human performs warm-up exercises#A/DET human/ADJ perform/VERB warmup/PROPN exercise/VERB#0.0#0.0

@@ -1,0 +1,13 @@
+Someone walks in a clockwise circle.#Someone/PRON walk/VERB in/ADP a/DET clockwise/ADJ circle/NOUN#0.0#0.0
+A human walks in a circle with a diameter of 2m.#A/DET human/ADJ walk/VERB in/ADP a/DET circle/NOUN with/ADP a/DET diameter/NOUN of/ADP m/NOUN#0.0#0.0
+Someone walk in a full clockwise circle.#Someone/PRON walk/NOUN in/ADP a/DET full/ADJ clockwise/NOUN circle/NOUN#0.0#0.0
+A person walks in a full circle.#A/DET person/NOUN walk/VERB in/ADP a/DET full/ADJ circle/NOUN#0.0#0.0
+Someone makes a circle#Someone/PRON make/VERB a/DET circle/NOUN#0.0#0.0
+He turns around.#He/PRON turn/VERB around/ADV#0.0#0.0
+A person walks a circle.#A/DET person/NOUN walk/VERB a/DET circle/NOUN#0.0#0.0
+someone walks one round#someone/PRON walk/VERB one/NUM round/NOUN#0.0#0.0
+A person walks a full clockwise circle.#A/DET person/NOUN walk/VERB a/DET full/ADJ clockwise/NOUN circle/NOUN#0.0#0.0
+A person walks in a circle clockwise.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN clockwise/NOUN#0.0#0.0
+a person walks a circle to the right#a/DET person/NOUN walk/VERB a/DET circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+The human walks a circle#The/DET human/NOUN walk/VERB a/DET circle/NOUN#0.0#0.0
+A human walks in circle clockwise.#A/DET human/ADJ walk/NOUN in/ADP circle/NOUN clockwise/NOUN#0.0#0.0

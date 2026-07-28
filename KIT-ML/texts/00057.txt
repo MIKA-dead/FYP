@@ -1,0 +1,2 @@
+A person walks backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
+Someone is walking backwards 4 steps starting with the left leg.#Someone/PRON is/AUX walk/VERB backwards/ADV step/NOUN start/VERB with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person picks something up from the ground using his right hand.#A/DET person/NOUN pick/VERB something/PRON up/ADP from/ADP the/DET ground/NOUN use/VERB his/DET right/ADJ hand/NOUN#0.0#0.0

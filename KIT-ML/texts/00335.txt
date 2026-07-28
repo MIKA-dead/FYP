@@ -1,0 +1,2 @@
+Person walking backwards#person/NOUN walk/VERB backwards/ADV#0.0#0.0
+A person walks backward#A/DET person/NOUN walk/VERB backward/ADV#0.0#0.0

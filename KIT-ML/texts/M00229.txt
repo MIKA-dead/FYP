@@ -1,0 +1,6 @@
+A person walks in a narrow clockwise circle#A/DET person/NOUN walk/VERB in/ADP a/DET narrow/ADJ clockwise/NOUN circle/NOUN#0.0#0.0
+Subject in small circle clockwise#Subject/ADJ in/ADP small/ADJ circle/NOUN clockwise/NOUN#0.0#0.0
+Someone slowly walks in a small circle to the right.#Someone/PRON slowly/ADV walk/VERB in/ADP a/DET small/ADJ circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+someone walks a circle.#someone/PRON walk/VERB a/DET circle/NOUN#0.0#0.0
+A human walks slowly in circles, clockwise.#A/DET human/ADJ walk/VERB slowly/ADV in/ADP circle/NOUN clockwise/NOUN#0.0#0.0
+A human goes a circle right around.#A/DET human/NOUN go/VERB a/DET circle/NOUN right/ADV around/ADV#0.0#0.0

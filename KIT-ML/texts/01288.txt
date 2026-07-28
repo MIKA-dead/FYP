@@ -1,0 +1,5 @@
+A Person moves the hands together in front of the chest and kicks with  the left foot.#A/DET person/NOUN move/VERB the/DET hand/NOUN together/ADV in/ADP front/NOUN of/ADP the/DET chest/NOUN and/CCONJ kick/NOUN with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0
+A human is performing a low kick with the left foot, getting the arms up in a defence position#A/DET human/NOUN is/AUX perform/VERB a/DET low/ADJ kick/NOUN with/ADP the/DET left/ADJ foot/NOUN get/VERB the/DET arm/NOUN up/ADP in/ADP a/DET defence/NOUN position/NOUN#0.0#0.0
+A person performs a side kick with his hands held close to his body.#A/DET person/NOUN perform/VERB a/DET side/ADJ kick/NOUN with/ADP his/DET hand/NOUN hold/VERB close/ADV to/ADP his/DET body/NOUN#0.0#0.0
+A person kicks with the left leg.#A/DET person/NOUN kick/VERB with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0
+someone  is kicking something.#someone/PRON is/AUX kick/VERB something/PRON#0.0#0.0

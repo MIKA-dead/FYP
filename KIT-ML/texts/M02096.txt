@@ -1,0 +1,6 @@
+Person going an all fours and then crawling forwards#person/NOUN go/VERB an/DET all/DET four/NOUN and/CCONJ then/ADV crawl/VERB forwards/ADV#0.0#0.0
+human kneels down and then crawls#human/ADJ kneel/VERB down/ADP and/CCONJ then/ADV crawl/VERB#0.0#0.0
+A person is crawling.#A/DET person/NOUN is/AUX crawl/VERB#0.0#0.0
+A person gets in their knees and crawls 3 steps.#A/DET person/NOUN get/VERB in/ADP their/DET knee/NOUN and/CCONJ crawl/VERB step/NOUN#0.0#0.0
+a person goes down on its knees and crawls#a/DET person/NOUN go/VERB down/ADP on/ADP its/DET knee/NOUN and/CCONJ crawl/NOUN#0.0#0.0
+A person is crawling#A/DET person/NOUN is/AUX crawl/VERB#0.0#0.0

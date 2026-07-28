@@ -1,0 +1,2 @@
+A person walking a few, slow steps forwards.#A/DET person/NOUN walk/VERB a/DET few/ADJ slow/ADJ step/NOUN forwards/ADV#0.0#0.0
+A person takes 7 steps.#A/DET person/NOUN take/VERB step/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person moves both arms up and down towards the side#A/DET person/NOUN move/VERB both/DET arm/NOUN up/ADV and/CCONJ down/ADV towards/ADP the/DET side/NOUN#0.0#0.0

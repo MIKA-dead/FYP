@@ -1,0 +1,1 @@
+A person walks in the forward direction then turns around by 180 degrees and walks forward again.#A/DET person/NOUN walk/VERB in/ADP the/DET forward/ADJ direction/NOUN then/ADV turn/VERB around/ADP by/ADP degree/NOUN and/CCONJ walk/VERB forward/ADV again/ADV#0.0#0.0

@@ -1,0 +1,1 @@
+A human runs in a 90° rightwards curve.#A/DET human/ADJ run/NOUN in/ADP a/DET rightwards/CCONJ curve/NOUN#0.0#0.0

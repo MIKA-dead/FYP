@@ -1,0 +1,4 @@
+A human is walking carefully, looking where he steps.#A/DET human/NOUN is/AUX walk/VERB carefully/ADV look/VERB where/ADV he/PRON step/VERB#0.0#0.0
+A human is walking and balancing on a defined path#A/DET human/NOUN is/AUX walk/VERB and/CCONJ balance/VERB on/ADP a/DET define/VERB path/NOUN#0.0#0.0
+A person walks over stepping stones.#A/DET person/NOUN walk/VERB over/ADP stepping/ADJ stone/NOUN#0.0#0.0
+A person walkes while avoiding obstacle.#A/DET person/NOUN walk/VERB while/SCONJ avoid/VERB obstacle/NOUN#0.0#0.0

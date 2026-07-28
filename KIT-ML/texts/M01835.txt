@@ -1,0 +1,1 @@
+the person is pushed to the front#the/DET person/NOUN is/AUX push/VERB to/ADP the/DET front/NOUN#0.0#0.0

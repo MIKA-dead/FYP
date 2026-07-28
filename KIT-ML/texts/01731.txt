@@ -1,0 +1,2 @@
+a person stands an gets pushed from the back#a/DET person/NOUN stand/VERB an/DET get/NOUN push/VERB from/ADP the/DET back/NOUN#0.0#0.0
+A person stumbles forward.#A/DET person/NOUN stumble/VERB forward/ADV#0.0#0.0

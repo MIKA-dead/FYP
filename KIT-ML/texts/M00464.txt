@@ -1,0 +1,4 @@
+Person walking to the left#person/NOUN walk/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person turns to the left.#A/DET person/NOUN turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person walks forward in a 90° curve.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET curve/NOUN#0.0#0.0
+A person turns to the left.#A/DET person/NOUN turn/VERB to/ADP the/DET left/NOUN#0.0#0.0

@@ -1,0 +1,9 @@
+A person walks backward at a slow speed.#A/DET person/NOUN walk/VERB backward/ADV at/ADP a/DET slow/ADJ speed/NOUN#0.0#0.0
+A human is walking 4 steps backwards and starting with its right food.#A/DET human/NOUN is/AUX walk/VERB step/NOUN backwards/ADV and/CCONJ start/VERB with/ADP its/DET right/ADJ food/NOUN#0.0#0.0
+A person walks backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
+some is reverse walking#some/DET is/AUX reverse/ADJ walk/VERB#0.0#0.0
+A person takes 4 steps backwards.#A/DET person/NOUN take/VERB step/NOUN backwards/ADV#0.0#0.0
+A person moves backwards 4 steps before standing still#A/DET person/NOUN move/VERB backwards/ADV step/NOUN before/ADP stand/VERB still/ADV#0.0#0.0
+Someone is walking backwards.#Someone/PRON is/AUX walk/VERB backwards/ADV#0.0#0.0
+a man is walking backwards#a/DET man/NOUN is/AUX walk/VERB backwards/ADV#0.0#0.0
+Somebody walks a few steps backward.#Somebody/PRON walk/VERB a/DET few/ADJ step/NOUN backward/ADV#0.0#0.0

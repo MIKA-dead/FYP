@@ -1,0 +1,2 @@
+A person moves in a circle clockwise.#A/DET person/NOUN move/VERB in/ADP a/DET circle/NOUN clockwise/NOUN#0.0#0.0
+A human walks a small circle to its left.#A/DET human/NOUN walk/VERB a/DET small/ADJ circle/NOUN to/ADP its/DET left/NOUN#0.0#0.0

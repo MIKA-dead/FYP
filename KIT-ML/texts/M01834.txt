@@ -1,0 +1,2 @@
+A person pushed from the back#A/DET person/NOUN push/VERB from/ADP the/DET back/NOUN#0.0#0.0
+Somebody has been pushed.#Somebody/PRON has/AUX been/AUX push/VERB#0.0#0.0

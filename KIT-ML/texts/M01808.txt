@@ -1,0 +1,2 @@
+Someone is pushed to the left.#Someone/PRON is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A standing person is pushed from the right side and compensates with a sidestep to the left.#A/DET stand/VERB person/NOUN is/AUX push/VERB from/ADP the/DET right/ADJ side/NOUN and/CCONJ compensate/VERB with/ADP a/DET sidestep/NOUN to/ADP the/DET left/NOUN#0.0#0.0

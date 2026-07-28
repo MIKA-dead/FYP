@@ -1,0 +1,3 @@
+A person plays the violin once.#A/DET person/NOUN play/VERB the/DET violin/NOUN once/ADV#0.0#0.0
+the person moves the right hand from up to down#the/DET person/NOUN move/VERB the/DET right/ADJ hand/NOUN from/ADP up/ADP to/ADP down/ADV#0.0#0.0
+Someone is holding a guitar and playing it with the right hand.#Someone/PRON is/AUX hold/VERB a/DET guitar/NOUN and/CCONJ play/VERB it/PRON with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

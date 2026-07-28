@@ -1,0 +1,2 @@
+A human walking in a circle counterclockwise#A/DET human/ADJ walking/NOUN in/ADP a/DET circle/NOUN counterclockwise/NOUN#0.0#0.0
+A person walks a full circle to the left.#A/DET person/NOUN walk/VERB a/DET full/ADJ circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

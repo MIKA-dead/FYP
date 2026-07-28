@@ -1,0 +1,1 @@
+A human performs some kind of dancing move#A/DET human/ADJ perform/VERB some/DET kind/NOUN of/ADP dancing/NOUN move/NOUN#0.0#0.0

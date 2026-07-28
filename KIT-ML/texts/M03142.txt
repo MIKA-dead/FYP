@@ -1,0 +1,1 @@
+A person is performing driving motions with its arms.#A/DET person/NOUN is/AUX perform/VERB drive/VERB motion/NOUN with/ADP its/DET arm/NOUN#0.0#0.0

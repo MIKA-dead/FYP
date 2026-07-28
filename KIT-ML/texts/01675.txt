@@ -1,0 +1,2 @@
+a person walks four steps forward#a/DET person/NOUN walk/VERB four/NUM step/NOUN forward/ADV#0.0#0.0
+A person is walking forward casual.#A/DET person/NOUN is/AUX walk/VERB forward/ADV casual/ADJ#0.0#0.0

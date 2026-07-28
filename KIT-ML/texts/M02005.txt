@@ -1,0 +1,2 @@
+A person runs forward.#A/DET person/NOUN run/VERB forward/ADV#0.0#0.0
+a person is running a few meters forwards#a/DET person/NOUN is/AUX run/VERB a/DET few/ADJ meter/NOUN forwards/ADV#0.0#0.0

@@ -1,0 +1,1 @@
+a person is waiting#a/DET person/NOUN is/AUX wait/VERB#0.0#0.0

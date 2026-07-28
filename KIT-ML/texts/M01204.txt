@@ -1,0 +1,2 @@
+A human walking forwards#A/DET human/ADJ walking/NOUN forwards/ADV#0.0#0.0
+A persons walks fast for 4 steps and stops#A/DET person/NOUN walk/VERB fast/ADV for/ADP step/NOUN and/CCONJ stop/NOUN#0.0#0.0

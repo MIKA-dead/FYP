@@ -1,0 +1,2 @@
+A person stirs something.#A/DET person/NOUN stir/VERB something/PRON#0.0#0.0
+a person wipes something away with its right hand#a/DET person/NOUN wipe/VERB something/PRON away/ADV with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+a person walks four steps backward#a/DET person/NOUN walk/VERB four/NUM step/NOUN backward/ADV#0.0#0.0
+Someone takes 4 steps backwards starting with right.#Someone/PRON take/VERB step/NOUN backwards/ADV start/VERB with/ADP right/NOUN#0.0#0.0

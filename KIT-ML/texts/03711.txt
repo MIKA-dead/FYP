@@ -1,0 +1,1 @@
+A person lies on the back and stands up.#A/DET person/NOUN lie/VERB on/ADP the/DET back/NOUN and/CCONJ stand/VERB up/ADP#0.0#0.0

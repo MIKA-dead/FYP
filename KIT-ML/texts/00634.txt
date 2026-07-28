@@ -1,0 +1,5 @@
+A person walks forward in a hurry#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET hurry/NOUN#0.0#0.0
+Someone is walking forward 4 steps a bit faster and is starting with the right leg.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN a/DET bit/NOUN faster/ADV and/CCONJ is/AUX start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
+A person walks fast.#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0
+The human is running#The/DET human/NOUN is/AUX run/VERB#0.0#0.0
+A person is walking fast#A/DET person/NOUN is/AUX walk/VERB fast/ADV#0.0#0.0

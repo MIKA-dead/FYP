@@ -1,0 +1,2 @@
+A persons crawls on the floor.#A/DET person/NOUN crawl/VERB on/ADP the/DET floor/NOUN#0.0#0.0
+Someone is kneeling down, then going down on all fours and crawling forward a bit.#Someone/PRON is/AUX kneel/VERB down/ADP then/ADV go/VERB down/ADP on/ADP all/DET four/NOUN and/CCONJ crawl/VERB forward/ADP a/DET bit/NOUN#0.0#0.0

@@ -1,0 +1,3 @@
+a person takes a few quick steps forward#a/DET person/NOUN take/VERB a/DET few/ADJ quick/ADJ step/NOUN forward/ADV#0.0#0.0
+a person moves forward very quickly#a/DET person/NOUN move/VERB forward/ADV very/ADV quickly/ADV#0.0#0.0
+The human walks fast#The/DET human/NOUN walk/VERB fast/ADV#0.0#0.0

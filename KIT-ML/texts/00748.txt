@@ -1,0 +1,2 @@
+Someone walks forward#Someone/PRON walk/VERB forward/ADV#0.0#0.0
+A human walks a few steps forward.#A/DET human/NOUN walk/VERB a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0

@@ -1,0 +1,3 @@
+A person walks forward against resistense.#A/DET person/NOUN walk/VERB forward/ADV against/ADP resistense/NOUN#0.0#0.0
+a person walks up a ramp#a/DET person/NOUN walk/VERB up/ADP a/DET ramp/NOUN#0.0#0.0
+A person walks.#A/DET person/NOUN walk/VERB#0.0#0.0

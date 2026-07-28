@@ -1,0 +1,1 @@
+A human  is walking on a line and up a step#A/DET human/ADJ is/AUX walk/VERB on/ADP a/DET line/NOUN and/CCONJ up/ADP a/DET step/NOUN#0.0#0.0

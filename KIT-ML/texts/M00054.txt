@@ -1,0 +1,2 @@
+A person is walking backwards in a straight line.#A/DET person/NOUN is/AUX walk/VERB backwards/ADV in/ADP a/DET straight/ADJ line/NOUN#0.0#0.0
+human goes backwards starting with right#human/ADJ go/VERB backwards/ADV start/VERB with/ADP right/ADJ#0.0#0.0

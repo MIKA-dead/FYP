@@ -1,0 +1,4 @@
+Person walking in a circle#person/NOUN walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0
+human goes in a circle clockwise starting with right#human/PROPN go/VERB in/ADP a/DET circle/NOUN clockwise/NOUN start/VERB with/ADP right/ADJ#0.0#0.0
+A person moves in a circle.#A/DET person/NOUN move/VERB in/ADP a/DET circle/NOUN#0.0#0.0
+A person is walking in a circle clockwise.#A/DET person/NOUN is/AUX walk/VERB in/ADP a/DET circle/NOUN clockwise/NOUN#0.0#0.0

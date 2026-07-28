@@ -1,0 +1,5 @@
+Subject kicks forward.#Subject/ADJ kick/NOUN forward/ADV#0.0#0.0
+A human makes a karate kick with its right food and brings his hand to the chest and its elbows out.#A/DET human/NOUN make/VERB a/DET karate/NOUN kick/VERB with/ADP its/DET right/ADJ food/NOUN and/CCONJ bring/VERB his/DET hand/NOUN to/ADP the/DET chest/NOUN and/CCONJ its/DET elbow/NOUN out/ADP#0.0#0.0
+A person kicks something with his right foot#A/DET person/NOUN kick/VERB something/PRON with/ADP his/DET right/ADJ foot/NOUN#0.0#0.0
+A person kicks forward with the right foot.#A/DET person/NOUN kick/VERB forward/ADV with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
+Somebody hits something with his right foot.#Somebody/PRON hit/VERB something/PRON with/ADP his/DET right/ADJ foot/NOUN#0.0#0.0

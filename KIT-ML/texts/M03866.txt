@@ -1,0 +1,1 @@
+a person jumping one step#a/DET person/NOUN jump/VERB one/NUM step/NOUN#0.0#0.0

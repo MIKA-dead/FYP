@@ -1,0 +1,5 @@
+Person dancing waltz#person/NOUN dance/VERB waltz/NOUN#0.0#0.0
+Someone dances the waltz#Someone/PRON dance/VERB the/DET waltz/NOUN#0.0#0.0
+Someone is probably doing a square dance.#Someone/PRON is/AUX probably/ADV do/VERB a/DET square/ADJ dance/NOUN#0.0#0.0
+A person dances in a rectangle pattern and in the end looks at his feet.#A/DET person/NOUN dance/VERB in/ADP a/DET rectangle/NOUN pattern/NOUN and/CCONJ in/ADP the/DET end/NOUN look/VERB at/ADP his/DET foot/NOUN#0.0#0.0
+Someone is dancing.#Someone/PRON is/AUX dance/VERB#0.0#0.0

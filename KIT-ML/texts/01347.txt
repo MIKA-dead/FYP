@@ -1,0 +1,1 @@
+A human is playing golf.#A/DET human/NOUN is/AUX play/VERB golf/NOUN#0.0#0.0

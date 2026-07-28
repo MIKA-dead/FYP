@@ -1,0 +1,1 @@
+A person jumps forward while turning 90 degrees to the left.#A/DET person/NOUN jump/VERB forward/ADV while/SCONJ turn/VERB degree/NOUN to/ADP the/DET left/NOUN#0.0#0.0

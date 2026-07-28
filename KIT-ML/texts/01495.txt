@@ -1,0 +1,6 @@
+While stand the hand is moved in a circle.#While/SCONJ stand/VERB the/DET hand/NOUN is/AUX move/VERB in/ADP a/DET circle/NOUN#0.0#0.0
+A person wipes a table.#A/DET person/NOUN wipe/VERB a/DET table/NOUN#0.0#0.0
+a person wipes something away with its left hand#a/DET person/NOUN wipe/VERB something/PRON away/ADV with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
+A person moves his left hand horizontally in a circle in front of his belly.#A/DET person/NOUN move/VERB his/DET left/ADJ hand/NOUN horizontally/ADV in/ADP a/DET circle/NOUN in/ADP front/NOUN of/ADP his/DET belly/NOUN#0.0#0.0
+A human wipes  horizontal once in the same hight as its hips.#A/DET human/ADJ wipe/NOUN horizontal/ADV once/ADV in/ADP the/DET same/ADJ hight/NOUN as/SCONJ its/DET hip/NOUN#0.0#0.0
+A persons is doing a cirle with the left hand, parallel to the ground at hip high#A/DET person/NOUN is/AUX do/VERB a/DET cirle/NOUN with/ADP the/DET left/ADJ hand/NOUN parallel/NOUN to/ADP the/DET ground/NOUN at/ADP hip/NOUN high/ADV#0.0#0.0

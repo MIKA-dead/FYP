@@ -1,0 +1,4 @@
+a person plays the violin#a/DET person/NOUN play/VERB the/DET violin/NOUN#0.0#0.0
+a Perosn playing the violin.#a/DET Perosn/PROPN play/VERB the/DET violin/NOUN#0.0#0.0
+human seems to be playing the violin or something similar#human/NOUN seem/VERB to/PART be/AUX play/VERB the/DET violin/NOUN or/CCONJ something/PRON similar/ADJ#0.0#0.0
+A person playing a violin#A/DET person/NOUN play/VERB a/DET violin/NOUN#0.0#0.0

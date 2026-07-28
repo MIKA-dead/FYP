@@ -1,0 +1,2 @@
+the person is pushed to the left#the/DET person/NOUN is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0
+Someone stumbles to the left.#Someone/PRON stumble/VERB to/ADP the/DET left/NOUN#0.0#0.0

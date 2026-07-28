@@ -1,0 +1,3 @@
+Someone is walking a circle.#Someone/PRON is/AUX walk/VERB a/DET circle/NOUN#0.0#0.0
+a person walks three fourth of a circle#a/DET person/NOUN walk/VERB three/NUM fourth/NOUN of/ADP a/DET circle/NOUN#0.0#0.0
+A person walks in a three quarter circle to his right side.#A/DET person/NOUN walk/VERB in/ADP a/DET three/NUM quarter/NOUN circle/NOUN to/ADP his/DET right/ADJ side/NOUN#0.0#0.0

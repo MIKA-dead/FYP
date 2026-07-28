@@ -1,0 +1,1 @@
+A person walking straight and overstepping a wide obstacle.#A/DET person/NOUN walk/VERB straight/ADV and/CCONJ overstep/VERB a/DET wide/ADJ obstacle/NOUN#0.0#0.0

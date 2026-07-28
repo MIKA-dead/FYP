@@ -1,0 +1,1 @@
+a person picks up an object from the ground#a/DET person/NOUN pick/VERB up/ADP an/DET object/NOUN from/ADP the/DET ground/NOUN#0.0#0.0

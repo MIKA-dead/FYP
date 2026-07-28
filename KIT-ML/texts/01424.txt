@@ -1,0 +1,4 @@
+A person play guitar.#A/DET person/NOUN play/NOUN guitar/NOUN#0.0#0.0
+A human is performing two strikes on an air guitare#A/DET human/NOUN is/AUX perform/VERB two/NUM strike/NOUN on/ADP an/DET air/NOUN guitare/NOUN#0.0#0.0
+A person plays the guitar.#A/DET person/NOUN play/VERB the/DET guitar/NOUN#0.0#0.0
+A man is playing the guitare.#A/DET man/NOUN is/AUX play/VERB the/DET guitare/NOUN#0.0#0.0

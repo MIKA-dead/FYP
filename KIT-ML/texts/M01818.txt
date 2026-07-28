@@ -1,0 +1,6 @@
+the standing person is suddenly pushed to the back#the/DET stand/VERB person/NOUN is/AUX suddenly/ADV push/VERB to/ADP the/DET back/NOUN#0.0#0.0
+A person tumbles to the back right after being pushed.#A/DET person/NOUN tumble/VERB to/ADP the/DET back/NOUN right/ADV after/ADP being/AUX push/VERB#0.0#0.0
+A person gets stoved from the front left side and stumbles backwards to his back right side before standing still again.#A/DET person/NOUN get/VERB stove/VERB from/ADP the/DET front/ADJ left/ADJ side/NOUN and/CCONJ stumble/NOUN backwards/ADV to/ADP his/DET back/NOUN right/ADJ side/NOUN before/ADP stand/VERB still/ADV again/ADV#0.0#0.0
+a person gets pushed from the front#a/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN#0.0#0.0
+A person gets pushed backwards.#A/DET person/NOUN get/VERB push/VERB backwards/ADV#0.0#0.0
+The human is scared of something and perfoms a step backwards#The/DET human/NOUN is/AUX scared/ADJ of/ADP something/PRON and/CCONJ perfom/VERB a/DET step/NOUN backwards/ADV#0.0#0.0

@@ -1,0 +1,7 @@
+Person is walking and than walking back#person/NOUN is/AUX walk/VERB and/CCONJ than/SCONJ walk/VERB back/ADV#0.0#0.0
+A human performs a fast 180° turn on the right foot after walking forward#A/DET human/NOUN perform/VERB a/DET fast/ADJ turn/VERB on/ADP the/DET right/ADJ foot/NOUN after/ADP walk/VERB forward/ADV#0.0#0.0
+a person walks forwards a few steps then turns 180 degrees to the right on the right foot and keeps walking#a/DET person/NOUN walk/VERB forwards/ADV a/DET few/ADJ step/NOUN then/ADV turn/VERB degree/NOUN to/ADP the/DET right/NOUN on/ADP the/DET right/ADJ foot/NOUN and/CCONJ keep/VERB walk/VERB#0.0#0.0
+The human walks a couple of steps turn around and walks back#The/DET human/NOUN walk/VERB a/DET couple/NOUN of/ADP step/NOUN turn/VERB around/ADP and/CCONJ walk/VERB back/ADV#0.0#0.0
+180 degree left heel turn#degree/NOUN left/VERB heel/NOUN turn/NOUN#0.0#0.0
+someone walks straightforwards and turn around with one foot, and walks back.#someone/PRON walk/VERB straightforward/NOUN and/CCONJ turn/VERB around/ADP with/ADP one/NUM foot/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
+Somebody turns swinging around.#Somebody/PRON turn/VERB swinge/VERB around/ADV#0.0#0.0

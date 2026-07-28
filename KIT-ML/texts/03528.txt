@@ -1,0 +1,1 @@
+A person does little jumps to the side while walking.#A/DET person/NOUN does/AUX little/ADJ jump/NOUN to/ADP the/DET side/NOUN while/SCONJ walk/VERB#0.0#0.0

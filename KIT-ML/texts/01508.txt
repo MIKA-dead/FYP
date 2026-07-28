@@ -1,0 +1,2 @@
+A person wipes in a counterclockwise circle on a flat surface.#A/DET person/NOUN wipe/VERB in/ADP a/DET counterclockwise/ADJ circle/NOUN on/ADP a/DET flat/ADJ surface/NOUN#0.0#0.0
+A person wipes a table with its left hand.#A/DET person/NOUN wipe/VERB a/DET table/NOUN with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

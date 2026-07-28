@@ -1,0 +1,2 @@
+Subject is waltzing.#subject/NOUN is/AUX waltz/VERB#0.0#0.0
+a person dances with another person#a/DET person/NOUN dance/VERB with/ADP another/DET person/NOUN#0.0#0.0

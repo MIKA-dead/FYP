@@ -1,0 +1,2 @@
+Subject walks three steps forward.#Subject/ADJ walk/VERB three/NUM step/NOUN forward/ADV#0.0#0.0
+a person walks forward quite slow#a/DET person/NOUN walk/VERB forward/ADV quite/ADV slow/ADJ#0.0#0.0

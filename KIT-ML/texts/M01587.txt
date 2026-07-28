@@ -1,0 +1,2 @@
+A person goes four and a half steps forward while looking at their feet.#A/DET person/NOUN go/VERB four/NUM and/CCONJ a/DET half/NOUN step/NOUN forward/ADV while/SCONJ look/VERB at/ADP their/DET foot/NOUN#0.0#0.0
+The human walks a couple of steps#The/DET human/NOUN walk/VERB a/DET couple/NOUN of/ADP step/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+A person makes four steps forward in a quarter circle to the right.#A/DET person/NOUN make/VERB four/NUM step/NOUN forward/ADV in/ADP a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+A person walks a 90 degree curve to the right.#A/DET person/NOUN walk/VERB a/DET degree/NOUN curve/NOUN to/ADP the/DET right/NOUN#0.0#0.0

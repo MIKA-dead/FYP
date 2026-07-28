@@ -1,0 +1,1 @@
+A person is performing a stretched jump with a touchdown rotated through 90°.#A/DET person/NOUN is/AUX perform/VERB a/DET stretch/VERB jump/NOUN with/ADP a/DET touchdown/NOUN rotate/VERB through/ADP#0.0#0.0

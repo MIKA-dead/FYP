@@ -1,0 +1,3 @@
+A person kicks into the air with the left foot.#A/DET person/NOUN kick/VERB into/ADP the/DET air/NOUN with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0
+a person gets his cover up and performs a push kick with his left foot#a/DET person/NOUN get/VERB his/DET cover/NOUN up/ADP and/CCONJ perform/VERB a/DET push/NOUN kick/NOUN with/ADP his/DET left/ADJ foot/NOUN#0.0#0.0
+Someone is holding up his fists and kicking with his left leg.#Someone/PRON is/AUX hold/VERB up/ADP his/DET fist/NOUN and/CCONJ kick/VERB with/ADP his/DET left/ADJ leg/NOUN#0.0#0.0

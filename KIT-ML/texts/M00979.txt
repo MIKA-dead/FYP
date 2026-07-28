@@ -1,0 +1,4 @@
+Person walking in a curve to the left#person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person walks while turning to the left.#A/DET person/NOUN walk/VERB while/SCONJ turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+a person walks to the left performing a quarter circle#a/DET person/NOUN walk/VERB to/ADP the/DET left/ADJ perform/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0
+Someone is walking a quarter circle in counterclockwise direction.#Someone/PRON is/AUX walk/VERB a/DET quarter/NOUN circle/NOUN in/ADP counterclockwise/ADJ direction/NOUN#0.0#0.0

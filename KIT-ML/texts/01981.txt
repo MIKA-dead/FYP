@@ -1,0 +1,2 @@
+A person walks forward and turns to the left.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person walks a quarter ciricle to the left, taking five steps.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN ciricle/NOUN to/ADP the/DET left/NOUN take/VERB five/NUM step/NOUN#0.0#0.0

@@ -1,0 +1,3 @@
+A human goes straight forward.#A/DET human/NOUN go/VERB straight/ADV forward/ADV#0.0#0.0
+a person walks forwards fast but no running#a/DET person/NOUN walk/VERB forwards/ADV fast/ADV but/CCONJ no/DET running/NOUN#0.0#0.0
+A person walks forwards.#A/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0

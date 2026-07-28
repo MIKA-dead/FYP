@@ -1,0 +1,4 @@
+A person stumbling to the left after standing still.#A/DET person/NOUN stumble/VERB to/ADP the/DET left/NOUN after/ADP stand/VERB still/ADV#0.0#0.0
+A person doing a jumping sidestep to his left.#A/DET person/NOUN do/VERB a/DET jump/VERB sidestep/NOUN to/ADP his/DET left/NOUN#0.0#0.0
+A person jumps to the left.#A/DET person/NOUN jump/VERB to/ADP the/DET left/NOUN#0.0#0.0
+Somebody is pushed to the left.#Somebody/PRON is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0

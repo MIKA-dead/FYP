@@ -1,0 +1,1 @@
+A human performs front crawl movements with her arms.#A/DET human/ADJ perform/VERB front/ADJ crawl/NOUN movement/NOUN with/ADP her/DET arm/NOUN#0.0#0.0

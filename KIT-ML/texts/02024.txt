@@ -1,0 +1,2 @@
+A person moves forward, turns around and goes back.#A/DET person/NOUN move/VERB forward/ADV turn/VERB around/ADV and/CCONJ go/VERB back/ADV#0.0#0.0
+A person moves 2 steps forward, then turns around 180° and walks another 2 steps in the opposite direction.#A/DET person/NOUN move/VERB step/NOUN forward/ADV then/ADV turn/VERB around/ADV and/CCONJ walk/VERB another/DET step/NOUN in/ADP the/DET opposite/ADJ direction/NOUN#0.0#0.0

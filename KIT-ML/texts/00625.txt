@@ -1,0 +1,2 @@
+Person walks and then stops.#person/NOUN walk/VERB and/CCONJ then/ADV stop/VERB#0.0#0.0
+a person walks forwards#a/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0

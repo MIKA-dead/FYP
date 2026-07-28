@@ -1,0 +1,1 @@
+A person walking backwards for a few steps.#A/DET person/NOUN walk/VERB backwards/ADV for/ADP a/DET few/ADJ step/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person runs forward.#A/DET person/NOUN run/VERB forward/ADV#0.0#0.0

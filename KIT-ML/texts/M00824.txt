@@ -1,0 +1,2 @@
+A human walks and turns on the spot.#A/DET human/ADJ walk/NOUN and/CCONJ turn/VERB on/ADP the/DET spot/NOUN#0.0#0.0
+A person turns 180 degrees to the right on their right foot#A/DET person/NOUN turn/VERB degree/NOUN to/ADP the/DET right/NOUN on/ADP their/DET right/ADJ foot/NOUN#0.0#0.0

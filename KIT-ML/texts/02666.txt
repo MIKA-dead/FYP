@@ -1,0 +1,1 @@
+A person is climbing up and down in different directions.#A/DET person/NOUN is/AUX climb/VERB up/ADP and/CCONJ down/ADV in/ADP different/ADJ direction/NOUN#0.0#0.0

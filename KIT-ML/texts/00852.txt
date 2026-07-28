@@ -1,0 +1,2 @@
+A person walks fast 4 steps.#A/DET person/NOUN walk/VERB fast/ADJ step/NOUN#0.0#0.0
+Somebody stops suddenly.#Somebody/PRON stop/VERB suddenly/ADV#0.0#0.0

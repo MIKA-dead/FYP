@@ -1,0 +1,5 @@
+A person sprints a short distance, then stops.#A/DET person/NOUN sprint/VERB a/DET short/ADJ distance/NOUN then/ADV stop/VERB#0.0#0.0
+a person runs forwards#a/DET person/NOUN run/VERB forwards/ADV#0.0#0.0
+A person is running.#A/DET person/NOUN is/AUX run/VERB#0.0#0.0
+A person runs.#A/DET person/NOUN run/VERB#0.0#0.0
+Somebody is running forward#Somebody/PRON is/AUX run/VERB forward/ADV#0.0#0.0

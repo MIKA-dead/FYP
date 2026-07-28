@@ -1,0 +1,2 @@
+A person walks forward, gets pushed in the back, and recovers with 1 step.#A/DET person/NOUN walk/VERB forward/ADV get/VERB push/VERB in/ADP the/DET back/NOUN and/CCONJ recover/NOUN with/ADP step/NOUN#0.0#0.0
+a man stumbles over something#a/DET man/NOUN stumble/VERB over/ADP something/PRON#0.0#0.0

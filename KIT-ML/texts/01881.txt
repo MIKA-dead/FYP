@@ -1,0 +1,3 @@
+the person walking to forward is suddenly pushed to the right#the/DET person/NOUN walk/VERB to/PART forward/ADV is/AUX suddenly/ADV push/VERB to/ADP the/DET right/NOUN#0.0#0.0
+A person is getting pushed while walking#A/DET person/NOUN is/AUX get/VERB push/VERB while/SCONJ walk/VERB#0.0#0.0
+A person walks forward and is pushed from the left.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB from/ADP the/DET left/NOUN#0.0#0.0

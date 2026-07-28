@@ -1,0 +1,2 @@
+A person standing still and doing a wiping movement with the left hand.#A/DET person/NOUN stand/VERB still/ADV and/CCONJ do/VERB a/DET wipe/VERB movement/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
+a person wipes something in front of it with its left hand#a/DET person/NOUN wipe/VERB something/PRON in/ADP front/NOUN of/ADP it/PRON with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

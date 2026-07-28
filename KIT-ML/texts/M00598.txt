@@ -1,0 +1,2 @@
+A person stretches their arms out and performs a single squat.#A/DET person/NOUN stretch/VERB their/DET arm/NOUN out/ADP and/CCONJ perform/VERB a/DET single/ADJ squat/NOUN#0.0#0.0
+A person does some squad exercises#A/DET person/NOUN does/AUX some/DET squad/NOUN exercise/NOUN#0.0#0.0

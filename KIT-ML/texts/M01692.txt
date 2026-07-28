@@ -1,0 +1,4 @@
+Somebody starts to walk a few steps, then stops again#Somebody/PRON start/VERB to/PART walk/VERB a/DET few/ADJ step/NOUN then/ADV stop/VERB again/ADV#0.0#0.0
+A human is fast walking forward.#A/DET human/NOUN is/AUX fast/ADV walk/VERB forward/ADV#0.0#0.0
+A person walks and then stops.#A/DET person/NOUN walk/VERB and/CCONJ then/ADV stop/VERB#0.0#0.0
+Somebody walks straight on#Somebody/PRON walk/VERB straight/ADV on/ADV#0.0#0.0

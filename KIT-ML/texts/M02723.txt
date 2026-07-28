@@ -1,0 +1,1 @@
+A human  is walking#A/DET human/ADJ is/AUX walk/VERB#0.0#0.0

@@ -1,0 +1,4 @@
+A person is walking slightly slouched while drifting to the right.#A/DET person/NOUN is/AUX walk/VERB slightly/ADV slouched/ADJ while/SCONJ drift/VERB to/ADP the/DET right/NOUN#0.0#0.0
+human seems to be walking on a beam or something similar#human/NOUN seem/VERB to/PART be/AUX walk/VERB on/ADP a/DET beam/NOUN or/CCONJ something/PRON similar/ADJ#0.0#0.0
+A human is moving up a ramp#A/DET human/NOUN is/AUX move/VERB up/ADP a/DET ramp/NOUN#0.0#0.0
+A person is walking forward#A/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0

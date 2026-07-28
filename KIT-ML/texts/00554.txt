@@ -1,0 +1,2 @@
+A person is hurrying along in an almost jog.#A/DET person/NOUN is/AUX hurry/VERB along/ADP in/ADP an/DET almost/ADV jog/NOUN#0.0#0.0
+Someone runs forward#Someone/PRON run/VERB forward/ADV#0.0#0.0

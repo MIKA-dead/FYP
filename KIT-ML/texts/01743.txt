@@ -1,0 +1,1 @@
+A person walks forward and stumbles to the left during that.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ stumble/NOUN to/ADP the/DET left/NOUN during/ADP that/DET#0.0#0.0

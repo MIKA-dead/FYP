@@ -1,0 +1,4 @@
+Someone moves his or her left hand in the form of a half circle, which is open on its right side.#Someone/PRON move/VERB his/DET or/CCONJ her/DET left/ADJ hand/NOUN in/ADP the/DET form/NOUN of/ADP a/DET half/ADJ circle/NOUN which/DET is/AUX open/ADJ on/ADP its/DET right/ADJ side/NOUN#0.0#0.0
+A person uses his left hand to hit something.#A/DET person/NOUN use/VERB his/DET left/ADJ hand/NOUN to/PART hit/VERB something/PRON#0.0#0.0
+a person wipes something with its left hand#a/DET person/NOUN wipe/VERB something/PRON with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
+A person makes motions as if opening a door.#A/DET person/NOUN make/VERB motion/NOUN as/SCONJ if/SCONJ open/VERB a/DET door/NOUN#0.0#0.0

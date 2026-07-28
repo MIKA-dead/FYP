@@ -1,0 +1,1 @@
+A human walks up stairs, walks down backwards and walks up and down stairs.#A/DET human/NOUN walk/VERB up/ADP stair/NOUN walk/VERB down/ADP backwards/ADV and/CCONJ walk/VERB up/ADV and/CCONJ down/ADP stair/NOUN#0.0#0.0

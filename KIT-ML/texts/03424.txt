@@ -1,0 +1,1 @@
+A person makes a big jump forward.#A/DET person/NOUN make/VERB a/DET big/ADJ jump/NOUN forward/ADV#0.0#0.0

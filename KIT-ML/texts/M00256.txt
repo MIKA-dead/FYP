@@ -1,0 +1,19 @@
+A person walks forward and performs a turn to the left.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ perform/VERB a/DET turn/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person walks in a quarter-circle to the left.#A/DET person/NOUN walk/VERB in/ADP a/DET quartercircle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person walks towards me.#A/DET person/NOUN walk/VERB towards/ADP me/PRON#0.0#0.0
+Someone comes close to the camera#Someone/PRON come/VERB close/ADV to/ADP the/DET camera/NOUN#0.0#0.0
+A person is walking in a curve to the left.#A/DET person/NOUN is/AUX walk/VERB in/ADP a/DET curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+Someone comes very close to the observer.#Someone/PRON come/VERB very/ADV close/ADV to/ADP the/DET observer/NOUN#0.0#0.0
+A human takes a 90 degree left turn.#A/DET human/NOUN take/VERB a/DET degree/NOUN left/VERB turn/NOUN#0.0#0.0
+a person walking five steps to the left#a/DET person/NOUN walk/VERB five/NUM step/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person walks slowly a curve#A/DET person/NOUN walk/VERB slowly/ADV a/DET curve/NOUN#0.0#0.0
+A person walks in a 90 degree turn towards the left#A/DET person/NOUN walk/VERB in/ADP a/DET degree/NOUN turn/NOUN towards/ADP the/DET left/NOUN#0.0#0.0
+A human slowly turns left by 5 steps#A/DET human/NOUN slowly/ADV turn/VERB left/VERB by/ADP step/NOUN#0.0#0.0
+A person walks  a quarter circle with a radius of approximately 1 meter to the left.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN with/ADP a/DET radius/NOUN of/ADP approximately/ADV meter/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A human is performing a 90° curve to the left#A/DET human/NOUN is/AUX perform/VERB a/DET curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person is walking a quarter of a circle to its left.#A/DET person/NOUN is/AUX walk/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN to/ADP its/DET left/NOUN#0.0#0.0
+a person walks to the left performing a quarter circle#a/DET person/NOUN walk/VERB to/ADP the/DET left/ADJ perform/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0
+A person walks forward in a 90° curve to his left.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET curve/NOUN to/ADP his/DET left/NOUN#0.0#0.0
+The human perfoms a left turn#The/DET human/ADJ perfom/NOUN a/DET left/ADJ turn/NOUN#0.0#0.0
+A person is doing slow a 90° left turn in five steps#A/DET person/NOUN is/AUX do/VERB slow/ADJ a/DET left/ADJ turn/NOUN in/ADP five/NUM step/NOUN#0.0#0.0
+human performs a bending walking motion to the left#human/ADJ perform/VERB a/DET bend/VERB walk/VERB motion/NOUN to/ADP the/DET left/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person walking slowly in a quartercircle to the right#A/DET person/NOUN walk/VERB slowly/ADV in/ADP a/DET quartercircle/NOUN to/ADP the/DET right/NOUN#0.0#0.0

@@ -1,0 +1,4 @@
+Person looks around and then walks around a corner.#person/NOUN look/VERB around/ADV and/CCONJ then/ADV walk/VERB around/ADP a/DET corner/NOUN#0.0#0.0
+a person walks forwards performing a quarter circle to the left#a/DET person/NOUN walk/VERB forwards/ADV perform/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person walks forward in a 90° curve to the left#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person is turning left while walking.#A/DET person/NOUN is/AUX turn/VERB left/ADJ while/SCONJ walk/VERB#0.0#0.0

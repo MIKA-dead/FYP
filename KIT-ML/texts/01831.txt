@@ -1,0 +1,2 @@
+A human being pushed from behind#A/DET human/ADJ being/NOUN push/VERB from/ADP behind/ADV#0.0#0.0
+a person gets pushed from behind#a/DET person/NOUN get/VERB push/VERB from/ADP behind/ADV#0.0#0.0

@@ -1,0 +1,2 @@
+A human makes a wipe movement with their right arm.#A/DET human/NOUN make/VERB a/DET wipe/NOUN movement/NOUN with/ADP their/DET right/ADJ arm/NOUN#0.0#0.0
+human performs a wiping motion with its right hand#human/PROPN perform/VERB a/DET wiping/ADJ motion/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

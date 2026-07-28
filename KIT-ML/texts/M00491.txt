@@ -1,0 +1,2 @@
+A peron makes a turn to the right.#A/DET peron/NOUN make/VERB a/DET turn/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+The human perfoms a right turn#The/DET human/ADJ perfom/NOUN a/DET right/ADJ turn/NOUN#0.0#0.0

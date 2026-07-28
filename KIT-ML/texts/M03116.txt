@@ -1,0 +1,1 @@
+A person is fishing.#A/DET person/NOUN is/AUX fish/VERB#0.0#0.0

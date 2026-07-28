@@ -1,0 +1,7 @@
+Subject walks down steps.#Subject/ADJ walk/VERB down/ADP step/NOUN#0.0#0.0
+A person walks down a slope and reaches flat ground after a few steps.#A/DET person/NOUN walk/VERB down/ADP a/DET slope/NOUN and/CCONJ reach/VERB flat/ADJ ground/NOUN after/ADP a/DET few/ADJ step/NOUN#0.0#0.0
+A human is walking down a ramp#A/DET human/NOUN is/AUX walk/VERB down/ADP a/DET ramp/NOUN#0.0#0.0
+A person walks 5 steps down a stair and then 2 more when it reachs the ground.#A/DET person/NOUN walk/VERB step/NOUN down/ADP a/DET stair/NOUN and/CCONJ then/ADV more/ADJ when/ADV it/PRON reach/VERB the/DET ground/NOUN#0.0#0.0
+a person walks down the stairs#a/DET person/NOUN walk/VERB down/ADP the/DET stair/NOUN#0.0#0.0
+A person walks down on stairs.#A/DET person/NOUN walk/VERB down/ADP on/ADP stair/NOUN#0.0#0.0
+Somebody walks downstairs.#Somebody/PRON walk/VERB downstairs/ADV#0.0#0.0

@@ -1,0 +1,4 @@
+a person walks faster and then slower.#a/DET person/NOUN walk/VERB faster/ADV and/CCONJ then/ADV slower/ADV#0.0#0.0
+a person walks forwards#a/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0
+A person walks fast.#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0
+A person walking forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0

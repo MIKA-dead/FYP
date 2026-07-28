@@ -1,0 +1,2 @@
+A person gets pushed to his left.#A/DET person/NOUN get/VERB push/VERB to/ADP his/DET left/NOUN#0.0#0.0
+The human walks straight forward then something happens and the human perfoms a left jump and goes back to his previous direction#The/DET human/NOUN walk/VERB straight/ADV forward/ADV then/ADV something/PRON happen/VERB and/CCONJ the/DET human/ADJ perfom/NOUN a/DET left/ADJ jump/NOUN and/CCONJ go/VERB back/ADV to/ADP his/DET previous/ADJ direction/NOUN#0.0#0.0

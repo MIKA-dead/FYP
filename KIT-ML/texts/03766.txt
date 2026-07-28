@@ -1,0 +1,1 @@
+A person picks something up from the ground with both hands and gives it to someone standing in front of him.#A/DET person/NOUN pick/VERB something/PRON up/ADP from/ADP the/DET ground/NOUN with/ADP both/DET hand/NOUN and/CCONJ give/VERB it/PRON to/ADP someone/PRON stand/VERB in/ADP front/NOUN of/ADP him/PRON#0.0#0.0

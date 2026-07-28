@@ -1,0 +1,2 @@
+A person walks clockwise on a quarter circle with 1,5m radius.#A/DET person/NOUN walk/VERB clockwise/NOUN on/ADP a/DET quarter/NOUN circle/NOUN with/ADP m/NOUN radius/NOUN#0.0#0.0
+A person walks a right turn of 90 degrees.#A/DET person/NOUN walk/VERB a/DET right/ADJ turn/NOUN of/ADP degree/NOUN#0.0#0.0

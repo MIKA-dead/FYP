@@ -1,0 +1,1 @@
+A human starts to run.#A/DET human/NOUN start/VERB to/PART run/VERB#0.0#0.0

@@ -1,0 +1,3 @@
+A human stepping to the side#A/DET human/ADJ stepping/NOUN to/ADP the/DET side/NOUN#0.0#0.0
+A person stands still and is pushed slightly to the left.#A/DET person/NOUN stand/VERB still/ADV and/CCONJ is/AUX push/VERB slightly/ADV to/ADP the/DET left/NOUN#0.0#0.0
+Somebody goes a step to the left.#Somebody/PRON go/VERB a/DET step/NOUN to/ADP the/DET left/NOUN#0.0#0.0

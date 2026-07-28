@@ -1,0 +1,1 @@
+a person runs a few steps#a/DET person/NOUN run/VERB a/DET few/ADJ step/NOUN#0.0#0.0

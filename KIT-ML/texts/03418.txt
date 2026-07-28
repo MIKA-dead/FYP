@@ -1,0 +1,1 @@
+A person is slowly strolling forward and backward.#A/DET person/NOUN is/AUX slowly/ADV stroll/VERB forward/ADV and/CCONJ backward/ADV#0.0#0.0

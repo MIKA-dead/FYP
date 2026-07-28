@@ -1,0 +1,2 @@
+Person stands up from a kneeing position.#person/NOUN stand/VERB up/ADP from/ADP a/DET kneeing/ADJ position/NOUN#0.0#0.0
+a person stands up from the ground#a/DET person/NOUN stand/VERB up/ADP from/ADP the/DET ground/NOUN#0.0#0.0

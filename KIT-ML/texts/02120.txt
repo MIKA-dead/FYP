@@ -1,0 +1,2 @@
+A person makes a little jump then walks forwards.#A/DET person/NOUN make/VERB a/DET little/ADJ jump/NOUN then/ADV walk/VERB forwards/ADV#0.0#0.0
+Someone is jumping and then walking forward doing 4 steps starting with the right leg.#Someone/PRON is/AUX jump/VERB and/CCONJ then/ADV walk/VERB forward/ADV do/VERB step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0

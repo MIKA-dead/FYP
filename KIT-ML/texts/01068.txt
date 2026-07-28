@@ -1,0 +1,2 @@
+A  human turning right#A/DET human/ADJ turning/NOUN right/ADV#0.0#0.0
+a person walks in a quarter circle to the right#a/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0

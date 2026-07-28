@@ -1,0 +1,1 @@
+A human sits on an approximately 1m high platform.#A/DET human/ADJ sit/VERB on/ADP an/DET approximately/ADV m/NUM high/ADJ platform/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person walks forward and returns.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ return/NOUN#0.0#0.0

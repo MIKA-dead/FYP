@@ -1,0 +1,1 @@
+A person is placing a pictures on a wall.#A/DET person/NOUN is/AUX place/VERB a/DET picture/NOUN on/ADP a/DET wall/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person makes a far jump.#A/DET person/NOUN make/VERB a/DET far/ADJ jump/NOUN#0.0#0.0

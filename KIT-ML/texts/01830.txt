@@ -1,0 +1,4 @@
+Person standing and then stumbling forwards#person/NOUN stand/VERB and/CCONJ then/ADV stumble/VERB forwards/ADV#0.0#0.0
+Someone gets pushed from behind#Someone/PRON get/VERB push/VERB from/ADP behind/ADV#0.0#0.0
+a person stands still and gets pushed from behind#a/DET person/NOUN stand/VERB still/ADV and/CCONJ get/VERB push/VERB from/ADP behind/ADV#0.0#0.0
+A person gets shoved#A/DET person/NOUN get/VERB shove/VERB#0.0#0.0

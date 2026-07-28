@@ -1,0 +1,6 @@
+Person walking steps down#person/NOUN walk/VERB step/NOUN down/ADV#0.0#0.0
+A person walks forward#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
+A human walks forwards#A/DET human/NOUN walk/VERB forwards/ADV#0.0#0.0
+Someone is walking forward 4 steps starting with the right leg.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
+a person walks down the stairs#a/DET person/NOUN walk/VERB down/ADP the/DET stair/NOUN#0.0#0.0
+A person is walking.#A/DET person/NOUN is/AUX walk/VERB#0.0#0.0

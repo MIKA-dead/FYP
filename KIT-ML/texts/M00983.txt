@@ -1,0 +1,1 @@
+Subject is walking in a quarter circle counterclockwise.#Subject/PROPN is/AUX walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN counterclockwise/NOUN#0.0#0.0

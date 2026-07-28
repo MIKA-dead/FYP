@@ -1,0 +1,5 @@
+Someone hits something with his fist#Someone/PRON hit/VERB something/PRON with/ADP his/DET fist/NOUN#0.0#0.0
+A person performs a left forward punch.#A/DET person/NOUN perform/VERB a/DET left/ADJ forward/ADJ punch/NOUN#0.0#0.0
+A person is performing a punch with his left hand.#A/DET person/NOUN is/AUX perform/VERB a/DET punch/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
+A person punching with his left arm in front of him.#A/DET person/NOUN punch/VERB with/ADP his/DET left/ADJ arm/NOUN in/ADP front/NOUN of/ADP him/PRON#0.0#0.0
+Someone is punching with his left fist.#Someone/PRON is/AUX punch/VERB with/ADP his/DET left/ADJ fist/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A human plays the drums.#A/DET human/NOUN play/VERB the/DET drum/NOUN#0.0#0.0

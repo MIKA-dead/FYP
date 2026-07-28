@@ -1,0 +1,2 @@
+A person goes forward, turns around and goes back.#A/DET person/NOUN go/VERB forward/ADV turn/VERB around/ADV and/CCONJ go/VERB back/ADV#0.0#0.0
+a person walks forwards a few steps and then turn 180 degrees to the right and then walks back some meters#a/DET person/NOUN walk/VERB forwards/ADV a/DET few/ADJ step/NOUN and/CCONJ then/ADV turn/VERB degree/NOUN to/ADP the/DET right/NOUN and/CCONJ then/ADV walk/VERB back/ADV some/DET meter/NOUN#0.0#0.0

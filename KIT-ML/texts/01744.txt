@@ -1,0 +1,2 @@
+A person walks forward, is pushed slightly to the left and continuous walking.#A/DET person/NOUN walk/VERB forward/ADV is/AUX push/VERB slightly/ADV to/ADP the/DET left/ADJ and/CCONJ continuous/ADJ walking/NOUN#0.0#0.0
+Subject walks forward with a short sideward stumble in the middle.#Subject/ADJ walk/VERB forward/ADV with/ADP a/DET short/ADJ sideward/NOUN stumble/VERB in/ADP the/DET middle/NOUN#0.0#0.0

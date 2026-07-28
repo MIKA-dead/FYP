@@ -1,0 +1,2 @@
+A person jogs forward#A/DET person/NOUN jog/VERB forward/ADV#0.0#0.0
+Someone runs forward#Someone/PRON run/VERB forward/ADV#0.0#0.0

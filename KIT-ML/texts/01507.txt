@@ -1,0 +1,1 @@
+A person makes a wipe movement with his left arm.#A/DET person/NOUN make/VERB a/DET wipe/NOUN movement/NOUN with/ADP his/DET left/ADJ arm/NOUN#0.0#0.0

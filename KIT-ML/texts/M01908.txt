@@ -1,0 +1,2 @@
+A person walking forwards, one step back and then forwards again.#A/DET person/NOUN walk/VERB forwards/ADV one/NUM step/NOUN back/ADV and/CCONJ then/ADV forwards/ADV again/ADV#0.0#0.0
+A person walks forwards, goes back and forth mid-walk and then continues walking forward#A/DET person/NOUN walk/VERB forwards/ADV go/VERB back/ADV and/CCONJ forth/ADV midwalk/NOUN and/CCONJ then/ADV continue/VERB walk/VERB forward/ADV#0.0#0.0

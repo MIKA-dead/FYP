@@ -1,0 +1,4 @@
+human walks about five steps forward starting with the right leg#human/ADJ walk/VERB about/ADV five/NUM step/NOUN forward/ADV start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
+A person walks without a hurry.#A/DET person/NOUN walk/VERB without/ADP a/DET hurry/NOUN#0.0#0.0
+A human moves 4 steps forward at a normal pace.#A/DET human/ADJ move/NOUN step/NOUN forward/ADV at/ADP a/DET normal/ADJ pace/NOUN#0.0#0.0
+a person walks forwards#a/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0

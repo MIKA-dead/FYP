@@ -1,0 +1,1 @@
+A human performs a 45° side step to the front, back and front again.#A/DET human/NOUN perform/VERB a/DET side/NOUN step/NOUN to/ADP the/DET front/NOUN back/ADV and/CCONJ front/VERB again/ADV#0.0#0.0

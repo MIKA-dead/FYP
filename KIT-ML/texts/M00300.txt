@@ -1,0 +1,2 @@
+human walks in a quater circle clockwise#human/ADJ walk/VERB in/ADP a/DET quater/NOUN circle/NOUN clockwise/NOUN#0.0#0.0
+A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0

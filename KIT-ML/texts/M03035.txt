@@ -1,0 +1,1 @@
+Someone opens something, puts an object inside, then closes it again#Someone/PRON open/VERB something/PRON put/VERB an/DET object/NOUN inside/ADV then/ADV close/VERB it/PRON again/ADV#0.0#0.0

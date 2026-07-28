@@ -1,0 +1,1 @@
+A human jumps up with a 270 degree turnaround into the right.#A/DET human/ADJ jump/VERB up/ADP with/ADP a/DET degree/NOUN turnaround/NOUN into/ADP the/DET right/NOUN#0.0#0.0

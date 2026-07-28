@@ -1,0 +1,1 @@
+Person jumping to the left, pushing something with his right hand#person/NOUN jump/VERB to/ADP the/DET left/NOUN push/VERB something/PRON with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

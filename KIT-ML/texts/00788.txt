@@ -1,0 +1,2 @@
+A person runs#A/DET person/NOUN run/VERB#0.0#0.0
+Someone is trying to walk fast 4 steps starting with the right leg and then stopping.#Someone/PRON is/AUX try/VERB to/PART walk/VERB fast/ADV step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN and/CCONJ then/ADV stop/VERB#0.0#0.0

@@ -1,0 +1,1 @@
+A person walks in a square.#A/DET person/NOUN walk/VERB in/ADP a/DET square/NOUN#0.0#0.0

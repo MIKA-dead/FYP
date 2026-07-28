@@ -1,0 +1,1 @@
+A person walks forward and is pushed slightly from behind.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB slightly/ADV from/ADP behind/ADV#0.0#0.0

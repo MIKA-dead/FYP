@@ -1,0 +1,3 @@
+A person moves four and a half steps forward and stumbles during this walk.#A/DET person/NOUN move/VERB four/NUM and/CCONJ a/DET half/NOUN step/NOUN forward/ADV and/CCONJ stumble/NOUN during/ADP this/DET walk/NOUN#0.0#0.0
+a persons walks forward and then gets pushed from behind#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ then/ADV get/VERB push/VERB from/ADP behind/ADV#0.0#0.0
+a human stumbles.#a/DET human/ADJ stumble/NOUN#0.0#0.0

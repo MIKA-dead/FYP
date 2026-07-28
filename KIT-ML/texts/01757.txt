@@ -1,0 +1,2 @@
+A person walks forward, stumbles backwards and then walking forward again.#A/DET person/NOUN walk/VERB forward/ADV stumble/NOUN backwards/ADV and/CCONJ then/ADV walk/VERB forward/ADV again/ADV#0.0#0.0
+Somebody moves short back while walking.#Somebody/PRON move/VERB short/ADJ back/ADV while/SCONJ walk/VERB#0.0#0.0

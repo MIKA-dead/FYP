@@ -1,0 +1,1 @@
+A person is turning right.#A/DET person/NOUN is/AUX turn/VERB right/ADV#0.0#0.0

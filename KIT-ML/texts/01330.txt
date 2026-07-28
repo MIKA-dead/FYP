@@ -1,0 +1,6 @@
+Subject jumps backwards.#Subject/ADJ jump/VERB backwards/ADV#0.0#0.0
+A human hops backwards#A/DET human/ADJ hop/NOUN backwards/ADV#0.0#0.0
+A human is performing a two-legged hop to the back#A/DET human/NOUN is/AUX perform/VERB a/DET twolegged/ADJ hop/NOUN to/ADP the/DET back/NOUN#0.0#0.0
+A person jumps backwards with both of his legs.#A/DET person/NOUN jump/VERB backwards/ADV with/ADP both/DET of/ADP his/DET leg/NOUN#0.0#0.0
+a person hops backwards#a/DET person/NOUN hop/VERB backwards/ADV#0.0#0.0
+A person is jumping backward.#A/DET person/NOUN is/AUX jump/VERB backward/ADV#0.0#0.0

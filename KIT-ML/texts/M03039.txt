@@ -1,0 +1,1 @@
+A human writes on a board.#A/DET human/NOUN write/VERB on/ADP a/DET board/NOUN#0.0#0.0

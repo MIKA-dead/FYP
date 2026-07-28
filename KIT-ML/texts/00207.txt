@@ -1,0 +1,4 @@
+A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
+A person walks a quarter circle clockwise with 4 steps.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN clockwise/NOUN with/ADP step/NOUN#0.0#0.0
+A person walks a 90° curve to his right.#A/DET person/NOUN walk/VERB a/DET curve/NOUN to/ADP his/DET right/NOUN#0.0#0.0
+someone turns right.#someone/PRON turn/VERB right/ADJ#0.0#0.0

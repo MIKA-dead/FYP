@@ -1,0 +1,3 @@
+A human turning left#A/DET human/ADJ turning/NOUN left/NOUN#0.0#0.0
+A person walks a left curve#A/DET person/NOUN walk/VERB a/DET left/ADJ curve/NOUN#0.0#0.0
+human performs a bending walking motion to its left hand side#human/ADJ perform/VERB a/DET bend/VERB walk/VERB motion/NOUN to/ADP its/DET left/ADJ hand/NOUN side/NOUN#0.0#0.0

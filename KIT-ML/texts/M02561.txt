@@ -1,0 +1,1 @@
+A human performs multiple fast punches with the right hand.#A/DET human/ADJ perform/VERB multiple/ADJ fast/ADJ punch/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

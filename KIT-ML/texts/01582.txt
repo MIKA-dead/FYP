@@ -1,0 +1,4 @@
+A person is balancing on a narrow path and walking forward.#A/DET person/NOUN is/AUX balance/VERB on/ADP a/DET narrow/ADJ path/NOUN and/CCONJ walk/VERB forward/ADV#0.0#0.0
+A person balances on a line.#A/DET person/NOUN balance/VERB on/ADP a/DET line/NOUN#0.0#0.0
+a person balances on something#a/DET person/NOUN balance/VERB on/ADP something/PRON#0.0#0.0
+Somebody is balancing on something.#Somebody/PRON is/AUX balance/VERB on/ADP something/PRON#0.0#0.0

@@ -1,0 +1,2 @@
+A person walks forwards, turns around a walks back.#A/DET person/NOUN walk/VERB forwards/ADV turn/VERB around/ADP a/DET walk/NOUN back/ADV#0.0#0.0
+Someone is walking forward 2 steps starting with the right leg, then turning back around his left side and walking back 2 steps.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN then/ADV turn/VERB back/ADV around/ADP his/DET left/ADJ side/NOUN and/CCONJ walk/VERB back/ADV step/NOUN#0.0#0.0

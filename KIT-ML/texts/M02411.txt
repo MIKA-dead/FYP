@@ -1,0 +1,1 @@
+A human bends her knees slightly and walks.#A/DET human/ADJ bend/NOUN her/DET knee/NOUN slightly/ADV and/CCONJ walk/VERB#0.0#0.0

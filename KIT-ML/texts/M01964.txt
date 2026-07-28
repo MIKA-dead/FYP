@@ -1,0 +1,2 @@
+the person makes a short run#the/DET person/NOUN make/VERB a/DET short/ADJ run/NOUN#0.0#0.0
+A person jogging for a few meters.#A/DET person/NOUN jog/VERB for/ADP a/DET few/ADJ meter/NOUN#0.0#0.0

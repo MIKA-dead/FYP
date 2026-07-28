@@ -1,0 +1,4 @@
+A person points to the sky using their right arm then lowers it back down.#A/DET person/NOUN point/VERB to/ADP the/DET sky/NOUN use/VERB their/DET right/ADJ arm/NOUN then/ADV lower/VERB it/PRON back/ADV down/ADP#0.0#0.0
+A person salutes with his right hand.#A/DET person/NOUN salute/VERB with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0
+A person is doing a pointing gesture with their right arm#A/DET person/NOUN is/AUX do/VERB a/DET pointing/NOUN gesture/NOUN with/ADP their/DET right/ADJ arm/NOUN#0.0#0.0
+a person points to something which is in front of it and higher from the ground with its right hand#a/DET person/NOUN point/VERB to/ADP something/PRON which/DET is/AUX in/ADP front/NOUN of/ADP it/PRON and/CCONJ higher/ADJ from/ADP the/DET ground/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

@@ -1,0 +1,3 @@
+A person stands and is then pushed from behind#A/DET person/NOUN stand/VERB and/CCONJ is/AUX then/ADV push/VERB from/ADP behind/ADV#0.0#0.0
+A subject is pushed from the back while standing.#A/DET subject/NOUN is/AUX push/VERB from/ADP the/DET back/NOUN while/SCONJ stand/VERB#0.0#0.0
+A human is being pushed and performs a sidestep to the front#A/DET human/NOUN is/AUX being/AUX push/VERB and/CCONJ perform/VERB a/DET sidestep/NOUN to/ADP the/DET front/NOUN#0.0#0.0

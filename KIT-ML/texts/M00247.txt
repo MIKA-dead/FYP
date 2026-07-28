@@ -1,0 +1,2 @@
+Someone walks a quarter-circle to the left.#Someone/PRON walk/VERB a/DET quartercircle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person slowly walks a quarter ride sided circle.#A/DET person/NOUN slowly/ADV walk/VERB a/DET quarter/NOUN ride/NOUN side/VERB circle/NOUN#0.0#0.0

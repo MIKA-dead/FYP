@@ -1,0 +1,5 @@
+A person plays guitar.#A/DET person/NOUN play/VERB guitar/NOUN#0.0#0.0
+A person strums a gitarre five times using the left hand.#A/DET person/NOUN strum/VERB a/DET gitarre/PROPN five/NUM time/NOUN use/VERB the/DET left/ADJ hand/NOUN#0.0#0.0
+A human is stroking the guitare with the left hand#A/DET human/NOUN is/AUX stroke/VERB the/DET guitare/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
+a person play the guitar with the left hand#a/DET person/NOUN play/VERB the/DET guitar/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
+A person is playing the guitare#A/DET person/NOUN is/AUX play/VERB the/DET guitare/NOUN#0.0#0.0

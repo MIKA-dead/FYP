@@ -1,0 +1,1 @@
+A person walks forward during that making an evasive step to the left.#A/DET person/NOUN walk/VERB forward/ADV during/ADP that/DET make/VERB an/DET evasive/ADJ step/NOUN to/ADP the/DET left/NOUN#0.0#0.0

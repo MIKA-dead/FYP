@@ -1,0 +1,1 @@
+A person gets up from a floor.#A/DET person/NOUN get/VERB up/ADV from/ADP a/DET floor/NOUN#0.0#0.0

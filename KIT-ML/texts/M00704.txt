@@ -1,0 +1,2 @@
+A person running#A/DET person/NOUN run/VERB#0.0#0.0
+a man is jogging#a/DET man/NOUN is/AUX jog/VERB#0.0#0.0

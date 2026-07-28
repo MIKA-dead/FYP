@@ -1,0 +1,3 @@
+A person walks a quarter circle counter clockwise with 4 steps.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN counter/NOUN clockwise/NOUN with/ADP step/NOUN#0.0#0.0
+A person is taking a left turn while walking.#A/DET person/NOUN is/AUX take/VERB a/DET left/ADJ turn/NOUN while/SCONJ walk/VERB#0.0#0.0
+A person walks a 90 degree curve to the left#A/DET person/NOUN walk/VERB a/DET degree/NOUN curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0

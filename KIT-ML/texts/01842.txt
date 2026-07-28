@@ -1,0 +1,2 @@
+A person receives a push from the front, tumbles backward, and finally takes a step forward.#A/DET person/NOUN receive/VERB a/DET push/NOUN from/ADP the/DET front/NOUN tumble/VERB backward/ADV and/CCONJ finally/ADV take/VERB a/DET step/NOUN forward/ADV#0.0#0.0
+A person lost its balance as he almost fell backwards but then recovered his posture.#A/DET person/NOUN lose/VERB its/DET balance/NOUN as/SCONJ he/PRON almost/ADV fall/VERB backwards/ADV but/CCONJ then/ADV recover/VERB his/DET posture/NOUN#0.0#0.0

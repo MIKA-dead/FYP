@@ -1,0 +1,1 @@
+A person walks a sharp turn to the left.#A/DET person/NOUN walk/VERB a/DET sharp/ADJ turn/NOUN to/ADP the/DET left/NOUN#0.0#0.0

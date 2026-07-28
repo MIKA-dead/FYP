@@ -1,0 +1,1 @@
+A human is being pushed to the right.#A/DET human/NOUN is/AUX being/AUX push/VERB to/ADP the/DET right/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+A person walks while turning to the right#A/DET person/NOUN walk/VERB while/SCONJ turn/VERB to/ADP the/DET right/NOUN#0.0#0.0
+A person takes a quarter of a circle to the right.#A/DET person/NOUN take/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A human strokes a pet on his chest.#A/DET human/ADJ stroke/NOUN a/DET pet/NOUN on/ADP his/DET chest/NOUN#0.0#0.0

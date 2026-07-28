@@ -1,0 +1,1 @@
+A person is sitting on a chair and than getting up from the chair.#A/DET person/NOUN is/AUX sit/VERB on/ADP a/DET chair/NOUN and/CCONJ than/SCONJ get/VERB up/ADP from/ADP the/DET chair/NOUN#0.0#0.0

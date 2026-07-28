@@ -1,0 +1,1 @@
+A person is walking around two objects in an eight form.#A/DET person/NOUN is/AUX walk/VERB around/ADP two/NUM object/NOUN in/ADP an/DET eight/NUM form/NOUN#0.0#0.0

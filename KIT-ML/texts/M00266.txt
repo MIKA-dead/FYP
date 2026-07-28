@@ -1,0 +1,2 @@
+A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
+someone right something on the ground when he walks  a corner.#someone/PRON right/ADJ something/PRON on/ADP the/DET ground/NOUN when/ADV he/PRON walk/VERB a/DET corner/NOUN#0.0#0.0

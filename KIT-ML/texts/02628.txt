@@ -1,0 +1,1 @@
+The person jumps like a ballet dancer.#The/DET person/NOUN jump/VERB like/SCONJ a/DET ballet/NOUN dancer/NOUN#0.0#0.0

@@ -1,0 +1,5 @@
+A person jumps to the left, jumping off and landing with two feet.#A/DET person/NOUN jump/VERB to/ADP the/DET left/NOUN jump/VERB off/ADP and/CCONJ land/VERB with/ADP two/NUM foot/NOUN#0.0#0.0
+Someone jumps to the left with both feed#Someone/PRON jump/VERB to/ADP the/DET left/NOUN with/ADP both/DET feed/NOUN#0.0#0.0
+Someone is jumping to the left side with both legs simultaneously.#Someone/PRON is/AUX jump/VERB to/ADP the/DET left/ADJ side/NOUN with/ADP both/DET leg/NOUN simultaneously/ADV#0.0#0.0
+a person jumps about 30cm to the left#a/DET person/NOUN jump/VERB about/ADV cm/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person jumps to the left side.#A/DET person/NOUN jump/VERB to/ADP the/DET left/ADJ side/NOUN#0.0#0.0

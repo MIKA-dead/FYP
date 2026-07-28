@@ -1,0 +1,1 @@
+A human picks up something heavy on his right side and lifts it in front of him.#A/DET human/ADJ pick/NOUN up/ADV something/PRON heavy/ADJ on/ADP his/DET right/ADJ side/NOUN and/CCONJ lift/VERB it/PRON in/ADP front/NOUN of/ADP him/PRON#0.0#0.0

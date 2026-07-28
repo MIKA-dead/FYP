@@ -1,0 +1,1 @@
+A person is walking forwards and then stumbling to the right#A/DET person/NOUN is/AUX walk/VERB forwards/ADV and/CCONJ then/ADV stumble/VERB to/ADP the/DET right/NOUN#0.0#0.0

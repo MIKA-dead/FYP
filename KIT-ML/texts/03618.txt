@@ -1,0 +1,1 @@
+A person jumps once.#A/DET person/NOUN jump/VERB once/ADV#0.0#0.0

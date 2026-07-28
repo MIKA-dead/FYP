@@ -1,0 +1,4 @@
+A person steps onto something.#A/DET person/NOUN step/VERB onto/ADP something/PRON#0.0#0.0
+A person climbs some steps#A/DET person/NOUN climb/VERB some/DET step/NOUN#0.0#0.0
+human goes upstairs#human/PROPN go/VERB upstairs/ADV#0.0#0.0
+Somebody walks a step up.#Somebody/PRON walk/VERB a/DET step/NOUN up/ADP#0.0#0.0

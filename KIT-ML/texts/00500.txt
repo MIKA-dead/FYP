@@ -1,0 +1,2 @@
+A human goes slowly about 1.5 meters forward.#A/DET human/NOUN go/VERB slowly/ADV about/ADV meter/NOUN forward/ADV#0.0#0.0
+a man walks slowly#a/DET man/NOUN walk/VERB slowly/ADV#0.0#0.0

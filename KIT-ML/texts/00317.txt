@@ -1,0 +1,1 @@
+A person walks forwards for four steps.#A/DET person/NOUN walk/VERB forwards/ADJ for/ADP four/NUM step/NOUN#0.0#0.0

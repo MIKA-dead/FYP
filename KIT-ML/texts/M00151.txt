@@ -1,0 +1,3 @@
+A person is turning left.#A/DET person/NOUN is/AUX turn/VERB left/ADV#0.0#0.0
+A human is walking in a quarter of a circle to the left.#A/DET human/NOUN is/AUX walk/VERB in/ADP a/DET quarter/NOUN of/ADP a/DET circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A human is performing a 90° left curve#A/DET human/NOUN is/AUX perform/VERB a/DET left/VERB curve/NOUN#0.0#0.0

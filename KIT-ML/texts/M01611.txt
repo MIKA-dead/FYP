@@ -1,0 +1,2 @@
+A person climbs a few steps.#A/DET person/NOUN climb/VERB a/DET few/ADJ step/NOUN#0.0#0.0
+A persons walks up three stairs#A/DET person/NOUN walk/VERB up/ADV three/NUM stair/NOUN#0.0#0.0

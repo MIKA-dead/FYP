@@ -1,0 +1,4 @@
+Subject walks a quarter circle clockwise.#Subject/ADJ walk/VERB a/DET quarter/NOUN circle/NOUN clockwise/NOUN#0.0#0.0
+A person walks in a 90° curve to his right.#A/DET person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP his/DET right/NOUN#0.0#0.0
+A person waits on a ATM line and then goes to the machine.#A/DET person/NOUN wait/VERB on/ADP a/DET ATM/PROPN line/NOUN and/CCONJ then/ADV go/VERB to/ADP the/DET machine/NOUN#0.0#0.0
+a human sit#a/DET human/ADJ sit/NOUN#0.0#0.0

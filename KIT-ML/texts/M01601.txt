@@ -1,0 +1,1 @@
+human goes forward starting with left#human/PROPN go/VERB forward/ADV start/VERB with/ADP left/ADJ#0.0#0.0

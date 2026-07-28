@@ -1,0 +1,1 @@
+A person walks to the forward direction then turns by 180 degrees to his right and walks forward again.#A/DET person/NOUN walk/VERB to/ADP the/DET forward/ADJ direction/NOUN then/ADV turn/VERB by/ADP degree/NOUN to/ADP his/DET right/NOUN and/CCONJ walk/VERB forward/ADV again/ADV#0.0#0.0

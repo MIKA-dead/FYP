@@ -1,0 +1,4 @@
+A person runs.#A/DET person/NOUN run/VERB#0.0#0.0
+A person running energetically.#A/DET person/NOUN run/VERB energetically/ADV#0.0#0.0
+A person is running forward.#A/DET person/NOUN is/AUX run/VERB forward/ADV#0.0#0.0
+A person runs forward.#A/DET person/NOUN run/VERB forward/ADV#0.0#0.0

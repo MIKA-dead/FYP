@@ -1,0 +1,31 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ],
+  "command": {
+    "agents": {
+      "description": "列出所有已配置的 agents",
+      "template": "列出 opencode.json 中配置的所有 agent，包括 motion-planner、motion-coder、motion-tester、motion-documenter，显示每个 agent 的描述和模式。",
+      "agent": "build"
+    }
+  },
+  "agent": {
+    "motion-planner": {
+      "description": "主规划代理，负责解析动画需求、拆分任务、调度子代理",
+      "mode": "subagent"
+    },
+    "motion-coder": {
+      "description": "编码代理，负责生成和合成运动",
+      "mode": "subagent"
+    },
+    "motion-tester": {
+      "description": "测试与验证专家，负责检查生成动画的质量和一致性",
+      "mode": "subagent"
+    },
+    "motion-documenter": {
+      "description": "文档与报告专家，负责生成和更新项目文档",
+      "mode": "subagent"
+    }
+  }
+}

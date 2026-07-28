@@ -1,0 +1,5 @@
+A person walks forward stepping onto a small podium.#A/DET person/NOUN walk/VERB forward/ADV step/VERB onto/ADP a/DET small/ADJ podium/NOUN#0.0#0.0
+A person walks up some stairs#A/DET person/NOUN walk/VERB up/ADP some/DET stair/NOUN#0.0#0.0
+A person is walking forward and stepping onto something.#A/DET person/NOUN is/AUX walk/VERB forward/ADV and/CCONJ step/VERB onto/ADP something/PRON#0.0#0.0
+A person walks up stairs.#A/DET person/NOUN walk/VERB up/ADP stair/NOUN#0.0#0.0
+A person walkes forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0

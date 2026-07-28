@@ -1,0 +1,1 @@
+A human  is dancing a cool move#A/DET human/ADJ is/AUX dance/VERB a/DET cool/ADJ move/NOUN#0.0#0.0

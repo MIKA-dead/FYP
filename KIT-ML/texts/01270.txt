@@ -1,0 +1,3 @@
+A person is bowing in an forty five degree angle#A/DET person/NOUN is/AUX bow/VERB in/ADP an/DET forty/NUM five/NUM degree/NOUN angle/NOUN#0.0#0.0
+A person bows.#A/DET person/NOUN bow/VERB#0.0#0.0
+a person takes a bow#a/DET person/NOUN take/VERB a/DET bow/NOUN#0.0#0.0

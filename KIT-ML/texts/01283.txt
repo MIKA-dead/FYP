@@ -1,0 +1,2 @@
+A human performing a kick with the right foot#A/DET human/NOUN perform/VERB a/DET kick/NOUN with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
+A person is kicking with his right leg.#A/DET person/NOUN is/AUX kick/VERB with/ADP his/DET right/ADJ leg/NOUN#0.0#0.0

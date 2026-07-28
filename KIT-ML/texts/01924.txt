@@ -1,0 +1,5 @@
+A person walks forward while being pushed to the left#A/DET person/NOUN walk/VERB forward/ADV while/SCONJ being/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0
+Someone walks forward and get pushed from the right#Someone/PRON walk/VERB forward/ADV and/CCONJ get/AUX push/VERB from/ADP the/DET right/NOUN#0.0#0.0
+A person walking forwards 3 steps, then takes a sidestep to his left before walking back to the target of his original track.#A/DET person/NOUN walk/VERB forwards/ADP step/NOUN then/ADV take/VERB a/DET sidestep/NOUN to/ADP his/DET left/NOUN before/ADP walk/VERB back/ADV to/ADP the/DET target/NOUN of/ADP his/DET original/ADJ track/NOUN#0.0#0.0
+The human walk perfoms a left jump and walks again#The/DET human/ADJ walk/NOUN perfom/VERB a/DET left/ADJ jump/NOUN and/CCONJ walk/VERB again/ADV#0.0#0.0
+Somebody is pushed to the left.#Somebody/PRON is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0

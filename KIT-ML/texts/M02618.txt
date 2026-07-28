@@ -1,0 +1,1 @@
+A person walks back and forth carefully and straight while looking around.#A/DET person/NOUN walk/VERB back/ADV and/CCONJ forth/ADV carefully/ADV and/CCONJ straight/ADV while/SCONJ look/VERB around/ADV#0.0#0.0

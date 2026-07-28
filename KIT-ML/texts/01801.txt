@@ -1,0 +1,3 @@
+Person walking and then stumbling to the left#person/NOUN walk/VERB and/CCONJ then/ADV stumble/VERB to/ADP the/DET left/NOUN#0.0#0.0
+Someone gets pushed from the right then get back to his path#Someone/PRON get/VERB push/VERB from/ADP the/DET right/NOUN then/ADV get/VERB back/ADV to/ADP his/DET path/NOUN#0.0#0.0
+A person walks forward and when he gets shoved from the right he stumbles to his left before walking back to the track he was on.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ when/ADV he/PRON get/VERB shove/VERB from/ADP the/DET right/NOUN he/PRON stumble/VERB to/ADP his/DET left/NOUN before/ADP walk/VERB back/ADV to/ADP the/DET track/NOUN he/PRON was/AUX on/ADP#0.0#0.0

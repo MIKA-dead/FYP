@@ -1,0 +1,1 @@
+human runs forward starting with right#human/ADJ run/NOUN forward/ADV start/VERB with/ADP right/ADJ#0.0#0.0

@@ -1,0 +1,4 @@
+A person is showing different heights with his left arm indicating above the head, at shoulder level and at hip level.#A/DET person/NOUN is/AUX show/VERB different/ADJ height/NOUN with/ADP his/DET left/ADJ arm/NOUN indicate/VERB above/ADP the/DET head/NOUN at/ADP shoulder/NOUN level/NOUN and/CCONJ at/ADP hip/NOUN level/NOUN#0.0#0.0
+Someone moves his arm up then half height and down#Someone/PRON move/VERB his/DET arm/NOUN up/ADP then/ADV half/ADV height/NOUN and/CCONJ down/ADV#0.0#0.0
+A person reaches for multiple objects.#A/DET person/NOUN reach/VERB for/ADP multiple/ADJ object/NOUN#0.0#0.0
+a person points at 3 points with its left hand which are above it besides it and below it#a/DET person/NOUN point/VERB at/ADP point/NOUN with/ADP its/DET left/ADJ hand/NOUN which/DET are/AUX above/ADP it/PRON besides/SCONJ it/PRON and/CCONJ below/ADP it/PRON#0.0#0.0

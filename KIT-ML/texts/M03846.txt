@@ -1,0 +1,1 @@
+A human takes one large step.#A/DET human/NOUN take/VERB one/NUM large/ADJ step/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person is making a jump forward with both feet.#A/DET person/NOUN is/AUX make/VERB a/DET jump/NOUN forward/ADV with/ADP both/DET foot/NOUN#0.0#0.0

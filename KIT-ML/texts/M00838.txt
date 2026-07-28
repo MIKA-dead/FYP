@@ -1,0 +1,1 @@
+the person is walking forward#the/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0

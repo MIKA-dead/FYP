@@ -1,0 +1,2 @@
+A person is walking carefully avoiding obstacles.#A/DET person/NOUN is/AUX walk/VERB carefully/ADV avoid/VERB obstacle/NOUN#0.0#0.0
+a person is moving along some obstacles#a/DET person/NOUN is/AUX move/VERB along/ADP some/DET obstacle/NOUN#0.0#0.0

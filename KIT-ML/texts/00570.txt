@@ -1,0 +1,2 @@
+A human walks a 90 degree arc to the right.#A/DET human/NOUN walk/VERB a/DET degree/NOUN arc/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+human goes in a quarter circle clockwise starting with right#human/PROPN go/VERB in/ADP a/DET quarter/NOUN circle/NOUN clockwise/NOUN start/VERB with/ADP right/ADJ#0.0#0.0

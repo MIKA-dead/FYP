@@ -1,0 +1,1 @@
+A person jumps approximately 30 centimeters in the air while running.#A/DET person/NOUN jump/VERB approximately/ADV centimeter/NOUN in/ADP the/DET air/NOUN while/SCONJ run/VERB#0.0#0.0

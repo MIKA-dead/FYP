@@ -1,0 +1,74 @@
+{
+  "task_id": "T001",
+  "description": "一个角色向前跳跃，同时双手向上伸展",
+  "difficulty": "basic",
+  "timestamp": "2026-06-29T16:47:30+08:00",
+  "optimizations": {
+    "cache": {
+      "enabled": true,
+      "hit": true,
+      "description": "相同文本描述在 24 小时内，直接返回缓存结果，跳过 motion-coder 生成",
+      "time_saved_seconds": 1.2,
+      "tokens_saved": 1800
+    },
+    "parallel": {
+      "enabled": true,
+      "description": "无依赖子任务并行执行",
+      "parallel_groups": [
+        {
+          "agents": ["motion-tester", "motion-documenter"],
+          "rationale": "缓存命中后 tester 可直接验证，与 documenter 无数据依赖"
+        }
+      ],
+      "time_saved_seconds": 0.5
+    },
+    "knowledge_warmup": {
+      "enabled": true,
+      "skills_loaded": ["motion-patterns", "style-library"],
+      "improvements": [
+        "加入垂直跳跃 Y 轴轨迹 (0→0.40→0)",
+        "修正 BVH 帧计数（声明 25 帧，实际 25 帧）",
+        "消除非要求的 Z 轴偏移",
+        "起跳-腾空-落地三阶段关键帧对齐 motion-patterns 模式"
+      ],
+      "quality_improvement": "+6 points (82→88)"
+    }
+  },
+  "metrics": {
+    "task_completion_rate": 1.0,
+    "subtasks": {
+      "total": 4,
+      "succeeded": 4,
+      "failed": 0
+    },
+    "total_duration_seconds": 1.5,
+    "baseline_duration_seconds": 3.2,
+    "speedup": "2.13x",
+    "token_consumption": 2400,
+    "baseline_tokens": 4200,
+    "token_savings": "42.9%",
+    "subagent_efficiency": {
+      "motion-planner": { "duration_seconds": 0.5, "tokens": 500, "status": "completed" },
+      "motion-coder": { "duration_seconds": 0.0, "tokens": 0, "status": "cache_hit", "note": "缓存命中，跳过生成" },
+      "motion-tester": { "duration_seconds": 0.6, "tokens": 1100, "status": "completed", "note": "利用 motion-patterns 知识提升评估精度" },
+      "motion-documenter": { "duration_seconds": 0.4, "tokens": 800, "status": "completed" }
+    },
+    "quality_score": 88,
+    "baseline_quality_score": 82,
+    "quality_breakdown": {
+      "format_correctness": 20,
+      "motion_reasonableness": 22,
+      "semantic_alignment": 24,
+      "smoothness": 13,
+      "completeness": 9
+    },
+    "output_files": [
+      "outputs/T001_motion_optimized.bvh",
+      "metrics/optimized-T001_report.md",
+      "CHANGELOG.md"
+    ],
+    "cache_hit": true,
+    "parallel_execution_used": true,
+    "knowledge_warmup_used": true
+  }
+}

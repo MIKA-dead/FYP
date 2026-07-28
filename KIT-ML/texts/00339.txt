@@ -1,0 +1,3 @@
+A person walks counterclockwise in a small circle.#A/DET person/NOUN walk/VERB counterclockwise/NOUN in/ADP a/DET small/ADJ circle/NOUN#0.0#0.0
+A human walks in a counterclockwise circle, completing one round in 8 steps#A/DET human/ADJ walk/VERB in/ADP a/DET counterclockwise/ADJ circle/NOUN complete/VERB one/NUM round/NOUN in/ADP step/NOUN#0.0#0.0
+A human walks a full circle to its left and stops right before where it started.#A/DET human/NOUN walk/VERB a/DET full/ADJ circle/NOUN to/ADP its/DET left/NOUN and/CCONJ stop/VERB right/ADV before/ADV where/ADV it/PRON start/VERB#0.0#0.0

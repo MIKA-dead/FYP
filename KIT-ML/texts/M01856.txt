@@ -1,0 +1,2 @@
+A standing person gets pushed from the right and recovers by taking steps to the left.#A/DET stand/VERB person/NOUN get/VERB push/VERB from/ADP the/DET right/NOUN and/CCONJ recover/NOUN by/ADP take/VERB step/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+a person is standing still and gets pushed to the left#a/DET person/NOUN is/AUX stand/VERB still/ADV and/CCONJ get/VERB push/VERB to/ADP the/DET left/NOUN#0.0#0.0

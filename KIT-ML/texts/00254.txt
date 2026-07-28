@@ -1,0 +1,3 @@
+a person walks a left turn#a/DET person/NOUN walk/VERB a/DET left/ADJ turn/NOUN#0.0#0.0
+A person turns to his right.#A/DET person/NOUN turn/VERB to/ADP his/DET right/NOUN#0.0#0.0
+human performs a bending walking motion to its right hand side#human/ADJ perform/VERB a/DET bend/VERB walk/VERB motion/NOUN to/ADP its/DET right/ADJ hand/NOUN side/NOUN#0.0#0.0

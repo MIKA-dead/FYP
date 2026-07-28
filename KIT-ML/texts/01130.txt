@@ -1,0 +1,4 @@
+A person quickly steps to the left.#A/DET person/NOUN quickly/ADV step/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person takes one step to the left.#A/DET person/NOUN take/VERB one/NUM step/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+Someone gets pushed from the right side and compensates with a sidestep to the left.#Someone/PRON get/VERB push/VERB from/ADP the/DET right/ADJ side/NOUN and/CCONJ compensate/VERB with/ADP a/DET sidestep/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person makes a big sidestep to the left.#A/DET person/NOUN make/VERB a/DET big/ADJ sidestep/NOUN to/ADP the/DET left/NOUN#0.0#0.0

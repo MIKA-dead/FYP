@@ -1,0 +1,1 @@
+A person is walking foward. Afterwards the person is going up some stairs.#A/DET person/NOUN is/AUX walk/VERB foward/ADJ Afterwards/ADV the/DET person/NOUN is/AUX go/VERB up/ADP some/DET stair/NOUN#0.0#0.0

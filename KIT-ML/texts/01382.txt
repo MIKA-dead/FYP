@@ -1,0 +1,2 @@
+A human subject is waving five times with the right hand.#A/DET human/ADJ subject/NOUN is/AUX wave/VERB five/NUM time/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
+a person waves with his right hand#a/DET person/NOUN wave/VERB with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

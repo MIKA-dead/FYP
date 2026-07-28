@@ -1,0 +1,1 @@
+A person plays air guitar.#A/DET person/NOUN play/VERB air/NOUN guitar/NOUN#0.0#0.0

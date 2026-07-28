@@ -1,0 +1,1 @@
+A person is dancing and jumping around.#A/DET person/NOUN is/AUX dance/VERB and/CCONJ jump/VERB around/ADV#0.0#0.0

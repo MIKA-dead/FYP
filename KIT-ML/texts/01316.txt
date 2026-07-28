@@ -1,0 +1,2 @@
+A person jumps upwards.#A/DET person/NOUN jump/VERB upwards/ADV#0.0#0.0
+a person jumps up about 15 centimeters#a/DET person/NOUN jump/VERB up/ADP about/ADV centimeter/NOUN#0.0#0.0

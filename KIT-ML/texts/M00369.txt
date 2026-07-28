@@ -1,0 +1,2 @@
+human walks in counterclockwise circle starting with left leg#human/ADJ walk/VERB in/ADP counterclockwise/PROPN circle/NOUN start/VERB with/ADP left/ADJ leg/NOUN#0.0#0.0
+A human is performing a tight 90° left curve#A/DET human/NOUN is/AUX perform/VERB a/DET tight/ADJ left/VERB curve/NOUN#0.0#0.0

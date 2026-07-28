@@ -1,0 +1,2 @@
+A person starts a circular movement towards the left.#A/DET person/NOUN start/VERB a/DET circular/ADJ movement/NOUN towards/ADP the/DET left/NOUN#0.0#0.0
+human slowly goes in a quater circle counterclockwise starting with right#human/PROPN slowly/ADV go/VERB in/ADP a/DET quater/NOUN circle/NOUN counterclockwise/NOUN start/VERB with/ADP right/ADJ#0.0#0.0

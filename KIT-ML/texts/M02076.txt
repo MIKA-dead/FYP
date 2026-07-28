@@ -1,0 +1,2 @@
+A person goes down onto the floor on all fours.#A/DET person/NOUN go/VERB down/ADP onto/ADP the/DET floor/NOUN on/ADP all/DET four/NOUN#0.0#0.0
+A human is kneeling down like a dog.#A/DET human/NOUN is/AUX kneel/VERB down/ADP like/SCONJ a/DET dog/NOUN#0.0#0.0

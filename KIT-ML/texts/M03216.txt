@@ -1,0 +1,1 @@
+A human sits on the floor and looks around.#A/DET human/ADJ sit/VERB on/ADP the/DET floor/NOUN and/CCONJ look/VERB around/ADV#0.0#0.0

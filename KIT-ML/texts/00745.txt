@@ -1,0 +1,6 @@
+A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
+Person walking forces#person/NOUN walk/VERB force/NOUN#0.0#0.0
+someone walks forward slowly#someone/PRON walk/VERB forward/ADV slowly/ADV#0.0#0.0
+A human walks forwards#A/DET human/NOUN walk/VERB forwards/ADV#0.0#0.0
+A person takes five forward steps.#A/DET person/NOUN take/VERB five/NUM forward/ADV step/NOUN#0.0#0.0
+A person walks 5 slow steps forward#A/DET person/NOUN walk/VERB slow/ADJ step/NOUN forward/ADV#0.0#0.0

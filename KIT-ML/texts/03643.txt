@@ -1,0 +1,1 @@
+The subject is throwing and catching an object#The/DET subject/NOUN is/AUX throw/VERB and/CCONJ catch/VERB an/DET object/NOUN#0.0#0.0

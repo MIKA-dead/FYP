@@ -1,0 +1,1 @@
+a person walks a rightward quarter circle#a/DET person/NOUN walk/VERB a/DET rightward/ADJ quarter/NOUN circle/NOUN#0.0#0.0

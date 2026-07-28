@@ -1,0 +1,1 @@
+A person jumps in the air and then walks 4 steps forward.#A/DET person/NOUN jump/VERB in/ADP the/DET air/NOUN and/CCONJ then/ADV walk/VERB step/NOUN forward/ADV#0.0#0.0

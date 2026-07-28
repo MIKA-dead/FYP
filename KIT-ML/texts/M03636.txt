@@ -1,0 +1,1 @@
+A human walks fast.#A/DET human/NOUN walk/NOUN fast/ADV#0.0#0.0

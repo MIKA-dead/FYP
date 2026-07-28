@@ -1,0 +1,1 @@
+A human walks with a stoop and searches something.#A/DET human/NOUN walk/VERB with/ADP a/DET stoop/NOUN and/CCONJ search/VERB something/PRON#0.0#0.0

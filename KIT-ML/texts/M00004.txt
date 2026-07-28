@@ -1,0 +1,2 @@
+A person walks forward at medium speed.#A/DET person/NOUN walk/VERB forward/ADV at/ADP medium/ADJ speed/NOUN#0.0#0.0
+human slowly goes forward#human/PROPN slowly/ADV go/VERB forward/ADV#0.0#0.0

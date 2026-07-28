@@ -1,0 +1,3 @@
+Someone walks forward and geht hit from the right then get back on his way#Someone/PRON walk/VERB forward/ADV and/CCONJ geht/ADJ hit/VERB from/ADP the/DET right/NOUN then/ADV get/AUX back/ADV on/ADP his/DET way/NOUN#0.0#0.0
+a person walks forwards and gets pushed to the left#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ get/VERB push/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person takes one step forward, two to the right side and two back to the left side.#A/DET person/NOUN take/VERB one/NUM step/NOUN forward/ADV two/NUM to/ADP the/DET right/ADJ side/NOUN and/CCONJ two/NUM back/ADV to/ADP the/DET left/ADJ side/NOUN#0.0#0.0

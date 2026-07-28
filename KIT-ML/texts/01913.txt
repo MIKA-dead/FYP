@@ -1,0 +1,3 @@
+A person is pushed by their left side, recovers and goes back to the left.#A/DET person/NOUN is/AUX push/VERB by/ADP their/DET left/ADJ side/NOUN recover/NOUN and/CCONJ go/VERB back/ADV to/ADP the/DET left/NOUN#0.0#0.0
+A person walks some meters and avoids and obstacle while walking#A/DET person/NOUN walk/VERB some/DET meter/NOUN and/CCONJ avoid/NOUN and/CCONJ obstacle/NOUN while/SCONJ walk/VERB#0.0#0.0
+The person walks straight forward. Then something happens and the human perfoms a right jump.#The/DET person/NOUN walk/VERB straight/ADV forward/ADV Then/ADV something/PRON happen/VERB and/CCONJ the/DET human/ADJ perfom/NOUN a/DET right/ADJ jump/NOUN#0.0#0.0

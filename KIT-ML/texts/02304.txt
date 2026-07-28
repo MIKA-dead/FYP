@@ -1,0 +1,1 @@
+A person is balancing on something.#A/DET person/NOUN is/AUX balance/VERB on/ADP something/PRON#0.0#0.0

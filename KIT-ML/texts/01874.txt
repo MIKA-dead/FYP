@@ -1,0 +1,1 @@
+A Person goes three and half steps forward, is pushed back and recovers making a step ahead.#A/DET person/NOUN go/VERB three/NUM and/CCONJ half/NOUN step/NOUN forward/ADV is/AUX push/VERB back/ADV and/CCONJ recover/NOUN make/VERB a/DET step/NOUN ahead/ADV#0.0#0.0

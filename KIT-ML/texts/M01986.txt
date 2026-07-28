@@ -1,0 +1,2 @@
+A person turns 90° to the right at medium speed.#A/DET person/NOUN turn/VERB to/ADP the/DET right/NOUN at/ADP medium/ADJ speed/NOUN#0.0#0.0
+A person moves to the right.#A/DET person/NOUN move/VERB to/ADP the/DET right/NOUN#0.0#0.0

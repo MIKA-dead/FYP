@@ -1,0 +1,1 @@
+A human is looking at the floor#A/DET human/NOUN is/AUX look/VERB at/ADP the/DET floor/NOUN#0.0#0.0

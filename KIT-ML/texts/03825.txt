@@ -1,0 +1,1 @@
+A person is repeatedly carefully walking in one direction and stopping again to look around.#A/DET person/NOUN is/AUX repeatedly/ADV carefully/ADV walk/VERB in/ADP one/NUM direction/NOUN and/CCONJ stop/VERB again/ADV to/PART look/VERB around/ADV#0.0#0.0

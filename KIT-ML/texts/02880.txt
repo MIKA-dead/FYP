@@ -1,0 +1,1 @@
+A person is touching the floor with the right hand.#A/DET person/NOUN is/AUX touch/VERB the/DET floor/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

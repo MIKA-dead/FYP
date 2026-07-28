@@ -1,0 +1,1 @@
+a person is walking#a/DET person/NOUN is/AUX walk/VERB#0.0#0.0

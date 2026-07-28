@@ -1,0 +1,2 @@
+a person performs a high kick with his right foot#a/DET person/NOUN perform/VERB a/DET high/ADJ kick/NOUN with/ADP his/DET right/ADJ foot/NOUN#0.0#0.0
+a man gives a high-kick#a/DET man/NOUN give/VERB a/DET highkick/NOUN#0.0#0.0

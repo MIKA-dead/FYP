@@ -1,0 +1,5 @@
+A human kicks forward.#A/DET human/ADJ kick/NOUN forward/ADV#0.0#0.0
+sidekick to stomach with left leg#sidekick/VERB to/PART stomach/VERB with/ADP left/ADJ leg/NOUN#0.0#0.0
+a person kicks something with its left foot#a/DET person/NOUN kick/VERB something/PRON with/ADP its/DET left/ADJ foot/NOUN#0.0#0.0
+The human perfoms a left kick#The/DET human/ADJ perfom/NOUN a/DET left/ADJ kick/NOUN#0.0#0.0
+a man gives a sidekick#a/DET man/NOUN give/VERB a/DET sidekick/NOUN#0.0#0.0

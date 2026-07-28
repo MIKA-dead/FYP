@@ -1,0 +1,1 @@
+A person jumps forward with both legs after taking a run-up.#A/DET person/NOUN jump/VERB forward/ADV with/ADP both/DET leg/NOUN after/ADP take/VERB a/DET runup/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person is jumping in a circle by turning 90 degrees to the left with every jump.#A/DET person/NOUN is/AUX jump/VERB in/ADP a/DET circle/NOUN by/ADP turn/VERB degree/NOUN to/ADP the/DET left/NOUN with/ADP every/DET jump/NOUN#0.0#0.0

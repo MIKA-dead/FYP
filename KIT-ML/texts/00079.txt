@@ -1,0 +1,4 @@
+the person is walking to the left by following a half circle path#the/DET person/NOUN is/AUX walk/VERB to/ADP the/DET left/NOUN by/ADP follow/VERB a/DET half/ADJ circle/NOUN path/NOUN#0.0#0.0
+A person moves to the left.#A/DET person/NOUN move/VERB to/ADP the/DET left/NOUN#0.0#0.0
+a person walks to the left#a/DET person/NOUN walk/VERB to/ADP the/DET left/NOUN#0.0#0.0
+Somebody walks a quarter circle anticlockwise.#Somebody/PRON walk/VERB a/DET quarter/NOUN circle/NOUN anticlockwise/NOUN#0.0#0.0

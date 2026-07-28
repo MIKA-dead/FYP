@@ -1,0 +1,5 @@
+A person performs a fast 180° turn.#A/DET person/NOUN perform/VERB a/DET fast/ADJ turn/VERB#0.0#0.0
+Walking two steps and doing a turn by 180 degrees to the left and walk another two steps.#walk/VERB two/NUM step/NOUN and/CCONJ do/VERB a/DET turn/NOUN by/ADP degree/NOUN to/ADP the/DET left/NOUN and/CCONJ walk/VERB another/DET two/NUM step/NOUN#0.0#0.0
+a person walks forward takes a 180 degree turn to the left and keeps on walking#a/DET person/NOUN walk/VERB forward/ADV take/VERB a/DET degree/NOUN turn/NOUN to/ADP the/DET left/NOUN and/CCONJ keep/VERB on/ADP walk/VERB#0.0#0.0
+A person turns 180 degrees on his left foot.#A/DET person/NOUN turn/VERB degree/NOUN on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0
+human goes forward and turns around around partway#human/PROPN go/VERB forward/ADV and/CCONJ turn/VERB around/ADP around/ADP partway/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+a human peforms a pose like while doing knee bends#a/DET human/ADJ peform/NOUN a/DET pose/NOUN like/SCONJ while/SCONJ do/VERB knee/NOUN bend/NOUN#0.0#0.0

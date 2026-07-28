@@ -1,0 +1,1 @@
+A person goes  approximately 1 meter carfefully one step further with his left foot.#A/DET person/NOUN go/VERB approximately/ADV meter/NOUN carfefully/ADV one/NUM step/NOUN further/ADV with/ADP his/DET left/ADJ foot/NOUN#0.0#0.0

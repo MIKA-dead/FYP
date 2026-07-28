@@ -1,0 +1,1 @@
+A person jumps, kicks and holds up a hand#A/DET person/NOUN jump/VERB kick/NOUN and/CCONJ hold/VERB up/ADP a/DET hand/NOUN#0.0#0.0

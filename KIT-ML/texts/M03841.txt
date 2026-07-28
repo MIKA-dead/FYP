@@ -1,0 +1,1 @@
+A human steps down a low platform.#A/DET human/ADJ step/NOUN down/ADV a/DET low/ADJ platform/NOUN#0.0#0.0

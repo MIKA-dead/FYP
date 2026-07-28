@@ -1,0 +1,2 @@
+A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
+A person slowly walks a 90° turn in four steps#A/DET person/NOUN slowly/ADV walk/VERB a/DET turn/VERB in/ADP four/NUM step/NOUN#0.0#0.0

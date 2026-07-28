@@ -1,0 +1,2 @@
+A human playing a guitar#A/DET human/ADJ play/VERB a/DET guitar/NOUN#0.0#0.0
+human performs a motion which resembles playing guitar#human/PROPN perform/VERB a/DET motion/NOUN which/DET resemble/VERB play/VERB guitar/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person seems to be playing the guitar, holding it with his left hand, stroking with his right hand.#A/DET person/NOUN seem/VERB to/PART be/AUX play/VERB the/DET guitar/NOUN hold/VERB it/PRON with/ADP his/DET left/ADJ hand/NOUN stroke/VERB with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

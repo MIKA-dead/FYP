@@ -1,0 +1,1 @@
+A human hunkers down and performs a jump.#A/DET human/ADJ hunker/NOUN down/ADP and/CCONJ perform/VERB a/DET jump/NOUN#0.0#0.0

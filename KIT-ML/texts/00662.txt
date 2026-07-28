@@ -1,0 +1,5 @@
+A person wiggles their arms.#A/DET person/NOUN wiggle/VERB their/DET arm/NOUN#0.0#0.0
+A person flutters with his arms.#A/DET person/NOUN flutter/VERB with/ADP his/DET arm/NOUN#0.0#0.0
+a person does the chicken moves#a/DET person/NOUN does/AUX the/DET chicken/NOUN move/NOUN#0.0#0.0
+A person waves their arms like a chicken#A/DET person/NOUN wave/VERB their/DET arm/NOUN like/SCONJ a/DET chicken/NOUN#0.0#0.0
+human performs the chicken dance#human/ADJ perform/VERB the/DET chicken/NOUN dance/NOUN#0.0#0.0

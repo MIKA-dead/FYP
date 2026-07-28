@@ -1,0 +1,2 @@
+a person waves#a/DET person/NOUN wave/VERB#0.0#0.0
+A person wipes something horizontal#A/DET person/NOUN wipe/VERB something/PRON horizontal/ADJ#0.0#0.0

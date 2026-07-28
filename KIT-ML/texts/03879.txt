@@ -1,0 +1,1 @@
+A human jumps and turns 90 degrees#A/DET human/ADJ jump/NOUN and/CCONJ turn/VERB degree/NOUN#0.0#0.0

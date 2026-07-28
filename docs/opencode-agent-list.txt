@@ -1,0 +1,2319 @@
+﻿build (primary)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+compaction (primary)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "*",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+explore (subagent)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "*",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "grep",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "glob",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "list",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "bash",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "webfetch",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "websearch",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+general (subagent)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "todowrite",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+plan (primary)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "task",
+    "pattern": "general",
+    "action": "deny"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "edit",
+    "pattern": "*",
+    "action": "deny"
+  },
+  {
+    "permission": "edit",
+    "pattern": ".opencode\\plans\\*.md",
+    "action": "allow"
+  },
+  {
+    "permission": "edit",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\plans\\*.md",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+summary (primary)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "*",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+title (primary)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "*",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+motion-coder (subagent)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "file_read",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "database_query",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "file_write",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+motion-documenter (subagent)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "file_write",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "file_append",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+motion-planner (subagent)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "TodoWrite",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "subagent_spawn",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "file_write",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+motion-tester (subagent)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "file_read",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "shell_execute",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "file_write",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+task-decomposer (all)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]
+test-agent (all)
+  [
+  {
+    "permission": "*",
+    "action": "allow",
+    "pattern": "*"
+  },
+  {
+    "permission": "doom_loop",
+    "action": "ask",
+    "pattern": "*"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "*",
+    "action": "ask"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\AppData\\Local\\Temp\\opencode\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.agents\\skills\\find-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\ai-sdk\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\frontend-design\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "E:\\璇句欢\\FYP\\BuildanAgent\\.agents\\skills\\nodejs-best-practices\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-skills\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\writing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-superpowers\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\verification-before-completion\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\using-git-worktrees\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\subagent-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\systematic-debugging\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\requesting-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\receiving-code-review\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\executing-plans\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\brainstorming\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.cache\\opencode\\packages\\superpowers@git+https_\\github.com\\obra\\superpowers.git\\node_modules\\superpowers\\skills\\test-driven-development\\*",
+    "action": "allow"
+  },
+  {
+    "permission": "question",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_enter",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "plan_exit",
+    "action": "deny",
+    "pattern": "*"
+  },
+  {
+    "permission": "read",
+    "pattern": "*",
+    "action": "allow"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.*",
+    "action": "ask"
+  },
+  {
+    "permission": "read",
+    "pattern": "*.env.example",
+    "action": "allow"
+  },
+  {
+    "permission": "external_directory",
+    "pattern": "C:\\Users\\寮犺僵鐫縗\.local\\share\\opencode\\tool-output\\*",
+    "action": "allow"
+  }
+]

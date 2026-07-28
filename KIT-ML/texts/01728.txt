@@ -1,0 +1,6 @@
+A person stumbles slightly while walking backwards but quickly recovers and continues moving backwards.#A/DET person/NOUN stumble/VERB slightly/ADV while/SCONJ walk/VERB backwards/ADV but/CCONJ quickly/ADV recover/NOUN and/CCONJ continue/VERB move/VERB backwards/ADV#0.0#0.0
+human is pushed from front and counterbalances the pushing by stepping backwards#human/PROPN is/AUX push/VERB from/ADP front/NOUN and/CCONJ counterbalance/VERB the/DET pushing/NOUN by/ADP step/VERB backwards/ADV#0.0#0.0
+A human is pushed from the front#A/DET human/NOUN is/AUX push/VERB from/ADP the/DET front/NOUN#0.0#0.0
+Someone gets pushed from the front and does two backward steps to compensate.#Someone/PRON get/VERB push/VERB from/ADP the/DET front/NOUN and/CCONJ does/AUX two/NUM backward/ADJ step/NOUN to/PART compensate/VERB#0.0#0.0
+a person gets pushed from the front#a/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN#0.0#0.0
+Somebody is pushed back.#Somebody/PRON is/AUX push/VERB back/ADV#0.0#0.0

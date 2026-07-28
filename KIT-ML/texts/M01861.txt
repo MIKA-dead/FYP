@@ -1,0 +1,5 @@
+A human trips over something.#A/DET human/ADJ trip/NOUN over/ADP something/PRON#0.0#0.0
+Someone beeing pushed from some direction while walking forward.#Someone/PRON beeing/NOUN push/VERB from/ADP some/DET direction/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0
+A forward walking person gets shoved from behind.#A/DET forward/ADV walk/VERB person/NOUN get/VERB shove/VERB from/ADP behind/ADV#0.0#0.0
+a person starts to walk but then gets pushed from behind#a/DET person/NOUN start/VERB to/PART walk/VERB but/CCONJ then/ADV get/VERB push/VERB from/ADP behind/ADV#0.0#0.0
+A person is walking and then kicks his own feet.#A/DET person/NOUN is/AUX walk/VERB and/CCONJ then/ADV kick/VERB his/DET own/ADJ foot/NOUN#0.0#0.0

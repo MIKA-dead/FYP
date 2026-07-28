@@ -1,0 +1,3 @@
+A human walks and turns to the left.#A/DET human/ADJ walk/NOUN and/CCONJ turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person is walking in a curve to left.#A/DET person/NOUN is/AUX walk/VERB in/ADP a/DET curve/NOUN to/ADP left/VERB#0.0#0.0
+A person turns left.#A/DET person/NOUN turn/VERB left/VERB#0.0#0.0

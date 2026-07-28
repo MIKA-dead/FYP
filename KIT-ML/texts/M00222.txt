@@ -1,0 +1,1 @@
+A Person moves backwards#A/DET person/NOUN move/VERB backwards/ADV#0.0#0.0

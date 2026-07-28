@@ -1,0 +1,4 @@
+Person walking forwards#person/NOUN walk/VERB forwards/ADV#0.0#0.0
+human goes forward, slowly and firmly, starting with right#human/PROPN go/VERB forward/ADV slowly/ADV and/CCONJ firmly/ADV start/VERB with/ADP right/ADJ#0.0#0.0
+A person performs some large forward strides.#A/DET person/NOUN perform/VERB some/DET large/ADJ forward/NOUN stride/NOUN#0.0#0.0
+a person walks forwards quite slow#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV slow/ADJ#0.0#0.0

@@ -1,0 +1,1 @@
+A person walks straight, turns around, walks back, then turns around again#A/DET person/NOUN walk/VERB straight/ADV turn/VERB around/ADV walk/VERB back/ADV then/ADV turn/VERB around/ADP again/ADV#0.0#0.0

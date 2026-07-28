@@ -1,0 +1,3 @@
+A person throws a ball with their left hand#A/DET person/NOUN throw/VERB a/DET ball/NOUN with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0
+A person throws an object with his left hand.#A/DET person/NOUN throw/VERB an/DET object/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
+A person is throwing something to the ground.#A/DET person/NOUN is/AUX throw/VERB something/PRON to/ADP the/DET ground/NOUN#0.0#0.0

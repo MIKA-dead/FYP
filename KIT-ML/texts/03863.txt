@@ -1,0 +1,1 @@
+A human walks and takes a 90° turn.#A/DET human/ADJ walk/VERB and/CCONJ take/VERB a/DET turn/NOUN#0.0#0.0

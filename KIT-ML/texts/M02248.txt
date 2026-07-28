@@ -1,0 +1,1 @@
+A human poses with the hand up and the knees slightly bend.#A/DET human/ADJ pose/NOUN with/ADP the/DET hand/NOUN up/ADP and/CCONJ the/DET knee/NOUN slightly/ADV bend/VERB#0.0#0.0

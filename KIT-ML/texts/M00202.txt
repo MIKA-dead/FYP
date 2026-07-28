@@ -1,0 +1,2 @@
+A person is walking forward starting with the left feet and performing five steps while turning to the left with an angle of 90°#A/DET person/NOUN is/AUX walk/VERB forward/ADV start/VERB with/ADP the/DET left/ADJ foot/NOUN and/CCONJ perform/VERB five/NUM step/NOUN while/SCONJ turn/VERB to/ADP the/DET left/NOUN with/ADP an/DET angle/NOUN of/ADP#0.0#0.0
+a person walks in a quarter circle to the left#a/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

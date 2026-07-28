@@ -1,0 +1,1 @@
+A human plays basketball and makes a layup.#A/DET human/ADJ play/NOUN basketball/NOUN and/CCONJ make/VERB a/DET layup/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+A Person moves in a slow walk#A/DET person/NOUN move/VERB in/ADP a/DET slow/ADJ walk/NOUN#0.0#0.0
+A person moves forward some meters and stops to stand still.#A/DET person/NOUN move/VERB forward/ADV some/DET meter/NOUN and/CCONJ stop/VERB to/PART stand/VERB still/ADV#0.0#0.0

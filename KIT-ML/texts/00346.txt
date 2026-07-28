@@ -1,0 +1,2 @@
+Subject walks in a full circle counterclockwise.#Subject/ADJ walk/VERB in/ADP a/DET full/ADJ circle/NOUN counterclockwise/NOUN#0.0#0.0
+A person walks forward in a counterclockwise circle.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET counterclockwise/ADJ circle/NOUN#0.0#0.0

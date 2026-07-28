@@ -1,0 +1,2 @@
+A person kneels down#A/DET person/NOUN kneel/VERB down/ADP#0.0#0.0
+A person stretches the back by lifting the arms parallel to the floor and then kneels.#A/DET person/NOUN stretch/VERB the/DET back/NOUN by/ADP lift/VERB the/DET arm/NOUN parallel/NOUN to/ADP the/DET floor/NOUN and/CCONJ then/ADV kneel/VERB#0.0#0.0

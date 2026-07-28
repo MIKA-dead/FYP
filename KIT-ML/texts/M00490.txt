@@ -1,0 +1,2 @@
+A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
+a persons walks forwards and the turn to the right about 110 degrees#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ the/DET turn/NOUN to/ADP the/DET right/ADJ about/ADV degree/NOUN#0.0#0.0

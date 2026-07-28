@@ -1,0 +1,1 @@
+A human runs into an obstacle.#A/DET human/ADJ run/VERB into/ADP an/DET obstacle/NOUN#0.0#0.0

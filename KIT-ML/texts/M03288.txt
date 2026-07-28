@@ -1,0 +1,1 @@
+A human turns 270° to the right while jumping in the air.#A/DET human/NOUN turn/VERB to/ADP the/DET right/NOUN while/SCONJ jump/VERB in/ADP the/DET air/NOUN#0.0#0.0

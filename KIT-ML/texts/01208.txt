@@ -1,0 +1,3 @@
+A person dances.#A/DET person/NOUN dance/VERB#0.0#0.0
+A person carries something and does some steps to both sides#A/DET person/NOUN carry/VERB something/PRON and/CCONJ does/AUX some/DET step/NOUN to/ADP both/DET side/NOUN#0.0#0.0
+A human makes the steps of a waltz dance and is holding its hands like he is holding another person.#A/DET human/NOUN make/VERB the/DET step/NOUN of/ADP a/DET waltz/NOUN dance/NOUN and/CCONJ is/AUX hold/VERB its/DET hand/NOUN like/SCONJ he/PRON is/AUX hold/VERB another/DET person/NOUN#0.0#0.0

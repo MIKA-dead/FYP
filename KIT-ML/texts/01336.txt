@@ -1,0 +1,1 @@
+Person is jumping to the right#person/NOUN is/AUX jump/VERB to/ADP the/DET right/NOUN#0.0#0.0

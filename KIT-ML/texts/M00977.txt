@@ -1,0 +1,1 @@
+human goes in a quater circle counterclockwise#human/PROPN go/VERB in/ADP a/DET quater/NOUN circle/NOUN counterclockwise/NOUN#0.0#0.0

@@ -1,0 +1,4 @@
+the person is first showing two hands and then kneeling down by using both hands as support#the/DET person/NOUN is/AUX first/ADV show/VERB two/NUM hand/NOUN and/CCONJ then/ADV kneel/VERB down/ADP by/ADP use/VERB both/DET hand/NOUN as/SCONJ support/NOUN#0.0#0.0
+Someone is kneeling down.#Someone/PRON is/AUX kneel/VERB down/ADP#0.0#0.0
+A person goes down to his knees and stretches his body.#A/DET person/NOUN go/VERB down/ADP to/ADP his/DET knee/NOUN and/CCONJ stretch/VERB his/DET body/NOUN#0.0#0.0
+A persons lifts both arms to shoulder height, then kneels down#A/DET person/NOUN lift/VERB both/DET arm/NOUN to/ADP shoulder/NOUN height/NOUN then/ADV kneel/VERB down/ADP#0.0#0.0

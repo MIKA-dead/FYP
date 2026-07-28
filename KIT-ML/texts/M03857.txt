@@ -1,0 +1,1 @@
+A person moves forward and then climbs staircases.#A/DET person/NOUN move/VERB forward/ADV and/CCONJ then/ADV climb/VERB staircase/NOUN#0.0#0.0

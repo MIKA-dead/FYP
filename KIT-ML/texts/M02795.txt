@@ -1,0 +1,1 @@
+A human jumps to the right, then to the left.#A/DET human/ADJ jump/NOUN to/ADP the/DET right/NOUN then/ADV to/ADP the/DET left/NOUN#0.0#0.0

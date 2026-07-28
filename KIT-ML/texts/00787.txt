@@ -1,0 +1,4 @@
+A person jogs forward#A/DET person/NOUN jog/VERB forward/ADV#0.0#0.0
+human jogs forward#human/PROPN jogs/PROPN forward/ADV#0.0#0.0
+a person is jogging forward.#a/DET person/NOUN is/AUX jog/VERB forward/ADV#0.0#0.0
+a person jogs for a few meters#a/DET person/NOUN jog/VERB for/ADP a/DET few/ADJ meter/NOUN#0.0#0.0

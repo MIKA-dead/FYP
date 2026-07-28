@@ -1,0 +1,2 @@
+The human walks over step stones#The/DET human/NOUN walk/VERB over/ADP step/NOUN stone/NOUN#0.0#0.0
+A person walks carefully.#A/DET person/NOUN walk/VERB carefully/ADV#0.0#0.0

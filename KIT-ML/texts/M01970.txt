@@ -1,0 +1,2 @@
+Person running for a few steps#person/NOUN run/VERB for/ADP a/DET few/ADJ step/NOUN#0.0#0.0
+A person joggs forward#A/DET person/NOUN joggs/NOUN forward/ADV#0.0#0.0

@@ -1,0 +1,1 @@
+Subject walks three steps forward.#Subject/ADJ walk/VERB three/NUM step/NOUN forward/ADV#0.0#0.0

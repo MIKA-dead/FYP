@@ -1,0 +1,2 @@
+A person is walking forwards with swinging hands.#A/DET person/NOUN is/AUX walk/VERB forwards/ADV with/ADP swinge/VERB hand/NOUN#0.0#0.0
+A person walks forwards quickly.#A/DET person/NOUN walk/VERB forwards/ADV quickly/ADV#0.0#0.0

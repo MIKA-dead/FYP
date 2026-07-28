@@ -1,0 +1,6 @@
+A person runs two meters and decelerates.#A/DET person/NOUN run/VERB two/NUM meter/NOUN and/CCONJ decelerate/NOUN#0.0#0.0
+a person walks quite fast#a/DET person/NOUN walk/VERB quite/ADV fast/ADV#0.0#0.0
+A person takes a few steps while accelerating.#A/DET person/NOUN take/VERB a/DET few/ADJ step/NOUN while/SCONJ accelerate/VERB#0.0#0.0
+The human runs to a specific point#The/DET human/NOUN run/VERB to/ADP a/DET specific/ADJ point/NOUN#0.0#0.0
+A person quickly walks forward#A/DET person/NOUN quickly/ADV walk/VERB forward/ADV#0.0#0.0
+someone start quick walking and stop#someone/PRON start/VERB quick/ADJ walking/NOUN and/CCONJ stop/VERB#0.0#0.0

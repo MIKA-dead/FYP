@@ -1,0 +1,1 @@
+A drunken man drinking on the street#A/DET drunken/ADJ man/NOUN drink/VERB on/ADP the/DET street/NOUN#0.0#0.0

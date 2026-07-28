@@ -1,0 +1,8 @@
+A person runs forward.#A/DET person/NOUN run/VERB forward/ADV#0.0#0.0
+A person ran to the front.#A/DET person/NOUN run/VERB to/ADP the/DET front/NOUN#0.0#0.0
+Person running a few steps#person/NOUN run/VERB a/DET few/ADJ step/NOUN#0.0#0.0
+Someone is starting running away.#Someone/PRON is/AUX start/VERB run/VERB away/ADV#0.0#0.0
+A person sprints.#A/DET person/NOUN sprint/NOUN#0.0#0.0
+A person stands still, then runs five steps and comes to an abrupt stop.#A/DET person/NOUN stand/VERB still/ADV then/ADV run/VERB five/NUM step/NOUN and/CCONJ come/VERB to/ADP an/DET abrupt/ADJ stop/NOUN#0.0#0.0
+a person takes 3 fast steps forward#a/DET person/NOUN take/VERB fast/ADJ step/NOUN forward/ADV#0.0#0.0
+A person starts running and stops after a few steps.#A/DET person/NOUN start/VERB run/VERB and/CCONJ stop/VERB after/ADP a/DET few/ADJ step/NOUN#0.0#0.0

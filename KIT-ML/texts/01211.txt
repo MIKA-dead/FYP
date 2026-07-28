@@ -1,0 +1,2 @@
+A person performs the basic step of the slow-waltz ballroom dance.#A/DET person/NOUN perform/VERB the/DET basic/ADJ step/NOUN of/ADP the/DET slowwaltz/PROPN ballroom/NOUN dance/PROPN#0.0#0.0
+a man is practicing waltz stepps#a/DET man/NOUN is/AUX practice/VERB waltz/PROPN stepps/PROPN#0.0#0.0

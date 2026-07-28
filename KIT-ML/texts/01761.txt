@@ -1,0 +1,12 @@
+something is happening to the person during the forward walk#something/PRON is/AUX happen/VERB to/ADP the/DET person/NOUN during/ADP the/DET forward/ADJ walk/NOUN#0.0#0.0
+A human walks forwards#A/DET human/NOUN walk/VERB forwards/ADV#0.0#0.0
+A person is pushed slightly from behind while walking.#A/DET person/NOUN is/AUX push/VERB slightly/ADV from/ADP behind/ADV while/SCONJ walk/VERB#0.0#0.0
+A human is stumbling with the right foot#A/DET human/NOUN is/AUX stumble/VERB with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
+a person walks forwards and gets then pushed from the back#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ get/VERB then/ADV push/VERB from/ADP the/DET back/NOUN#0.0#0.0
+A person starts to walk forward and stumbles after 2 steps.#A/DET person/NOUN start/VERB to/PART walk/VERB forward/ADV and/CCONJ stumble/NOUN after/ADP step/NOUN#0.0#0.0
+A person takes seven forward steps at varying walking speed.#A/DET person/NOUN take/VERB seven/NUM forward/ADV step/NOUN at/ADP vary/VERB walk/VERB speed/NOUN#0.0#0.0
+A person is walking forward.#A/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0
+A person walks and gets pushed forward.#A/DET person/NOUN walk/VERB and/CCONJ get/VERB push/VERB forward/ADV#0.0#0.0
+Person makes one slow and three fast steps, then stops.#person/NOUN make/VERB one/NUM slow/ADJ and/CCONJ three/NUM fast/ADJ step/NOUN then/ADV stop/VERB#0.0#0.0
+a person takes a few steps forward and stumbles.#a/DET person/NOUN take/VERB a/DET few/ADJ step/NOUN forward/ADV and/CCONJ stumble/NOUN#0.0#0.0
+Some is walking and doing some faster steps in between.#Some/DET is/AUX walk/VERB and/CCONJ do/VERB some/DET faster/ADJ step/NOUN in/ADP between/ADP#0.0#0.0

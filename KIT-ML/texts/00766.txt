@@ -1,0 +1,2 @@
+A person is walking and turning to the right#A/DET person/NOUN is/AUX walk/VERB and/CCONJ turn/VERB to/ADP the/DET right/NOUN#0.0#0.0
+human performs a bending walking movement to the right#human/ADJ perform/VERB a/DET bend/VERB walk/VERB movement/NOUN to/ADP the/DET right/NOUN#0.0#0.0

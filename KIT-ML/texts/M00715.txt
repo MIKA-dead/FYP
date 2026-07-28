@@ -1,0 +1,4 @@
+A human walks forwards, then turns around to the left and begins to walk the other way, then stops.#A/DET human/ADJ walk/VERB forwards/ADV then/ADV turn/VERB around/ADP to/ADP the/DET left/NOUN and/CCONJ begin/VERB to/PART walk/VERB the/DET other/ADJ way/NOUN then/ADV stop/VERB#0.0#0.0
+A person walks forward two steps, turns 180 degree on the left foot and walks again two steps.#A/DET person/NOUN walk/VERB forward/ADV two/NUM step/NOUN turn/VERB degree/NOUN on/ADP the/DET left/ADJ foot/NOUN and/CCONJ walk/VERB again/ADV two/NUM step/NOUN#0.0#0.0
+A human makes 2 steps forward on one line, turns on its left foot and walks back to the spot where it started.#A/DET human/NOUN make/VERB step/NOUN forward/ADV on/ADP one/NUM line/NOUN turn/VERB on/ADP its/DET left/ADJ foot/NOUN and/CCONJ walk/VERB back/ADV to/ADP the/DET spot/NOUN where/ADV it/PRON start/VERB#0.0#0.0
+A person makes a sharp turn.#A/DET person/NOUN make/VERB a/DET sharp/ADJ turn/NOUN#0.0#0.0

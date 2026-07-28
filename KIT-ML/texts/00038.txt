@@ -1,0 +1,2 @@
+A person walking in a quarter circle to the right#A/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+A person walks while turning to the right.#A/DET person/NOUN walk/VERB while/SCONJ turn/VERB to/ADP the/DET right/NOUN#0.0#0.0

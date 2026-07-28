@@ -1,0 +1,4 @@
+A person runs forward.#A/DET person/NOUN run/VERB forward/ADV#0.0#0.0
+Person running a few steps#person/NOUN run/VERB a/DET few/ADJ step/NOUN#0.0#0.0
+A human runs five steps forward#A/DET human/NOUN run/VERB five/NUM step/NOUN forward/ADV#0.0#0.0
+A human runs approximately 2 meters forward.#A/DET human/ADJ run/VERB approximately/ADV meter/NOUN forward/ADV#0.0#0.0

@@ -1,0 +1,1 @@
+A person running 3 steps.#A/DET person/NOUN run/VERB step/NOUN#0.0#0.0

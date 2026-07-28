@@ -1,0 +1,3 @@
+Subject raises its arms to its shoulder and then gets on its knees.#Subject/PROPN raise/VERB its/DET arm/NOUN to/ADP its/DET shoulder/NOUN and/CCONJ then/ADV get/VERB on/ADP its/DET knee/NOUN#0.0#0.0
+Someone is kneeling down.#Someone/PRON is/AUX kneel/VERB down/ADP#0.0#0.0
+A human goes down on his knees#A/DET human/NOUN go/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0

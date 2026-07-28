@@ -1,0 +1,1 @@
+A human performs multiple punches and low kicks.#A/DET human/ADJ perform/VERB multiple/ADJ punch/NOUN and/CCONJ low/ADJ kick/NOUN#0.0#0.0

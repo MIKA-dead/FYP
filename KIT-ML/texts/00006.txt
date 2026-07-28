@@ -1,0 +1,2 @@
+A person goes four and half steps forward.#A/DET person/NOUN go/VERB four/NUM and/CCONJ half/ADJ step/NOUN forward/ADV#0.0#0.0
+A person walking forward slightly to the right.#A/DET person/NOUN walk/VERB forward/ADV slightly/ADV to/ADP the/DET right/NOUN#0.0#0.0

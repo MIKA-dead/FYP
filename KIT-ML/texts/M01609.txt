@@ -1,0 +1,5 @@
+A human climbing a stair#A/DET human/ADJ climb/VERB a/DET stair/NOUN#0.0#0.0
+human goes upstairs#human/PROPN go/VERB upstairs/ADV#0.0#0.0
+A person takes a step forward and then climbs up a steep slope.#A/DET person/NOUN take/VERB a/DET step/NOUN forward/ADV and/CCONJ then/ADV climb/VERB up/ADP a/DET steep/ADJ slope/NOUN#0.0#0.0
+A person walking forward up a hill.#A/DET person/NOUN walk/VERB forward/ADV up/ADP a/DET hill/NOUN#0.0#0.0
+a person walks up a ramp#a/DET person/NOUN walk/VERB up/ADP a/DET ramp/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person is slowly walking forward with the arms swinging a bit.#A/DET person/NOUN is/AUX slowly/ADV walk/VERB forward/ADV with/ADP the/DET arm/NOUN swinge/VERB a/DET bit/NOUN#0.0#0.0

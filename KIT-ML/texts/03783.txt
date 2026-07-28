@@ -1,0 +1,1 @@
+A man jump a step front.#A/DET man/NOUN jump/VERB a/DET step/NOUN front/NOUN#0.0#0.0

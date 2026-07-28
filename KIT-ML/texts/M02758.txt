@@ -1,0 +1,1 @@
+A person is looking around with his head and making a few steps.#A/DET person/NOUN is/AUX look/VERB around/ADP with/ADP his/DET head/NOUN and/CCONJ make/VERB a/DET few/ADJ step/NOUN#0.0#0.0

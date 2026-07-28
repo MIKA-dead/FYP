@@ -1,0 +1,4 @@
+Person playing the air guitar#person/NOUN play/VERB the/DET air/NOUN guitar/NOUN#0.0#0.0
+human plays the guitar right-handed#human/PROPN play/VERB the/DET guitar/NOUN righthande/VERB#0.0#0.0
+Someone is holding his left arm up and stroking with his right hand in front of his upper body.#Someone/PRON is/AUX hold/VERB his/DET left/ADJ arm/NOUN up/ADP and/CCONJ stroke/VERB with/ADP his/DET right/ADJ hand/NOUN in/ADP front/NOUN of/ADP his/DET upper/ADJ body/NOUN#0.0#0.0
+a man is playing the guitar#a/DET man/NOUN is/AUX play/VERB the/DET guitar/NOUN#0.0#0.0

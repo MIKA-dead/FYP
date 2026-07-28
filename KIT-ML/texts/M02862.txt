@@ -1,0 +1,1 @@
+A person is playing golf.#A/DET person/NOUN is/AUX play/VERB golf/NOUN#0.0#0.0

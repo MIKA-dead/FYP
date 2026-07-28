@@ -1,0 +1,2 @@
+A person is wiping a horizontal surface.#A/DET person/NOUN is/AUX wipe/VERB a/DET horizontal/ADJ surface/NOUN#0.0#0.0
+a man is wiping or rubbing something with his left hand#a/DET man/NOUN is/AUX wipe/VERB or/CCONJ rub/VERB something/PRON with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

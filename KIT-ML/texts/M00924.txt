@@ -1,0 +1,3 @@
+A person runs.#A/DET person/NOUN run/VERB#0.0#0.0
+A person begins jogging and stops.#A/DET person/NOUN begin/VERB jog/VERB and/CCONJ stop/NOUN#0.0#0.0
+The human is running#The/DET human/NOUN is/AUX run/VERB#0.0#0.0

@@ -1,0 +1,2 @@
+A person walking forwards, turning on the right food and walking back#A/DET person/NOUN walk/VERB forwards/ADV turn/VERB on/ADP the/DET right/ADJ food/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
+A Person is walking forward than rotates 180 degree on it's right foot and walks back to it's starting Position.#A/DET person/NOUN is/AUX walk/VERB forward/ADV than/SCONJ rotate/VERB degree/NOUN on/ADP it/PRON right/ADJ foot/NOUN and/CCONJ walk/VERB back/ADV to/ADP it/PRON start/VERB position/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+A person walks forwards slowly, hips swaying.#A/DET person/NOUN walk/VERB forwards/ADV slowly/ADV hip/NOUN sway/VERB#0.0#0.0
+A person walks four steps in the forward direction.#A/DET person/NOUN walk/VERB four/NUM step/NOUN in/ADP the/DET forward/ADJ direction/NOUN#0.0#0.0

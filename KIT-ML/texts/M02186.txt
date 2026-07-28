@@ -1,0 +1,1 @@
+A person moves both arms up and down like wings.#A/DET person/NOUN move/VERB both/DET arm/NOUN up/ADV and/CCONJ down/ADP like/SCONJ wing/NOUN#0.0#0.0

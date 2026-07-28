@@ -1,0 +1,3 @@
+Someone is taking a few steps back#Someone/PRON is/AUX take/VERB a/DET few/ADJ step/NOUN back/ADV#0.0#0.0
+a person walks backward#a/DET person/NOUN walk/VERB backward/ADV#0.0#0.0
+a human walks backwards#a/DET human/NOUN walk/VERB backwards/ADV#0.0#0.0

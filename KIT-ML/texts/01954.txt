@@ -1,0 +1,3 @@
+A human stepping to the right side#A/DET human/ADJ stepping/NOUN to/ADP the/DET right/ADJ side/NOUN#0.0#0.0
+A person doing a side step to the right#A/DET person/NOUN do/VERB a/DET side/NOUN step/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+a person takes a step to the right side#a/DET person/NOUN take/VERB a/DET step/NOUN to/ADP the/DET right/ADJ side/NOUN#0.0#0.0

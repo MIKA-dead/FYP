@@ -1,0 +1,1 @@
+A human walk with tiny steps and a stiff upper body.#A/DET human/ADJ walk/NOUN with/ADP tiny/ADJ step/NOUN and/CCONJ a/DET stiff/ADJ upper/ADJ body/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+A person waves with the right hand one time.#A/DET person/NOUN wave/VERB with/ADP the/DET right/ADJ hand/NOUN one/NUM time/NOUN#0.0#0.0
+A person wipes a surface in front of him.#A/DET person/NOUN wipe/VERB a/DET surface/NOUN in/ADP front/NOUN of/ADP him/PRON#0.0#0.0

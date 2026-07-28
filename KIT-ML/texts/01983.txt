@@ -1,0 +1,6 @@
+A person walks and turns to the left.#A/DET person/NOUN walk/VERB and/CCONJ turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person walking in a curve to the left.#A/DET person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person turns left.#A/DET person/NOUN turn/VERB left/VERB#0.0#0.0
+Someone is moving in a circle.#Someone/PRON is/AUX move/VERB in/ADP a/DET circle/NOUN#0.0#0.0
+a person walks to the left performing a quarter circle to the left#a/DET person/NOUN walk/VERB to/ADP the/DET left/ADJ perform/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person turns left.#A/DET person/NOUN turn/VERB left/VERB#0.0#0.0

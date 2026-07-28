@@ -1,0 +1,3 @@
+A person walks forwards taking big strides.#A/DET person/NOUN walk/VERB forwards/ADV take/VERB big/ADJ stride/NOUN#0.0#0.0
+Someone walks forward#Someone/PRON walk/VERB forward/ADV#0.0#0.0
+a person walks forwards#a/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0

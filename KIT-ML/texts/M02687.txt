@@ -1,0 +1,1 @@
+A human stands with both hands in the air and then partially collapses.#A/DET human/NOUN stand/VERB with/ADP both/DET hand/NOUN in/ADP the/DET air/NOUN and/CCONJ then/ADV partially/ADV collapse/VERB#0.0#0.0

@@ -1,0 +1,1 @@
+A human performs a ninjutsu striking walk in forward and backward direction.#A/DET human/NOUN perform/VERB a/DET ninjutsu/ADJ striking/ADJ walk/NOUN in/ADP forward/ADV and/CCONJ backward/ADJ direction/NOUN#0.0#0.0

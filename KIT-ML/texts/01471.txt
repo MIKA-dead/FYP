@@ -1,0 +1,2 @@
+A person raises their right arm, looks at the arm's muscles and moves the left arm towards the right arm.#A/DET person/NOUN raise/VERB their/DET right/ADJ arm/NOUN look/VERB at/ADP the/DET arm/NOUN muscle/NOUN and/CCONJ move/VERB the/DET left/ADJ arm/NOUN towards/ADP the/DET right/ADJ arm/NOUN#0.0#0.0
+A person plays violin.#A/DET person/NOUN play/VERB violin/NOUN#0.0#0.0

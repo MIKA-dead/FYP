@@ -1,0 +1,1 @@
+the person is running forward and then stops#the/DET person/NOUN is/AUX run/VERB forward/ADV and/CCONJ then/ADV stop/VERB#0.0#0.0

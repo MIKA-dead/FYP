@@ -1,0 +1,4 @@
+Someone walks four steps forwards.#Someone/PRON walk/VERB four/NUM step/NOUN forwards/ADV#0.0#0.0
+Someone is walking forward 4 steps starting with the right leg.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
+A human is slowly walking forward#A/DET human/NOUN is/AUX slowly/ADV walk/VERB forward/ADV#0.0#0.0
+A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0

@@ -1,0 +1,4 @@
+Someone does a tennis smash with the right arm.#Someone/PRON does/AUX a/DET tennis/NOUN smash/NOUN with/ADP the/DET right/ADJ arm/NOUN#0.0#0.0
+A human performs a hit with a racket with its right hand over its head.#A/DET human/NOUN perform/VERB a/DET hit/NOUN with/ADP a/DET racket/NOUN with/ADP its/DET right/ADJ hand/NOUN over/ADP its/DET head/NOUN#0.0#0.0
+a person throws something with its right hand#a/DET person/NOUN throw/VERB something/PRON with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
+A person is throwing an object with his right arm.#A/DET person/NOUN is/AUX throw/VERB an/DET object/NOUN with/ADP his/DET right/ADJ arm/NOUN#0.0#0.0

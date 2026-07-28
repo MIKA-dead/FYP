@@ -1,0 +1,3 @@
+A person running forward#A/DET person/NOUN run/VERB forward/ADV#0.0#0.0
+a person jogs for a few meters#a/DET person/NOUN jog/VERB for/ADP a/DET few/ADJ meter/NOUN#0.0#0.0
+A person is jogging.#A/DET person/NOUN is/AUX jog/VERB#0.0#0.0

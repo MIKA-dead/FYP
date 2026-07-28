@@ -1,0 +1,3 @@
+A person lurches to the left, crossing his right foot bhind his left foot befor returning to the starting position.#A/DET person/NOUN lurch/VERB to/ADP the/DET left/NOUN cross/VERB his/DET right/ADJ foot/NOUN bhind/VERB his/DET left/ADJ foot/NOUN befor/NOUN return/VERB to/ADP the/DET starting/NOUN position/NOUN#0.0#0.0
+human is pushed from right hand side and counterbalances push by stepping sideways#human/PROPN is/AUX push/VERB from/ADP right/ADJ hand/NOUN side/NOUN and/CCONJ counterbalance/NOUN push/VERB by/ADP step/VERB sideways/ADV#0.0#0.0
+a person stands still and gets pushed to the left#a/DET person/NOUN stand/VERB still/ADV and/CCONJ get/VERB push/VERB to/ADP the/DET left/NOUN#0.0#0.0

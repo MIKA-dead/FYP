@@ -1,0 +1,7 @@
+The subject walks forward.#The/DET subject/NOUN walk/VERB forward/ADV#0.0#0.0
+Person walking forwards#person/NOUN walk/VERB forwards/ADV#0.0#0.0
+Someone walks away.#Someone/PRON walk/VERB away/ADV#0.0#0.0
+A person walks forward#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
+A person just walks#A/DET person/NOUN just/ADV walk/VERB#0.0#0.0
+a person walks straight forward some steps#a/DET person/NOUN walk/VERB straight/ADV forward/ADV some/DET step/NOUN#0.0#0.0
+A person walks 5 steps beginning with the left foot.#A/DET person/NOUN walk/VERB step/NOUN begin/VERB with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0

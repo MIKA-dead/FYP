@@ -1,0 +1,2 @@
+A person makes a small jump to the left#A/DET person/NOUN make/VERB a/DET small/ADJ jump/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+a person hops to the left#a/DET person/NOUN hop/VERB to/ADP the/DET left/NOUN#0.0#0.0

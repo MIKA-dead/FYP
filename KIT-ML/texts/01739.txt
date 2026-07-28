@@ -1,0 +1,1 @@
+A person walks forward during that the person is pushed slightly to the left.#A/DET person/NOUN walk/VERB forward/ADV during/ADP that/SCONJ the/DET person/NOUN is/AUX push/VERB slightly/ADV to/ADP the/DET left/NOUN#0.0#0.0

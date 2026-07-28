@@ -1,0 +1,1 @@
+A human imitating an elephants movements and its trunk.#A/DET human/ADJ imitate/VERB an/DET elephant/NOUN movement/NOUN and/CCONJ its/DET trunk/NOUN#0.0#0.0

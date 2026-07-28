@@ -1,0 +1,1 @@
+A human uses his hands to open, search and close an object.#A/DET human/NOUN use/VERB his/DET hand/NOUN to/PART open/VERB search/VERB and/CCONJ close/VERB an/DET object/NOUN#0.0#0.0

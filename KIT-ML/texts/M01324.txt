@@ -1,0 +1,2 @@
+a person makes a jump forward#a/DET person/NOUN make/VERB a/DET jump/NOUN forward/ADV#0.0#0.0
+A person jumps forwards.#A/DET person/NOUN jump/VERB forwards/ADV#0.0#0.0

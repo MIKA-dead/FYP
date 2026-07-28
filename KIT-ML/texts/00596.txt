@@ -1,0 +1,4 @@
+A person performs a squat#A/DET person/NOUN perform/VERB a/DET squat/NOUN#0.0#0.0
+human does knee bends#human/NOUN does/AUX knee/NOUN bend/NOUN#0.0#0.0
+a person does a squad execise#a/DET person/NOUN does/AUX a/DET squad/NOUN execise/NOUN#0.0#0.0
+A person performs one squat.#A/DET person/NOUN perform/VERB one/NUM squat/NOUN#0.0#0.0

@@ -1,0 +1,4 @@
+A person walks forward an turns left at the last step.#A/DET person/NOUN walk/VERB forward/ADV an/DET turn/NOUN left/VERB at/ADP the/DET last/ADJ step/NOUN#0.0#0.0
+a person walks some steps forwards and the turns to the left#a/DET person/NOUN walk/VERB some/DET step/NOUN forwards/ADV and/CCONJ the/DET turn/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person walking some steps forward before turning 90° to the left.#A/DET person/NOUN walk/VERB some/DET step/NOUN forward/ADV before/ADP turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+The human perfoms a left turn#The/DET human/ADJ perfom/NOUN a/DET left/ADJ turn/NOUN#0.0#0.0

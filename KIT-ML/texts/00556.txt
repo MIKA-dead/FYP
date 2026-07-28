@@ -1,0 +1,1 @@
+A person running forward for a few steps#A/DET person/NOUN run/VERB forward/ADV for/ADP a/DET few/ADJ step/NOUN#0.0#0.0

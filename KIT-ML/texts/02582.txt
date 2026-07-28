@@ -1,0 +1,1 @@
+A person is dancing in various directions.#A/DET person/NOUN is/AUX dance/VERB in/ADP various/ADJ direction/NOUN#0.0#0.0

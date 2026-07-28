@@ -1,0 +1,7 @@
+A person lifts both arms sideways to a t-pose and afterwards goes to to the knees.#A/DET person/NOUN lift/VERB both/DET arm/NOUN sideways/ADV to/ADP a/DET tpose/DET and/CCONJ afterwards/ADV go/VERB to/ADP to/ADP the/DET knee/NOUN#0.0#0.0
+A person raises his arms to the height of his shoulders before getting down on his knees.#A/DET person/NOUN raise/VERB his/DET arm/NOUN to/ADP the/DET height/NOUN of/ADP his/DET shoulder/NOUN before/ADP get/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0
+A person is lifting both arms before kneeling down#A/DET person/NOUN is/AUX lift/VERB both/DET arm/NOUN before/ADP kneel/VERB down/ADP#0.0#0.0
+a person raises its arms like wings and then goes down to its knees#a/DET person/NOUN raise/VERB its/DET arm/NOUN like/SCONJ wing/NOUN and/CCONJ then/ADV go/VERB down/ADP to/ADP its/DET knee/NOUN#0.0#0.0
+A person stretching out their arms, then kneeling down#A/DET person/NOUN stretch/VERB out/ADP their/DET arm/NOUN then/ADV kneel/VERB down/ADP#0.0#0.0
+Someone is raising his arms to the side, then going down on his knees.#Someone/PRON is/AUX raise/VERB his/DET arm/NOUN to/ADP the/DET side/NOUN then/ADV go/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0
+a man lifts his arms, then goes down on his knees#a/DET man/NOUN lift/VERB his/DET arm/NOUN then/ADV go/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0

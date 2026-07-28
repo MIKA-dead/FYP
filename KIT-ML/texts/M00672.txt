@@ -1,0 +1,2 @@
+A person walks forwards cautiously..#A/DET person/NOUN walk/VERB forwards/ADV cautiously/ADV#0.0#0.0
+Somebody walks comfortable.#Somebody/PRON walk/VERB comfortable/ADJ#0.0#0.0

@@ -1,0 +1,4 @@
+A person gets down on all fours.#A/DET person/NOUN get/VERB down/ADV on/ADP all/DET four/NOUN#0.0#0.0
+A person will step on his two knees, making use both arms to support itself.#A/DET person/NOUN will/VERB step/VERB on/ADP his/DET two/NUM knee/NOUN make/VERB use/VERB both/DET arm/NOUN to/PART support/VERB itself/PRON#0.0#0.0
+a person goes down on his knees#a/DET person/NOUN go/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0
+A person goes down to his knees.#A/DET person/NOUN go/VERB down/ADP to/ADP his/DET knee/NOUN#0.0#0.0

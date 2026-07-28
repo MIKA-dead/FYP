@@ -1,0 +1,6 @@
+A person dances the cha-cha-cha#A/DET person/NOUN dance/VERB the/DET chachacha/NOUN#0.0#0.0
+Someone dances a standard dance#Someone/PRON dance/VERB a/DET standard/ADJ dance/NOUN#0.0#0.0
+A human dances (Cha-cha-cha) and holds its hands like it has holding its partner.#A/DET human/ADJ dance/NOUN Chachacha/PROPN and/CCONJ hold/VERB its/DET hand/NOUN like/SCONJ it/PRON has/AUX hold/VERB its/DET partner/NOUN#0.0#0.0
+a person dances with another person#a/DET person/NOUN dance/VERB with/ADP another/DET person/NOUN#0.0#0.0
+A male dancer performs  a chachacha basic step.#A/DET male/ADJ dancer/NOUN perform/VERB a/DET chachacha/PUNCT basic/ADJ step/NOUN#0.0#0.0
+A person dances#A/DET person/NOUN dance/VERB#0.0#0.0

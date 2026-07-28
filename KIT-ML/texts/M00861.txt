@@ -1,0 +1,6 @@
+A person walks around a curve. on his right.#A/DET person/NOUN walk/VERB around/ADP a/DET curve/NOUN on/ADP his/DET right/NOUN#0.0#0.0
+A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
+A Person is walking a quarter in counter counterclockwise direction.#A/DET person/NOUN is/AUX walk/VERB a/DET quarter/NOUN in/ADP counter/ADJ counterclockwise/ADJ direction/NOUN#0.0#0.0
+a persons walks to the right performing a quarter circle#a/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN perform/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0
+A person walks a quarter circle.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0
+A person does a 90° right turn in five steps#A/DET person/NOUN does/AUX a/DET right/ADJ turn/NOUN in/ADP five/NUM step/NOUN#0.0#0.0

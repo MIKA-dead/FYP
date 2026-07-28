@@ -1,0 +1,1 @@
+A human bends over and performs actions on the ground with her right hand.#A/DET human/ADJ bend/NOUN over/ADP and/CCONJ perform/VERB action/NOUN on/ADP the/DET ground/NOUN with/ADP her/DET right/ADJ hand/NOUN#0.0#0.0

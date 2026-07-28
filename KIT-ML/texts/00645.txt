@@ -1,0 +1,4 @@
+the person is little bit walking to the front and then suddenly making a sharp turn to the back#the/DET person/NOUN is/AUX little/ADJ bit/NOUN walk/VERB to/ADP the/DET front/NOUN and/CCONJ then/ADV suddenly/ADV make/VERB a/DET sharp/ADJ turn/NOUN to/ADP the/DET back/NOUN#0.0#0.0
+a person walks forward and turn 180 degress to the left and keeps on walking#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ turn/VERB degress/NOUN to/ADP the/DET left/NOUN and/CCONJ keep/VERB on/ADP walk/VERB#0.0#0.0
+A person turning on the tip of their right foot#A/DET person/NOUN turn/VERB on/ADP the/DET tip/NOUN of/ADP their/DET right/ADJ foot/NOUN#0.0#0.0
+Somebody turns anticlockwise.#Somebody/PRON turn/VERB anticlockwise/NOUN#0.0#0.0

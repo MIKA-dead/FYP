@@ -1,0 +1,1 @@
+A person is running a few steps forwards.#A/DET person/NOUN is/AUX run/VERB a/DET few/ADJ step/NOUN forwards/ADV#0.0#0.0

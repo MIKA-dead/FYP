@@ -1,0 +1,1 @@
+A human jumps with 2 legs#A/DET human/ADJ jump/VERB with/ADP leg/NOUN#0.0#0.0

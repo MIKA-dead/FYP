@@ -1,0 +1,1 @@
+A person is performing multiple jumps on the spot by first turning 90 degrees, then 180 degrees and finally 360 degrees to the right.#A/DET person/NOUN is/AUX perform/VERB multiple/ADJ jump/NOUN on/ADP the/DET spot/NOUN by/ADP first/ADJ turn/VERB degree/NOUN then/ADV degree/NOUN and/CCONJ finally/ADV degree/NOUN to/ADP the/DET right/NOUN#0.0#0.0

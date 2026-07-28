@@ -1,0 +1,2 @@
+A person is getting on his knees.#A/DET person/NOUN is/AUX get/VERB on/ADP his/DET knee/NOUN#0.0#0.0
+a human goes down on his knees#a/DET human/NOUN go/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0

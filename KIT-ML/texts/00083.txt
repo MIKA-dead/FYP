@@ -1,0 +1,2 @@
+A human makes a left turn.#A/DET human/NOUN make/VERB a/DET left/ADJ turn/NOUN#0.0#0.0
+A person goes left around a corner#A/DET person/NOUN go/VERB left/VERB around/ADP a/DET corner/NOUN#0.0#0.0

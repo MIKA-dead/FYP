@@ -1,0 +1,4 @@
+A human walks 2 and a half steps forward, one step backwards and 3 steps forward#A/DET human/NOUN walk/VERB and/CCONJ a/DET half/NOUN step/NOUN forward/ADV one/NUM step/NOUN backwards/ADV and/CCONJ step/NOUN forward/ADV#0.0#0.0
+a person walks forwards then backwards and then forwards again#a/DET person/NOUN walk/VERB forwards/ADV then/ADV backwards/ADV and/CCONJ then/ADV forwards/ADV again/ADV#0.0#0.0
+human is pushed from front while walking forward#human/PROPN is/AUX push/VERB from/ADP front/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0
+A person kicks something, takes a step backward and then continues walking#A/DET person/NOUN kick/VERB something/PRON take/VERB a/DET step/NOUN backward/ADV and/CCONJ then/ADV continue/VERB walk/VERB#0.0#0.0

@@ -1,0 +1,7 @@
+A person plays the air guitar.#A/DET person/NOUN play/VERB the/DET air/NOUN guitar/NOUN#0.0#0.0
+The human plays air guitar.#The/DET human/ADJ play/VERB air/NOUN guitar/NOUN#0.0#0.0
+Person playing air guitar#person/NOUN play/VERB air/NOUN guitar/NOUN#0.0#0.0
+A person performs a drumming motion with their right hand while holding up their left hand#A/DET person/NOUN perform/VERB a/DET drum/VERB motion/NOUN with/ADP their/DET right/ADJ hand/NOUN while/SCONJ hold/VERB up/ADP their/DET left/ADJ hand/NOUN#0.0#0.0
+a person is doing something#a/DET person/NOUN is/AUX do/VERB something/PRON#0.0#0.0
+A person performs two strokes on a guitar.#A/DET person/NOUN perform/VERB two/NUM stroke/NOUN on/ADP a/DET guitar/NOUN#0.0#0.0
+Person makes motions as if it is half hearted playing guitar.#person/NOUN make/VERB motion/NOUN as/SCONJ if/SCONJ it/PRON is/AUX half/ADV hearted/ADJ playing/NOUN guitar/NOUN#0.0#0.0

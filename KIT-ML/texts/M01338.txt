@@ -1,0 +1,3 @@
+A person makes a jump to the left#A/DET person/NOUN make/VERB a/DET jump/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A human performs a little jump with both feet to its left.#A/DET human/ADJ perform/VERB a/DET little/ADJ jump/NOUN with/ADP both/DET foot/NOUN to/ADP its/DET left/NOUN#0.0#0.0
+a person jumps to the left side about 30 centimeters#a/DET person/NOUN jump/VERB to/ADP the/DET left/ADJ side/NOUN about/ADV centimeter/NOUN#0.0#0.0

@@ -1,0 +1,4 @@
+Subject starts a halfhearted jog.#subject/NOUN start/VERB a/DET halfhearte/VERB jog/NOUN#0.0#0.0
+Someone is walking forward fast doing 4 steps starting with the right leg.#Someone/PRON is/AUX walk/VERB forward/ADV fast/ADJ do/VERB step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
+A person runs a few meters forward#A/DET person/NOUN run/VERB a/DET few/ADJ meter/NOUN forward/ADV#0.0#0.0
+A person walks a few steps.#A/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN#0.0#0.0

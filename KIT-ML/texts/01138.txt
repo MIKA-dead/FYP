@@ -1,0 +1,2 @@
+A human turning left#A/DET human/ADJ turning/NOUN left/NOUN#0.0#0.0
+a person walks to the left performing a quarter circle#a/DET person/NOUN walk/VERB to/ADP the/DET left/ADJ perform/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0

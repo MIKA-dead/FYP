@@ -1,0 +1,5 @@
+Lookig at his feet, a human goes circa 1.5 meters forward.#Lookig/PROPN at/ADP his/DET foot/NOUN a/DET human/NOUN go/VERB circa/NOUN meter/NOUN forward/ADV#0.0#0.0
+A person is walking slowly#A/DET person/NOUN is/AUX walk/VERB slowly/ADV#0.0#0.0
+A person is slowly walking forward.#A/DET person/NOUN is/AUX slowly/ADV walk/VERB forward/ADV#0.0#0.0
+A person walks very slowly.#A/DET person/NOUN walk/VERB very/ADV slowly/ADV#0.0#0.0
+Somebody walks slowly.#Somebody/PRON walk/VERB slowly/ADV#0.0#0.0

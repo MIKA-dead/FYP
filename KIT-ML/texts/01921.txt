@@ -1,0 +1,2 @@
+A person walking forwards and then stumbling to the right.#A/DET person/NOUN walk/VERB forwards/ADV and/CCONJ then/ADV stumble/VERB to/ADP the/DET right/NOUN#0.0#0.0
+A person is pushed from left.#A/DET person/NOUN is/AUX push/VERB from/ADP left/VERB#0.0#0.0

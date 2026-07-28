@@ -1,0 +1,1 @@
+A person is walking forward, turns around, walks back and then walks forward in a S-shape.#A/DET person/NOUN is/AUX walk/VERB forward/ADV turn/VERB around/ADV walk/VERB back/ADV and/CCONJ then/ADV walk/VERB forward/ADV in/ADP a/DET sshape/NOUN#0.0#0.0

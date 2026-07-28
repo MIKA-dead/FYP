@@ -1,0 +1,1 @@
+A human walks over a platform.#A/DET human/NOUN walk/VERB over/ADP a/DET platform/NOUN#0.0#0.0

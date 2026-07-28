@@ -1,0 +1,3 @@
+a person wals straight on and then stops#a/DET person/NOUN wal/NOUN straight/ADV on/ADV and/CCONJ then/ADV stop/VERB#0.0#0.0
+The human walks slowly#The/DET human/NOUN walk/VERB slowly/ADV#0.0#0.0
+human goes forward#human/ADJ go/VERB forward/ADV#0.0#0.0

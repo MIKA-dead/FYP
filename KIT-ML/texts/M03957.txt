@@ -1,0 +1,1 @@
+While running, a human picks something up from the floor.#While/SCONJ run/VERB a/DET human/ADJ pick/NOUN something/PRON up/ADP from/ADP the/DET floor/NOUN#0.0#0.0

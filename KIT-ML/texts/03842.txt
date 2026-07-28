@@ -1,0 +1,1 @@
+A person is making a sidestep to the left.#A/DET person/NOUN is/AUX make/VERB a/DET sidestep/NOUN to/ADP the/DET left/NOUN#0.0#0.0

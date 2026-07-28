@@ -1,0 +1,2 @@
+A person plays the guitar#A/DET person/NOUN play/VERB the/DET guitar/NOUN#0.0#0.0
+Someone plays air guitar#Someone/PRON play/VERB air/NOUN guitar/NOUN#0.0#0.0

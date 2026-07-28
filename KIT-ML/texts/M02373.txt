@@ -1,0 +1,1 @@
+A person is walking a bit shaky-legged forward.#A/DET person/NOUN is/AUX walk/VERB a/DET bit/NOUN shakylegge/VERB forward/ADV#0.0#0.0

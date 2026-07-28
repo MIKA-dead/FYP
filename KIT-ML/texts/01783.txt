@@ -1,0 +1,1 @@
+Subject walks forward is pushed back and walks forward again.#Subject/ADJ walk/VERB forward/ADV is/AUX push/VERB back/ADV and/CCONJ walk/VERB forward/ADV again/ADV#0.0#0.0

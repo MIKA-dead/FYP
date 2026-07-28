@@ -1,0 +1,2 @@
+A person waves with the right hand two times.#A/DET person/NOUN wave/VERB with/ADP the/DET right/ADJ hand/NOUN two/NUM time/NOUN#0.0#0.0
+a person waves with its right hand#a/DET person/NOUN wave/VERB with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

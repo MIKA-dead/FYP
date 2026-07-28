@@ -1,0 +1,1 @@
+A person makes a big step to the left.#A/DET person/NOUN make/VERB a/DET big/ADJ step/NOUN to/ADP the/DET left/NOUN#0.0#0.0

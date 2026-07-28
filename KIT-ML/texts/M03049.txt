@@ -1,0 +1,1 @@
+A human drinks.#A/DET human/ADJ drink/NOUN#0.0#0.0

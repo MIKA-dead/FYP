@@ -1,0 +1,1 @@
+A person is walking and stepping like a stork.#A/DET person/NOUN is/AUX walk/VERB and/CCONJ step/VERB like/SCONJ a/DET stork/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+The subject is walking fast and doing 4 steps while walking.#The/DET subject/NOUN is/AUX walk/VERB fast/ADV and/CCONJ do/VERB step/NOUN while/SCONJ walk/VERB#0.0#0.0
+A person runs a few meters#A/DET person/NOUN run/VERB a/DET few/ADJ meter/NOUN#0.0#0.0

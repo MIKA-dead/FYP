@@ -1,0 +1,5 @@
+A person laying on their hands and knees stands up by using their right foot first, then pushing off it to stay balanced.#A/DET person/NOUN lay/VERB on/ADP their/DET hand/NOUN and/CCONJ knee/NOUN stand/VERB up/ADP by/ADP use/VERB their/DET right/ADJ foot/NOUN first/ADV then/ADV push/VERB off/ADP it/PRON to/PART stay/VERB balanced/ADJ#0.0#0.0
+A person rises to upright stance from resting on all fours#A/DET person/NOUN rise/VERB to/ADP upright/ADJ stance/NOUN from/ADP rest/VERB on/ADP all/DET four/NOUN#0.0#0.0
+A person is getting up from a kneeling position.#A/DET person/NOUN is/AUX get/VERB up/ADP from/ADP a/DET kneeling/NOUN position/NOUN#0.0#0.0
+A crawling person stands up.#A/DET crawl/VERB person/NOUN stand/VERB up/ADP#0.0#0.0
+someone throws his knees and hands on the ground  and then he stands up.#someone/PRON throw/VERB his/DET knee/NOUN and/CCONJ hand/NOUN on/ADP the/DET ground/NOUN and/CCONJ then/ADV he/PRON stand/VERB up/ADP#0.0#0.0

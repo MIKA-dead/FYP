@@ -1,0 +1,7 @@
+A person doing relatively quick forward walking with low distance for each step and slightly bent knees while walking#A/DET person/NOUN do/VERB relatively/ADV quick/ADV forward/ADV walk/VERB with/ADP low/ADJ distance/NOUN for/ADP each/DET step/NOUN and/CCONJ slightly/ADV bent/ADJ knee/NOUN while/SCONJ walk/VERB#0.0#0.0
+A human is pushed from behind#A/DET human/NOUN is/AUX push/VERB from/ADP behind/ADV#0.0#0.0
+A person decelerates.#A/DET person/NOUN decelerate/VERB#0.0#0.0
+a person walks quite fast forward#a/DET person/NOUN walk/VERB quite/ADV fast/ADV forward/ADV#0.0#0.0
+a human slows down and stops walking#a/DET human/ADJ slow/VERB down/ADV and/CCONJ stop/VERB walk/VERB#0.0#0.0
+Someone stops running.#Someone/PRON stop/VERB run/VERB#0.0#0.0
+Somebody stops walking.#Somebody/PRON stop/VERB walk/VERB#0.0#0.0

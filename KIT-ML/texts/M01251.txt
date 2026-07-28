@@ -1,0 +1,4 @@
+Subject does an evasive motion in boxing and punches with its right hand.#subject/NOUN does/AUX an/DET evasive/ADJ motion/NOUN in/ADP boxing/NOUN and/CCONJ punch/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
+a person ducks and then punches something with its right arm#a/DET person/NOUN duck/NOUN and/CCONJ then/ADV punch/VERB something/PRON with/ADP its/DET right/ADJ arm/NOUN#0.0#0.0
+A person stands with borh hands raised to chest height, ducks and performs a punch with its right hand.#A/DET person/NOUN stand/VERB with/ADP borh/NOUN hand/NOUN raise/VERB to/ADP chest/NOUN height/NOUN duck/NOUN and/CCONJ perform/VERB a/DET punch/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
+A person throwing a right jab#A/DET person/NOUN throw/VERB a/DET right/ADJ jab/NOUN#0.0#0.0

@@ -1,0 +1,4 @@
+A human goes slowly 5 steps backward.#A/DET human/NOUN go/VERB slowly/ADV step/NOUN backward/ADJ#0.0#0.0
+A person takes 5 steps backwards staring with the right foot.#A/DET person/NOUN take/VERB step/NOUN backwards/ADV stare/VERB with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
+A person walks backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
+A person walks five steps backwards.#A/DET person/NOUN walk/VERB five/NUM step/NOUN backwards/ADV#0.0#0.0

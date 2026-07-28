@@ -1,0 +1,1 @@
+A person stomps the ground with the left foot#A/DET person/NOUN stomp/VERB the/DET ground/NOUN with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0

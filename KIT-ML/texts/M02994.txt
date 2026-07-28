@@ -1,0 +1,1 @@
+A person changes suddenly the direction and then runs to the right.#A/DET person/NOUN change/VERB suddenly/ADV the/DET direction/NOUN and/CCONJ then/ADV run/VERB to/ADP the/DET right/NOUN#0.0#0.0

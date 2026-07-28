@@ -1,0 +1,3 @@
+the person is doing boxing#the/DET person/NOUN is/AUX do/VERB boxing/NOUN#0.0#0.0
+A person hits something with its right arm#A/DET person/NOUN hit/VERB something/PRON with/ADP its/DET right/ADJ arm/NOUN#0.0#0.0
+A human boxes with its right hand once.#A/DET human/ADJ box/NOUN with/ADP its/DET right/ADJ hand/NOUN once/ADV#0.0#0.0

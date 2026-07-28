@@ -1,0 +1,2 @@
+A person takes four steps back.#A/DET person/NOUN take/VERB four/NUM step/NOUN back/ADV#0.0#0.0
+A person walks back some meters#A/DET person/NOUN walk/VERB back/ADV some/DET meter/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person is bending a bit forward and then jumping and running a bit.#A/DET person/NOUN is/AUX bend/VERB a/DET bit/NOUN forward/ADV and/CCONJ then/ADV jump/VERB and/CCONJ run/VERB a/DET bit/NOUN#0.0#0.0

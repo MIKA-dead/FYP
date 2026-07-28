@@ -1,0 +1,1 @@
+A human walks four steps.#A/DET human/NOUN walk/VERB four/NUM step/NOUN#0.0#0.0

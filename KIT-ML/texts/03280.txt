@@ -1,0 +1,1 @@
+a human jumps while turning left#a/DET human/ADJ jump/NOUN while/SCONJ turn/VERB left/ADV#0.0#0.0

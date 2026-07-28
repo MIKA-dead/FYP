@@ -1,0 +1,2 @@
+A human performing a stirring motion#A/DET human/NOUN perform/VERB a/DET stirring/ADJ motion/NOUN#0.0#0.0
+a person wipes something with his right hand#a/DET person/NOUN wipe/VERB something/PRON with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

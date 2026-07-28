@@ -1,0 +1,3 @@
+A person walks forward#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
+A person is very relaxed 5 steps forward, arms dangling casually alongside.#A/DET person/NOUN is/AUX very/ADV relaxed/ADJ step/NOUN forward/ADV arm/NOUN dangle/VERB casually/ADV alongside/ADV#0.0#0.0
+a person takes 5 steps forward#a/DET person/NOUN take/VERB step/NOUN forward/ADV#0.0#0.0

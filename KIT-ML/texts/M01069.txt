@@ -1,0 +1,5 @@
+A human walks forwards and slowly turns left, then stops.#A/DET human/NOUN walk/VERB forwards/ADV and/CCONJ slowly/ADV turn/VERB left/VERB then/ADV stop/VERB#0.0#0.0
+The person walks a left bend.#The/DET person/NOUN walk/VERB a/DET left/ADJ bend/NOUN#0.0#0.0
+A human is walking a 90° left curve#A/DET human/NOUN is/AUX walk/VERB a/DET left/VERB curve/NOUN#0.0#0.0
+A perso n turns left.#A/DET perso/NOUN n/NOUN turn/VERB left/VERB#0.0#0.0
+some one turns a lager left corner.#some/DET one/NOUN turn/VERB a/DET lager/ADJ left/ADJ corner/NOUN#0.0#0.0

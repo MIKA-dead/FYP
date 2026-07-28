@@ -1,0 +1,3 @@
+The person makes one step to the left and one to the right.#The/DET person/NOUN make/VERB one/NUM step/NOUN to/ADP the/DET left/NOUN and/CCONJ one/NUM to/ADP the/DET right/NOUN#0.0#0.0
+A person takes a lunge to the right and returns to the initial position.#A/DET person/NOUN take/VERB a/DET lunge/NOUN to/ADP the/DET right/NOUN and/CCONJ return/NOUN to/ADP the/DET initial/ADJ position/NOUN#0.0#0.0
+A person performs a step to the left, waits a moment and takes a step to the right.#A/DET person/NOUN perform/VERB a/DET step/NOUN to/ADP the/DET left/NOUN wait/VERB a/DET moment/NOUN and/CCONJ take/VERB a/DET step/NOUN to/ADP the/DET right/NOUN#0.0#0.0

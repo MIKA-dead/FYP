@@ -1,0 +1,9 @@
+A person walks forward and is pushed to the left.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0
+Person stumbling after being pushed while walking#person/NOUN stumble/VERB after/ADP being/AUX push/VERB while/SCONJ walk/VERB#0.0#0.0
+Someone slips to the side while walking on a straight line#Someone/PRON slip/VERB to/ADP the/DET side/NOUN while/SCONJ walk/VERB on/ADP a/DET straight/ADJ line/NOUN#0.0#0.0
+A person is forcibly pushed during walking.#A/DET person/NOUN is/AUX forcibly/ADV push/VERB during/ADP walk/VERB#0.0#0.0
+someone stumbles to the left side while walking#someone/PRON stumble/VERB to/ADP the/DET left/ADJ side/NOUN while/SCONJ walk/VERB#0.0#0.0
+A person walks two steps forward, then seems to fall to towards the left, then gets back in the original line#A/DET person/NOUN walk/VERB two/NUM step/NOUN forward/ADV then/ADV seem/VERB to/PART fall/VERB to/ADP towards/ADP the/DET left/NOUN then/ADV get/VERB back/ADV in/ADP the/DET original/ADJ line/NOUN#0.0#0.0
+A person is pushed to the left while walking ahead.#A/DET person/NOUN is/AUX push/VERB to/ADP the/DET left/ADJ while/SCONJ walk/VERB ahead/ADV#0.0#0.0
+a person walks forward and is pushed by something from his right#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB by/ADP something/PRON from/ADP his/DET right/NOUN#0.0#0.0
+A person is pushed from the right.#A/DET person/NOUN is/AUX push/VERB from/ADP the/DET right/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person is slowly and carefully walking forward and backward.#A/DET person/NOUN is/AUX slowly/ADV and/CCONJ carefully/ADV walk/VERB forward/ADV and/CCONJ backward/ADV#0.0#0.0

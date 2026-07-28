@@ -1,0 +1,1 @@
+A human walks in a quarter circle.#A/DET human/ADJ walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0

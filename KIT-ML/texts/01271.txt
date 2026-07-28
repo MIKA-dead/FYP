@@ -1,0 +1,6 @@
+Subject bows shortly.#Subject/ADJ bow/NOUN shortly/ADV#0.0#0.0
+A human bows down#A/DET human/ADJ bow/NOUN down/ADV#0.0#0.0
+Someone is bowing lightly.#Someone/PRON is/AUX bow/VERB lightly/ADV#0.0#0.0
+a person takes a bow#a/DET person/NOUN take/VERB a/DET bow/NOUN#0.0#0.0
+A person bows his head.#A/DET person/NOUN bow/VERB his/DET head/NOUN#0.0#0.0
+Somebody is bending forward#Somebody/PRON is/AUX bend/VERB forward/ADV#0.0#0.0

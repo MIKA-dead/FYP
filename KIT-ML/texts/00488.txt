@@ -1,0 +1,1 @@
+the person is first walking and then making a sharp left turn#the/DET person/NOUN is/AUX first/ADV walk/VERB and/CCONJ then/ADV make/VERB a/DET sharp/ADJ left/ADJ turn/NOUN#0.0#0.0

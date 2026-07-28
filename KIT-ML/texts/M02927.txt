@@ -1,0 +1,1 @@
+A human sits down on a low platform.#A/DET human/NOUN sit/VERB down/ADV on/ADP a/DET low/ADJ platform/NOUN#0.0#0.0

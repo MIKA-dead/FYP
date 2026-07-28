@@ -1,0 +1,4 @@
+A person walks quickly#A/DET person/NOUN walk/VERB quickly/ADV#0.0#0.0
+A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
+A person is pushed forward.#A/DET person/NOUN is/AUX push/VERB forward/ADV#0.0#0.0
+a person walks forwards#a/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0

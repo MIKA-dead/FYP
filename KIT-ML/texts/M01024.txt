@@ -1,0 +1,2 @@
+a person steps to his side and then back#a/DET person/NOUN step/VERB to/ADP his/DET side/NOUN and/CCONJ then/ADV back/ADV#0.0#0.0
+a person takes a step to the right and then one to the left.#a/DET person/NOUN take/VERB a/DET step/NOUN to/ADP the/DET right/NOUN and/CCONJ then/ADV one/NUM to/ADP the/DET left/NOUN#0.0#0.0

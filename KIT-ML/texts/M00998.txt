@@ -1,0 +1,2 @@
+a person walks forward, turns around and walks back#a/DET person/NOUN walk/VERB forward/ADV turn/VERB around/ADV and/CCONJ walk/VERB back/ADV#0.0#0.0
+Subject walks forward spins around and walks back.#Subject/ADJ walk/VERB forward/ADV spin/NOUN around/ADV and/CCONJ walk/VERB back/ADV#0.0#0.0

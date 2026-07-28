@@ -1,0 +1,1 @@
+A person waves with the right hand once.#A/DET person/NOUN wave/VERB with/ADP the/DET right/ADJ hand/NOUN once/ADV#0.0#0.0

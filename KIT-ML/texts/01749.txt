@@ -1,0 +1,1 @@
+A person walks forwards and gets pushed from the behind left side and recovers and walks on.#A/DET person/NOUN walk/VERB forwards/ADV and/CCONJ get/VERB push/VERB from/ADP the/DET behind/ADV left/ADJ side/NOUN and/CCONJ recover/NOUN and/CCONJ walk/VERB on/ADP#0.0#0.0

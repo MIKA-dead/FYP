@@ -1,0 +1,5 @@
+A person runs at a moderate speed.#A/DET person/NOUN run/VERB at/ADP a/DET moderate/ADJ speed/NOUN#0.0#0.0
+A person is running forward.#A/DET person/NOUN is/AUX run/VERB forward/ADV#0.0#0.0
+A person is running with a little steplength.#A/DET person/NOUN is/AUX run/VERB with/ADP a/DET little/ADJ steplength/NOUN#0.0#0.0
+a person runs forwards#a/DET person/NOUN run/VERB forwards/ADV#0.0#0.0
+The human is running#The/DET human/NOUN is/AUX run/VERB#0.0#0.0

@@ -1,0 +1,3 @@
+A human running#A/DET human/ADJ running/NOUN#0.0#0.0
+A person walks five quick steps forward.#A/DET person/NOUN walk/VERB five/NUM quick/ADJ step/NOUN forward/ADV#0.0#0.0
+A person walks.#A/DET person/NOUN walk/VERB#0.0#0.0

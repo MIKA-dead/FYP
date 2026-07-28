@@ -1,0 +1,5 @@
+A person walks relaxed.#A/DET person/NOUN walk/VERB relaxed/ADJ#0.0#0.0
+A slowly walks five steps forward.#A/DET slowly/ADV walk/VERB five/NUM step/NOUN forward/ADV#0.0#0.0
+A human goes 4 steps forward at a slow pace.#A/DET human/NOUN go/VERB step/NOUN forward/ADV at/ADP a/DET slow/ADJ pace/NOUN#0.0#0.0
+A person slowly walking forward#A/DET person/NOUN slowly/ADV walk/VERB forward/ADV#0.0#0.0
+Somebody walks slowly.#Somebody/PRON walk/VERB slowly/ADV#0.0#0.0

@@ -1,0 +1,2 @@
+A person makes a deep bow.#A/DET person/NOUN make/VERB a/DET deep/ADJ bow/NOUN#0.0#0.0
+the human takes a bow#the/DET human/NOUN take/VERB a/DET bow/NOUN#0.0#0.0

@@ -1,0 +1,5 @@
+the person kneeled down is standing up#the/DET person/NOUN kneel/VERB down/ADP is/AUX stand/VERB up/ADP#0.0#0.0
+A human is kneeling an gets up by pushing itsel up with the right hand getting the left foot up first#A/DET human/NOUN is/AUX kneel/VERB an/DET get/NOUN up/ADV by/ADP push/VERB itsel/PRON up/ADP with/ADP the/DET right/ADJ hand/NOUN get/VERB the/DET left/ADJ foot/NOUN up/ADP first/ADV#0.0#0.0
+A person kneels, arms spread to the side, and stands up, putting the arms down.#A/DET person/NOUN kneel/VERB arm/NOUN spread/VERB to/ADP the/DET side/NOUN and/CCONJ stand/VERB up/ADP put/VERB the/DET arm/NOUN down/ADV#0.0#0.0
+a person stands up from a kneeling position#a/DET person/NOUN stand/VERB up/ADP from/ADP a/DET kneeling/NOUN position/NOUN#0.0#0.0
+A person gets up from his knees.#A/DET person/NOUN get/VERB up/ADP from/ADP his/DET knee/NOUN#0.0#0.0

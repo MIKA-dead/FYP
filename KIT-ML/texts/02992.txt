@@ -1,0 +1,1 @@
+a person does a dodge movement and runs forward#a/DET person/NOUN does/AUX a/DET dodge/NOUN movement/NOUN and/CCONJ run/VERB forward/ADV#0.0#0.0

@@ -1,0 +1,9 @@
+Person stands upleft holding both arms in a horizontal line#person/NOUN stand/VERB upleft/ADJ hold/VERB both/DET arm/NOUN in/ADP a/DET horizontal/ADJ line/NOUN#0.0#0.0
+A standing person holds both arms horizontally, spread to both sides.#A/DET stand/VERB person/NOUN hold/VERB both/DET arm/NOUN horizontally/ADV spread/VERB to/ADP both/DET side/NOUN#0.0#0.0
+A human stands still and spreads its arms to the side  so it looks like a T-shape.#A/DET human/NOUN stand/VERB still/ADV and/CCONJ spread/VERB its/DET arm/NOUN to/ADP the/DET side/NOUN so/ADV it/PRON look/VERB like/SCONJ a/DET tshape/NOUN#0.0#0.0
+A person stands still with his arms stretched.#A/DET person/NOUN stand/VERB still/ADV with/ADP his/DET arm/NOUN stretch/VERB#0.0#0.0
+Someone stand still spreading both arms to the side.#Someone/PRON stand/NOUN still/ADV spread/VERB both/DET arm/NOUN to/ADP the/DET side/NOUN#0.0#0.0
+A person stands still, arms lifted at shoulder height.#A/DET person/NOUN stand/VERB still/ADV arm/NOUN lift/VERB at/ADP shoulder/NOUN height/NOUN#0.0#0.0
+A person stands with his arms raised to the side.#A/DET person/NOUN stand/VERB with/ADP his/DET arm/NOUN raise/VERB to/ADP the/DET side/NOUN#0.0#0.0
+a man stands still with his arms at the horizontal#a/DET man/NOUN stand/VERB still/ADV with/ADP his/DET arm/NOUN at/ADP the/DET horizontal/NOUN#0.0#0.0
+Somebody stands with stretched arms.#Somebody/PRON stand/VERB with/ADP stretch/VERB arm/NOUN#0.0#0.0

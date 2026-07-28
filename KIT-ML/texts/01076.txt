@@ -1,0 +1,5 @@
+A person walks forward while turning to the left#A/DET person/NOUN walk/VERB forward/ADV while/SCONJ turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person goes forward in a quarter circle.#A/DET person/NOUN go/VERB forward/ADV in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0
+A human walks a quarter of a circle to its left.#A/DET human/NOUN walk/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN to/ADP its/DET left/NOUN#0.0#0.0
+A person turns left#A/DET person/NOUN turn/VERB left/VERB#0.0#0.0
+A person walks a quarter circle in the left direction.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN in/ADP the/DET left/ADJ direction/NOUN#0.0#0.0

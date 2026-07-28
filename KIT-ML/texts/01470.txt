@@ -1,0 +1,3 @@
+a person plays the violin#a/DET person/NOUN play/VERB the/DET violin/NOUN#0.0#0.0
+A person holds his right arm in the air and wipes with his left hand.#A/DET person/NOUN hold/VERB his/DET right/ADJ arm/NOUN in/ADP the/DET air/NOUN and/CCONJ wipe/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
+A person is playing the violin.#A/DET person/NOUN is/AUX play/VERB the/DET violin/NOUN#0.0#0.0

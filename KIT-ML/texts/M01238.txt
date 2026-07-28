@@ -1,0 +1,1 @@
+A person is performing material arts.#A/DET person/NOUN is/AUX perform/VERB material/NOUN art/NOUN#0.0#0.0

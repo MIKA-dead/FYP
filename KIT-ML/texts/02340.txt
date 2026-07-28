@@ -1,0 +1,1 @@
+A person is slowly and quietly walking forward.#A/DET person/NOUN is/AUX slowly/ADV and/CCONJ quietly/ADV walk/VERB forward/ADV#0.0#0.0

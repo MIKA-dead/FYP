@@ -1,0 +1,1 @@
+Multiple forward, backward and sideways motions in different directions.#Multiple/ADJ forward/ADV backward/ADJ and/CCONJ sideway/VERB motion/NOUN in/ADP different/ADJ direction/NOUN#0.0#0.0

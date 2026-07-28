@@ -1,0 +1,5 @@
+A person performs a little hop.#A/DET person/NOUN perform/VERB a/DET little/ADJ hop/NOUN#0.0#0.0
+A person jumps vertically off the ground with both feet.#A/DET person/NOUN jump/VERB vertically/ADV off/ADP the/DET ground/NOUN with/ADP both/DET foot/NOUN#0.0#0.0
+A person performs a jump#A/DET person/NOUN perform/VERB a/DET jump/NOUN#0.0#0.0
+A person performs an upleft jump.#A/DET person/NOUN perform/VERB an/DET upleft/ADJ jump/NOUN#0.0#0.0
+A human jumps in place.#A/DET human/ADJ jump/NOUN in/ADP place/NOUN#0.0#0.0

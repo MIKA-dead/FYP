@@ -1,0 +1,4 @@
+A human standing up#A/DET human/ADJ standing/NOUN up/ADP#0.0#0.0
+A person on knees is standing up.#A/DET person/NOUN on/ADP knee/NOUN is/AUX stand/VERB up/ADP#0.0#0.0
+a person stands up from the ground#a/DET person/NOUN stand/VERB up/ADP from/ADP the/DET ground/NOUN#0.0#0.0
+A human stands up from knees using right hand to prop against the floor.#A/DET human/NOUN stand/VERB up/ADP from/ADP knee/NOUN use/VERB right/ADJ hand/NOUN to/PART prop/VERB against/ADP the/DET floor/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+A person turns right#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
+Subject walks in quarter circle clockwise.#Subject/ADJ walk/VERB in/ADP quarter/NOUN circle/NOUN clockwise/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person catch a ball and throw it afterwards.#A/DET person/NOUN catch/VERB a/DET ball/NOUN and/CCONJ throw/VERB it/PRON afterwards/ADV#0.0#0.0

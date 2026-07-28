@@ -1,0 +1,2 @@
+A person is jogging a few steps and stops abruptly.#A/DET person/NOUN is/AUX jog/VERB a/DET few/ADJ step/NOUN and/CCONJ stop/NOUN abruptly/ADV#0.0#0.0
+human runs forward#human/ADJ run/NOUN forward/ADV#0.0#0.0

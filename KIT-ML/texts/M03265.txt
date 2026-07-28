@@ -1,0 +1,1 @@
+A human walking and turning 90° to right.#A/DET human/ADJ walking/NOUN and/CCONJ turn/VERB to/PART right/ADJ#0.0#0.0

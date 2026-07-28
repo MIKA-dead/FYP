@@ -1,0 +1,2 @@
+Someone moves forward in a slow walk#Someone/PRON move/VERB forward/ADV in/ADP a/DET slow/ADJ walk/NOUN#0.0#0.0
+A person walks slowly forwards.#A/DET person/NOUN walk/VERB slowly/ADV forwards/ADV#0.0#0.0

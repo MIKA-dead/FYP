@@ -1,0 +1,1 @@
+A person walks fast#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0

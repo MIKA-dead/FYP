@@ -1,0 +1,2 @@
+a human walk in a circle.#a/DET human/ADJ walk/NOUN in/ADP a/DET circle/NOUN#0.0#0.0
+a person walks a circle to the left#a/DET person/NOUN walk/VERB a/DET circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

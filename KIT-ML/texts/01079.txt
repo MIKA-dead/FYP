@@ -1,0 +1,2 @@
+a person walks a 90° turn to his left#a/DET person/NOUN walk/VERB a/DET turn/VERB to/ADP his/DET left/NOUN#0.0#0.0
+A human is performing a 90° curve to the left#A/DET human/NOUN is/AUX perform/VERB a/DET curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0

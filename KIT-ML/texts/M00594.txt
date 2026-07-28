@@ -1,0 +1,8 @@
+Person doing squads#person/NOUN do/VERB squad/NOUN#0.0#0.0
+A person performs a squat#A/DET person/NOUN perform/VERB a/DET squat/NOUN#0.0#0.0
+A person performs two successive squats.#A/DET person/NOUN perform/VERB two/NUM successive/ADJ squat/NOUN#0.0#0.0
+A human performs two squats with his arms extended forward#A/DET human/ADJ perform/VERB two/NUM squat/NOUN with/ADP his/DET arm/NOUN extend/VERB forward/ADV#0.0#0.0
+A person performs a squat with the feet together, and performs another squat with the feet distance being wider.#A/DET person/NOUN perform/VERB a/DET squat/NOUN with/ADP the/DET foot/NOUN together/ADV and/CCONJ perform/VERB another/DET squat/NOUN with/ADP the/DET foot/NOUN distance/NOUN being/AUX wider/ADJ#0.0#0.0
+a person does some squad exercises#a/DET person/NOUN does/AUX some/DET squad/NOUN exercise/NOUN#0.0#0.0
+someone squats and then steps one of his foot a little aside and make another squats#someone/PRON squat/VERB and/CCONJ then/ADV step/VERB one/NUM of/ADP his/DET foot/NOUN a/DET little/ADJ aside/ADV and/CCONJ make/VERB another/DET squat/NOUN#0.0#0.0
+Someone does two squats.#Someone/PRON does/AUX two/NUM squat/NOUN#0.0#0.0

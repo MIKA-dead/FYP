@@ -1,0 +1,2 @@
+A person walks four steps and stops.#A/DET person/NOUN walk/VERB four/NUM step/NOUN and/CCONJ stop/NOUN#0.0#0.0
+A person walks four quick steps to the forward direction.#A/DET person/NOUN walk/VERB four/NUM quick/ADJ step/NOUN to/ADP the/DET forward/ADJ direction/NOUN#0.0#0.0

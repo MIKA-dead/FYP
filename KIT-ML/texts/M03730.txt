@@ -1,0 +1,1 @@
+A person rolls their head and shoulders.#A/DET person/NOUN roll/VERB their/DET head/NOUN and/CCONJ shoulder/NOUN#0.0#0.0

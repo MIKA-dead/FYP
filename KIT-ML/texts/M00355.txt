@@ -1,0 +1,2 @@
+Someone walks a full counterclockwise circle#Someone/PRON walk/VERB a/DET full/ADJ counterclockwise/NOUN circle/NOUN#0.0#0.0
+a person is walking in a circle in counterclockwise direction.#a/DET person/NOUN is/AUX walk/VERB in/ADP a/DET circle/NOUN in/ADP counterclockwise/ADJ direction/NOUN#0.0#0.0

@@ -1,0 +1,4 @@
+A human moves his hand in a circle five times in horizontal plane#A/DET human/ADJ move/VERB his/DET hand/NOUN in/ADP a/DET circle/NOUN five/NUM time/NOUN in/ADP horizontal/ADJ plane/NOUN#0.0#0.0
+Someone is probably wiping the table.#Someone/PRON is/AUX probably/ADV wipe/VERB the/DET table/NOUN#0.0#0.0
+a person wipes something in front of it#a/DET person/NOUN wipe/VERB something/PRON in/ADP front/NOUN of/ADP it/PRON#0.0#0.0
+A human wipes horizontal in a circle with its right hand on the same hight as its hips.#A/DET human/ADJ wipe/NOUN horizontal/ADJ in/ADP a/DET circle/NOUN with/ADP its/DET right/ADJ hand/NOUN on/ADP the/DET same/ADJ hight/NOUN as/SCONJ its/DET hip/NOUN#0.0#0.0

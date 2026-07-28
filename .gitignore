@@ -1,0 +1,46 @@
+# Python 虚拟环境（绝对不能传）
+motion_env/
+venv/
+env/
+.venv/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Node.js 依赖（绝对不能传）
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# OpenCode 本地缓存（不需要传）
+.opencode/cache/
+.opencode/state/
+
+# 数据集（极大！KIT-ML 约几个G，不要直接传仓库）
+KIT-ML/
+HumanML3D/
+!KIT-ML/README.md   # 如果有说明文件可以例外
+
+# 输出产物（生成的 BVH / npy 可选择性传，建议先忽略避免杂乱）
+outputs/
+*.bvh
+*.fbx
+*.glb
+*.gltf
+
+# 系统文件和 IDE
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# 本地环境变量
+.env
+.env.local

@@ -1,0 +1,4 @@
+A person is pushed over to the right, catches his steps and returns to the previous position#A/DET person/NOUN is/AUX push/VERB over/ADP to/ADP the/DET right/NOUN catch/VERB his/DET step/NOUN and/CCONJ return/NOUN to/ADP the/DET previous/ADJ position/NOUN#0.0#0.0
+a person stand still and gets pushed to the right and takes a step backwards to its original position#a/DET person/NOUN stand/VERB still/ADV and/CCONJ get/VERB push/VERB to/ADP the/DET right/NOUN and/CCONJ take/VERB a/DET step/NOUN backwards/ADV to/ADP its/DET original/ADJ position/NOUN#0.0#0.0
+A person dodges an incoming object.#A/DET person/NOUN dodge/VERB an/DET incoming/ADJ object/NOUN#0.0#0.0
+human is push from left hand side#human/PROPN is/AUX push/NOUN from/ADP left/ADJ hand/NOUN side/NOUN#0.0#0.0

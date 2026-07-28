@@ -1,0 +1,1 @@
+A person turns 180° to the left quickly.#A/DET person/NOUN turn/VERB to/ADP the/DET left/NOUN quickly/ADV#0.0#0.0

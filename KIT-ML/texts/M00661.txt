@@ -1,0 +1,2 @@
+A person doing a drumming movement#A/DET person/NOUN do/VERB a/DET drum/VERB movement/NOUN#0.0#0.0
+a person performs the an action with its two hands#a/DET person/NOUN perform/VERB the/DET an/DET action/NOUN with/ADP its/DET two/NUM hand/NOUN#0.0#0.0

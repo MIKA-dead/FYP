@@ -1,0 +1,1 @@
+A person walks forward, turns on the spot and walks back to the original position.#A/DET person/NOUN walk/VERB forward/ADV turn/VERB on/ADP the/DET spot/NOUN and/CCONJ walk/VERB back/ADV to/ADP the/DET original/ADJ position/NOUN#0.0#0.0

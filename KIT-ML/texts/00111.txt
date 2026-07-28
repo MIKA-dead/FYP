@@ -1,0 +1,2 @@
+A person walks backward at medium speed.#A/DET person/NOUN walk/VERB backward/ADV at/ADP medium/ADJ speed/NOUN#0.0#0.0
+A person walking backwards#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0

@@ -1,0 +1,2 @@
+A person starts jogging.#A/DET person/NOUN start/VERB jog/VERB#0.0#0.0
+a person jogs forwards#a/DET person/NOUN jog/VERB forwards/ADV#0.0#0.0

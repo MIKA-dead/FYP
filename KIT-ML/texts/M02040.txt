@@ -1,0 +1,2 @@
+Person is walking, while looking down, changes direction and walks back#person/NOUN is/AUX walk/VERB while/SCONJ look/VERB down/ADV change/VERB direction/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
+a person walks forward takes a 180 degree turn to the right and walks some more steps#a/DET person/NOUN walk/VERB forward/ADV take/VERB a/DET degree/NOUN turn/NOUN to/ADP the/DET right/NOUN and/CCONJ walk/VERB some/DET more/ADJ step/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+A person slowly walks 4 steps forward.#A/DET person/NOUN slowly/ADV walk/VERB step/NOUN forward/ADV#0.0#0.0
+A standing person starts walking slowly forward 4 steps before he stands still again.#A/DET stand/VERB person/NOUN start/VERB walk/VERB slowly/ADV forward/ADV step/NOUN before/ADP he/PRON stand/VERB still/ADV again/ADV#0.0#0.0

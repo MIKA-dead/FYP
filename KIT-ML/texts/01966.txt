@@ -1,0 +1,2 @@
+A person jogs forward#A/DET person/NOUN jog/VERB forward/ADV#0.0#0.0
+A human runs after something and yanks it back.#A/DET human/ADJ run/NOUN after/ADP something/PRON and/CCONJ yanks/VERB it/PRON back/ADV#0.0#0.0

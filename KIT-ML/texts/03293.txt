@@ -1,0 +1,1 @@
+A person turns 360 degrees to the right during a jump.#A/DET person/NOUN turn/VERB degree/NOUN to/ADP the/DET right/NOUN during/ADP a/DET jump/NOUN#0.0#0.0

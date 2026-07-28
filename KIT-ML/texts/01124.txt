@@ -1,0 +1,1 @@
+A person gets pushed from right and recovers with 1 step.#A/DET person/NOUN get/VERB push/VERB from/ADP right/NOUN and/CCONJ recover/NOUN with/ADP step/NOUN#0.0#0.0

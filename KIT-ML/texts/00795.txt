@@ -1,0 +1,5 @@
+A person slowly walks anti-clockwise for one quarter of a rotation.#A/DET person/NOUN slowly/ADV walk/VERB anticlockwise/NOUN for/ADP one/NUM quarter/NOUN of/ADP a/DET rotation/NOUN#0.0#0.0
+Some walks a left turn#Some/DET walk/VERB a/DET left/ADJ turn/NOUN#0.0#0.0
+Someone is doing a left turn starting with the left leg.#Someone/PRON is/AUX do/VERB a/DET left/ADJ turn/NOUN start/VERB with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0
+A person is walking in a left turn.#A/DET person/NOUN is/AUX walk/VERB in/ADP a/DET left/ADJ turn/NOUN#0.0#0.0
+Somebody walks a quarter circle anticlockwise.#Somebody/PRON walk/VERB a/DET quarter/NOUN circle/NOUN anticlockwise/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A Person walks in a small circle counter clockwise.#A/DET person/NOUN walk/VERB in/ADP a/DET small/ADJ circle/NOUN counter/NOUN clockwise/NOUN#0.0#0.0

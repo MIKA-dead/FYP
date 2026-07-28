@@ -1,0 +1,1 @@
+A human jumps over an approximately 30cm obstacle.#A/DET human/ADJ jump/NOUN over/ADP an/DET approximately/ADV cm/NOUN obstacle/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+A person receives a very strong push from the right side and tumbles.#A/DET person/NOUN receive/VERB a/DET very/ADV strong/ADJ push/NOUN from/ADP the/DET right/ADJ side/NOUN and/CCONJ tumble/NOUN#0.0#0.0
+a person gets pushed to the left side#a/DET person/NOUN get/VERB push/VERB to/ADP the/DET left/ADJ side/NOUN#0.0#0.0

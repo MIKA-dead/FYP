@@ -1,0 +1,2 @@
+A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
+A person walks a right turn of 90 degrees while looking down.#A/DET person/NOUN walk/VERB a/DET right/ADJ turn/NOUN of/ADP degree/NOUN while/SCONJ look/VERB down/ADV#0.0#0.0

@@ -1,0 +1,1 @@
+human walks forward starting with left, is turning around and walks back to the starting position#human/ADJ walk/VERB forward/ADV start/VERB with/ADP left/ADJ is/AUX turn/VERB around/ADP and/CCONJ walk/VERB back/ADV to/ADP the/DET starting/NOUN position/NOUN#0.0#0.0

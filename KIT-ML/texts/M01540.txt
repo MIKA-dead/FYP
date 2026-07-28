@@ -1,0 +1,5 @@
+Subject walks in a circle counterclockwise twice.#Subject/ADJ walk/VERB in/ADP a/DET circle/NOUN counterclockwise/NOUN twice/ADV#0.0#0.0
+A human performs tight left curves doing two full rounds#A/DET human/ADJ perform/VERB tight/ADJ left/ADJ curve/NOUN do/VERB two/NUM full/ADJ round/NOUN#0.0#0.0
+a person walks a circle to the left two time#a/DET person/NOUN walk/VERB a/DET circle/NOUN to/ADP the/DET left/ADJ two/NUM time/NOUN#0.0#0.0
+A person walks in a circle two times.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN two/NUM time/NOUN#0.0#0.0
+a human is walking in circle to the left, as if he is walking around an object.#a/DET human/NOUN is/AUX walk/VERB in/ADP circle/NOUN to/ADP the/DET left/NOUN as/SCONJ if/SCONJ he/PRON is/AUX walk/VERB around/ADP an/DET object/NOUN#0.0#0.0

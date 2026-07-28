@@ -1,0 +1,1 @@
+A person takes two steps forward, turns around, and then takes two steps in the opposite direction.#A/DET person/NOUN take/VERB two/NUM step/NOUN forward/ADV turn/VERB around/ADV and/CCONJ then/ADV take/VERB two/NUM step/NOUN in/ADP the/DET opposite/ADJ direction/NOUN#0.0#0.0

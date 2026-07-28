@@ -1,0 +1,3 @@
+A human walking straight with pretty stiff legs and little bit of shaking hips#A/DET human/ADJ walking/NOUN straight/ADV with/ADP pretty/ADV stiff/ADJ leg/NOUN and/CCONJ little/ADJ bit/NOUN of/ADP shake/VERB hip/NOUN#0.0#0.0
+A persons is pushed to the left while walking forward.#A/DET person/NOUN is/AUX push/VERB to/ADP the/DET left/ADJ while/SCONJ walk/VERB forward/ADV#0.0#0.0
+A person takes a few steps and avoids an obstacle to his right.#A/DET person/NOUN take/VERB a/DET few/ADJ step/NOUN and/CCONJ avoid/VERB an/DET obstacle/NOUN to/ADP his/DET right/NOUN#0.0#0.0

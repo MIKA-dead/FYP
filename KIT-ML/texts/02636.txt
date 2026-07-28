@@ -1,0 +1,1 @@
+A person crosses a high obstacle.#A/DET person/NOUN cross/VERB a/DET high/ADJ obstacle/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A human performs a large side step to right down a small step.#A/DET human/NOUN perform/VERB a/DET large/ADJ side/NOUN step/NOUN to/PART right/ADV down/ADP a/DET small/ADJ step/NOUN#0.0#0.0

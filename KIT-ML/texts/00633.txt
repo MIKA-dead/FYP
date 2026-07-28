@@ -1,0 +1,2 @@
+A person walks 4 big steps to the forward direction.#A/DET person/NOUN walk/VERB big/ADJ step/NOUN to/ADP the/DET forward/ADJ direction/NOUN#0.0#0.0
+a person walks forwards quite fast#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV fast/ADV#0.0#0.0

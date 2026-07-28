@@ -1,0 +1,1 @@
+A person picks something up from the ground and puts it down again.#A/DET person/NOUN pick/VERB something/PRON up/ADP from/ADP the/DET ground/NOUN and/CCONJ put/VERB it/PRON down/ADP again/ADV#0.0#0.0

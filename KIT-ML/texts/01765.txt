@@ -1,0 +1,1 @@
+A person walks forward and receives a slight push from the back.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ receive/VERB a/DET slight/ADJ push/NOUN from/ADP the/DET back/NOUN#0.0#0.0

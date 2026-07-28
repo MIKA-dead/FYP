@@ -1,0 +1,6 @@
+A human jumping to the side#A/DET human/ADJ jumping/NOUN to/ADP the/DET side/NOUN#0.0#0.0
+A human is performing a two legged hop to the left#A/DET human/NOUN is/AUX perform/VERB a/DET two/NUM legged/ADJ hop/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+a person jumps to the left#a/DET person/NOUN jump/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person jumps approximatly 30cm to the left side.#A/DET person/NOUN jump/VERB approximatly/ADV cm/NOUN to/ADP the/DET left/ADJ side/NOUN#0.0#0.0
+a person hops to the left#a/DET person/NOUN hop/VERB to/ADP the/DET left/NOUN#0.0#0.0
+Someone jumps to the right.#Someone/PRON jump/VERB to/ADP the/DET right/NOUN#0.0#0.0

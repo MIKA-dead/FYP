@@ -1,0 +1,5 @@
+A person perfoms a jumping-jack motion.#A/DET person/NOUN perfom/VERB a/DET jumpingjack/NOUN motion/NOUN#0.0#0.0
+Someone is doing one jumping jack.#Someone/PRON is/AUX do/VERB one/NUM jump/VERB jack/NOUN#0.0#0.0
+a person does some jumping jacks#a/DET person/NOUN does/AUX some/DET jump/VERB jack/NOUN#0.0#0.0
+A human is performing one jumping jack#A/DET human/NOUN is/AUX perform/VERB one/NUM jumping/NOUN jack/NOUN#0.0#0.0
+Somebody jumps like a jumping jack.#Somebody/PRON jump/VERB like/SCONJ a/DET jumping/ADJ jack/NOUN#0.0#0.0

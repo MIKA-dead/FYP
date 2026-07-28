@@ -1,0 +1,2 @@
+A person walks a 90 degree curve to the left.#A/DET person/NOUN walk/VERB a/DET degree/NOUN curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person is walking in a left curve.#A/DET person/NOUN is/AUX walk/VERB in/ADP a/DET left/ADJ curve/NOUN#0.0#0.0

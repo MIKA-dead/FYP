@@ -1,0 +1,5 @@
+a person dodges.#a/DET person/NOUN dodge/VERB#0.0#0.0
+A person is pushed to the right and recovering.#A/DET person/NOUN is/AUX push/VERB to/ADP the/DET right/NOUN and/CCONJ recover/VERB#0.0#0.0
+A person makes an 
+compensatory movement to his right side.#A/DET person/NOUN make/VERB an/DET compensatory/ADJ movement/NOUN to/ADP his/DET right/ADJ side/NOUN#0.0#0.0
+A person walks and avoids an obstacle to his left.#A/DET person/NOUN walk/VERB and/CCONJ avoid/VERB an/DET obstacle/NOUN to/ADP his/DET left/NOUN#0.0#0.0

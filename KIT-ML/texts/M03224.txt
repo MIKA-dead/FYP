@@ -1,0 +1,1 @@
+A human walks fast forward.#A/DET human/NOUN walk/NOUN fast/ADV forward/ADV#0.0#0.0

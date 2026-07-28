@@ -1,0 +1,1 @@
+A person walks straight forward.#A/DET person/NOUN walk/VERB straight/ADV forward/ADV#0.0#0.0

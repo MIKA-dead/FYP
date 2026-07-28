@@ -1,0 +1,4 @@
+A person stumbles forward.#A/DET person/NOUN stumble/VERB forward/ADV#0.0#0.0
+A human is stumbling forward and stopping after a few steps#A/DET human/NOUN is/AUX stumble/VERB forward/ADV and/CCONJ stop/VERB after/ADP a/DET few/ADJ step/NOUN#0.0#0.0
+A person starts walking forward 1 meter.#A/DET person/NOUN start/VERB walk/VERB forward/ADV meter/NOUN#0.0#0.0
+A person gets pushed forward.#A/DET person/NOUN get/VERB push/VERB forward/ADV#0.0#0.0

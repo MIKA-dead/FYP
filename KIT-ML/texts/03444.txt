@@ -1,0 +1,1 @@
+A person turns 360 degrees to the right while jumping with both legs.#A/DET person/NOUN turn/VERB degree/NOUN to/ADP the/DET right/NOUN while/SCONJ jump/VERB with/ADP both/DET leg/NOUN#0.0#0.0

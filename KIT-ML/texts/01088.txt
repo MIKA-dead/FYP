@@ -1,0 +1,2 @@
+A person walks forward, turns on the spot and walks back to the original position#A/DET person/NOUN walk/VERB forward/ADV turn/VERB on/ADP the/DET spot/NOUN and/CCONJ walk/VERB back/ADV to/ADP the/DET original/ADJ position/NOUN#0.0#0.0
+A person walks forward then turns by 180 degrees and walks forward again.#A/DET person/NOUN walk/VERB forward/ADV then/ADV turn/VERB by/ADP degree/NOUN and/CCONJ walk/VERB forward/ADV again/ADV#0.0#0.0

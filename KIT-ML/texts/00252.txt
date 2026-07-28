@@ -1,0 +1,2 @@
+A person starts a circular movement towards the right.#A/DET person/NOUN start/VERB a/DET circular/ADJ movement/NOUN towards/ADP the/DET right/NOUN#0.0#0.0
+Someone walks a right turn#Someone/PRON walk/VERB a/DET right/ADJ turn/NOUN#0.0#0.0

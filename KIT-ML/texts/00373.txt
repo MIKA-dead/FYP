@@ -1,0 +1,3 @@
+A person walks a quarter of a circle.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN#0.0#0.0
+A person walks 90degrees to the right performing a quarter circle#A/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN perform/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0
+Somebody walks a quarter circle clockwise.#Somebody/PRON walk/VERB a/DET quarter/NOUN circle/NOUN clockwise/NOUN#0.0#0.0

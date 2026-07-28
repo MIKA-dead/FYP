@@ -1,0 +1,2 @@
+A person is pushed back#A/DET person/NOUN is/AUX push/VERB back/ADV#0.0#0.0
+Someone gets pushed from the front#Someone/PRON get/VERB push/VERB from/ADP the/DET front/NOUN#0.0#0.0

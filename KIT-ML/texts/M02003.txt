@@ -1,0 +1,2 @@
+A person performs a 180° turn very fast.#A/DET person/NOUN perform/VERB a/DET turn/VERB very/ADV fast/ADV#0.0#0.0
+A human is performing a tight 180° turn on the right foot#A/DET human/NOUN is/AUX perform/VERB a/DET tight/ADJ turn/VERB on/ADP the/DET right/ADJ foot/NOUN#0.0#0.0

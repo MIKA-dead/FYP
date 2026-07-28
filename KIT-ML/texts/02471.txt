@@ -1,0 +1,1 @@
+A human walks with the hands on the hips, looks on her watch, bends down and continues walking.#A/DET human/NOUN walk/VERB with/ADP the/DET hand/NOUN on/ADP the/DET hip/NOUN look/VERB on/ADP her/DET watch/NOUN bend/VERB down/ADP and/CCONJ continue/VERB walk/VERB#0.0#0.0

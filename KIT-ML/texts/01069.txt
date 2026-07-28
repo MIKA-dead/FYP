@@ -1,0 +1,5 @@
+A human walks forwards and slowly turns right, then stops.#A/DET human/NOUN walk/VERB forwards/ADV and/CCONJ slowly/ADV turn/VERB right/ADJ then/ADV stop/VERB#0.0#0.0
+The person walks a right bend.#The/DET person/NOUN walk/VERB a/DET right/ADJ bend/NOUN#0.0#0.0
+A human is walking a 90° right curve#A/DET human/NOUN is/AUX walk/VERB a/DET right/ADJ curve/NOUN#0.0#0.0
+A perso n turns right.#A/DET perso/NOUN n/NOUN turn/VERB right/ADJ#0.0#0.0
+some one turns a lager right corner.#some/DET one/NOUN turn/VERB a/DET lager/ADJ right/ADJ corner/NOUN#0.0#0.0

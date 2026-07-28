@@ -1,0 +1,5 @@
+A person jogs briefly then stops.#A/DET person/NOUN jog/VERB briefly/ADV then/ADV stop/VERB#0.0#0.0
+A person joggs forwards.#A/DET person/NOUN joggs/NOUN forwards/ADP#0.0#0.0
+Someone is jogging 4 steps forward starting with the left leg.#Someone/PRON is/AUX jog/VERB step/NOUN forward/ADV start/VERB with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0
+A person performs a short sprint#A/DET person/NOUN perform/VERB a/DET short/ADJ sprint/NOUN#0.0#0.0
+someone starts running straightforwards and stops after five steps.#someone/PRON start/VERB running/NOUN straightforward/NOUN and/CCONJ stop/NOUN after/ADP five/NUM step/NOUN#0.0#0.0

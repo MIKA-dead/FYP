@@ -1,0 +1,1 @@
+A person is doing kickboxing with his right leg.#A/DET person/NOUN is/AUX do/VERB kickboxing/NOUN with/ADP his/DET right/ADJ leg/NOUN#0.0#0.0

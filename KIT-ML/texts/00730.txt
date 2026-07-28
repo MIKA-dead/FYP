@@ -1,0 +1,2 @@
+A person walks, changes direction midway and walks back to where he came from#A/DET person/NOUN walk/VERB change/VERB direction/NOUN midway/ADV and/CCONJ walk/VERB back/ADV to/ADP where/ADV he/PRON come/VERB from/ADP#0.0#0.0
+a person walks forwards a few step the turn 180 degrees to the left and keeps walking#a/DET person/NOUN walk/VERB forwards/ADV a/DET few/ADJ step/NOUN the/DET turn/NOUN degree/NOUN to/ADP the/DET left/NOUN and/CCONJ keep/VERB walk/VERB#0.0#0.0

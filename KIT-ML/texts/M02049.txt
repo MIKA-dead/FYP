@@ -1,0 +1,2 @@
+A human kneels down to the floor#A/DET human/ADJ kneels/NOUN down/ADP to/ADP the/DET floor/NOUN#0.0#0.0
+A person raises his arms on the height of his shoulders before letting them down again and then he gets down on his knees.#A/DET person/NOUN raise/VERB his/DET arm/NOUN on/ADP the/DET height/NOUN of/ADP his/DET shoulder/NOUN before/ADP let/VERB them/PRON down/ADP again/ADV and/CCONJ then/ADV he/PRON get/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0

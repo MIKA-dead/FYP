@@ -1,0 +1,7 @@
+a person ducks away to his left#a/DET person/NOUN duck/VERB away/ADV to/ADP his/DET left/NOUN#0.0#0.0
+A person performs a boxing dodging movement to the left.#A/DET person/NOUN perform/VERB a/DET boxing/NOUN dodging/ADJ movement/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+Someone is in fighting pose and ducking down to the left side.#Someone/PRON is/AUX in/ADP fighting/NOUN pose/NOUN and/CCONJ duck/VERB down/ADP to/ADP the/DET left/ADJ side/NOUN#0.0#0.0
+a person dodges#a/DET person/NOUN dodge/VERB#0.0#0.0
+A person is dodging something to the left.#A/DET person/NOUN is/AUX dodge/VERB something/PRON to/ADP the/DET left/NOUN#0.0#0.0
+A person ducks to the left and protects the right side of his face with his left hand.#A/DET person/NOUN duck/VERB to/ADP the/DET left/NOUN and/CCONJ protect/VERB the/DET right/ADJ side/NOUN of/ADP his/DET face/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
+a boxer is dodging a hit to his head#a/DET boxer/NOUN is/AUX dodge/VERB a/DET hit/NOUN to/ADP his/DET head/NOUN#0.0#0.0

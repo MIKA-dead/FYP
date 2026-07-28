@@ -1,0 +1,1 @@
+A human walks and jumps over obstacles#A/DET human/ADJ walk/NOUN and/CCONJ jump/VERB over/ADP obstacle/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+A person performs a 180° turn to the left.#A/DET person/NOUN perform/VERB a/DET turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person turns 180degree to the left on their right foot#A/DET person/NOUN turn/VERB to/ADP the/DET left/NOUN on/ADP their/DET right/ADJ foot/NOUN#0.0#0.0

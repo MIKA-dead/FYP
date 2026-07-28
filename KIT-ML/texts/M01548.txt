@@ -1,0 +1,4 @@
+A human looks to the left. Afterwards walks forwards slowly.#A/DET human/ADJ look/VERB to/ADP the/DET left/NOUN Afterwards/ADV walk/VERB forwards/ADV slowly/ADV#0.0#0.0
+a person walks straight on and then walks up a step#a/DET person/NOUN walk/VERB straight/ADV on/ADV and/CCONJ then/ADV walk/VERB up/ADP a/DET step/NOUN#0.0#0.0
+a person walks straight forwards some steps#a/DET person/NOUN walk/VERB straight/ADV forwards/ADV some/DET step/NOUN#0.0#0.0
+A person is walking forward.#A/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0

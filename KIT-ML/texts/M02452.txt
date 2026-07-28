@@ -1,0 +1,1 @@
+A human  is picking something up#A/DET human/ADJ is/AUX pick/VERB something/PRON up/ADP#0.0#0.0

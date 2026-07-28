@@ -1,0 +1,5 @@
+Person doing a handstand#person/NOUN do/VERB a/DET handstand/NOUN#0.0#0.0
+A person performs a handstand#A/DET person/NOUN perform/VERB a/DET handstand/NOUN#0.0#0.0
+someone makes a handstand.#someone/PRON make/VERB a/DET handstand/NOUN#0.0#0.0
+a human goes into a handstand position, and comes back on his feet.#a/DET human/NOUN go/VERB into/ADP a/DET handstand/NOUN position/NOUN and/CCONJ come/VERB back/ADV on/ADP his/DET foot/NOUN#0.0#0.0
+Someone does a handstand.#Someone/PRON does/AUX a/DET handstand/NOUN#0.0#0.0

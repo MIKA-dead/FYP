@@ -1,0 +1,2 @@
+A person raises their left arm and beats like a tennis player.#A/DET person/NOUN raise/VERB their/DET left/ADJ arm/NOUN and/CCONJ beat/NOUN like/SCONJ a/DET tennis/NOUN player/NOUN#0.0#0.0
+A human performs a hit with an object similar to a tennis racket in the same hight as its hips with its left hand.#A/DET human/NOUN perform/VERB a/DET hit/NOUN with/ADP an/DET object/NOUN similar/ADJ to/ADP a/DET tennis/NOUN racket/NOUN in/ADP the/DET same/ADJ hight/NOUN as/SCONJ its/DET hip/NOUN with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

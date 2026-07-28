@@ -1,0 +1,2 @@
+Subject walks forward one step then spins around and walks back.#Subject/ADJ walk/VERB forward/ADV one/NUM step/NOUN then/ADV spin/VERB around/ADV and/CCONJ walk/VERB back/ADV#0.0#0.0
+Somebody turns swinging around.#Somebody/PRON turn/VERB swinge/VERB around/ADV#0.0#0.0

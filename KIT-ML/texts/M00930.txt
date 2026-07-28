@@ -1,0 +1,3 @@
+A person walks while turning to the left#A/DET person/NOUN walk/VERB while/SCONJ turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+Subject walks in quarter circle counterclockwise.#Subject/ADJ walk/VERB in/ADP quarter/NOUN circle/NOUN counterclockwise/NOUN#0.0#0.0
+A human perfoms a left turn#A/DET human/ADJ perfom/NOUN a/DET left/ADJ turn/NOUN#0.0#0.0

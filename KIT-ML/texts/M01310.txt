@@ -1,0 +1,2 @@
+Subject raises its left leg.#Subject/PROPN raise/VERB its/DET left/ADJ leg/NOUN#0.0#0.0
+a person stomps on the ground with its left foot#a/DET person/NOUN stomp/VERB on/ADP the/DET ground/NOUN with/ADP its/DET left/ADJ foot/NOUN#0.0#0.0

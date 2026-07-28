@@ -1,0 +1,1 @@
+A person performs one step by going approximately 40 centimeters forward starting with his left leg.#A/DET person/NOUN perform/VERB one/NUM step/NOUN by/ADP go/VERB approximately/ADV centimeter/NOUN forward/ADV start/VERB with/ADP his/DET left/ADJ leg/NOUN#0.0#0.0

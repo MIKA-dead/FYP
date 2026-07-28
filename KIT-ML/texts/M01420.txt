@@ -1,0 +1,2 @@
+Subject is playing the guitar.#Subject/PROPN is/AUX play/VERB the/DET guitar/NOUN#0.0#0.0
+a person performs a guitar stroke#a/DET person/NOUN perform/VERB a/DET guitar/NOUN stroke/NOUN#0.0#0.0

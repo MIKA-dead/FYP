@@ -1,0 +1,3 @@
+A human performs a squat.#A/DET human/NOUN perform/VERB a/DET squat/NOUN#0.0#0.0
+Someone does two squats.#Someone/PRON does/AUX two/NUM squat/NOUN#0.0#0.0
+a man is doing squats#a/DET man/NOUN is/AUX do/VERB squat/NOUN#0.0#0.0

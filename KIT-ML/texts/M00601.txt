@@ -1,0 +1,2 @@
+A human is performing a cartwheel.#A/DET human/NOUN is/AUX perform/VERB a/DET cartwheel/NOUN#0.0#0.0
+A person does a cartwheel.#A/DET person/NOUN does/AUX a/DET cartwheel/NOUN#0.0#0.0

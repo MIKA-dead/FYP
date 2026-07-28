@@ -1,0 +1,1 @@
+A human runs and stops.#A/DET human/ADJ run/NOUN and/CCONJ stop/NOUN#0.0#0.0

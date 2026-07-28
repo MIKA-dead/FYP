@@ -1,0 +1,10 @@
+A person is pushed to the left#A/DET person/NOUN is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person gets pushed on their right shoulder and makes a step to the left.#A/DET person/NOUN get/VERB push/VERB on/ADP their/DET right/ADJ shoulder/NOUN and/CCONJ make/VERB a/DET step/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person stumbling after being pushed.#A/DET person/NOUN stumble/VERB after/ADP being/AUX push/VERB#0.0#0.0
+Someone makes a sidestep crossing one foot over another.#Someone/PRON make/VERB a/DET sidestep/NOUN cross/VERB one/NUM foot/NOUN over/ADP another/DET#0.0#0.0
+Someone is pushed to the left.#Someone/PRON is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0
+He tilts to the left.#He/PRON tilt/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person makes a sidestep by crossing legs#A/DET person/NOUN make/VERB a/DET sidestep/NOUN by/ADP cross/VERB leg/NOUN#0.0#0.0
+A person is pushed to the left and is taking a few correcting steps to maintain balance.#A/DET person/NOUN is/AUX push/VERB to/ADP the/DET left/NOUN and/CCONJ is/AUX take/VERB a/DET few/ADJ correct/VERB step/NOUN to/PART maintain/VERB balance/NOUN#0.0#0.0
+A person takes a recovery step to the left.#A/DET person/NOUN take/VERB a/DET recovery/NOUN step/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+someone stumbles to his left side.#someone/PRON stumble/VERB to/ADP his/DET left/ADJ side/NOUN#0.0#0.0

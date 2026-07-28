@@ -1,0 +1,1 @@
+A person is swimming backstroke.#A/DET person/NOUN is/AUX swim/VERB backstroke/NOUN#0.0#0.0

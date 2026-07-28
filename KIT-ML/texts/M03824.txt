@@ -1,0 +1,1 @@
+Multiple times, a human walks forwards, turns around and walks back again.#Multiple/ADJ time/NOUN a/DET human/NOUN walk/VERB forwards/ADV turn/VERB around/ADV and/CCONJ walk/VERB back/ADV again/ADV#0.0#0.0

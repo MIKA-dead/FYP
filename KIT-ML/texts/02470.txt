@@ -1,0 +1,1 @@
+A person walks casually around and picks something up from the floor.#A/DET person/NOUN walk/VERB casually/ADV around/ADV and/CCONJ pick/VERB something/PRON up/ADP from/ADP the/DET floor/NOUN#0.0#0.0

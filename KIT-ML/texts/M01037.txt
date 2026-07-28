@@ -1,0 +1,6 @@
+Person slowly walking forwards#person/NOUN slowly/ADV walk/VERB forwards/ADV#0.0#0.0
+human goes forward, slowly and firmly, starting with left#human/PROPN go/VERB forward/ADV slowly/ADV and/CCONJ firmly/ADV start/VERB with/ADP left/ADJ#0.0#0.0
+A person performs 5 cautious steps.#A/DET person/NOUN perform/VERB cautious/ADJ step/NOUN#0.0#0.0
+The human is walking very slowly#The/DET human/NOUN is/AUX walk/VERB very/ADV slowly/ADV#0.0#0.0
+Someone slowly walks forward.#Someone/PRON slowly/ADV walk/VERB forward/ADV#0.0#0.0
+a person walks forwards quite slow#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV slow/ADJ#0.0#0.0

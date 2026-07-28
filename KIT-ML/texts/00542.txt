@@ -1,0 +1,4 @@
+A human walking slowly#A/DET human/ADJ walking/NOUN slowly/ADV#0.0#0.0
+A person walks four slow steps forward.#A/DET person/NOUN walk/VERB four/NUM slow/ADJ step/NOUN forward/ADV#0.0#0.0
+a person walks forwards very slow#a/DET person/NOUN walk/VERB forwards/ADV very/ADV slow/ADJ#0.0#0.0
+A person taking a few steps forward#A/DET person/NOUN take/VERB a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0

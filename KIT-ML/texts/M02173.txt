@@ -1,0 +1,1 @@
+A person has his arms hanging down, then makes a left angle with both arms in front of his body and lets the arms hang down again.#A/DET person/NOUN has/AUX his/DET arm/NOUN hang/VERB down/ADV then/ADV make/VERB a/DET left/ADJ angle/NOUN with/ADP both/DET arm/NOUN in/ADP front/NOUN of/ADP his/DET body/NOUN and/CCONJ let/VERB the/DET arm/NOUN hang/VERB down/ADP again/ADV#0.0#0.0

@@ -1,0 +1,2 @@
+A person gets down on all fours and starts crawling forward.#A/DET person/NOUN get/VERB down/ADV on/ADP all/DET four/NOUN and/CCONJ start/VERB crawl/VERB forward/ADV#0.0#0.0
+a person gets down on his knees and crawls a few meters#a/DET person/NOUN get/VERB down/ADP on/ADP his/DET knee/NOUN and/CCONJ crawl/VERB a/DET few/ADJ meter/NOUN#0.0#0.0

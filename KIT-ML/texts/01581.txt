@@ -1,0 +1,6 @@
+Someone balances on a object an jumps on the ground at the end of the object#Someone/PRON balance/VERB on/ADP a/DET object/NOUN an/DET jump/NOUN on/ADP the/DET ground/NOUN at/ADP the/DET end/NOUN of/ADP the/DET object/NOUN#0.0#0.0
+A person balances over an obstacle#A/DET person/NOUN balance/VERB over/ADP an/DET obstacle/NOUN#0.0#0.0
+A person goes down from an higher level to a lower one#A/DET person/NOUN go/VERB down/ADP from/ADP an/DET higher/ADJ level/NOUN to/ADP a/DET lower/ADJ one/NOUN#0.0#0.0
+A person is balancing on something for four steps and taking a step down at the end.#A/DET person/NOUN is/AUX balance/VERB on/ADP something/PRON for/ADP four/NUM step/NOUN and/CCONJ take/VERB a/DET step/NOUN down/ADP at/ADP the/DET end/NOUN#0.0#0.0
+A person balancing across a beam and stepping down#A/DET person/NOUN balance/VERB across/ADP a/DET beam/NOUN and/CCONJ step/VERB down/ADP#0.0#0.0
+a man is walking a few steps on a beam, and goes back on the ground#a/DET man/NOUN is/AUX walk/VERB a/DET few/ADJ step/NOUN on/ADP a/DET beam/NOUN and/CCONJ go/VERB back/ADV on/ADP the/DET ground/NOUN#0.0#0.0

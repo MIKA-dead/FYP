@@ -1,0 +1,5 @@
+Subect stands up from kneeling.#subect/NOUN stand/VERB up/ADP from/ADP kneel/VERB#0.0#0.0
+A person is kneeling on the ground and gets up using his legs and left arm.#A/DET person/NOUN is/AUX kneel/VERB on/ADP the/DET ground/NOUN and/CCONJ get/VERB up/ADP use/VERB his/DET leg/NOUN and/CCONJ left/ADJ arm/NOUN#0.0#0.0
+A person stands up from the ground#A/DET person/NOUN stand/VERB up/ADP from/ADP the/DET ground/NOUN#0.0#0.0
+A crawling person standing up from the floor.#A/DET crawl/VERB person/NOUN stand/VERB up/ADP from/ADP the/DET floor/NOUN#0.0#0.0
+A person on their knees standing up#A/DET person/NOUN on/ADP their/DET knee/NOUN stand/VERB up/ADP#0.0#0.0

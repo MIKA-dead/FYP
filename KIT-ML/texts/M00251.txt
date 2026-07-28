@@ -1,0 +1,3 @@
+A human walks a 90 degree arc to the left.#A/DET human/NOUN walk/VERB a/DET degree/NOUN arc/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+Someone walks a circle counterclockwise#Someone/PRON walk/VERB a/DET circle/NOUN counterclockwise/NOUN#0.0#0.0
+A person walks a circle.#A/DET person/NOUN walk/VERB a/DET circle/NOUN#0.0#0.0

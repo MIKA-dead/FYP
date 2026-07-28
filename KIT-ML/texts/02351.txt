@@ -1,0 +1,1 @@
+A person moves forward, gets on their knees and hands, crawls a few meters, gets up and walks again.#A/DET person/NOUN move/VERB forward/ADV get/VERB on/ADP their/DET knee/NOUN and/CCONJ hand/NOUN crawl/VERB a/DET few/ADJ meter/NOUN get/VERB up/ADV and/CCONJ walk/VERB again/ADV#0.0#0.0

@@ -1,0 +1,1 @@
+A person walks slowly 4 small steps forward.#A/DET person/NOUN walk/VERB slowly/ADV small/ADJ step/NOUN forward/ADV#0.0#0.0

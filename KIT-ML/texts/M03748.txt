@@ -1,0 +1,1 @@
+A human lies on his side and stands up.#A/DET human/ADJ lie/VERB on/ADP his/DET side/NOUN and/CCONJ stand/VERB up/ADP#0.0#0.0

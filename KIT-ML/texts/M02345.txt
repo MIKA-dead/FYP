@@ -1,0 +1,1 @@
+A person is holding his right and left arm in the air.#A/DET person/NOUN is/AUX hold/VERB his/DET right/NOUN and/CCONJ left/ADJ arm/NOUN in/ADP the/DET air/NOUN#0.0#0.0

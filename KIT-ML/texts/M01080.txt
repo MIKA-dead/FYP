@@ -1,0 +1,6 @@
+A person makes two steps forward, then turns 180 degrees and makes two steps forward.#A/DET person/NOUN make/VERB two/NUM step/NOUN forward/ADV then/ADV turn/VERB degree/NOUN and/CCONJ make/VERB two/NUM step/NOUN forward/ADV#0.0#0.0
+human goes forward, turns around counterclockwise, and goes back to starting point#human/PROPN go/VERB forward/ADV turn/VERB around/ADV counterclockwise/NOUN and/CCONJ go/VERB back/ADV to/ADP starting/NOUN point/NOUN#0.0#0.0
+a person walks a few steps takes a turn of 180 degrees and walks some more steps#a/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN take/VERB a/DET turn/NOUN of/ADP degree/NOUN and/CCONJ walk/VERB some/DET more/ADJ step/NOUN#0.0#0.0
+A person is spinning around while walking#A/DET person/NOUN is/AUX spin/VERB around/ADV while/SCONJ walk/VERB#0.0#0.0
+The human walks a couple of steps turn around and goes back to starting point#The/DET human/NOUN walk/VERB a/DET couple/NOUN of/ADP step/NOUN turn/VERB around/ADP and/CCONJ go/VERB back/ADV to/ADP starting/NOUN point/NOUN#0.0#0.0
+A person does one step and a fast 180° turn#A/DET person/NOUN does/AUX one/NUM step/NOUN and/CCONJ a/DET fast/ADJ turn/VERB#0.0#0.0

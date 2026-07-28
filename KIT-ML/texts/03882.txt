@@ -1,0 +1,1 @@
+A person jumps and turns 180 degrees mid-air#A/DET person/NOUN jump/VERB and/CCONJ turn/VERB degree/NOUN midair/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person is hobbling in different directions having his hands put to his left leg.#A/DET person/NOUN is/AUX hobble/VERB in/ADP different/ADJ direction/NOUN have/VERB his/DET hand/NOUN put/VERB to/ADP his/DET left/ADJ leg/NOUN#0.0#0.0

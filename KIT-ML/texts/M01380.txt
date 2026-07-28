@@ -1,0 +1,4 @@
+A person waves twice with their left arm.#A/DET person/NOUN wave/VERB twice/ADV with/ADP their/DET left/ADJ arm/NOUN#0.0#0.0
+Someone waves with the left hand#Someone/PRON wave/VERB with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
+a person wipes something with its left hand horizontally#a/DET person/NOUN wipe/VERB something/PRON with/ADP its/DET left/ADJ hand/NOUN horizontally/ADV#0.0#0.0
+a human is wawving with his left hand#a/DET human/NOUN is/AUX wawve/VERB with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

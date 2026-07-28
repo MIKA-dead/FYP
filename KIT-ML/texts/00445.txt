@@ -1,0 +1,2 @@
+A person sprints forward.#A/DET person/NOUN sprint/VERB forward/ADV#0.0#0.0
+a person stand still and the start to run for some meters#a/DET person/NOUN stand/VERB still/ADV and/CCONJ the/DET start/NOUN to/PART run/VERB for/ADP some/DET meter/NOUN#0.0#0.0

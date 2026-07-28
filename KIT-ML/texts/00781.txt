@@ -1,0 +1,4 @@
+A person is jogging forwards, arms bent, hands at chest level.#A/DET person/NOUN is/AUX jog/VERB forward/NOUN arm/NOUN bent/ADJ hand/NOUN at/ADP chest/NOUN level/NOUN#0.0#0.0
+A person runs forward.#A/DET person/NOUN run/VERB forward/ADV#0.0#0.0
+A person is running a few steps and stops.#A/DET person/NOUN is/AUX run/VERB a/DET few/ADJ step/NOUN and/CCONJ stop/NOUN#0.0#0.0
+A person performing a short sprint#A/DET person/NOUN perform/VERB a/DET short/ADJ sprint/NOUN#0.0#0.0

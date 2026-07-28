@@ -1,0 +1,4 @@
+A person hits something with a racket on his right.#A/DET person/NOUN hit/VERB something/PRON with/ADP a/DET racket/NOUN on/ADP his/DET right/NOUN#0.0#0.0
+A person swings a bat.#A/DET person/NOUN swing/VERB a/DET bat/NOUN#0.0#0.0
+A person performs a throwing motion.#A/DET person/NOUN perform/VERB a/DET throwing/NOUN motion/NOUN#0.0#0.0
+a human throws something on the ground#a/DET human/ADJ throw/VERB something/PRON on/ADP the/DET ground/NOUN#0.0#0.0

@@ -1,0 +1,5 @@
+Subject is stepping akwardly.#Subject/ADJ is/AUX step/VERB akwardly/ADV#0.0#0.0
+A person walks over step stones.#A/DET person/NOUN walk/VERB over/ADP step/NOUN stone/NOUN#0.0#0.0
+A human takes a few steps forward very carefully, watching where he puts his feet.#A/DET human/NOUN take/VERB a/DET few/ADJ step/NOUN forward/ADV very/ADV carefully/ADV watch/VERB where/ADV he/PRON put/VERB his/DET foot/NOUN#0.0#0.0
+a person moves forward on some objects#a/DET person/NOUN move/VERB forward/ADV on/ADP some/DET object/NOUN#0.0#0.0
+A person is balancing over an obejct.#A/DET person/NOUN is/AUX balance/VERB over/ADP an/DET obejct/NOUN#0.0#0.0

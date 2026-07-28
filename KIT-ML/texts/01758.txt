@@ -1,0 +1,1 @@
+human goes forward and is being pushed back by an invisible force#human/PROPN go/VERB forward/ADV and/CCONJ is/AUX being/AUX push/VERB back/ADV by/ADP an/DET invisible/ADJ force/NOUN#0.0#0.0

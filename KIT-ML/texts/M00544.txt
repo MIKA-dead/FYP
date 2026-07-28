@@ -1,0 +1,1 @@
+Someone goes four and a half steps forward.#Someone/PRON go/VERB four/NUM and/CCONJ a/DET half/NOUN step/NOUN forward/ADV#0.0#0.0

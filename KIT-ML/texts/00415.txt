@@ -1,0 +1,3 @@
+A human moves in a quarter circle, makes a break and move in another quarter circle.#A/DET human/ADJ move/NOUN in/ADP a/DET quarter/NOUN circle/NOUN make/VERB a/DET break/NOUN and/CCONJ move/VERB in/ADP another/DET quarter/NOUN circle/NOUN#0.0#0.0
+Someone is walking forward and then turning right.#Someone/PRON is/AUX walk/VERB forward/ADV and/CCONJ then/ADV turn/VERB right/ADV#0.0#0.0
+a person walks forwards performing a quarter circle to the right and then walks back to its origin position in the same way#a/DET person/NOUN walk/VERB forwards/ADV perform/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN and/CCONJ then/ADV walk/VERB back/ADV to/ADP its/DET origin/NOUN position/NOUN in/ADP the/DET same/ADJ way/NOUN#0.0#0.0

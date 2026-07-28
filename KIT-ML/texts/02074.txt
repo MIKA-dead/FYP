@@ -1,0 +1,1 @@
+A human is standing up.#A/DET human/NOUN is/AUX stand/VERB up/ADP#0.0#0.0

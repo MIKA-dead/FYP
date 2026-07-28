@@ -1,0 +1,4 @@
+Person walking and turning on one foot#person/NOUN walk/VERB and/CCONJ turn/VERB on/ADP one/NUM foot/NOUN#0.0#0.0
+Someone walks, turns around and walks back#Someone/PRON walk/VERB turn/VERB around/ADV and/CCONJ walk/VERB back/ADV#0.0#0.0
+a person walks forwards then turn left 180 degrees and keeps walking#a/DET person/NOUN walk/VERB forward/NOUN then/ADV turn/VERB left/VERB degree/NOUN and/CCONJ keep/VERB walk/VERB#0.0#0.0
+A person turns 180 degrees on his left foot.#A/DET person/NOUN turn/VERB degree/NOUN on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0

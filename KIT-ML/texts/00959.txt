@@ -1,0 +1,1 @@
+A human is walking forwards.#A/DET human/NOUN is/AUX walking/NOUN forwards/ADV#0.0#0.0

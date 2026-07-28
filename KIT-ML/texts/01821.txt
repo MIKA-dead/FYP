@@ -1,0 +1,2 @@
+A person is pushed back.#A/DET person/NOUN is/AUX push/VERB back/ADV#0.0#0.0
+Someone gets pushed on the right side of his body and takes a step back to rebalance.#Someone/PRON get/VERB push/VERB on/ADP the/DET right/ADJ side/NOUN of/ADP his/DET body/NOUN and/CCONJ take/VERB a/DET step/NOUN back/ADV to/ADP rebalance/NOUN#0.0#0.0

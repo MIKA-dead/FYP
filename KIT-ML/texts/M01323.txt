@@ -1,0 +1,4 @@
+a person jumps forward#a/DET person/NOUN jump/VERB forward/ADV#0.0#0.0
+a person jumps forward with its two legs about 10 centimeters#a/DET person/NOUN jump/VERB forward/ADV with/ADP its/DET two/NUM leg/NOUN about/ADP centimeter/NOUN#0.0#0.0
+A person performs one jump foreward#A/DET person/NOUN perform/VERB one/NUM jump/NOUN foreward/NOUN#0.0#0.0
+Someone jumps forwards.#Someone/PRON jump/VERB forwards/ADV#0.0#0.0

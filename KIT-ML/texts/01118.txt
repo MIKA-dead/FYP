@@ -1,0 +1,5 @@
+A person stumbling to the left#A/DET person/NOUN stumble/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person takes a few recovery steps to the left.#A/DET person/NOUN take/VERB a/DET few/ADJ recovery/NOUN step/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person steps to his left.#A/DET person/NOUN step/VERB to/ADP his/DET left/NOUN#0.0#0.0
+A person is pushed from the right to the left.#A/DET person/NOUN is/AUX push/VERB from/ADP the/DET right/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person stumbling to the left#A/DET person/NOUN stumble/VERB to/ADP the/DET left/NOUN#0.0#0.0

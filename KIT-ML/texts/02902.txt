@@ -1,0 +1,1 @@
+A person is slowly moving forward while looking at the ground.#A/DET person/NOUN is/AUX slowly/ADV move/VERB forward/ADV while/SCONJ look/VERB at/ADP the/DET ground/NOUN#0.0#0.0

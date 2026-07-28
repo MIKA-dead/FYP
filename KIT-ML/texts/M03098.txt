@@ -1,0 +1,1 @@
+A person takes a shower.#A/DET person/NOUN take/VERB a/DET shower/NOUN#0.0#0.0

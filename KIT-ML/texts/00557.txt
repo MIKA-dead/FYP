@@ -1,0 +1,4 @@
+A person moves quickly and gets slower.#A/DET person/NOUN move/VERB quickly/ADV and/CCONJ get/VERB slower/ADJ#0.0#0.0
+Someone is trying to walk fast for 4 steps and stops afterwards.#Someone/PRON is/AUX try/VERB to/PART walk/VERB fast/ADV for/ADP step/NOUN and/CCONJ stop/VERB afterwards/ADV#0.0#0.0
+A person runs and stops.#A/DET person/NOUN run/VERB and/CCONJ stop/NOUN#0.0#0.0
+A person is running four steps and then stops.#A/DET person/NOUN is/AUX run/VERB four/NUM step/NOUN and/CCONJ then/ADV stop/VERB#0.0#0.0

@@ -1,0 +1,1 @@
+A person walks trough the room.#A/DET person/NOUN walk/VERB trough/ADP the/DET room/NOUN#0.0#0.0

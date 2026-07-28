@@ -1,0 +1,2 @@
+A person walks in a circle to the left.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+Somebody walks a 7/8 circle anticlockwise.#Somebody/PRON walk/VERB a/DET circle/NOUN anticlockwise/NOUN#0.0#0.0

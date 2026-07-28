@@ -1,0 +1,1 @@
+A person picks something from the ground.#A/DET person/NOUN pick/VERB something/PRON from/ADP the/DET ground/NOUN#0.0#0.0

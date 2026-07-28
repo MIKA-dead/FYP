@@ -1,0 +1,2 @@
+a person is walking up a ramp#a/DET person/NOUN is/AUX walk/VERB up/ADP a/DET ramp/NOUN#0.0#0.0
+A human climbs some stairs#A/DET human/ADJ climb/NOUN some/DET stair/NOUN#0.0#0.0

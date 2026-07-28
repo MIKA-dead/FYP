@@ -1,0 +1,1 @@
+A person performs martial arts.#A/DET person/NOUN perform/VERB martial/ADJ art/NOUN#0.0#0.0

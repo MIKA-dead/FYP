@@ -1,0 +1,1 @@
+A human runs and jumps over an obstacle and continues her run.#A/DET human/ADJ run/NOUN and/CCONJ jump/VERB over/ADP an/DET obstacle/NOUN and/CCONJ continue/VERB her/DET run/NOUN#0.0#0.0

@@ -1,0 +1,4 @@
+A human dances to the right.#A/DET human/ADJ dance/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+human performs the basic movement of the dance cha-cha-cha#human/ADJ perform/VERB the/DET basic/ADJ movement/NOUN of/ADP the/DET dance/NOUN chachacha/NOUN#0.0#0.0
+A person performs the wiener walzer.#A/DET person/NOUN perform/VERB the/DET wiener/PROPN walzer/PROPN#0.0#0.0
+Someone is dancing.#Someone/PRON is/AUX dance/VERB#0.0#0.0

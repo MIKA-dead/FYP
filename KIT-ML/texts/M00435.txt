@@ -1,0 +1,2 @@
+A person is walking with dangling arms#A/DET person/NOUN is/AUX walk/VERB with/ADP dangling/ADJ arm/NOUN#0.0#0.0
+A person walks 4 steps.#A/DET person/NOUN walk/VERB step/NOUN#0.0#0.0

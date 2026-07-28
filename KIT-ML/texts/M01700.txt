@@ -1,0 +1,2 @@
+A person stumbling to the right.#A/DET person/NOUN stumble/VERB to/ADP the/DET right/NOUN#0.0#0.0
+a person gets pushed to the eft#a/DET person/NOUN get/VERB push/VERB to/ADP the/DET eft/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person is sneaking around.#A/DET person/NOUN is/AUX sneak/VERB around/ADV#0.0#0.0

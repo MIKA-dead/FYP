@@ -1,0 +1,1 @@
+A person interacts with something uses a complex sequence of interactions.#A/DET person/NOUN interact/VERB with/ADP something/PRON use/VERB a/DET complex/ADJ sequence/NOUN of/ADP interaction/NOUN#0.0#0.0

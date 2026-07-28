@@ -1,0 +1,4 @@
+the person make a walk along a circular path#the/DET person/NOUN make/VERB a/DET walk/NOUN along/ADP a/DET circular/ADJ path/NOUN#0.0#0.0
+Someone is walking in a circle clockwise.#Someone/PRON is/AUX walk/VERB in/ADP a/DET circle/NOUN clockwise/NOUN#0.0#0.0
+A person walks a circle to the right#A/DET person/NOUN walk/VERB a/DET circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+A person is walking in a circle#A/DET person/NOUN is/AUX walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0

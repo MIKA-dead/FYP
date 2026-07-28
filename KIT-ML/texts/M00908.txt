@@ -1,0 +1,5 @@
+A person walks 4 steps forward.#A/DET person/NOUN walk/VERB step/NOUN forward/ADV#0.0#0.0
+A human walks forwards#A/DET human/NOUN walk/VERB forwards/ADV#0.0#0.0
+a person is walking fast forward#a/DET person/NOUN is/AUX walk/VERB fast/ADV forward/ADV#0.0#0.0
+A person walks fast.#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0
+A person walks five steps forward, knees slightly bend#A/DET person/NOUN walk/VERB five/NUM step/NOUN forward/ADV knee/VERB slightly/ADV bend/VERB#0.0#0.0

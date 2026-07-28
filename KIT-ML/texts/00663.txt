@@ -1,0 +1,7 @@
+A human impersonates a chicken flapping its wings.#A/DET human/ADJ impersonate/VERB a/DET chicken/NOUN flap/VERB its/DET wing/NOUN#0.0#0.0
+Someone imitates a chicken#Someone/PRON imitate/VERB a/DET chicken/NOUN#0.0#0.0
+A human is wagging its arms like a "chicken"#A/DET human/NOUN is/AUX wag/VERB its/DET arm/NOUN like/SCONJ a/DET chicken/NOUN#0.0#0.0
+A person moves his hands to his chest and moves his elbows up and down several times.#A/DET person/NOUN move/VERB his/DET hand/NOUN to/ADP his/DET chest/NOUN and/CCONJ move/VERB his/DET elbow/NOUN up/ADV and/CCONJ down/ADP several/ADJ time/NOUN#0.0#0.0
+a person does the chicken moves#a/DET person/NOUN does/AUX the/DET chicken/NOUN move/NOUN#0.0#0.0
+human performs a chicken dance#human/ADJ perform/VERB a/DET chicken/NOUN dance/NOUN#0.0#0.0
+A person squats while doing a chicken wing motion with his arms.#A/DET person/NOUN squat/VERB while/SCONJ do/VERB a/DET chicken/NOUN wing/NOUN motion/NOUN with/ADP his/DET arm/NOUN#0.0#0.0

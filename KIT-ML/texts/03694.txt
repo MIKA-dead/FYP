@@ -1,0 +1,1 @@
+A human runs and jumps slightly.#A/DET human/ADJ run/NOUN and/CCONJ jump/VERB slightly/ADV#0.0#0.0

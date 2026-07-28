@@ -1,0 +1,2 @@
+A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
+A human goes 4 steps forward at a normal pace.#A/DET human/NOUN go/VERB step/NOUN forward/ADV at/ADP a/DET normal/ADJ pace/NOUN#0.0#0.0

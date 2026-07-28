@@ -1,0 +1,4 @@
+During walking forward a person is hit in the back.#During/ADP walk/VERB forward/ADV a/DET person/NOUN is/AUX hit/VERB in/ADP the/DET back/NOUN#0.0#0.0
+A human walks 2 steps forwards and then trips down  one stair.#A/DET human/NOUN walk/VERB step/NOUN forwards/ADV and/CCONJ then/ADV trip/VERB down/ADP one/NUM stair/NOUN#0.0#0.0
+a person walks forward and gets pushed from behind#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ get/VERB push/VERB from/ADP behind/ADV#0.0#0.0
+A person walks and stops immediately.#A/DET person/NOUN walk/VERB and/CCONJ stop/VERB immediately/ADV#0.0#0.0

@@ -1,0 +1,3 @@
+A person waves with the right hand.#A/DET person/NOUN wave/VERB with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
+A person wipes something horizontal#A/DET person/NOUN wipe/VERB something/PRON horizontal/ADJ#0.0#0.0
+A person greets with his right hand.#A/DET person/NOUN greet/VERB with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

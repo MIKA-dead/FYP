@@ -1,0 +1,1 @@
+A person performs a high kick while turning.#A/DET person/NOUN perform/VERB a/DET high/ADJ kick/NOUN while/SCONJ turn/VERB#0.0#0.0

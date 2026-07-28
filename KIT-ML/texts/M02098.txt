@@ -1,0 +1,4 @@
+Person going on all fours and crawling#person/NOUN go/VERB on/ADP all/DET four/NOUN and/CCONJ crawling/NOUN#0.0#0.0
+A human crawls on the floor#A/DET human/ADJ crawl/NOUN on/ADP the/DET floor/NOUN#0.0#0.0
+the human is crawling on the floor#the/DET human/NOUN is/AUX crawl/VERB on/ADP the/DET floor/NOUN#0.0#0.0
+A person walking on all fours#A/DET person/NOUN walk/VERB on/ADP all/DET four/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A human puts something in his left hand using his right hand and then proceeds to eat it using his right hand.#A/DET human/NOUN put/VERB something/PRON in/ADP his/DET left/ADJ hand/NOUN use/VERB his/DET right/ADJ hand/NOUN and/CCONJ then/ADV proceed/VERB to/PART eat/VERB it/PRON use/VERB his/DET right/ADJ hand/NOUN#0.0#0.0

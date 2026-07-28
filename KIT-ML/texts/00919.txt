@@ -1,0 +1,2 @@
+Someone jogs a short distance.#Someone/PRON jog/VERB a/DET short/ADJ distance/NOUN#0.0#0.0
+Someone runs forward#Someone/PRON run/VERB forward/ADV#0.0#0.0

@@ -1,0 +1,2 @@
+Someone is stirring with his left hand.#Someone/PRON is/AUX stir/VERB with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
+A person wipes a desk.#A/DET person/NOUN wipe/VERB a/DET desk/NOUN#0.0#0.0

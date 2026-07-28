@@ -1,0 +1,16 @@
+A person walks backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
+A person walks backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
+A person walks backwards four steps.#A/DET person/NOUN walk/VERB backwards/ADV four/NUM step/NOUN#0.0#0.0
+A person is stepping back.#A/DET person/NOUN is/AUX step/VERB back/ADV#0.0#0.0
+slowly backing off#slowly/ADV back/VERB off/ADP#0.0#0.0
+Someone is doing a few steps backwards.#Someone/PRON is/AUX do/VERB a/DET few/ADJ step/NOUN backwards/ADV#0.0#0.0
+Person walking backwards#person/NOUN walk/VERB backwards/ADV#0.0#0.0
+A person walks four steps backwards#A/DET person/NOUN walk/VERB four/NUM step/NOUN backwards/ADV#0.0#0.0
+A person walks 5 steps backward.#A/DET person/NOUN walk/VERB step/NOUN backward/ADJ#0.0#0.0
+A person moves backward some meters#A/DET person/NOUN move/VERB backward/ADV some/DET meter/NOUN#0.0#0.0
+A human is walking backwards tilting its head a little bit beforehand#A/DET human/NOUN is/AUX walk/VERB backwards/ADV tilt/VERB its/DET head/NOUN a/DET little/ADJ bit/NOUN beforehand/ADV#0.0#0.0
+A person does 4 steps backwards#A/DET person/NOUN does/AUX step/NOUN backwards/ADV#0.0#0.0
+A person walking backwards while moving slightly to his right#A/DET person/NOUN walk/VERB backwards/ADV while/SCONJ move/VERB slightly/ADV to/ADP his/DET right/NOUN#0.0#0.0
+A person backing away from something#A/DET person/NOUN back/VERB away/ADV from/ADP something/PRON#0.0#0.0
+human goes backwards#human/ADJ go/VERB backwards/ADV#0.0#0.0
+a man walks backwards#a/DET man/NOUN walk/VERB backwards/ADV#0.0#0.0

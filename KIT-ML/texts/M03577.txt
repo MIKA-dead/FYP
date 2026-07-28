@@ -1,0 +1,1 @@
+Person holding a heavy bar.#person/NOUN hold/VERB a/DET heavy/ADJ bar/NOUN#0.0#0.0

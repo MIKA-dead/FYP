@@ -1,0 +1,3 @@
+A kneeling person raises their arms to the sides and stands up.#A/DET kneel/VERB person/NOUN raise/VERB their/DET arm/NOUN to/ADP the/DET side/NOUN and/CCONJ stand/VERB up/ADP#0.0#0.0
+kneeling person stands up.#kneel/VERB person/NOUN stand/VERB up/ADP#0.0#0.0
+The human stands up#The/DET human/NOUN stand/VERB up/ADP#0.0#0.0

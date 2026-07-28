@@ -1,0 +1,1 @@
+A man is playing an instrument#A/DET man/NOUN is/AUX play/VERB an/DET instrument/NOUN#0.0#0.0

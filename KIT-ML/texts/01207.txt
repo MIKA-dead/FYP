@@ -1,0 +1,2 @@
+A person is dancing the male basic step of a waltz.#A/DET person/NOUN is/AUX dance/VERB the/DET male/ADJ basic/ADJ step/NOUN of/ADP a/DET waltz/NOUN#0.0#0.0
+a person carries something and walks forth and back#a/DET person/NOUN carry/VERB something/PRON and/CCONJ walk/VERB forth/ADV and/CCONJ back/ADV#0.0#0.0

@@ -1,0 +1,5 @@
+A person runs for a few steps#A/DET person/NOUN run/VERB for/ADP a/DET few/ADJ step/NOUN#0.0#0.0
+Subject runs forward three steps.#Subject/ADJ run/VERB forward/ADV three/NUM step/NOUN#0.0#0.0
+a person jogs forwards#a/DET person/NOUN jog/VERB forwards/ADV#0.0#0.0
+A person runs and stops after 5 steps.#A/DET person/NOUN run/VERB and/CCONJ stop/NOUN after/ADP step/NOUN#0.0#0.0
+a person runs for 5 steps#a/DET person/NOUN run/VERB for/ADP step/NOUN#0.0#0.0

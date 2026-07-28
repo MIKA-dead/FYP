@@ -1,0 +1,5 @@
+the person performing forward walking is making a right turn#the/DET person/NOUN perform/VERB forward/ADV walk/VERB is/AUX make/VERB a/DET right/ADJ turn/NOUN#0.0#0.0
+A person walks forward, turns on the spot and walks back.#A/DET person/NOUN walk/VERB forward/ADV turn/VERB on/ADP the/DET spot/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
+a person walks forwards then turns right 180 degrees and keeps on walking#a/DET person/NOUN walk/VERB forward/NOUN then/ADV turn/VERB right/ADJ degree/NOUN and/CCONJ keep/VERB on/ADP walk/VERB#0.0#0.0
+A human makes two steps forward like he is walking on a line, then turns on its right foot and walks back to the place where it started.#A/DET human/NOUN make/VERB two/NUM step/NOUN forward/ADV like/SCONJ he/PRON is/AUX walk/VERB on/ADP a/DET line/NOUN then/ADV turn/VERB on/ADP its/DET right/ADJ foot/NOUN and/CCONJ walk/VERB back/ADV to/ADP the/DET place/NOUN where/ADV it/PRON start/VERB#0.0#0.0
+The human walks a couple of steps turn around and walks back to starting point#The/DET human/NOUN walk/VERB a/DET couple/NOUN of/ADP step/NOUN turn/VERB around/ADP and/CCONJ walk/VERB back/ADV to/ADP starting/NOUN point/NOUN#0.0#0.0

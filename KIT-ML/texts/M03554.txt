@@ -1,0 +1,1 @@
+A person walks around#A/DET person/NOUN walk/VERB around/ADV#0.0#0.0

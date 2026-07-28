@@ -1,0 +1,9 @@
+Someone walks forward.#Someone/PRON walk/VERB forward/ADV#0.0#0.0
+A human walks forwards.#A/DET human/NOUN walk/VERB forwards/ADV#0.0#0.0
+A person walked away.#A/DET person/NOUN walk/VERB away/ADV#0.0#0.0
+Person walking forwards#person/NOUN walk/VERB forwards/ADV#0.0#0.0
+someone walks quickly#someone/PRON walk/VERB quickly/ADV#0.0#0.0
+A person walks approximately 2 meters straight on.#A/DET person/NOUN walk/VERB approximately/ADV meter/NOUN straight/ADV on/ADV#0.0#0.0
+A person starts walking forward for 4 steps before he stands still again.#A/DET person/NOUN start/VERB walk/VERB forward/ADV for/ADP step/NOUN before/ADP he/PRON stand/VERB still/ADV again/ADV#0.0#0.0
+a person walks forwards#a/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0
+human goes forward#human/ADJ go/VERB forward/ADV#0.0#0.0

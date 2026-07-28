@@ -1,0 +1,5 @@
+A standing person gets pushed from the front and recovers by taking a step back.#A/DET stand/VERB person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN and/CCONJ recover/NOUN by/ADP take/VERB a/DET step/NOUN back/ADV#0.0#0.0
+a person gets shoved back#a/DET person/NOUN get/VERB shove/VERB back/ADV#0.0#0.0
+a person stands still but then gets pushed backwards#a/DET person/NOUN stand/VERB still/ADV but/CCONJ then/ADV get/VERB push/VERB backwards/ADV#0.0#0.0
+A person stumbles back.#A/DET person/NOUN stumble/VERB back/ADV#0.0#0.0
+Somebody is pushed back.#Somebody/PRON is/AUX push/VERB back/ADV#0.0#0.0

@@ -1,0 +1,1 @@
+A person sits down on a chair and stands up again multiple times.#A/DET person/NOUN sit/VERB down/ADP on/ADP a/DET chair/NOUN and/CCONJ stand/VERB up/ADP again/ADV multiple/ADJ time/NOUN#0.0#0.0

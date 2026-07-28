@@ -1,0 +1,4 @@
+A person sits down in a kneeing position.#A/DET person/NOUN sit/VERB down/ADP in/ADP a/DET kneeing/ADJ position/NOUN#0.0#0.0
+A human kneels down#A/DET human/ADJ kneels/NOUN down/ADV#0.0#0.0
+a person kneels down#a/DET person/NOUN kneel/VERB down/ADP#0.0#0.0
+A person goes down to his knees and stretches his body#A/DET person/NOUN go/VERB down/ADP to/ADP his/DET knee/NOUN and/CCONJ stretch/VERB his/DET body/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person walks a circle.#A/DET person/NOUN walk/VERB a/DET circle/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A human ducks down and takes her hands over her head.#A/DET human/ADJ duck/NOUN down/ADV and/CCONJ take/VERB her/DET hand/NOUN over/ADP her/DET head/NOUN#0.0#0.0

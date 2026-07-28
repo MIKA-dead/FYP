@@ -1,0 +1,1 @@
+A person exploring its environment with head moves.#A/DET person/NOUN explore/VERB its/DET environment/NOUN with/ADP head/NOUN move/NOUN#0.0#0.0

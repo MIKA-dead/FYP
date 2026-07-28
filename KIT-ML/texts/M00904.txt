@@ -1,0 +1,2 @@
+A human walking forwards#A/DET human/ADJ walking/NOUN forwards/ADV#0.0#0.0
+A person is walking forward.#A/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0

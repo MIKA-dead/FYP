@@ -1,0 +1,1 @@
+a person runs and jumps#a/DET person/NOUN run/VERB and/CCONJ jump/NOUN#0.0#0.0

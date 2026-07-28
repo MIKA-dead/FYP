@@ -1,0 +1,3 @@
+A person runs fast.#A/DET person/NOUN run/VERB fast/ADV#0.0#0.0
+A person is running#A/DET person/NOUN is/AUX run/VERB#0.0#0.0
+a man is running#a/DET man/NOUN is/AUX run/VERB#0.0#0.0

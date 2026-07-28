@@ -1,0 +1,1 @@
+A person shakes the bent arms and the head like an eating chicken.#A/DET person/NOUN shake/VERB the/DET bent/ADJ arm/NOUN and/CCONJ the/DET head/NOUN like/SCONJ an/DET eat/VERB chicken/NOUN#0.0#0.0

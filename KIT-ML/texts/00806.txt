@@ -1,0 +1,2 @@
+A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
+Someone is walking a quarter circle to the right.#Someone/PRON is/AUX walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0

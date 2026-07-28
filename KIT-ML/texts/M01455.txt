@@ -1,0 +1,2 @@
+A person plays the air violin.#A/DET person/NOUN play/VERB the/DET air/NOUN violin/NOUN#0.0#0.0
+a person plays the violin with its left hand#a/DET person/NOUN play/VERB the/DET violin/NOUN with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

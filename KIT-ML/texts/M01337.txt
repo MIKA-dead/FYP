@@ -1,0 +1,5 @@
+Someone jumps to the left.#Someone/PRON jump/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person jumps approximately 30 cm to the left with both feet.#A/DET person/NOUN jump/VERB approximately/ADV cm/NOUN to/ADP the/DET left/NOUN with/ADP both/DET foot/NOUN#0.0#0.0
+Someone is doing a sidejump to the left.#Someone/PRON is/AUX do/VERB a/DET sidejump/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A Person is performing a jump with both feet to the left.#A/DET person/NOUN is/AUX perform/VERB a/DET jump/NOUN with/ADP both/DET foot/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A human performs a jump with both feet to its left.#A/DET human/NOUN perform/VERB a/DET jump/NOUN with/ADP both/DET foot/NOUN to/ADP its/DET left/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A human walks up stairs.#A/DET human/NOUN walk/VERB up/ADP stair/NOUN#0.0#0.0

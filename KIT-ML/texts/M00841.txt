@@ -1,0 +1,5 @@
+A person is strolling along at a leisurely pace taking his time to look around.#A/DET person/NOUN is/AUX stroll/VERB along/ADV at/ADP a/DET leisurely/ADJ pace/NOUN take/VERB his/DET time/NOUN to/PART look/VERB around/ADV#0.0#0.0
+human slowly goes forward#human/PROPN slowly/ADV go/VERB forward/ADV#0.0#0.0
+A person slowly walks four steps forward.#A/DET person/NOUN slowly/ADV walk/VERB four/NUM step/NOUN forward/ADV#0.0#0.0
+The human walks very slowly#The/DET human/NOUN walk/VERB very/ADV slowly/ADV#0.0#0.0
+A person walks forward as if carrying a heavy load.#A/DET person/NOUN walk/VERB forward/ADV as/SCONJ if/SCONJ carry/VERB a/DET heavy/ADJ load/NOUN#0.0#0.0

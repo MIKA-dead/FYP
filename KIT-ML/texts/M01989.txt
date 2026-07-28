@@ -1,0 +1,1 @@
+A person goes one meter forward, turns dynamically and goes back.#A/DET person/NOUN go/VERB one/NUM meter/NOUN forward/ADV turn/VERB dynamically/ADV and/CCONJ go/VERB back/ADV#0.0#0.0

@@ -1,0 +1,4 @@
+A human walks four steps backwards#A/DET human/NOUN walk/VERB four/NUM step/NOUN backwards/ADV#0.0#0.0
+a person taes some steps backwards#a/DET person/NOUN tae/VERB some/DET step/NOUN backwards/ADV#0.0#0.0
+A person walks 5 steps backwards.#A/DET person/NOUN walk/VERB step/NOUN backwards/ADV#0.0#0.0
+a human starts walking backwards#a/DET human/NOUN start/VERB walk/VERB backwards/ADV#0.0#0.0

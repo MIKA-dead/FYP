@@ -1,0 +1,1 @@
+a person dances#a/DET person/NOUN dance/VERB#0.0#0.0

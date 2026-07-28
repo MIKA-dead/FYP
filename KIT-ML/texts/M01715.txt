@@ -1,0 +1,2 @@
+A person is pushed forward from behind.#A/DET person/NOUN is/AUX push/VERB forward/ADV from/ADP behind/ADV#0.0#0.0
+A person getting shoved from the back#A/DET person/NOUN get/VERB shove/VERB from/ADP the/DET back/NOUN#0.0#0.0

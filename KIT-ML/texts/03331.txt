@@ -1,0 +1,1 @@
+A person is turning multiple wheels in multiple directions.#A/DET person/NOUN is/AUX turn/VERB multiple/ADJ wheel/NOUN in/ADP multiple/ADJ direction/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+Someone walks and turns on the spot#Someone/PRON walk/VERB and/CCONJ turn/VERB on/ADP the/DET spot/NOUN#0.0#0.0
+A person walks two steps, then spins around.#A/DET person/NOUN walk/VERB two/NUM step/NOUN then/ADV spin/VERB around/ADV#0.0#0.0

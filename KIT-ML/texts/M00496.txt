@@ -1,0 +1,7 @@
+A person takes 5 steps forwards dwadling as he does so.#A/DET person/NOUN take/VERB step/NOUN forwards/ADV dwadle/VERB as/SCONJ he/PRON does/AUX so/ADV#0.0#0.0
+human slowly walks forward starting with left#human/PROPN slowly/ADV walk/VERB forward/ADV start/VERB with/ADP left/ADJ#0.0#0.0
+a person walks forwards very slow#a/DET person/NOUN walk/VERB forwards/ADV very/ADV slow/ADJ#0.0#0.0
+A human walks very slowly 4 steps forward on one line.#A/DET human/NOUN walk/VERB very/ADV slowly/ADV step/NOUN forward/ADV on/ADP one/NUM line/NOUN#0.0#0.0
+A person takes 5 steps.#A/DET person/NOUN take/VERB step/NOUN#0.0#0.0
+The human perfoms a couple of steps very slowly#The/DET human/ADJ perfom/NOUN a/DET couple/NOUN of/ADP step/NOUN very/ADV slowly/ADV#0.0#0.0
+A person makes slowly four small steps forward.#A/DET person/NOUN make/VERB slowly/ADV four/NUM small/ADJ step/NOUN forward/ADV#0.0#0.0

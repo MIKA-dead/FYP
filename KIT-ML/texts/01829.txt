@@ -1,0 +1,4 @@
+someone is pushed from behind, but then catches himself.#someone/PRON is/AUX push/VERB from/ADP behind/ADV but/CCONJ then/ADV catch/VERB himself/PRON#0.0#0.0
+A human is pushed from behind#A/DET human/NOUN is/AUX push/VERB from/ADP behind/ADV#0.0#0.0
+human is pushed from behind#human/PROPN is/AUX push/VERB from/ADP behind/ADV#0.0#0.0
+A human makes one step forward, as if he was pushed in the back#A/DET human/NOUN make/VERB one/NUM step/VERB forward/ADV as/SCONJ if/SCONJ he/PRON was/AUX push/VERB in/ADP the/DET back/NOUN#0.0#0.0

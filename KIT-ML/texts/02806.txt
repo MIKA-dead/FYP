@@ -1,0 +1,1 @@
+A person sits back in a chair, stands up, sits back again and stands up again.#A/DET person/NOUN sit/VERB back/ADV in/ADP a/DET chair/NOUN stand/VERB up/ADP sit/VERB back/ADV again/ADV and/CCONJ stand/VERB up/ADP again/ADV#0.0#0.0

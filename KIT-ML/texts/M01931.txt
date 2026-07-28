@@ -1,0 +1,4 @@
+Subject walks and then sidesteps right and walks again.#Subject/ADJ walk/VERB and/CCONJ then/ADV sidestep/VERB right/ADV and/CCONJ walk/VERB again/ADV#0.0#0.0
+Someone is probably beeing pushed from the left back side while walking forward.#Someone/PRON is/AUX probably/ADV beee/VERB push/VERB from/ADP the/DET left/ADJ back/ADJ side/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0
+A person walks forward and avoids some obstacles#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ avoid/VERB some/DET obstacle/NOUN#0.0#0.0
+A human is being pushed from the left side while walking forward, doing a sidestep and returning to its  initial path.#A/DET human/NOUN is/AUX being/AUX push/VERB from/ADP the/DET left/ADJ side/NOUN while/SCONJ walk/VERB forward/ADV do/VERB a/DET sidestep/NOUN and/CCONJ return/VERB to/ADP its/DET initial/ADJ path/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+a person walks a quarter leftwards circle#a/DET person/NOUN walk/VERB a/DET quarter/NOUN leftwards/PROPN circle/NOUN#0.0#0.0
+human performs a bending walking motion to the left#human/ADJ perform/VERB a/DET bend/VERB walk/VERB motion/NOUN to/ADP the/DET left/NOUN#0.0#0.0

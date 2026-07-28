@@ -1,0 +1,1 @@
+A person walks to the right.#A/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person performs a golf stroke.#A/DET person/NOUN perform/VERB a/DET golf/NOUN stroke/NOUN#0.0#0.0

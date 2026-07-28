@@ -1,0 +1,2 @@
+Someone walks in a left bend#Someone/PRON walk/VERB in/ADP a/DET left/ADJ bend/NOUN#0.0#0.0
+A human is walking forward five steps, starting with the left foot and performing a left-turn of 90°.#A/DET human/NOUN is/AUX walk/VERB forward/ADV five/NUM step/NOUN start/VERB with/ADP the/DET left/ADJ foot/NOUN and/CCONJ perform/VERB a/DET leftturn/NOUN of/ADP#0.0#0.0

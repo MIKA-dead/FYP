@@ -1,0 +1,2 @@
+a person stands and then walks quickly a few steps forward#a/DET person/NOUN stand/VERB and/CCONJ then/ADV walk/VERB quickly/ADV a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0
+Someone is pushed from the back#Someone/PRON is/AUX push/VERB from/ADP the/DET back/NOUN#0.0#0.0

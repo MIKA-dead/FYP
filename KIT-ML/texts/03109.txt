@@ -1,0 +1,1 @@
+A person performs digging moves like with a shovel.#A/DET person/NOUN perform/VERB dig/VERB move/NOUN like/SCONJ with/ADP a/DET shovel/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person stands around waiting, occasionally glancing at their wrist.#A/DET person/NOUN stand/VERB around/ADP wait/VERB occasionally/ADV glance/VERB at/ADP their/DET wrist/NOUN#0.0#0.0

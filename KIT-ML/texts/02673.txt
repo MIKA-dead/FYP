@@ -1,0 +1,1 @@
+A person is jumping in the air with both feet and also single foot.#A/DET person/NOUN is/AUX jump/VERB in/ADP the/DET air/NOUN with/ADP both/DET foot/NOUN and/CCONJ also/ADV single/ADJ foot/NOUN#0.0#0.0

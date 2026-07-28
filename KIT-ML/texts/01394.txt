@@ -1,0 +1,4 @@
+Person waves his hand.#person/NOUN wave/VERB his/DET hand/NOUN#0.0#0.0
+A person waves with their left hand.#A/DET person/NOUN wave/VERB with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0
+A person waves goodbye with his left hand.#A/DET person/NOUN wave/VERB goodbye/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
+A human is whiping vertically in front of his body#A/DET human/NOUN is/AUX whip/VERB vertically/ADV in/ADP front/NOUN of/ADP his/DET body/NOUN#0.0#0.0

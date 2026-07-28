@@ -1,0 +1,2 @@
+A kneeling person stands up from the floor#A/DET kneel/VERB person/NOUN stand/VERB up/ADP from/ADP the/DET floor/NOUN#0.0#0.0
+A human is getting up from the knees by pushing itself up with the left hand#A/DET human/NOUN is/AUX get/VERB up/ADP from/ADP the/DET knee/NOUN by/ADP push/VERB itself/PRON up/ADP with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0

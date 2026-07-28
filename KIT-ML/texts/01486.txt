@@ -1,0 +1,1 @@
+A person makes a motion like wiping a table with the right hand.#A/DET person/NOUN make/VERB a/DET motion/NOUN like/SCONJ wipe/VERB a/DET table/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A person is sprinting up and down a small hill or obstacle.#A/DET person/NOUN is/AUX sprint/VERB up/ADP and/CCONJ down/ADP a/DET small/ADJ hill/NOUN or/CCONJ obstacle/NOUN#0.0#0.0

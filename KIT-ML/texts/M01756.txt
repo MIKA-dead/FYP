@@ -1,0 +1,5 @@
+the person is first walking forward and then suddenly going backwards and then  again forward#the/DET person/NOUN is/AUX first/ADV walk/VERB forward/ADV and/CCONJ then/ADV suddenly/ADV go/VERB backwards/ADV and/CCONJ then/ADV again/ADV forward/ADV#0.0#0.0
+Someone walks forwards and is pushed from the front#Someone/PRON walk/VERB forwards/ADV and/CCONJ is/AUX push/VERB from/ADP the/DET front/NOUN#0.0#0.0
+A human walks slowly forward on one line, gets puched back and walks again forward still on the same line.#A/DET human/ADJ walk/VERB slowly/ADV forward/ADV on/ADP one/NUM line/NOUN get/VERB puche/VERB back/ADV and/CCONJ walk/VERB again/ADV forward/ADV still/ADV on/ADP the/DET same/ADJ line/NOUN#0.0#0.0
+A person walks forward then stumbles backward#A/DET person/NOUN walk/VERB forward/ADV then/ADV stumble/NOUN backward/ADV#0.0#0.0
+a person walks forwads but gets pushed back#a/DET person/NOUN walk/VERB forwad/NOUN but/CCONJ get/VERB push/VERB back/ADV#0.0#0.0

@@ -1,0 +1,5 @@
+the person is waving the left hand#the/DET person/NOUN is/AUX wave/VERB the/DET left/ADJ hand/NOUN#0.0#0.0
+A standing person waves with his left hand.#A/DET stand/VERB person/NOUN wave/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
+A human is performing a whiping movement in front of its head#A/DET human/NOUN is/AUX perform/VERB a/DET whip/VERB movement/NOUN in/ADP front/NOUN of/ADP its/DET head/NOUN#0.0#0.0
+a person waves with its left hand#a/DET person/NOUN wave/VERB with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
+A person waves with his left hand.#A/DET person/NOUN wave/VERB with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

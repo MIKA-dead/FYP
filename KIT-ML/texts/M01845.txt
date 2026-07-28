@@ -1,0 +1,2 @@
+Someone gets pushed from the front.#Someone/PRON get/VERB push/VERB from/ADP the/DET front/NOUN#0.0#0.0
+a person gets pushed from the front and stumbles back a few steps#a/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN and/CCONJ stumble/VERB back/ADV a/DET few/ADJ step/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A human balances on one foot.#A/DET human/ADJ balance/NOUN on/ADP one/NUM foot/NOUN#0.0#0.0

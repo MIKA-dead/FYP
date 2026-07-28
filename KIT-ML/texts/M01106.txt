@@ -1,0 +1,2 @@
+A person is pushed to the left and makes a few steps to gain balance.#A/DET person/NOUN is/AUX push/VERB to/ADP the/DET left/NOUN and/CCONJ make/VERB a/DET few/ADJ step/NOUN to/PART gain/VERB balance/NOUN#0.0#0.0
+A human steps to the side and walks back to the starting point#A/DET human/ADJ step/NOUN to/ADP the/DET side/NOUN and/CCONJ walk/VERB back/ADV to/ADP the/DET starting/NOUN point/NOUN#0.0#0.0

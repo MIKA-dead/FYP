@@ -1,0 +1,5 @@
+A person walks two times in a tight, clock-wise circle.#A/DET person/NOUN walk/VERB two/NUM time/NOUN in/ADP a/DET tight/ADJ clockwise/NOUN circle/NOUN#0.0#0.0
+Someone walks two small circles to the right.#Someone/PRON walk/VERB two/NUM small/ADJ circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+The human is walking a circle (right turn)#The/DET human/NOUN is/AUX walk/VERB a/DET circle/NOUN right/ADJ turn/NOUN#0.0#0.0
+a person walks in a circle to the right two times#a/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN to/ADP the/DET right/ADJ two/NUM time/NOUN#0.0#0.0
+Somebody walks clockwise in circle.#Somebody/PRON walk/VERB clockwise/NOUN in/ADP circle/NOUN#0.0#0.0

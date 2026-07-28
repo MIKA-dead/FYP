@@ -1,0 +1,3 @@
+a person walks a 90° turn to his right#a/DET person/NOUN walk/VERB a/DET turn/VERB to/ADP his/DET right/NOUN#0.0#0.0
+Subject walks in quarter circle clockwise.#Subject/ADJ walk/VERB in/ADP quarter/NOUN circle/NOUN clockwise/NOUN#0.0#0.0
+A person turns around a right corner#A/DET person/NOUN turn/VERB around/ADP a/DET right/ADJ corner/NOUN#0.0#0.0

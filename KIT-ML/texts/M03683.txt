@@ -1,0 +1,1 @@
+A man is running#A/DET man/NOUN is/AUX run/VERB#0.0#0.0

@@ -1,0 +1,1 @@
+A person turning on the spot and walking in a bend posture.#A/DET person/NOUN turn/VERB on/ADP the/DET spot/NOUN and/CCONJ walk/VERB in/ADP a/DET bend/NOUN posture/NOUN#0.0#0.0

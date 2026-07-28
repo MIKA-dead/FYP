@@ -1,0 +1,4 @@
+A person walks on stepping stones#A/DET person/NOUN walk/VERB on/ADP stepping/ADJ stone/NOUN#0.0#0.0
+Someone walks forward and get over things#Someone/PRON walk/VERB forward/ADV and/CCONJ get/AUX over/ADP thing/NOUN#0.0#0.0
+A person walks over an obstacle.#A/DET person/NOUN walk/VERB over/ADP an/DET obstacle/NOUN#0.0#0.0
+a human is steping on some precise places with his feet#a/DET human/NOUN is/AUX step/VERB on/ADP some/DET precise/ADJ place/NOUN with/ADP his/DET foot/NOUN#0.0#0.0

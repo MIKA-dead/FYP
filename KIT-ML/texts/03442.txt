@@ -1,0 +1,1 @@
+The jump performs a counter-clockwise jump.#The/DET jump/NOUN perform/VERB a/DET counterclockwise/ADJ jump/NOUN#0.0#0.0

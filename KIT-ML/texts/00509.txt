@@ -1,0 +1,2 @@
+A person runs a few steps.#A/DET person/NOUN run/VERB a/DET few/ADJ step/NOUN#0.0#0.0
+A person starts to run fast and then slows down again.#A/DET person/NOUN start/VERB to/PART run/VERB fast/ADV and/CCONJ then/ADV slow/VERB down/ADP again/ADV#0.0#0.0

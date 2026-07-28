@@ -1,0 +1,2 @@
+human dances the basic movement of cha-cha-cha#human/ADJ dance/NOUN the/DET basic/ADJ movement/NOUN of/ADP chachacha/PROPN#0.0#0.0
+A person dances with another person#A/DET person/NOUN dance/VERB with/ADP another/DET person/NOUN#0.0#0.0

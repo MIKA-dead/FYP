@@ -1,0 +1,1 @@
+A human is waling on a line back and forth#A/DET human/NOUN is/AUX wale/VERB on/ADP a/DET line/NOUN back/ADV and/CCONJ forth/ADV#0.0#0.0

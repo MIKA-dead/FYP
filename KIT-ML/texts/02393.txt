@@ -1,0 +1,1 @@
+A person performs some kind of Kata.#A/DET person/NOUN perform/VERB some/DET kind/NOUN of/ADP Kata/PROPN#0.0#0.0

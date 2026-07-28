@@ -1,0 +1,1 @@
+A person sits down and gets up again#A/DET person/NOUN sit/VERB down/ADV and/CCONJ get/VERB up/ADP again/ADV#0.0#0.0

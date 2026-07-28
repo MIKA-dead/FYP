@@ -1,0 +1,1 @@
+A person picks up an object using the left hand, passes it over to the right hand and finally puts it down.#A/DET person/NOUN pick/VERB up/ADP an/DET object/NOUN use/VERB the/DET left/ADJ hand/NOUN pass/VERB it/PRON over/ADP to/ADP the/DET right/ADJ hand/NOUN and/CCONJ finally/ADV put/VERB it/PRON down/ADP#0.0#0.0

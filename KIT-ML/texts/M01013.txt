@@ -1,0 +1,1 @@
+Someone goes two steps forward, turns around and goes two and a half steps back.#Someone/PRON go/VERB two/NUM step/NOUN forward/ADV turn/VERB around/ADV and/CCONJ go/VERB two/NUM and/CCONJ a/DET half/NOUN step/NOUN back/ADV#0.0#0.0

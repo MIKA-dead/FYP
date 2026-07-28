@@ -1,0 +1,1 @@
+A human steps over an obstacle with a large step.#A/DET human/ADJ step/NOUN over/ADP an/DET obstacle/NOUN with/ADP a/DET large/ADJ step/NOUN#0.0#0.0

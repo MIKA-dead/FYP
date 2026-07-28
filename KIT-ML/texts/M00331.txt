@@ -1,0 +1,5 @@
+Person standing and then walking back#person/NOUN stand/VERB and/CCONJ then/ADV walk/VERB back/ADV#0.0#0.0
+A person walks backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
+a person takes some steps backwards#a/DET person/NOUN take/VERB some/DET step/NOUN backwards/ADV#0.0#0.0
+A person walkes backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
+a man walks a few steps backwards#a/DET man/NOUN walk/VERB a/DET few/ADJ step/NOUN backwards/ADV#0.0#0.0

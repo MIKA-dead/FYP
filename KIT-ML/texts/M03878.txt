@@ -1,0 +1,1 @@
+A human jumps, turning 90 degrees to the right.#A/DET human/ADJ jump/NOUN turn/VERB degree/NOUN to/ADP the/DET right/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A sitting person is standing up.#A/DET sit/VERB person/NOUN is/AUX stand/VERB up/ADP#0.0#0.0

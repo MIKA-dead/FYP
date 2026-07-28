@@ -1,0 +1,4 @@
+the person staying on both knees is standing up#the/DET person/NOUN stay/VERB on/ADP both/DET knee/NOUN is/AUX stand/VERB up/ADP#0.0#0.0
+a person stands up from the ground#a/DET person/NOUN stand/VERB up/ADP from/ADP the/DET ground/NOUN#0.0#0.0
+A kneeling person gets up, using its left hand as additional support.#A/DET kneel/VERB person/NOUN get/VERB up/ADV use/VERB its/DET left/ADJ hand/NOUN as/SCONJ additional/ADJ support/NOUN#0.0#0.0
+Somebody raises up.#Somebody/PRON raise/VERB up/ADP#0.0#0.0

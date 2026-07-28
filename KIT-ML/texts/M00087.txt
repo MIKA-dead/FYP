@@ -1,0 +1,3 @@
+A person walks towards the right.#A/DET person/NOUN walk/VERB towards/ADP the/DET right/NOUN#0.0#0.0
+human goes in a quater circle clockwise starting with right#human/PROPN go/VERB in/ADP a/DET quater/NOUN circle/NOUN clockwise/NOUN start/VERB with/ADP right/ADJ#0.0#0.0
+A person walking a right turn#A/DET person/NOUN walk/VERB a/DET right/ADJ turn/NOUN#0.0#0.0

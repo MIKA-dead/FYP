@@ -1,0 +1,1 @@
+A person takes 10 steps forward while bowing their back as if carrying a heavy load.#A/DET person/NOUN take/VERB step/NOUN forward/ADV while/SCONJ bow/VERB their/DET back/NOUN as/SCONJ if/SCONJ carry/VERB a/DET heavy/ADJ load/NOUN#0.0#0.0

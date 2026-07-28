@@ -1,0 +1,1 @@
+the person is pushed to the right while walking forward#the/DET person/NOUN is/AUX push/VERB to/ADP the/DET right/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0

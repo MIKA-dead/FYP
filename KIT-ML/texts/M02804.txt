@@ -1,0 +1,1 @@
+walking throw and obstacle and returning#walk/VERB throw/NOUN and/CCONJ obstacle/NOUN and/CCONJ return/VERB#0.0#0.0

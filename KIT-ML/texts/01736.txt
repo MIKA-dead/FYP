@@ -1,0 +1,2 @@
+A person walks forward like being pushed forward.#A/DET person/NOUN walk/VERB forward/ADV like/SCONJ being/AUX push/VERB forward/ADV#0.0#0.0
+A person gets pushed from behind and stumbles some steps forwards#A/DET person/NOUN get/VERB push/VERB from/ADP behind/ADV and/CCONJ stumble/VERB some/DET step/NOUN forwards/ADV#0.0#0.0

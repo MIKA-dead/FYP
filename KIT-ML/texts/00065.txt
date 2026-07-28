@@ -1,0 +1,1 @@
+Someone walks in a circle to the left.#Someone/PRON walk/VERB in/ADP a/DET circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

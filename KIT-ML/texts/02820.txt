@@ -1,0 +1,1 @@
+A person walks forward approximately 3,5 meters, trurns around and walks back to where he started.#A/DET person/NOUN walk/VERB forward/ADV approximately/ADV meter/NOUN trurn/VERB around/ADV and/CCONJ walk/VERB back/ADV to/ADP where/ADV he/PRON start/VERB#0.0#0.0

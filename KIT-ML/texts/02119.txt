@@ -1,0 +1,7 @@
+A person jumps on the spot, throwing his hands in the air before walking 5 steps forwards.#A/DET person/NOUN jump/VERB on/ADP the/DET spot/NOUN throw/VERB his/DET hand/NOUN in/ADP the/DET air/NOUN before/ADP walk/VERB step/NOUN forwards/ADV#0.0#0.0
+human jumps and goes forward afterwards#human/ADJ jumps/PROPN and/CCONJ go/VERB forward/ADV afterwards/ADV#0.0#0.0
+Someone is jumping and afterwards walking forward 4 steps starting with the right leg.#Someone/PRON is/AUX jump/VERB and/CCONJ afterwards/ADV walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
+a person jumps up about 10cm and then walks forward for a few steps#a/DET person/NOUN jump/VERB up/ADP about/ADV cm/NOUN and/CCONJ then/ADV walk/VERB forward/ADV for/ADP a/DET few/ADJ step/NOUN#0.0#0.0
+A person jumps vertically about 20 cm high, then takes a few forward steps.#A/DET person/NOUN jump/VERB vertically/ADV about/ADV cm/NOUN high/ADJ then/ADV take/VERB a/DET few/ADJ forward/ADJ step/NOUN#0.0#0.0
+A person jumps and walks.#A/DET person/NOUN jump/VERB and/CCONJ walk/VERB#0.0#0.0
+Someone jumps up approcimately 10 centimeters and then walks forwards taking 4 steps.#Someone/PRON jump/VERB up/ADV approcimately/ADV centimeter/NOUN and/CCONJ then/ADV walk/VERB forward/NOUN take/VERB step/NOUN#0.0#0.0

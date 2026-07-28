@@ -1,0 +1,1 @@
+A person with initially bent knees stands up and reaches forward with the left arm.#A/DET person/NOUN with/ADP initially/ADV bent/ADJ knee/NOUN stand/VERB up/ADP and/CCONJ reach/VERB forward/ADV with/ADP the/DET left/ADJ arm/NOUN#0.0#0.0

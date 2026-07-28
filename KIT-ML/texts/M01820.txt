@@ -1,0 +1,2 @@
+A person stumbling backwards#A/DET person/NOUN stumble/VERB backwards/ADV#0.0#0.0
+a person gets pushed backwards#a/DET person/NOUN get/VERB push/VERB backwards/ADV#0.0#0.0

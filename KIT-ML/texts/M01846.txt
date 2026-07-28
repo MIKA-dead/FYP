@@ -1,0 +1,2 @@
+A human being pushed#A/DET human/ADJ being/NOUN push/VERB#0.0#0.0
+A human is performinga sidestep to the back since being pushed from the front#A/DET human/NOUN is/AUX performinga/ADJ sidestep/NOUN to/ADP the/DET back/NOUN since/SCONJ being/AUX push/VERB from/ADP the/DET front/NOUN#0.0#0.0

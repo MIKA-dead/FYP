@@ -1,0 +1,2 @@
+A human walking in a circle counter clockwise#A/DET human/ADJ walking/NOUN in/ADP a/DET circle/NOUN counter/NOUN clockwise/NOUN#0.0#0.0
+A human walks three quarter of a circle to its left.#A/DET human/NOUN walk/VERB three/NUM quarter/NOUN of/ADP a/DET circle/NOUN to/ADP its/DET left/NOUN#0.0#0.0

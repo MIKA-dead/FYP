@@ -1,0 +1,1 @@
+A human walking backwards.#A/DET human/ADJ walking/NOUN backwards/ADV#0.0#0.0

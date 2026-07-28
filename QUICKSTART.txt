@@ -1,0 +1,200 @@
+================================================================================
+        OpenCode Motion Format 评估系统 - 快速配置与运行指南
+================================================================================
+
+本文档适用于需要在本地环境中快速配置并运行 KIT-ML 运动数据评估系统的开发者。
+
+================================================================================
+一、系统要求
+================================================================================
+
+- 操作系统：Windows 10/11（本指南基于 Windows PowerShell）
+- Python 版本：3.9 ~ 3.11
+- 硬盘空间：至少 5GB（用于存放 KIT-ML 数据集）
+- 网络：需要能够访问 GitHub 和 Hugging Face（用于下载依赖模型）
+
+================================================================================
+二、环境配置（5 分钟）
+================================================================================
+
+2.1 克隆或下载项目代码
+------------------------
+# 进入你的工作目录
+cd E:\你的项目路径
+
+# 确保项目包含以下关键目录和文件：
+# - KIT-ML/                （数据集文件夹）
+# - scripts/               （所有脚本）
+#   - evaluator/           （评估脚本）
+#   - analyzers/           （分析脚本）
+# - .agents/skills/        （知识库）
+# - .opencode/agents/      （代理配置）
+
+2.2 创建 Python 虚拟环境（推荐）
+------------------------
+# 创建虚拟环境（使用 venv）
+python -m venv motion_env
+
+# 激活虚拟环境（Windows）
+motion_env\Scripts\activate
+
+# 激活虚拟环境（Mac/Linux）
+source motion_env/bin/activate
+
+2.3 安装依赖包
+------------------------
+pip install numpy scipy pandas matplotlib jupyter
+pip install sentence-transformers torch tqdm
+
+# 如果安装速度慢，可使用清华镜像源：
+pip install numpy scipy pandas matplotlib jupyter -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install sentence-transformers torch tqdm -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+2.4 验证安装
+------------------------
+python -c "import numpy; print('NumPy 版本:', numpy.__version__)"
+python -c "import sentence_transformers; print('Sentence-Transformers 已安装')"
+
+================================================================================
+三、数据准备（10 分钟）
+================================================================================
+
+3.1 确保 KIT-ML 数据集完整
+------------------------
+项目根目录下应有 KIT-ML/ 文件夹，包含：
+KIT-ML/
+├── new_joint_vecs/
+│   ├── 000000.npy
+│   ├── 000001.npy
+│   └── ... (共 7813 个 .npy 文件)
+├── texts/
+│   ├── 000000.txt
+│   └── ... (共 7813 个 .txt 文件)
+├── Mean.npy
+└── Std.npy
+
+3.2 验证数据可读性
+------------------------
+python -c "import numpy as np; motion = np.load('KIT-ML/new_joint_vecs/walking_001.npy'); print('数据形状:', motion.shape)"
+
+如果输出 "(47, 251)"，说明数据加载正常。
+
+================================================================================
+四、运行核心脚本
+================================================================================
+
+4.1 单个样本评估（测试用）
+------------------------
+python scripts/evaluator/evaluate_velocity.py KIT-ML/new_joint_vecs/walking_001.npy
+
+输出示例：
+{
+  "file": "walking_001.npy",
+  "shape": [47, 251],
+  "mean_velocity": 16.234,
+  "std_velocity": 8.456
+}
+
+4.2 批量生成知识库（使用速度特征）
+------------------------
+python scripts/analyzers/generate_velocity_knowledge.py
+
+输出：.agents/skills/motion-patterns/classified_patterns_velocity.md
+包含各动作类型的速度模长基准。
+
+4.3 语义分类（按动作类型分组）
+------------------------
+python scripts/analyzers/classify_by_embedding.py
+
+输出：metrics/action_classification_with_conf.json
+包含每个样本的动作标签和置信度。
+
+================================================================================
+五、目录结构说明
+================================================================================
+
+BUILDANAGENT/
+├── .agents/
+│   └── skills/
+│       └── motion-patterns/
+│           ├── SKILL.md                       # 正式知识库
+│           └── classified_patterns_velocity.md # 速度基准知识库
+├── .opencode/
+│   └── agents/
+│       └── tester.md                          # 评估代理配置
+├── KIT-ML/                                    # 数据集（只读，不要修改）
+│   ├── new_joint_vecs/
+│   ├── texts/
+│   ├── Mean.npy
+│   └── Std.npy
+├── metrics/                                   # 评估结果输出
+├── scripts/
+│   ├── evaluator/
+│   │   ├── evaluate_motion.py                 # 基础评估（位置特征）
+│   │   └── evaluate_velocity.py               # 速度评估（推荐）
+│   └── analyzers/
+│       ├── classify_by_embedding.py           # 语义分类
+│       ├── generate_filtered_knowledge.py     # 阈值筛选知识库
+│       └── generate_velocity_knowledge.py     # 速度特征知识库
+└── QUICKSTART.txt                             # 本文件
+
+================================================================================
+六、常见问题排查
+================================================================================
+
+Q1: ImportError: No module named 'sentence_transformers'
+A1: 运行 pip install sentence-transformers
+
+Q2: FileNotFoundError: KIT-ML/Mean.npy
+A2: 确保 KIT-ML 文件夹在项目根目录，且包含 Mean.npy 和 Std.npy
+
+Q3: 内存不足 (MemoryError)
+A3: 批量处理时减少样本数量，或增加虚拟内存
+
+Q4: 加载模型时下载超时
+A4: 设置环境变量：export HF_ENDPOINT=https://hf-mirror.com （使用镜像站）
+
+Q5: 运行 classify_by_embedding.py 时提示 "os is not defined"
+A5: 在文件开头添加 import os
+
+Q6: 评估结果中速度模长与基准差异大
+A6: 检查你的动作类型是否被正确识别。可以在 tester.md 中调整偏差阈值（默认 1.5×标准差）
+
+================================================================================
+七、常用命令速查
+================================================================================
+
+# 激活虚拟环境
+motion_env\Scripts\activate
+
+# 退出虚拟环境
+deactivate
+
+# 安装新依赖包
+pip install <package-name>
+
+# 运行单个评估
+python scripts/evaluator/evaluate_velocity.py KIT-ML/new_joint_vecs/<文件名>.npy
+
+# 批量生成知识库
+python scripts/analyzers/generate_velocity_knowledge.py
+
+# 查看知识库内容
+cat .agents/skills/motion-patterns/classified_patterns_velocity.md
+
+# 在 Jupyter Notebook 中探索数据
+jupyter notebook
+
+================================================================================
+八、下一步建议
+================================================================================
+
+1. 在 OpenCode 中调用 motion-tester 评估生成的动作文件
+2. 收集成功的生成案例，添加到知识库的 "成功案例" 部分
+3. 根据实际使用反馈，调整 tester.md 中的阈值参数
+4. 如需支持新动作类型，在 classify_by_embedding.py 的 ACTION_LABELS 中添加
+
+================================================================================
+文档版本: 1.0
+最后更新: 2026-07-21
+================================================================================

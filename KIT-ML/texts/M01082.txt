@@ -1,0 +1,1 @@
+A human performs a fast spin after a few steps.#A/DET human/NOUN perform/VERB a/DET fast/ADJ spin/NOUN after/ADP a/DET few/ADJ step/NOUN#0.0#0.0

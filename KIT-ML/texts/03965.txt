@@ -1,0 +1,1 @@
+A person runs forward, briefly touches the ground with both hands and then continues running.#A/DET person/NOUN run/VERB forward/ADV briefly/ADV touch/VERB the/DET ground/NOUN with/ADP both/DET hand/NOUN and/CCONJ then/ADV continue/VERB run/VERB#0.0#0.0

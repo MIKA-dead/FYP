@@ -1,0 +1,3 @@
+A person walks clockwise in a circle with 4 steps.#A/DET person/NOUN walk/VERB clockwise/NOUN in/ADP a/DET circle/NOUN with/ADP step/NOUN#0.0#0.0
+A human performs a tight 90° curve to the right#A/DET human/NOUN perform/VERB a/DET tight/ADJ curve/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+a human sit down#a/DET human/ADJ sit/NOUN down/ADP#0.0#0.0

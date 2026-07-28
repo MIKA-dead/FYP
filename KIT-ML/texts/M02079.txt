@@ -1,0 +1,6 @@
+the person kneeing down#the/DET person/NOUN kneee/VERB down/ADP#0.0#0.0
+Someone is kneeling down and then going down on all fours.#Someone/PRON is/AUX kneel/VERB down/ADP and/CCONJ then/ADV go/VERB down/ADP on/ADP all/DET four/NOUN#0.0#0.0
+a person knees down to the ground#a/DET person/NOUN knee/VERB down/ADP to/ADP the/DET ground/NOUN#0.0#0.0
+A person goes down to his knees.#A/DET person/NOUN go/VERB down/ADP to/ADP his/DET knee/NOUN#0.0#0.0
+A person sinks to his knees, supported on his hands and then assumes an upleft posture.#A/DET person/NOUN sink/VERB to/ADP his/DET knee/NOUN support/VERB on/ADP his/DET hand/NOUN and/CCONJ then/ADV assume/VERB an/DET upleft/ADJ posture/NOUN#0.0#0.0
+The human goes down to the floor having his knees and his hands at the ground#The/DET human/NOUN go/VERB down/ADP to/ADP the/DET floor/NOUN have/VERB his/DET knee/NOUN and/CCONJ his/DET hand/NOUN at/ADP the/DET ground/NOUN#0.0#0.0

@@ -1,0 +1,4 @@
+MOTION: walk
+DURATION: 1.2s
+JOINTS: 15
+DESCRIPTION: 标准行走循环，步幅0.5m

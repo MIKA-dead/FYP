@@ -1,0 +1,1 @@
+A person is jumping sidewards several times to the left and right with the arms stretched out.#A/DET person/NOUN is/AUX jump/VERB sideward/NOUN several/ADJ time/NOUN to/ADP the/DET left/NOUN and/CCONJ right/ADV with/ADP the/DET arm/NOUN stretch/VERB out/ADP#0.0#0.0

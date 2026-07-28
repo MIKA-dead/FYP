@@ -1,0 +1,2 @@
+A person walks in a small circle clockwise.#A/DET person/NOUN walk/VERB in/ADP a/DET small/ADJ circle/NOUN clockwise/NOUN#0.0#0.0
+A human walks in circles clockwise making long steps.#A/DET human/ADJ walk/NOUN in/ADP circle/NOUN clockwise/VERB make/VERB long/ADJ step/NOUN#0.0#0.0

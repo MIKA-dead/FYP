@@ -1,0 +1,2 @@
+Someone jogs a short way.#Someone/PRON jog/VERB a/DET short/ADJ way/NOUN#0.0#0.0
+A person is starting to run and stops.#A/DET person/NOUN is/AUX start/VERB to/PART run/VERB and/CCONJ stop/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A human walks up and down over small platforms.#A/DET human/NOUN walk/VERB up/ADV and/CCONJ down/ADP over/ADP small/ADJ platform/NOUN#0.0#0.0

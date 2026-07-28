@@ -1,0 +1,1 @@
+A human sprints three steps forward#A/DET human/ADJ sprint/NOUN three/NUM step/NOUN forward/ADV#0.0#0.0

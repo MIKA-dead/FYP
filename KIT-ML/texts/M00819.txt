@@ -1,0 +1,3 @@
+A person walks forwards, turns around to the right and then walks forward again.#A/DET person/NOUN walk/VERB forwards/ADV turn/VERB around/ADV to/ADP the/DET right/NOUN and/CCONJ then/ADV walk/VERB forward/ADV again/ADV#0.0#0.0
+A human is performing a tight 180° turn on the right foot#A/DET human/NOUN is/AUX perform/VERB a/DET tight/ADJ turn/VERB on/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
+Somebody rotates half a circle clockwise#Somebody/PRON rotate/VERB half/DET a/DET circle/NOUN clockwise/NOUN#0.0#0.0

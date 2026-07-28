@@ -1,0 +1,3 @@
+A person doing a wiping or stirring movement with the right hand#A/DET person/NOUN do/VERB a/DET wipe/VERB or/CCONJ stirring/ADJ movement/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
+A person wipes a desk with his right hand.#A/DET person/NOUN wipe/VERB a/DET desk/NOUN with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0
+A person stirring with their right arm#A/DET person/NOUN stir/VERB with/ADP their/DET right/ADJ arm/NOUN#0.0#0.0

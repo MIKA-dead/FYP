@@ -1,0 +1,3 @@
+Someone pretends to start running but then walks instead.#Someone/PRON pretend/VERB to/PART start/VERB run/VERB but/CCONJ then/ADV walk/VERB instead/ADV#0.0#0.0
+A person walks straight forward a few meters#A/DET person/NOUN walk/VERB straight/ADV forward/ADV a/DET few/ADJ meter/NOUN#0.0#0.0
+A person takes 5 steps forward.#A/DET person/NOUN take/VERB step/NOUN forward/ADV#0.0#0.0

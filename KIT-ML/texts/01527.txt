@@ -1,0 +1,1 @@
+A person wipes the table with their left hand.#A/DET person/NOUN wipe/VERB the/DET table/NOUN with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0

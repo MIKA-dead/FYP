@@ -1,0 +1,1 @@
+A person performs a diagonal step left front starting with his left leg.#A/DET person/NOUN perform/VERB a/DET diagonal/ADJ step/NOUN left/VERB front/NOUN start/VERB with/ADP his/DET left/ADJ leg/NOUN#0.0#0.0

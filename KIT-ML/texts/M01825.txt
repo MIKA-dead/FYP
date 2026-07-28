@@ -1,0 +1,4 @@
+A person stumbles backwards.#A/DET person/NOUN stumble/VERB backwards/ADV#0.0#0.0
+A human gets buched in the chest and makes one step backwards.#A/DET human/ADJ get/VERB buche/VERB in/ADP the/DET chest/NOUN and/CCONJ make/VERB one/NUM step/NOUN backwards/ADV#0.0#0.0
+a person stands still and gets pushed from the front#a/DET person/NOUN stand/VERB still/ADV and/CCONJ get/VERB push/VERB from/ADP the/DET front/NOUN#0.0#0.0
+human is pushed from front#human/PROPN is/AUX push/VERB from/ADP front/NOUN#0.0#0.0

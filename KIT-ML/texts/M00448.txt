@@ -1,0 +1,5 @@
+A person runs forward and stops.#A/DET person/NOUN run/VERB forward/ADV and/CCONJ stop/NOUN#0.0#0.0
+Someone is trying to run for 4 steps starting with the left leg.#Someone/PRON is/AUX try/VERB to/PART run/VERB for/ADP step/NOUN start/VERB with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0
+A person starts to run forward for about 2 meters and then stops.#A/DET person/NOUN start/VERB to/PART run/VERB forward/ADV for/ADP about/ADV meter/NOUN and/CCONJ then/ADV stop/VERB#0.0#0.0
+A person runs about 3 meters forward.#A/DET person/NOUN run/VERB about/ADP meter/NOUN forward/ADV#0.0#0.0
+a man starts running and stops a few steps later#a/DET man/NOUN start/VERB run/VERB and/CCONJ stop/VERB a/DET few/ADJ step/NOUN later/ADV#0.0#0.0

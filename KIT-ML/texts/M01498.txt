@@ -1,0 +1,2 @@
+Someone moves his hand clockwise in a circle parallel to the floor starting near his torso.#Someone/PRON move/VERB his/DET hand/NOUN clockwise/NOUN in/ADP a/DET circle/NOUN parallel/NOUN to/ADP the/DET floor/NOUN start/VERB near/SCONJ his/DET torso/NOUN#0.0#0.0
+A person wipes with his right hand.#A/DET person/NOUN wipe/VERB with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

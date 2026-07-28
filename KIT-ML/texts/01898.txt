@@ -1,0 +1,2 @@
+A person walks 4 steps forward during that the person is slightly unbalanced.#A/DET person/NOUN walk/VERB step/NOUN forward/ADV during/ADP that/SCONJ the/DET person/NOUN is/AUX slightly/ADV unbalanced/ADJ#0.0#0.0
+a person walks forwards and gets pushed from behind#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ get/VERB push/VERB from/ADP behind/ADV#0.0#0.0

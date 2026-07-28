@@ -1,0 +1,1 @@
+A person performs the basic step of the Cha-Cha-Cha ballroom dance.#A/DET person/NOUN perform/VERB the/DET basic/ADJ step/NOUN of/ADP the/DET ChaChaCha/PROPN ballroom/NOUN dance/NOUN#0.0#0.0

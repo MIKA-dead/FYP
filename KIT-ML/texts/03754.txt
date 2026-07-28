@@ -1,0 +1,1 @@
+A person goes upstairs then goes downstairs.#A/DET person/NOUN go/VERB upstairs/ADV then/ADV go/VERB downstairs/ADV#0.0#0.0

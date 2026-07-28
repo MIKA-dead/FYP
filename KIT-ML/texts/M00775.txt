@@ -1,0 +1,4 @@
+the person is making a short forward walk#the/DET person/NOUN is/AUX make/VERB a/DET short/ADJ forward/ADJ walk/NOUN#0.0#0.0
+A person makes 4 steps forward.#A/DET person/NOUN make/VERB step/NOUN forward/ADV#0.0#0.0
+A human is walking 4 steps forward and is starting with its left foot.#A/DET human/NOUN is/AUX walk/VERB step/NOUN forward/ADV and/CCONJ is/AUX start/VERB with/ADP its/DET left/ADJ foot/NOUN#0.0#0.0
+A person takes five rather quick forward steps.#A/DET person/NOUN take/VERB five/NUM rather/ADV quick/ADJ forward/ADV step/NOUN#0.0#0.0

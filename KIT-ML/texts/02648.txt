@@ -1,0 +1,1 @@
+A person stepping on and over obstacles.#A/DET person/NOUN step/VERB on/ADP and/CCONJ over/ADP obstacle/NOUN#0.0#0.0

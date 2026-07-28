@@ -1,0 +1,1 @@
+A human rests his arms on something in front of him which has the height of his shoulders.#A/DET human/NOUN rest/VERB his/DET arm/NOUN on/ADP something/PRON in/ADP front/NOUN of/ADP him/PRON which/DET has/AUX the/DET height/NOUN of/ADP his/DET shoulder/NOUN#0.0#0.0

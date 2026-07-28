@@ -1,0 +1,4 @@
+Someone does a sprint.#Someone/PRON does/AUX a/DET sprint/NOUN#0.0#0.0
+Someone is trying to run fast for 4 steps starting with the left leg.#Someone/PRON is/AUX try/VERB to/PART run/VERB fast/ADV for/ADP step/NOUN start/VERB with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0
+a person runs forward#a/DET person/NOUN run/VERB forward/ADV#0.0#0.0
+The human is running#The/DET human/NOUN is/AUX run/VERB#0.0#0.0

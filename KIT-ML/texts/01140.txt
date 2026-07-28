@@ -1,0 +1,4 @@
+Person is turning left#person/NOUN is/AUX turn/VERB left/ADV#0.0#0.0
+a person walks to the left performing a 90 degrees turn and walking in a quarter circle#a/DET person/NOUN walk/VERB to/ADP the/DET left/ADJ perform/VERB a/DET degree/NOUN turn/VERB and/CCONJ walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0
+The human perfoms a left turn#The/DET human/ADJ perfom/NOUN a/DET left/ADJ turn/NOUN#0.0#0.0
+a person takes a left turn of 90 degrees#a/DET person/NOUN take/VERB a/DET left/ADJ turn/NOUN of/ADP degree/NOUN#0.0#0.0

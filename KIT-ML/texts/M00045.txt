@@ -1,0 +1,1 @@
+human walks in a quater circle counterclockwise#human/ADJ walk/VERB in/ADP a/DET quater/NOUN circle/NOUN counterclockwise/NOUN#0.0#0.0

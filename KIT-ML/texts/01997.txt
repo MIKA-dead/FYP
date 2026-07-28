@@ -1,0 +1,2 @@
+Subject walks forward with big steps spins around and walks back.#Subject/ADJ walk/VERB forward/ADV with/ADP big/ADJ step/NOUN spin/VERB around/ADV and/CCONJ walk/VERB back/ADV#0.0#0.0
+human performs a turning motion to the left while walking#human/ADJ perform/VERB a/DET turning/NOUN motion/NOUN to/ADP the/DET left/ADJ while/SCONJ walk/VERB#0.0#0.0

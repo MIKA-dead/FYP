@@ -1,0 +1,1 @@
+A person lies on his face and stands up.#A/DET person/NOUN lie/VERB on/ADP his/DET face/NOUN and/CCONJ stand/VERB up/ADP#0.0#0.0

@@ -1,0 +1,1 @@
+A person walks forward, is pushed slightly to the right and continuous walking.#A/DET person/NOUN walk/VERB forward/ADV is/AUX push/VERB slightly/ADV to/ADP the/DET right/ADJ and/CCONJ continuous/ADJ walking/NOUN#0.0#0.0

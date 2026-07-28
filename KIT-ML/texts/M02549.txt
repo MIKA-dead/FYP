@@ -1,0 +1,1 @@
+A person is turning multiple wheels.#A/DET person/NOUN is/AUX turn/VERB multiple/ADJ wheel/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+the person steps to the left#the/DET person/NOUN step/VERB to/ADP the/DET left/NOUN#0.0#0.0
+a human makes a step to the left#a/DET human/NOUN make/VERB a/DET step/NOUN to/ADP the/DET left/NOUN#0.0#0.0

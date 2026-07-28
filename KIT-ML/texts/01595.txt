@@ -1,0 +1,4 @@
+A person walks down a set of stairs#A/DET person/NOUN walk/VERB down/ADP a/DET set/NOUN of/ADP stair/NOUN#0.0#0.0
+A person walks down some stairs.#A/DET person/NOUN walk/VERB down/ADP some/DET stair/NOUN#0.0#0.0
+A person walks forward down a small hill.#A/DET person/NOUN walk/VERB forward/ADV down/ADP a/DET small/ADJ hill/NOUN#0.0#0.0
+a person is going down the stairs#a/DET person/NOUN is/AUX go/VERB down/ADP the/DET stair/NOUN#0.0#0.0

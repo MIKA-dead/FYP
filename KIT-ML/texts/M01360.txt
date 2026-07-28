@@ -1,0 +1,3 @@
+A person performs a punching motion.#A/DET person/NOUN perform/VERB a/DET punching/NOUN motion/NOUN#0.0#0.0
+A person throws an object.#A/DET person/NOUN throw/VERB an/DET object/NOUN#0.0#0.0
+someone smashes something on the floor.#someone/PRON smash/VERB something/PRON on/ADP the/DET floor/NOUN#0.0#0.0

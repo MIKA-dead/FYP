@@ -1,0 +1,6 @@
+A person walks 5 steps forwad from standing position.#A/DET person/NOUN walk/VERB step/NOUN forwad/NOUN from/ADP stand/VERB position/NOUN#0.0#0.0
+Someone is walking fast for 4 steps starting with the right leg.#Someone/PRON is/AUX walk/VERB fast/ADV for/ADP step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
+a person walks forward very quickly#a/DET person/NOUN walk/VERB forward/ADV very/ADV quickly/ADV#0.0#0.0
+A person leans forwards and walks and then stops.#A/DET person/NOUN lean/VERB forwards/ADV and/CCONJ walk/VERB and/CCONJ then/ADV stop/VERB#0.0#0.0
+A person walks forward after he leans in the direction he is facing and stops walking at the end.#A/DET person/NOUN walk/VERB forward/ADV after/ADP he/PRON lean/VERB in/ADP the/DET direction/NOUN he/PRON is/AUX face/VERB and/CCONJ stop/VERB walk/VERB at/ADP the/DET end/NOUN#0.0#0.0
+a person leans forward and then takes to few steps#a/DET person/NOUN lean/VERB forward/ADV and/CCONJ then/ADV take/VERB to/ADP few/ADJ step/NOUN#0.0#0.0

@@ -1,0 +1,3 @@
+A person stretch his body#A/DET person/NOUN stretch/VERB his/DET body/NOUN#0.0#0.0
+A human claps his hands above his head#A/DET human/ADJ clap/NOUN his/DET hand/NOUN above/ADP his/DET head/NOUN#0.0#0.0
+a person waves with his both arms#a/DET person/NOUN wave/VERB with/ADP his/DET both/DET arm/NOUN#0.0#0.0

@@ -1,0 +1,3 @@
+a person walks a quarter circle to his left#a/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP his/DET left/NOUN#0.0#0.0
+A person walks forward in a 90° curve to his left.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET curve/NOUN to/ADP his/DET left/NOUN#0.0#0.0
+A person does a 90° left turn in five steps#A/DET person/NOUN does/AUX a/DET left/ADJ turn/NOUN in/ADP five/NUM step/NOUN#0.0#0.0

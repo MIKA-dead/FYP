@@ -1,0 +1,2 @@
+the person is first showing two hands and then kneeling down with the support of two hands#the/DET person/NOUN is/AUX first/ADV show/VERB two/NUM hand/NOUN and/CCONJ then/ADV kneel/VERB down/ADP with/ADP the/DET support/NOUN of/ADP two/NUM hand/NOUN#0.0#0.0
+Someone is kneeling down.#Someone/PRON is/AUX kneel/VERB down/ADP#0.0#0.0

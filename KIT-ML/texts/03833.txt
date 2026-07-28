@@ -1,0 +1,1 @@
+A person is making one step right foreground.#A/DET person/NOUN is/AUX make/VERB one/NUM step/NOUN right/ADJ foreground/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+A human takes two steps backwards.#A/DET human/NOUN take/VERB two/NUM step/NOUN backwards/ADV#0.0#0.0
+a person gets pushed backwards#a/DET person/NOUN get/VERB push/VERB backwards/ADV#0.0#0.0

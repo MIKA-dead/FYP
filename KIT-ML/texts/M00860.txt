@@ -1,0 +1,1 @@
+Subject walks in a quarter circle clockwise.#Subject/ADJ walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN clockwise/NOUN#0.0#0.0

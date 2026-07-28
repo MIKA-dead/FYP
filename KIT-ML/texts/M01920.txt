@@ -1,0 +1,2 @@
+A person walks forward and is pushed to the left.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person is dodging an obstacle to the left.#A/DET person/NOUN is/AUX dodge/VERB an/DET obstacle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

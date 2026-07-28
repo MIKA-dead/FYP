@@ -1,0 +1,1 @@
+A human moves his left arm.#A/DET human/ADJ move/VERB his/DET left/ADJ arm/NOUN#0.0#0.0

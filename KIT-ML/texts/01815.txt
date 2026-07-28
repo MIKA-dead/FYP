@@ -1,0 +1,1 @@
+human is being pushed from left hand side and tries to balance out the pushing force by stepping laterally#human/PROPN is/AUX being/AUX push/VERB from/ADP left/ADJ hand/NOUN side/NOUN and/CCONJ try/VERB to/PART balance/VERB out/ADP the/DET push/VERB force/NOUN by/ADP step/VERB laterally/ADV#0.0#0.0

@@ -1,0 +1,3 @@
+Someone plays air guitar with the left hand.#Someone/PRON play/VERB air/NOUN guitar/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
+A person plays chords on a guitar.#A/DET person/NOUN play/VERB chord/NOUN on/ADP a/DET guitar/NOUN#0.0#0.0
+A person playing air guitar#A/DET person/NOUN play/VERB air/NOUN guitar/NOUN#0.0#0.0

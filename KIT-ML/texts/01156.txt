@@ -1,0 +1,4 @@
+A person walks two steps, turns around to the left and walks the same distance back.#A/DET person/NOUN walk/VERB two/NUM step/NOUN turn/VERB around/ADP to/ADP the/DET left/NOUN and/CCONJ walk/VERB the/DET same/ADJ distance/NOUN back/ADV#0.0#0.0
+A person walks forward 2 steps, then he turns around 180° and walks another 2 steps forward in the opposite direction.#A/DET person/NOUN walk/VERB forward/ADV step/NOUN then/ADV he/PRON turn/VERB around/ADV and/CCONJ walk/VERB another/DET step/NOUN forward/ADV in/ADP the/DET opposite/ADJ direction/NOUN#0.0#0.0
+A person is turning around while walking.#A/DET person/NOUN is/AUX turn/VERB around/ADV while/SCONJ walk/VERB#0.0#0.0
+human goes forward and turns around partway#human/PROPN go/VERB forward/ADV and/CCONJ turn/VERB around/ADP partway/NOUN#0.0#0.0

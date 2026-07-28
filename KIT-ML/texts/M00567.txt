@@ -1,0 +1,3 @@
+A person walks around a corner to their left.#A/DET person/NOUN walk/VERB around/ADP a/DET corner/NOUN to/ADP their/DET left/NOUN#0.0#0.0
+Someone walks a left turn#Someone/PRON walk/VERB a/DET left/ADJ turn/NOUN#0.0#0.0
+A person walks a 90° curve, its head hanging down#A/DET person/NOUN walk/VERB a/DET curve/NOUN its/DET head/NOUN hang/VERB down/ADP#0.0#0.0

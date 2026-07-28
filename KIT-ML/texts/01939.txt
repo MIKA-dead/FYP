@@ -1,0 +1,2 @@
+A person gets pushed in the back and recovers in one step.#A/DET person/NOUN get/VERB push/VERB in/ADP the/DET back/NOUN and/CCONJ recover/NOUN in/ADP one/NUM step/NOUN#0.0#0.0
+A person performs a single forward step to recover from a push from behind.#A/DET person/NOUN perform/VERB a/DET single/ADJ forward/ADJ step/NOUN to/PART recover/VERB from/ADP a/DET push/NOUN from/ADP behind/ADV#0.0#0.0

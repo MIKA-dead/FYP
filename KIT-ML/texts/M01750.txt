@@ -1,0 +1,3 @@
+A person walks slowly forward and is pushed very slightly to the left.#A/DET person/NOUN walk/VERB slowly/ADV forward/ADV and/CCONJ is/AUX push/VERB very/ADV slightly/ADV to/ADP the/DET left/NOUN#0.0#0.0
+A person walks forward, is pushed from the right, recovers and keeps walking.#A/DET person/NOUN walk/VERB forward/ADV is/AUX push/VERB from/ADP the/DET right/NOUN recover/NOUN and/CCONJ keep/VERB walk/VERB#0.0#0.0
+someone steps suddenly aside to the left when he is walking and then steps forwards right back.#someone/PRON step/VERB suddenly/ADV aside/ADV to/ADP the/DET left/NOUN when/ADV he/PRON is/AUX walk/VERB and/CCONJ then/ADV step/VERB forwards/VERB right/ADV back/ADV#0.0#0.0

@@ -1,0 +1,1 @@
+human goes in a quarter circle counterclockwise starting with left#human/PROPN go/VERB in/ADP a/DET quarter/NOUN circle/NOUN counterclockwise/NOUN start/VERB with/ADP left/ADJ#0.0#0.0

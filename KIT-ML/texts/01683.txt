@@ -1,0 +1,4 @@
+A person walks forwards with moderate velocity.#A/DET person/NOUN walk/VERB forwards/ADJ with/ADP moderate/ADJ velocity/NOUN#0.0#0.0
+A person walks forwards.#A/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0
+Someone is walking forward 4 steps starting with the right leg.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
+a person walks a few steps forwards#a/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN forwards/ADV#0.0#0.0

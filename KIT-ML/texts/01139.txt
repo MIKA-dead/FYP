@@ -1,0 +1,5 @@
+Person walking in a curve to the left#person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+human goes forward in a quater circle conterclockwise starting with left#human/PROPN go/VERB forward/ADV in/ADP a/DET quater/NOUN circle/NOUN conterclockwise/NOUN start/VERB with/ADP left/ADJ#0.0#0.0
+A human performs a tight 90° left curve#A/DET human/NOUN perform/VERB a/DET tight/ADJ left/VERB curve/NOUN#0.0#0.0
+a person walks a quater circle to the left#a/DET person/NOUN walk/VERB a/DET quater/NOUN circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person taking a 90 degree left turn#A/DET person/NOUN take/VERB a/DET degree/NOUN left/VERB turn/NOUN#0.0#0.0

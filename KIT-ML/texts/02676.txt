@@ -1,0 +1,1 @@
+A person is jumping while running forward.#A/DET person/NOUN is/AUX jump/VERB while/SCONJ run/VERB forward/ADV#0.0#0.0

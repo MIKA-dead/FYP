@@ -1,0 +1,2 @@
+A person walks forward and is pushed gently to the left#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB gently/ADV to/ADP the/DET left/NOUN#0.0#0.0
+A person walks forward avoiding an obstacle on the floor by stepping around it.#A/DET person/NOUN walk/VERB forward/ADV avoid/VERB an/DET obstacle/NOUN on/ADP the/DET floor/NOUN by/ADP step/VERB around/ADP it/PRON#0.0#0.0

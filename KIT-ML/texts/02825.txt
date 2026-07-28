@@ -1,0 +1,1 @@
+A human climbs up and down a ladder.#A/DET human/ADJ climb/NOUN up/ADP and/CCONJ down/ADP a/DET ladder/NOUN#0.0#0.0

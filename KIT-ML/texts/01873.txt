@@ -1,0 +1,4 @@
+Subject walks forward and then is pushed backwards.#Subject/ADJ walk/VERB forward/ADV and/CCONJ then/ADV is/AUX push/VERB backwards/ADV#0.0#0.0
+walking forward and recovering from external force before continuing walking forward.#walk/VERB forward/ADV and/CCONJ recover/VERB from/ADP external/ADJ force/NOUN before/ADP continue/VERB walk/VERB forward/ADV#0.0#0.0
+a person walks forwards and suddenly gets pushed from the front#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ suddenly/ADV get/VERB push/VERB from/ADP the/DET front/NOUN#0.0#0.0
+a human bumps into something while walking#a/DET human/ADJ bump/NOUN into/ADP something/PRON while/SCONJ walk/VERB#0.0#0.0

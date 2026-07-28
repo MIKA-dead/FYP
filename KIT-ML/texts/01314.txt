@@ -1,0 +1,1 @@
+A human is lifting his left leg.#A/DET human/NOUN is/AUX lift/VERB his/DET left/ADJ leg/NOUN#0.0#0.0

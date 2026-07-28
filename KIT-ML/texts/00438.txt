@@ -1,0 +1,2 @@
+A person walks forwards.#A/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0
+A person walking forward at a casual pace#A/DET person/NOUN walk/VERB forward/ADV at/ADP a/DET casual/ADJ pace/NOUN#0.0#0.0

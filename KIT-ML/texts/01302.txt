@@ -1,0 +1,4 @@
+Person boxing with the left hand#person/NOUN box/VERB with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
+A person performs a punch with their left hand#A/DET person/NOUN perform/VERB a/DET punch/NOUN with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0
+A person is boxing with his left hand.#A/DET person/NOUN is/AUX box/VERB with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
+A person punches forward with his left hand.#A/DET person/NOUN punch/VERB forward/ADV with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

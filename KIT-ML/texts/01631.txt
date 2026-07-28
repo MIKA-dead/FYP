@@ -1,0 +1,1 @@
+A human is evading an obstacle.#A/DET human/NOUN is/AUX evade/VERB an/DET obstacle/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A human marches forward from one point to another turns around an moves back to starting point#A/DET human/ADJ marche/NOUN forward/ADV from/ADP one/NUM point/NOUN to/ADP another/DET turn/NOUN around/ADP an/DET move/NOUN back/ADV to/ADP starting/NOUN point/NOUN#0.0#0.0

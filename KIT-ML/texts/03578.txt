@@ -1,0 +1,1 @@
+A person is moving disoriented through the area in all directions.#A/DET person/NOUN is/AUX move/VERB disorient/VERB through/ADP the/DET area/NOUN in/ADP all/DET direction/NOUN#0.0#0.0

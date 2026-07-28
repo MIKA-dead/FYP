@@ -1,0 +1,2 @@
+A person goes to the right slowly.#A/DET person/NOUN go/VERB to/ADP the/DET right/NOUN slowly/ADV#0.0#0.0
+A person walks a right curve#A/DET person/NOUN walk/VERB a/DET right/ADJ curve/NOUN#0.0#0.0

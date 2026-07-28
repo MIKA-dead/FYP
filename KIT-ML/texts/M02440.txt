@@ -1,0 +1,1 @@
+A person walks while being bent over and eventually picks something up from the floor.#A/DET person/NOUN walk/VERB while/SCONJ being/AUX bent/ADJ over/ADP and/CCONJ eventually/ADV pick/VERB something/PRON up/ADP from/ADP the/DET floor/NOUN#0.0#0.0

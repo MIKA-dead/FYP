@@ -1,0 +1,4 @@
+A person stands and begins walking slowly forward to stop again after a few steps.#A/DET person/NOUN stand/VERB and/CCONJ begin/VERB walk/VERB slowly/ADV forward/ADV to/PART stop/VERB again/ADV after/ADP a/DET few/ADJ step/NOUN#0.0#0.0
+human slowly goes forward starting with right#human/PROPN slowly/ADV go/VERB forward/ADV start/VERB with/ADP right/ADJ#0.0#0.0
+A human walks slowly 4 steps forward.#A/DET human/ADJ walk/VERB slowly/ADV step/NOUN forward/ADV#0.0#0.0
+A person is walking.#A/DET person/NOUN is/AUX walk/VERB#0.0#0.0

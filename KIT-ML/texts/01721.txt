@@ -1,0 +1,1 @@
+a person walks three steps backwards#a/DET person/NOUN walk/VERB three/NUM step/NOUN backwards/ADV#0.0#0.0

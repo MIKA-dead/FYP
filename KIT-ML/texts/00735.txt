@@ -1,0 +1,3 @@
+Person walking to the left#person/NOUN walk/VERB to/ADP the/DET left/NOUN#0.0#0.0
+human goes forward in a quater circle counterclockwise starting with left#human/PROPN go/VERB forward/ADV in/ADP a/DET quater/NOUN circle/NOUN counterclockwise/NOUN start/VERB with/ADP left/ADJ#0.0#0.0
+A person is turning 90 degrees to the left while walking forward.#A/DET person/NOUN is/AUX turn/VERB degree/NOUN to/ADP the/DET left/ADJ while/SCONJ walk/VERB forward/ADV#0.0#0.0

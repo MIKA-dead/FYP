@@ -1,0 +1,1 @@
+A person goes two steps forward, turns around and goes back.#A/DET person/NOUN go/VERB two/NUM step/NOUN forward/ADV turn/VERB around/ADV and/CCONJ go/VERB back/ADV#0.0#0.0

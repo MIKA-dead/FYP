@@ -1,0 +1,4 @@
+A person is stretching his arms, taking them down, walking forwards and raising them again.#A/DET person/NOUN is/AUX stretch/VERB his/DET arm/NOUN take/VERB them/PRON down/ADP walk/VERB forwards/ADV and/CCONJ raise/VERB them/PRON again/ADV#0.0#0.0
+a person has its arms spread like wings takes them down and walks#a/DET person/NOUN has/AUX its/DET arm/NOUN spread/VERB like/SCONJ wing/NOUN take/VERB them/PRON down/ADP and/CCONJ walk/VERB#0.0#0.0
+A human stands while lifting its arms in a T-shape, it lowers the arms, walks 3 steps and lifts them up again.#A/DET human/NOUN stand/NOUN while/SCONJ lift/VERB its/DET arm/NOUN in/ADP a/DET tshape/NOUN it/PRON lower/VERB the/DET arm/NOUN walk/VERB step/NOUN and/CCONJ lift/VERB them/PRON up/ADP again/ADV#0.0#0.0
+A person stretches his arms then walks 3 steps.#A/DET person/NOUN stretch/VERB his/DET arm/NOUN then/ADV walk/VERB step/NOUN#0.0#0.0

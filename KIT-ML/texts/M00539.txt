@@ -1,0 +1,4 @@
+A person walks forward very slowly#A/DET person/NOUN walk/VERB forward/ADV very/ADV slowly/ADV#0.0#0.0
+Someone walks forward#Someone/PRON walk/VERB forward/ADV#0.0#0.0
+A person is slowly walking forward.#A/DET person/NOUN is/AUX slowly/ADV walk/VERB forward/ADV#0.0#0.0
+A persons takes five very slow steps#A/DET person/NOUN take/VERB five/NUM very/ADV slow/ADJ step/NOUN#0.0#0.0

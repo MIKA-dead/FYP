@@ -1,0 +1,1 @@
+A person walks forward, gets pushed from the left and performs a sidestep.#A/DET person/NOUN walk/VERB forward/ADV get/VERB push/VERB from/ADP the/DET left/NOUN and/CCONJ perform/VERB a/DET sidestep/NOUN#0.0#0.0

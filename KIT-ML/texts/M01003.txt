@@ -1,0 +1,2 @@
+A person turns 180° to the left.#A/DET person/NOUN turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A person does slowly takes to big steps forwards, swings around 180° on one foot and takes to big steps back to the starting point#A/DET person/NOUN does/AUX slowly/ADV take/VERB to/ADP big/ADJ step/NOUN forwards/ADV swing/VERB around/ADP on/ADP one/NUM foot/NOUN and/CCONJ take/VERB to/ADP big/ADJ step/NOUN back/ADV to/ADP the/DET starting/NOUN point/NOUN#0.0#0.0

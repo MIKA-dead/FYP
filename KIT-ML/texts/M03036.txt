@@ -1,0 +1,1 @@
+A man is wearing a hat#A/DET man/NOUN is/AUX wear/VERB a/DET hat/NOUN#0.0#0.0

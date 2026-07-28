@@ -1,0 +1,1 @@
+A person walks with an injured leg.#A/DET person/NOUN walk/VERB with/ADP an/DET injured/ADJ leg/NOUN#0.0#0.0

@@ -1,0 +1,9 @@
+A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
+Person walking forwards#person/NOUN walk/VERB forwards/ADV#0.0#0.0
+Someone goes away.#Someone/PRON go/VERB away/ADV#0.0#0.0
+walking five steps in a straight line#walk/VERB five/NUM step/NOUN in/ADP a/DET straight/ADJ line/NOUN#0.0#0.0
+A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
+A person walks straight forward a few meters#A/DET person/NOUN walk/VERB straight/ADV forward/ADV a/DET few/ADJ meter/NOUN#0.0#0.0
+A person is walking forward.#A/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0
+A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
+A person walks five steps#A/DET person/NOUN walk/VERB five/NUM step/NOUN#0.0#0.0

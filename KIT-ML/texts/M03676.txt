@@ -1,0 +1,1 @@
+A human is walking straight#A/DET human/NOUN is/AUX walk/VERB straight/ADV#0.0#0.0

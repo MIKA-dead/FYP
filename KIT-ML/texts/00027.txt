@@ -1,0 +1,2 @@
+the person is walking through a  circular path#the/DET person/NOUN is/AUX walk/VERB through/ADP a/DET circular/ADJ path/NOUN#0.0#0.0
+A human is walking in circle.#A/DET human/NOUN is/AUX walk/VERB in/ADP circle/NOUN#0.0#0.0

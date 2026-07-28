@@ -1,0 +1,1 @@
+A person lifts something up using two hands but without bending their knees.#A/DET person/NOUN lift/VERB something/PRON up/ADP use/VERB two/NUM hand/NOUN but/CCONJ without/ADP bend/VERB their/DET knee/NOUN#0.0#0.0

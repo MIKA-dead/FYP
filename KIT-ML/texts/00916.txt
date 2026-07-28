@@ -1,0 +1,5 @@
+A person walks while accelerating at first and slows down again after a couple of steps#A/DET person/NOUN walk/VERB while/SCONJ accelerate/VERB at/ADP first/ADV and/CCONJ slow/VERB down/ADV again/ADV after/ADP a/DET couple/NOUN of/ADP step/NOUN#0.0#0.0
+Subject walks forward with fast steps.#Subject/ADJ walk/VERB forward/ADV with/ADP fast/ADJ step/NOUN#0.0#0.0
+A human walks forward a few steps in a fast pace#A/DET human/NOUN walk/VERB forward/ADV a/DET few/ADJ step/NOUN in/ADP a/DET fast/ADJ pace/NOUN#0.0#0.0
+A person walks straight forward quite fast#A/DET person/NOUN walk/VERB straight/ADV forward/ADV quite/ADV fast/ADV#0.0#0.0
+a person takes a few fast steps forward#a/DET person/NOUN take/VERB a/DET few/ADJ fast/ADJ step/NOUN forward/ADV#0.0#0.0

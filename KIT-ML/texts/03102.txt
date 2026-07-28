@@ -1,0 +1,1 @@
+A person is doing fitness exercises with both arms.#A/DET person/NOUN is/AUX do/VERB fitness/NOUN exercise/NOUN with/ADP both/DET arm/NOUN#0.0#0.0

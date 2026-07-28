@@ -1,0 +1,1 @@
+A human walks a quarter of a circle to the left.#A/DET human/NOUN walk/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

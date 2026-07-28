@@ -1,0 +1,2 @@
+Person walking for a few steps#person/NOUN walk/VERB for/ADP a/DET few/ADJ step/NOUN#0.0#0.0
+human goes forward slowly starting with right#human/PROPN go/VERB forward/ADV slowly/ADV start/VERB with/ADP right/ADJ#0.0#0.0

@@ -1,0 +1,4 @@
+Someone shakes hands.#Someone/PRON shake/VERB hand/NOUN#0.0#0.0
+Someone is shaking hands using his left hand.#Someone/PRON is/AUX shake/VERB hand/NOUN use/VERB his/DET left/ADJ hand/NOUN#0.0#0.0
+The human lifts his left arm#The/DET human/NOUN lift/VERB his/DET left/ADJ arm/NOUN#0.0#0.0
+someone try to weigh something.#someone/PRON try/VERB to/PART weigh/VERB something/PRON#0.0#0.0

@@ -1,0 +1,3 @@
+A human is forcibly pushed from the front while walking.#A/DET human/NOUN is/AUX forcibly/ADV push/VERB from/ADP the/DET front/NOUN while/SCONJ walk/VERB#0.0#0.0
+A person gets shoved while walking forward#A/DET person/NOUN get/VERB shove/VERB while/SCONJ walk/VERB forward/ADV#0.0#0.0
+a person walks forwards but then gets pushed from the front and stumbles backwards#a/DET person/NOUN walk/VERB forwards/ADV but/CCONJ then/ADV get/VERB push/VERB from/ADP the/DET front/NOUN and/CCONJ stumble/NOUN backwards/ADV#0.0#0.0

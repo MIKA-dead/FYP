@@ -1,0 +1,1 @@
+A person makes a sharp turn.#A/DET person/NOUN make/VERB a/DET sharp/ADJ turn/NOUN#0.0#0.0

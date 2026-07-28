@@ -1,0 +1,5 @@
+A person walks in two counter-clockwise circles#A/DET person/NOUN walk/VERB in/ADP two/NUM counterclockwise/ADJ circle/NOUN#0.0#0.0
+Subject walks in circle counterclockwise twice.#Subject/ADJ walk/VERB in/ADP circle/NOUN counterclockwise/NOUN twice/ADV#0.0#0.0
+A human walks in a circle twice#A/DET human/ADJ walk/VERB in/ADP a/DET circle/NOUN twice/ADV#0.0#0.0
+A person is walking two counter-clockwise circles#A/DET person/NOUN is/AUX walk/VERB two/NUM counterclockwise/NOUN circle/NOUN#0.0#0.0
+a person walks in a circle to the left for two times#a/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN to/ADP the/DET left/NOUN for/ADP two/NUM time/NOUN#0.0#0.0

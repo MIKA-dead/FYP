@@ -1,0 +1,2 @@
+A person walking briskly for a few steps forward#A/DET person/NOUN walk/VERB briskly/ADV for/ADP a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0
+A human slowly walks five steps forward#A/DET human/NOUN slowly/ADV walk/VERB five/NUM step/NOUN forward/ADV#0.0#0.0

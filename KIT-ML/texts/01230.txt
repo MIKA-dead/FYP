@@ -1,0 +1,2 @@
+A person is dancing with a partner.#A/DET person/NOUN is/AUX dance/VERB with/ADP a/DET partner/NOUN#0.0#0.0
+A person dances.#A/DET person/NOUN dance/VERB#0.0#0.0

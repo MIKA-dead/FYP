@@ -1,0 +1,1 @@
+a human walks slowly while bonding forward#a/DET human/ADJ walk/VERB slowly/ADV while/SCONJ bond/VERB forward/ADV#0.0#0.0

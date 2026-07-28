@@ -1,0 +1,2 @@
+A person performs a jump to the left.#A/DET person/NOUN perform/VERB a/DET jump/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+a person walks forwards and then gets pushed to the left#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ then/ADV get/VERB push/VERB to/ADP the/DET left/NOUN#0.0#0.0

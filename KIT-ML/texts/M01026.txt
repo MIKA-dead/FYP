@@ -1,0 +1,2 @@
+A person walks four straight steps forward.#A/DET person/NOUN walk/VERB four/NUM straight/ADJ step/NOUN forward/ADV#0.0#0.0
+Somebody walks slowly straight on.#Somebody/PRON walk/VERB slowly/ADV straight/ADV on/ADV#0.0#0.0

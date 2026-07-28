@@ -1,0 +1,1 @@
+A human performs a 270° counter clockwise jump.#A/DET human/ADJ perform/VERB a/DET counter/NOUN clockwise/NOUN jump/NOUN#0.0#0.0

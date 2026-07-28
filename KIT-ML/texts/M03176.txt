@@ -1,0 +1,1 @@
+A human performs different swimming styles with her upper body while standing.#A/DET human/ADJ perform/VERB different/ADJ swimming/NOUN style/NOUN with/ADP her/DET upper/ADJ body/NOUN while/SCONJ stand/VERB#0.0#0.0

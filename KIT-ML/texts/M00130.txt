@@ -1,0 +1,4 @@
+A person walks in a small circle, to the left.#A/DET person/NOUN walk/VERB in/ADP a/DET small/ADJ circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+human goes in a circle counterclockwise starting with left#human/PROPN go/VERB in/ADP a/DET circle/NOUN counterclockwise/NOUN start/VERB with/ADP left/ADJ#0.0#0.0
+a person walks in a circle to the left#a/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+Person walking in a circle.#person/NOUN walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0

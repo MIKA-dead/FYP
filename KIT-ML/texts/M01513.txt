@@ -1,0 +1,3 @@
+Person wishing something with the left hand#person/NOUN wish/VERB something/PRON with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
+Someone moves the left hand in a circular path#Someone/PRON move/VERB the/DET left/ADJ hand/NOUN in/ADP a/DET circular/ADJ path/NOUN#0.0#0.0
+A human wipes a table with his left hand#A/DET human/ADJ wipe/NOUN a/DET table/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

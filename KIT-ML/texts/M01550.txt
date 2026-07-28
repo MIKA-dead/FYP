@@ -1,0 +1,2 @@
+A person climbs stairs.#A/DET person/NOUN climb/VERB stair/NOUN#0.0#0.0
+a human is climbing some stairs.#a/DET human/NOUN is/AUX climb/VERB some/DET stair/NOUN#0.0#0.0

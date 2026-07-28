@@ -1,0 +1,1 @@
+A person stretches their arms, does a pushup and repeats the process.#A/DET person/NOUN stretch/VERB their/DET arm/NOUN does/AUX a/DET pushup/NOUN and/CCONJ repeat/VERB the/DET process/NOUN#0.0#0.0

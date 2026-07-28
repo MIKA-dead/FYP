@@ -1,0 +1,1 @@
+A person do a fast change in walking direction.#A/DET person/NOUN do/AUX a/DET fast/ADJ change/NOUN in/ADP walk/VERB direction/NOUN#0.0#0.0

@@ -1,0 +1,2 @@
+During walking, a human is pushed to the left.#During/ADP walking/NOUN a/DET human/NOUN is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0
+A human walks a few steps before being shoved to the left#A/DET human/NOUN walk/VERB a/DET few/ADJ step/NOUN before/ADP being/AUX shove/VERB to/ADP the/DET left/NOUN#0.0#0.0

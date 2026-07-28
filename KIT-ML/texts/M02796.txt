@@ -1,0 +1,1 @@
+A human makes a pirouette while jumping.#A/DET human/NOUN make/VERB a/DET pirouette/NOUN while/SCONJ jump/VERB#0.0#0.0

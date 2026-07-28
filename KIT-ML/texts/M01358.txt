@@ -1,0 +1,3 @@
+A human winds up with their right hand and throws something on the ground about 3 meters in front of them.#A/DET human/ADJ wind/NOUN up/ADP with/ADP their/DET right/ADJ hand/NOUN and/CCONJ throw/VERB something/PRON on/ADP the/DET ground/NOUN about/ADV meter/NOUN in/ADP front/NOUN of/ADP them/PRON#0.0#0.0
+A person throws with their right hand.#A/DET person/NOUN throw/VERB with/ADP their/DET right/ADJ hand/NOUN#0.0#0.0
+a person throws something to the ground with its right hand#a/DET person/NOUN throw/VERB something/PRON to/ADP the/DET ground/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

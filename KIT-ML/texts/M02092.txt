@@ -1,0 +1,4 @@
+A person is on all fours and stands up#A/DET person/NOUN is/AUX on/ADP all/DET four/NOUN and/CCONJ stand/VERB up/ADP#0.0#0.0
+Someone stands up#Someone/PRON stand/VERB up/ADP#0.0#0.0
+a person stands up from the ground#a/DET person/NOUN stand/VERB up/ADP from/ADP the/DET ground/NOUN#0.0#0.0
+Someone gets up from being on all fours.#Someone/PRON get/VERB up/ADV from/ADP being/AUX on/ADP all/DET four/NOUN#0.0#0.0

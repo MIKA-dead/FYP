@@ -1,0 +1,2 @@
+A person stumbles backwards.#A/DET person/NOUN stumble/VERB backwards/ADV#0.0#0.0
+A person stumbles one meter backwards.#A/DET person/NOUN stumble/VERB one/NUM meter/NOUN backwards/ADV#0.0#0.0

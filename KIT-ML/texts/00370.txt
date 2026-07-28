@@ -1,0 +1,2 @@
+A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
+A person walks 90degrees to the right#A/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN#0.0#0.0

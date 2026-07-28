@@ -1,0 +1,1 @@
+A person doing exercise, mainly rotating arms and legs.#A/DET person/NOUN do/VERB exercise/NOUN mainly/ADV rotate/VERB arm/NOUN and/CCONJ leg/NOUN#0.0#0.0

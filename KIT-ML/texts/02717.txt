@@ -1,0 +1,1 @@
+person walking to the front#person/NOUN walk/VERB to/ADP the/DET front/NOUN#0.0#0.0

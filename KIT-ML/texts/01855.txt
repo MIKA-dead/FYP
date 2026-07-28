@@ -1,0 +1,5 @@
+A person gets pushed from left to right.#A/DET person/NOUN get/VERB push/VERB from/ADP left/VERB to/ADP right/NOUN#0.0#0.0
+A person receives a strong push from the left side and tumbles to the left.#A/DET person/NOUN receive/VERB a/DET strong/ADJ push/NOUN from/ADP the/DET left/ADJ side/NOUN and/CCONJ tumble/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+A person takes a few sidewared steps to the right to recover from a push.#A/DET person/NOUN take/VERB a/DET few/ADJ sideware/VERB step/NOUN to/ADP the/DET right/NOUN to/PART recover/VERB from/ADP a/DET push/NOUN#0.0#0.0
+a person stands still and gets pushed to the right#a/DET person/NOUN stand/VERB still/ADV and/CCONJ get/VERB push/VERB to/ADP the/DET right/NOUN#0.0#0.0
+A person gets shoved from his left, he stumbles to his right before standing still again.#A/DET person/NOUN get/VERB shove/VERB from/ADP his/DET left/NOUN he/PRON stumble/VERB to/ADP his/DET right/NOUN before/ADP stand/VERB still/ADV again/ADV#0.0#0.0

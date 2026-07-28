@@ -1,0 +1,1 @@
+A person is skateboarding by using his left foot to speed up.#A/DET person/NOUN is/AUX skateboard/VERB by/ADP use/VERB his/DET left/ADJ foot/NOUN to/PART speed/VERB up/ADP#0.0#0.0

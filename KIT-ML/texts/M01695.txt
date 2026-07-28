@@ -1,0 +1,2 @@
+Someone moves forward a brief distance in a fast walk and stops#Someone/PRON move/VERB forward/ADV a/DET brief/ADJ distance/NOUN in/ADP a/DET fast/ADJ walk/NOUN and/CCONJ stop/NOUN#0.0#0.0
+The human perfoms a couple of steps straight forward#The/DET human/ADJ perfom/NOUN a/DET couple/NOUN of/ADP step/NOUN straight/ADV forward/ADV#0.0#0.0

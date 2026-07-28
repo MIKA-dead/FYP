@@ -1,0 +1,15 @@
+请执行动画生成测试任务 T001。
+
+任务描述：一个角色向前跳跃，同时双手向上伸展。
+
+执行要求：
+1. motion-planner 代理拆分子任务
+2. motion-coder 代理生成运动
+3. motion-tester 代理验证质量
+4. motion-documenter 代理生成报告
+
+记录所有评估指标，保存到 metrics/baseline-T001.json。
+
+请再次执行任务 T001（跳跃生成），启用所有优化策略。
+
+记录指标，保存到 metrics/optimized-T001.json。

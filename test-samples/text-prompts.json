@@ -1,0 +1,22 @@
+{
+  "test_cases": [
+    {
+      "id": "T001",
+      "prompt": "一个角色向前跳跃，同时双手向上伸展",
+      "difficulty": "basic",
+      "expected_subtasks": ["motion-coder", "motion-tester"]
+    },
+    {
+      "id": "T002",
+      "prompt": "一个战士挥剑，先向右砍，再向左砍，最后向前突刺",
+      "difficulty": "medium",
+      "expected_subtasks": ["motion-coder", "motion-tester", "motion-documenter"]
+    },
+    {
+      "id": "T003",
+      "prompt": "一个角色从站立开始，蹲下，然后跳起并旋转360度，最后落地",
+      "difficulty": "complex",
+      "expected_subtasks": ["motion-coder", "motion-tester", "motion-documenter", "motion-planner"]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+A human walking#A/DET human/ADJ walking/NOUN#0.0#0.0

@@ -1,0 +1,1 @@
+A human stands up from laying flat on the ground face down.#A/DET human/NOUN stand/VERB up/ADP from/ADP lay/VERB flat/ADV on/ADP the/DET ground/NOUN face/NOUN down/ADP#0.0#0.0

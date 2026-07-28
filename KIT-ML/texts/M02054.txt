@@ -1,0 +1,4 @@
+A human shows a T-pose and then kneels down.#A/DET human/NOUN show/VERB a/DET Tpose/PROPN and/CCONJ then/ADV kneel/VERB down/ADP#0.0#0.0
+the person is first rising to hands up and then kneeling down#the/DET person/NOUN is/AUX first/ADV rise/VERB to/ADP hand/NOUN up/ADV and/CCONJ then/ADV kneel/VERB down/ADP#0.0#0.0
+A person moves the arms up and down and goes to the knees.#A/DET person/NOUN move/VERB the/DET arm/NOUN up/ADP and/CCONJ down/ADV and/CCONJ go/VERB to/ADP the/DET knee/NOUN#0.0#0.0
+a person spreads his arms like a bird and then goes down to its knees#a/DET person/NOUN spread/VERB his/DET arm/NOUN like/SCONJ a/DET bird/NOUN and/CCONJ then/ADV go/VERB down/ADP to/ADP its/DET knee/NOUN#0.0#0.0

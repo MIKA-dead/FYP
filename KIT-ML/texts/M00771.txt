@@ -1,0 +1,2 @@
+A human moves two meters forward.#A/DET human/ADJ move/NOUN two/NUM meter/NOUN forward/ADV#0.0#0.0
+a person walks forwards#a/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0

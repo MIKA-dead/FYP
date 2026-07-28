@@ -1,0 +1,1 @@
+Person cautiously walking through uneven, wiggly terrain, possibly stones under water#person/NOUN cautiously/ADV walk/VERB through/ADP uneven/ADJ wiggly/ADJ terrain/NOUN possibly/ADV stone/VERB under/ADP water/NOUN#0.0#0.0

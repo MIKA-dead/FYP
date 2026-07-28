@@ -1,0 +1,2 @@
+A person walks in an quarter circle.#A/DET person/NOUN walk/VERB in/ADP an/DET quarter/NOUN circle/NOUN#0.0#0.0
+A human walks a quarter of a circle to its left.#A/DET human/NOUN walk/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN to/ADP its/DET left/NOUN#0.0#0.0

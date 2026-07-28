@@ -1,0 +1,3 @@
+A human is stirring.#A/DET human/NOUN is/AUX stir/VERB#0.0#0.0
+A person wipes a surface with his left arm.#A/DET person/NOUN wipe/VERB a/DET surface/NOUN with/ADP his/DET left/ADJ arm/NOUN#0.0#0.0
+a person wipes something in front of it with its left hand#a/DET person/NOUN wipe/VERB something/PRON in/ADP front/NOUN of/ADP it/PRON with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

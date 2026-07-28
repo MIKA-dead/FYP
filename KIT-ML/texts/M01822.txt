@@ -1,0 +1,7 @@
+A human takes a huge step backwards#A/DET human/NOUN take/VERB a/DET huge/ADJ step/NOUN backwards/ADV#0.0#0.0
+Someone gets pushed on the left shoulder and compensates with#Someone/PRON get/VERB push/VERB on/ADP the/DET left/ADJ shoulder/NOUN and/CCONJ compensate/NOUN with/ADP#0.0#0.0
+A human is pushed at the sholder and performs a sidestep to the back with the left foot#A/DET human/NOUN is/AUX push/VERB at/ADP the/DET sholder/NOUN and/CCONJ perform/VERB a/DET sidestep/NOUN to/ADP the/DET back/NOUN with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0
+A person takes a backward recovery step after being pushed from the front.#A/DET person/NOUN take/VERB a/DET backward/ADJ recovery/NOUN step/NOUN after/ADP being/AUX push/VERB from/ADP the/DET front/NOUN#0.0#0.0
+a person gets pushed from the front and stumbles backwards#a/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN and/CCONJ stumble/NOUN backwards/ADV#0.0#0.0
+A person getting shoved backwards#A/DET person/NOUN get/VERB shove/VERB backwards/ADV#0.0#0.0
+Someone gets pushed and takes a step back.#Someone/PRON get/VERB push/VERB and/CCONJ take/VERB a/DET step/NOUN back/ADV#0.0#0.0

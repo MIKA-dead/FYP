@@ -1,0 +1,3 @@
+A person walks slowly 2 meters forward.#A/DET person/NOUN walk/VERB slowly/ADV meter/NOUN forward/ADV#0.0#0.0
+a person takes 5 steps forward#a/DET person/NOUN take/VERB step/NOUN forward/ADV#0.0#0.0
+a human walks a few meters#a/DET human/NOUN walk/VERB a/DET few/ADJ meter/NOUN#0.0#0.0

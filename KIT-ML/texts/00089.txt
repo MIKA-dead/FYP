@@ -1,0 +1,1 @@
+A human walks a quarter of a circle to the right.#A/DET human/NOUN walk/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0

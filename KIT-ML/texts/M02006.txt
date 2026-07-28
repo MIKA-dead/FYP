@@ -1,0 +1,3 @@
+someone moves forward in a fast jog#someone/PRON move/VERB forward/ADV in/ADP a/DET fast/ADJ jog/NOUN#0.0#0.0
+a person jogs a few meters#a/DET person/NOUN jog/VERB a/DET few/ADJ meter/NOUN#0.0#0.0
+human runs forward#human/ADJ run/NOUN forward/ADV#0.0#0.0
