@@ -5,7 +5,6 @@ tools:
   file_read: true
   shell_execute: true
   file_write: true
-model: deepseek
 ---
 
 ## 指令

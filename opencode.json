@@ -13,19 +13,23 @@
   "agent": {
     "motion-planner": {
       "description": "主规划代理，负责解析动画需求、拆分任务、调度子代理",
-      "mode": "subagent"
+      "mode": "subagent",
+      "model": "opencode-go/deepseek-v4-flash"
     },
     "motion-coder": {
       "description": "编码代理，负责生成和合成运动",
-      "mode": "subagent"
+      "mode": "subagent",
+      "model": "opencode-go/deepseek-v4-flash"
     },
     "motion-tester": {
       "description": "测试与验证专家，负责检查生成动画的质量和一致性",
-      "mode": "subagent"
+      "mode": "subagent",
+      "model": "opencode-go/deepseek-v4-flash"
     },
     "motion-documenter": {
       "description": "文档与报告专家，负责生成和更新项目文档",
-      "mode": "subagent"
+      "mode": "subagent",
+      "model": "opencode-go/deepseek-v4-flash"
     }
   }
 }

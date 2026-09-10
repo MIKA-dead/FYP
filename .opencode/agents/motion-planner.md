@@ -5,7 +5,6 @@ tools:
   TodoWrite: true
   subagent_spawn: true
   file_write: true
-model: deepseek
 ---
 
 ## 指令
