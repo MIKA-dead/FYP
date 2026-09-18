@@ -1,5 +1,17 @@
 # 更新日志
 
+## Intent Routing（提示词解析 / 模块路由） - 2026-09-10
+
+### 新增
+- Intent Schema v1、Module Registry、动作 taxonomy：`.agents/skills/intent-routing/`
+- 18 条带 gold label 的提示词（含智慧警务站主用例与 texture/motion/key_pose/speed 修订）：`test-samples/intent/`
+- 可运行管线：`scripts/intent/{parse_intent,route_modules,mock_modules,evaluate_decision,run_pipeline}.py`
+- **交互测试台**：`python scripts/intent/test_console.py` → `http://127.0.0.1:8765`（实时看模块/评分，可导出给 UI 组员）
+- `motion-planner` 强制先编译 Intent 再调度；Decision Trace 输出到 `outputs/intent/`
+
+### 目标
+两周内验证「自然语言剧本 → 任务图 / 模块路由」正确性；真实生成模块可后续替换 mock。
+
 ## T001 (test - .npy) V2 修复复评 - 2026-09-09
 
 ### 任务描述

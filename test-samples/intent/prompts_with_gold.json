@@ -1,0 +1,337 @@
+{
+  "version": "1.0",
+  "description": "Gold-label fixtures for intent parsing + module routing. Mark decision_trace against these fields.",
+  "ui_contract": {
+    "generate": {
+      "prompt": "string",
+      "refs": [{ "id": "string", "role": "appearance|pose|target_position|background|style|other" }],
+      "mode": "generate"
+    },
+    "revise": {
+      "prompt": "string",
+      "mode": "revise",
+      "previous_task_id": "string",
+      "previous_plan_optional": "object"
+    }
+  },
+  "cases": [
+    {
+      "id": "P001",
+      "mode": "generate",
+      "difficulty": "complex",
+      "title": "智慧警务站数字人欢迎（多段+多参考图）",
+      "prompt": "画面为一个现代化智慧服务站体验区，整体为蓝灰色科技感室内空间，前方有服务台、蓝色座椅、玻璃房和柔和线性灯光。一位年轻女性工作人员数字人先站在站镜头中央偏左的位置，她微笑看向镜头，随后她开始缓慢慢往前走，仅仅兩步到参考图N2 中的正中央位置。保持圖cN2 中的背景不要變化。步伐自然、稳定、专业。右手时不时微微招手。數字人全身形象參考front。整段走动流畅，停在镜头正前後雙手在身前握住~N2，对着镜头用粤語講fnaL001:\"你好!歡迎嚟到智慧警務站。智慧警務站係香港警務處最新推出嘅人工智能報案系統，市民同旅客可以透過語音對話，向我哋嘅虚擬警務大使，作出非緊急報案。”嘴巴开合幅度小，面部表情缓和，稳定，不要夸张。镜头不要移动，不要切换，现场场景尤其是远处的背景，房顶的边角线和灯不要有突变。保持整体画面自然、专业、亲切，人物脸部干净、光线均匀，不要有明显阴影。",
+      "refs": [
+        { "id": "N2", "role": "pose" },
+        { "id": "N2", "role": "target_position" },
+        { "id": "N2", "role": "background" },
+        { "id": "front", "role": "appearance" }
+      ],
+      "gold": {
+        "task_mode": "generate",
+        "seg_count": 4,
+        "timeline_actions": ["idle_stand", "walk_forward", "hold_pose", "speak"],
+        "speed_by_seg": { "2": "slow" },
+        "steps_by_seg": { "2": 2 },
+        "gesture": "occasional_right_wave",
+        "appearance_ref": "front",
+        "lock_background_to": "N2",
+        "camera": { "move": false, "cut": false },
+        "speech": { "lang": "yue", "script_id": "fnaL001" },
+        "modules_required": [
+          "bg_lock",
+          "camera_lock",
+          "appearance_ref",
+          "idle_stand",
+          "locomotion_walk",
+          "ref_pose_align",
+          "gesture_wave",
+          "hold_keypose",
+          "speak_stub",
+          "lip_sync_stub",
+          "timeline_compose",
+          "quality_check"
+        ],
+        "modules_forbidden": ["action_jump", "locomotion_run", "action_turn", "gesture_bow"],
+        "humanml3d_classes": ["STAND", "WALK"]
+      }
+    },
+    {
+      "id": "P002",
+      "mode": "generate",
+      "difficulty": "basic",
+      "title": "简化慢走招手",
+      "prompt": "女性数字人慢走两步到画面中央，偶而右手招手，镜头不动。",
+      "refs": [],
+      "gold": {
+        "task_mode": "generate",
+        "seg_count_min": 1,
+        "timeline_actions_any": ["walk_forward", "walk_slow"],
+        "speed_any": ["slow", "very_slow"],
+        "steps_by_seg_any": 2,
+        "gesture": "occasional_right_wave",
+        "camera": { "move": false },
+        "modules_required": ["locomotion_walk", "gesture_wave", "camera_lock", "timeline_compose", "quality_check"],
+        "modules_forbidden": ["action_jump", "locomotion_run"]
+      }
+    },
+    {
+      "id": "P003",
+      "mode": "generate",
+      "difficulty": "medium",
+      "title": "速度冲突（快跑但要专业稳定）",
+      "prompt": "快速跑到中央，但步伐要专业稳定。",
+      "refs": [],
+      "gold": {
+        "task_mode": "generate",
+        "timeline_actions_any": ["run_forward"],
+        "needs_clarify_contains_any": ["冲突", "速度", "专业", "clarify", "conflict"],
+        "modules_required": ["locomotion_run", "timeline_compose", "quality_check"],
+        "modules_forbidden": ["action_jump"]
+      }
+    },
+    {
+      "id": "P004",
+      "mode": "generate",
+      "difficulty": "basic",
+      "title": "仅说话保持姿势",
+      "prompt": "保持 N2 姿势，只说欢迎语，不要走动。",
+      "refs": [{ "id": "N2", "role": "pose" }],
+      "gold": {
+        "task_mode": "generate",
+        "timeline_actions": ["hold_pose", "speak"],
+        "modules_required": ["hold_keypose", "ref_pose_align", "speak_stub", "lip_sync_stub", "quality_check"],
+        "modules_forbidden": ["locomotion_walk", "locomotion_run", "action_jump"]
+      }
+    },
+    {
+      "id": "P005",
+      "mode": "generate",
+      "difficulty": "medium",
+      "title": "转身招手鞠躬",
+      "prompt": "角色先转身，再招手，最后鞠躬。",
+      "refs": [],
+      "gold": {
+        "task_mode": "generate",
+        "timeline_actions": ["turn_in_place", "wave_right", "bow"],
+        "modules_required": ["action_turn", "gesture_wave", "gesture_bow", "timeline_compose", "quality_check"],
+        "modules_forbidden": ["action_jump"]
+      }
+    },
+    {
+      "id": "P006",
+      "mode": "revise",
+      "difficulty": "basic",
+      "title": "修订：再慢一点",
+      "prompt": "走得再慢一点",
+      "previous_task_id": "P001",
+      "refs": [],
+      "gold": {
+        "task_mode": "revise",
+        "revision_targets": ["speed"],
+        "modules_to_rerun": ["speed_edit", "quality_check"],
+        "modules_frozen_contains": ["bg_lock", "camera_lock", "appearance_ref"]
+      }
+    },
+    {
+      "id": "P007",
+      "mode": "revise",
+      "difficulty": "basic",
+      "title": "修订：停住姿势按 N2",
+      "prompt": "停住时双手姿势按 N2",
+      "previous_task_id": "P001",
+      "refs": [{ "id": "N2", "role": "pose" }],
+      "gold": {
+        "task_mode": "revise",
+        "revision_targets": ["key_pose"],
+        "modules_to_rerun": ["keypose_edit", "ref_pose_align", "quality_check"],
+        "modules_frozen_contains": ["bg_lock", "camera_lock"]
+      }
+    },
+    {
+      "id": "P008",
+      "mode": "revise",
+      "difficulty": "basic",
+      "title": "修订：衣服质感",
+      "prompt": "衣服质感更哑光科技感",
+      "previous_task_id": "P001",
+      "refs": [],
+      "gold": {
+        "task_mode": "revise",
+        "revision_targets": ["texture"],
+        "modules_to_rerun": ["texture_edit", "quality_check"],
+        "modules_frozen_contains": ["locomotion_walk", "bg_lock", "camera_lock"]
+      }
+    },
+    {
+      "id": "P009",
+      "mode": "revise",
+      "difficulty": "medium",
+      "title": "修订：招手改左手且更少",
+      "prompt": "招手改成左手，频率低一点",
+      "previous_task_id": "P001",
+      "refs": [],
+      "gold": {
+        "task_mode": "revise",
+        "revision_targets": ["motion"],
+        "modules_to_rerun": ["motion_edit", "gesture_wave", "quality_check"],
+        "modules_frozen_contains": ["bg_lock", "camera_lock", "appearance_ref"]
+      }
+    },
+    {
+      "id": "P010",
+      "mode": "revise",
+      "difficulty": "medium",
+      "title": "修订：背景冻结 + 往前半步",
+      "prompt": "背景别动，人再往前半步",
+      "previous_task_id": "P001",
+      "refs": [],
+      "gold": {
+        "task_mode": "revise",
+        "revision_targets": ["motion"],
+        "modules_to_rerun": ["motion_edit", "locomotion_walk", "quality_check"],
+        "modules_frozen_contains": ["bg_lock", "camera_lock"]
+      }
+    },
+    {
+      "id": "P011",
+      "mode": "generate",
+      "difficulty": "basic",
+      "title": "站立挥手欢迎（无位移）",
+      "prompt": "数字人站在镜头中央，右手轻轻招手欢迎，镜头不要移动，背景保持 N2。",
+      "refs": [{ "id": "N2", "role": "background" }],
+      "gold": {
+        "task_mode": "generate",
+        "timeline_actions_any": ["idle_stand", "wave_right"],
+        "camera": { "move": false },
+        "lock_background_to": "N2",
+        "modules_required": ["gesture_wave", "camera_lock", "bg_lock", "quality_check"],
+        "modules_forbidden": ["locomotion_run", "action_jump"]
+      }
+    },
+    {
+      "id": "P012",
+      "mode": "generate",
+      "difficulty": "medium",
+      "title": "前跳双手上举（回归 T001 语义）",
+      "prompt": "一个角色向前跳跃，同时双手向上伸展",
+      "refs": [],
+      "gold": {
+        "task_mode": "generate",
+        "timeline_actions": ["jump_forward"],
+        "modules_required": ["action_jump", "timeline_compose", "quality_check"],
+        "modules_forbidden": ["locomotion_walk", "speak_stub"]
+      }
+    },
+    {
+      "id": "P013",
+      "mode": "generate",
+      "difficulty": "medium",
+      "title": "慢走三步后粤语介绍",
+      "prompt": "角色从左侧缓慢走三步到中央，停下后用粤语讲欢迎词，嘴巴开合幅度小，镜头不动。",
+      "refs": [],
+      "gold": {
+        "task_mode": "generate",
+        "timeline_actions_any": ["walk_forward", "hold_pose", "speak"],
+        "speed_any": ["slow", "very_slow"],
+        "camera": { "move": false },
+        "speech": { "lang": "yue" },
+        "modules_required": ["locomotion_walk", "speak_stub", "lip_sync_stub", "camera_lock", "quality_check"],
+        "modules_forbidden": ["action_jump", "locomotion_run"]
+      }
+    },
+    {
+      "id": "P014",
+      "mode": "generate",
+      "difficulty": "basic",
+      "title": "仅外观参考 front",
+      "prompt": "数字人全身形象参考 front，保持站立微笑看向镜头，不要走动。",
+      "refs": [{ "id": "front", "role": "appearance" }],
+      "gold": {
+        "task_mode": "generate",
+        "appearance_ref": "front",
+        "timeline_actions_any": ["idle_stand", "hold_pose"],
+        "modules_required": ["appearance_ref", "quality_check"],
+        "modules_forbidden": ["locomotion_walk", "locomotion_run", "action_jump"]
+      }
+    },
+    {
+      "id": "P015",
+      "mode": "revise",
+      "difficulty": "basic",
+      "title": "修订：表情光更干净（texture）",
+      "prompt": "人物脸部更干净，光线均匀，不要有明显阴影",
+      "previous_task_id": "P001",
+      "refs": [],
+      "gold": {
+        "task_mode": "revise",
+        "revision_targets": ["texture"],
+        "modules_to_rerun": ["texture_edit", "quality_check"],
+        "modules_frozen_contains": ["bg_lock", "camera_lock"]
+      }
+    },
+    {
+      "id": "P016",
+      "mode": "revise",
+      "difficulty": "medium",
+      "title": "修订：走快点但背景别动",
+      "prompt": "走得快一点，背景别动",
+      "previous_task_id": "P001",
+      "refs": [],
+      "gold": {
+        "task_mode": "revise",
+        "revision_targets_any": ["speed", "motion"],
+        "modules_to_rerun_any": ["speed_edit", "motion_edit", "quality_check"],
+        "modules_frozen_contains": ["bg_lock", "camera_lock"]
+      }
+    },
+    {
+      "id": "P017",
+      "mode": "generate",
+      "difficulty": "complex",
+      "title": "展厅讲解员：走位+招手+握拳站定说话",
+      "prompt": "展厅讲解员数字人先站在画面左侧微笑，随后慢慢往前走两步到 N2 中央位置，右手偶尔招手，停住后双手在身前握住，对着镜头用普通话介绍展品。镜头不要切换，背景锁 N2，形象参考 front。",
+      "refs": [
+        { "id": "N2", "role": "pose" },
+        { "id": "N2", "role": "target_position" },
+        { "id": "N2", "role": "background" },
+        { "id": "front", "role": "appearance" }
+      ],
+      "gold": {
+        "task_mode": "generate",
+        "seg_count_min": 3,
+        "timeline_actions_any": ["idle_stand", "walk_forward", "hold_pose", "speak"],
+        "appearance_ref": "front",
+        "lock_background_to": "N2",
+        "camera": { "cut": false },
+        "modules_required": [
+          "bg_lock",
+          "camera_lock",
+          "appearance_ref",
+          "locomotion_walk",
+          "gesture_wave",
+          "hold_keypose",
+          "speak_stub",
+          "timeline_compose",
+          "quality_check"
+        ],
+        "modules_forbidden": ["action_jump", "locomotion_run"]
+      }
+    },
+    {
+      "id": "P018",
+      "mode": "revise",
+      "difficulty": "basic",
+      "title": "修订：关键姿态改双手自然下垂",
+      "prompt": "停住时的关键姿态改成双手自然下垂，不要握在身前",
+      "previous_task_id": "P017",
+      "refs": [],
+      "gold": {
+        "task_mode": "revise",
+        "revision_targets_any": ["key_pose", "motion"],
+        "modules_to_rerun_any": ["keypose_edit", "motion_edit", "quality_check"],
+        "modules_frozen_contains": ["bg_lock", "camera_lock", "appearance_ref"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "version": "1.0",
+  "description": "Pluggable modules the planner may route to. Two-week demos use mock=true implementations.",
+  "modules": [
+    {
+      "id": "bg_lock",
+      "name": "Background Lock",
+      "owner_agent": "motion-coder",
+      "inputs": ["lock_background_to"],
+      "parallel_safe": true,
+      "revision_targets": [],
+      "mock": true,
+      "description": "Freeze background / distant scene to a reference image."
+    },
+    {
+      "id": "camera_lock",
+      "name": "Camera Lock",
+      "owner_agent": "motion-coder",
+      "inputs": ["camera.move", "camera.cut"],
+      "parallel_safe": true,
+      "revision_targets": [],
+      "mock": true,
+      "description": "Disable camera move and cuts."
+    },
+    {
+      "id": "appearance_ref",
+      "name": "Appearance Reference",
+      "owner_agent": "motion-coder",
+      "inputs": ["character.appearance_ref"],
+      "parallel_safe": true,
+      "revision_targets": ["texture"],
+      "mock": true,
+      "description": "Bind character look to a front/side reference image."
+    },
+    {
+      "id": "texture_edit",
+      "name": "Texture / Look Edit",
+      "owner_agent": "motion-coder",
+      "inputs": ["revision.ops[texture]"],
+      "parallel_safe": true,
+      "revision_targets": ["texture"],
+      "mock": true,
+      "description": "Adjust material, lighting look, face cleanliness without changing motion."
+    },
+    {
+      "id": "locomotion_walk",
+      "name": "Walk Locomotion",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline[walk_*]", "speed", "steps"],
+      "humanml3d_class": "WALK",
+      "parallel_safe": false,
+      "revision_targets": ["motion", "speed"],
+      "mock": true,
+      "description": "Generate or retrieve walking motion (HumanML3D WALK)."
+    },
+    {
+      "id": "locomotion_run",
+      "name": "Run Locomotion",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline[run_*]"],
+      "humanml3d_class": "RUN",
+      "parallel_safe": false,
+      "revision_targets": ["motion", "speed"],
+      "mock": true,
+      "description": "Running motion module."
+    },
+    {
+      "id": "action_jump",
+      "name": "Jump Action",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline[jump_*]"],
+      "humanml3d_class": "JUMP",
+      "parallel_safe": false,
+      "revision_targets": ["motion", "speed"],
+      "mock": true,
+      "description": "Jump motion (see T001 patterns)."
+    },
+    {
+      "id": "action_turn",
+      "name": "Turn Action",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline[turn_*]"],
+      "humanml3d_class": "TURN",
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": true,
+      "description": "In-place or stepping turn."
+    },
+    {
+      "id": "idle_stand",
+      "name": "Idle / Stand",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline[idle_stand]"],
+      "humanml3d_class": "STAND",
+      "parallel_safe": false,
+      "revision_targets": ["motion", "key_pose"],
+      "mock": true,
+      "description": "Standing idle with mild expression."
+    },
+    {
+      "id": "hold_keypose",
+      "name": "Hold Key Pose",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline[hold_pose]", "target_pose_ref", "hands"],
+      "parallel_safe": false,
+      "revision_targets": ["key_pose"],
+      "mock": true,
+      "description": "Hold a key pose aligned to a reference image (e.g. N2)."
+    },
+    {
+      "id": "ref_pose_align",
+      "name": "Reference Pose Align",
+      "owner_agent": "motion-coder",
+      "inputs": ["target_pose_ref", "refs[pose|target_position]"],
+      "parallel_safe": false,
+      "revision_targets": ["key_pose", "motion"],
+      "mock": true,
+      "description": "Align root/end pose to a reference frame/image."
+    },
+    {
+      "id": "gesture_wave",
+      "name": "Wave Gesture",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline.gesture"],
+      "parallel_safe": true,
+      "revision_targets": ["motion"],
+      "mock": true,
+      "description": "Occasional hand wave overlay on locomotion/idle."
+    },
+    {
+      "id": "gesture_bow",
+      "name": "Bow Gesture",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline[bow]"],
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": true,
+      "description": "Bowing gesture."
+    },
+    {
+      "id": "speed_edit",
+      "name": "Speed Edit",
+      "owner_agent": "motion-coder",
+      "inputs": ["revision.ops[speed]", "timeline.speed"],
+      "parallel_safe": true,
+      "revision_targets": ["speed"],
+      "mock": true,
+      "description": "Retarget playback / locomotion speed without regenerating semantics."
+    },
+    {
+      "id": "keypose_edit",
+      "name": "Key Pose Edit",
+      "owner_agent": "motion-coder",
+      "inputs": ["revision.ops[key_pose]"],
+      "parallel_safe": false,
+      "revision_targets": ["key_pose"],
+      "mock": true,
+      "description": "Adjust held pose / hand clasp to a reference."
+    },
+    {
+      "id": "motion_edit",
+      "name": "Motion Local Edit",
+      "owner_agent": "motion-coder",
+      "inputs": ["revision.ops[motion]"],
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": true,
+      "description": "Local motion tweak (gesture side, step count, path offset)."
+    },
+    {
+      "id": "lip_sync_stub",
+      "name": "Lip Sync Stub",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline[speak]", "speech", "character.lip"],
+      "parallel_safe": true,
+      "revision_targets": ["motion"],
+      "mock": true,
+      "description": "Mock lip-sync / mouth amplitude control for speech segments."
+    },
+    {
+      "id": "speak_stub",
+      "name": "Speech Stub",
+      "owner_agent": "motion-documenter",
+      "inputs": ["speech.lang", "speech.script_id", "speech.text"],
+      "parallel_safe": true,
+      "revision_targets": [],
+      "mock": true,
+      "description": "Attach script metadata (Cantonese etc.); TTS left to external pipeline."
+    },
+    {
+      "id": "timeline_compose",
+      "name": "Timeline Compose",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline"],
+      "parallel_safe": false,
+      "revision_targets": ["motion", "speed", "key_pose"],
+      "mock": true,
+      "description": "Stitch multi-segment actions into one clip."
+    },
+    {
+      "id": "quality_check",
+      "name": "Quality Check",
+      "owner_agent": "motion-tester",
+      "inputs": ["artifact", "intent"],
+      "parallel_safe": false,
+      "revision_targets": [],
+      "mock": true,
+      "description": "Validate output against intent constraints."
+    }
+  ]
+}

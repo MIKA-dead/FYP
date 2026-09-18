@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://buildanagent.local/schemas/intent-v1.json",
+  "title": "MotionIntentV1",
+  "description": "Structured intent compiled from user prompt + reference image IDs. Planner must consume this schema, not raw free text.",
+  "type": "object",
+  "required": ["schema_version", "task_mode", "timeline", "modules_needed", "decision"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "task_id": { "type": "string" },
+    "task_mode": { "enum": ["generate", "revise"] },
+    "raw_prompt": { "type": "string" },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "needs_clarify": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "role"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "role": {
+            "enum": [
+              "appearance",
+              "pose",
+              "target_position",
+              "background",
+              "style",
+              "other"
+            ]
+          },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "description": { "type": "string" },
+        "lock_background_to": { "type": ["string", "null"] },
+        "camera": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "move": { "type": "boolean" },
+            "cut": { "type": "boolean" },
+            "note": { "type": "string" }
+          }
+        },
+        "style_tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "character": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "appearance_ref": { "type": ["string", "null"] },
+        "facing": { "type": "string" },
+        "expression": { "type": "string" },
+        "lip": { "type": "string" },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["seg", "action"],
+        "additionalProperties": false,
+        "properties": {
+          "seg": { "type": "integer", "minimum": 1 },
+          "action": {
+            "type": "string",
+            "description": "Fine-grained action id from action_taxonomy.json"
+          },
+          "humanml3d_class": {
+            "type": ["string", "null"],
+            "description": "Coarse HumanML3D/KIT class: WALK, STAND, JUMP, ..."
+          },
+          "speed": {
+            "enum": ["very_slow", "slow", "normal", "fast", "very_fast", null]
+          },
+          "steps": { "type": ["integer", "null"] },
+          "duration_hint": { "type": ["string", "null"] },
+          "pos": { "type": ["string", "null"] },
+          "target_pose_ref": { "type": ["string", "null"] },
+          "gesture": { "type": ["string", "null"] },
+          "hands": { "type": ["string", "null"] },
+          "speech": {
+            "type": ["object", "null"],
+            "additionalProperties": false,
+            "properties": {
+              "lang": { "type": "string" },
+              "script_id": { "type": ["string", "null"] },
+              "text": { "type": ["string", "null"] }
+            }
+          },
+          "notes": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "modules_needed": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Module ids from module_registry.json"
+    },
+    "revision": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "targets": {
+          "type": "array",
+          "items": {
+            "enum": ["texture", "motion", "key_pose", "speed"]
+          }
+        },
+        "ops": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type"],
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "enum": ["texture", "motion", "key_pose", "speed"]
+              },
+              "seg": { "type": ["integer", "null"] },
+              "from": { "type": ["string", "null"] },
+              "to": { "type": ["string", "null"] },
+              "ref": { "type": ["string", "null"] },
+              "scope": { "type": ["string", "null"] },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "modules_to_rerun": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "modules_frozen": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "required": ["why", "module_reasons"],
+      "additionalProperties": false,
+      "properties": {
+        "why": { "type": "string" },
+        "module_reasons": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "rejected_modules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "reason"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "reason": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

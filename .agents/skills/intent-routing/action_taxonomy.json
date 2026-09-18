@@ -1,0 +1,92 @@
+{
+  "version": "1.0",
+  "description": "Fine-grained actions mapped to HumanML3D/KIT coarse classes. Parser emits fine ids; planner may use coarse class for retrieval baselines.",
+  "coarse_classes": [
+    "WALK", "TURN", "DANCE", "JUMP", "RUN", "KICK", "SIT", "REACH", "THROW", "STAND", "UNKNOWN"
+  ],
+  "actions": [
+    {
+      "id": "idle_stand",
+      "humanml3d_class": "STAND",
+      "keywords_zh": ["站", "站立", "站在", "微笑看向", "待命"],
+      "keywords_en": ["stand", "idle"],
+      "default_modules": ["idle_stand"]
+    },
+    {
+      "id": "walk_forward",
+      "humanml3d_class": "WALK",
+      "keywords_zh": ["走", "往前走", "向前走", "走动", "步伐"],
+      "keywords_en": ["walk", "step forward"],
+      "default_modules": ["locomotion_walk", "ref_pose_align"]
+    },
+    {
+      "id": "walk_slow",
+      "humanml3d_class": "WALK",
+      "keywords_zh": ["缓慢", "慢慢", "慢走", "缓慢慢"],
+      "keywords_en": ["slow walk", "slowly"],
+      "default_modules": ["locomotion_walk", "speed_edit"]
+    },
+    {
+      "id": "run_forward",
+      "humanml3d_class": "RUN",
+      "keywords_zh": ["跑", "奔跑", "快跑"],
+      "keywords_en": ["run", "sprint"],
+      "default_modules": ["locomotion_run"]
+    },
+    {
+      "id": "jump_forward",
+      "humanml3d_class": "JUMP",
+      "keywords_zh": ["跳", "跳跃", "跳起"],
+      "keywords_en": ["jump"],
+      "default_modules": ["action_jump"]
+    },
+    {
+      "id": "turn_in_place",
+      "humanml3d_class": "TURN",
+      "keywords_zh": ["转身", "转体", "旋转"],
+      "keywords_en": ["turn", "spin"],
+      "default_modules": ["action_turn"]
+    },
+    {
+      "id": "hold_pose",
+      "humanml3d_class": "STAND",
+      "keywords_zh": ["停在", "保持", "握住", "双手在身前"],
+      "keywords_en": ["hold", "pose", "stop at"],
+      "default_modules": ["hold_keypose", "ref_pose_align"]
+    },
+    {
+      "id": "wave_right",
+      "humanml3d_class": "REACH",
+      "keywords_zh": ["招手", "右手", "挥手"],
+      "keywords_en": ["wave", "right hand"],
+      "default_modules": ["gesture_wave"]
+    },
+    {
+      "id": "wave_left",
+      "humanml3d_class": "REACH",
+      "keywords_zh": ["左手招手", "左手挥手"],
+      "keywords_en": ["left wave"],
+      "default_modules": ["gesture_wave"]
+    },
+    {
+      "id": "bow",
+      "humanml3d_class": "UNKNOWN",
+      "keywords_zh": ["鞠躬"],
+      "keywords_en": ["bow"],
+      "default_modules": ["gesture_bow"]
+    },
+    {
+      "id": "speak",
+      "humanml3d_class": "STAND",
+      "keywords_zh": ["講", "讲", "说", "粤語", "粵語", "嘴巴"],
+      "keywords_en": ["speak", "say", "talk"],
+      "default_modules": ["speak_stub", "lip_sync_stub", "hold_keypose"]
+    }
+  ],
+  "revision_keywords": {
+    "speed": ["慢", "快", "速度", "再慢", "更快", "slower", "faster", "speed"],
+    "key_pose": ["姿势", "姿态", "关键姿态", "双手", "按 N", "key pose", "pose"],
+    "motion": ["招手", "步伐", "往前", "半步", "动作", "左手", "右手", "motion"],
+    "texture": ["质感", "纹理", "衣服", "光线", "阴影", "面部", "texture", "材质", "哑光"]
+  }
+}
