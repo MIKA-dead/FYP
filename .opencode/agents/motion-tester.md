@@ -5,6 +5,7 @@ tools:
   file_read: true
   shell_execute: true
   file_write: true
+model: DeepSeek V4 Flash
 ---
 
 ## 指令
