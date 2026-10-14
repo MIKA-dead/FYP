@@ -102,3 +102,13 @@ VLM/critic 替代人工审核。
 - 两仓用**独立 conda env**，不要混装。
 - MotionFix license：非商业科研用途。
 - Windows 上官方 bash 脚本未直接跑，依赖已用 `gdown` / `pip` 等价安装。
+
+## 补丁回放（克隆 FYP 后）
+
+本仓库用 patches/ 保存对上游子模块的本地修改（不上传数据集/权重）：
+
+`powershell
+Copy-Item -Recurse -Force patches\motion-latent-diffusion\* third_party\motion-latent-diffusion\
+Copy-Item -Force patches\motionfix\requirements.windows.txt third_party\motionfix\
+`
+
