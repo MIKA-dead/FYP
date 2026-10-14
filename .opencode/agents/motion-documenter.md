@@ -4,6 +4,7 @@ description: 文档与报告专家，负责生成和更新项目文档
 tools:
   file_write: true
   file_append: true
+model: DeepSeek V4 Flash
 ---
 
 ## 指令
