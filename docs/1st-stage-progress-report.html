@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>1st Stage Progress Report — Zhang Xuanrui</title>
+<style>
+  @page { size: A4; margin: 18mm 18mm 18mm 18mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: #1a1a1a;
+    font-family: "Times New Roman", "Segoe UI", serif;
+    font-size: 11pt;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  h1, h2, h3, p, td, th, span {
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 16pt;
+    text-align: center;
+    margin: 0 0 5mm;
+    letter-spacing: 0.02em;
+  }
+  h2 {
+    font-size: 12.5pt;
+    text-align: left;
+    margin: 5mm 0 2.5mm;
+    padding: 0 0 1mm;
+    border-bottom: 0.5pt solid #222;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 11pt;
+    text-align: left;
+    margin: 3.5mm 0 1.5mm;
+    text-indent: 0;
+    page-break-after: avoid;
+  }
+  p {
+    margin: 0 0 2mm;
+    text-align: justify;
+    text-indent: 2em;
+  }
+  p.num {
+    margin: 0 0 1.6mm 0;
+    padding-left: 3.6em;
+    text-indent: -1.6em;
+  }
+  table.meta {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 2mm;
+    font-size: 11pt;
+  }
+  table.meta td {
+    padding: 0.4mm 0;
+    vertical-align: top;
+    text-align: left;
+    text-indent: 0;
+  }
+  table.meta td.k {
+    width: 28mm;
+    padding-right: 4mm;
+  }
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5mm 0 3mm;
+    font-size: 9.5pt;
+    line-height: 1.35;
+    page-break-inside: avoid;
+  }
+  table.data th, table.data td {
+    border: 0.4pt solid #b7b7b7;
+    padding: 1.4mm 1.8mm;
+    vertical-align: top;
+    text-align: left;
+    font-weight: 400;
+  }
+  table.data th {
+    background: #f3f3f3;
+  }
+  code {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 9.5pt;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+
+<h1>1st Stage Progress Report</h1>
+<table class="meta">
+  <tr><td class="k">Student</td><td>Zhang Xuanrui (23270128)</td></tr>
+  <tr><td class="k">Supervisor</td><td>Chen Jie</td></tr>
+  <tr><td class="k">Project</td><td>AI Animation Agent for Intuitive Motion Generation and Stylization</td></tr>
+  <tr><td class="k">Date</td><td>21 September 2026</td></tr>
+</table>
+
+<h2>a. Objectives of the Project</h2>
+<p>Creating high-quality character animation is still slow and expensive. Manual keyframing takes hours; motion capture needs costly hardware and heavy cleanup. For small studios and independent creators, the barrier is often time and skill, not creativity.</p>
+<p>This project asks: what if creating animation were as easy as describing what you want? A user could say “a character jumps forward while raising both arms” and receive a usable motion file in minutes. The goal is not to replace animators, but to give them a collaborator for repetitive work so they can focus on storytelling.</p>
+<p>Overall objective. Build an AI-powered animation assistant that turns plain-language descriptions (and later video or reference images) into editable motion, without manual keyframing or motion-capture cleanup.</p>
+<p>End-of-project deliverables:</p>
+<p class="num">1. For animators: a practical tool that generates motion from text (and later video), with research-format outputs (<code>.npy</code>) and a clear path to industry formats (BVH / FBX / GLB).</p>
+<p class="num">2. For developers: a modular agent harness showing how an LLM can coordinate specialized sub-agents.</p>
+<p class="num">3. For research: a validated evaluation pipeline using motion speed magnitude (mean joint velocity) as a robust, data-driven quality signal.</p>
+<p>Success criteria on real tasks (jump, walk, and combined actions): the result matches the user’s description, passes quality checks, and the full pipeline finishes in one session.</p>
+
+<h2>b. Proposed Solution or Changes Made</h2>
+<p>Original proposal. A motion-generation agent on a Model + Harness design: OpenCode + DeepSeek as the planner; sub-agents for motion synthesis, style transfer, and timeline editing; inputs of text, video, and motion clips; outputs of FBX/GLB with editable timeline metadata.</p>
+<p>Changes made:</p>
+<p class="num">1. Dataset choice. Direct use of HumanML3D was delayed by AMASS licensing. The pipeline was first built on KIT-ML (7,813 samples, 251-dim) for rapid prototyping, and the feature path was then aligned toward a HumanML3D-style 263-dim representation for later model integration.</p>
+<p class="num">2. Evaluation metric. FID and user studies remain planned for Phase 4. In Phase 1, motion speed magnitude separated action types more clearly (for example RUN ≈ 38.5 versus WALK ≈ 20.1) and exposed intensity failures, so it became the core automated metric.</p>
+<p class="num">3. Generation backend. motion-coder currently uses a rule-based / simulated generator that edits base clips under hard constraints. This validates the harness and the evaluator before a real text-to-motion model is connected. The next attempt is Kimodo (NVIDIA’s kinematic motion diffusion model). MDM and MotionDiffuse remain alternative candidates.</p>
+<p class="num">4. Output format. Current outputs are .npy files in KIT-ML feature space. FBX/GLB export, and broader DCC or engine import, is deferred to Phase 3.</p>
+<p>Solution implemented so far. A four-layer multi-agent system:</p>
+<table class="data">
+  <thead>
+    <tr><th>Layer</th><th>Location</th><th>Role</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Agent configuration</td><td>.opencode/agents/</td><td>motion-planner, motion-coder, motion-tester, and motion-documenter, each with an explicit role and constraints</td></tr>
+    <tr><td>Knowledge</td><td>.agents/skills/motion-patterns/</td><td>KIT-ML speed baselines for 10 action classes, plus success_cases.md for high-scoring patterns</td></tr>
+    <tr><td>Evaluation</td><td>scripts/evaluator/</td><td>Format and bound checks, and speed magnitude compared with per-action baselines</td></tr>
+    <tr><td>Intent routing (Phase 2a)</td><td>.agents/skills/intent-routing/ and scripts/intent/</td><td>Compile a prompt into an Intent Schema, a module plan, mock modules, and a Decision Trace</td></tr>
+  </tbody>
+</table>
+<p>Execution flow (T001): planner, then coder (.npy), then tester (score against the JUMP baseline), then documenter (report and knowledge write-back).</p>
+
+<h2>c. Proposed Schedule and Achievements So Far</h2>
+<table class="data">
+  <thead>
+    <tr><th>Phase</th><th>Planned tasks</th><th>Status</th><th>Achieved so far</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Phase 1<br>Jun–Sep 2026</td>
+      <td>Learn the agent stack; set up OpenCode + DeepSeek; build the multi-agent system; implement the evaluation pipeline</td>
+      <td>Completed</td>
+      <td>Four agents running; KIT-ML processed; speed-based evaluation in place; T001 scored 90/100</td>
+    </tr>
+    <tr>
+      <td>Phase 2a<br>Sep–Oct 2026</td>
+      <td>UI; prompt parsing; module routing; revision handling</td>
+      <td>In progress</td>
+      <td>Intent Schema, routing, mock modules, and an interactive test console are running. UI is owned by teammates</td>
+    </tr>
+    <tr>
+      <td>Phase 2b<br>Oct–Dec 2026</td>
+      <td>Integrate a real text-to-motion model (first attempt: Kimodo); primitive matching; stylization</td>
+      <td>Not started</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Phase 3<br>Jan–Mar 2027</td>
+      <td>Timeline-editor agent; video input (MediaPipe); unified export and visualization</td>
+      <td>Not started</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Phase 4<br>Apr–Jun 2027</td>
+      <td>Full evaluation (FID, user study); write-up; demo</td>
+      <td>Not started</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+<p>Key achievements:</p>
+<p class="num">1. An end-to-end loop: text, then motion, then evaluation, then knowledge update.</p>
+<p class="num">2. KIT-ML: 7,813 samples classified, with speed baselines for 10 actions (WALK 20.1, RUN 38.5, JUMP 26.9, and others).</p>
+<p class="num">3. An intent-routing prototype: 18 gold prompts, a Decision Trace, and module mocks under scripts/intent/.</p>
+<p class="num">4. Representative task T001 (“jump forward while raising both arms”) improved after tester-driven fixes.</p>
+<h3>T001 validation (9 September 2026)</h3>
+<table class="data">
+  <thead>
+    <tr><th>Metric</th><th>Initial (V1)</th><th>Re-evaluation (V2)</th><th>Notes</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Overall score</td><td>60 / 100</td><td>90 / 100</td><td>+30</td></tr>
+    <tr><td>Right-arm raise</td><td>Missing</td><td>Fully symmetric (ratio 1.0)</td><td>Fixed</td></tr>
+    <tr><td>Speed magnitude</td><td>1.49 (normalized space; near-static against the JUMP baseline)</td><td>20.47 (raw KIT-ML space; inside the JUMP band [15, 45])</td><td>Same metric, corrected feature scale</td></tr>
+    <tr><td>Landing transition</td><td>Isolated spike / discontinuity</td><td>Smooth; no isolated spike</td><td>Fixed</td></tr>
+    <tr><td>Semantic consistency</td><td>Failed on arm symmetry and intensity</td><td>28 / 30</td><td>Minor deduction: conservative jump height</td></tr>
+  </tbody>
+</table>
+<p>motion-tester flagged the missing right arm, insufficient intensity caused by a feature-scale mismatch, and a discontinuous landing. After the coder applied symmetry, a raw-space speed band, and continuous envelopes, the motion passed the checks and was written to success_cases.md.</p>
+
+<h2>d. Problems Encountered</h2>
+<p class="num">1. Generation is still simulated, not model-driven. Rule-based clip editing validates the harness, but it limits diversity and the response to novel prompts. Connecting a real text-to-motion model is the main technical risk of the next phase.</p>
+<p class="num">2. Prompt parsing is only partly reliable. A heuristic Intent Schema and router already cover coarse actions and revision types (texture, motion, key pose, and speed). Fine phrases such as “occasional right-hand wave” or “small mouth opening, calm expression” are not yet mapped to modules in a stable way, and the routed modules are still mocks.</p>
+<p class="num">3. Action modules are ordered incorrectly on long prompts with several consecutive actions. When one prompt contains a sequence—for example stand and smile, then walk two steps, then stop and hold the hands, then speak—the planner can select the relevant modules and still schedule them in the wrong order, so a later action is planned before an earlier one. This is a sequencing failure in the task graph, distinct from omitting a module. It appears on long, interleaved scripts and has to be fixed before routing results can be trusted on the target use case.</p>
+<p class="num">4. The evaluation metric has limited coverage. Speed magnitude separates WALK, RUN, and JUMP and detects weak motion intensity. It does not capture style (“heavy” versus “sneaky”), temporal edits, foot sliding, or physical issues such as penetration.</p>
+<p class="num">5. The knowledge base is action-centric and built from KIT-ML. It gives strong statistical baselines for coarse classes, and little guidance for style attributes such as tempo, amplitude, or “professional / calm”.</p>
+<p class="num">6. Multi-agent coordination propagates errors and hits context limits. A planner mistake can still look internally consistent to a speed-only tester. Long prompts and long reports consume the context window, force compaction, and can drop constraints.</p>
+<p class="num">7. The output format is not yet industry-ready. .npy suits research and internal scoring. Import into Unity, Unreal, Blender, or Maya needs a later FBX/GLB or BVH export.</p>
+
+<h2>e. Current Activities</h2>
+<p>Near-term focus. Teammates are building the user interface. My work is the path from prompt to Intent Schema, module routing, and revision handling: a prompt plus a reference image should produce a correct module plan, and a later revision should re-run only the affected modules.</p>
+<p>Work in progress:</p>
+<p class="num">1. Stress-test parsing on long scripts such as the smart-service-station prompt (scene, walk, wave, speech, face, and camera locks).</p>
+<p class="num">2. Fix action-module order when a prompt contains several consecutive actions, so the task graph follows the timeline instead of only the set of modules.</p>
+<p class="num">3. Check planner decisions with a HumanML3D-oriented action taxonomy and Decision Trace labels (correct / partial / wrong).</p>
+<p class="num">4. Keep module backends as mocks until a real generator is connected, and verify revision paths for texture, motion, key pose, and speed.</p>
+<p class="num">5. Export the UI contract and Decision Trace from the intent test console for the UI teammate.</p>
+<p>Next integration step. I will try to connect Kimodo, NVIDIA’s kinematic motion diffusion model, as a real text-to-motion backend behind the existing coder interface. Kimodo generates 3D skeletal motion from text and optional kinematic constraints. The evaluator and the intent router stay in place; the simulated clip editor is what this step is meant to replace. MDM and MotionDiffuse remain fallback options if the Kimodo integration does not fit the current feature pipeline.</p>
+<p>Example prompt (abridged). A modern smart service station. A digital human smiles, walks two steps to the centre shown in reference image N2, with the background frozen, a natural professional gait, and an occasional right-hand wave. She then stops, holds both hands in front, and speaks Cantonese with a small mouth movement and a calm expression. The camera stays fixed, and lighting and background must not jump. This is the complexity target for parsing, ordering, and routing.</p>
+<p>Status. Phase 1 is complete. Phase 2a is in progress: the harness and the evaluator are solid, and intent routing is prototyped. The immediate gaps are module order on multi-action prompts, and replacing the simulated generator—first by trying Kimodo. The 1st Stage Report is on schedule for submission on 22 September 2026.</p>
+
+</body>
+</html>
