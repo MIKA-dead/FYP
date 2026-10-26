@@ -1,0 +1,370 @@
+{
+  "schema_version": "edit_recipes_v1",
+  "notes": "Lookup by (action, intent, phase). success_count / fail_count updated after quality_gate. Prefer highest weight.",
+  "recipes": [
+    {
+      "id": "sit.trim_preamble",
+      "action": "sit_down",
+      "intents": [
+        "delete",
+        "trim"
+      ],
+      "phases": [
+        "preamble"
+      ],
+      "prompt_hints": [
+        "删去坐下前",
+        "去掉走动",
+        "不要先走",
+        "trim walk before sit"
+      ],
+      "ops": [
+        "geometric_only",
+        "trim_preamble"
+      ],
+      "forbid": [
+        "pre_sit_locomotion"
+      ],
+      "phase_speed": {},
+      "drop_phases": [],
+      "mf_hints": [
+        "sit down in place immediately, no walking before sitting"
+      ],
+      "strength": {
+        "slow": 0.35,
+        "fast": 1.75,
+        "delete_shorten": 1.85
+      },
+      "prefer_diffusion": false,
+      "weight": 1.0,
+      "success_count": 0,
+      "fail_count": 0
+    },
+    {
+      "id": "sit.slow_descend",
+      "action": "sit_down",
+      "intents": [
+        "slow"
+      ],
+      "phases": [
+        "descend"
+      ],
+      "prompt_hints": [
+        "下降慢",
+        "坐下过程放慢",
+        "slow the sit"
+      ],
+      "ops": [
+        "geometric_only",
+        "phase_speed"
+      ],
+      "forbid": [],
+      "phase_speed": {
+        "descend": 0.35
+      },
+      "drop_phases": [],
+      "mf_hints": [
+        "descend into the chair more slowly"
+      ],
+      "strength": {
+        "slow": 0.35,
+        "fast": 1.75
+      },
+      "prefer_diffusion": false,
+      "weight": 1.0,
+      "success_count": 0,
+      "fail_count": 0
+    },
+    {
+      "id": "sit.trim_trailing",
+      "action": "sit_down",
+      "intents": [
+        "delete",
+        "trim"
+      ],
+      "phases": [
+        "trailing"
+      ],
+      "prompt_hints": [
+        "删去坐下后",
+        "去掉多余",
+        "end after seated"
+      ],
+      "ops": [
+        "geometric_only",
+        "trim_trailing"
+      ],
+      "forbid": [
+        "post_sit_extra"
+      ],
+      "phase_speed": {},
+      "drop_phases": [],
+      "mf_hints": [
+        "hold the seated pose and end, no extra motion after sitting"
+      ],
+      "strength": {},
+      "prefer_diffusion": false,
+      "weight": 1.0,
+      "success_count": 0,
+      "fail_count": 0
+    },
+    {
+      "id": "wave.slow_wave",
+      "action": "wave_right",
+      "intents": [
+        "slow"
+      ],
+      "phases": [
+        "wave_right",
+        "wave_left"
+      ],
+      "prompt_hints": [
+        "挥手慢一点",
+        "wave slower"
+      ],
+      "ops": [
+        "geometric_only",
+        "phase_speed"
+      ],
+      "forbid": [],
+      "phase_speed": {
+        "wave_right": 0.4,
+        "wave_left": 0.4
+      },
+      "drop_phases": [],
+      "mf_hints": [
+        "wave the right hand more slowly, keep the other arm still"
+      ],
+      "strength": {
+        "slow": 0.4,
+        "fast": 1.7
+      },
+      "prefer_diffusion": false,
+      "weight": 1.0,
+      "success_count": 0,
+      "fail_count": 0
+    },
+    {
+      "id": "wave.drop_idle",
+      "action": "wave_right",
+      "intents": [
+        "delete",
+        "trim"
+      ],
+      "phases": [
+        "idle"
+      ],
+      "prompt_hints": [
+        "删掉停顿",
+        "去掉发呆",
+        "remove idle",
+        "现在生成动作没有走动，而是在左右跳跃，同时双臂同时挥舞。现在需要人物向前走右臂挥"
+      ],
+      "ops": [
+        "geometric_only",
+        "drop_phases"
+      ],
+      "forbid": [],
+      "phase_speed": {},
+      "drop_phases": [
+        "idle"
+      ],
+      "mf_hints": [
+        "remove idle pauses, keep walking and waving continuous"
+      ],
+      "strength": {},
+      "prefer_diffusion": false,
+      "weight": 1.08,
+      "success_count": 1,
+      "fail_count": 0
+    },
+    {
+      "id": "wave.boost_walk",
+      "action": "wave_right",
+      "intents": [
+        "semantic",
+        "fix"
+      ],
+      "phases": [
+        "walk_forward"
+      ],
+      "prompt_hints": [
+        "行走不够",
+        "左右跳",
+        "跳跃",
+        "没有走",
+        "more forward travel",
+        "hop",
+        "walk forward",
+        "no walking",
+        "lateral",
+        "jumping",
+        "现在生成动作没有走动，而是在左右跳跃，同时双臂同时挥舞。现在需要人物向前走右臂挥",
+        "效果稍微有改进，但是左臂没有跟随人移动，而且移动过程中双腿也没有来回前进的动作"
+      ],
+      "ops": [
+        "wave_walk_fix"
+      ],
+      "forbid": [],
+      "phase_speed": {},
+      "drop_phases": [],
+      "mf_hints": [
+        "wave to the side"
+      ],
+      "prefer_diffusion": false,
+      "prefer_kinematic_walk_wave": true,
+      "force_bridged_walk": true,
+      "strength": {
+        "slow": 0.45,
+        "fast": 1.55
+      },
+      "weight": 1.74,
+      "success_count": 3,
+      "fail_count": 0
+    },
+    {
+      "id": "wave.one_arm",
+      "action": "wave_right",
+      "intents": [
+        "semantic",
+        "fix"
+      ],
+      "phases": [
+        "wave_right"
+      ],
+      "prompt_hints": [
+        "只挥右手",
+        "不要双臂",
+        "单手挥",
+        "双臂",
+        "两只手",
+        "only right hand",
+        "both arm",
+        "both arms",
+        "one arm",
+        "left arm",
+        "right arm",
+        "现在生成动作没有走动，而是在左右跳跃，同时双臂同时挥舞。现在需要人物向前走右臂挥"
+      ],
+      "ops": [
+        "wave_walk_fix"
+      ],
+      "forbid": [],
+      "phase_speed": {},
+      "drop_phases": [],
+      "mf_hints": [
+        "wave to the side"
+      ],
+      "prefer_diffusion": false,
+      "prefer_kinematic_walk_wave": true,
+      "force_bridged_walk": true,
+      "strength": {},
+      "weight": 1.66,
+      "success_count": 2,
+      "fail_count": 0
+    },
+    {
+      "id": "walk.slow",
+      "action": "walk_forward",
+      "intents": [
+        "slow"
+      ],
+      "phases": [
+        "walk_forward",
+        "walk_slow"
+      ],
+      "prompt_hints": [
+        "走慢一点",
+        "慢走"
+      ],
+      "ops": [
+        "geometric_only",
+        "phase_speed"
+      ],
+      "forbid": [],
+      "phase_speed": {
+        "walk_forward": 0.4,
+        "walk_slow": 0.4
+      },
+      "drop_phases": [],
+      "mf_hints": [
+        "walk forward more slowly"
+      ],
+      "strength": {
+        "slow": 0.4,
+        "fast": 1.6
+      },
+      "prefer_diffusion": false,
+      "weight": 1.0,
+      "success_count": 0,
+      "fail_count": 0
+    },
+    {
+      "id": "turn.slow_turning",
+      "action": "turn_in_place",
+      "intents": [
+        "slow"
+      ],
+      "phases": [
+        "turning"
+      ],
+      "prompt_hints": [
+        "转身慢",
+        "转慢一点"
+      ],
+      "ops": [
+        "geometric_only",
+        "phase_speed"
+      ],
+      "forbid": [],
+      "phase_speed": {
+        "turning": 0.4
+      },
+      "drop_phases": [],
+      "mf_hints": [
+        "turn in place more slowly without bending"
+      ],
+      "strength": {
+        "slow": 0.4,
+        "fast": 1.65
+      },
+      "prefer_diffusion": false,
+      "weight": 1.0,
+      "success_count": 0,
+      "fail_count": 0
+    },
+    {
+      "id": "wave_left.one_arm",
+      "action": "wave_left",
+      "intents": [
+        "semantic",
+        "fix"
+      ],
+      "phases": [
+        "wave_left"
+      ],
+      "prompt_hints": [
+        "只挥左手",
+        "左手挥",
+        "only left hand",
+        "双臂"
+      ],
+      "ops": [
+        "wave_walk_fix"
+      ],
+      "forbid": [],
+      "phase_speed": {},
+      "drop_phases": [],
+      "mf_hints": [
+        "wave to the side"
+      ],
+      "prefer_diffusion": false,
+      "prefer_kinematic_walk_wave": true,
+      "force_bridged_walk": true,
+      "strength": {},
+      "weight": 1.4,
+      "success_count": 0,
+      "fail_count": 0
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 # 运动模式库
 
+## 编辑配方记忆（edit_recipes）
+- **文件**：`edit_recipes.json`
+- **用途**：revise 时把用户说法对齐到 sit/wave/turn/walk 时间轴分段，检索可更新配方（几何变速 / 删段 / MotionsFix 扩散提示）
+- **更新**：`quality_gate` 通过后 `edit_memory.record_outcome` 会抬高 `weight` / `success_count`；失败则降权——可继续人工增补或日后接检索训练
+
 ## 已提取模式
 
 ## 行走动作原型（2026-07-21）

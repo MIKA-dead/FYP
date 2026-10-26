@@ -94,9 +94,25 @@ def main():
     print(f"[mld_generate] {' '.join(cmd)}")
     env = os.environ.copy()
     env.setdefault("PYTHONUTF8", "1")
-    proc = subprocess.run(cmd, cwd=str(root), env=env)
-    if proc.returncode != 0:
-        raise SystemExit(f"MLD demo.py failed with code {proc.returncode}")
+    # Windows App Control / spaCy DLL can flake once; retry once.
+    proc = None
+    for attempt in range(2):
+        proc = subprocess.run(cmd, cwd=str(root), env=env)
+        if proc.returncode == 0:
+            break
+        if attempt == 0:
+            print(
+                f"[mld_generate] demo.py failed (code={proc.returncode}); retrying once…",
+                flush=True,
+            )
+            time.sleep(1.5)
+    if proc is None or proc.returncode != 0:
+        code = proc.returncode if proc is not None else -1
+        raise SystemExit(
+            f"MLD demo.py failed with code {code}. "
+            "If spaCy DLL is blocked by Windows policy, allow "
+            "miniconda3/envs/mld or reinstall: conda run -n mld pip install -U spacy"
+        )
 
     npy = _newest_example_npy(root / "results", since=t0 - 2)
     if npy is None:

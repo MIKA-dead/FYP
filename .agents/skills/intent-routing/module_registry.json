@@ -1,7 +1,161 @@
 {
-  "version": "1.0",
-  "description": "Pluggable modules the planner may route to. Two-week demos use mock=true implementations.",
+  "version": "1.1",
+  "description": "Pluggable modules: semantic ids for planner; backend ids for run_module.",
   "modules": [
+    {
+      "id": "mld_generate",
+      "name": "MLD Text→Joints",
+      "owner_agent": "motion-coder",
+      "inputs": ["mld_text", "length"],
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/mld_generate.py",
+      "env": "mld",
+      "description": "Generate joints via Motion Latent Diffusion."
+    },
+    {
+      "id": "mld_bridge",
+      "name": "MLD→MotionsFix Bridge",
+      "owner_agent": "motion-coder",
+      "inputs": ["joints_npy"],
+      "parallel_safe": false,
+      "revision_targets": [],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/mld_to_motionfix.py",
+      "env": "mld",
+      "description": "Fit MLD joints into MotionsFix source npy (+ face-front)."
+    },
+    {
+      "id": "motionfix_semantic_edit",
+      "name": "MotionsFix Semantic Edit",
+      "owner_agent": "motion-coder",
+      "inputs": ["motion_edit_plan", "source_npy_or_id"],
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/motionfix_edit.py",
+      "env": "motionfix",
+      "description": "MotionsFix diffusion/SDEdit driven by Intent→MotionEditPlan."
+    },
+    {
+      "id": "speed_edit",
+      "name": "Speed Edit",
+      "owner_agent": "motion-coder",
+      "inputs": ["revision.ops[speed]", "constraints.speed_scale", "source_npy"],
+      "parallel_safe": true,
+      "revision_targets": ["speed"],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/motionfix_edit.py",
+      "env": "motionfix",
+      "description": "Geometric root-speed retarget (edit_mode=speed); no semantic regen."
+    },
+    {
+      "id": "sit_hold_postprocess",
+      "name": "Sit Hold Postprocess",
+      "owner_agent": "motion-coder",
+      "inputs": ["edited_npy", "refine.forbid"],
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/sit_hold_postprocess.py",
+      "env": "motionfix",
+      "description": "After MotionsFix: damp yaw, freeze limbs after pelvis contact (kill rebound/stretch)."
+    },
+    {
+      "id": "timeline_postprocess",
+      "name": "Timeline Phase Postprocess",
+      "owner_agent": "motion-coder",
+      "inputs": ["edited_npy", "refine.phase_speed", "refine.drop_phases"],
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/timeline_postprocess.py",
+      "env": "motionfix",
+      "description": "Action-agnostic phase speed / drop for wave, walk, turn timelines."
+    },
+    {
+      "id": "wave_walk_postprocess",
+      "name": "Wave Walk Postprocess",
+      "owner_agent": "motion-coder",
+      "inputs": ["edited_npy", "primary_action"],
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/wave_walk_postprocess.py",
+      "env": "motionfix",
+      "description": "Force forward travel, damp other arm, boost waving arm for walk+wave."
+    },
+    {
+      "id": "quality_gate",
+      "name": "Quality Gate",
+      "owner_agent": "motion-tester",
+      "inputs": ["edited_npy", "primary_action"],
+      "parallel_safe": false,
+      "revision_targets": [],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/session/quality_gate.py",
+      "env": "motionfix",
+      "description": "Hard/soft checks on edited joints; score for UI."
+    },
+    {
+      "id": "motion_caption",
+      "name": "Motion→Text Caption",
+      "owner_agent": "motion-tester",
+      "inputs": ["edited_npy", "quality_json"],
+      "parallel_safe": true,
+      "revision_targets": [],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/session/motion_caption.py",
+      "env": "host",
+      "description": "Automatic textual feedback (rule-based M2T; optional MOTION_CAPTION_CMD)."
+    },
+    {
+      "id": "simmotion_edit",
+      "name": "SimMotionEdit (optional)",
+      "owner_agent": "motion-coder",
+      "inputs": ["source_npy", "edit_text"],
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/simmotion_edit.py",
+      "env": "simmotion",
+      "description": "Optional CVPR25 editor; requires third_party/SimMotionEdit + checkpoints."
+    },
+    {
+      "id": "visualize",
+      "name": "Motion Visualize",
+      "owner_agent": "motion-coder",
+      "inputs": ["npy", "out_gif"],
+      "parallel_safe": true,
+      "revision_targets": [],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/visualize_motion.py",
+      "env": "motionfix",
+      "description": "Render skeleton preview GIF."
+    },
+    {
+      "id": "mock",
+      "name": "Mock No-Op",
+      "owner_agent": "motion-coder",
+      "inputs": [],
+      "parallel_safe": true,
+      "revision_targets": [],
+      "mock": true,
+      "backend": true,
+      "description": "No-op for lock/stub semantic modules."
+    },
     {
       "id": "bg_lock",
       "name": "Background Lock",
@@ -10,6 +164,7 @@
       "parallel_safe": true,
       "revision_targets": [],
       "mock": true,
+      "maps_to": ["mock"],
       "description": "Freeze background / distant scene to a reference image."
     },
     {
@@ -20,6 +175,7 @@
       "parallel_safe": true,
       "revision_targets": [],
       "mock": true,
+      "maps_to": ["mock"],
       "description": "Disable camera move and cuts."
     },
     {
@@ -30,6 +186,7 @@
       "parallel_safe": true,
       "revision_targets": ["texture"],
       "mock": true,
+      "maps_to": ["mock"],
       "description": "Bind character look to a front/side reference image."
     },
     {
@@ -40,6 +197,7 @@
       "parallel_safe": true,
       "revision_targets": ["texture"],
       "mock": true,
+      "maps_to": ["mock"],
       "description": "Adjust material, lighting look, face cleanliness without changing motion."
     },
     {
@@ -50,8 +208,9 @@
       "humanml3d_class": "WALK",
       "parallel_safe": false,
       "revision_targets": ["motion", "speed"],
-      "mock": true,
-      "description": "Generate or retrieve walking motion (HumanML3D WALK)."
+      "mock": false,
+      "maps_to": ["mld_generate", "mld_bridge", "motionfix_semantic_edit"],
+      "description": "Walk via MLD+bridge+edit (or MotionsFix native when plan says so)."
     },
     {
       "id": "locomotion_run",
@@ -61,8 +220,9 @@
       "humanml3d_class": "RUN",
       "parallel_safe": false,
       "revision_targets": ["motion", "speed"],
-      "mock": true,
-      "description": "Running motion module."
+      "mock": false,
+      "maps_to": ["mld_generate", "mld_bridge", "motionfix_semantic_edit"],
+      "description": "Running motion via MLD chain."
     },
     {
       "id": "action_jump",
@@ -72,7 +232,8 @@
       "humanml3d_class": "JUMP",
       "parallel_safe": false,
       "revision_targets": ["motion", "speed"],
-      "mock": true,
+      "mock": false,
+      "maps_to": ["mld_generate", "mld_bridge", "motionfix_semantic_edit"],
       "description": "Jump motion (see T001 patterns)."
     },
     {
@@ -83,8 +244,21 @@
       "humanml3d_class": "TURN",
       "parallel_safe": false,
       "revision_targets": ["motion"],
-      "mock": true,
-      "description": "In-place or stepping turn."
+      "mock": false,
+      "maps_to": ["motionfix_semantic_edit"],
+      "description": "In-place or stepping turn (prefer MotionsFix native)."
+    },
+    {
+      "id": "action_sit",
+      "name": "Sit Action",
+      "owner_agent": "motion-coder",
+      "inputs": ["timeline[sit_*]"],
+      "humanml3d_class": "SIT",
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": false,
+      "maps_to": ["motionfix_semantic_edit"],
+      "description": "Sit-down (large span → MotionsFix native edit)."
     },
     {
       "id": "idle_stand",
@@ -95,6 +269,7 @@
       "parallel_safe": false,
       "revision_targets": ["motion", "key_pose"],
       "mock": true,
+      "maps_to": ["motionfix_semantic_edit"],
       "description": "Standing idle with mild expression."
     },
     {
@@ -105,6 +280,7 @@
       "parallel_safe": false,
       "revision_targets": ["key_pose"],
       "mock": true,
+      "maps_to": ["motionfix_semantic_edit"],
       "description": "Hold a key pose aligned to a reference image (e.g. N2)."
     },
     {
@@ -115,6 +291,7 @@
       "parallel_safe": false,
       "revision_targets": ["key_pose", "motion"],
       "mock": true,
+      "maps_to": ["motionfix_semantic_edit"],
       "description": "Align root/end pose to a reference frame/image."
     },
     {
@@ -124,8 +301,9 @@
       "inputs": ["timeline.gesture"],
       "parallel_safe": true,
       "revision_targets": ["motion"],
-      "mock": true,
-      "description": "Occasional hand wave overlay on locomotion/idle."
+      "mock": false,
+      "maps_to": ["motionfix_semantic_edit"],
+      "description": "Hand wave via MotionsFix (prefer native id)."
     },
     {
       "id": "gesture_bow",
@@ -135,17 +313,8 @@
       "parallel_safe": false,
       "revision_targets": ["motion"],
       "mock": true,
+      "maps_to": ["motionfix_semantic_edit"],
       "description": "Bowing gesture."
-    },
-    {
-      "id": "speed_edit",
-      "name": "Speed Edit",
-      "owner_agent": "motion-coder",
-      "inputs": ["revision.ops[speed]", "timeline.speed"],
-      "parallel_safe": true,
-      "revision_targets": ["speed"],
-      "mock": true,
-      "description": "Retarget playback / locomotion speed without regenerating semantics."
     },
     {
       "id": "keypose_edit",
@@ -155,6 +324,7 @@
       "parallel_safe": false,
       "revision_targets": ["key_pose"],
       "mock": true,
+      "maps_to": ["motionfix_semantic_edit"],
       "description": "Adjust held pose / hand clasp to a reference."
     },
     {
@@ -165,6 +335,7 @@
       "parallel_safe": false,
       "revision_targets": ["motion"],
       "mock": true,
+      "maps_to": ["motionfix_semantic_edit"],
       "description": "Local motion tweak (gesture side, step count, path offset)."
     },
     {
@@ -175,6 +346,7 @@
       "parallel_safe": true,
       "revision_targets": ["motion"],
       "mock": true,
+      "maps_to": ["mock"],
       "description": "Mock lip-sync / mouth amplitude control for speech segments."
     },
     {
@@ -185,6 +357,7 @@
       "parallel_safe": true,
       "revision_targets": [],
       "mock": true,
+      "maps_to": ["mock"],
       "description": "Attach script metadata (Cantonese etc.); TTS left to external pipeline."
     },
     {
@@ -195,7 +368,8 @@
       "parallel_safe": false,
       "revision_targets": ["motion", "speed", "key_pose"],
       "mock": true,
-      "description": "Stitch multi-segment actions into one clip."
+      "maps_to": [],
+      "description": "Stitch multi-segment actions into one clip (planned)."
     },
     {
       "id": "quality_check",
@@ -204,8 +378,9 @@
       "inputs": ["artifact", "intent"],
       "parallel_safe": false,
       "revision_targets": [],
-      "mock": true,
-      "description": "Validate output against intent constraints."
+      "mock": false,
+      "maps_to": ["quality_gate"],
+      "description": "Validate output via quality_gate backend."
     }
   ]
 }

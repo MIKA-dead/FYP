@@ -43,6 +43,8 @@ def load_joints(path: Path, smpl_path: Optional[Path] = None) -> Tuple[np.ndarra
                 return np.asarray(obj["joints_mld"], dtype=np.float32), "joints_mld"
             if "joints" in obj:
                 return np.asarray(obj["joints"], dtype=np.float32), "joints"
+            if "joint_positions" in obj:
+                return np.asarray(obj["joint_positions"], dtype=np.float32), "joint_positions"
             if "pose" in obj:
                 pose = np.asarray(obj["pose"], dtype=np.float32)
                 joints = pose_to_joints(pose, smpl_path)
@@ -90,6 +92,12 @@ def pose_to_joints(pose: np.ndarray, smpl_path: Optional[Path]) -> np.ndarray:
         return out.joints[:, :22].cpu().numpy().astype(np.float32)
 
 
+def _detect_z_up(joints: np.ndarray) -> bool:
+    """MotionFix/AMASS: head-pelvis dominated by Z; MLD/SMPL: by Y."""
+    hp = joints[:, 15] - joints[:, 0]
+    return float(np.abs(hp[:, 2]).mean()) > float(np.abs(hp[:, 1]).mean())
+
+
 def render_skeleton_video(
     joints: np.ndarray,
     out_path: Path,
@@ -97,6 +105,7 @@ def render_skeleton_video(
     title: str = "",
     elev: float = 15,
     azim: float = -60,
+    z_up: Optional[bool] = None,
 ) -> Path:
     import matplotlib
 
@@ -106,11 +115,24 @@ def render_skeleton_video(
 
     assert joints.ndim == 3 and joints.shape[1] == 22
     T = joints.shape[0]
-    # Center XY for camera; keep Y height
+    if z_up is None:
+        z_up = _detect_z_up(joints)
+
+    # Plot-vertical = gravity axis (Y for MLD, Z for MotionFix).
     centered = joints.copy()
-    root_xz = joints[:, 0, [0, 2]].mean(axis=0)
-    centered[:, :, 0] -= root_xz[0]
-    centered[:, :, 2] -= root_xz[1]
+    if z_up:
+        # center X/Y (ground plane); vertical = Z
+        root_xy = joints[:, 0, [0, 1]].mean(axis=0)
+        centered[:, :, 0] -= root_xy[0]
+        centered[:, :, 1] -= root_xy[1]
+        horiz_a, horiz_b, vert = 0, 1, 2
+        xlab, ylab, zlab = "X", "Y", "Z(up)"
+    else:
+        root_xz = joints[:, 0, [0, 2]].mean(axis=0)
+        centered[:, :, 0] -= root_xz[0]
+        centered[:, :, 2] -= root_xz[1]
+        horiz_a, horiz_b, vert = 0, 2, 1
+        xlab, ylab, zlab = "X", "Z", "Y(up)"
 
     mins = centered.min(axis=(0, 1))
     maxs = centered.max(axis=(0, 1))
@@ -128,12 +150,12 @@ def render_skeleton_video(
         lines.append(ln)
     (root_trail,) = ax.plot([], [], [], "-", lw=1, alpha=0.4)
 
-    ax.set_xlim(mid[0] - span / 2, mid[0] + span / 2)
-    ax.set_ylim(mid[2] - span / 2, mid[2] + span / 2)
-    ax.set_zlim(mins[1], maxs[1] + 0.05 * span)
-    ax.set_xlabel("X")
-    ax.set_ylabel("Z")
-    ax.set_zlabel("Y")
+    ax.set_xlim(mid[horiz_a] - span / 2, mid[horiz_a] + span / 2)
+    ax.set_ylim(mid[horiz_b] - span / 2, mid[horiz_b] + span / 2)
+    ax.set_zlim(mins[vert], maxs[vert] + 0.05 * span)
+    ax.set_xlabel(xlab)
+    ax.set_ylabel(ylab)
+    ax.set_zlabel(zlab)
     ax.view_init(elev=elev, azim=azim)
 
     trail_x, trail_y, trail_z = [], [], []
@@ -142,11 +164,11 @@ def render_skeleton_video(
         j = centered[frame]
         for ln, chain in zip(lines, SKELETON_CHAINS):
             pts = j[chain]
-            ln.set_data(pts[:, 0], pts[:, 2])
-            ln.set_3d_properties(pts[:, 1])
-        trail_x.append(j[0, 0])
-        trail_y.append(j[0, 2])
-        trail_z.append(j[0, 1])
+            ln.set_data(pts[:, horiz_a], pts[:, horiz_b])
+            ln.set_3d_properties(pts[:, vert])
+        trail_x.append(j[0, horiz_a])
+        trail_y.append(j[0, horiz_b])
+        trail_z.append(j[0, vert])
         root_trail.set_data(trail_x, trail_y)
         root_trail.set_3d_properties(trail_z)
         return lines + [root_trail]

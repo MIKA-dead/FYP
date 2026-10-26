@@ -43,9 +43,16 @@
     {
       "id": "turn_in_place",
       "humanml3d_class": "TURN",
-      "keywords_zh": ["转身", "转体", "旋转"],
-      "keywords_en": ["turn", "spin"],
-      "default_modules": ["action_turn"]
+      "keywords_zh": ["转身", "转体", "旋转", "转过来"],
+      "keywords_en": ["turn", "turn around", "spin", "rotate"],
+      "default_modules": ["action_turn", "motionfix_semantic_edit"]
+    },
+    {
+      "id": "sit_down",
+      "humanml3d_class": "SIT",
+      "keywords_zh": ["坐下", "坐下来", "坐着", "就坐"],
+      "keywords_en": ["sit", "sit down", "sitting", "seat"],
+      "default_modules": ["action_sit", "motionfix_semantic_edit"]
     },
     {
       "id": "hold_pose",
@@ -58,15 +65,15 @@
       "id": "wave_right",
       "humanml3d_class": "REACH",
       "keywords_zh": ["招手", "右手", "挥手"],
-      "keywords_en": ["wave", "right hand"],
-      "default_modules": ["gesture_wave"]
+      "keywords_en": ["wave", "wave the right hand", "right hand", "waving"],
+      "default_modules": ["gesture_wave", "motionfix_semantic_edit"]
     },
     {
       "id": "wave_left",
       "humanml3d_class": "REACH",
       "keywords_zh": ["左手招手", "左手挥手"],
-      "keywords_en": ["left wave"],
-      "default_modules": ["gesture_wave"]
+      "keywords_en": ["left wave", "wave left"],
+      "default_modules": ["gesture_wave", "motionfix_semantic_edit"]
     },
     {
       "id": "bow",
@@ -74,6 +81,13 @@
       "keywords_zh": ["鞠躬"],
       "keywords_en": ["bow"],
       "default_modules": ["gesture_bow"]
+    },
+    {
+      "id": "sit_down",
+      "humanml3d_class": "SIT",
+      "keywords_zh": ["坐下", "坐着", "入座", "蹲下"],
+      "keywords_en": ["sit", "sit down", "sitting", "crouch"],
+      "default_modules": ["motionfix_semantic_edit"]
     },
     {
       "id": "speak",
@@ -86,7 +100,7 @@
   "revision_keywords": {
     "speed": ["慢", "快", "速度", "再慢", "更快", "slower", "faster", "speed"],
     "key_pose": ["姿势", "姿态", "关键姿态", "双手", "按 N", "key pose", "pose"],
-    "motion": ["招手", "步伐", "往前", "半步", "动作", "左手", "右手", "motion"],
+    "motion": ["招手", "步伐", "往前", "半步", "动作", "左手", "右手", "坐下", "转身", "sit", "wave", "turn", "motion"],
     "texture": ["质感", "纹理", "衣服", "光线", "阴影", "面部", "texture", "材质", "哑光"]
   }
 }

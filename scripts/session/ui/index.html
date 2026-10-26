@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Motion Studio · Session</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #0c0e10;
+  --bg-elev: #12151a;
+  --panel: #161a21;
+  --panel-2: #1c222c;
+  --line: #2a3340;
+  --line-soft: #222933;
+  --text: #e8edf4;
+  --muted: #8b97a8;
+  --dim: #5c6b7c;
+  --accent: #3ddc97;
+  --accent-dim: rgba(61, 220, 151, 0.12);
+  --accent-2: #6ec8ff;
+  --warn: #e6b84d;
+  --bad: #ff6b6b;
+  --user: #243044;
+  --radius: 10px;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --sans: "IBM Plex Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --shadow: 0 12px 40px rgba(0,0,0,.45);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font-family: var(--sans);
+  background:
+    radial-gradient(900px 500px at 0% 0%, rgba(61,220,151,.06), transparent 55%),
+    radial-gradient(700px 400px at 100% 100%, rgba(110,200,255,.05), transparent 50%),
+    var(--bg);
+  color: var(--text);
+  overflow: hidden;
+}
+.app {
+  display: grid;
+  grid-template-columns: minmax(380px, 1.05fr) minmax(420px, 1fr);
+  height: 100vh;
+}
+@media (max-width: 980px) {
+  .app { grid-template-columns: 1fr; grid-template-rows: 55vh 45vh; }
+}
+
+/* LEFT chat */
+.chat {
+  display: flex; flex-direction: column;
+  border-right: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--bg-elev), var(--bg));
+  min-height: 0;
+}
+.chat-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(18,21,26,.85);
+  backdrop-filter: blur(8px);
+}
+.brand {
+  display: flex; align-items: baseline; gap: 10px;
+}
+.brand h1 {
+  margin: 0; font-size: 0.95rem; font-weight: 700; letter-spacing: .02em;
+}
+.brand .tag {
+  font-family: var(--mono); font-size: 0.68rem; color: var(--accent);
+  background: var(--accent-dim); border: 1px solid rgba(61,220,151,.25);
+  padding: 2px 8px; border-radius: 999px;
+}
+.thread-meta { font-family: var(--mono); font-size: 0.68rem; color: var(--dim); }
+
+.messages {
+  flex: 1; overflow: auto; padding: 18px 16px 8px;
+  scroll-behavior: smooth;
+}
+.msg {
+  max-width: 92%; margin-bottom: 14px;
+  animation: rise .28s ease-out;
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.msg.user { margin-left: auto; }
+.msg .bubble {
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  line-height: 1.55; font-size: 0.92rem;
+  white-space: pre-wrap;
+}
+.msg.user .bubble {
+  background: var(--user);
+  border-color: #33455e;
+}
+.msg .role {
+  font-family: var(--mono); font-size: 0.65rem; color: var(--dim);
+  margin-bottom: 5px; letter-spacing: .04em; text-transform: uppercase;
+}
+.msg.user .role { text-align: right; }
+
+.reasoning {
+  margin-top: 10px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: #0e1217;
+  overflow: hidden;
+}
+.reasoning summary {
+  cursor: pointer; list-style: none;
+  padding: 8px 12px;
+  font-family: var(--mono); font-size: 0.72rem;
+  color: var(--accent-2);
+  display: flex; align-items: center; gap: 8px;
+}
+.reasoning summary::-webkit-details-marker { display: none; }
+.reasoning summary::before { content: "▸"; color: var(--dim); }
+.reasoning[open] summary::before { content: "▾"; }
+.reasoning .body { padding: 0 12px 12px; }
+.phase {
+  margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line-soft);
+}
+.phase:first-child { border-top: 0; margin-top: 0; }
+.phase h4 {
+  margin: 0 0 6px; font-size: 0.75rem; font-weight: 600; color: var(--muted);
+  font-family: var(--mono);
+}
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  font-family: var(--mono); font-size: 0.68rem;
+  padding: 3px 8px; border-radius: 6px;
+  background: var(--panel-2); border: 1px solid var(--line);
+  color: var(--text);
+}
+.chip.mod { border-color: rgba(61,220,151,.35); color: var(--accent); }
+.chip.skill { border-color: rgba(110,200,255,.3); color: var(--accent-2); }
+.kv {
+  display: grid; grid-template-columns: 120px 1fr; gap: 4px 10px;
+  font-size: 0.78rem; font-family: var(--mono);
+}
+.kv .k { color: var(--dim); }
+.kv .v { color: var(--text); word-break: break-word; }
+
+.empty-hint {
+  color: var(--muted); font-size: 0.9rem; padding: 28px 12px;
+  text-align: center; line-height: 1.6;
+}
+.empty-hint code {
+  font-family: var(--mono); font-size: 0.78rem;
+  background: var(--panel); padding: 1px 6px; border-radius: 4px;
+}
+
+/* composer */
+.composer {
+  border-top: 1px solid var(--line);
+  padding: 12px 14px 14px;
+  background: rgba(12,14,16,.92);
+}
+.demos {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;
+}
+.demo-btn {
+  font-family: var(--mono); font-size: 0.68rem;
+  border: 1px solid var(--line); background: var(--panel);
+  color: var(--muted); border-radius: 999px; padding: 5px 10px; cursor: pointer;
+}
+.demo-btn:hover { color: var(--accent); border-color: rgba(61,220,151,.4); }
+.composer-box {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: border-color .15s;
+}
+.composer-box:focus-within { border-color: rgba(61,220,151,.45); }
+.composer-box textarea {
+  width: 100%; border: 0; outline: none; resize: none;
+  background: transparent; color: var(--text);
+  font: 0.95rem/1.5 var(--sans);
+  padding: 12px 14px 6px; min-height: 72px; max-height: 160px;
+}
+.composer-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px 10px; flex-wrap: wrap;
+}
+.select, .toggle {
+  font-family: var(--mono); font-size: 0.72rem;
+  background: var(--panel-2); color: var(--text);
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 7px 10px;
+}
+.toggle {
+  display: inline-flex; align-items: center; gap: 6px; cursor: pointer; user-select: none;
+}
+.toggle input { accent-color: var(--accent); }
+.spacer { flex: 1; }
+.send {
+  font-family: var(--sans); font-weight: 600; font-size: 0.85rem;
+  background: var(--accent); color: #04140c;
+  border: 0; border-radius: 8px; padding: 8px 16px; cursor: pointer;
+}
+.send:disabled { opacity: .45; cursor: wait; }
+.send:hover:not(:disabled) { filter: brightness(1.05); }
+
+/* RIGHT preview */
+.stage {
+  display: flex; flex-direction: column; min-height: 0; height: 100%;
+  background: #090b0d;
+  overflow: hidden;
+}
+.stage-head {
+  padding: 14px 18px; border-bottom: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  flex: 0 0 auto;
+}
+.stage-head h2 { margin: 0; font-size: 0.9rem; font-weight: 650; }
+.badge {
+  font-family: var(--mono); font-size: 0.68rem;
+  padding: 3px 8px; border-radius: 6px; border: 1px solid var(--line);
+}
+.badge.ok { color: var(--accent); border-color: rgba(61,220,151,.35); background: var(--accent-dim); }
+.badge.bad { color: var(--bad); border-color: rgba(255,107,107,.35); }
+.badge.warn { color: var(--warn); border-color: rgba(230,184,77,.35); }
+
+.viewport {
+  flex: 1 1 auto;
+  min-height: 220px;
+  display: grid; place-items: center;
+  padding: 12px 16px; position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background:
+    linear-gradient(rgba(42,51,64,.35) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, rgba(42,51,64,.35) 1px, transparent 1px) 0 0 / 28px 28px,
+    #0a0c0f;
+}
+.viewport img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto; height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #111;
+  box-shadow: var(--shadow);
+}
+.viewport .placeholder {
+  color: var(--dim); font-family: var(--mono); font-size: 0.8rem; text-align: center;
+  line-height: 1.7;
+}
+
+.timeline-resizer {
+  flex: 0 0 8px;
+  cursor: row-resize;
+  background: linear-gradient(180deg, #1a222c, #12171e);
+  border-top: 1px solid rgba(61,220,151,.25);
+  border-bottom: 1px solid rgba(61,220,151,.15);
+  position: relative;
+  z-index: 2;
+  touch-action: none;
+}
+.timeline-resizer:hover,
+.timeline-resizer.is-dragging {
+  background: linear-gradient(180deg, #243040, #1a222c);
+}
+.timeline-resizer::after {
+  content: "";
+  position: absolute; left: 50%; top: 50%;
+  width: 40px; height: 3px; margin: -1.5px 0 0 -20px;
+  border-radius: 2px; background: rgba(61,220,151,.55);
+}
+.timeline-wrap {
+  padding: 8px 16px 10px;
+  background: linear-gradient(180deg, #101820, #0c0e11);
+  flex: 0 0 auto;
+  height: 120px;
+  min-height: 72px;
+  max-height: min(42vh, 360px);
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(61,220,151,.12);
+}
+.timeline-label {
+  font-family: var(--mono); font-size: 0.72rem; color: var(--accent); margin-bottom: 8px;
+  letter-spacing: .02em;
+}
+.timeline {
+  display: flex; height: 14px; border-radius: 5px; overflow: hidden;
+  border: 1px solid rgba(61,220,151,.25); background: #15181c;
+}
+.timeline .seg {
+  height: 100%; position: relative; min-width: 2px;
+}
+.timeline .seg.ok { background: #3ddc97; opacity: .9; }
+.timeline .seg.problem { background: #ff6b6b; opacity: .95; box-shadow: inset 0 0 0 1px rgba(0,0,0,.25); }
+.timeline .seg.neutral { background: #4a5568; }
+.timeline-legend {
+  display: flex; flex-wrap: wrap; gap: 6px 12px; margin-top: 8px;
+  font-family: var(--mono); font-size: 0.68rem; color: var(--muted);
+  line-height: 1.45;
+}
+.timeline-legend .lg {
+  display: inline-flex; align-items: center; gap: 6px;
+  max-width: 100%;
+}
+.timeline-legend .dot {
+  width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0;
+}
+.timeline-legend .dot.ok { background: #3ddc97; }
+.timeline-legend .dot.problem { background: #ff6b6b; }
+.timeline-legend .dot.neutral { background: #4a5568; }
+.timeline-meta {
+  margin-top: 6px; font-family: var(--mono); font-size: 0.66rem; color: var(--dim);
+  line-height: 1.45; word-break: break-word;
+}
+.timeline-ops {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; align-items: center;
+}
+.timeline-ops .ops-label {
+  font-family: var(--mono); font-size: 0.66rem; color: var(--accent); margin-right: 4px;
+}
+.timeline-ops .phase-card {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px;
+  background: #12151a; min-width: 112px;
+}
+.timeline-ops .phase-card .ph-name {
+  font-family: var(--mono); font-size: 0.64rem; color: var(--muted);
+}
+.timeline-ops .phase-card .ph-btns { display: flex; gap: 4px; }
+.timeline-ops button {
+  font-family: var(--mono); font-size: 0.62rem;
+  padding: 4px 9px; border-radius: 4px; cursor: pointer;
+  border: 1px solid rgba(61,220,151,.35);
+  background: #1c2630; color: #e8eef5;
+  opacity: 1;
+}
+.timeline-ops button:hover { border-color: var(--accent); color: var(--accent); background: #223040; }
+.timeline-ops button.danger {
+  border-color: rgba(255,107,107,.4); color: #ffc9c9;
+}
+.timeline-ops button.danger:hover { border-color: #ff6b6b; color: #fff; background: #3a2222; }
+.timeline-ops button:disabled,
+.timeline-ops button.is-busy {
+  opacity: .45; cursor: wait; pointer-events: none;
+}
+
+.side-panels {
+  border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: 1fr 1fr;
+  flex: 0 0 auto;
+  max-height: 140px;
+  min-height: 0;
+  overflow: hidden;
+  z-index: 1;
+  background: #0a0c0f;
+}
+.side-panels > div {
+  padding: 12px 14px; overflow: auto;
+  border-right: 1px solid var(--line);
+}
+.side-panels > div:last-child { border-right: 0; }
+.side-panels h3 {
+  margin: 0 0 8px; font-size: 0.72rem; font-family: var(--mono);
+  color: var(--muted); letter-spacing: .04em; text-transform: uppercase;
+}
+.metric {
+  display: flex; justify-content: space-between; gap: 8px;
+  font-family: var(--mono); font-size: 0.72rem;
+  padding: 3px 0; border-bottom: 1px solid var(--line-soft);
+}
+.metric span:last-child { color: var(--accent-2); }
+
+.busy {
+  position: absolute; inset: 0; display: none;
+  place-items: center; background: rgba(0,0,0,.45);
+  font-family: var(--mono); font-size: 0.8rem; color: var(--accent);
+}
+.busy.on { display: grid; }
+</style>
+</head>
+<body>
+<div class="app">
+  <section class="chat">
+    <header class="chat-head">
+      <div class="brand">
+        <h1>Motion Studio</h1>
+        <span class="tag">session</span>
+      </div>
+      <div class="thread-meta" id="threadMeta">new thread</div>
+    </header>
+    <div class="messages" id="messages">
+      <div class="empty-hint">
+        左侧对话 · 右侧动作预览<br />
+        试试下方 demo，或输入提示词。当前模型均为启发式编排（未接在线 LLM）。
+      </div>
+    </div>
+    <div class="composer">
+      <div class="demos" id="demos"></div>
+      <div class="composer-box">
+        <textarea id="prompt" placeholder="描述动作，例如：a person sits down&#10;改进：删去坐下前 / 下降部分减慢 / 再慢一点" rows="3"></textarea>
+        <div class="composer-bar">
+          <select class="select" id="model" title="模型"></select>
+          <select class="select" id="mode">
+            <option value="generate">generate</option>
+            <option value="revise">revise</option>
+          </select>
+          <label class="toggle" title="匹配 demo 提示词时用缓存 GIF（快）">
+            <input type="checkbox" id="demoCache" checked /> 快速演示
+          </label>
+          <span class="spacer"></span>
+          <button class="send" id="send">发送</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stage">
+    <header class="stage-head">
+      <h2>动作生成</h2>
+      <span class="badge" id="statusBadge">idle</span>
+    </header>
+    <div class="viewport" id="viewport">
+      <div class="placeholder">等待生成…<br />preview.gif 将显示在这里</div>
+      <div class="busy" id="busy">reasoning → modules → motion…</div>
+    </div>
+    <div class="timeline-resizer" id="timelineResizer" title="拖动调整时间轴高度"></div>
+    <div class="timeline-wrap" id="timelineWrap">
+      <div class="timeline-label">动作时间轴 · 拖动上方横条拉伸 · 绿=主动作 · 红=需改</div>
+      <div class="timeline" id="timelineBar">
+        <div class="seg neutral" style="flex:1"></div>
+      </div>
+      <div class="timeline-legend" id="timelineLegend">等待生成后显示分段名…</div>
+      <div class="timeline-ops" id="timelineOps" hidden></div>
+      <div class="timeline-meta" id="timelineMeta">位置：右侧预览正下方。点选分段「删 / 慢 / 快」直接发算子；也可打字（有 LLM key 时走模型）。</div>
+    </div>
+    <div class="side-panels">
+      <div>
+        <h3>Intent / modules</h3>
+        <div id="intentPanel" class="kv"><span class="k">—</span><span class="v">尚未运行</span></div>
+      </div>
+      <div>
+        <h3>Quality</h3>
+        <div id="qualityPanel"><div class="metric"><span>score</span><span>—</span></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+const state = {
+  threadId: null,
+  previousRun: null,
+  busy: false,
+  timeline: null,
+  primaryAction: null,
+  timelineUserSized: false,
+};
+
+const $ = (id) => document.getElementById(id);
+
+async function api(path, opts) {
+  const r = await fetch(path, opts);
+  const j = await r.json();
+  if (!r.ok) throw new Error(j.error || r.statusText);
+  return j;
+}
+
+function clearEmpty() {
+  const m = $("messages");
+  const hint = m.querySelector(".empty-hint");
+  if (hint) hint.remove();
+}
+
+function renderReasoning(reasoning) {
+  if (!reasoning) return "";
+  const steps = reasoning.steps || [];
+  let html = `<details class="reasoning"><summary>Reasoning · prompt / RAG · modules</summary><div class="body">`;
+  for (const ph of steps) {
+    html += `<div class="phase"><h4>${escapeHtml(ph.title || ph.phase)}</h4>`;
+    if (ph.phase === "skill_warmup") {
+      html += `<div class="chips">${(ph.items||[]).map(s =>
+        `<span class="chip skill" title="${escapeHtml(s.why||'')}">${escapeHtml(s.id)}</span>`
+      ).join("")}</div>`;
+    } else if (ph.phase === "modules") {
+      html += `<div class="chips">${(ph.items||[]).map(s =>
+        `<span class="chip mod" title="${escapeHtml(s.why||'')}">${escapeHtml(s.module)}${s.mock?' · mock':''}</span>`
+      ).join("")}</div>`;
+      if (ph.frozen && ph.frozen.length) {
+        html += `<div style="margin-top:6px;font-family:var(--mono);font-size:0.68rem;color:var(--dim)">frozen: ${ph.frozen.map(escapeHtml).join(", ")}</div>`;
+      }
+    } else if (Array.isArray(ph.items)) {
+      html += `<div class="kv">`;
+      for (const it of ph.items) {
+        if (it.k !== undefined) {
+          html += `<span class="k">${escapeHtml(String(it.k))}</span><span class="v">${escapeHtml(fmt(it.v))}</span>`;
+        }
+      }
+      html += `</div>`;
+    }
+    html += `</div>`;
+  }
+  html += `</div></details>`;
+  return html;
+}
+
+function fmt(v) {
+  if (v == null) return "—";
+  if (typeof v === "object") return JSON.stringify(v);
+  return String(v);
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;");
+}
+
+function appendMessage(msg) {
+  clearEmpty();
+  const el = document.createElement("div");
+  el.className = `msg ${msg.role}`;
+  const role = msg.role === "user" ? "You" : "Agent";
+  let body = `<div class="role">${role}${msg.model ? " · " + escapeHtml(msg.model) : ""}</div>`;
+  body += `<div class="bubble">${escapeHtml(msg.content || "")}`;
+  if (msg.reasoning) body += renderReasoning(msg.reasoning);
+  body += `</div>`;
+  el.innerHTML = body;
+  $("messages").appendChild(el);
+  $("messages").scrollTop = $("messages").scrollHeight;
+}
+
+function setBusy(on) {
+  state.busy = on;
+  $("send").disabled = on;
+  $("busy").classList.toggle("on", on);
+  $("statusBadge").textContent = on ? "running" : "idle";
+  $("statusBadge").className = "badge" + (on ? " warn" : "");
+  // Timeline buttons were rendered while busy=true and stayed disabled forever —
+  // sync enabled state here instead of relying on re-render.
+  const ops = $("timelineOps");
+  if (ops) {
+    ops.querySelectorAll("button").forEach((b) => {
+      b.disabled = false;
+      b.classList.toggle("is-busy", on);
+    });
+  }
+}
+
+function updateStage(session) {
+  if (!session) return;
+  const vp = $("viewport");
+  const imgPrev = vp.querySelector("img");
+  const ph = vp.querySelector(".placeholder");
+  if (session.preview_url) {
+    if (ph) ph.remove();
+    let img = imgPrev;
+    if (!img) {
+      img = document.createElement("img");
+      img.alt = "motion preview";
+      vp.insertBefore(img, $("busy"));
+    }
+    img.src = session.preview_url + "&t=" + Date.now();
+  }
+  const intent = session.intent || {};
+  const intentHtml = [
+    ["action", intent.primary_action],
+    ["mf_text", intent.mf_text],
+    ["policy", intent.source_policy || intent.edit_source],
+    ["source_id", intent.preferred_source_id],
+    ["cache", session.from_demo_cache ? "demo" : "live"],
+  ].map(([k,v]) => `<span class="k">${escapeHtml(k)}</span><span class="v">${escapeHtml(fmt(v))}</span>`).join("");
+  $("intentPanel").innerHTML = intentHtml || "—";
+
+  const q = session.quality || {};
+  const metrics = q.metrics || {};
+  let qHtml = `<div class="metric"><span>passed</span><span>${fmt(q.passed)}</span></div>`;
+  qHtml += `<div class="metric"><span>score</span><span>${fmt(q.score)}</span></div>`;
+  for (const [k,v] of Object.entries(metrics)) {
+    qHtml += `<div class="metric"><span>${escapeHtml(k)}</span><span>${escapeHtml(fmt(v))}</span></div>`;
+  }
+  $("qualityPanel").innerHTML = qHtml;
+
+  state.primaryAction = (session.intent || {}).primary_action || state.primaryAction;
+  // Demo / live responses carry run_dir — keep timeline buttons enabled.
+  if (session.run_dir) state.previousRun = session.run_dir;
+  renderTimeline(session.timeline || q.timeline);
+
+  const badge = $("statusBadge");
+  if (session.ok) {
+    badge.textContent = "ok · " + (q.score ?? "—");
+    badge.className = "badge ok";
+  } else {
+    badge.textContent = session.error || "failed";
+    badge.className = "badge bad";
+  }
+}
+
+function fitTimelineHeight(force) {
+  const wrap = $("timelineWrap");
+  if (!wrap || state.timelineUserSized) return;
+  // Measure content, keep preview above min-height by capping against stage.
+  const stage = wrap.closest(".stage");
+  const head = stage && stage.querySelector(".stage-head");
+  const side = stage && stage.querySelector(".side-panels");
+  const resizer = $("timelineResizer");
+  const stageH = stage ? stage.getBoundingClientRect().height : window.innerHeight;
+  const reserved =
+    (head ? head.getBoundingClientRect().height : 48) +
+    (side ? side.getBoundingClientRect().height : 120) +
+    (resizer ? resizer.getBoundingClientRect().height : 8) +
+    220; // viewport min
+  const maxH = Math.max(72, Math.min(window.innerHeight * 0.42, 360, stageH - reserved));
+  const prev = wrap.style.height;
+  wrap.style.height = "auto";
+  const need = Math.ceil(wrap.scrollHeight + 4);
+  wrap.style.height = prev || "";
+  const next = Math.max(88, Math.min(maxH, need));
+  if (force || !wrap.dataset.fitted || Math.abs(next - wrap.getBoundingClientRect().height) > 4) {
+    wrap.style.height = next + "px";
+    wrap.dataset.fitted = "1";
+  }
+}
+
+function renderTimeline(tl) {
+  const wrap = $("timelineWrap");
+  const bar = $("timelineBar");
+  const legend = $("timelineLegend");
+  const ops = $("timelineOps");
+  const meta = $("timelineMeta");
+  wrap.hidden = false;
+  state.timeline = tl && tl.phases ? tl : null;
+  if (!tl || !tl.T || !(tl.phases || []).length) {
+    bar.innerHTML = `<div class="seg neutral" style="flex:1"></div>`;
+    legend.textContent = "暂无分段（点 sit / wave demo 或发送提示词）";
+    ops.hidden = true;
+    ops.innerHTML = "";
+    meta.textContent = "拖动上方横条可拉伸时间轴。Ctrl+F5 强制刷新。";
+    fitTimelineHeight(true);
+    return;
+  }
+  const T = tl.T;
+  const tlKind = tl.kind || "motion";
+  bar.innerHTML = "";
+  legend.innerHTML = "";
+  ops.hidden = false;
+  ops.innerHTML = `<span class="ops-label">${escapeHtml(tlKind)} · 分段操作</span>`;
+  for (const ph of tl.phases) {
+    const len = Math.max(0, (ph.end || 0) - (ph.start || 0));
+    if (len <= 0) continue;
+    const okIds = new Set([
+      "descend", "seated_hold", "wave_right", "wave_left",
+      "walk_forward", "walk_slow", "turning",
+    ]);
+    const segKind = ph.problem ? "problem" : (okIds.has(ph.id) ? "ok" : "neutral");
+    const seg = document.createElement("div");
+    seg.className = "seg " + segKind;
+    seg.style.flex = String(len);
+    seg.title = `${ph.label || ph.id}: f${ph.start}–${ph.end}`;
+    bar.appendChild(seg);
+    const lg = document.createElement("span");
+    lg.className = "lg";
+    lg.innerHTML = `<span class="dot ${segKind}"></span>${escapeHtml(ph.label || ph.id)} f${ph.start}–${ph.end}`;
+    legend.appendChild(lg);
+
+    const card = document.createElement("div");
+    card.className = "phase-card";
+    card.innerHTML = `<div class="ph-name">${escapeHtml(ph.label || ph.id)}</div>`;
+    const btns = document.createElement("div");
+    btns.className = "ph-btns";
+    for (const [act, label, danger] of [
+      ["delete", "删", true],
+      ["slow", "慢", false],
+      ["fast", "快", false],
+    ]) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = label;
+      if (danger) b.className = "danger";
+      b.title = state.previousRun
+        ? `${label} · ${ph.label || ph.id}（发闭集算子，不依赖措辞）`
+        : "请先完成一次生成（demo 也可），再点选";
+      b.disabled = false;
+      b.classList.toggle("is-busy", Boolean(state.busy));
+      b.onclick = () => applyPhaseOp(ph.id, act, ph.label || ph.id);
+      btns.appendChild(b);
+    }
+    card.appendChild(btns);
+    ops.appendChild(card);
+  }
+  const probs = (tl.problems || []).join(", ") || "—";
+  const keep = tl.trim_suggestion
+    ? `建议保留 f${tl.trim_suggestion.keep_start}–${tl.trim_suggestion.keep_end}`
+    : "";
+  const extras = [];
+  if (tl.sit_start != null) extras.push(`sit_start=${tl.sit_start}`);
+  if (tl.contact != null) extras.push(`contact=${tl.contact}`);
+  if (tl.hold_end != null) extras.push(`hold_end=${tl.hold_end}`);
+  if (tl.root_travel != null) extras.push(`travel=${tl.root_travel}`);
+  meta.textContent =
+    `T=${T} · kind=${tlKind}` +
+    (extras.length ? ` · ${extras.join(" · ")}` : "") +
+    ` · problems=${probs}` +
+    (keep ? ` · ${keep}` : "") +
+    (state.previousRun ? "" : " · 先生成一次再点选") +
+    " · 拖横条拉伸";
+  requestAnimationFrame(() => fitTimelineHeight(true));
+}
+
+async function applyPhaseOp(phaseId, action, label) {
+  if (state.busy) return;
+  if (!state.previousRun) {
+    appendMessage({ role: "assistant", content: "请先生成/加载一段动作，再点时间轴操作。" });
+    return;
+  }
+  const model = $("model").value;
+  setBusy(true);
+  try {
+    const built = await api("/api/refine_op", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        phase_id: phaseId,
+        action,
+        previous_action: state.primaryAction || "sit_down",
+      }),
+    });
+    const refine = built.refine;
+    const prompt = `[时间轴] ${action} · ${label || phaseId}`;
+    appendMessage({ role: "user", content: prompt, model, mode: "revise" });
+    $("mode").value = "revise";
+    $("demoCache").checked = false;
+    const out = await api("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        prompt,
+        model,
+        mode: "revise",
+        thread_id: state.threadId,
+        previous_run: state.previousRun,
+        use_demo_cache: false,
+        force_full_run: true,
+        refine,
+        timeline: state.timeline,
+      }),
+    });
+    state.threadId = out.thread_id;
+    state.previousRun = out.previous_run;
+    $("threadMeta").textContent = (state.threadId || "").slice(0, 8) + "…";
+    appendMessage(out.assistant_message);
+    updateStage(out.assistant_message.session);
+  } catch (e) {
+    appendMessage({ role: "assistant", content: "错误：" + e.message });
+    $("statusBadge").textContent = "error";
+    $("statusBadge").className = "badge bad";
+  } finally {
+    setBusy(false);
+  }
+}
+
+async function send(extra) {
+  if (state.busy) return;
+  const prompt = (extra && extra.prompt) || $("prompt").value.trim();
+  if (!prompt && !(extra && extra.refine)) return;
+  const model = $("model").value;
+  const mode = (extra && extra.mode) || $("mode").value;
+  const useDemoCache = (extra && extra.refine) ? false : $("demoCache").checked;
+
+  appendMessage({ role: "user", content: prompt || "[timeline]", model, mode });
+  if (!extra) $("prompt").value = "";
+  setBusy(true);
+  try {
+    const body = {
+      prompt: prompt || "[timeline]",
+      model,
+      mode,
+      thread_id: state.threadId,
+      previous_run: mode === "revise" ? state.previousRun : null,
+      use_demo_cache: useDemoCache,
+      force_full_run: !useDemoCache,
+    };
+    if (extra && extra.refine) body.refine = extra.refine;
+    if (state.timeline) body.timeline = state.timeline;
+    const out = await api("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    state.threadId = out.thread_id;
+    state.previousRun = out.previous_run;
+    $("threadMeta").textContent = (state.threadId || "").slice(0, 8) + "…";
+    if (out.previous_run) $("mode").value = "revise";
+    appendMessage(out.assistant_message);
+    updateStage(out.assistant_message.session);
+  } catch (e) {
+    appendMessage({ role: "assistant", content: "错误：" + e.message });
+    $("statusBadge").textContent = "error";
+    $("statusBadge").className = "badge bad";
+  } finally {
+    setBusy(false);
+  }
+}
+
+function initTimelineResizer() {
+  const handle = $("timelineResizer");
+  const wrap = $("timelineWrap");
+  if (!handle || !wrap) return;
+  let dragging = false;
+  let startY = 0;
+  let startH = 0;
+  const onMove = (e) => {
+    if (!dragging) return;
+    const dy = startY - e.clientY; // drag up → taller timeline
+    const stage = wrap.closest(".stage");
+    const maxH = Math.min(
+      window.innerHeight * 0.5,
+      420,
+      stage ? stage.getBoundingClientRect().height - 260 : 420
+    );
+    const next = Math.max(72, Math.min(maxH, startH + dy));
+    wrap.style.height = next + "px";
+    state.timelineUserSized = true;
+  };
+  const onUp = () => {
+    if (!dragging) return;
+    dragging = false;
+    handle.classList.remove("is-dragging");
+    document.body.style.cursor = "";
+    document.body.style.userSelect = "";
+    window.removeEventListener("pointermove", onMove);
+    window.removeEventListener("pointerup", onUp);
+  };
+  handle.addEventListener("pointerdown", (e) => {
+    dragging = true;
+    handle.classList.add("is-dragging");
+    startY = e.clientY;
+    startH = wrap.getBoundingClientRect().height;
+    document.body.style.cursor = "row-resize";
+    document.body.style.userSelect = "none";
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+    e.preventDefault();
+  });
+  window.addEventListener("resize", () => {
+    if (!state.timelineUserSized) fitTimelineHeight(true);
+  });
+}
+
+async function init() {
+  initTimelineResizer();
+  const models = await api("/api/models");
+  const sel = $("model");
+  for (const m of models.models) {
+    const opt = document.createElement("option");
+    opt.value = m.id;
+    opt.textContent = m.label + (m.badge ? ` (${m.badge})` : "");
+    opt.title = m.desc;
+    sel.appendChild(opt);
+  }
+  const demos = await api("/api/demos");
+  const box = $("demos");
+  for (const c of demos.cases || []) {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "demo-btn";
+    b.textContent = c.id.replace("D_", "").toLowerCase();
+    b.title = c.prompt;
+    b.onclick = () => {
+      $("prompt").value = c.prompt;
+      $("mode").value = "generate";
+      $("demoCache").checked = true;
+      send();
+    };
+    box.appendChild(b);
+  }
+  $("send").onclick = send;
+  $("prompt").addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      send();
+    }
+  });
+}
+
+init().catch((e) => {
+  $("messages").innerHTML = `<div class="empty-hint">启动失败：${escapeHtml(e.message)}</div>`;
+});
+</script>
+</body>
+</html>

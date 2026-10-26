@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "description": "Reproducible UI demos for sit / wave / turn / slow walk. Golden paths point at last known-good session outputs; use --rerun to regenerate via session_api.",
+  "cases": [
+    {
+      "id": "D_SIT",
+      "prompt": "a person sits down",
+      "mode": "generate",
+      "primary_action": "sit_down",
+      "expected_edit_source": "motionfix_id",
+      "expected_source_id": "000236",
+      "golden_run": "outputs/v05/session_sit/gen",
+      "revise_followup": {
+        "prompt": "坐下姿势不对，改成真正坐下，不要跪着",
+        "golden_run": "outputs/v05/session_sit/rev1"
+      },
+      "quality": {
+        "require_passed": true,
+        "min_score": 70
+      }
+    },
+    {
+      "id": "D_WAVE",
+      "prompt": "a person walks forward and waves with the right hand",
+      "mode": "generate",
+      "primary_action": "wave_right",
+      "expected_edit_source": "motionfix_id",
+      "expected_source_id": "001318",
+      "golden_run": "outputs/v05/session_more/wave",
+      "quality": {
+        "require_passed": true,
+        "min_score": 70
+      }
+    },
+    {
+      "id": "D_TURN",
+      "prompt": "a person turns around 180 degrees",
+      "mode": "generate",
+      "primary_action": "turn_in_place",
+      "expected_edit_source": "motionfix_id",
+      "expected_source_id": "004922",
+      "golden_run": "outputs/v05/session_more/turn",
+      "quality": {
+        "require_passed": true,
+        "min_score": 70
+      }
+    },
+    {
+      "id": "D_SLOW",
+      "prompt": "a person walks forward slowly",
+      "mode": "generate",
+      "primary_action": "walk_slow",
+      "expected_edit_source": "bridged_npy",
+      "expected_source_id": null,
+      "golden_run": "outputs/v05/session_more/slow",
+      "quality": {
+        "require_passed": true,
+        "min_score": 60
+      }
+    }
+  ]
+}

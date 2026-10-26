@@ -27,6 +27,9 @@ KIT-ML/
 HumanML3D/
 !KIT-ML/README.md   # 如果有说明文件可以例外
 
+# Optional heavy third-party checkouts (clone locally; see backends/README_*.md)
+third_party/SimMotionEdit/
+
 # 输出产物（生成的 BVH / npy 可选择性传，建议先忽略避免杂乱）
 outputs/
 *.bvh
