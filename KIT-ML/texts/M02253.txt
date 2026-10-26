@@ -1,1 +1,0 @@
-A human runs, stops abruptly and continues running.#A/DET human/ADJ run/NOUN stop/VERB abruptly/ADV and/CCONJ continue/VERB run/VERB#0.0#0.0

@@ -1,1 +1,0 @@
-A human walks forward and backwards in large steps.#A/DET human/NOUN walk/VERB forward/ADV and/CCONJ backwards/ADV in/ADP large/ADJ step/NOUN#0.0#0.0

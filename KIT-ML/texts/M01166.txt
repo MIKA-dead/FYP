@@ -1,3 +1,0 @@
-a person performs a turn around.#a/DET person/NOUN perform/VERB a/DET turn/NOUN around/ADV#0.0#0.0
-A person walks forward for 2 steps then turns 180° to his left and walks forward for 2 more steps.#A/DET person/NOUN walk/VERB forward/ADV for/ADP step/NOUN then/ADV turn/VERB to/ADP his/DET left/NOUN and/CCONJ walk/VERB forward/ADV for/ADP more/ADJ step/NOUN#0.0#0.0
-The human walks a couple of steps turn around and walks back to starting point#The/DET human/NOUN walk/VERB a/DET couple/NOUN of/ADP step/NOUN turn/VERB around/ADP and/CCONJ walk/VERB back/ADV to/ADP starting/NOUN point/NOUN#0.0#0.0

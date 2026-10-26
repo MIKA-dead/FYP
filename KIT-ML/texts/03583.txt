@@ -1,1 +1,0 @@
-A person walks dramatically forwards and backwards.#A/DET person/NOUN walk/VERB dramatically/ADV forwards/ADV and/CCONJ backwards/ADV#0.0#0.0

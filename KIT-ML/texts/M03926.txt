@@ -1,1 +1,0 @@
-A person is swimming.#A/DET person/NOUN is/AUX swim/VERB#0.0#0.0

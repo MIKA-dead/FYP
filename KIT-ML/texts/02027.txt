@@ -1,2 +1,0 @@
-A person makes a sharp turn.#A/DET person/NOUN make/VERB a/DET sharp/ADJ turn/NOUN#0.0#0.0
-A person steps forward and turns 180 degrees.#A/DET person/NOUN step/VERB forward/ADV and/CCONJ turn/VERB degree/NOUN#0.0#0.0

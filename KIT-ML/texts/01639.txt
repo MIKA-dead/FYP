@@ -1,2 +1,0 @@
-a person makes a T pose#a/DET person/NOUN make/VERB a/DET t/NOUN pose/NOUN#0.0#0.0
-a man try to balance#a/DET man/NOUN try/VERB to/PART balance/VERB#0.0#0.0

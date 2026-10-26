@@ -1,1 +1,0 @@
-A person walks forward and is pushed forcefully.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB forcefully/ADV#0.0#0.0

@@ -1,3 +1,0 @@
-Subject kicking someone with its right foot.#Subject/ADJ kick/VERB someone/PRON with/ADP its/DET right/ADJ foot/NOUN#0.0#0.0
-A human performs a sidekick with the right foot, moving up its hands in defence position#A/DET human/NOUN perform/VERB a/DET sidekick/NOUN with/ADP the/DET right/ADJ foot/NOUN move/VERB up/ADP its/DET hand/NOUN in/ADP defence/NOUN position/NOUN#0.0#0.0
-a person kicks something with its right foot#a/DET person/NOUN kick/VERB something/PRON with/ADP its/DET right/ADJ foot/NOUN#0.0#0.0

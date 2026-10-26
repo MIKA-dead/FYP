@@ -1,3 +1,0 @@
-A person dances.#A/DET person/NOUN dance/VERB#0.0#0.0
-A person dancing#A/DET person/NOUN dance/VERB#0.0#0.0
-Somebody balances something.#Somebody/PRON balance/VERB something/PRON#0.0#0.0

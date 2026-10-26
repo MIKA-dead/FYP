@@ -1,9 +1,0 @@
-A person walks forward and turns around.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ turn/VERB around/ADV#0.0#0.0
-The human turns on the spot with a high momentum.#The/DET human/NOUN turn/VERB on/ADP the/DET spot/NOUN with/ADP a/DET high/ADJ momentum/NOUN#0.0#0.0
-A person makes to steps in the front and then a swinging 180° change of direction.#A/DET person/NOUN make/VERB to/ADP step/NOUN in/ADP the/DET front/NOUN and/CCONJ then/ADV a/DET swinge/VERB change/NOUN of/ADP direction/NOUN#0.0#0.0
-A person makes a U-turn.#A/DET person/NOUN make/VERB a/DET Uturn/PROPN#0.0#0.0
-Person walking and turning on one foot#person/NOUN walk/VERB and/CCONJ turn/VERB on/ADP one/NUM foot/NOUN#0.0#0.0
-Someone turns zestful about-face while walking.#Someone/PRON turn/VERB zestful/ADJ aboutface/NOUN while/SCONJ walk/VERB#0.0#0.0
-A person walks little bit and then makes a sharp turn to the right.#A/DET person/NOUN walk/VERB little/ADJ bit/NOUN and/CCONJ then/ADV make/VERB a/DET sharp/ADJ turn/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A person walks ahead, does a 180° turn and walks back.#A/DET person/NOUN walk/VERB ahead/ADV does/AUX a/DET turn/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
-A person turns 180 degrees on his right foot.#A/DET person/NOUN turn/VERB degree/NOUN on/ADP his/DET right/ADJ foot/NOUN#0.0#0.0

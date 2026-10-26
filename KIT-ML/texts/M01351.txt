@@ -1,3 +1,0 @@
-a person performs a golf swing#a/DET person/NOUN perform/VERB a/DET golf/NOUN swing/NOUN#0.0#0.0
-A human performs a golf drive.#A/DET human/NOUN perform/VERB a/DET golf/NOUN drive/NOUN#0.0#0.0
-a person plays golf with its left hand#a/DET person/NOUN play/VERB golf/NOUN with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

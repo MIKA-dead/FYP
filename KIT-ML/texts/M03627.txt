@@ -1,1 +1,0 @@
-A man is jumping and turns 270 degrees#A/DET man/NOUN is/AUX jump/VERB and/CCONJ turn/VERB degree/NOUN#0.0#0.0

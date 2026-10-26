@@ -1,4 +1,0 @@
-A person is waving his hands in a big motion#A/DET person/NOUN is/AUX wave/VERB his/DET hand/NOUN in/ADP a/DET big/ADJ motion/NOUN#0.0#0.0
-A person waves with both hands.#A/DET person/NOUN wave/VERB with/ADP both/DET hand/NOUN#0.0#0.0
-a person waves with its two hands#a/DET person/NOUN wave/VERB with/ADP its/DET two/NUM hand/NOUN#0.0#0.0
-A human waves with two hands simultaneously.#A/DET human/ADJ wave/NOUN with/ADP two/NUM hand/NOUN simultaneously/ADV#0.0#0.0

@@ -1,3 +1,0 @@
-Someone jumps to the left.#Someone/PRON jump/VERB to/ADP the/DET left/NOUN#0.0#0.0
-A human performs a jump to the left.#A/DET human/NOUN perform/VERB a/DET jump/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-A person jumps to his left.#A/DET person/NOUN jump/VERB to/ADP his/DET left/NOUN#0.0#0.0

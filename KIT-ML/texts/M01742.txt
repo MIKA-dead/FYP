@@ -1,2 +1,0 @@
-A person walks forward and is pushed slightly from the left-hand side#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB slightly/ADV from/ADP the/DET lefthand/NOUN side/NOUN#0.0#0.0
-Someone walks forward and make a sidestep to the right and get back to the path#Someone/PRON walk/VERB forward/ADV and/CCONJ make/VERB a/DET sidestep/NOUN to/ADP the/DET right/NOUN and/CCONJ get/AUX back/ADV to/ADP the/DET path/NOUN#0.0#0.0

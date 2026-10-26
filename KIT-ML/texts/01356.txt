@@ -1,2 +1,0 @@
-A person makes a throwing gesture with the right hand.#A/DET person/NOUN make/VERB a/DET throwing/NOUN gesture/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-Someone strikes out and throws something to the floor using the right hand.#Someone/PRON strike/VERB out/ADP and/CCONJ throw/VERB something/PRON to/ADP the/DET floor/NOUN use/VERB the/DET right/ADJ hand/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person is carefully and slowly moving forward and then turns 180 degrees to walk back again.#A/DET person/NOUN is/AUX carefully/ADV and/CCONJ slowly/ADV move/VERB forward/ADV and/CCONJ then/ADV turn/VERB degree/NOUN to/PART walk/VERB back/ADV again/ADV#0.0#0.0

@@ -1,3 +1,0 @@
-Someone take cautious steps forward.#Someone/PRON take/VERB cautious/ADJ step/NOUN forward/ADV#0.0#0.0
-A person walks very carefully while looking on the ground.#A/DET person/NOUN walk/VERB very/ADV carefully/ADV while/SCONJ look/VERB on/ADP the/DET ground/NOUN#0.0#0.0
-human steps on specific positions while going forward#human/ADJ step/NOUN on/ADP specific/ADJ position/NOUN while/SCONJ go/VERB forward/ADV#0.0#0.0

@@ -1,1 +1,0 @@
-a human picks something up#a/DET human/ADJ pick/NOUN something/PRON up/ADP#0.0#0.0

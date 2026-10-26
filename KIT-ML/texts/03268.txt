@@ -1,1 +1,0 @@
-A person is going around a right corner.#A/DET person/NOUN is/AUX go/VERB around/ADP a/DET right/ADJ corner/NOUN#0.0#0.0

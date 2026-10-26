@@ -1,1 +1,0 @@
-A human performs a 90°, a 180° and a 360° counter clockwise jump.#A/DET human/NOUN perform/VERB a/DET a/DET and/CCONJ a/DET counter/ADJ clockwise/NOUN jump/NOUN#0.0#0.0

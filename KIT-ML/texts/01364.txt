@@ -1,4 +1,0 @@
-A person hits something.#A/DET person/NOUN hit/VERB something/PRON#0.0#0.0
-A human is performing a slap at the hight of the scrotch#A/DET human/NOUN is/AUX perform/VERB a/DET slap/NOUN at/ADP the/DET hight/NOUN of/ADP the/DET scrotch/NOUN#0.0#0.0
-Hitting something with the right hand.#hit/VERB something/PRON with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-a person hits something in front of it with its right hand#a/DET person/NOUN hit/VERB something/PRON in/ADP front/NOUN of/ADP it/PRON with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

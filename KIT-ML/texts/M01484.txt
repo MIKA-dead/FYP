@@ -1,2 +1,0 @@
-a person is making a hand gesture.#a/DET person/NOUN is/AUX make/VERB a/DET hand/NOUN gesture/NOUN#0.0#0.0
-a person wipes something with its left hand#a/DET person/NOUN wipe/VERB something/PRON with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

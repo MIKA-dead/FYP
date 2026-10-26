@@ -1,2 +1,0 @@
-A human goes forward, turns around and goes back.#A/DET human/NOUN go/VERB forward/ADV turn/VERB around/ADV and/CCONJ go/VERB back/ADV#0.0#0.0
-a person performs a 180 degree turn on one foot#a/DET person/NOUN perform/VERB a/DET degree/NOUN turn/VERB on/ADP one/NUM foot/NOUN#0.0#0.0

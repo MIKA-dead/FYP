@@ -1,4 +1,0 @@
-A person does a ninety degree bow#A/DET person/NOUN does/AUX a/DET ninety/NUM degree/NOUN bow/NOUN#0.0#0.0
-the human takes a bow#the/DET human/NOUN take/VERB a/DET bow/NOUN#0.0#0.0
-A persons bends 90° down with a straight back#A/DET person/NOUN bend/VERB down/ADV with/ADP a/DET straight/ADJ back/ADV#0.0#0.0
-A person bows.#A/DET person/NOUN bow/VERB#0.0#0.0

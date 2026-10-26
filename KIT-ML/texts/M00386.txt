@@ -1,3 +1,0 @@
-Person walks backward.#person/NOUN walk/VERB backward/ADV#0.0#0.0
-A human walks 4 steps backwards on a line.#A/DET human/NOUN walk/VERB step/NOUN backwards/ADV on/ADP a/DET line/NOUN#0.0#0.0
-a human is walking backwards#a/DET human/NOUN is/AUX walk/VERB backwards/ADV#0.0#0.0

@@ -1,4 +1,0 @@
-A person runs in the forward direction.#A/DET person/NOUN run/VERB in/ADP the/DET forward/ADJ direction/NOUN#0.0#0.0
-A person starts running, takes six steps and comes to a rest again.#A/DET person/NOUN start/VERB run/VERB take/VERB six/NUM step/NOUN and/CCONJ come/VERB to/ADP a/DET rest/NOUN again/ADV#0.0#0.0
-a person jogs some meters forwards#a/DET person/NOUN jog/VERB some/DET meter/NOUN forwards/ADV#0.0#0.0
-some one starts jogging and stops in five steps.#some/DET one/NOUN start/VERB jogging/NOUN and/CCONJ stop/VERB in/ADP five/NUM step/NOUN#0.0#0.0

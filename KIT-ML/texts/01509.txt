@@ -1,4 +1,0 @@
-A person moves the left hand in a circle counter clockwise in a level parallel to the ground.#A/DET person/NOUN move/VERB the/DET left/ADJ hand/NOUN in/ADP a/DET circle/NOUN counter/NOUN clockwise/NOUN in/ADP a/DET level/NOUN parallel/NOUN to/ADP the/DET ground/NOUN#0.0#0.0
-A Person is wiping a surface.#A/DET person/NOUN is/AUX wipe/VERB a/DET surface/NOUN#0.0#0.0
-A Person wipes something.#A/DET person/NOUN wipe/VERB something/PRON#0.0#0.0
-someone is wiping a table.#someone/PRON is/AUX wipe/VERB a/DET table/NOUN#0.0#0.0

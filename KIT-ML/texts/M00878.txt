@@ -1,2 +1,0 @@
-A persons walks forwards, turns around and walks back.#A/DET person/NOUN walk/VERB forwards/ADV turn/VERB around/ADV and/CCONJ walk/VERB back/ADV#0.0#0.0
-A person walks forward 2 steps, then turns around 180° to his right and walks another 2 steps in the opposite direction.#A/DET person/NOUN walk/VERB forward/ADV step/NOUN then/ADV turn/VERB around/ADV to/ADP his/DET right/NOUN and/CCONJ walk/VERB another/DET step/NOUN in/ADP the/DET opposite/ADJ direction/NOUN#0.0#0.0

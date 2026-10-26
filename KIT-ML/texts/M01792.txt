@@ -1,2 +1,0 @@
-A person walks forward, during that the person is pushed to the right and gains balance again.#A/DET person/NOUN walk/VERB forward/ADV during/ADP that/SCONJ the/DET person/NOUN is/AUX push/VERB to/ADP the/DET right/NOUN and/CCONJ gain/NOUN balance/NOUN again/ADV#0.0#0.0
-Someone is beeing pushed from the right side, while walking forward.#Someone/PRON is/AUX beee/VERB push/VERB from/ADP the/DET right/ADJ side/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0

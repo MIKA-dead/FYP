@@ -1,6 +1,0 @@
-A person doing a squat.#A/DET person/NOUN do/VERB a/DET squat/NOUN#0.0#0.0
-a person performs a squad exercise#a/DET person/NOUN perform/VERB a/DET squad/ADJ exercise/NOUN#0.0#0.0
-A person performs a single squat.#A/DET person/NOUN perform/VERB a/DET single/ADJ squat/NOUN#0.0#0.0
-A person does a squat.#A/DET person/NOUN does/AUX a/DET squat/NOUN#0.0#0.0
-Someone is doing a squat.#Someone/PRON is/AUX do/VERB a/DET squat/NOUN#0.0#0.0
-a man does a squat#a/DET man/NOUN does/AUX a/DET squat/NOUN#0.0#0.0

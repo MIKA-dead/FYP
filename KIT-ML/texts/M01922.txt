@@ -1,2 +1,0 @@
-A person gets pushed from the right and recovers.#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET right/NOUN and/CCONJ recover/NOUN#0.0#0.0
-a person walks forwards and gets pushed from the right#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ get/VERB push/VERB from/ADP the/DET right/NOUN#0.0#0.0

@@ -1,3 +1,0 @@
-A person walks forwards energetically.#A/DET person/NOUN walk/VERB forwards/ADV energetically/ADV#0.0#0.0
-A person walks with big steps.#A/DET person/NOUN walk/VERB with/ADP big/ADJ step/NOUN#0.0#0.0
-a person walks forwards quite fast#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV fast/ADV#0.0#0.0

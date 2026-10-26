@@ -1,1 +1,0 @@
-a person stumbles on the ground but gets up and keeps on running#a/DET person/NOUN stumble/VERB on/ADP the/DET ground/NOUN but/CCONJ get/VERB up/ADP and/CCONJ keep/VERB on/ADP run/VERB#0.0#0.0

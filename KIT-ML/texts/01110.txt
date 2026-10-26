@@ -1,5 +1,0 @@
-Subject starts jogging forward.#Subject/ADJ start/VERB jog/VERB forward/ADV#0.0#0.0
-A human is walking fast forward and holds its hands like it is running.#A/DET human/NOUN is/AUX walk/VERB fast/ADV forward/ADV and/CCONJ hold/VERB its/DET hand/NOUN like/SCONJ it/PRON is/AUX run/VERB#0.0#0.0
-a person jogs forward#a/DET person/NOUN jog/VERB forward/ADV#0.0#0.0
-a human is running a few steps#a/DET human/NOUN is/AUX run/VERB a/DET few/ADJ step/NOUN#0.0#0.0
-A person walkes forward fast.#A/DET person/NOUN walk/VERB forward/ADV fast/ADV#0.0#0.0

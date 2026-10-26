@@ -1,2 +1,0 @@
-A person walks forward while gradually turning to the right.#A/DET person/NOUN walk/VERB forward/ADV while/SCONJ gradually/ADV turn/VERB to/ADP the/DET right/NOUN#0.0#0.0
-a person walks to the right in a quarter circle#a/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0

@@ -1,3 +1,0 @@
-A person performs a sluggish step to the right.#A/DET person/NOUN perform/VERB a/DET sluggish/ADJ step/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A person takes a wide lunge to the right and keeps his balance by using both arms.#A/DET person/NOUN take/VERB a/DET wide/ADJ lunge/NOUN to/ADP the/DET right/NOUN and/CCONJ keep/VERB his/DET balance/NOUN by/ADP use/VERB both/DET arm/NOUN#0.0#0.0
-Someone gets puched away from its left and trips to its right.#Someone/PRON get/VERB puche/VERB away/ADV from/ADP its/DET left/NOUN and/CCONJ trip/NOUN to/ADP its/DET right/NOUN#0.0#0.0

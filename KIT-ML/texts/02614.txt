@@ -1,1 +1,0 @@
-a human slowly walks forward back and forth multiple times#a/DET human/NOUN slowly/ADV walk/VERB forward/ADV back/ADV and/CCONJ forth/ADV multiple/ADJ time/NOUN#0.0#0.0

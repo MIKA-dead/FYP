@@ -1,5 +1,0 @@
-the person is performing a short run#the/DET person/NOUN is/AUX perform/VERB a/DET short/ADJ run/NOUN#0.0#0.0
-A person starting to run forward for 4 steps.#A/DET person/NOUN start/VERB to/PART run/VERB forward/ADV for/ADP step/NOUN#0.0#0.0
-A human starts jogging straight and slows down and stops after#A/DET human/NOUN start/VERB jog/VERB straight/ADV and/CCONJ slow/VERB down/ADV and/CCONJ stop/NOUN after/ADP#0.0#0.0
-A person performs a few running steps from still stand and comes to rest again.#A/DET person/NOUN perform/VERB a/DET few/ADJ run/VERB step/NOUN from/ADP still/ADV stand/VERB and/CCONJ come/VERB to/PART rest/VERB again/ADV#0.0#0.0
-A person is running forward.#A/DET person/NOUN is/AUX run/VERB forward/ADV#0.0#0.0

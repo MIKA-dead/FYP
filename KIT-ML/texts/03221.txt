@@ -1,1 +1,0 @@
-A person turns right and walks with his head lowered#A/DET person/NOUN turn/VERB right/ADJ and/CCONJ walk/VERB with/ADP his/DET head/NOUN lower/VERB#0.0#0.0

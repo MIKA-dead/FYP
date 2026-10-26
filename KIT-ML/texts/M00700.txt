@@ -1,3 +1,0 @@
-A persons walks forward fast.#A/DET person/NOUN walk/VERB forward/ADV fast/ADV#0.0#0.0
-Someone is walking forward 4 steps starting with the left leg.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0
-a person takes 5 stes forward#a/DET person/NOUN take/VERB ste/NOUN forward/ADV#0.0#0.0

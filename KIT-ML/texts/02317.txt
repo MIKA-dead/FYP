@@ -1,1 +1,0 @@
-A person is jumping several times forward with the right foot in the air.#A/DET person/NOUN is/AUX jump/VERB several/ADJ time/NOUN forward/ADV with/ADP the/DET right/ADJ foot/NOUN in/ADP the/DET air/NOUN#0.0#0.0

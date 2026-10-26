@@ -1,1 +1,0 @@
-A person steps over something taking a long step to the left front of him.#A/DET person/NOUN step/VERB over/ADP something/PRON take/VERB a/DET long/ADJ step/NOUN to/ADP the/DET left/ADJ front/NOUN of/ADP him/PRON#0.0#0.0

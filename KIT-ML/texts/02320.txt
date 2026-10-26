@@ -1,1 +1,0 @@
-A person jumps on his left foot.#A/DET person/NOUN jump/VERB on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0

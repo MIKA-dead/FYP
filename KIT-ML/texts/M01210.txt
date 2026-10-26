@@ -1,5 +1,0 @@
-Person dancing the waltz#person/NOUN dance/VERB the/DET waltz/NOUN#0.0#0.0
-someone is dancing the basic step of the waltz#someone/PRON is/AUX dance/VERB the/DET basic/ADJ step/NOUN of/ADP the/DET waltz/NOUN#0.0#0.0
-A person dances the waltz#A/DET person/NOUN dance/VERB the/DET waltz/NOUN#0.0#0.0
-A person dancing the foxtrot.#A/DET person/NOUN dance/VERB the/DET foxtrot/NOUN#0.0#0.0
-A person dancing#A/DET person/NOUN dance/VERB#0.0#0.0

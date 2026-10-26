@@ -1,2 +1,0 @@
-A person walks backwards four steps starting with the right foot.#A/DET person/NOUN walk/VERB backwards/ADV four/NUM step/NOUN start/VERB with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
-Somebody walks backwards.#Somebody/PRON walk/VERB backwards/ADV#0.0#0.0

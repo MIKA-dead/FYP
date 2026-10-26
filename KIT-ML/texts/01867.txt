@@ -1,3 +1,0 @@
-a person walks forward, gets pushed backs and then walks forward again#a/DET person/NOUN walk/VERB forward/ADV get/VERB push/VERB back/NOUN and/CCONJ then/ADV walk/VERB forward/ADV again/ADV#0.0#0.0
-A person walks, is stopped by an obstacle and then resumes his motion.#A/DET person/NOUN walk/VERB is/AUX stop/VERB by/ADP an/DET obstacle/NOUN and/CCONJ then/ADV resume/VERB his/DET motion/NOUN#0.0#0.0
-A person walks forward, backs down as if being pushed back at chest height, then keeps walking.#A/DET person/NOUN walk/VERB forward/ADV back/VERB down/ADP as/SCONJ if/SCONJ being/AUX push/VERB back/ADV at/ADP chest/NOUN height/NOUN then/ADV keep/VERB walk/VERB#0.0#0.0

@@ -1,1 +1,0 @@
-A person is walking forward with swinging arms.#A/DET person/NOUN is/AUX walk/VERB forward/ADV with/ADP swinge/VERB arm/NOUN#0.0#0.0

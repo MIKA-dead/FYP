@@ -1,4 +1,0 @@
-A person bows.#A/DET person/NOUN bow/VERB#0.0#0.0
-a person take a deep bow#a/DET person/NOUN take/VERB a/DET deep/ADJ bow/NOUN#0.0#0.0
-Someone bows down.#Someone/PRON bow/VERB down/ADP#0.0#0.0
-a man is bowing#a/DET man/NOUN is/AUX bow/VERB#0.0#0.0

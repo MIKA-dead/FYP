@@ -1,2 +1,0 @@
-A person performs a 180° turn clockwise with medium speed.#A/DET person/NOUN perform/VERB a/DET turn/VERB clockwise/NOUN with/ADP medium/ADJ speed/NOUN#0.0#0.0
-a man makes a U-turn on his left leg#a/DET man/NOUN make/VERB a/DET Uturn/PROPN on/ADP his/DET left/ADJ leg/NOUN#0.0#0.0

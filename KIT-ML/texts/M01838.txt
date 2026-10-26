@@ -1,2 +1,0 @@
-A person is pushed backwards#A/DET person/NOUN is/AUX push/VERB backwards/ADV#0.0#0.0
-Somebody has been hit in the front.#Somebody/PRON has/AUX been/AUX hit/VERB in/ADP the/DET front/NOUN#0.0#0.0

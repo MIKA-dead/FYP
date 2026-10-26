@@ -1,7 +1,0 @@
-While walking forward a person is pushed.#While/SCONJ walk/VERB forward/ADV a/DET person/NOUN is/AUX push/VERB#0.0#0.0
-a person walks forward and gets pushed to the right#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ get/VERB push/VERB to/ADP the/DET right/NOUN#0.0#0.0
-A person walks and makes an 
-compensatory movement to the right side.#A/DET person/NOUN walk/VERB and/CCONJ make/VERB an/DET compensatory/ADJ movement/NOUN to/ADP the/DET right/ADJ side/NOUN#0.0#0.0
-a person walks forward and bumps into something to his left.#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ bump/NOUN into/ADP something/PRON to/ADP his/DET left/NOUN#0.0#0.0
-A person getting shoved from the left while walking forward#A/DET person/NOUN get/VERB shove/VERB from/ADP the/DET left/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0
-human is pushed from its left hand side#human/PROPN is/AUX push/VERB from/ADP its/DET left/ADJ hand/NOUN side/NOUN#0.0#0.0

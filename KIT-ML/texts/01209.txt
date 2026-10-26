@@ -1,3 +1,0 @@
-A person dances Waltz.#A/DET person/NOUN dance/VERB Waltz/PROPN#0.0#0.0
-a person is dancing waltz#a/DET person/NOUN is/AUX dance/VERB waltz/NOUN#0.0#0.0
-The human lifts his hands, perfoms a right forward then a step to the left and at the end a step backwards#The/DET human/NOUN lift/VERB his/DET hand/NOUN perfom/VERB a/DET right/NOUN forward/ADV then/ADV a/DET step/NOUN to/ADP the/DET left/NOUN and/CCONJ at/ADP the/DET end/NOUN a/DET step/NOUN backwards/ADV#0.0#0.0

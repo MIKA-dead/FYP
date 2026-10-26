@@ -1,4 +1,0 @@
-A person walks forwards and stops without moving their arms.#A/DET person/NOUN walk/VERB forwards/ADV and/CCONJ stop/VERB without/ADP move/VERB their/DET arm/NOUN#0.0#0.0
-Someone walks forward#Someone/PRON walk/VERB forward/ADV#0.0#0.0
-A person walks forward without being in a hurry.#A/DET person/NOUN walk/VERB forward/ADV without/ADP being/AUX in/ADP a/DET hurry/NOUN#0.0#0.0
-A person is walking forward.#A/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0

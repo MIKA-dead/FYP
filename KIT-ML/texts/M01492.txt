@@ -1,8 +1,0 @@
-a persone wipe a surface#a/DET persone/NOUN wipe/NOUN a/DET surface/NOUN#0.0#0.0
-A person is stirring with their left hand.#A/DET person/NOUN is/AUX stir/VERB with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0
-A human performs a whiping movement with the left hand#A/DET human/NOUN perform/VERB a/DET whip/VERB movement/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
-a person wipes a plane with its left hand#a/DET person/NOUN wipe/VERB a/DET plane/NOUN with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
-A person wipes  a surface with his left hand.#A/DET person/NOUN wipe/VERB a/DET surface/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
-A person stirring with their left hand#A/DET person/NOUN stir/VERB with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0
-Someone moves his left hand in a circular motion in front of his upper body.#Someone/PRON move/VERB his/DET left/ADJ hand/NOUN in/ADP a/DET circular/ADJ motion/NOUN in/ADP front/NOUN of/ADP his/DET upper/ADJ body/NOUN#0.0#0.0
-a man is wiping something with his left hand#a/DET man/NOUN is/AUX wipe/VERB something/PRON with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

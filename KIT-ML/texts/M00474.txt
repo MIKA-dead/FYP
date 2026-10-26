@@ -1,2 +1,0 @@
-A person walks forwards, performs a sharp turn and walks back.#A/DET person/NOUN walk/VERB forwards/ADV perform/VERB a/DET sharp/ADJ turn/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
-Someone walks two steps then quickly turns around by 180° to the left and walks back.#Someone/PRON walk/VERB two/NUM step/NOUN then/ADV quickly/ADV turn/VERB around/ADP by/ADP to/ADP the/DET left/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0

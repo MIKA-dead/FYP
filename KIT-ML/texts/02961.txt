@@ -1,1 +1,0 @@
-A human walks while holding her right upper leg with both hands.#A/DET human/NOUN walk/VERB while/SCONJ hold/VERB her/DET right/ADJ upper/ADJ leg/NOUN with/ADP both/DET hand/NOUN#0.0#0.0

@@ -1,4 +1,0 @@
-A person walks to the left one-quarter of a rotation.#A/DET person/NOUN walk/VERB to/ADP the/DET left/ADJ onequarter/NOUN of/ADP a/DET rotation/NOUN#0.0#0.0
-A person walks a quarter circle two the left.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN two/NUM the/DET left/NOUN#0.0#0.0
-A person walks a 90 degree turn to the left.#A/DET person/NOUN walk/VERB a/DET degree/NOUN turn/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-a person walks in a quarter circle to the left#a/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

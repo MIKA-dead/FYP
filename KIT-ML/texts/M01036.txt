@@ -1,1 +1,0 @@
-a person is walking slowly and stops#a/DET person/NOUN is/AUX walk/VERB slowly/ADV and/CCONJ stop/VERB#0.0#0.0

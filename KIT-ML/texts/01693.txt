@@ -1,2 +1,0 @@
-A human walking#A/DET human/ADJ walking/NOUN#0.0#0.0
-A person is quickly walking forward.#A/DET person/NOUN is/AUX quickly/ADV walk/VERB forward/ADV#0.0#0.0

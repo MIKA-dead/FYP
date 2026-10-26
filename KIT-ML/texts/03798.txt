@@ -1,1 +1,0 @@
-A person jumps to the front.#A/DET person/NOUN jump/VERB to/ADP the/DET front/NOUN#0.0#0.0

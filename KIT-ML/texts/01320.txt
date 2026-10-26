@@ -1,4 +1,0 @@
-A person is doing a little jump in the air#A/DET person/NOUN is/AUX do/VERB a/DET little/ADJ jump/NOUN in/ADP the/DET air/NOUN#0.0#0.0
-A person jumps 10cm in the air, hands are down.#A/DET person/NOUN jump/VERB cm/NOUN in/ADP the/DET air/NOUN hand/NOUN are/AUX down/ADV#0.0#0.0
-a human bends his knees and jumps up#a/DET human/ADJ bend/VERB his/DET knee/NOUN and/CCONJ jump/VERB up/ADP#0.0#0.0
-A person jumps upwards.#A/DET person/NOUN jump/VERB upwards/ADV#0.0#0.0

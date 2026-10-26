@@ -1,2 +1,0 @@
-A person makes a motion like playing violin. (one stroke)#A/DET person/NOUN make/VERB a/DET motion/NOUN like/SCONJ play/VERB violin/NOUN one/NUM stroke/NOUN#0.0#0.0
-A person is flexing their biceps.#A/DET person/NOUN is/AUX flex/VERB their/DET bicep/NOUN#0.0#0.0

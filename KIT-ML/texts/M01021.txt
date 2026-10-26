@@ -1,3 +1,0 @@
-A person receives a strong push from the left.#A/DET person/NOUN receive/VERB a/DET strong/ADJ push/NOUN from/ADP the/DET left/NOUN#0.0#0.0
-the person is walking back and forth#the/DET person/NOUN is/AUX walk/VERB back/ADV and/CCONJ forth/ADV#0.0#0.0
-A person is doing a recovery step#A/DET person/NOUN is/AUX do/VERB a/DET recovery/NOUN step/NOUN#0.0#0.0

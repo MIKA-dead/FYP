@@ -1,2 +1,0 @@
-A person kneeling and then standing up while stabilizing themselves with the left hand.#A/DET person/NOUN kneel/VERB and/CCONJ then/ADV stand/VERB up/ADP while/SCONJ stabilize/VERB themselves/PRON with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
-A person stands up.#A/DET person/NOUN stand/VERB up/ADP#0.0#0.0

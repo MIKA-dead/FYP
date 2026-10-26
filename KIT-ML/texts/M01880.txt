@@ -1,1 +1,0 @@
-A person goes two steps forward, gets pushed by their right side, recovers and keeps on going forward.#A/DET person/NOUN go/VERB two/NUM step/NOUN forward/ADV get/VERB push/VERB by/ADP their/DET right/ADJ side/NOUN recover/NOUN and/CCONJ keep/VERB on/ADP go/VERB forward/ADV#0.0#0.0

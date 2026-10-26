@@ -1,3 +1,0 @@
-human goes forward starting with right#human/PROPN go/VERB forward/ADV start/VERB with/ADP right/ADJ#0.0#0.0
-A person walks a few steps.#A/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN#0.0#0.0
-a person walks forwards#a/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0

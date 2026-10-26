@@ -1,3 +1,0 @@
-A person kneels down on the floor and crawls.#A/DET person/NOUN kneel/VERB down/ADP on/ADP the/DET floor/NOUN and/CCONJ crawl/NOUN#0.0#0.0
-a person goes on his knees and starts to crawl#a/DET person/NOUN go/VERB on/ADP his/DET knee/NOUN and/CCONJ start/VERB to/PART crawl/VERB#0.0#0.0
-a human crawls on all fours#a/DET human/ADJ crawl/NOUN on/ADP all/DET four/NOUN#0.0#0.0

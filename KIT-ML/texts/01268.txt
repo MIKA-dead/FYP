@@ -1,5 +1,0 @@
-A person bows slightly#A/DET person/NOUN bow/VERB slightly/ADV#0.0#0.0
-human performs a bowing motion#human/ADJ perform/VERB a/DET bowing/NOUN motion/NOUN#0.0#0.0
-a person takes a bow#a/DET person/NOUN take/VERB a/DET bow/NOUN#0.0#0.0
-A person performs an upper body bow.#A/DET person/NOUN perform/VERB an/DET upper/ADJ body/NOUN bow/NOUN#0.0#0.0
-A human bows down a little bit#A/DET human/ADJ bow/NOUN down/ADV a/DET little/ADJ bit/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-A person is standing up from being on all fours#A/DET person/NOUN is/AUX stand/VERB up/ADP from/ADP being/AUX on/ADP all/DET four/NOUN#0.0#0.0
-A person stands up.#A/DET person/NOUN stand/VERB up/ADP#0.0#0.0

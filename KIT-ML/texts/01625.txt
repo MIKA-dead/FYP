@@ -1,1 +1,0 @@
-A person walks over step stones.#A/DET person/NOUN walk/VERB over/ADP step/NOUN stone/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person tries to catch an insect and eats it afterwards.#A/DET person/NOUN try/VERB to/PART catch/VERB an/DET insect/NOUN and/CCONJ eat/VERB it/PRON afterwards/ADV#0.0#0.0

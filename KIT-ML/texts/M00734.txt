@@ -1,3 +1,0 @@
-A person turn right with medium speed.#A/DET person/NOUN turn/VERB right/ADV with/ADP medium/ADJ speed/NOUN#0.0#0.0
-a person walks to the right performing a quarter circle#a/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN perform/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0
-A person walks a right curve#A/DET person/NOUN walk/VERB a/DET right/ADJ curve/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person is doing a cartwheel to the right.#A/DET person/NOUN is/AUX do/VERB a/DET cartwheel/NOUN to/ADP the/DET right/NOUN#0.0#0.0

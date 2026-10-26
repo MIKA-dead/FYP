@@ -1,4 +1,0 @@
-A person walks in a circle clockwise.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN clockwise/NOUN#0.0#0.0
-A person walks in a circle and looks facing down.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN and/CCONJ look/VERB face/VERB down/ADV#0.0#0.0
-A person walks a circle in the right direction#A/DET person/NOUN walk/VERB a/DET circle/NOUN in/ADP the/DET right/ADJ direction/NOUN#0.0#0.0
-The human walks a circle (right turn)#The/DET human/NOUN walk/VERB a/DET circle/NOUN right/ADJ turn/NOUN#0.0#0.0

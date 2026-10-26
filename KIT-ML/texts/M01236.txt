@@ -1,4 +1,0 @@
-A person lifting their hands for defense and kicking with the right foot, like a kickboxing move.#A/DET person/NOUN lift/VERB their/DET hand/NOUN for/ADP defense/NOUN and/CCONJ kick/VERB with/ADP the/DET right/ADJ foot/NOUN like/SCONJ a/DET kickboxing/NOUN move/NOUN#0.0#0.0
-A person kicks something with its right foot#A/DET person/NOUN kick/VERB something/PRON with/ADP its/DET right/ADJ foot/NOUN#0.0#0.0
-Kicking with the right foot.#kick/VERB with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
-A person makes a kick.#A/DET person/NOUN make/VERB a/DET kick/NOUN#0.0#0.0

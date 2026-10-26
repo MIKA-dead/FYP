@@ -1,4 +1,0 @@
-Someone runs forward#Someone/PRON run/VERB forward/ADV#0.0#0.0
-A person joggs forward.#A/DET person/NOUN joggs/NOUN forward/ADV#0.0#0.0
-A human jogs a few steps forward.#A/DET human/NOUN jog/VERB a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0
-a person jogs some meters forward#a/DET person/NOUN jog/VERB some/DET meter/NOUN forward/ADV#0.0#0.0

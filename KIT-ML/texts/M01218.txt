@@ -1,7 +1,0 @@
-A person lifts the hands and walks in a a rectangle many times.#A/DET person/NOUN lift/VERB the/DET hand/NOUN and/CCONJ walk/VERB in/ADP a/DET a/DET rectangle/NOUN many/ADJ time/NOUN#0.0#0.0
-Subject is waltzing slowly.#Subject/PROPN is/AUX waltz/VERB slowly/ADV#0.0#0.0
-a person raises both arms in front of his chest and then walks in a square several times#a/DET person/NOUN raise/VERB both/DET arm/NOUN in/ADP front/NOUN of/ADP his/DET chest/NOUN and/CCONJ then/ADV walk/VERB in/ADP a/DET square/ADJ several/ADJ time/NOUN#0.0#0.0
-Someone may be doing a square dance.#Someone/PRON may/VERB be/AUX do/VERB a/DET square/ADJ dance/NOUN#0.0#0.0
-a person dances with another person#a/DET person/NOUN dance/VERB with/ADP another/DET person/NOUN#0.0#0.0
-A person performs the wiener walzer.#A/DET person/NOUN perform/VERB the/DET wiener/PROPN walzer/PROPN#0.0#0.0
-a human practices waltz steps#a/DET human/ADJ practice/NOUN waltz/NOUN step/NOUN#0.0#0.0

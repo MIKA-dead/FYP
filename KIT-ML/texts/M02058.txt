@@ -1,2 +1,0 @@
-A person lifts their arms for a moment and then sits down on the floor.#A/DET person/NOUN lift/VERB their/DET arm/NOUN for/ADP a/DET moment/NOUN and/CCONJ then/ADV sit/VERB down/ADP on/ADP the/DET floor/NOUN#0.0#0.0
-Someone raises his arms to the side and then gets down on his knees.#Someone/PRON raise/VERB his/DET arm/NOUN to/ADP the/DET side/NOUN and/CCONJ then/ADV get/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0

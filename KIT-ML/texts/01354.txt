@@ -1,3 +1,0 @@
-A person makes a throwing motion with the right hand.#A/DET person/NOUN make/VERB a/DET throwing/NOUN motion/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-Someone throws something to the floor using the right hand.#Someone/PRON throw/VERB something/PRON to/ADP the/DET floor/NOUN use/VERB the/DET right/ADJ hand/NOUN#0.0#0.0
-a person throws something on the ground with its right hand#a/DET person/NOUN throw/VERB something/PRON on/ADP the/DET ground/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

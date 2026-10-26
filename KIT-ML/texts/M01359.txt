@@ -1,5 +1,0 @@
-A person raises their right arm and swings it down.#A/DET person/NOUN raise/VERB their/DET right/ADJ arm/NOUN and/CCONJ swing/VERB it/PRON down/ADP#0.0#0.0
-A human throws something on the ground with his right hand#A/DET human/ADJ throw/NOUN something/PRON on/ADP the/DET ground/NOUN with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0
-a person throws something on the ground in front of it with its right hand#a/DET person/NOUN throw/VERB something/PRON on/ADP the/DET ground/NOUN in/ADP front/NOUN of/ADP it/PRON with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
-human throws something#human/ADJ throw/NOUN something/PRON#0.0#0.0
-A person throws something with the right hand#A/DET person/NOUN throw/VERB something/PRON with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

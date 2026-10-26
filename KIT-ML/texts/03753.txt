@@ -1,1 +1,0 @@
-a person walks up and down a podest#a/DET person/NOUN walk/VERB up/ADV and/CCONJ down/ADP a/DET podest/NOUN#0.0#0.0

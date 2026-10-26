@@ -1,3 +1,0 @@
-A person walks forward very carefully#A/DET person/NOUN walk/VERB forward/ADV very/ADV carefully/ADV#0.0#0.0
-A person moves 5 steps foreward.#A/DET person/NOUN move/VERB step/NOUN foreward/ADV#0.0#0.0
-A human walks slowly 4 steps forward on one line starting with its left foot.#A/DET human/ADJ walk/VERB slowly/ADV step/NOUN forward/ADV on/ADP one/NUM line/NOUN start/VERB with/ADP its/DET left/ADJ foot/NOUN#0.0#0.0

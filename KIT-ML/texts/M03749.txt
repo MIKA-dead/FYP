@@ -1,1 +1,0 @@
-A person warms up his body like preparing for a sport.#A/DET person/NOUN warm/VERB up/ADP his/DET body/NOUN like/SCONJ prepare/VERB for/ADP a/DET sport/NOUN#0.0#0.0

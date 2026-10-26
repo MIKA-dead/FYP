@@ -1,2 +1,0 @@
-human walks in clockwise circle starting with right leg#human/ADJ walk/VERB in/ADP clockwise/ADJ circle/NOUN start/VERB with/ADP right/ADJ leg/NOUN#0.0#0.0
-A human is performing a tight 90° right curve#A/DET human/NOUN is/AUX perform/VERB a/DET tight/ADJ right/ADJ curve/NOUN#0.0#0.0

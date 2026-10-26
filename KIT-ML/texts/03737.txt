@@ -1,1 +1,0 @@
-A human stretches with the arms over her head.#A/DET human/ADJ stretch/NOUN with/ADP the/DET arm/NOUN over/ADP her/DET head/NOUN#0.0#0.0

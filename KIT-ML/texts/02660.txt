@@ -1,1 +1,0 @@
-A human is wakling down the stairs#A/DET human/NOUN is/AUX wakle/VERB down/ADP the/DET stair/NOUN#0.0#0.0

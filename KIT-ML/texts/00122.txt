@@ -1,3 +1,0 @@
-A person walks counterclockwise in a small circle.#A/DET person/NOUN walk/VERB counterclockwise/NOUN in/ADP a/DET small/ADJ circle/NOUN#0.0#0.0
-A person walks counte clockwise in a circle.#A/DET person/NOUN walk/VERB counte/ADJ clockwise/NOUN in/ADP a/DET circle/NOUN#0.0#0.0
-a person walks in a circle#a/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0

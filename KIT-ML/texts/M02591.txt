@@ -1,1 +1,0 @@
-A person walks a bend to the right.#A/DET person/NOUN walk/VERB a/DET bend/NOUN to/ADP the/DET right/NOUN#0.0#0.0

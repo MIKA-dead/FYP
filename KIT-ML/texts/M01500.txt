@@ -1,3 +1,0 @@
-A person moves the right hand in front of the body in a half circle.#A/DET person/NOUN move/VERB the/DET right/ADJ hand/NOUN in/ADP front/NOUN of/ADP the/DET body/NOUN in/ADP a/DET half/ADJ circle/NOUN#0.0#0.0
-A person performs a circular motion with his right hand possibly gripping an object.#A/DET person/NOUN perform/VERB a/DET circular/ADJ motion/NOUN with/ADP his/DET right/ADJ hand/NOUN possibly/ADV grip/VERB an/DET object/NOUN#0.0#0.0
-A person wipes something horizontal#A/DET person/NOUN wipe/VERB something/PRON horizontal/ADJ#0.0#0.0

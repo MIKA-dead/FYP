@@ -1,1 +1,0 @@
-A person bends down then keeps moving the head to look around.#A/DET person/NOUN bend/VERB down/ADV then/ADV keep/VERB move/VERB the/DET head/NOUN to/PART look/VERB around/ADV#0.0#0.0

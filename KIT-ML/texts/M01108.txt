@@ -1,3 +1,0 @@
-A person is starting to run but stops after a few steps#A/DET person/NOUN is/AUX start/VERB to/PART run/VERB but/CCONJ stop/NOUN after/ADP a/DET few/ADJ step/NOUN#0.0#0.0
-a persons jogs forward#a/DET person/NOUN jog/VERB forward/ADV#0.0#0.0
-a human starts running a few steps#a/DET human/NOUN start/VERB run/VERB a/DET few/ADJ step/NOUN#0.0#0.0

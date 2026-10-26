@@ -1,2 +1,0 @@
-A person walks slowly for four steps and stops.#A/DET person/NOUN walk/VERB slowly/ADV for/ADP four/NUM step/NOUN and/CCONJ stop/NOUN#0.0#0.0
-A person walks four steps to the forward direction.#A/DET person/NOUN walk/VERB four/NUM step/NOUN to/ADP the/DET forward/ADJ direction/NOUN#0.0#0.0

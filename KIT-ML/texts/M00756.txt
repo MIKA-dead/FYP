@@ -1,6 +1,0 @@
-Someone walks forward.#Someone/PRON walk/VERB forward/ADV#0.0#0.0
-A person walking forwards.#A/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0
-A person walked away.#A/DET person/NOUN walk/VERB away/ADV#0.0#0.0
-A person walks in a weird form#A/DET person/NOUN walk/VERB in/ADP a/DET weird/ADJ form/NOUN#0.0#0.0
-A human is walking 4 steps forward, starting with its left food.#A/DET human/NOUN is/AUX walk/VERB step/NOUN forward/ADV start/VERB with/ADP its/DET left/ADJ food/NOUN#0.0#0.0
-a person walks forwards#a/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0

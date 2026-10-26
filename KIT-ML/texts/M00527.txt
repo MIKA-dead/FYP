@@ -1,2 +1,0 @@
-A person walks four steps forward with normal speed.#A/DET person/NOUN walk/VERB four/NUM step/NOUN forward/ADV with/ADP normal/ADJ speed/NOUN#0.0#0.0
-A person walks forwards.#A/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0

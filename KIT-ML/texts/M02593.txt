@@ -1,1 +1,0 @@
-A person first walks, then crawls on all fours and then walks again.#A/DET person/NOUN first/ADV walk/VERB then/ADV crawl/VERB on/ADP all/DET four/NOUN and/CCONJ then/ADV walk/VERB again/ADV#0.0#0.0

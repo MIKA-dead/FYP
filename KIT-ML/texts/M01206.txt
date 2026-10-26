@@ -1,4 +1,0 @@
-A person lifts their arms and walks in a small square.#A/DET person/NOUN lift/VERB their/DET arm/NOUN and/CCONJ walk/VERB in/ADP a/DET small/ADJ square/NOUN#0.0#0.0
-A person does the wiener walzer.#A/DET person/NOUN does/AUX the/DET wiener/PROPN walzer/PROPN#0.0#0.0
-a person dances#a/DET person/NOUN dance/VERB#0.0#0.0
-someone is dancing.#someone/PRON is/AUX dance/VERB#0.0#0.0

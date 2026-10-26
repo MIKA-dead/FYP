@@ -1,2 +1,0 @@
-the person is making a wide turn to the left#the/DET person/NOUN is/AUX make/VERB a/DET wide/ADJ turn/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-a person walks in a quarter circle to the left#a/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

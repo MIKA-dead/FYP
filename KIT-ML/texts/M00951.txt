@@ -1,1 +1,0 @@
-A person walks 2 steps, performs a spot turn on the left foot and walks back to the starting position.#A/DET person/NOUN walk/VERB step/NOUN perform/VERB a/DET spot/NOUN turn/NOUN on/ADP the/DET left/ADJ foot/NOUN and/CCONJ walk/VERB back/ADV to/ADP the/DET starting/NOUN position/NOUN#0.0#0.0

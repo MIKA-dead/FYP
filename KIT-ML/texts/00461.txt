@@ -1,3 +1,0 @@
-A person walks forward while turning to the right#A/DET person/NOUN walk/VERB forward/ADV while/SCONJ turn/VERB to/ADP the/DET right/NOUN#0.0#0.0
-A person goes forward in a semicircle.#A/DET person/NOUN go/VERB forward/ADV in/ADP a/DET semicircle/NOUN#0.0#0.0
-The human perfoms a right turn#The/DET human/ADJ perfom/NOUN a/DET right/ADJ turn/NOUN#0.0#0.0

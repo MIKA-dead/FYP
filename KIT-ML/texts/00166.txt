@@ -1,1 +1,0 @@
-A human walking slowly#A/DET human/ADJ walking/NOUN slowly/ADV#0.0#0.0

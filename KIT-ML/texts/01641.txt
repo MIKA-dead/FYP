@@ -1,6 +1,0 @@
-A person stands with both arms stretched out#A/DET person/NOUN stand/VERB with/ADP both/DET arm/NOUN stretch/VERB out/ADP#0.0#0.0
-A person makes a T.#A/DET person/NOUN make/VERB a/DET#0.0#0.0
-A person stands still and stretches his arms horizontal.#A/DET person/NOUN stand/VERB still/ADV and/CCONJ stretch/VERB his/DET arm/NOUN horizontal/NOUN#0.0#0.0
-The human is streching his arms#The/DET human/NOUN is/AUX streche/VERB his/DET arm/NOUN#0.0#0.0
-A person stands with arms spread out at shoulder height#A/DET person/NOUN stand/VERB with/ADP arm/NOUN spread/VERB out/ADV at/ADP shoulder/NOUN height/NOUN#0.0#0.0
-Someone is standing with his arms raised to the side.#Someone/PRON is/AUX stand/VERB with/ADP his/DET arm/NOUN raise/VERB to/ADP the/DET side/NOUN#0.0#0.0

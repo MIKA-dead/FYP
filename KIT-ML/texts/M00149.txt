@@ -1,2 +1,0 @@
-A person walks a quarter circle counterclockwise with 4 steps.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN counterclockwise/NOUN with/ADP step/NOUN#0.0#0.0
-human performs a bending walking movement to the left#human/ADJ perform/VERB a/DET bend/VERB walk/VERB movement/NOUN to/ADP the/DET left/NOUN#0.0#0.0

@@ -1,5 +1,0 @@
-A person is wiping a horizontal surface with his right hand.#A/DET person/NOUN is/AUX wipe/VERB a/DET horizontal/ADJ surface/NOUN with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0
-The subject is using his right hand to do a stirring motion.#The/DET subject/NOUN is/AUX use/VERB his/DET right/ADJ hand/NOUN to/PART do/AUX a/DET stirring/ADJ motion/NOUN#0.0#0.0
-A human is standing on the same spot and moving its right hand like he is using a mixer in a bowl.#A/DET human/NOUN is/AUX stand/VERB on/ADP the/DET same/ADJ spot/NOUN and/CCONJ move/VERB its/DET right/ADJ hand/NOUN like/SCONJ he/PRON is/AUX use/VERB a/DET mixer/NOUN in/ADP a/DET bowl/NOUN#0.0#0.0
-a person wipes something with its right hand#a/DET person/NOUN wipe/VERB something/PRON with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
-A person moving his right hand horizontally in front of him in circles.#A/DET person/NOUN move/VERB his/DET right/ADJ hand/NOUN horizontally/ADV in/ADP front/NOUN of/ADP him/PRON in/ADP circle/NOUN#0.0#0.0

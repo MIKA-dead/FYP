@@ -1,6 +1,0 @@
-A person walks 4 steps forward.#A/DET person/NOUN walk/VERB step/NOUN forward/ADV#0.0#0.0
-A person with a hollow back goes forward.#A/DET person/NOUN with/ADP a/DET hollow/PROPN back/NOUN go/VERB forward/ADV#0.0#0.0
-A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
-A person walks forward fast, looking up.#A/DET person/NOUN walk/VERB forward/ADV fast/ADV look/VERB up/ADP#0.0#0.0
-a person walks forwards quite fast#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV fast/ADV#0.0#0.0
-human oddly goes forward#human/PROPN oddly/ADV go/VERB forward/ADV#0.0#0.0

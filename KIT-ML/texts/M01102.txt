@@ -1,6 +1,0 @@
-the person is moving to the left#the/DET person/NOUN is/AUX move/VERB to/ADP the/DET left/NOUN#0.0#0.0
-a person stand still and gets pushed to the left and then takes a step to the right to its original position back#a/DET person/NOUN stand/VERB still/ADV and/CCONJ get/VERB push/VERB to/ADP the/DET left/NOUN and/CCONJ then/ADV take/VERB a/DET step/NOUN to/ADP the/DET right/NOUN to/ADP its/DET original/ADJ position/NOUN back/ADV#0.0#0.0
-A person stands still, then makes a step to its left and it looks like it got puched before.#A/DET person/NOUN stand/VERB still/ADV then/ADV make/VERB a/DET step/NOUN to/ADP its/DET left/NOUN and/CCONJ it/PRON look/VERB like/SCONJ it/PRON get/VERB puche/VERB before/ADV#0.0#0.0
-A person does a 
-compensatory movement to the left side.#A/DET person/NOUN does/AUX a/DET compensatory/ADJ movement/NOUN to/ADP the/DET left/ADJ side/NOUN#0.0#0.0
-A person does a step the the right side and back.#A/DET person/NOUN does/AUX a/DET step/NOUN the/DET the/DET right/ADJ side/NOUN and/CCONJ back/NOUN#0.0#0.0

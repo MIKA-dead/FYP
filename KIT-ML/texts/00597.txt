@@ -1,2 +1,0 @@
-A person bends ts knees.#A/DET person/NOUN bend/VERB ts/DET knee/NOUN#0.0#0.0
-A person performs one squat.#A/DET person/NOUN perform/VERB one/NUM squat/NOUN#0.0#0.0

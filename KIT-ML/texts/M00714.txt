@@ -1,2 +1,0 @@
-A person goes two steps forward, turns around and goes back.#A/DET person/NOUN go/VERB two/NUM step/NOUN forward/ADV turn/VERB around/ADV and/CCONJ go/VERB back/ADV#0.0#0.0
-Someone is walking forward 2 steps starting with the right leg, then turning back around his left side and walking back 2 steps.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN then/ADV turn/VERB back/ADV around/ADP his/DET left/ADJ side/NOUN and/CCONJ walk/VERB back/ADV step/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person moves forward in a walk, performs a u-turn and then walks back to the starting position#A/DET person/NOUN move/VERB forward/ADV in/ADP a/DET walk/NOUN perform/VERB a/DET uturn/NOUN and/CCONJ then/ADV walk/VERB back/ADV to/ADP the/DET starting/NOUN position/NOUN#0.0#0.0

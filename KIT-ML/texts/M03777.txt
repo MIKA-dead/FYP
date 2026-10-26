@@ -1,1 +1,0 @@
-A person hops forward about 20 cm.#A/DET person/NOUN hop/VERB forward/ADV about/ADV cm/NOUN#0.0#0.0

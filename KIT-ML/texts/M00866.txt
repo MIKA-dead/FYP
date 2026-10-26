@@ -1,3 +1,0 @@
-A human turning right#A/DET human/ADJ turning/NOUN right/ADV#0.0#0.0
-A person walks a right curve#A/DET person/NOUN walk/VERB a/DET right/ADJ curve/NOUN#0.0#0.0
-human performs a bending walking motion to its right hand side#human/ADJ perform/VERB a/DET bend/VERB walk/VERB motion/NOUN to/ADP its/DET right/ADJ hand/NOUN side/NOUN#0.0#0.0

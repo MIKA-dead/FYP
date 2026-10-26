@@ -1,3 +1,0 @@
-the person makes only one step#the/DET person/NOUN make/VERB only/ADV one/NUM step/NOUN#0.0#0.0
-a person takes one step forwards#a/DET person/NOUN take/VERB one/NUM step/NOUN forwards/ADV#0.0#0.0
-A person is pushed forwards.#A/DET person/NOUN is/AUX push/VERB forwards/ADV#0.0#0.0

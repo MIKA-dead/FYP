@@ -1,3 +1,0 @@
-A walking person is pushed to their left while walking and slows down, then continues walking on their original path.#A/DET walk/VERB person/NOUN is/AUX push/VERB to/ADP their/DET left/ADJ while/SCONJ walk/VERB and/CCONJ slow/VERB down/ADV then/ADV continue/VERB walk/VERB on/ADP their/DET original/ADJ path/NOUN#0.0#0.0
-Someone walks forward and get pushed from the right#Someone/PRON walk/VERB forward/ADV and/CCONJ get/AUX push/VERB from/ADP the/DET right/NOUN#0.0#0.0
-Someone is viciously pushed from the right while trying to walk forwards.#Someone/PRON is/AUX viciously/ADV push/VERB from/ADP the/DET right/NOUN while/SCONJ try/VERB to/PART walk/VERB forwards/ADV#0.0#0.0

@@ -1,1 +1,0 @@
-a person picks up and object and place it on a surface in front of him#a/DET person/NOUN pick/VERB up/ADV and/CCONJ object/VERB and/CCONJ place/VERB it/PRON on/ADP a/DET surface/NOUN in/ADP front/NOUN of/ADP him/PRON#0.0#0.0

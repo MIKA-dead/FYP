@@ -1,3 +1,0 @@
-Person stumbles to his right side.#person/NOUN stumble/VERB to/ADP his/DET right/ADJ side/NOUN#0.0#0.0
-A person is pushed to the right and recovers.#A/DET person/NOUN is/AUX push/VERB to/ADP the/DET right/NOUN and/CCONJ recover/NOUN#0.0#0.0
-A person walks and gets pusehd form his left side.#A/DET person/NOUN walk/VERB and/CCONJ get/VERB pusehd/ADJ form/NOUN his/DET left/ADJ side/NOUN#0.0#0.0

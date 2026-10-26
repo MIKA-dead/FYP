@@ -1,4 +1,0 @@
-the person is walking in a circular shape#the/DET person/NOUN is/AUX walk/VERB in/ADP a/DET circular/ADJ shape/NOUN#0.0#0.0
-A human walks slowly a full circle to its right.#A/DET human/NOUN walk/VERB slowly/ADV a/DET full/ADJ circle/NOUN to/ADP its/DET right/NOUN#0.0#0.0
-A person walks a full clockwise circle.#A/DET person/NOUN walk/VERB a/DET full/ADJ clockwise/NOUN circle/NOUN#0.0#0.0
-A person walks in a circle pattern one time.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN pattern/NOUN one/NUM time/NOUN#0.0#0.0

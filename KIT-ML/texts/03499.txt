@@ -1,1 +1,0 @@
-A person perform three series of lateral moves#A/DET person/NOUN perform/VERB three/NUM series/NOUN of/ADP lateral/ADJ move/NOUN#0.0#0.0

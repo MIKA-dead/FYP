@@ -1,1 +1,0 @@
-A human holds her hands in front of her chest and turns and bends her upper body.#A/DET human/NOUN hold/VERB her/DET hand/NOUN in/ADP front/NOUN of/ADP her/DET chest/NOUN and/CCONJ turn/VERB and/CCONJ bend/VERB her/DET upper/ADJ body/NOUN#0.0#0.0

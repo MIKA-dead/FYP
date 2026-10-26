@@ -1,3 +1,0 @@
-A person walks forward#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
-A person goes forward without haste.#A/DET person/NOUN go/VERB forward/ADV without/ADP haste/NOUN#0.0#0.0
-A person takes five forward steps on flat ground.#A/DET person/NOUN take/VERB five/NUM forward/ADV step/NOUN on/ADP flat/ADJ ground/NOUN#0.0#0.0

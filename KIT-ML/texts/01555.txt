@@ -1,2 +1,0 @@
-A person walking forwards and upwards#A/DET person/NOUN walk/VERB forwards/ADV and/CCONJ upwards/ADJ#0.0#0.0
-human goes forward#human/ADJ go/VERB forward/ADV#0.0#0.0

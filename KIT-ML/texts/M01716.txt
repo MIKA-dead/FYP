@@ -1,2 +1,0 @@
-human is pushed from behind and tries to compensate the pushing force by taking a step forward#human/PROPN is/AUX push/VERB from/ADP behind/ADV and/CCONJ try/VERB to/PART compensate/VERB the/DET push/VERB force/NOUN by/ADP take/VERB a/DET step/NOUN forward/ADV#0.0#0.0
-A person gets pushed from the back#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET back/NOUN#0.0#0.0

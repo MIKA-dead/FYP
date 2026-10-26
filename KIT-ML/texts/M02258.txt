@@ -1,1 +1,0 @@
-A person does a somersault on the ground.#A/DET person/NOUN does/AUX a/DET somersault/NOUN on/ADP the/DET ground/NOUN#0.0#0.0

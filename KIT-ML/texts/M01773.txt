@@ -1,4 +1,0 @@
-A person stumbles over something lying on the floor#A/DET person/NOUN stumble/VERB over/ADP something/PRON lie/VERB on/ADP the/DET floor/NOUN#0.0#0.0
-a person walks forward and gets pushed from behind and tumbles for some steps#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ get/VERB push/VERB from/ADP behind/ADV and/CCONJ tumble/NOUN for/ADP some/DET step/NOUN#0.0#0.0
-A person gets pushed forward very hard.#A/DET person/NOUN get/VERB push/VERB forward/ADV very/ADV hard/ADV#0.0#0.0
-Somebody bangs his head on something.#Somebody/PRON bang/VERB his/DET head/NOUN on/ADP something/PRON#0.0#0.0

@@ -1,1 +1,0 @@
-A person draws two vertical lines with both hands.#A/DET person/NOUN draw/VERB two/NUM vertical/ADJ line/NOUN with/ADP both/DET hand/NOUN#0.0#0.0

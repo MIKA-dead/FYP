@@ -1,2 +1,0 @@
-A person runs five steps and stops.#A/DET person/NOUN run/VERB five/NUM step/NOUN and/CCONJ stop/NOUN#0.0#0.0
-a person takes a few quick steps forward#a/DET person/NOUN take/VERB a/DET few/ADJ quick/ADJ step/NOUN forward/ADV#0.0#0.0

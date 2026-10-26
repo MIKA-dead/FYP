@@ -1,5 +1,0 @@
-A persons waves with both hands.#A/DET person/NOUN wave/NOUN with/ADP both/DET hand/NOUN#0.0#0.0
-A human is waving with both hands mirrored before its head#A/DET human/NOUN is/AUX wave/VERB with/ADP both/DET hand/NOUN mirror/VERB before/ADP its/DET head/NOUN#0.0#0.0
-A person is waving at someone/something with both hands.#A/DET person/NOUN is/AUX wave/VERB at/ADP someone/PRON something/PRON with/ADP both/DET hand/NOUN#0.0#0.0
-a person waves with both hands#a/DET person/NOUN wave/VERB with/ADP both/DET hand/NOUN#0.0#0.0
-A person waves with both of his arms.#A/DET person/NOUN wave/VERB with/ADP both/DET of/ADP his/DET arm/NOUN#0.0#0.0

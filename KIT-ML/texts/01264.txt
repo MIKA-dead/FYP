@@ -1,3 +1,0 @@
-A person takes a deep bow.#A/DET person/NOUN take/VERB a/DET deep/ADJ bow/NOUN#0.0#0.0
-A person bows.#A/DET person/NOUN bow/VERB#0.0#0.0
-a person takes a deep bow#a/DET person/NOUN take/VERB a/DET deep/ADJ bow/NOUN#0.0#0.0

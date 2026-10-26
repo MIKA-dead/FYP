@@ -1,1 +1,0 @@
-A person starts climbing some stairs in front of him.#A/DET person/NOUN start/VERB climb/VERB some/DET stair/NOUN in/ADP front/NOUN of/ADP him/PRON#0.0#0.0

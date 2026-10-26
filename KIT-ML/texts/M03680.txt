@@ -1,1 +1,0 @@
-A person is walking 5 steps forward with a little break after step 2.#A/DET person/NOUN is/AUX walk/VERB step/NOUN forward/ADV with/ADP a/DET little/ADJ break/NOUN after/ADP step/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-A Person doing a tennis racket like movement#A/DET person/NOUN do/VERB a/DET tennis/NOUN racket/NOUN like/SCONJ movement/NOUN#0.0#0.0
-A person slaps with his right hand.#A/DET person/NOUN slap/VERB with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

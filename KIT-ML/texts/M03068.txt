@@ -1,1 +1,0 @@
-A person puts his hands on his hips and inspects the ground in front of him.#A/DET person/NOUN put/VERB his/DET hand/NOUN on/ADP his/DET hip/NOUN and/CCONJ inspect/VERB the/DET ground/NOUN in/ADP front/NOUN of/ADP him/PRON#0.0#0.0

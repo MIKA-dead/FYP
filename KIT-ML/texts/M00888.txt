@@ -1,3 +1,0 @@
-A human is slowly walking forward.#A/DET human/NOUN is/AUX slowly/ADV walk/VERB forward/ADV#0.0#0.0
-Someone is walking 5 steps very slowly starting with the left leg.#Someone/PRON is/AUX walk/VERB step/NOUN very/ADV slowly/ADV start/VERB with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0
-a person walks very slowly forwards#a/DET person/NOUN walk/VERB very/ADV slowly/ADV forwards/ADV#0.0#0.0

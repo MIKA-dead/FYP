@@ -1,1 +1,0 @@
-A human jumps approximately half a meter forward.#A/DET human/ADJ jump/NOUN approximately/ADV half/DET a/DET meter/NOUN forward/ADV#0.0#0.0

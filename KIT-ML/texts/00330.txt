@@ -1,1 +1,0 @@
-A human is walking backwards.#A/DET human/NOUN is/AUX walk/VERB backwards/ADV#0.0#0.0

@@ -1,1 +1,0 @@
-Person is jumping to the left#person/NOUN is/AUX jump/VERB to/ADP the/DET left/NOUN#0.0#0.0

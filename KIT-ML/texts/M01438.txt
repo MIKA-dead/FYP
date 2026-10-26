@@ -1,2 +1,0 @@
-A person makes a motion a bit like playing the violin, but one the left (wrong) side.#A/DET person/NOUN make/VERB a/DET motion/NOUN a/DET bit/NOUN like/SCONJ play/VERB the/DET violin/NOUN but/CCONJ one/NUM the/DET left/ADJ wrong/ADJ side/NOUN#0.0#0.0
-The human plays guitar#The/DET human/NOUN play/VERB guitar/NOUN#0.0#0.0

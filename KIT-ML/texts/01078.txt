@@ -1,3 +1,0 @@
-A person walking to the left in a 90 degrees curve#A/DET person/NOUN walk/VERB to/ADP the/DET left/NOUN in/ADP a/DET degree/NOUN curve/NOUN#0.0#0.0
-A person walks a quarter of a circle to the left while taking 4 steps starting with the left foot.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN to/ADP the/DET left/ADJ while/SCONJ take/VERB step/NOUN start/VERB with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0
-a person walks to the left performing a quarter circle#a/DET person/NOUN walk/VERB to/ADP the/DET left/ADJ perform/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0

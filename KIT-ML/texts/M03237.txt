@@ -1,1 +1,0 @@
-A person goes one diagonal step forward to the left front using his left food first.#A/DET person/NOUN go/VERB one/NUM diagonal/ADJ step/NOUN forward/ADV to/ADP the/DET left/ADJ front/NOUN use/VERB his/DET left/ADJ food/NOUN first/ADV#0.0#0.0

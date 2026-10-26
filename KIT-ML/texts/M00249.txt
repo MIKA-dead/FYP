@@ -1,2 +1,0 @@
-A human is making a counterclockwise turn.#A/DET human/NOUN is/AUX make/VERB a/DET counterclockwise/ADJ turn/NOUN#0.0#0.0
-A person walks to the left#A/DET person/NOUN walk/VERB to/ADP the/DET left/NOUN#0.0#0.0

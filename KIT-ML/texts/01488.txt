@@ -1,4 +1,0 @@
-Someone cleans a table.#Someone/PRON clean/VERB a/DET table/NOUN#0.0#0.0
-a persons wipes something with its right hand#a/DET person/NOUN wipe/NOUN something/PRON with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
-A human is performing a horizontal whiping movement with the right hand#A/DET human/NOUN is/AUX perform/VERB a/DET horizontal/ADJ whip/VERB movement/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-A person is wiping with the right hand.#A/DET person/NOUN is/AUX wipe/VERB with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

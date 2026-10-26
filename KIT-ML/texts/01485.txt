@@ -1,3 +1,0 @@
-A human performing a stirring task#A/DET human/NOUN perform/VERB a/DET stirring/ADJ task/NOUN#0.0#0.0
-human performs a motion similar to mixing#human/ADJ perform/VERB a/DET motion/NOUN similar/ADJ to/ADP mix/VERB#0.0#0.0
-a person wipes something with its right hand#a/DET person/NOUN wipe/VERB something/PRON with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

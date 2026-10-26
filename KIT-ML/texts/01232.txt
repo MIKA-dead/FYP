@@ -1,3 +1,0 @@
-a person is dancing chachacha#a/DET person/NOUN is/AUX dance/VERB chachacha/INTJ#0.0#0.0
-A human is performing a dance (probably a specific one)#A/DET human/NOUN is/AUX perform/VERB a/DET dance/NOUN probably/ADV a/DET specific/ADJ one/NOUN#0.0#0.0
-a man is practicing danse steps#a/DET man/NOUN is/AUX practice/VERB danse/NOUN step/NOUN#0.0#0.0

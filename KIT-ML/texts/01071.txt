@@ -1,2 +1,0 @@
-the person is first walking forward and then turning to the left#the/DET person/NOUN is/AUX first/ADV walk/VERB forward/ADV and/CCONJ then/ADV turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
-A person is turning to the left while walking#A/DET person/NOUN is/AUX turn/VERB to/ADP the/DET left/ADJ while/SCONJ walk/VERB#0.0#0.0

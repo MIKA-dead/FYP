@@ -1,4 +1,0 @@
-A person walks forwards fast.#A/DET person/NOUN walk/VERB forwards/ADV fast/ADV#0.0#0.0
-a person walks forwards very wuickly#a/DET person/NOUN walk/VERB forwards/ADP very/ADV wuickly/ADJ#0.0#0.0
-A person walks fast.#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0
-A person walking fast#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0

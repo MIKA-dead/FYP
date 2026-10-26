@@ -1,3 +1,0 @@
-Someone waves with both hands.#Someone/PRON wave/VERB with/ADP both/DET hand/NOUN#0.0#0.0
-Person waving with both hands#person/NOUN wave/VERB with/ADP both/DET hand/NOUN#0.0#0.0
-someone is waving with both arms#someone/PRON is/AUX wave/VERB with/ADP both/DET arm/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A human performs a forward roll.#A/DET human/NOUN perform/VERB a/DET forward/ADJ roll/NOUN#0.0#0.0

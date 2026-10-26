@@ -1,1 +1,0 @@
-A person is dancing#A/DET person/NOUN is/AUX dance/VERB#0.0#0.0

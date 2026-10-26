@@ -1,4 +1,0 @@
-A person is kicking at something at knee height#A/DET person/NOUN is/AUX kick/VERB at/ADP something/PRON at/ADP knee/NOUN height/NOUN#0.0#0.0
-A person kicks something with its left  foot#A/DET person/NOUN kick/VERB something/PRON with/ADP its/DET left/ADJ foot/NOUN#0.0#0.0
-A person performs a low kick.#A/DET person/NOUN perform/VERB a/DET low/ADJ kick/NOUN#0.0#0.0
-A human performs a forward kick with his left leg.#A/DET human/NOUN perform/VERB a/DET forward/ADJ kick/NOUN with/ADP his/DET left/ADJ leg/NOUN#0.0#0.0

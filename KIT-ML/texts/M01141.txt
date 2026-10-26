@@ -1,2 +1,0 @@
-A human walks in a right bend.#A/DET human/ADJ walk/VERB in/ADP a/DET right/ADJ bend/NOUN#0.0#0.0
-a person walks to the right performing a 90 degrees turn while walking in a quarter circle#a/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN perform/VERB a/DET degree/NOUN turn/VERB while/SCONJ walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0

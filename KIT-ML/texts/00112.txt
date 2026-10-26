@@ -1,3 +1,0 @@
-Someone walks backwards.#Someone/PRON walk/VERB backwards/ADV#0.0#0.0
-A human is slowly walking backwards#A/DET human/NOUN is/AUX slowly/ADV walk/VERB backwards/ADV#0.0#0.0
-A person walks backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0

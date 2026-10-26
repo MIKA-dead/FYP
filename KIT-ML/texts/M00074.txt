@@ -1,1 +1,0 @@
-A person is walking in a small circle.#A/DET person/NOUN is/AUX walk/VERB in/ADP a/DET small/ADJ circle/NOUN#0.0#0.0

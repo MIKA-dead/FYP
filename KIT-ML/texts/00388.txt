@@ -1,5 +1,0 @@
-Someone moves backwards in a walk#Someone/PRON move/VERB backwards/ADV in/ADP a/DET walk/NOUN#0.0#0.0
-A human walks backwards while looking forward#A/DET human/NOUN walk/VERB backwards/ADV while/SCONJ look/VERB forward/ADV#0.0#0.0
-a person walks backwards a few steps#a/DET person/NOUN walk/VERB backwards/ADV a/DET few/ADJ step/NOUN#0.0#0.0
-A person walks backwards fast.#A/DET person/NOUN walk/VERB backwards/ADV fast/ADV#0.0#0.0
-a person takes 5 steps backwards#a/DET person/NOUN take/VERB step/NOUN backwards/ADV#0.0#0.0

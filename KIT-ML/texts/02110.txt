@@ -1,2 +1,0 @@
-Someone goes down on his knees#Someone/PRON go/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0
-a person goes down to its knees#a/DET person/NOUN go/VERB down/ADP to/ADP its/DET knee/NOUN#0.0#0.0

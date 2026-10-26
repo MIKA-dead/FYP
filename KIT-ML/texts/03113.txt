@@ -1,1 +1,0 @@
-a person shovels and picks up objects#a/DET person/NOUN shovel/VERB and/CCONJ pick/VERB up/ADP object/NOUN#0.0#0.0

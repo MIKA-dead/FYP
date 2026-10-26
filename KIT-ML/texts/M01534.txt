@@ -1,3 +1,0 @@
-A person cleans a surface by making circular motions with their right hand.#A/DET person/NOUN clean/VERB a/DET surface/NOUN by/ADP make/VERB circular/ADJ motion/NOUN with/ADP their/DET right/ADJ hand/NOUN#0.0#0.0
-A human wipes on a table.#A/DET human/ADJ wipe/NOUN on/ADP a/DET table/NOUN#0.0#0.0
-A person stirs with their right hand#A/DET person/NOUN stir/VERB with/ADP their/DET right/ADJ hand/NOUN#0.0#0.0

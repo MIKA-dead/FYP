@@ -1,1 +1,0 @@
-A person is boxing with his left hand.#A/DET person/NOUN is/AUX box/VERB with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

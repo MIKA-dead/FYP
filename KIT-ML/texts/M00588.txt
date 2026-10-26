@@ -1,1 +1,0 @@
-A human running forwards#A/DET human/ADJ running/NOUN forwards/ADV#0.0#0.0

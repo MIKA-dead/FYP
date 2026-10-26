@@ -1,2 +1,0 @@
-the person is walking in a half circle shape to the left#the/DET person/NOUN is/AUX walk/VERB in/ADP a/DET half/ADJ circle/NOUN shape/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-A person turns left.#A/DET person/NOUN turn/VERB left/VERB#0.0#0.0

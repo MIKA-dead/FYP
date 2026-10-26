@@ -1,2 +1,0 @@
-A person starts a circular movement to the left.#A/DET person/NOUN start/VERB a/DET circular/ADJ movement/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-A person goes 5 steps to the left and thereby describes a quarter circle.#A/DET person/NOUN go/VERB step/NOUN to/ADP the/DET left/NOUN and/CCONJ thereby/ADV describe/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0

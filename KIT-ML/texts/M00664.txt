@@ -1,3 +1,0 @@
-A person performs the egyptian walk with the hands.#A/DET person/NOUN perform/VERB the/DET egyptian/ADJ walk/NOUN with/ADP the/DET hand/NOUN#0.0#0.0
-A person is dancing.#A/DET person/NOUN is/AUX dance/VERB#0.0#0.0
-A human points his finger to an object. First left hand finger. Second right hand finger#A/DET human/ADJ point/NOUN his/DET finger/NOUN to/ADP an/DET object/NOUN First/ADV left/ADJ hand/NOUN finger/NOUN Second/ADJ right/ADJ hand/NOUN finger/NOUN#0.0#0.0

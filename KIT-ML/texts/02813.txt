@@ -1,1 +1,0 @@
-A person first waves his left hand then widely both hands.#A/DET person/NOUN first/ADV wave/VERB his/DET left/ADJ hand/NOUN then/ADV widely/ADV both/DET hand/NOUN#0.0#0.0

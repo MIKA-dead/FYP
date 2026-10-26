@@ -1,1 +1,0 @@
-I person is slowing moving forward over an obstacle.#I/PRON person/NOUN is/AUX slow/VERB move/VERB forward/ADV over/ADP an/DET obstacle/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A human is running#A/DET human/NOUN is/AUX run/VERB#0.0#0.0

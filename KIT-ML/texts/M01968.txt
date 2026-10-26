@@ -1,1 +1,0 @@
-A human does a short sprint#A/DET human/NOUN does/AUX a/DET short/ADJ sprint/NOUN#0.0#0.0

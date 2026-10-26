@@ -1,1 +1,0 @@
-The person steps half a meter to the right while looking at his feet.#The/DET person/NOUN step/VERB half/DET a/DET meter/NOUN to/ADP the/DET right/NOUN while/SCONJ look/VERB at/ADP his/DET foot/NOUN#0.0#0.0

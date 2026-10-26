@@ -1,2 +1,0 @@
-A person walks counter-clockwise in an incomplete circle and stops facing to the right relative to the starting position.#A/DET person/NOUN walk/VERB counterclockwise/NOUN in/ADP an/DET incomplete/ADJ circle/NOUN and/CCONJ stop/VERB face/VERB to/ADP the/DET right/ADJ relative/NOUN to/ADP the/DET starting/NOUN position/NOUN#0.0#0.0
-The human walks a circle#The/DET human/NOUN walk/VERB a/DET circle/NOUN#0.0#0.0

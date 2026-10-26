@@ -1,4 +1,0 @@
-Person jumping backwards#person/NOUN jump/VERB backwards/ADV#0.0#0.0
-A person jumps backwards#A/DET person/NOUN jump/VERB backwards/ADV#0.0#0.0
-Someone is jumping backwards.#Someone/PRON is/AUX jump/VERB backwards/ADV#0.0#0.0
-Someone jumps backwards.#Someone/PRON jump/VERB backwards/ADV#0.0#0.0

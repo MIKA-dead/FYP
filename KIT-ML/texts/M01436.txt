@@ -1,3 +1,0 @@
-Person doing a guitar move with the right hand#person/NOUN do/VERB a/DET guitar/NOUN move/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-Someone plays air guitar#Someone/PRON play/VERB air/NOUN guitar/NOUN#0.0#0.0
-a person plays the guitar with its right hand#a/DET person/NOUN play/VERB the/DET guitar/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

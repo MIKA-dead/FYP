@@ -1,1 +1,0 @@
-A person gets pushed from the left, performs two steps to the right to recover and steps back to the initial position.#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET left/NOUN perform/VERB two/NUM step/NOUN to/ADP the/DET right/NOUN to/PART recover/VERB and/CCONJ step/VERB back/ADV to/ADP the/DET initial/ADJ position/NOUN#0.0#0.0

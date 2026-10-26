@@ -1,1 +1,0 @@
-A person jumps over an obstacle while running.#A/DET person/NOUN jump/VERB over/ADP an/DET obstacle/NOUN while/SCONJ run/VERB#0.0#0.0

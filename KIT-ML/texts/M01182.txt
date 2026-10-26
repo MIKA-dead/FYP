@@ -1,2 +1,0 @@
-Someone walks slowly with small steps.#Someone/PRON walk/VERB slowly/ADV with/ADP small/ADJ step/NOUN#0.0#0.0
-A person walks slowly 4 steps forward.#A/DET person/NOUN walk/VERB slowly/ADV step/NOUN forward/ADV#0.0#0.0

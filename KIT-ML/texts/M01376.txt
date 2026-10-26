@@ -1,2 +1,0 @@
-a person wave with the left hand#a/DET person/NOUN wave/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
-A person waves his left hand to greet.#A/DET person/NOUN wave/VERB his/DET left/ADJ hand/NOUN to/PART greet/VERB#0.0#0.0

@@ -1,4 +1,0 @@
-Someone walks forwards quickly#Someone/PRON walk/VERB forwards/ADV quickly/ADV#0.0#0.0
-a person walks forwards#a/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0
-The human perfoms a couple of steps#The/DET human/ADJ perfom/NOUN a/DET couple/NOUN of/ADP step/NOUN#0.0#0.0
-Somebody walks straight on.#Somebody/PRON walk/VERB straight/ADV on/ADV#0.0#0.0

@@ -1,7 +1,0 @@
-a person is evading a boxing punch#a/DET person/NOUN is/AUX evade/VERB a/DET boxing/NOUN punch/NOUN#0.0#0.0
-a person dodges a hit#a/DET person/NOUN dodge/VERB a/DET hit/NOUN#0.0#0.0
-Someone evades a punch.#Someone/PRON evade/VERB a/DET punch/NOUN#0.0#0.0
-A person is backing up as if being boxed#A/DET person/NOUN is/AUX back/VERB up/ADP as/SCONJ if/SCONJ being/AUX box/VERB#0.0#0.0
-A person dodging down to the right#A/DET person/NOUN dodge/VERB down/ADP to/ADP the/DET right/NOUN#0.0#0.0
-A person standing in fighting pose with his arms risen to block incoming attacks ducks to dodge an attack.#A/DET person/NOUN stand/VERB in/ADP fighting/NOUN pose/NOUN with/ADP his/DET arm/NOUN rise/VERB to/PART block/VERB incoming/ADJ attack/NOUN duck/NOUN to/PART dodge/VERB an/DET attack/NOUN#0.0#0.0
-Dodging a punch in a box fight by leaning to the right.#dodge/VERB a/DET punch/NOUN in/ADP a/DET box/NOUN fight/NOUN by/ADP lean/VERB to/ADP the/DET right/NOUN#0.0#0.0

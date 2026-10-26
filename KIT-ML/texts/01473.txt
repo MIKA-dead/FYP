@@ -1,2 +1,0 @@
-A person is playing violin.#A/DET person/NOUN is/AUX play/VERB violin/NOUN#0.0#0.0
-a person plays the violin with the left hand#a/DET person/NOUN play/VERB the/DET violin/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-A person turns around while walking#A/DET person/NOUN turn/VERB around/ADP while/SCONJ walk/VERB#0.0#0.0
-Someone walks forward and turn 180 degree and walks forward#Someone/PRON walk/VERB forward/ADV and/CCONJ turn/VERB degree/NOUN and/CCONJ walk/VERB forward/ADV#0.0#0.0

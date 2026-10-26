@@ -1,5 +1,0 @@
-A person walking briskly for a few steps forward#A/DET person/NOUN walk/VERB briskly/ADV for/ADP a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0
-a person walks forwards quite fast#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV fast/ADV#0.0#0.0
-A persons walks five steps as if having a big belly#A/DET person/NOUN walk/VERB five/NUM step/NOUN as/SCONJ if/SCONJ have/VERB a/DET big/ADJ belly/NOUN#0.0#0.0
-someone walks with little detour.#someone/PRON walk/VERB with/ADP little/ADJ detour/NOUN#0.0#0.0
-human goes forward#human/ADJ go/VERB forward/ADV#0.0#0.0

@@ -1,3 +1,0 @@
-A person walks and makes a 90 degree left turn.#A/DET person/NOUN walk/VERB and/CCONJ make/VERB a/DET degree/NOUN left/VERB turn/NOUN#0.0#0.0
-A person walks forward in a 90° curve to his left.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET curve/NOUN to/ADP his/DET left/NOUN#0.0#0.0
-A person walks in a quarter circle.#A/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0

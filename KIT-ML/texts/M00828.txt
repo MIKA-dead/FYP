@@ -1,3 +1,0 @@
-A human walks forwards, then turns right and begins to walk the other way.#A/DET human/ADJ walk/VERB forwards/ADV then/ADV turn/VERB right/ADJ and/CCONJ begin/VERB to/PART walk/VERB the/DET other/ADJ way/NOUN#0.0#0.0
-Someone walks forward then turn 180 degree and walks forward#Someone/PRON walk/VERB forward/ADV then/ADV turn/VERB degree/NOUN and/CCONJ walk/VERB forward/ADV#0.0#0.0
-A human makes two steps forward, then turns on his heel and makes another two steps.#A/DET human/NOUN make/VERB two/NUM step/NOUN forward/ADV then/ADV turn/VERB on/ADP his/DET heel/NOUN and/CCONJ make/VERB another/DET two/NUM step/NOUN#0.0#0.0

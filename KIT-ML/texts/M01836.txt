@@ -1,3 +1,0 @@
-A person gets pushed forward approximately 1 meter.#A/DET person/NOUN get/VERB push/VERB forward/ADV approximately/ADV meter/NOUN#0.0#0.0
-A human is being pushed from behind, doing a sidestep to the front with the left foot.#A/DET human/NOUN is/AUX being/AUX push/VERB from/ADP behind/ADV do/VERB a/DET sidestep/NOUN to/ADP the/DET front/NOUN with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0
-A person stumbles.#A/DET person/NOUN stumble/VERB#0.0#0.0

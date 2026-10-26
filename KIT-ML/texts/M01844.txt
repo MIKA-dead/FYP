@@ -1,3 +1,0 @@
-A person standing still and then stumbling backwards.#A/DET person/NOUN stand/VERB still/ADV and/CCONJ then/ADV stumble/VERB backwards/ADV#0.0#0.0
-a persons stumbles a step backwards#a/DET person/NOUN stumble/VERB a/DET step/NOUN backwards/ADV#0.0#0.0
-A person gets pushed and makes a step back to avoid falling.#A/DET person/NOUN get/VERB push/VERB and/CCONJ make/VERB a/DET step/NOUN back/ADV to/PART avoid/VERB fall/VERB#0.0#0.0

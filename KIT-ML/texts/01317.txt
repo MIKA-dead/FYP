@@ -1,3 +1,0 @@
-A person jumps about 20 cm high.#A/DET person/NOUN jump/VERB about/ADV cm/NOUN high/ADJ#0.0#0.0
-Someone is jumping up while standing.#Someone/PRON is/AUX jump/VERB up/ADP while/SCONJ stand/VERB#0.0#0.0
-a human jumps on the spot#a/DET human/ADJ jump/NOUN on/ADP the/DET spot/NOUN#0.0#0.0

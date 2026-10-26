@@ -1,2 +1,0 @@
-Someone performs a slow move around a corner to the left#Someone/PRON perform/VERB a/DET slow/ADJ move/NOUN around/ADP a/DET corner/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-The human perfoms a left turn#The/DET human/ADJ perfom/NOUN a/DET left/ADJ turn/NOUN#0.0#0.0

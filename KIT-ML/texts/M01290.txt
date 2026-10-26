@@ -1,3 +1,0 @@
-A human performing a low kick with the right leg#A/DET human/NOUN perform/VERB a/DET low/ADJ kick/NOUN with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
-A human kicks something with his right foot#A/DET human/ADJ kick/NOUN something/PRON with/ADP his/DET right/ADJ foot/NOUN#0.0#0.0
-a person kicks something in the lower front#a/DET person/NOUN kick/VERB something/PRON in/ADP the/DET lower/ADJ front/NOUN#0.0#0.0

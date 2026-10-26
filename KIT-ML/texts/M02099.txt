@@ -1,5 +1,0 @@
-A person crawls on the floor#A/DET person/NOUN crawl/VERB on/ADP the/DET floor/NOUN#0.0#0.0
-A human gets down on all fours and imitates a four-legged animal.#A/DET human/NOUN get/VERB down/ADV on/ADP all/DET four/NOUN and/CCONJ imitate/VERB a/DET fourlegged/ADJ animal/NOUN#0.0#0.0
-A person goes to his knees and crawls.#A/DET person/NOUN go/VERB to/ADP his/DET knee/NOUN and/CCONJ crawl/NOUN#0.0#0.0
-a human walks on all four.#a/DET human/NOUN walk/VERB on/ADP all/DET four/NUM#0.0#0.0
-Someone gets down on his knees and hands and walks around.#Someone/PRON get/VERB down/ADP on/ADP his/DET knee/NOUN and/CCONJ hand/NOUN and/CCONJ walk/VERB around/ADV#0.0#0.0

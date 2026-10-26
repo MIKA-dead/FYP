@@ -1,3 +1,0 @@
-A person walks a quarter of a small circle counterclockwise.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN of/ADP a/DET small/ADJ circle/NOUN counterclockwise/NOUN#0.0#0.0
-Subject walks in a quarter circle counterclockwise.#Subject/ADJ walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN counterclockwise/NOUN#0.0#0.0
-Some walks a quarter circle to the left.#Some/DET walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

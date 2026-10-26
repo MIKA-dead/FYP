@@ -1,5 +1,0 @@
-Someone walks a quarter-circle to the left.#Someone/PRON walk/VERB a/DET quartercircle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-Someone walks a left turn#Someone/PRON walk/VERB a/DET left/ADJ turn/NOUN#0.0#0.0
-A human performs a 90° curve tu the left#A/DET human/NOUN perform/VERB a/DET curve/NOUN tu/NOUN the/DET left/NOUN#0.0#0.0
-A human walks a quarter to his left#A/DET human/NOUN walk/VERB a/DET quarter/NOUN to/ADP his/DET left/NOUN#0.0#0.0
-A person turns left.#A/DET person/NOUN turn/VERB left/VERB#0.0#0.0

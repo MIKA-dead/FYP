@@ -1,8 +1,0 @@
-A human performing a handspring#A/DET human/NOUN perform/VERB a/DET handspring/NOUN#0.0#0.0
-A person turns a wheel.#A/DET person/NOUN turn/VERB a/DET wheel/NOUN#0.0#0.0
-cartwheel starting with right leg#cartwheel/VERB start/VERB with/ADP right/ADJ leg/NOUN#0.0#0.0
-A human does a cartwheel#A/DET human/NOUN does/AUX a/DET cartwheel/NOUN#0.0#0.0
-A person turns a cartwheel.#A/DET person/NOUN turn/VERB a/DET cartwheel/NOUN#0.0#0.0
-a person does a cartwheel#a/DET person/NOUN does/AUX a/DET cartwheel/NOUN#0.0#0.0
-A human does a cartwheel#A/DET human/NOUN does/AUX a/DET cartwheel/NOUN#0.0#0.0
-Somebody turns a wheel.#Somebody/PRON turn/VERB a/DET wheel/NOUN#0.0#0.0

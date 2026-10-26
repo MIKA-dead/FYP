@@ -1,1 +1,0 @@
-A human stretches and performs a squad.#A/DET human/ADJ stretch/NOUN and/CCONJ perform/VERB a/DET squad/NOUN#0.0#0.0

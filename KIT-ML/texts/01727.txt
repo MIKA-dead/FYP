@@ -1,3 +1,0 @@
-Subject is backing away.#subject/NOUN is/AUX back/VERB away/ADP#0.0#0.0
-A person walks backwards a few steps#A/DET person/NOUN walk/VERB backwards/ADV a/DET few/ADJ step/NOUN#0.0#0.0
-A person is pushed back.#A/DET person/NOUN is/AUX push/VERB back/ADV#0.0#0.0

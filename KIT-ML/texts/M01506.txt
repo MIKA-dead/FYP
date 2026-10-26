@@ -1,4 +1,0 @@
-Person moving the hand in a circle to stir or clean something#person/NOUN move/VERB the/DET hand/NOUN in/ADP a/DET circle/NOUN to/PART stir/VERB or/CCONJ clean/VERB something/PRON#0.0#0.0
-A person wipes a surface using their right hand#A/DET person/NOUN wipe/VERB a/DET surface/NOUN use/VERB their/DET right/ADJ hand/NOUN#0.0#0.0
-A person is strirring in a big pot.#A/DET person/NOUN is/AUX strirre/VERB in/ADP a/DET big/ADJ pot/NOUN#0.0#0.0
-Someone is moving his right hand in a circular motion in front of his upper body parallel to the floor.#Someone/PRON is/AUX move/VERB his/DET right/ADJ hand/NOUN in/ADP a/DET circular/ADJ motion/NOUN in/ADP front/NOUN of/ADP his/DET upper/ADJ body/NOUN parallel/NOUN to/ADP the/DET floor/NOUN#0.0#0.0

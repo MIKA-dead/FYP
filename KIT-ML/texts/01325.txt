@@ -1,4 +1,0 @@
-the person is jumping#the/DET person/NOUN is/AUX jump/VERB#0.0#0.0
-A person jumps forward with both feet.#A/DET person/NOUN jump/VERB forward/ADV with/ADP both/DET foot/NOUN#0.0#0.0
-a person jumps forwards about 20 centimeters#a/DET person/NOUN jump/VERB forwards/ADV about/ADV centimeter/NOUN#0.0#0.0
-a person hops forward#a/DET person/NOUN hop/VERB forward/ADV#0.0#0.0

@@ -1,4 +1,0 @@
-A person throws something forward.#A/DET person/NOUN throw/VERB something/PRON forward/ADV#0.0#0.0
-A human performs a slap (volleyball serve) with the right hand#A/DET human/NOUN perform/VERB a/DET slap/NOUN volleyball/NOUN serve/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-A person performs a left handed throwing motion.#A/DET person/NOUN perform/VERB a/DET left/ADJ handed/ADJ throwing/NOUN motion/NOUN#0.0#0.0
-A person throws something.#A/DET person/NOUN throw/VERB something/PRON#0.0#0.0

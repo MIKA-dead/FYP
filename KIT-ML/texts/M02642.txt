@@ -1,1 +1,0 @@
-Someone walking over an obstacle from multiple directions.#Someone/PRON walk/VERB over/ADP an/DET obstacle/NOUN from/ADP multiple/ADJ direction/NOUN#0.0#0.0

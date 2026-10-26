@@ -1,1 +1,0 @@
-A human picks up a rope from the ground and curls it up.#A/DET human/ADJ pick/NOUN up/ADP a/DET rope/NOUN from/ADP the/DET ground/NOUN and/CCONJ curls/VERB it/PRON up/ADP#0.0#0.0

@@ -1,1 +1,0 @@
-A person is sitting and resting its head onto its left arm.#A/DET person/NOUN is/AUX sit/VERB and/CCONJ rest/VERB its/DET head/NOUN onto/ADP its/DET left/ADJ arm/NOUN#0.0#0.0

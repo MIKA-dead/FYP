@@ -1,1 +1,0 @@
-A person is moving forward over a larger obstacle by putting one leg after another.#A/DET person/NOUN is/AUX move/VERB forward/ADV over/ADP a/DET larger/ADJ obstacle/NOUN by/ADP put/VERB one/NUM leg/NOUN after/ADP another/DET#0.0#0.0

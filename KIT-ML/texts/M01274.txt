@@ -1,2 +1,0 @@
-A person performs a judo kick with the left leg#A/DET person/NOUN perform/VERB a/DET judo/PROPN kick/NOUN with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0
-A person is kicking with his left foot.#A/DET person/NOUN is/AUX kick/VERB with/ADP his/DET left/ADJ foot/NOUN#0.0#0.0

@@ -1,3 +1,0 @@
-human goes forward starting with right and gets pushed partway by an invisible force#human/PROPN go/VERB forward/ADV start/VERB with/ADP right/NOUN and/CCONJ get/VERB push/VERB partway/ADV by/ADP an/DET invisible/ADJ force/NOUN#0.0#0.0
-A person walks forward 5 steps.#A/DET person/NOUN walk/VERB forward/ADV step/NOUN#0.0#0.0
-a person walks forwards and gets pushed from behind#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ get/VERB push/VERB from/ADP behind/ADV#0.0#0.0

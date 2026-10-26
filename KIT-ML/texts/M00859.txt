@@ -1,1 +1,0 @@
-A Person moves in a slow walk around a corner to the right#A/DET person/NOUN move/VERB in/ADP a/DET slow/ADJ walk/NOUN around/ADP a/DET corner/NOUN to/ADP the/DET right/NOUN#0.0#0.0

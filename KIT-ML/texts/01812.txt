@@ -1,6 +1,0 @@
-Person stumbling after being pushed while standing#person/NOUN stumble/VERB after/ADP being/AUX push/VERB while/SCONJ stand/VERB#0.0#0.0
-someone walks to his right side crossing his feet#someone/PRON walk/VERB to/ADP his/DET right/ADJ side/NOUN cross/VERB his/DET foot/NOUN#0.0#0.0
-A person is pushed to the right#A/DET person/NOUN is/AUX push/VERB to/ADP the/DET right/NOUN#0.0#0.0
-A person moves to the right as if he was pushed by someone else.#A/DET person/NOUN move/VERB to/ADP the/DET right/NOUN as/SCONJ if/SCONJ he/PRON was/AUX push/VERB by/ADP someone/PRON else/ADV#0.0#0.0
-A person stumbles to the right.#A/DET person/NOUN stumble/VERB to/ADP the/DET right/NOUN#0.0#0.0
-A person takes a large step to the right in response to a push from the left.#A/DET person/NOUN take/VERB a/DET large/ADJ step/NOUN to/ADP the/DET right/NOUN in/ADP response/NOUN to/ADP a/DET push/NOUN from/ADP the/DET left/NOUN#0.0#0.0

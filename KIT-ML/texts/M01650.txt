@@ -1,2 +1,0 @@
-A person is standing with his arms stretched out to the side#A/DET person/NOUN is/AUX stand/VERB with/ADP his/DET arm/NOUN stretch/VERB out/ADP to/ADP the/DET side/NOUN#0.0#0.0
-A person stand stetching both arms to the side.#A/DET person/NOUN stand/VERB stetche/VERB both/DET arm/NOUN to/ADP the/DET side/NOUN#0.0#0.0

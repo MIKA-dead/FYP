@@ -1,4 +1,0 @@
-Someone wipes something.#Someone/PRON wipe/VERB something/PRON#0.0#0.0
-A human performs a sirring motion#A/DET human/NOUN perform/VERB a/DET sirring/ADJ motion/NOUN#0.0#0.0
-a person wipes omething with its left hand#a/DET person/NOUN wipe/NOUN omethe/VERB with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
-A person is moving as if cleaning a surface at breast hight.#A/DET person/NOUN is/AUX move/VERB as/SCONJ if/SCONJ clean/VERB a/DET surface/NOUN at/ADP breast/NOUN hight/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person moves both hands towards each other until they touch and then moves them in opposite directions.#A/DET person/NOUN move/VERB both/DET hand/NOUN towards/ADP each/DET other/ADJ until/ADP they/PRON touch/VERB and/CCONJ then/ADV move/VERB them/PRON in/ADP opposite/ADJ direction/NOUN#0.0#0.0

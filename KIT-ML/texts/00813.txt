@@ -1,2 +1,0 @@
-A person walking forwards, then turning on the right foot and walking back again.#A/DET person/NOUN walk/VERB forwards/ADV then/ADV turn/VERB on/ADP the/DET right/ADJ foot/NOUN and/CCONJ walk/VERB back/ADV again/ADV#0.0#0.0
-a person walks two steps forwards then turn 180 degrees to the right and walks forward again#a/DET person/NOUN walk/VERB two/NUM step/NOUN forwards/ADV then/ADV turn/VERB degree/NOUN to/ADP the/DET right/NOUN and/CCONJ walk/VERB forward/ADV again/ADV#0.0#0.0

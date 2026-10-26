@@ -1,2 +1,0 @@
-A person walks counter counterclockwise in a circle.#A/DET person/NOUN walk/VERB counter/ADJ counterclockwise/NOUN in/ADP a/DET circle/NOUN#0.0#0.0
-Someone walks in a circle of appoximately 2 meters in diameter  to the left.#Someone/PRON walk/VERB in/ADP a/DET circle/NOUN of/ADP appoximately/ADV meter/NOUN in/ADP diameter/NOUN to/ADP the/DET left/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A human dances.#A/DET human/ADJ dance/NOUN#0.0#0.0

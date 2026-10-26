@@ -1,4 +1,0 @@
-Someone waves with both hands symmetrically.#Someone/PRON wave/VERB with/ADP both/DET hand/NOUN symmetrically/ADV#0.0#0.0
-a person waves with its two hands#a/DET person/NOUN wave/VERB with/ADP its/DET two/NUM hand/NOUN#0.0#0.0
-A persons waves with two hands#A/DET person/NOUN wave/NOUN with/ADP two/NUM hand/NOUN#0.0#0.0
-a human is wawing with his arms#a/DET human/NOUN is/AUX wawe/VERB with/ADP his/DET arm/NOUN#0.0#0.0

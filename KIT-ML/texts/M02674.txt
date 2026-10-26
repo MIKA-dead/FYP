@@ -1,1 +1,0 @@
-A human jumps in place. The jumping pattern resembles a game children play#A/DET human/ADJ jump/NOUN in/ADP place/NOUN The/DET jumping/NOUN pattern/NOUN resemble/VERB a/DET game/NOUN child/NOUN play/VERB#0.0#0.0

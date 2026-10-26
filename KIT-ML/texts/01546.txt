@@ -1,1 +1,0 @@
-A person walks down a slope and then climbs some stairs.#A/DET person/NOUN walk/VERB down/ADP a/DET slope/NOUN and/CCONJ then/ADV climb/VERB some/DET stair/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-a persons jumps half a meter to the front#a/DET person/NOUN jump/VERB half/DET a/DET meter/NOUN to/ADP the/DET front/NOUN#0.0#0.0

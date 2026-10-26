@@ -1,4 +1,0 @@
-A person walks forward, during that the person gets slightly off balance due to a push forward.#A/DET person/NOUN walk/VERB forward/ADV during/ADP that/SCONJ the/DET person/NOUN get/VERB slightly/ADV off/ADP balance/NOUN due/ADP to/ADP a/DET push/NOUN forward/ADV#0.0#0.0
-A walking person is pushed from the back and compensates with bigger forward steps.#A/DET walk/VERB person/NOUN is/AUX push/VERB from/ADP the/DET back/NOUN and/CCONJ compensate/NOUN with/ADP bigger/ADJ forward/NOUN step/NOUN#0.0#0.0
-a person walks forwards and gets pushed from behind#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ get/VERB push/VERB from/ADP behind/ADV#0.0#0.0
-Somebody strumbles on something#Somebody/PRON strumble/VERB on/ADP something/PRON#0.0#0.0

@@ -1,2 +1,0 @@
-A person is pushed to the right.#A/DET person/NOUN is/AUX push/VERB to/ADP the/DET right/NOUN#0.0#0.0
-Somebody is pushed to the right.#Somebody/PRON is/AUX push/VERB to/ADP the/DET right/NOUN#0.0#0.0

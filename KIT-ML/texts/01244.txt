@@ -1,1 +1,0 @@
-A person bends the upper body backward.#A/DET person/NOUN bend/VERB the/DET upper/ADJ body/NOUN backward/ADV#0.0#0.0

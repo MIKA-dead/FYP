@@ -1,1 +1,0 @@
-a human walks and turns on the spot#a/DET human/ADJ walk/VERB and/CCONJ turn/VERB on/ADP the/DET spot/NOUN#0.0#0.0

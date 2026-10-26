@@ -1,1 +1,0 @@
-A person walks around a corner to the left.#A/DET person/NOUN walk/VERB around/ADP a/DET corner/NOUN to/ADP the/DET left/NOUN#0.0#0.0

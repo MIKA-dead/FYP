@@ -1,3 +1,0 @@
-A persons performs a fast 180° turn#A/DET person/NOUN perform/VERB a/DET fast/ADJ turn/VERB#0.0#0.0
-Someone is walking forward starting with the left leg, then turning around his right side facing backwards and doing another two steps.#Someone/PRON is/AUX walk/VERB forward/ADV start/VERB with/ADP the/DET left/ADJ leg/NOUN then/ADV turn/VERB around/ADV his/DET right/ADJ side/NOUN face/VERB backwards/ADV and/CCONJ do/VERB another/DET two/NUM step/NOUN#0.0#0.0
-a person walks forwards a few steps and then turns 180 degrees to the right and walks back a few meters again#a/DET person/NOUN walk/VERB forwards/ADV a/DET few/ADJ step/NOUN and/CCONJ then/ADV turn/VERB degree/NOUN to/ADP the/DET right/NOUN and/CCONJ walk/VERB back/ADV a/DET few/ADJ meter/NOUN again/ADV#0.0#0.0

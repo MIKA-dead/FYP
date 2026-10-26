@@ -1,5 +1,0 @@
-The subject does one backward step starting with his right leg.#The/DET subject/NOUN does/AUX one/NUM backward/ADJ step/NOUN start/VERB with/ADP his/DET right/ADJ leg/NOUN#0.0#0.0
-A person performs a single  backward stride.#A/DET person/NOUN perform/VERB a/DET single/ADJ backward/ADJ stride/NOUN#0.0#0.0
-A persons makes a fast step backwards.#A/DET person/NOUN make/VERB a/DET fast/ADJ step/NOUN backwards/ADV#0.0#0.0
-a person gets pushed from the front#a/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN#0.0#0.0
-Someone takes a quick step to the back.#Someone/PRON take/VERB a/DET quick/ADJ step/NOUN to/ADP the/DET back/NOUN#0.0#0.0

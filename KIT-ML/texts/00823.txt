@@ -1,4 +1,0 @@
-the person is first walking forward and then make a sharp turn to back#the/DET person/NOUN is/AUX first/ADV walk/VERB forward/ADV and/CCONJ then/ADV make/VERB a/DET sharp/ADJ turn/NOUN to/PART back/ADV#0.0#0.0
-A person walks forward 2 steps then turns around to walk forward 2 steps to the position he was coming from.#A/DET person/NOUN walk/VERB forward/ADV step/NOUN then/ADV turn/VERB around/ADP to/PART walk/VERB forward/ADV step/NOUN to/ADP the/DET position/NOUN he/PRON was/AUX come/VERB from/ADP#0.0#0.0
-a person walks forward takes a 180 degree turn to the left and keeps on walking#a/DET person/NOUN walk/VERB forward/ADV take/VERB a/DET degree/NOUN turn/NOUN to/ADP the/DET left/NOUN and/CCONJ keep/VERB on/ADP walk/VERB#0.0#0.0
-Someone walks and then turns around by 180° to the left and walks back.#Someone/PRON walk/VERB and/CCONJ then/ADV turn/VERB around/ADP by/ADP to/ADP the/DET left/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0

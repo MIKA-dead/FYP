@@ -1,5 +1,0 @@
-Person walking and then turning on one foot#person/NOUN walk/VERB and/CCONJ then/ADV turn/VERB on/ADP one/NUM foot/NOUN#0.0#0.0
-Someone walks forward then turn around and walks back#Someone/PRON walk/VERB forward/ADV then/ADV turn/VERB around/ADP and/CCONJ walk/VERB back/ADV#0.0#0.0
-A person takes two step forward then turns around on one foot and takes another two steps.#A/DET person/NOUN take/VERB two/NUM step/NOUN forward/ADV then/ADV turn/VERB around/ADP on/ADP one/NUM foot/NOUN and/CCONJ take/VERB another/DET two/NUM step/NOUN#0.0#0.0
-A person turns 180 degrees on his left foot.#A/DET person/NOUN turn/VERB degree/NOUN on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0
-human goes forward and turns around partway#human/PROPN go/VERB forward/ADV and/CCONJ turn/VERB around/ADP partway/NOUN#0.0#0.0

@@ -1,3 +1,0 @@
-A person turns left#A/DET person/NOUN turn/VERB left/VERB#0.0#0.0
-Someone walks in a circle counterclockwise#Someone/PRON walk/VERB in/ADP a/DET circle/NOUN counterclockwise/NOUN#0.0#0.0
-A person turns around a left corner#A/DET person/NOUN turn/VERB around/ADP a/DET left/ADJ corner/NOUN#0.0#0.0

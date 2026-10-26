@@ -1,1 +1,0 @@
-A human balances while walking forwards.#A/DET human/ADJ balance/NOUN while/SCONJ walk/VERB forwards/ADV#0.0#0.0

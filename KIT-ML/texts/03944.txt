@@ -1,1 +1,0 @@
-A person is running left and then right around an obstacle.#A/DET person/NOUN is/AUX run/VERB left/VERB and/CCONJ then/ADV right/ADV around/ADP an/DET obstacle/NOUN#0.0#0.0

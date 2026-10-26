@@ -1,1 +1,0 @@
-a human goes upstairs#a/DET human/NOUN go/VERB upstairs/ADV#0.0#0.0

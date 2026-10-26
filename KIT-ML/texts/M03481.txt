@@ -1,1 +1,0 @@
-A person is running a little bit tilted first to the left then to the right.#A/DET person/NOUN is/AUX run/VERB a/DET little/ADJ bit/NOUN tilt/VERB first/ADV to/ADP the/DET left/NOUN then/ADV to/ADP the/DET right/NOUN#0.0#0.0

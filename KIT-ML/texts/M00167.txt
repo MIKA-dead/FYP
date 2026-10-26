@@ -1,3 +1,0 @@
-the person is walking forward#the/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0
-The human perfoms a couple of steps#The/DET human/ADJ perfom/NOUN a/DET couple/NOUN of/ADP step/NOUN#0.0#0.0
-A person walks forward#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0

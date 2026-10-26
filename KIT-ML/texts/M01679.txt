@@ -1,3 +1,0 @@
-A human goes two meters forward.#A/DET human/NOUN go/VERB two/NUM meter/NOUN forward/ADV#0.0#0.0
-a person takes 5 steps forward#a/DET person/NOUN take/VERB step/NOUN forward/ADV#0.0#0.0
-Somebody walks straight on.#Somebody/PRON walk/VERB straight/ADV on/ADV#0.0#0.0

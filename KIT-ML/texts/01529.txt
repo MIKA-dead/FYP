@@ -1,3 +1,0 @@
-A person makes a wiping motion with the left hand.#A/DET person/NOUN make/VERB a/DET wiping/ADJ motion/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
-A person moving his left arm horizontally in front of him in counterclockwise circles.#A/DET person/NOUN move/VERB his/DET left/ADJ arm/NOUN horizontally/ADV in/ADP front/NOUN of/ADP him/PRON in/ADP counterclockwise/ADJ circle/NOUN#0.0#0.0
-Someone wipes a surface with the left hand.#Someone/PRON wipe/VERB a/DET surface/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0

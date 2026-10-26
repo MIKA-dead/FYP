@@ -1,1 +1,0 @@
-A person draws two horizontal lines into air using both hands.#A/DET person/NOUN draw/VERB two/NUM horizontal/ADJ line/NOUN into/ADP air/NOUN use/VERB both/DET hand/NOUN#0.0#0.0

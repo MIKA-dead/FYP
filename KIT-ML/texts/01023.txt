@@ -1,4 +1,0 @@
-A person steps to the left with his left foot then crosses behind with his right foot before returning to the starting position.#A/DET person/NOUN step/VERB to/ADP the/DET left/NOUN with/ADP his/DET left/ADJ foot/NOUN then/ADV cross/VERB behind/ADV with/ADP his/DET right/ADJ foot/NOUN before/ADP return/VERB to/ADP the/DET starting/NOUN position/NOUN#0.0#0.0
-A person gets pushed from the right and performs a recovery step to the behind left side.#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET right/NOUN and/CCONJ perform/VERB a/DET recovery/NOUN step/NOUN to/ADP the/DET behind/ADV left/ADJ side/NOUN#0.0#0.0
-A person dodges backwards to the left#A/DET person/NOUN dodge/VERB backwards/ADV to/ADP the/DET left/NOUN#0.0#0.0
-A person dodges sidewards.#A/DET person/NOUN dodge/VERB sideward/NOUN#0.0#0.0

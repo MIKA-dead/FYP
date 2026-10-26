@@ -1,1 +1,0 @@
-A person is walking forward, slipping and falling on his back.#A/DET person/NOUN is/AUX walk/VERB forward/ADV slip/VERB and/CCONJ fall/VERB on/ADP his/DET back/NOUN#0.0#0.0

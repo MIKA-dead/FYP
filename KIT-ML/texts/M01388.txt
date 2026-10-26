@@ -1,3 +1,0 @@
-a person waves with his right hand one time#a/DET person/NOUN wave/VERB with/ADP his/DET right/ADJ hand/NOUN one/NUM time/NOUN#0.0#0.0
-someone waves with the right hand one time.#someone/PRON wave/VERB with/ADP the/DET right/ADJ hand/NOUN one/NUM time/NOUN#0.0#0.0
-A person is waving.#A/DET person/NOUN is/AUX wave/VERB#0.0#0.0

@@ -1,3 +1,0 @@
-A human is jumping backwards.#A/DET human/NOUN is/AUX jump/VERB backwards/ADV#0.0#0.0
-A person jumps backwards with both of his legs.#A/DET person/NOUN jump/VERB backwards/ADV with/ADP both/DET of/ADP his/DET leg/NOUN#0.0#0.0
-human performs a jump and moves a bit backwards#human/ADJ perform/VERB a/DET jump/NOUN and/CCONJ move/VERB a/DET bit/NOUN backwards/ADV#0.0#0.0

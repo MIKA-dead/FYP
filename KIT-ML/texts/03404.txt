@@ -1,1 +1,0 @@
-A person is sneaking a few steps forward and backward again.#A/DET person/NOUN is/AUX sneak/VERB a/DET few/ADJ step/NOUN forward/ADV and/CCONJ backward/ADV again/ADV#0.0#0.0

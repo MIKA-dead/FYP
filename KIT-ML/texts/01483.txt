@@ -1,4 +1,0 @@
-A person wipes a circle on a waist high surface.#A/DET person/NOUN wipe/VERB a/DET circle/NOUN on/ADP a/DET waist/ADJ high/ADJ surface/NOUN#0.0#0.0
-a person wipes somethings with its right hand#a/DET person/NOUN wipe/VERB something/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
-A human is performing a horizontal wiping movement#A/DET human/NOUN is/AUX perform/VERB a/DET horizontal/ADJ wipe/VERB movement/NOUN#0.0#0.0
-Someone performs a circular motion with his right hand parallel to the floor.#Someone/PRON perform/VERB a/DET circular/ADJ motion/NOUN with/ADP his/DET right/ADJ hand/NOUN parallel/NOUN to/ADP the/DET floor/NOUN#0.0#0.0

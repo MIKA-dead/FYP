@@ -1,1 +1,0 @@
-A person swings a baseball bat twice.#A/DET person/NOUN swing/VERB a/DET baseball/NOUN bat/NOUN twice/ADV#0.0#0.0

@@ -1,1 +1,0 @@
-A person is doing kickboxing with his left leg and foot while keeping his hands up.#A/DET person/NOUN is/AUX do/VERB kickboxing/NOUN with/ADP his/DET left/ADJ leg/NOUN and/CCONJ foot/NOUN while/SCONJ keep/VERB his/DET hand/NOUN up/ADP#0.0#0.0

@@ -1,3 +1,0 @@
-a person is walking and then pushed.#a/DET person/NOUN is/AUX walk/VERB and/CCONJ then/ADV push/VERB#0.0#0.0
-A human takes two steps forward, is pushed to the left by somebody, regains his posture and carefully continues on his original path.#A/DET human/NOUN take/VERB two/NUM step/NOUN forward/ADV is/AUX push/VERB to/ADP the/DET left/NOUN by/ADP somebody/PRON regain/VERB his/DET posture/NOUN and/CCONJ carefully/ADV continue/VERB on/ADP his/DET original/ADJ path/NOUN#0.0#0.0
-a person walks forwards is pushed by something from his right and then takes a few more steps#a/DET person/NOUN walk/VERB forwards/ADV is/AUX push/VERB by/ADP something/PRON from/ADP his/DET right/NOUN and/CCONJ then/ADV take/VERB a/DET few/ADJ more/ADJ step/NOUN#0.0#0.0

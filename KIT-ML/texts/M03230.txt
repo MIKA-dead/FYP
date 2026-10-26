@@ -1,1 +1,0 @@
-A person takes a step left forward.#A/DET person/NOUN take/VERB a/DET step/NOUN left/VERB forward/ADV#0.0#0.0

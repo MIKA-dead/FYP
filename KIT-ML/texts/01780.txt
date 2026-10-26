@@ -1,2 +1,0 @@
-A person walks forward, stumbles, recovers and continiues to walk forward.#A/DET person/NOUN walk/VERB forward/ADV stumble/NOUN recover/NOUN and/CCONJ continiue/NOUN to/PART walk/VERB forward/ADV#0.0#0.0
-A person is walking and gets pushed backwards.#A/DET person/NOUN is/AUX walk/VERB and/CCONJ get/VERB push/VERB backwards/ADV#0.0#0.0

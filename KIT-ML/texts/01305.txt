@@ -1,7 +1,0 @@
-A human does a left-handed boxing jab.#A/DET human/NOUN does/AUX a/DET lefthande/VERB boxing/NOUN jab/PROPN#0.0#0.0
-Someone punches with the left fist#Someone/PRON punch/VERB with/ADP the/DET left/ADJ fist/NOUN#0.0#0.0
-A person goes into a boxing position and performs a punch with it's left hand.#A/DET person/NOUN go/VERB into/ADP a/DET boxing/NOUN position/NOUN and/CCONJ perform/VERB a/DET punch/NOUN with/ADP it/PRON left/VERB hand/NOUN#0.0#0.0
-A person hits something with its left hand#A/DET person/NOUN hit/VERB something/PRON with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
-A human is performing a straight punch to the face with the left arm, while the right arm stays up in defence position#A/DET human/NOUN is/AUX perform/VERB a/DET straight/ADJ punch/NOUN to/ADP the/DET face/NOUN with/ADP the/DET left/ADJ arm/NOUN while/SCONJ the/DET right/ADJ arm/NOUN stay/VERB up/ADP in/ADP defence/NOUN position/NOUN#0.0#0.0
-A human lifts his hands to the chest and boxes with its left hand once.#A/DET human/ADJ lift/VERB his/DET hand/NOUN to/ADP the/DET chest/NOUN and/CCONJ box/NOUN with/ADP its/DET left/ADJ hand/NOUN once/ADV#0.0#0.0
-A human punches with left hand.#A/DET human/ADJ punch/NOUN with/ADP left/ADJ hand/NOUN#0.0#0.0

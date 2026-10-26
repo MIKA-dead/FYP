@@ -1,3 +1,0 @@
-A person walks forwards, slowly turning to the left and stops.#A/DET person/NOUN walk/VERB forwards/ADV slowly/ADV turn/VERB to/ADP the/DET left/NOUN and/CCONJ stop/NOUN#0.0#0.0
-Someone walks a left turn#Someone/PRON walk/VERB a/DET left/ADJ turn/NOUN#0.0#0.0
-A person turns left.#A/DET person/NOUN turn/VERB left/VERB#0.0#0.0

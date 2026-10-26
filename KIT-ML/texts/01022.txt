@@ -1,2 +1,0 @@
-A person moves their feet to the left, back, forward and then right.#A/DET person/NOUN move/VERB their/DET foot/NOUN to/ADP the/DET left/NOUN back/ADV forward/ADV and/CCONJ then/ADV right/INTJ#0.0#0.0
-a person takes a step to the left side#a/DET person/NOUN take/VERB a/DET step/NOUN to/ADP the/DET left/ADJ side/NOUN#0.0#0.0

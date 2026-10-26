@@ -1,2 +1,0 @@
-A person walking in a curve to the left and then standing still#A/DET person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP the/DET left/NOUN and/CCONJ then/ADV stand/VERB still/ADV#0.0#0.0
-A human walks a quarter turn to the left#A/DET human/NOUN walk/VERB a/DET quarter/NOUN turn/VERB to/ADP the/DET left/NOUN#0.0#0.0

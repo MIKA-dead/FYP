@@ -1,4 +1,0 @@
-A person is getting on his knees.#A/DET person/NOUN is/AUX get/VERB on/ADP his/DET knee/NOUN#0.0#0.0
-A person stretches his arms up to the sky and kneels down afterwards.#A/DET person/NOUN stretch/VERB his/DET arm/NOUN up/ADP to/ADP the/DET sky/NOUN and/CCONJ kneel/VERB down/ADP afterwards/ADV#0.0#0.0
-a person shrugs shoulders and then kneels down to the ground#a/DET person/NOUN shrug/VERB shoulder/NOUN and/CCONJ then/ADV kneel/VERB down/ADP to/ADP the/DET ground/NOUN#0.0#0.0
-A human is kneeling down, with assistance of the left arm#A/DET human/NOUN is/AUX kneel/VERB down/ADP with/ADP assistance/NOUN of/ADP the/DET left/ADJ arm/NOUN#0.0#0.0

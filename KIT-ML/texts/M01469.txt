@@ -1,2 +1,0 @@
-A person holds a violin with the left hand and strokes it with the right hand.#A/DET person/NOUN hold/VERB a/DET violin/NOUN with/ADP the/DET left/ADJ hand/NOUN and/CCONJ stroke/VERB it/PRON with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-a person plays the violin with its right arm#a/DET person/NOUN play/VERB the/DET violin/NOUN with/ADP its/DET right/ADJ arm/NOUN#0.0#0.0

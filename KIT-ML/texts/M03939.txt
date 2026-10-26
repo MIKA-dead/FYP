@@ -1,1 +1,0 @@
-A human runs in a sharp curve.#A/DET human/ADJ run/NOUN in/ADP a/DET sharp/ADJ curve/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person climbs a ladder.#A/DET person/NOUN climb/VERB a/DET ladder/NOUN#0.0#0.0

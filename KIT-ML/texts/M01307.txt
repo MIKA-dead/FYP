@@ -1,1 +1,0 @@
-A human stomps with the left foot.#A/DET human/ADJ stomp/NOUN with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0

@@ -1,4 +1,0 @@
-A human slowly walks forwards then stops.#A/DET human/NOUN slowly/ADV walk/VERB forwards/ADJ then/ADV stop/VERB#0.0#0.0
-A person takes five steps forward on a straight line.#A/DET person/NOUN take/VERB five/NUM step/NOUN forward/ADV on/ADP a/DET straight/ADJ line/NOUN#0.0#0.0
-A person walks some meters forward#A/DET person/NOUN walk/VERB some/DET meter/NOUN forward/ADV#0.0#0.0
-Someone walks slowly straight on#Someone/PRON walk/VERB slowly/ADV straight/ADV on/ADV#0.0#0.0

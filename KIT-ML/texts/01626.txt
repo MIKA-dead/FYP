@@ -1,5 +1,0 @@
-Someone walks on uneven terrain.#Someone/PRON walk/VERB on/ADP uneven/ADJ terrain/NOUN#0.0#0.0
-Someone is walking over obstacles which are higher than the ground level.#Someone/PRON is/AUX walk/VERB over/ADP obstacle/NOUN which/DET are/AUX higher/ADJ than/SCONJ the/DET ground/NOUN level/NOUN#0.0#0.0
-a person walks over some objects#a/DET person/NOUN walk/VERB over/ADP some/DET object/NOUN#0.0#0.0
-Someone is walking on uneven terrain.#Someone/PRON is/AUX walk/VERB on/ADP uneven/ADJ terrain/NOUN#0.0#0.0
-Somebody balances on something.#Somebody/PRON balance/VERB on/ADP something/PRON#0.0#0.0

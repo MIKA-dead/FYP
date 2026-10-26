@@ -1,2 +1,0 @@
-A person walks four steps forward.#A/DET person/NOUN walk/VERB four/NUM step/NOUN forward/ADV#0.0#0.0
-A person is walking.#A/DET person/NOUN is/AUX walk/VERB#0.0#0.0

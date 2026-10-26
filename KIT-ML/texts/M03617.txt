@@ -1,1 +1,0 @@
-a human jumps while turning to its right hand side#a/DET human/ADJ jump/NOUN while/SCONJ turn/VERB to/ADP its/DET right/ADJ hand/NOUN side/NOUN#0.0#0.0

@@ -1,5 +1,0 @@
-A human walks with a limp in their left leg.#A/DET human/NOUN walk/VERB with/ADP a/DET limp/NOUN in/ADP their/DET left/ADJ leg/NOUN#0.0#0.0
-human goes forward firmly#human/PROPN go/VERB forward/ADV firmly/ADV#0.0#0.0
-A person walks a few big steps forward.#A/DET person/NOUN walk/VERB a/DET few/ADJ big/ADJ step/NOUN forward/ADV#0.0#0.0
-A person does 4 steps forward.#A/DET person/NOUN does/AUX step/NOUN forward/ADV#0.0#0.0
-Somebody walks straight on.#Somebody/PRON walk/VERB straight/ADV on/ADV#0.0#0.0

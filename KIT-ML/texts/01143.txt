@@ -1,2 +1,0 @@
-Someone walks and turns left.#Someone/PRON walk/VERB and/CCONJ turn/VERB left/VERB#0.0#0.0
-a person walks to the left#a/DET person/NOUN walk/VERB to/ADP the/DET left/NOUN#0.0#0.0

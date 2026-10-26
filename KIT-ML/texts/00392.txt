@@ -1,2 +1,0 @@
-A person is walking quickly backwards#A/DET person/NOUN is/AUX walk/VERB quickly/ADV backwards/ADV#0.0#0.0
-A person walkes backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0

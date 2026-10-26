@@ -1,1 +1,0 @@
-A person walks forward and gets pushed from behind.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ get/VERB push/VERB from/ADP behind/ADV#0.0#0.0

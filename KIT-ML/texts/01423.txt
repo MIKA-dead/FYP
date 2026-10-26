@@ -1,3 +1,0 @@
-A person plays air guitar.#A/DET person/NOUN play/VERB air/NOUN guitar/NOUN#0.0#0.0
-a person plays the air guitar#a/DET person/NOUN play/VERB the/DET air/NOUN guitar/NOUN#0.0#0.0
-a person holds something in its left hand and touches it along with its right hand#a/DET person/NOUN hold/VERB something/PRON in/ADP its/DET left/ADJ hand/NOUN and/CCONJ touch/VERB it/PRON along/ADV with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

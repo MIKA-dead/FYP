@@ -1,1 +1,0 @@
-A person walks ahead and then turns right#A/DET person/NOUN walk/VERB ahead/ADV and/CCONJ then/ADV turn/VERB right/ADV#0.0#0.0

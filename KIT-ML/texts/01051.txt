@@ -1,2 +1,0 @@
-Subject walks forward quickly.#Subject/ADJ walk/VERB forward/ADV quickly/ADV#0.0#0.0
-A person walks fast.#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0

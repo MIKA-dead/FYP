@@ -1,5 +1,0 @@
-A person walks 4 steps to the backward direction.#A/DET person/NOUN walk/VERB step/NOUN to/ADP the/DET backward/ADJ direction/NOUN#0.0#0.0
-A person makes 4 steps backwards.#A/DET person/NOUN make/VERB step/NOUN backwards/ADV#0.0#0.0
-a person walks backwards#a/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
-A person slowly retreats#A/DET person/NOUN slowly/ADV retreat/VERB#0.0#0.0
-Someone walks backwards.#Someone/PRON walk/VERB backwards/ADV#0.0#0.0

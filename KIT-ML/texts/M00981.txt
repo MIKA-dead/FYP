@@ -1,2 +1,0 @@
-Person walking to the left#person/NOUN walk/VERB to/ADP the/DET left/NOUN#0.0#0.0
-A person walks while turning to the left#A/DET person/NOUN walk/VERB while/SCONJ turn/VERB to/ADP the/DET left/NOUN#0.0#0.0

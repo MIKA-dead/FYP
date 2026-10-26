@@ -1,4 +1,0 @@
-A persons gets pushed from the left and jumps to recover.#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET left/NOUN and/CCONJ jump/VERB to/PART recover/VERB#0.0#0.0
-A standing person is beeing pushed hard from the left side and compensates the disturbance.#A/DET stand/VERB person/NOUN is/AUX beee/VERB push/VERB hard/ADV from/ADP the/DET left/ADJ side/NOUN and/CCONJ compensate/VERB the/DET disturbance/NOUN#0.0#0.0
-human is pushed from its left hand side#human/PROPN is/AUX push/VERB from/ADP its/DET left/ADJ hand/NOUN side/NOUN#0.0#0.0
-Somebody is pushed on his left shoulder.#Somebody/PRON is/AUX push/VERB on/ADP his/DET left/ADJ shoulder/NOUN#0.0#0.0

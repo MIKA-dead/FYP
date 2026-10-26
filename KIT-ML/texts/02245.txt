@@ -1,1 +1,0 @@
-A human presses buttons on a wall in front of him using his right hand.#A/DET human/ADJ press/NOUN button/NOUN on/ADP a/DET wall/NOUN in/ADP front/NOUN of/ADP him/PRON use/VERB his/DET right/ADJ hand/NOUN#0.0#0.0

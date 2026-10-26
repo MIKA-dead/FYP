@@ -1,6 +1,0 @@
-Person walking and stumbling a little bit#person/NOUN walk/VERB and/CCONJ stumble/VERB a/DET little/ADJ bit/NOUN#0.0#0.0
-A Person walks forward and stumbles slightly#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ stumble/NOUN slightly/ADV#0.0#0.0
-Someone is beeing pushed on the left shoulder while walking forward.#Someone/PRON is/AUX beee/VERB push/VERB on/ADP the/DET left/ADJ shoulder/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0
-A human is walking straight, doing a sidestep since he is pushed and returns to his initial walking line#A/DET human/NOUN is/AUX walk/VERB straight/ADV do/VERB a/DET sidestep/NOUN since/SCONJ he/PRON is/AUX push/VERB and/CCONJ return/NOUN to/ADP his/DET initial/ADJ walking/NOUN line/NOUN#0.0#0.0
-a person walks forwards gets pushed from the left and keeps on walking#a/DET person/NOUN walk/VERB forwards/ADV get/VERB push/VERB from/ADP the/DET left/NOUN and/CCONJ keep/VERB on/ADP walk/VERB#0.0#0.0
-The human walks like a alcoholized person#The/DET human/NOUN walk/VERB like/SCONJ a/DET alcoholize/VERB person/NOUN#0.0#0.0

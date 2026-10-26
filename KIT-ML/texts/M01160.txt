@@ -1,1 +1,0 @@
-A person walks forwards, performs a sharp turn and walks back.#A/DET person/NOUN walk/VERB forwards/ADV perform/VERB a/DET sharp/ADJ turn/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0

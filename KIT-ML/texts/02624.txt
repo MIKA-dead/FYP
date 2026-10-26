@@ -1,1 +1,0 @@
-A person is hanging on a bar with both hands and swinging forward and backward.#A/DET person/NOUN is/AUX hang/VERB on/ADP a/DET bar/NOUN with/ADP both/DET hand/NOUN and/CCONJ swinge/VERB forward/ADV and/CCONJ backward/ADV#0.0#0.0

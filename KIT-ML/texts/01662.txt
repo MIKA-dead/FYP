@@ -1,4 +1,0 @@
-A human stretching is arms#A/DET human/ADJ stretching/NOUN is/AUX arm/NOUN#0.0#0.0
-A person is balancing on his right foot.#A/DET person/NOUN is/AUX balance/VERB on/ADP his/DET right/ADJ foot/NOUN#0.0#0.0
-a person holds both his arm like wings#a/DET person/NOUN hold/VERB both/CCONJ his/DET arm/NOUN like/SCONJ wing/NOUN#0.0#0.0
-A person stretching their arms out to the sides#A/DET person/NOUN stretch/VERB their/DET arm/NOUN out/SCONJ to/ADP the/DET side/NOUN#0.0#0.0

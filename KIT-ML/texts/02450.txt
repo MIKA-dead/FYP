@@ -1,1 +1,0 @@
-A human moves unsteadily, perhaps drunk as a lord.#A/DET human/ADJ move/NOUN unsteadily/ADV perhaps/ADV drunk/ADJ as/SCONJ a/DET lord/PROPN#0.0#0.0

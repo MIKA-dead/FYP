@@ -1,1 +1,0 @@
-A person walks in 90 degree curve to the right.#A/DET person/NOUN walk/VERB in/ADP degree/NOUN curve/NOUN to/ADP the/DET right/NOUN#0.0#0.0

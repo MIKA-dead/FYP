@@ -1,1 +1,0 @@
-A person makes a workout.#A/DET person/NOUN make/VERB a/DET workout/NOUN#0.0#0.0

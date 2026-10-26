@@ -1,1 +1,0 @@
-The human walks a left bend.#The/DET human/NOUN walk/VERB a/DET left/ADJ bend/NOUN#0.0#0.0

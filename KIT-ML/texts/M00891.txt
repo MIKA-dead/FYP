@@ -1,2 +1,0 @@
-a person walks straight on and then stops#a/DET person/NOUN walk/VERB straight/ADV on/ADV and/CCONJ then/ADV stop/VERB#0.0#0.0
-Someone is very slowly walking forward 4 steps starting with the right leg.#Someone/PRON is/AUX very/ADV slowly/ADV walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0

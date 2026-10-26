@@ -1,2 +1,0 @@
-A person runs slowly and stops.#A/DET person/NOUN run/VERB slowly/ADV and/CCONJ stop/VERB#0.0#0.0
-a human jogs a few steps#a/DET human/NOUN jog/VERB a/DET few/ADJ step/NOUN#0.0#0.0

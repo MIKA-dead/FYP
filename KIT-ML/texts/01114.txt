@@ -1,4 +1,0 @@
-Person jogging for a few steps#person/NOUN jog/VERB for/ADP a/DET few/ADJ step/NOUN#0.0#0.0
-A person joggs forward#A/DET person/NOUN joggs/NOUN forward/ADV#0.0#0.0
-A person is running forward with a few heavy steps.#A/DET person/NOUN is/AUX run/VERB forward/ADV with/ADP a/DET few/ADJ heavy/ADJ step/NOUN#0.0#0.0
-A person tries to sprint but gives up after the first step.#A/DET person/NOUN try/VERB to/PART sprint/VERB but/CCONJ give/VERB up/ADP after/ADP the/DET first/ADJ step/NOUN#0.0#0.0

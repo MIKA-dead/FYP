@@ -1,3 +1,0 @@
-A persons turns 90° to the left.#A/DET person/NOUN turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
-A person walks a quarter left sides circle.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN left/VERB side/NOUN circle/NOUN#0.0#0.0
-A person turns left.#A/DET person/NOUN turn/VERB left/VERB#0.0#0.0

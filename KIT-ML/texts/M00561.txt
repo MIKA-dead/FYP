@@ -1,4 +1,0 @@
-Subject tries to walk fast and does 4 steps.#Subject/ADJ try/VERB to/PART walk/VERB fast/ADV and/CCONJ does/AUX step/NOUN#0.0#0.0
-A person makes a few fast steps forward.#A/DET person/NOUN make/VERB a/DET few/ADJ fast/ADJ step/NOUN forward/ADV#0.0#0.0
-a person takes a few fast steps#a/DET person/NOUN take/VERB a/DET few/ADJ fast/ADJ step/NOUN#0.0#0.0
-a person jogs forwards a few steps#a/DET person/NOUN jog/VERB forward/VERB a/DET few/ADJ step/NOUN#0.0#0.0

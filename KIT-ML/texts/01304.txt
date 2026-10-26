@@ -1,2 +1,0 @@
-A person pushes once into the air with the left hand.#A/DET person/NOUN push/VERB once/ADV into/ADP the/DET air/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
-a person punches something with its left hand#a/DET person/NOUN punch/VERB something/PRON with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

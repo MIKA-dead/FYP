@@ -1,2 +1,0 @@
-A person is on the floor on all fours and gets up.#A/DET person/NOUN is/AUX on/ADP the/DET floor/NOUN on/ADP all/DET four/NOUN and/CCONJ get/VERB up/ADV#0.0#0.0
-A human is kneeling down like a dog and stands up.#A/DET human/NOUN is/AUX kneel/VERB down/ADP like/SCONJ a/DET dog/NOUN and/CCONJ stand/VERB up/ADP#0.0#0.0

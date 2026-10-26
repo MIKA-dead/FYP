@@ -1,3 +1,0 @@
-A person makes a jump to the right#A/DET person/NOUN make/VERB a/DET jump/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A human performs a little jump with both feet to its right.#A/DET human/ADJ perform/VERB a/DET little/ADJ jump/NOUN with/ADP both/DET foot/NOUN to/ADP its/DET right/NOUN#0.0#0.0
-a person jumps to the right side about 30 centimeters#a/DET person/NOUN jump/VERB to/ADP the/DET right/ADJ side/NOUN about/ADV centimeter/NOUN#0.0#0.0

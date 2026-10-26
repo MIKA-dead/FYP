@@ -1,1 +1,0 @@
-A human runs.#A/DET human/ADJ run/NOUN#0.0#0.0

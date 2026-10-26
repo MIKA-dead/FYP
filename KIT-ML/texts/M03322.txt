@@ -1,1 +1,0 @@
-A person walks in circles clockwise, then sits down and stand up sometimes, walks in circles clockwise, sits down and then runs clockwise.#A/DET person/NOUN walk/VERB in/ADP circle/NOUN clockwise/VERB then/ADV sit/VERB down/ADP and/CCONJ stand/VERB up/ADP sometimes/ADV walk/VERB in/ADP circle/NOUN clockwise/VERB sit/VERB down/ADV and/CCONJ then/ADV run/VERB clockwise/ADV#0.0#0.0

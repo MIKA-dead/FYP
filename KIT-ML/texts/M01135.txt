@@ -1,5 +1,0 @@
-A human walks to the right.#A/DET human/NOUN walk/VERB to/ADP the/DET right/NOUN#0.0#0.0
-A person is turning slowly to the right.#A/DET person/NOUN is/AUX turn/VERB slowly/ADV to/ADP the/DET right/NOUN#0.0#0.0
-A person turns to the right.#A/DET person/NOUN turn/VERB to/ADP the/DET right/NOUN#0.0#0.0
-A human walks a quarter circle to the right#A/DET human/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-Somebody walks a quarter circle clockwise.#Somebody/PRON walk/VERB a/DET quarter/NOUN circle/NOUN clockwise/NOUN#0.0#0.0

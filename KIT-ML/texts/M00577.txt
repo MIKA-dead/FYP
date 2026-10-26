@@ -1,3 +1,0 @@
-A person walks and makes a 90 degree right turn.#A/DET person/NOUN walk/VERB and/CCONJ make/VERB a/DET degree/NOUN right/ADJ turn/NOUN#0.0#0.0
-A person walks forward in a 90° curve to his right.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET curve/NOUN to/ADP his/DET right/NOUN#0.0#0.0
-A person walks in a quarter circle.#A/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0

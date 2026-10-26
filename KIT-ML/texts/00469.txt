@@ -1,9 +1,0 @@
-Person walking and turning on one foot#person/NOUN walk/VERB and/CCONJ turn/VERB on/ADP one/NUM foot/NOUN#0.0#0.0
-someone is a flip-flopper#someone/PRON is/AUX a/DET flipflopper/NOUN#0.0#0.0
-A person walks forward, turns on the spot and walks back#A/DET person/NOUN walk/VERB forward/ADV turn/VERB on/ADP the/DET spot/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
-A human walks forwards, turns and walks back#A/DET human/ADJ walk/VERB forwards/ADV turn/VERB and/CCONJ walk/VERB back/ADV#0.0#0.0
-Someone is walking forward 2 steps starting with the left leg, then turning back around his right side and walking back 2 steps.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET left/ADJ leg/NOUN then/ADV turn/VERB back/ADV around/ADP his/DET right/ADJ side/NOUN and/CCONJ walk/VERB back/ADV step/NOUN#0.0#0.0
-A human walks a few steps forward, turns 180 degrees right and walks back again.#A/DET human/NOUN walk/VERB a/DET few/ADJ step/NOUN forward/ADV turn/VERB degree/NOUN right/ADJ and/CCONJ walk/VERB back/ADV again/ADV#0.0#0.0
-a person walks forwards a few steps then turns 180 degrees to the right and keeps walking#a/DET person/NOUN walk/VERB forwards/ADV a/DET few/ADJ step/NOUN then/ADV turn/VERB degree/NOUN to/ADP the/DET right/NOUN and/CCONJ keep/VERB walk/VERB#0.0#0.0
-A person turns around after taking two steps forward and walks another two steps in the other direction.#A/DET person/NOUN turn/VERB around/ADP after/ADP take/VERB two/NUM step/NOUN forward/ADV and/CCONJ walk/VERB another/DET two/NUM step/NOUN in/ADP the/DET other/ADJ direction/NOUN#0.0#0.0
-A human makes 2 steps forward, turns on its right food and walks back where it started.#A/DET human/NOUN make/VERB step/NOUN forward/ADV turn/VERB on/ADP its/DET right/ADJ food/NOUN and/CCONJ walk/VERB back/ADV where/ADV it/PRON start/VERB#0.0#0.0

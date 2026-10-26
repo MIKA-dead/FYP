@@ -1,3 +1,0 @@
-A person jumps forward.#A/DET person/NOUN jump/VERB forward/ADV#0.0#0.0
-A human performs a two legged hop to the front#A/DET human/NOUN perform/VERB a/DET two/NUM legged/ADJ hop/NOUN to/ADP the/DET front/NOUN#0.0#0.0
-A person jumps forward on both of his legs.#A/DET person/NOUN jump/VERB forward/ADV on/ADP both/DET of/ADP his/DET leg/NOUN#0.0#0.0

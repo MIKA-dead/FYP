@@ -1,2 +1,0 @@
-A person is walking forward four steps starting with the left foot and performing a left-turn of 90°#A/DET person/NOUN is/AUX walk/VERB forward/ADV four/NUM step/NOUN start/VERB with/ADP the/DET left/ADJ foot/NOUN and/CCONJ perform/VERB a/DET leftturn/NOUN of/ADP#0.0#0.0
-A human performs a tight 90° left curve#A/DET human/NOUN perform/VERB a/DET tight/ADJ left/VERB curve/NOUN#0.0#0.0

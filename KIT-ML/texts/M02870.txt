@@ -1,1 +1,0 @@
-A human plays golf with a careful movement.#A/DET human/ADJ play/NOUN golf/NOUN with/ADP a/DET careful/ADJ movement/NOUN#0.0#0.0

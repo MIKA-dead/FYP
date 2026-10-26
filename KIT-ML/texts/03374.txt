@@ -1,1 +1,0 @@
-A person is slowly walking backwards on higher ground while it looks like walking forward or a moonwalk.#A/DET person/NOUN is/AUX slowly/ADV walk/VERB backwards/ADV on/ADP higher/ADJ ground/NOUN while/SCONJ it/PRON look/VERB like/SCONJ walk/VERB forward/ADV or/CCONJ a/DET moonwalk/NOUN#0.0#0.0

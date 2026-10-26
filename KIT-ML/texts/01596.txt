@@ -1,3 +1,0 @@
-A person walks downstairs.#A/DET person/NOUN walk/VERB downstairs/ADV#0.0#0.0
-A person walks down stairs.#A/DET person/NOUN walk/VERB down/ADP stair/NOUN#0.0#0.0
-A person walking forward down a hill.#A/DET person/NOUN walk/VERB forward/ADV down/ADP a/DET hill/NOUN#0.0#0.0

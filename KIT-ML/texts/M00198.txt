@@ -1,1 +1,0 @@
-A person goes to the left.#A/DET person/NOUN go/VERB to/ADP the/DET left/NOUN#0.0#0.0

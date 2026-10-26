@@ -1,1 +1,0 @@
-Someone walks over an obstacle.#Someone/PRON walk/VERB over/ADP an/DET obstacle/NOUN#0.0#0.0

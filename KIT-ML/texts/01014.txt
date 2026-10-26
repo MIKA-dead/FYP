@@ -1,2 +1,0 @@
-A person goes forward, turns around and goes back.#A/DET person/NOUN go/VERB forward/ADV turn/VERB around/ADV and/CCONJ go/VERB back/ADV#0.0#0.0
-A person turns on his let foot.#A/DET person/NOUN turn/VERB on/ADP his/DET let/NOUN foot/NOUN#0.0#0.0

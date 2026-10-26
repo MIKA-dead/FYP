@@ -1,2 +1,0 @@
-A person walking to the right#A/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN#0.0#0.0
-Somebody walks a quarter circle clockwise.#Somebody/PRON walk/VERB a/DET quarter/NOUN circle/NOUN clockwise/NOUN#0.0#0.0

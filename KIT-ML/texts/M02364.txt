@@ -1,1 +1,0 @@
-a human awkwardly goes forward#a/DET human/NOUN awkwardly/ADV go/VERB forward/ADV#0.0#0.0

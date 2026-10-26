@@ -1,4 +1,0 @@
-A person moves 1-2 m forward very slowly.#A/DET person/NOUN move/VERB m/NOUN forward/ADV very/ADV slowly/ADV#0.0#0.0
-A person walks forward very slowly.#A/DET person/NOUN walk/VERB forward/ADV very/ADV slowly/ADV#0.0#0.0
-A person walks very slowly.#A/DET person/NOUN walk/VERB very/ADV slowly/ADV#0.0#0.0
-A person walks slowly.#A/DET person/NOUN walk/VERB slowly/ADV#0.0#0.0

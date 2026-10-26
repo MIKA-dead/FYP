@@ -1,1 +1,0 @@
-A person raises both arms on the side of his body and moves them back down#A/DET person/NOUN raise/VERB both/DET arm/NOUN on/ADP the/DET side/NOUN of/ADP his/DET body/NOUN and/CCONJ move/VERB them/PRON back/ADV down/ADP#0.0#0.0

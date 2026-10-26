@@ -1,3 +1,0 @@
-A person walks four steps backwards.#A/DET person/NOUN walk/VERB four/NUM step/NOUN backwards/ADV#0.0#0.0
-A person walks backwards slowly.#A/DET person/NOUN walk/VERB backwards/ADV slowly/ADV#0.0#0.0
-Somebody walks backward.#Somebody/PRON walk/VERB backward/ADV#0.0#0.0

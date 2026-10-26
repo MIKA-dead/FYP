@@ -1,2 +1,0 @@
-The human subject kneels down on the floor.#The/DET human/ADJ subject/NOUN kneel/VERB down/ADP on/ADP the/DET floor/NOUN#0.0#0.0
-A person kneels down.#A/DET person/NOUN kneel/VERB down/ADP#0.0#0.0

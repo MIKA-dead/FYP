@@ -1,2 +1,0 @@
-Person makes a sharp turn.#person/NOUN make/VERB a/DET sharp/ADJ turn/NOUN#0.0#0.0
-A person walks two steps, turn around 180° on one foot and walks back to the starting point#A/DET person/NOUN walk/VERB two/NUM step/NOUN turn/VERB around/ADP on/ADP one/NUM foot/NOUN and/CCONJ walk/VERB back/ADV to/ADP the/DET starting/NOUN point/NOUN#0.0#0.0

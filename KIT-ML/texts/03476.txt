@@ -1,1 +1,0 @@
-A person is doing steeplechases.#A/DET person/NOUN is/AUX do/VERB steeplechase/NOUN#0.0#0.0

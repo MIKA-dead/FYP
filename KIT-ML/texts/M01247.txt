@@ -1,2 +1,0 @@
-A persons bends the upper body to the right.#A/DET person/NOUN bend/VERB the/DET upper/ADJ body/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-Someone in fighting stance is ducking down to the right side.#Someone/PRON in/ADP fight/VERB stance/NOUN is/AUX duck/VERB down/ADP to/ADP the/DET right/ADJ side/NOUN#0.0#0.0

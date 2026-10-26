@@ -1,2 +1,0 @@
-Someone stands up from a kneeling position.#Someone/PRON stand/VERB up/ADP from/ADP a/DET kneeling/NOUN position/NOUN#0.0#0.0
-A person is standing up from kneeling.#A/DET person/NOUN is/AUX stand/VERB up/ADP from/ADP kneel/VERB#0.0#0.0

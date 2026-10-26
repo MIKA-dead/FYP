@@ -1,2 +1,0 @@
-A person walks a 90 degrees curve to the left.#A/DET person/NOUN walk/VERB a/DET degree/NOUN curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-somebody walks a quarter circle against the clockwise direction.#somebody/PRON walk/VERB a/DET quarter/NOUN circle/NOUN against/ADP the/DET clockwise/ADJ direction/NOUN#0.0#0.0

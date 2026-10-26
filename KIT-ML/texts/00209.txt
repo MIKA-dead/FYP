@@ -1,2 +1,0 @@
-a person walks slowly and stops#a/DET person/NOUN walk/VERB slowly/ADV and/CCONJ stop/VERB#0.0#0.0
-A person walks straight forwards for some meters#A/DET person/NOUN walk/VERB straight/ADJ forwards/ADV for/ADP some/DET meter/NOUN#0.0#0.0

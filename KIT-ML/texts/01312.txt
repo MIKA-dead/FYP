@@ -1,5 +1,0 @@
-A person lifts their left foot and stomps back onto the ground.#A/DET person/NOUN lift/VERB their/DET left/ADJ foot/NOUN and/CCONJ stomp/VERB back/ADV onto/ADP the/DET ground/NOUN#0.0#0.0
-A person stomps with their left leg.#A/DET person/NOUN stomp/VERB with/ADP their/DET left/ADJ leg/NOUN#0.0#0.0
-a person lifts his left foot to look at it#a/DET person/NOUN lift/VERB his/DET left/ADJ foot/NOUN to/PART look/VERB at/ADP it/PRON#0.0#0.0
-A person rises and lowers its left foot.#A/DET person/NOUN rise/VERB and/CCONJ lower/VERB its/DET left/ADJ foot/NOUN#0.0#0.0
-The human lifts his left foot#The/DET human/NOUN lift/VERB his/DET left/ADJ foot/NOUN#0.0#0.0

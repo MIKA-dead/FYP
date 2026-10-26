@@ -1,3 +1,0 @@
-Someone performs a wiping movement.#Someone/PRON perform/VERB a/DET wipe/VERB movement/NOUN#0.0#0.0
-A human makes one horizontal wiping motion with its left hand in the same hight as its hips and tries to reach a point as far out as possible.#A/DET human/NOUN make/VERB one/NUM horizontal/NOUN wipe/VERB motion/NOUN with/ADP its/DET left/ADJ hand/NOUN in/ADP the/DET same/ADJ hight/NOUN as/SCONJ its/DET hip/NOUN and/CCONJ try/VERB to/PART reach/VERB a/DET point/NOUN as/ADV far/ADV out/ADV as/SCONJ possible/ADJ#0.0#0.0
-A person is wiping an object with his right hand.#A/DET person/NOUN is/AUX wipe/VERB an/DET object/NOUN with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

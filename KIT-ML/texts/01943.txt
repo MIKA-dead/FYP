@@ -1,3 +1,0 @@
-A person gets pushed from the front and steps backwards to recover.#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN and/CCONJ step/NOUN backwards/ADV to/PART recover/VERB#0.0#0.0
-A person walks in a circle#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0
-The human perfoms one step backwards#The/DET human/ADJ perfom/NOUN one/NUM step/NOUN backwards/ADV#0.0#0.0

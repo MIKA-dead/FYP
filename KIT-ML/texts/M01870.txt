@@ -1,2 +1,0 @@
-A person walks forwards, during that the person is pushed backward, so he makes a few small steps backwards until gaining his balance again and walks on.#A/DET person/NOUN walk/VERB forwards/ADV during/ADP that/SCONJ the/DET person/NOUN is/AUX push/VERB backward/ADV so/ADV he/PRON make/VERB a/DET few/ADJ small/ADJ step/NOUN backwards/ADV until/ADP gain/VERB his/DET balance/NOUN again/ADV and/CCONJ walk/VERB on/ADP#0.0#0.0
-A person walks forward into an obstacle and recovers.#A/DET person/NOUN walk/VERB forward/ADV into/ADP an/DET obstacle/NOUN and/CCONJ recover/NOUN#0.0#0.0

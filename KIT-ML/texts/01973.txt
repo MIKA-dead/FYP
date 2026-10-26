@@ -1,8 +1,0 @@
-A person turns to the right while walking.#A/DET person/NOUN turn/VERB to/ADP the/DET right/NOUN while/SCONJ walk/VERB#0.0#0.0
-The human walks four steps in a right bend.#The/DET human/NOUN walk/VERB four/NUM step/NOUN in/ADP a/DET right/ADJ bend/NOUN#0.0#0.0
-A person walking in a curve to the left.#A/DET person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-A person walked away.#A/DET person/NOUN walk/VERB away/ADV#0.0#0.0
-Someone walks away.#Someone/PRON walk/VERB away/ADV#0.0#0.0
-Someone walks a quarter circle to the right.#Someone/PRON walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A person walks diagonal to the right below corner of the display#A/DET person/NOUN walk/VERB diagonal/ADJ to/ADP the/DET right/NOUN below/ADP corner/NOUN of/ADP the/DET display/NOUN#0.0#0.0
-A person walks a 90° curve.#A/DET person/NOUN walk/VERB a/DET curve/NOUN#0.0#0.0

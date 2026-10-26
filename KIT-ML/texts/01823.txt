@@ -1,2 +1,0 @@
-human gets pushed from the front by an invisible force and tries to balance out the pushing force by taking a few steps back#human/ADJ get/VERB push/VERB from/ADP the/DET front/NOUN by/ADP an/DET invisible/ADJ force/NOUN and/CCONJ try/VERB to/PART balance/VERB out/ADP the/DET push/VERB force/NOUN by/ADP take/VERB a/DET few/ADJ step/NOUN back/ADV#0.0#0.0
-A person tumbles backwards.#A/DET person/NOUN tumble/VERB backwards/ADV#0.0#0.0

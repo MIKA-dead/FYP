@@ -1,3 +1,0 @@
-A person does a single jumping-jack.#A/DET person/NOUN does/AUX a/DET single/ADJ jumpingjack/NOUN#0.0#0.0
-A human is performing one jumping jack#A/DET human/NOUN is/AUX perform/VERB one/NUM jumping/NOUN jack/NOUN#0.0#0.0
-A person performs one jumping jack.#A/DET person/NOUN perform/VERB one/NUM jump/VERB jack/NOUN#0.0#0.0

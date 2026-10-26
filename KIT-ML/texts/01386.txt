@@ -1,2 +1,0 @@
-A human waves hello with his left hand#A/DET human/ADJ wave/NOUN hello/INTJ with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
-human performs a waving motion with left hand#human/PROPN perform/VERB a/DET waving/ADJ motion/NOUN with/ADP left/ADJ hand/NOUN#0.0#0.0

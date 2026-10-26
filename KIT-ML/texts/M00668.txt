@@ -1,3 +1,0 @@
-A person walks forward#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
-A person slowly and cautiously goes 5 steps forward.#A/DET person/NOUN slowly/ADV and/CCONJ cautiously/ADV go/VERB step/NOUN forward/ADV#0.0#0.0
-a person walks forward quite slow#a/DET person/NOUN walk/VERB forward/ADV quite/ADV slow/ADJ#0.0#0.0

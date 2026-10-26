@@ -1,2 +1,0 @@
-A human walks at a slight right angle for five steps and then stops.#A/DET human/ADJ walk/VERB at/ADP a/DET slight/ADJ right/ADJ angle/NOUN for/ADP five/NUM step/NOUN and/CCONJ then/ADV stop/VERB#0.0#0.0
-Someone walks forward#Someone/PRON walk/VERB forward/ADV#0.0#0.0

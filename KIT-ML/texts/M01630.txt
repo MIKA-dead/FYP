@@ -1,2 +1,0 @@
-A human walks over stepstones.#A/DET human/NOUN walk/VERB over/ADP stepstone/NOUN#0.0#0.0
-A person walks over an uneven surface.#A/DET person/NOUN walk/VERB over/ADP an/DET uneven/ADJ surface/NOUN#0.0#0.0

@@ -1,6 +1,0 @@
-human takes a swing like while playing golf#human/PROPN take/VERB a/DET swing/NOUN like/SCONJ while/SCONJ play/VERB golf/NOUN#0.0#0.0
-A person playing golf over his right shoulder.#A/DET person/NOUN play/VERB golf/NOUN over/ADP his/DET right/ADJ shoulder/NOUN#0.0#0.0
-a person plays golf with its right hand#a/DET person/NOUN play/VERB golf/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
-A human performs a hard hit with a golf club and swings the club over its shoulder while doing the hit.#A/DET human/NOUN perform/VERB a/DET hard/ADJ hit/NOUN with/ADP a/DET golf/NOUN club/NOUN and/CCONJ swing/VERB the/DET club/NOUN over/ADP its/DET shoulder/NOUN while/SCONJ do/VERB the/DET hit/NOUN#0.0#0.0
-A person is playing golf.#A/DET person/NOUN is/AUX play/VERB golf/NOUN#0.0#0.0
-A person performs a golf swing.#A/DET person/NOUN perform/VERB a/DET golf/NOUN swing/NOUN#0.0#0.0

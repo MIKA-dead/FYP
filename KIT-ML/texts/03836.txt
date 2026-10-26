@@ -1,1 +1,0 @@
-A person makes a step down from higher ground.#A/DET person/NOUN make/VERB a/DET step/NOUN down/ADP from/ADP higher/ADJ ground/NOUN#0.0#0.0

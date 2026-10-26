@@ -1,6 +1,0 @@
-the person is performing a forward walk#the/DET person/NOUN is/AUX perform/VERB a/DET forward/ADJ walk/NOUN#0.0#0.0
-A person is walking relaxed#A/DET person/NOUN is/AUX walk/VERB relaxed/ADJ#0.0#0.0
-A person is walking forward.#A/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0
-a person walks slowly forwards#a/DET person/NOUN walk/VERB slowly/ADV forwards/ADV#0.0#0.0
-A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
-A person walks forwards.#A/DET person/NOUN walk/VERB forwards/ADV#0.0#0.0

@@ -1,2 +1,0 @@
-A person is pushed from right.#A/DET person/NOUN is/AUX push/VERB from/ADP right/ADV#0.0#0.0
-a person stands still and then gets pushed to the left#a/DET person/NOUN stand/VERB still/ADV and/CCONJ then/ADV get/VERB push/VERB to/ADP the/DET left/NOUN#0.0#0.0

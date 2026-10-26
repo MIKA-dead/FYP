@@ -1,3 +1,0 @@
-A person walks forward#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
-human goes downstairs by stairs starting with left#human/ADJ go/VERB downstairs/ADV by/ADP stair/NOUN start/VERB with/ADP left/ADJ#0.0#0.0
-A person takes 4 steps and than stops.#A/DET person/NOUN take/VERB step/NOUN and/CCONJ than/SCONJ stop/NOUN#0.0#0.0

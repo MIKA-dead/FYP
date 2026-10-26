@@ -1,1 +1,0 @@
-A person wipes two times in a circle on a waist high surface.#A/DET person/NOUN wipe/VERB two/NUM time/NOUN in/ADP a/DET circle/NOUN on/ADP a/DET waist/ADJ high/ADJ surface/NOUN#0.0#0.0

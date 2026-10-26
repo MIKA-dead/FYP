@@ -1,3 +1,0 @@
-Subject walks forward and then walks right.#Subject/ADJ walk/VERB forward/ADV and/CCONJ then/ADV walk/VERB right/ADV#0.0#0.0
-a person walks forward and then turns 90 degrees to the left#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ then/ADV turn/VERB degree/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-a person performs a sharp left turn of 90 degrees#a/DET person/NOUN perform/VERB a/DET sharp/ADJ left/ADJ turn/NOUN of/ADP degree/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-Someone makes a sidestep to the right#Someone/PRON make/VERB a/DET sidestep/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A person gets pushed from his left side.#A/DET person/NOUN get/VERB push/VERB from/ADP his/DET left/ADJ side/NOUN#0.0#0.0

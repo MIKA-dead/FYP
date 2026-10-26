@@ -1,3 +1,0 @@
-A person practices a golf swing.#A/DET person/NOUN practice/VERB a/DET golf/NOUN swing/NOUN#0.0#0.0
-Someone plays golf#Someone/PRON play/VERB golf/NOUN#0.0#0.0
-A human is performing a golf hit to the left#A/DET human/NOUN is/AUX perform/VERB a/DET golf/NOUN hit/VERB to/ADP the/DET left/NOUN#0.0#0.0

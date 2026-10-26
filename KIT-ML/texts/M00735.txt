@@ -1,3 +1,0 @@
-Person walking to the right#person/NOUN walk/VERB to/ADP the/DET right/NOUN#0.0#0.0
-human goes forward in a quater circle clockwise starting with right#human/PROPN go/VERB forward/ADV in/ADP a/DET quater/NOUN circle/NOUN clockwise/NOUN start/VERB with/ADP right/ADJ#0.0#0.0
-A person is turning 90 degrees to the right while walking forward.#A/DET person/NOUN is/AUX turn/VERB degree/NOUN to/ADP the/DET right/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0

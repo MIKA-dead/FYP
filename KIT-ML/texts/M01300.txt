@@ -1,7 +1,0 @@
-A person performs a punch with their left hand#A/DET person/NOUN perform/VERB a/DET punch/NOUN with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0
-One person leads her left fist, forcefully, on the chest forward, it remains right fist against his own breast.#One/NUM person/NOUN lead/VERB her/PRON left/VERB fist/NOUN forcefully/ADV on/ADP the/DET chest/NOUN forward/ADV it/PRON remain/VERB right/ADJ fist/NOUN against/ADP his/DET own/ADJ breast/NOUN#0.0#0.0
-A standing person raises both hands to chest height and performs a rigth forward punch.#A/DET stand/VERB person/NOUN raise/VERB both/DET hand/NOUN to/PART chest/VERB height/NOUN and/CCONJ perform/VERB a/DET rigth/NOUN forward/ADV punch/NOUN#0.0#0.0
-a person punches something with its left hand#a/DET person/NOUN punch/VERB something/PRON with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
-A person throws a punch using the left fist and stepping forward with the left foot.#A/DET person/NOUN throw/VERB a/DET punch/NOUN use/VERB the/DET left/ADJ fist/NOUN and/CCONJ step/VERB forward/ADV with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0
-A person performs one punch#A/DET person/NOUN perform/VERB one/NUM punch/NOUN#0.0#0.0
-Boxing with the left hand.#box/VERB with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0

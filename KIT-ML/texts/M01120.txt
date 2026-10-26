@@ -1,3 +1,0 @@
-A human pushed from the side#A/DET human/NOUN push/VERB from/ADP the/DET side/NOUN#0.0#0.0
-A human gets puched from its left side and makes a step to the right.#A/DET human/NOUN get/VERB puche/VERB from/ADP its/DET left/ADJ side/NOUN and/CCONJ make/VERB a/DET step/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A person stumbles to the right#A/DET person/NOUN stumble/VERB to/ADP the/DET right/NOUN#0.0#0.0

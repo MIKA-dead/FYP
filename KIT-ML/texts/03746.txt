@@ -1,1 +1,0 @@
-A person is performing a downward facing dog, performing some stretching moves and goes back to downward facing dog.#A/DET person/NOUN is/AUX perform/VERB a/DET downward/ADJ face/VERB dog/NOUN perform/VERB some/DET stretch/VERB move/NOUN and/CCONJ go/VERB back/ADV to/ADP downward/ADJ face/VERB dog/NOUN#0.0#0.0

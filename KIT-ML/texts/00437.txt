@@ -1,2 +1,0 @@
-A human walks forwards slowly.#A/DET human/NOUN walk/VERB forwards/ADV slowly/ADV#0.0#0.0
-Subject is walking forward.#Subject/PROPN is/AUX walk/VERB forward/ADV#0.0#0.0

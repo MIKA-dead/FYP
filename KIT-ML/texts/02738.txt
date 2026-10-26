@@ -1,1 +1,0 @@
-A person who is flapping their arms up and down walks one revolution counter-clockwise and then takes 3 small steps forward.#A/DET person/NOUN who/PRON is/AUX flap/VERB their/DET arm/NOUN up/ADP and/CCONJ down/ADV walk/VERB one/NUM revolution/NOUN counterclockwise/NOUN and/CCONJ then/ADV take/VERB small/ADJ step/NOUN forward/ADV#0.0#0.0

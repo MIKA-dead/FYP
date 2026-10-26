@@ -1,4 +1,0 @@
-A person performs a semi-circular movement.#A/DET person/NOUN perform/VERB a/DET semicircular/ADJ movement/NOUN#0.0#0.0
-Someone walks forward and does a right turn.#Someone/PRON walk/VERB forward/ADV and/CCONJ does/AUX a/DET right/ADJ turn/NOUN#0.0#0.0
-A human performs a 90° right curve#A/DET human/NOUN perform/VERB a/DET right/ADJ curve/NOUN#0.0#0.0
-a person walks 90 degrees to the right performing a quarter circle#a/DET person/NOUN walk/VERB degree/NOUN to/ADP the/DET right/NOUN perform/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0

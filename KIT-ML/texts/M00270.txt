@@ -1,2 +1,0 @@
-A person takes four steps back.#A/DET person/NOUN take/VERB four/NUM step/NOUN back/ADV#0.0#0.0
-A person does 4 steps backwards slowly.#A/DET person/NOUN does/AUX step/NOUN backwards/ADV slowly/ADV#0.0#0.0

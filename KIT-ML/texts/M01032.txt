@@ -1,1 +1,0 @@
-A person walking a few steps forward#A/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0

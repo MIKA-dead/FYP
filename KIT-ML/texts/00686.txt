@@ -1,1 +1,0 @@
-A person walks a few steps, then halts#A/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN then/ADV halt/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-A subject is walking backward four steps.#A/DET subject/NOUN is/AUX walk/VERB backward/ADJ four/NUM step/NOUN#0.0#0.0
-A person is walking backwards#A/DET person/NOUN is/AUX walk/VERB backwards/ADV#0.0#0.0

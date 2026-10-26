@@ -1,2 +1,0 @@
-a person stumbles left#a/DET person/NOUN stumble/VERB left/VERB#0.0#0.0
-A person getting shove from the right while standing still#A/DET person/NOUN get/VERB shove/NOUN from/ADP the/DET right/NOUN while/SCONJ stand/VERB still/ADV#0.0#0.0

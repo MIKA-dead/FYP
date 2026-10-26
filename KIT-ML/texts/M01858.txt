@@ -1,2 +1,0 @@
-A person is pushed in the back during walking forwards.#A/DET person/NOUN is/AUX push/VERB in/ADP the/DET back/NOUN during/ADP walking/NOUN forwards/ADV#0.0#0.0
-A person walks forward and gets shoved from behind.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ get/VERB shove/VERB from/ADP behind/ADV#0.0#0.0

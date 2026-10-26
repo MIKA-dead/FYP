@@ -1,1 +1,0 @@
-A person is strolling#A/DET person/NOUN is/AUX stroll/VERB#0.0#0.0

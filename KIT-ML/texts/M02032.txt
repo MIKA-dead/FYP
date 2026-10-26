@@ -1,4 +1,0 @@
-After walking a bit forward, a person turns around on one leg to return#After/ADP walk/VERB a/DET bit/NOUN forward/ADV a/DET person/NOUN turn/VERB around/ADP on/ADP one/NUM leg/NOUN to/PART return/VERB#0.0#0.0
-A person walks forward, turns on the spot and walks back.#A/DET person/NOUN walk/VERB forward/ADV turn/VERB on/ADP the/DET spot/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
-Someone is walking forward 2 steps starting with the left leg, then turning back around his right side and walking back 2 steps.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET left/ADJ leg/NOUN then/ADV turn/VERB back/ADV around/ADP his/DET right/ADJ side/NOUN and/CCONJ walk/VERB back/ADV step/NOUN#0.0#0.0
-A human does a tight 180° turn on the left foot#A/DET human/NOUN does/AUX a/DET tight/ADJ turn/VERB on/ADP the/DET left/ADJ foot/NOUN#0.0#0.0

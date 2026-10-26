@@ -1,1 +1,0 @@
-A human walks to a table, picks up a glas and drinks.#A/DET human/NOUN walk/VERB to/ADP a/DET table/NOUN pick/VERB up/ADP a/DET gla/NOUN and/CCONJ drink/NOUN#0.0#0.0

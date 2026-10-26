@@ -1,2 +1,0 @@
-A human is making a 180 degrees turn.#A/DET human/NOUN is/AUX make/VERB a/DET degree/NOUN turn/VERB#0.0#0.0
-a person walks forwards a few steps and then turns 180 degrees to the left and walks back a few meters again#a/DET person/NOUN walk/VERB forwards/ADV a/DET few/ADJ step/NOUN and/CCONJ then/ADV turn/VERB degree/NOUN to/ADP the/DET left/NOUN and/CCONJ walk/VERB back/ADV a/DET few/ADJ meter/NOUN again/ADV#0.0#0.0

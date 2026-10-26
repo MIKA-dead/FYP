@@ -1,2 +1,0 @@
-human goes forwards starting by right, turns around partway, and goes back to the starting position#human/ADJ go/VERB forwards/ADV start/VERB by/ADP right/NOUN turn/VERB around/ADP partway/NOUN and/CCONJ go/VERB back/ADV to/ADP the/DET starting/NOUN position/NOUN#0.0#0.0
-a person walks forward takes a 180 degree turn and walks some more steps#a/DET person/NOUN walk/VERB forward/ADV take/VERB a/DET degree/NOUN turn/NOUN and/CCONJ walk/VERB some/DET more/ADJ step/NOUN#0.0#0.0

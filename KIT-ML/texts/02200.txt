@@ -1,1 +1,0 @@
-A person gesticulates intensively with both hands.#A/DET person/NOUN gesticulate/VERB intensively/ADV with/ADP both/DET hand/NOUN#0.0#0.0

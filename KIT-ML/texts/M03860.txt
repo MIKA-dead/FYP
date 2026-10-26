@@ -1,1 +1,0 @@
-A human walks upstairs.#A/DET human/NOUN walk/VERB upstairs/ADV#0.0#0.0

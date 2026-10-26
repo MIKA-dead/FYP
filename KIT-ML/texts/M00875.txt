@@ -1,3 +1,0 @@
-A person walks 1m forwad, turns 180 degree to the left and walks another 1m forward.#A/DET person/NOUN walk/VERB m/NOUN forwad/NOUN turn/VERB degree/NOUN to/ADP the/DET left/NOUN and/CCONJ walk/VERB another/DET m/NOUN forward/ADV#0.0#0.0
-A person walks, turns around and walks back#A/DET person/NOUN walk/VERB turn/VERB around/ADV and/CCONJ walk/VERB back/ADV#0.0#0.0
-Somebody turns around counterclockwise.#Somebody/PRON turn/VERB around/ADP counterclockwise/NOUN#0.0#0.0

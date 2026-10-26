@@ -1,1 +1,0 @@
-A person puts his/her left hand up and then moves an object in front of him/her on the table closer to him-/herself.#A/DET person/NOUN put/VERB his/DET her/DET left/ADJ hand/NOUN up/ADP and/CCONJ then/ADV move/VERB an/DET object/NOUN in/ADP front/NOUN of/ADP him/PRON her/PRON on/ADP the/DET table/NOUN closer/ADV to/ADP him/PRON herself/PRON#0.0#0.0

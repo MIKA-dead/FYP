@@ -1,4 +1,0 @@
-A person makes six steps forward while swinging both arms forward and up.#A/DET person/NOUN make/VERB six/NUM step/NOUN forward/ADV while/SCONJ swinge/VERB both/DET arm/NOUN forward/ADV and/CCONJ up/ADV#0.0#0.0
-A person walks with nordic walking sticks in his hands.#A/DET person/NOUN walk/VERB with/ADP nordic/ADJ walking/NOUN stick/NOUN in/ADP his/DET hand/NOUN#0.0#0.0
-A person takes 6 steps, starting with the right foot and swings the bent arms while walking.#A/DET person/NOUN take/VERB step/NOUN start/VERB with/ADP the/DET right/ADJ foot/NOUN and/CCONJ swing/VERB the/DET bent/ADJ arm/NOUN while/SCONJ walk/VERB#0.0#0.0
-Somebody walks slowly with wide arms.#Somebody/PRON walk/VERB slowly/ADV with/ADP wide/ADJ arm/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person walks then turns left slowly#A/DET person/NOUN walk/VERB then/ADV turn/VERB left/VERB slowly/ADV#0.0#0.0

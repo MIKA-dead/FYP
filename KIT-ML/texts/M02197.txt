@@ -1,1 +1,0 @@
-A person gesticulates with both hands.#A/DET person/NOUN gesticulate/VERB with/ADP both/DET hand/NOUN#0.0#0.0

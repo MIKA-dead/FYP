@@ -1,3 +1,0 @@
-A man walks a quarter of a circle towards the right.#A/DET man/NOUN walk/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN towards/ADP the/DET right/NOUN#0.0#0.0
-human goes in a quarter circle clockwise starting with left.#human/PROPN go/VERB in/ADP a/DET quarter/NOUN circle/NOUN clockwise/NOUN start/VERB with/ADP left/NOUN#0.0#0.0
-A human walks slowly a quarter of a circle to its right.#A/DET human/NOUN walk/VERB slowly/ADV a/DET quarter/NOUN of/ADP a/DET circle/NOUN to/ADP its/DET right/NOUN#0.0#0.0

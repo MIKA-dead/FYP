@@ -1,5 +1,0 @@
-A person walks forwards five steps, starting with the left foot and suddenly speeds up for step three and four.#A/DET person/NOUN walk/VERB forwards/ADV five/NUM step/NOUN start/VERB with/ADP the/DET left/ADJ foot/NOUN and/CCONJ suddenly/ADV speed/VERB up/ADP for/ADP step/NOUN three/NUM and/CCONJ four/NUM#0.0#0.0
-A person accelerates from still stand and comes to rest again after five steps.#A/DET person/NOUN accelerate/VERB from/ADP still/ADV stand/VERB and/CCONJ come/VERB to/PART rest/VERB again/ADV after/ADP five/NUM step/NOUN#0.0#0.0
-A person walks fast.#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0
-a person walks straight forwad#a/DET person/NOUN walk/VERB straight/ADJ forwad/NOUN#0.0#0.0
-The human is walking fast#The/DET human/NOUN is/AUX walk/VERB fast/ADV#0.0#0.0

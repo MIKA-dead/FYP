@@ -1,1 +1,0 @@
-A Person walks in an 8-shape.#A/DET person/NOUN walk/VERB in/ADP an/DET#0.0#0.0

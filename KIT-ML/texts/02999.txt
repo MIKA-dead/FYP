@@ -1,1 +1,0 @@
-A person doing fast steps to the left while crouched a bit.#A/DET person/NOUN do/VERB fast/ADJ step/NOUN to/ADP the/DET left/ADJ while/SCONJ crouch/VERB a/DET bit/NOUN#0.0#0.0

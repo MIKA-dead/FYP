@@ -1,3 +1,0 @@
-a person walks 90° of a circle to his right#a/DET person/NOUN walk/VERB of/ADP a/DET circle/NOUN to/ADP his/DET right/NOUN#0.0#0.0
-A person walks a quarter circle to the right, taking four steps.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN take/VERB four/NUM step/NOUN#0.0#0.0
-A person is turning right while walking#A/DET person/NOUN is/AUX turn/VERB right/ADV while/SCONJ walk/VERB#0.0#0.0

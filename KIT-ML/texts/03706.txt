@@ -1,1 +1,0 @@
-A human walks slowly backward.#A/DET human/ADJ walk/VERB slowly/ADV backward/ADJ#0.0#0.0

@@ -1,4 +1,0 @@
-A person walks backwards, arms swinging by his side.#A/DET person/NOUN walk/VERB backwards/ADV arm/NOUN swinge/VERB by/ADP his/DET side/NOUN#0.0#0.0
-human goes backwards starting with left#human/ADJ go/VERB backwards/ADV start/VERB with/ADP left/ADJ#0.0#0.0
-a person walks backwards#a/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
-a man is walking backwards#a/DET man/NOUN is/AUX walk/VERB backwards/ADV#0.0#0.0

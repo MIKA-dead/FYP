@@ -1,3 +1,0 @@
-A kneeling person stands up.#A/DET kneel/VERB person/NOUN stand/VERB up/ADP#0.0#0.0
-A human is kneeling and getting up by pushing with the left arm from the floo#A/DET human/NOUN is/AUX kneel/VERB and/CCONJ get/VERB up/ADP by/ADP push/VERB with/ADP the/DET left/ADJ arm/NOUN from/ADP the/DET floo/NOUN#0.0#0.0
-a man starts on his knees and stands up#a/DET man/NOUN start/VERB on/ADP his/DET knee/NOUN and/CCONJ stand/VERB up/ADP#0.0#0.0

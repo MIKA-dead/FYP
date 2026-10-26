@@ -1,1 +1,0 @@
-A person walks to the right and then to the left with lateral steps.#A/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN and/CCONJ then/ADV to/ADP the/DET left/NOUN with/ADP lateral/ADJ step/NOUN#0.0#0.0

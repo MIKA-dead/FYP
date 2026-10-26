@@ -1,4 +1,0 @@
-A human turns abruptly.#A/DET human/ADJ turn/VERB abruptly/ADV#0.0#0.0
-A person walks two steps forward, performs a spot turn on the left foot and walks back to the start position.#A/DET person/NOUN walk/VERB two/NUM step/NOUN forward/ADV perform/VERB a/DET spot/NOUN turn/NOUN on/ADP the/DET left/ADJ foot/NOUN and/CCONJ walk/VERB back/ADV to/ADP the/DET start/NOUN position/NOUN#0.0#0.0
-A person turns on his right foot.#A/DET person/NOUN turn/VERB on/ADP his/DET right/ADJ foot/NOUN#0.0#0.0
-a person walks forward takes a 180 degree turn to the right and walks some more steps#a/DET person/NOUN walk/VERB forward/ADV take/VERB a/DET degree/NOUN turn/NOUN to/ADP the/DET right/NOUN and/CCONJ walk/VERB some/DET more/ADJ step/NOUN#0.0#0.0

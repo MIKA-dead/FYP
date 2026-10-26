@@ -1,1 +1,0 @@
-A person is walking in a rectangle with stepping onto higher ground and down again.#A/DET person/NOUN is/AUX walk/VERB in/ADP a/DET rectangle/NOUN with/ADP step/VERB onto/ADP higher/ADJ ground/NOUN and/CCONJ down/ADV again/ADV#0.0#0.0

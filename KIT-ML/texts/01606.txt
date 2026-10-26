@@ -1,9 +1,0 @@
-human walks upstairs#human/ADJ walk/VERB upstairs/ADV#0.0#0.0
-A human walks forwards#A/DET human/NOUN walk/VERB forwards/ADV#0.0#0.0
-Someone is going up the stairs.#Someone/PRON is/AUX go/VERB up/ADP the/DET stair/NOUN#0.0#0.0
-A person climbs the stairs#A/DET person/NOUN climb/VERB the/DET stair/NOUN#0.0#0.0
-A person walks up a hill forward.#A/DET person/NOUN walk/VERB up/ADP a/DET hill/NOUN forward/ADV#0.0#0.0
-A person walks up a hill.#A/DET person/NOUN walk/VERB up/ADP a/DET hill/NOUN#0.0#0.0
-A person walks up stairs.#A/DET person/NOUN walk/VERB up/ADP stair/NOUN#0.0#0.0
-Someone walks up a slope.#Someone/PRON walk/VERB up/ADP a/DET slope/NOUN#0.0#0.0
-A person walks up a slope#A/DET person/NOUN walk/VERB up/ADP a/DET slope/NOUN#0.0#0.0

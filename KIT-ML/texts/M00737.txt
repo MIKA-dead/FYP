@@ -1,2 +1,0 @@
-A human is making a clockwise turn.#A/DET human/NOUN is/AUX make/VERB a/DET clockwise/ADJ turn/NOUN#0.0#0.0
-a person walks the right performing a quarter circle#a/DET person/NOUN walk/VERB the/DET right/NOUN perform/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0

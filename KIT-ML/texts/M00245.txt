@@ -1,3 +1,0 @@
-A person walks in a counterclockwise circle.#A/DET person/NOUN walk/VERB in/ADP a/DET counterclockwise/ADJ circle/NOUN#0.0#0.0
-A person walks in a little circle.#A/DET person/NOUN walk/VERB in/ADP a/DET little/ADJ circle/NOUN#0.0#0.0
-A person walks forward in a circle counterclockwise.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET circle/NOUN counterclockwise/NOUN#0.0#0.0

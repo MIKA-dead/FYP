@@ -1,4 +1,0 @@
-A person raises both hands to chest level, elbows bent, then bounces his right hand up and down once before dropping both hands to his sides.#A/DET person/NOUN raise/VERB both/DET hand/NOUN to/PART chest/NOUN level/NOUN elbow/NOUN bent/ADJ then/ADV bounce/VERB his/DET right/ADJ hand/NOUN up/ADP and/CCONJ down/ADV once/ADV before/ADP drop/VERB both/DET hand/NOUN to/ADP his/DET side/NOUN#0.0#0.0
-human plays the guitar right-handed#human/PROPN play/VERB the/DET guitar/NOUN righthande/VERB#0.0#0.0
-a person holds something in the left hand and touches it with the right hand#a/DET person/NOUN hold/VERB something/PRON in/ADP the/DET left/ADJ hand/NOUN and/CCONJ touch/VERB it/PRON with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-A person makes motion as if playing triangle.#A/DET person/NOUN make/VERB motion/NOUN as/SCONJ if/SCONJ play/VERB triangle/NOUN#0.0#0.0

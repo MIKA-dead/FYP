@@ -1,4 +1,0 @@
-A human playing a guitar#A/DET human/ADJ play/VERB a/DET guitar/NOUN#0.0#0.0
-A person plays violin on the wrong side (left).#A/DET person/NOUN play/VERB violin/NOUN on/ADP the/DET wrong/ADJ side/NOUN left/ADV#0.0#0.0
-A person is playing an instrument.#A/DET person/NOUN is/AUX play/VERB an/DET instrument/NOUN#0.0#0.0
-A person is playing the guitar with the right hand.#A/DET person/NOUN is/AUX play/VERB the/DET guitar/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

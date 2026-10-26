@@ -1,2 +1,0 @@
-A person walks quickly forward and stops.#A/DET person/NOUN walk/VERB quickly/ADV forward/ADV and/CCONJ stop/VERB#0.0#0.0
-a person walks some meters forwards#a/DET person/NOUN walk/VERB some/DET meter/NOUN forwards/ADV#0.0#0.0

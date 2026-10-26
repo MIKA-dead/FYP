@@ -1,1 +1,0 @@
-A person is drinking something out of a bottle using his left hand.#A/DET person/NOUN is/AUX drink/VERB something/PRON out/SCONJ of/ADP a/DET bottle/NOUN use/VERB his/DET left/ADJ hand/NOUN#0.0#0.0

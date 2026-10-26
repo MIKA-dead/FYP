@@ -1,1 +1,0 @@
-Multiple times a human makes two jumps to the right and then two jumps to the left.#Multiple/ADJ time/NOUN a/DET human/NOUN make/VERB two/NUM jump/NOUN to/ADP the/DET right/NOUN and/CCONJ then/ADV two/NUM jump/NOUN to/ADP the/DET left/NOUN#0.0#0.0

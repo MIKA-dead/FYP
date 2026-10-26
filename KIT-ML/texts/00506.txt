@@ -1,4 +1,0 @@
-A person runs a couple of steps#A/DET person/NOUN run/VERB a/DET couple/NOUN of/ADP step/NOUN#0.0#0.0
-A person performs a running motion.#A/DET person/NOUN perform/VERB a/DET running/ADJ motion/NOUN#0.0#0.0
-A person is running forward with a few small steps.#A/DET person/NOUN is/AUX run/VERB forward/ADV with/ADP a/DET few/ADJ small/ADJ step/NOUN#0.0#0.0
-A person starts to run and stops.#A/DET person/NOUN start/VERB to/PART run/VERB and/CCONJ stop/NOUN#0.0#0.0

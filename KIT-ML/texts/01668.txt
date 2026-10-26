@@ -1,2 +1,0 @@
-A person performs a 180° turn to the left.#A/DET person/NOUN perform/VERB a/DET turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
-a person walks forwards a few steps then turns 180 degrees to the left and keeps walking#a/DET person/NOUN walk/VERB forwards/ADV a/DET few/ADJ step/NOUN then/ADV turn/VERB degree/NOUN to/ADP the/DET left/NOUN and/CCONJ keep/VERB walk/VERB#0.0#0.0

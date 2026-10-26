@@ -1,5 +1,0 @@
-A human performing wiping motions with the right hand#A/DET human/ADJ perform/VERB wipe/VERB motion/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-A person performs a stirring motion.#A/DET person/NOUN perform/VERB a/DET stirring/ADJ motion/NOUN#0.0#0.0
-A person wipes a surface using the right hand.#A/DET person/NOUN wipe/VERB a/DET surface/NOUN use/VERB the/DET right/ADJ hand/NOUN#0.0#0.0
-a person wipes something in front of it with its right hand#a/DET person/NOUN wipe/VERB something/PRON in/ADP front/NOUN of/ADP it/PRON with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
-A person moves his right hand in horizontal circles in front of his belly.#A/DET person/NOUN move/VERB his/DET right/ADJ hand/NOUN in/ADP horizontal/ADJ circle/NOUN in/ADP front/NOUN of/ADP his/DET belly/NOUN#0.0#0.0

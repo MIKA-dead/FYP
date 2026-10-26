@@ -1,3 +1,0 @@
-A person raises his right arm in front of his face then starts waving.#A/DET person/NOUN raise/VERB his/DET right/ADJ arm/NOUN in/ADP front/NOUN of/ADP his/DET face/NOUN then/ADV start/VERB wave/VERB#0.0#0.0
-human performs a waving motion with right hand#human/PROPN perform/VERB a/DET waving/ADJ motion/NOUN with/ADP right/ADJ hand/NOUN#0.0#0.0
-a person waves with its right hand#a/DET person/NOUN wave/VERB with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

@@ -1,5 +1,0 @@
-A person is descending a staircase.#A/DET person/NOUN is/AUX descend/VERB a/DET staircase/NOUN#0.0#0.0
-A person goes two meters forward with small steps.#A/DET person/NOUN go/VERB two/NUM meter/NOUN forward/ADV with/ADP small/ADJ step/NOUN#0.0#0.0
-a person walks down the stairs#a/DET person/NOUN walk/VERB down/ADP the/DET stair/NOUN#0.0#0.0
-A person walks down a skew plane.#A/DET person/NOUN walk/VERB down/ADP a/DET skew/ADJ plane/NOUN#0.0#0.0
-a man is walking down a slope#a/DET man/NOUN is/AUX walk/VERB down/ADP a/DET slope/NOUN#0.0#0.0

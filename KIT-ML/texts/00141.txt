@@ -1,3 +1,0 @@
-A person starts walking in a circular motion towards the left.#A/DET person/NOUN start/VERB walk/VERB in/ADP a/DET circular/ADJ motion/NOUN towards/ADP the/DET left/NOUN#0.0#0.0
-A person walks a 90 degree curve to the left.#A/DET person/NOUN walk/VERB a/DET degree/NOUN curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-A person walks in a quarter circle.#A/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0

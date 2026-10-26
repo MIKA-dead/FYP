@@ -1,5 +1,0 @@
-A person walks forwards in a relaxed manner.#A/DET person/NOUN walk/VERB forwards/ADV in/ADP a/DET relaxed/ADJ manner/NOUN#0.0#0.0
-human goes forward starting with left#human/PROPN go/VERB forward/ADV start/VERB with/ADP left/ADJ#0.0#0.0
-a person walks straight forwards#a/DET person/NOUN walk/VERB straight/ADV forwards/ADV#0.0#0.0
-A person walking forward four steps.#A/DET person/NOUN walk/VERB forward/ADV four/NUM step/NOUN#0.0#0.0
-A person walks.#A/DET person/NOUN walk/VERB#0.0#0.0

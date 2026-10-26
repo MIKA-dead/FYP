@@ -1,4 +1,0 @@
-A person is turning a right corner#A/DET person/NOUN is/AUX turn/VERB a/DET right/ADJ corner/NOUN#0.0#0.0
-Someone is walking forward and then turning right.#Someone/PRON is/AUX walk/VERB forward/ADV and/CCONJ then/ADV turn/VERB right/ADV#0.0#0.0
-a person walks in a quarter circle to the right#a/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-a person tunes right#a/DET person/NOUN tune/VERB right/ADJ#0.0#0.0

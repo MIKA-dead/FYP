@@ -1,2 +1,0 @@
-A person walks two steps forward, starting with the left foot, performs a spot-turn of 180° on the right foot and walks back two steps#A/DET person/NOUN walk/VERB two/NUM step/NOUN forward/ADV start/VERB with/ADP the/DET left/ADJ foot/NOUN perform/VERB a/DET spotturn/NOUN of/ADP on/ADP the/DET right/ADJ foot/NOUN and/CCONJ walk/VERB back/ADV two/NUM step/NOUN#0.0#0.0
-A person turns 180 degress on the tip of their right foot#A/DET person/NOUN turn/VERB degress/NOUN on/ADP the/DET tip/NOUN of/ADP their/DET right/ADJ foot/NOUN#0.0#0.0

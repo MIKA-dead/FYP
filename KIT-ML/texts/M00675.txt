@@ -1,2 +1,0 @@
-A person walks forward very slowly and carefully.#A/DET person/NOUN walk/VERB forward/ADV very/ADV slowly/ADV and/CCONJ carefully/ADV#0.0#0.0
-a person walks forwards quite slowly#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV slowly/ADV#0.0#0.0

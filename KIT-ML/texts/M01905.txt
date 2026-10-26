@@ -1,2 +1,0 @@
-A person is dancing.#A/DET person/NOUN is/AUX dance/VERB#0.0#0.0
-A person walks forward a few steps before walking back a few steps and then forward again#A/DET person/NOUN walk/VERB forward/ADV a/DET few/ADJ step/NOUN before/ADP walk/VERB back/ADV a/DET few/ADJ step/NOUN and/CCONJ then/ADV forward/ADV again/ADV#0.0#0.0

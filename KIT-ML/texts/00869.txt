@@ -1,2 +1,0 @@
-A person goes one meter forward, turns around and goes backwards.#A/DET person/NOUN go/VERB one/NUM meter/NOUN forward/ADV turn/VERB around/ADV and/CCONJ go/VERB backwards/ADV#0.0#0.0
-A person is spinning around while walking.#A/DET person/NOUN is/AUX spin/VERB around/ADV while/SCONJ walk/VERB#0.0#0.0

@@ -1,2 +1,0 @@
-Someone takes a few steps forward because he is shoved from behind#Someone/PRON take/VERB a/DET few/ADJ step/NOUN forward/ADV because/SCONJ he/PRON is/AUX shove/VERB from/ADP behind/ADV#0.0#0.0
-A standing person gets shoved from behind.#A/DET stand/VERB person/NOUN get/VERB shove/VERB from/ADP behind/ADV#0.0#0.0

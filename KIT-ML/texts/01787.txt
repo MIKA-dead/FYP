@@ -1,2 +1,0 @@
-A person walks forward and is pushed backwards#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB backwards/ADV#0.0#0.0
-A person gets pushed from the front while walking forward.#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0

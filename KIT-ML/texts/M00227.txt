@@ -1,2 +1,0 @@
-Subject walks in a full circle clockwise.#Subject/ADJ walk/VERB in/ADP a/DET full/ADJ circle/NOUN clockwise/NOUN#0.0#0.0
-The human walks a circle#The/DET human/NOUN walk/VERB a/DET circle/NOUN#0.0#0.0

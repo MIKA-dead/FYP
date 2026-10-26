@@ -1,1 +1,0 @@
-Person lifting a lightweight item (a key?)#person/NOUN lift/VERB a/DET lightweight/ADJ item/NOUN a/DET key/NOUN#0.0#0.0

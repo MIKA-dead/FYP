@@ -1,2 +1,0 @@
-a person walks a few steps backwards#a/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN backwards/ADV#0.0#0.0
-a person walks backwards about 4 steps#a/DET person/NOUN walk/VERB backwards/ADV about/ADV step/NOUN#0.0#0.0

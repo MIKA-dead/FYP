@@ -1,5 +1,0 @@
-A person touches the floor with his right hand and kneels down.#A/DET person/NOUN touch/VERB the/DET floor/NOUN with/ADP his/DET right/ADJ hand/NOUN and/CCONJ kneel/VERB down/ADP#0.0#0.0
-a person gets down on his knees#a/DET person/NOUN get/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0
-A person gets on his knees with his hands as support and assumes an upleft posture after.#A/DET person/NOUN get/VERB on/ADP his/DET knee/NOUN with/ADP his/DET hand/NOUN as/SCONJ support/NOUN and/CCONJ assume/VERB an/DET upleft/ADJ posture/NOUN after/ADV#0.0#0.0
-The person a crawling on the floor#The/DET person/NOUN a/DET crawling/NOUN on/ADP the/DET floor/NOUN#0.0#0.0
-Someone gets down on his knees.#Someone/PRON get/VERB down/ADP on/ADP his/DET knee/NOUN#0.0#0.0

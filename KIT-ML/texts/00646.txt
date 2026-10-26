@@ -1,2 +1,0 @@
-Someone walks two steps, turns and walks back.#Someone/PRON walk/VERB two/NUM step/NOUN turn/VERB and/CCONJ walk/VERB back/ADV#0.0#0.0
-A person turns on his left foot.#A/DET person/NOUN turn/VERB on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0

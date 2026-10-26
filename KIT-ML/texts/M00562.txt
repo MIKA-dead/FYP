@@ -1,4 +1,0 @@
-A human subject sprints.#A/DET human/ADJ subject/ADJ sprint/NOUN#0.0#0.0
-A person takes five rapid forward steps and comes to a stop.#A/DET person/NOUN take/VERB five/NUM rapid/ADJ forward/ADJ step/NOUN and/CCONJ come/VERB to/ADP a/DET stop/NOUN#0.0#0.0
-A human starts jogging moving the hands up and stopd jogging after a few steps#A/DET human/NOUN start/VERB jog/VERB move/VERB the/DET hand/NOUN up/ADP and/CCONJ stopd/VERB jogging/NOUN after/ADP a/DET few/ADJ step/NOUN#0.0#0.0
-The human perfoms a short sprint#The/DET human/ADJ perfom/NOUN a/DET short/ADJ sprint/NOUN#0.0#0.0

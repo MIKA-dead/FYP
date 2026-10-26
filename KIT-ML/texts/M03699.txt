@@ -1,1 +1,0 @@
-A human runs, looks on the floor while continuing to walk slowly and continues her run.#A/DET human/ADJ run/NOUN look/VERB on/ADP the/DET floor/NOUN while/SCONJ continue/VERB to/PART walk/VERB slowly/ADV and/CCONJ continue/VERB her/DET run/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-a person jumps on his hands and jumps back on his feet#a/DET person/NOUN jump/VERB on/ADP his/DET hand/NOUN and/CCONJ jump/VERB back/ADV on/ADP his/DET foot/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person is pushed from the right.#A/DET person/NOUN is/AUX push/VERB from/ADP the/DET right/NOUN#0.0#0.0

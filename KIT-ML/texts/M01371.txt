@@ -1,2 +1,0 @@
-human performs a waving motion with its left hand#human/PROPN perform/VERB a/DET wave/VERB motion/NOUN with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
-A person waves using the left hand.#A/DET person/NOUN wave/NOUN use/VERB the/DET left/ADJ hand/NOUN#0.0#0.0

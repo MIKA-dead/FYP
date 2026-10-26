@@ -1,3 +1,0 @@
-A person walking calmly forward#A/DET person/NOUN walk/VERB calmly/ADV forward/ADV#0.0#0.0
-A person is walking forward.#A/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0
-a human walks a few steps forward#a/DET human/NOUN walk/VERB a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0

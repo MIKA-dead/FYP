@@ -1,2 +1,0 @@
-A person walks forward while turning to the right#A/DET person/NOUN walk/VERB forward/ADV while/SCONJ turn/VERB to/ADP the/DET right/NOUN#0.0#0.0
-Subject walks in quarter circle clockwise.#Subject/ADJ walk/VERB in/ADP quarter/NOUN circle/NOUN clockwise/NOUN#0.0#0.0

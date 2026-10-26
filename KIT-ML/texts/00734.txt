@@ -1,3 +1,0 @@
-A person turn left with medium speed.#A/DET person/NOUN turn/VERB left/VERB with/ADP medium/ADJ speed/NOUN#0.0#0.0
-a person walks to the left performing a quarter circle#a/DET person/NOUN walk/VERB to/ADP the/DET left/ADJ perform/VERB a/DET quarter/NOUN circle/NOUN#0.0#0.0
-A person walks a left curve#A/DET person/NOUN walk/VERB a/DET left/ADJ curve/NOUN#0.0#0.0

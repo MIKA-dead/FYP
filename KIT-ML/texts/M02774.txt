@@ -1,1 +1,0 @@
-A person walks around and performs a dance while doing so.#A/DET person/NOUN walk/VERB around/ADV and/CCONJ perform/VERB a/DET dance/NOUN while/SCONJ do/VERB so/ADV#0.0#0.0

@@ -1,4 +1,0 @@
-a person walks forward and gets pushed from behind#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ get/VERB push/VERB from/ADP behind/ADV#0.0#0.0
-A person walks straight, receives a slight push from behind, and recovers from it.#A/DET person/NOUN walk/VERB straight/ADV receive/VERB a/DET slight/ADJ push/NOUN from/ADP behind/ADV and/CCONJ recover/NOUN from/ADP it/PRON#0.0#0.0
-Someone is beeing pushed from the back while walking forward.#Someone/PRON is/AUX beee/VERB push/VERB from/ADP the/DET back/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0
-A person gets pusehd forward.#A/DET person/NOUN get/VERB pusehd/ADJ forward/ADV#0.0#0.0

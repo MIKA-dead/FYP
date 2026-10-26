@@ -1,1 +1,0 @@
-A person is performing fighting motions.#A/DET person/NOUN is/AUX perform/VERB fighting/NOUN motion/NOUN#0.0#0.0

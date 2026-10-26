@@ -1,4 +1,0 @@
-the person is dancing#the/DET person/NOUN is/AUX dance/VERB#0.0#0.0
-A human performs a dance sequence (probably a specific one / which I don't know)#A/DET human/NOUN perform/VERB a/DET dance/NOUN sequence/NOUN probably/ADV a/DET specific/ADJ one/NOUN which/DET I/PRON do/AUX know/VERB#0.0#0.0
-a person dances with another person#a/DET person/NOUN dance/VERB with/ADP another/DET person/NOUN#0.0#0.0
-someone is dancing.#someone/PRON is/AUX dance/VERB#0.0#0.0

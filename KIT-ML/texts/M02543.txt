@@ -1,1 +1,0 @@
-A person is two times walking up to sit on something, sits there and walks away again.#A/DET person/NOUN is/AUX two/NUM time/NOUN walk/VERB up/ADP to/PART sit/VERB on/ADP something/PRON sit/VERB there/ADV and/CCONJ walk/VERB away/ADV again/ADV#0.0#0.0

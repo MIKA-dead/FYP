@@ -1,3 +1,0 @@
-a person walks forward anf turns slightly to the left#a/DET person/NOUN walk/VERB forward/ADV anf/PROPN turn/VERB slightly/ADV to/ADP the/DET left/NOUN#0.0#0.0
-A person walks and turns 90 degrees to the left.#A/DET person/NOUN walk/VERB and/CCONJ turn/VERB degree/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-A human is walking in a 90° left curve#A/DET human/NOUN is/AUX walk/VERB in/ADP a/DET left/VERB curve/NOUN#0.0#0.0

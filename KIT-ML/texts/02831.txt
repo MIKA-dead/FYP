@@ -1,1 +1,0 @@
-A human walks.#A/DET human/ADJ walk/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person walks and turns to the right.#A/DET person/NOUN walk/VERB and/CCONJ turn/VERB to/ADP the/DET right/NOUN#0.0#0.0

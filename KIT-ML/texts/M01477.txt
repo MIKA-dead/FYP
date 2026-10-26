@@ -1,2 +1,0 @@
-A person raises their left arm like a bodybuilder and moves the right arm towards their left arm.#A/DET person/NOUN raise/VERB their/DET left/ADJ arm/NOUN like/SCONJ a/DET bodybuilder/NOUN and/CCONJ move/VERB the/DET right/ADJ arm/NOUN towards/ADP their/DET left/ADJ arm/NOUN#0.0#0.0
-a person plays the violin with its right hand#a/DET person/NOUN play/VERB the/DET violin/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

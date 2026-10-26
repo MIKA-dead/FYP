@@ -1,1 +1,0 @@
-Subject does an evasive motion bending backwards.#subject/NOUN does/AUX an/DET evasive/ADJ motion/NOUN bend/VERB backwards/ADV#0.0#0.0

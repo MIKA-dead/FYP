@@ -1,2 +1,0 @@
-A person walks clockwise for one quarter of a rotation.#A/DET person/NOUN walk/VERB clockwise/NOUN for/ADP one/NUM quarter/NOUN of/ADP a/DET rotation/NOUN#0.0#0.0
-Someone walks a right turn#Someone/PRON walk/VERB a/DET right/ADJ turn/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person lies on the ground, stands up and then goes into a defense position.#A/DET person/NOUN lie/VERB on/ADP the/DET ground/NOUN stand/VERB up/ADV and/CCONJ then/ADV go/VERB into/ADP a/DET defense/NOUN position/NOUN#0.0#0.0

@@ -1,4 +1,0 @@
-A person jumps backwards.#A/DET person/NOUN jump/VERB backwards/ADV#0.0#0.0
-a person jumps back about 20cm#a/DET person/NOUN jump/VERB back/ADV about/ADV cm/NOUN#0.0#0.0
-A person jumping with both legs backwards.#A/DET person/NOUN jump/VERB with/ADP both/DET leg/NOUN backwards/ADV#0.0#0.0
-A human performs a two legged hop to the back#A/DET human/NOUN perform/VERB a/DET two/NUM legged/ADJ hop/NOUN to/ADP the/DET back/NOUN#0.0#0.0

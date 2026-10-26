@@ -1,6 +1,0 @@
-A human lifting the right leg#A/DET human/ADJ lifting/NOUN the/DET right/ADJ leg/NOUN#0.0#0.0
-A human is lifting and stomping with the right foot#A/DET human/NOUN is/AUX lift/VERB and/CCONJ stomp/VERB with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
-A human lifts its right food and tries to look under it.#A/DET human/ADJ lift/VERB its/DET right/ADJ food/NOUN and/CCONJ try/VERB to/PART look/VERB under/ADP it/PRON#0.0#0.0
-a person raises his right foot and lets it sink again#a/DET person/NOUN raise/VERB his/DET right/ADJ foot/NOUN and/CCONJ let/VERB it/PRON sink/VERB again/ADV#0.0#0.0
-a man schich foot#a/DET man/NOUN schich/PROPN foot/NOUN#0.0#0.0
-Someone is stomping with his right foot.#Someone/PRON is/AUX stomp/VERB with/ADP his/DET right/ADJ foot/NOUN#0.0#0.0

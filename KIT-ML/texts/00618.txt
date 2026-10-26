@@ -1,2 +1,0 @@
-A person walking slowly forwards for a few steps#A/DET person/NOUN walk/VERB slowly/ADV forwards/ADJ for/ADP a/DET few/ADJ step/NOUN#0.0#0.0
-someone start walking slowly and stops in a while.#someone/PRON start/VERB walk/VERB slowly/ADV and/CCONJ stop/VERB in/ADP a/DET while/NOUN#0.0#0.0

@@ -1,3 +1,0 @@
-A human is kneeling down on the floor.#A/DET human/NOUN is/AUX kneel/VERB down/ADP on/ADP the/DET floor/NOUN#0.0#0.0
-A standing person gets down on his knees, supporting his weight with the left hand.#A/DET stand/VERB person/NOUN get/VERB down/ADP on/ADP his/DET knee/NOUN support/VERB his/DET weight/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
-The human is kneeling on the floor#The/DET human/NOUN is/AUX kneel/VERB on/ADP the/DET floor/NOUN#0.0#0.0

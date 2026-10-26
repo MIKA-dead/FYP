@@ -1,1 +1,0 @@
-A human shoots with a gun.#A/DET human/ADJ shoot/NOUN with/ADP a/DET gun/NOUN#0.0#0.0

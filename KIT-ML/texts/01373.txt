@@ -1,2 +1,0 @@
-A person is waving withthe right hand.#A/DET person/NOUN is/AUX wave/VERB withthe/DET right/ADJ hand/NOUN#0.0#0.0
-A person is wiping a surface in front of him.#A/DET person/NOUN is/AUX wipe/VERB a/DET surface/NOUN in/ADP front/NOUN of/ADP him/PRON#0.0#0.0

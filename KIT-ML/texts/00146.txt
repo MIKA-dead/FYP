@@ -1,2 +1,0 @@
-A human turning left#A/DET human/ADJ turning/NOUN left/NOUN#0.0#0.0
-A person walks a left turn of 90 degrees.#A/DET person/NOUN walk/VERB a/DET left/ADJ turn/NOUN of/ADP degree/NOUN#0.0#0.0

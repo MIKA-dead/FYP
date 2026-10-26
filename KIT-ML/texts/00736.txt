@@ -1,3 +1,0 @@
-The subject is doing a left turn in 4 steps.#The/DET subject/NOUN is/AUX do/VERB a/DET left/ADJ turn/NOUN in/ADP step/NOUN#0.0#0.0
-a person walks forwards in a quarter circle#a/DET person/NOUN walk/VERB forwards/ADV in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0
-someone makes a trun#someone/PRON make/VERB a/DET trun/NOUN#0.0#0.0

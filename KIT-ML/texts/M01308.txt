@@ -1,3 +1,0 @@
-A person lifts the left foot and puts it down again.#A/DET person/NOUN lift/VERB the/DET left/ADJ foot/NOUN and/CCONJ put/VERB it/PRON down/ADP again/ADV#0.0#0.0
-Someone is stomping his left foot on the floor.#Someone/PRON is/AUX stomp/VERB his/DET left/ADJ foot/NOUN on/ADP the/DET floor/NOUN#0.0#0.0
-a persons stamps on the ground with its left foot#a/DET person/NOUN stamp/NOUN on/ADP the/DET ground/NOUN with/ADP its/DET left/ADJ foot/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person interacts with something using the right hand.#A/DET person/NOUN interact/VERB with/ADP something/PRON use/VERB the/DET right/ADJ hand/NOUN#0.0#0.0

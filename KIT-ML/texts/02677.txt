@@ -1,1 +1,0 @@
-A human does a cartwheel.#A/DET human/NOUN does/AUX a/DET cartwheel/NOUN#0.0#0.0

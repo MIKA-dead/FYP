@@ -1,1 +1,0 @@
-A person takes a couple of forward steps swaying, turns around and walks back.#A/DET person/NOUN take/VERB a/DET couple/NOUN of/ADP forward/ADJ step/NOUN sway/VERB turn/VERB around/ADV and/CCONJ walk/VERB back/ADV#0.0#0.0

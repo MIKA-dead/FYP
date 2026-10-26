@@ -1,4 +1,0 @@
-A human walking forwards#A/DET human/ADJ walking/NOUN forwards/ADV#0.0#0.0
-A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
-A human goes 4 steps forward.#A/DET human/NOUN go/VERB step/NOUN forward/ADV#0.0#0.0
-Somebody walks carefully straight on.#Somebody/PRON walk/VERB carefully/ADV straight/ADV on/ADV#0.0#0.0

@@ -1,1 +1,0 @@
-A person interacts with something using the left hand and first and then using both hands later.#A/DET person/NOUN interact/VERB with/ADP something/PRON use/VERB the/DET left/ADJ hand/NOUN and/CCONJ first/ADV and/CCONJ then/ADV use/VERB both/DET hand/NOUN later/ADV#0.0#0.0

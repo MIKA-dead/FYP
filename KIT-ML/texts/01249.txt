@@ -1,3 +1,0 @@
-A person is absorbing a puch with the left hand while holding the hands up.#A/DET person/NOUN is/AUX absorb/VERB a/DET puch/NOUN with/ADP the/DET left/ADJ hand/NOUN while/SCONJ hold/VERB the/DET hand/NOUN up/ADP#0.0#0.0
-Someone in fighting stance is ducking down backwards.#Someone/PRON in/ADP fight/VERB stance/NOUN is/AUX duck/VERB down/ADV backwards/ADV#0.0#0.0
-a person dodges a hit#a/DET person/NOUN dodge/VERB a/DET hit/NOUN#0.0#0.0

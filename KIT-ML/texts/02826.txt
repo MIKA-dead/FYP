@@ -1,1 +1,0 @@
-A human walks along a path of a number 8.#A/DET human/ADJ walk/VERB along/ADP a/DET path/NOUN of/ADP a/DET number/NOUN#0.0#0.0

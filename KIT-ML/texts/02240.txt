@@ -1,1 +1,0 @@
-A kneeling person is standing up.#A/DET kneel/VERB person/NOUN is/AUX stand/VERB up/ADP#0.0#0.0

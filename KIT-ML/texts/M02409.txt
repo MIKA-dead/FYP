@@ -1,1 +1,0 @@
-person walks backwards crouched#person/NOUN walk/VERB backwards/ADV crouched/ADJ#0.0#0.0

@@ -1,3 +1,0 @@
-A person performs a dance.#A/DET person/NOUN perform/VERB a/DET dance/NOUN#0.0#0.0
-A person dances the Cha-Cha-Cha.#A/DET person/NOUN dance/VERB the/DET ChaChaCha/PROPN#0.0#0.0
-a man practices some dance steps#a/DET man/NOUN practice/VERB some/DET dance/NOUN step/NOUN#0.0#0.0

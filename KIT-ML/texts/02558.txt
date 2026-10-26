@@ -1,1 +1,0 @@
-A person performs a step forward with the left foot and simultaneously stretches his left arm forward.#A/DET person/NOUN perform/VERB a/DET step/NOUN forward/ADV with/ADP the/DET left/ADJ foot/NOUN and/CCONJ simultaneously/ADV stretch/VERB his/DET left/ADJ arm/NOUN forward/ADV#0.0#0.0

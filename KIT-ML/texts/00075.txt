@@ -1,2 +1,0 @@
-Subject walks in a circle clockwise.#Subject/ADJ walk/VERB in/ADP a/DET circle/NOUN clockwise/NOUN#0.0#0.0
-A person walks a right sided circle, radius approximatly 50cm#A/DET person/NOUN walk/VERB a/DET right/ADJ side/VERB circle/NOUN radius/NOUN approximatly/ADV cm/NOUN#0.0#0.0

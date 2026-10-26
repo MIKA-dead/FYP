@@ -1,1 +1,0 @@
-A person zooms in in the air.#A/DET person/NOUN zoom/VERB in/ADP in/ADP the/DET air/NOUN#0.0#0.0

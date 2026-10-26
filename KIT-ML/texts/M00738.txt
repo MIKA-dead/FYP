@@ -1,3 +1,0 @@
-A person goes to the right making four and a half steps.#A/DET person/NOUN go/VERB to/ADP the/DET right/NOUN make/VERB four/NUM and/CCONJ a/DET half/NOUN step/NOUN#0.0#0.0
-A person walking a right curve#A/DET person/NOUN walk/VERB a/DET right/ADJ curve/NOUN#0.0#0.0
-some one turns a corner.#some/DET one/NOUN turn/VERB a/DET corner/NOUN#0.0#0.0

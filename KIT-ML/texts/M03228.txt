@@ -1,1 +1,0 @@
-A person reaches for something with the left hand first and then uses both hands to bang against the object.#A/DET person/NOUN reach/VERB for/ADP something/PRON with/ADP the/DET left/ADJ hand/NOUN first/ADV and/CCONJ then/ADV use/VERB both/DET hand/NOUN to/PART bang/VERB against/ADP the/DET object/NOUN#0.0#0.0

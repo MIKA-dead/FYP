@@ -1,7 +1,0 @@
-Someone performs a golf putt motion.#Someone/PRON perform/VERB a/DET golf/NOUN putt/NOUN motion/NOUN#0.0#0.0
-A person is putting#A/DET person/NOUN is/AUX put/VERB#0.0#0.0
-A human performs a golf shot to the left#A/DET human/NOUN perform/VERB a/DET golf/NOUN shoot/VERB to/ADP the/DET left/NOUN#0.0#0.0
-A human grabs minigolf club, holds it on the right side of its hips and performs a slight hit of a ball.#A/DET human/ADJ grab/NOUN minigolf/NOUN club/NOUN hold/VERB it/PRON on/ADP the/DET right/ADJ side/NOUN of/ADP its/DET hip/NOUN and/CCONJ perform/VERB a/DET slight/ADJ hit/NOUN of/ADP a/DET ball/NOUN#0.0#0.0
-a person play golf with its right hand#a/DET person/NOUN play/VERB golf/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
-human performs a golf playing like motion#human/PROPN perform/VERB a/DET golf/NOUN play/VERB like/SCONJ motion/NOUN#0.0#0.0
-Someone is playing golf.#Someone/PRON is/AUX play/VERB golf/NOUN#0.0#0.0

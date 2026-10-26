@@ -1,1 +1,0 @@
-Person stumbles forward.#person/NOUN stumble/VERB forward/ADV#0.0#0.0

@@ -1,2 +1,0 @@
-Person walking forwards#person/NOUN walk/VERB forwards/ADV#0.0#0.0
-Someone walks forward#Someone/PRON walk/VERB forward/ADV#0.0#0.0

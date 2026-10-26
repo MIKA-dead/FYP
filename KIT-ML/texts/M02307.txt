@@ -1,1 +1,0 @@
-A person is slowly walking backwards back and forth.#A/DET person/NOUN is/AUX slowly/ADV walk/VERB backwards/ADV back/ADV and/CCONJ forth/ADV#0.0#0.0

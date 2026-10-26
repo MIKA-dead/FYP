@@ -1,3 +1,0 @@
-A huiman walks two steps, turns around#A/DET huiman/NOUN walk/VERB two/NUM step/NOUN turn/VERB around/ADV#0.0#0.0
-Someone is walking forward starting with the right leg, then turning around his left side facing backwards and doing another two steps.#Someone/PRON is/AUX walk/VERB forward/ADV start/VERB with/ADP the/DET right/ADJ leg/NOUN then/ADV turn/VERB around/ADV his/DET left/ADJ side/NOUN face/VERB backwards/ADV and/CCONJ do/VERB another/DET two/NUM step/NOUN#0.0#0.0
-A person turns on his left foot.#A/DET person/NOUN turn/VERB on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0

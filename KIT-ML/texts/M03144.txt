@@ -1,1 +1,0 @@
-A person makes screwing moves like opening a bottle and then a drinking move.#A/DET person/NOUN make/VERB screwing/NOUN move/NOUN like/SCONJ open/VERB a/DET bottle/NOUN and/CCONJ then/ADV a/DET drinking/NOUN move/NOUN#0.0#0.0

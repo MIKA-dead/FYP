@@ -1,1 +1,0 @@
-A person dances the swing.#A/DET person/NOUN dance/VERB the/DET swing/NOUN#0.0#0.0

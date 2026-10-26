@@ -1,3 +1,0 @@
-Someone walks forward and turns around.#Someone/PRON walk/VERB forward/ADV and/CCONJ turn/VERB around/ADV#0.0#0.0
-Person walking and then turning back#person/NOUN walk/VERB and/CCONJ then/ADV turn/VERB back/ADV#0.0#0.0
-a person walks forwards a few step the turn 180 degrees to the right and keeps walking#a/DET person/NOUN walk/VERB forwards/ADV a/DET few/ADJ step/NOUN the/DET turn/NOUN degree/NOUN to/ADP the/DET right/NOUN and/CCONJ keep/VERB walk/VERB#0.0#0.0

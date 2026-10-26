@@ -1,1 +1,0 @@
-A human is walking happy#A/DET human/NOUN is/AUX walk/VERB happy/ADJ#0.0#0.0

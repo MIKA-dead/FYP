@@ -1,2 +1,0 @@
-A person moves along an edge of a tile then turns left and moves along another edge.#A/DET person/NOUN move/VERB along/ADP an/DET edge/NOUN of/ADP a/DET tile/NOUN then/ADV turn/VERB left/VERB and/CCONJ move/NOUN along/ADP another/DET edge/NOUN#0.0#0.0
-a person walks a quarter circle to the left#a/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

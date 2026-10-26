@@ -1,3 +1,0 @@
-Someone walks in a left bend.#Someone/PRON walk/VERB in/ADP a/DET left/ADJ bend/NOUN#0.0#0.0
-A human is performing a 90° turn after doing a forward step#A/DET human/NOUN is/AUX perform/VERB a/DET turn/VERB after/ADP do/VERB a/DET forward/ADJ step/NOUN#0.0#0.0
-A person walks forward in a 90° curve.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET curve/NOUN#0.0#0.0

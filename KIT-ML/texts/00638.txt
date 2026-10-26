@@ -1,3 +1,0 @@
-Someone walks forward very fast.#Someone/PRON walk/VERB forward/ADV very/ADV fast/ADV#0.0#0.0
-A person walks fast forward.#A/DET person/NOUN walk/VERB fast/ADV forward/ADV#0.0#0.0
-Somebody walks without stable posture.#Somebody/PRON walk/VERB without/ADP stable/ADJ posture/NOUN#0.0#0.0

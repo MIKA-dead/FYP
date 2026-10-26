@@ -1,3 +1,0 @@
-During walking, a human is pushed.#During/ADP walking/NOUN a/DET human/NOUN is/AUX push/VERB#0.0#0.0
-Someone is beeing pushed from the back while walking forward.#Someone/PRON is/AUX beee/VERB push/VERB from/ADP the/DET back/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0
-A person stumbling forward#A/DET person/NOUN stumble/VERB forward/ADV#0.0#0.0

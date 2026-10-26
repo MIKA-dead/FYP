@@ -1,1 +1,0 @@
-A person doing a one handed flic flac with a full turn.#A/DET person/NOUN do/VERB a/DET one/NUM handed/ADJ flic/ADJ flac/NOUN with/ADP a/DET full/ADJ turn/NOUN#0.0#0.0

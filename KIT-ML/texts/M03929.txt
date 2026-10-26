@@ -1,1 +1,0 @@
-A person stands still.#A/DET person/NOUN stand/VERB still/ADV#0.0#0.0

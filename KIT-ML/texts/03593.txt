@@ -1,1 +1,0 @@
-A person walks straight forward, then turns around 180 degrees and walks back again.#A/DET person/NOUN walk/VERB straight/ADV forward/ADV then/ADV turn/VERB around/ADV degree/NOUN and/CCONJ walk/VERB back/ADV again/ADV#0.0#0.0

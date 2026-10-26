@@ -1,1 +1,0 @@
-A person walking in a circle to the left.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0

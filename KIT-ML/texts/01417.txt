@@ -1,2 +1,0 @@
-A person raises both hands to shoulder level, elbows bent then bounces/punches down with his right hand before lowering both hands.#A/DET person/NOUN raise/VERB both/DET hand/NOUN to/PART shoulder/NOUN level/NOUN elbow/NOUN bent/ADJ then/ADV bounce/VERB punch/NOUN down/ADP with/ADP his/DET right/ADJ hand/NOUN before/ADP lower/VERB both/DET hand/NOUN#0.0#0.0
-A person plays the guitar.#A/DET person/NOUN play/VERB the/DET guitar/NOUN#0.0#0.0

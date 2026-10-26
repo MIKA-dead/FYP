@@ -1,1 +1,0 @@
-A person jumps up and trurns 360° around himself before landing.#A/DET person/NOUN jump/VERB up/ADP and/CCONJ trurn/VERB around/ADP himself/PRON before/ADP land/VERB#0.0#0.0

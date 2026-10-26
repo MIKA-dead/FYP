@@ -1,3 +1,0 @@
-Subject walks backwards.#Subject/ADJ walk/VERB backwards/ADV#0.0#0.0
-A person takes 4 steps backwards starting with right.#A/DET person/NOUN take/VERB step/NOUN backwards/ADV start/VERB with/ADP right/NOUN#0.0#0.0
-A person walks some steps backwards#A/DET person/NOUN walk/VERB some/DET step/NOUN backwards/ADV#0.0#0.0

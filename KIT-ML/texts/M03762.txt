@@ -1,1 +1,0 @@
-A human walks forward, sits down on the floor with its legs parallel to the floor and then performs some kind of streching movement#A/DET human/NOUN walk/VERB forward/ADV sit/VERB down/ADP on/ADP the/DET floor/NOUN with/ADP its/DET leg/NOUN parallel/ADJ to/ADP the/DET floor/NOUN and/CCONJ then/ADV perform/VERB some/DET kind/NOUN of/ADP streche/VERB movement/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-Someone plays on a violin.#Someone/PRON play/VERB on/ADP a/DET violin/NOUN#0.0#0.0
-A human performs playing a violin with its right hand.#A/DET human/ADJ perform/VERB play/VERB a/DET violin/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

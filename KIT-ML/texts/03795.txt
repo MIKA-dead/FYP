@@ -1,1 +1,0 @@
-A person jumps approximately 50 centimeters forward.#A/DET person/NOUN jump/VERB approximately/ADV centimeter/NOUN forward/ADV#0.0#0.0

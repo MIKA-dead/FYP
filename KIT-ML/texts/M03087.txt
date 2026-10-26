@@ -1,1 +1,0 @@
-A person puts headphones up on his head and listens to music.#A/DET person/NOUN put/VERB headphone/NOUN up/ADP on/ADP his/DET head/NOUN and/CCONJ listen/VERB to/ADP music/NOUN#0.0#0.0

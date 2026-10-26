@@ -1,3 +1,0 @@
-human runs a few steps forward#human/ADJ run/VERB a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0
-An initially standing person takes a few running steps forward.#An/DET initially/ADV stand/VERB person/NOUN take/VERB a/DET few/ADJ run/VERB step/NOUN forward/ADV#0.0#0.0
-A person runs a few meter#A/DET person/NOUN run/VERB a/DET few/ADJ meter/NOUN#0.0#0.0

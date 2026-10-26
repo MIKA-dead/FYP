@@ -1,1 +1,0 @@
-A human walks in an ellipse.#A/DET human/ADJ walk/VERB in/ADP an/DET ellipse/NOUN#0.0#0.0

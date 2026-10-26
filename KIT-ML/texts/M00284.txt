@@ -1,3 +1,0 @@
-Subject walks in a circle clockwise.#Subject/ADJ walk/VERB in/ADP a/DET circle/NOUN clockwise/NOUN#0.0#0.0
-A human walks in a circle to its right.#A/DET human/ADJ walk/VERB in/ADP a/DET circle/NOUN to/ADP its/DET right/NOUN#0.0#0.0
-A person is walking a full circle to the right.#A/DET person/NOUN is/AUX walk/VERB a/DET full/ADJ circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0

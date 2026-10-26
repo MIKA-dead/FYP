@@ -1,4 +1,0 @@
-A person sprints forward.#A/DET person/NOUN sprint/VERB forward/ADV#0.0#0.0
-a person is running forward.#a/DET person/NOUN is/AUX run/VERB forward/ADV#0.0#0.0
-A person is running.#A/DET person/NOUN is/AUX run/VERB#0.0#0.0
-Somebody is running#Somebody/PRON is/AUX run/VERB#0.0#0.0

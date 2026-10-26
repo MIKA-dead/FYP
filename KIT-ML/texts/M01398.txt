@@ -1,2 +1,0 @@
-A person waves forward with the right hand.#A/DET person/NOUN wave/VERB forward/ADV with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-A human waves with its right hand.#A/DET human/ADJ wave/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

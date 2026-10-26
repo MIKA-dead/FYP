@@ -1,2 +1,0 @@
-a person is playing the guitar#a/DET person/NOUN is/AUX play/VERB the/DET guitar/NOUN#0.0#0.0
-Someone plays guitar with his right hand.#Someone/PRON play/VERB guitar/NOUN with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

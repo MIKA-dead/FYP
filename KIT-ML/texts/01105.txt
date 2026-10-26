@@ -1,7 +1,0 @@
-A person performs a step to the right and recovers to the original position.#A/DET person/NOUN perform/VERB a/DET step/NOUN to/ADP the/DET right/NOUN and/CCONJ recover/NOUN to/ADP the/DET original/ADJ position/NOUN#0.0#0.0
-Someone jumps to the right and then takes two steps to get to their original position.#Someone/PRON jump/VERB to/ADP the/DET right/NOUN and/CCONJ then/ADV take/VERB two/NUM step/NOUN to/PART get/AUX to/ADP their/DET original/ADJ position/NOUN#0.0#0.0
-A Person stumbling to the right.#A/DET person/NOUN stumble/VERB to/ADP the/DET right/NOUN#0.0#0.0
-Someone steps to the right and back to the left again.#Someone/PRON step/VERB to/ADP the/DET right/NOUN and/CCONJ back/ADV to/ADP the/DET left/NOUN again/ADV#0.0#0.0
-small step to the right then back in position#small/ADJ step/NOUN to/ADP the/DET right/NOUN then/ADV back/ADV in/ADP position/NOUN#0.0#0.0
-A person makes a sidestep to the right and then a second step back to the origin position#A/DET person/NOUN make/VERB a/DET sidestep/NOUN to/ADP the/DET right/NOUN and/CCONJ then/ADV a/DET second/ADJ step/NOUN back/ADV to/ADP the/DET origin/NOUN position/NOUN#0.0#0.0
-A person is first walking sideways to the right then back to the initial position#A/DET person/NOUN is/AUX first/ADV walk/VERB sideways/ADV to/ADP the/DET right/NOUN then/ADV back/ADV to/ADP the/DET initial/ADJ position/NOUN#0.0#0.0

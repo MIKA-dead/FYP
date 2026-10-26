@@ -1,3 +1,0 @@
-A erson walks in a quarter circle.#A/DET erson/PROPN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN#0.0#0.0
-a person walks to the right performing a quater circle#a/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN perform/VERB a/DET quater/NOUN circle/NOUN#0.0#0.0
-A person walks in a 90° curve to his right.#A/DET person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP his/DET right/NOUN#0.0#0.0

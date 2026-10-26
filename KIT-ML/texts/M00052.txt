@@ -1,2 +1,0 @@
-the person is walking backwards#the/DET person/NOUN is/AUX walk/VERB backwards/ADV#0.0#0.0
-a person walks some steps backwards#a/DET person/NOUN walk/VERB some/DET step/NOUN backwards/ADV#0.0#0.0

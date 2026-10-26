@@ -1,6 +1,0 @@
-Subject running fast.#Subject/ADJ run/VERB fast/ADV#0.0#0.0
-A person runs a few meters forward#A/DET person/NOUN run/VERB a/DET few/ADJ meter/NOUN forward/ADV#0.0#0.0
-A person running forward.#A/DET person/NOUN run/VERB forward/ADV#0.0#0.0
-A person runs.#A/DET person/NOUN run/VERB#0.0#0.0
-someone is running.#someone/PRON is/AUX run/VERB#0.0#0.0
-a human is running#a/DET human/NOUN is/AUX run/VERB#0.0#0.0

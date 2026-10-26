@@ -1,1 +1,0 @@
-A human rides a skateboard, stops and rides again.#A/DET human/NOUN ride/NOUN a/DET skateboard/NOUN stop/NOUN and/CCONJ ride/NOUN again/ADV#0.0#0.0

@@ -1,1 +1,0 @@
-A human walks and balances on a ball.#A/DET human/ADJ walk/NOUN and/CCONJ balance/NOUN on/ADP a/DET ball/NOUN#0.0#0.0

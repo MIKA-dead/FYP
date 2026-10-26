@@ -1,2 +1,0 @@
-a person stand and then starts to walk forward#a/DET person/NOUN stand/VERB and/CCONJ then/ADV start/VERB to/PART walk/VERB forward/ADV#0.0#0.0
-Someone strolls for four steps.#Someone/PRON stroll/VERB for/ADP four/NUM step/NOUN#0.0#0.0

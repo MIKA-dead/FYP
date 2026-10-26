@@ -1,1 +1,0 @@
-A person is slowing down from running.#A/DET person/NOUN is/AUX slow/VERB down/ADP from/ADP run/VERB#0.0#0.0

@@ -1,1 +1,0 @@
-A person walks straight forwards and then walks to the left.#A/DET person/NOUN walk/VERB straight/ADJ forwards/ADV and/CCONJ then/ADV walk/VERB to/ADP the/DET left/NOUN#0.0#0.0

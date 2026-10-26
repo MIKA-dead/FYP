@@ -1,1 +1,0 @@
-A human staggers a few yards and then staggers back to his original position#A/DET human/ADJ stagger/NOUN a/DET few/ADJ yard/NOUN and/CCONJ then/ADV stagger/VERB back/ADV to/ADP his/DET original/ADJ position/NOUN#0.0#0.0

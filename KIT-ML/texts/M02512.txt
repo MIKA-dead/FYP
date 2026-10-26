@@ -1,1 +1,0 @@
-A person lays flat on their belly, gets up and stoops.#A/DET person/NOUN lay/VERB flat/ADJ on/ADP their/DET belly/NOUN get/VERB up/ADV and/CCONJ stoop/NOUN#0.0#0.0

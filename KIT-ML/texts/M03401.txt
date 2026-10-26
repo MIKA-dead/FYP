@@ -1,1 +1,0 @@
-A human walks three steps, stops and repeats three times. Then turns around and walks back to start.#A/DET human/NOUN walk/VERB three/NUM step/NOUN stop/VERB and/CCONJ repeat/VERB three/NUM time/NOUN Then/ADV turn/VERB around/ADP and/CCONJ walk/VERB back/ADV to/PART start/VERB#0.0#0.0

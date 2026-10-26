@@ -1,1 +1,0 @@
-A person is running very fast and slightly to the right.#A/DET person/NOUN is/AUX run/VERB very/ADV fast/ADV and/CCONJ slightly/ADV to/ADP the/DET right/NOUN#0.0#0.0

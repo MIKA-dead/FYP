@@ -1,3 +1,0 @@
-A person dances one part of a couple dance.#A/DET person/NOUN dance/VERB one/NUM part/NOUN of/ADP a/DET couple/NOUN dance/NOUN#0.0#0.0
-A human performs 5 times the steps of a waltz dance while it is holding its hands like it is leading a partner with its hands.#A/DET human/ADJ perform/VERB time/NOUN the/DET step/NOUN of/ADP a/DET waltz/NOUN dance/NOUN while/SCONJ it/PRON is/AUX hold/VERB its/DET hand/NOUN like/SCONJ it/PRON is/AUX lead/VERB a/DET partner/NOUN with/ADP its/DET hand/NOUN#0.0#0.0
-Somebody balances something in a small area.#Somebody/PRON balance/VERB something/PRON in/ADP a/DET small/ADJ area/NOUN#0.0#0.0

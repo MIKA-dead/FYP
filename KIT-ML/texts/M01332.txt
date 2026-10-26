@@ -1,2 +1,0 @@
-A person jumps to the right.#A/DET person/NOUN jump/VERB to/ADP the/DET right/NOUN#0.0#0.0
-The human perfoms a jump to the right#The/DET human/ADJ perfom/NOUN a/DET jump/NOUN to/ADP the/DET right/NOUN#0.0#0.0

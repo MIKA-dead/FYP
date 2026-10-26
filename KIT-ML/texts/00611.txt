@@ -1,3 +1,0 @@
-human performs a high kick with right leg#human/ADJ perform/VERB a/DET high/ADJ kick/NOUN with/ADP right/ADJ leg/NOUN#0.0#0.0
-A human performs a front kick to the head with the right foot#A/DET human/NOUN perform/VERB a/DET front/ADJ kick/NOUN to/ADP the/DET head/NOUN with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
-a person kicks something in front of it with its right foot#a/DET person/NOUN kick/VERB something/PRON in/ADP front/NOUN of/ADP it/PRON with/ADP its/DET right/ADJ foot/NOUN#0.0#0.0

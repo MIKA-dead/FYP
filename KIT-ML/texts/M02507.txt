@@ -1,1 +1,0 @@
-A human walks and searches something on the ground.#A/DET human/ADJ walk/NOUN and/CCONJ search/VERB something/PRON on/ADP the/DET ground/NOUN#0.0#0.0

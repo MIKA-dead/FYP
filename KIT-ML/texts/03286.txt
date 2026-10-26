@@ -1,1 +1,0 @@
-A person jumps 180° counterclockwise.#A/DET person/NOUN jump/VERB counterclockwise/NOUN#0.0#0.0

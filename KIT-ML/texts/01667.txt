@@ -1,2 +1,0 @@
-A person walks forward then tu rns around by his left side and walks forward again.#A/DET person/NOUN walk/VERB forward/ADV then/ADV tu/X rns/PROPN around/ADP by/ADP his/DET left/ADJ side/NOUN and/CCONJ walk/VERB forward/ADV again/ADV#0.0#0.0
-A person walks two steps forward, turns around and walks back to the starting point.#A/DET person/NOUN walk/VERB two/NUM step/NOUN forward/ADV turn/VERB around/ADV and/CCONJ walk/VERB back/ADV to/ADP the/DET starting/NOUN point/NOUN#0.0#0.0

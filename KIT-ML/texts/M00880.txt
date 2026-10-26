@@ -1,2 +1,0 @@
-A person walks 2 steps forward, turns 180 degrees on the right foot and walks again 2 steps forward.#A/DET person/NOUN walk/VERB step/NOUN forward/ADV turn/VERB degree/NOUN on/ADP the/DET right/ADJ foot/NOUN and/CCONJ walk/VERB again/ADV step/NOUN forward/ADV#0.0#0.0
-A human takes a few steps forward, turns 180 degrees right on his right foot and walks back#A/DET human/NOUN take/VERB a/DET few/ADJ step/NOUN forward/ADV turn/VERB degree/NOUN right/ADJ on/ADP his/DET right/ADJ foot/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0

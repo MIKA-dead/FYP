@@ -1,5 +1,0 @@
-A clumsy or intoxicated person takes one step forward and stops to balance themselves.#A/DET clumsy/ADJ or/CCONJ intoxicate/VERB person/NOUN take/VERB one/NUM step/NOUN forward/ADV and/CCONJ stop/VERB to/PART balance/VERB themselves/PRON#0.0#0.0
-Subject takes one step forward with right foot.#subject/NOUN take/VERB one/NUM step/NOUN forward/ADV with/ADP right/ADJ foot/NOUN#0.0#0.0
-A human is pushed from the bak#A/DET human/NOUN is/AUX push/VERB from/ADP the/DET bak/NOUN#0.0#0.0
-a person gets a little bit pushed from the back#a/DET person/NOUN get/VERB a/DET little/ADJ bit/NOUN push/VERB from/ADP the/DET back/NOUN#0.0#0.0
-A human gets a gentle puch in the back and trips on step forward.#A/DET human/NOUN get/VERB a/DET gentle/ADJ puch/NOUN in/ADP the/DET back/NOUN and/CCONJ trip/NOUN on/ADP step/NOUN forward/ADV#0.0#0.0

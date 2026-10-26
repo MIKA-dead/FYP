@@ -1,1 +1,0 @@
-Person walks in a circle#person/NOUN walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0

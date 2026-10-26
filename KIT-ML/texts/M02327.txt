@@ -1,1 +1,0 @@
-The human subject performs a hopping walk.#The/DET human/ADJ subject/NOUN perform/VERB a/DET hopping/NOUN walk/NOUN#0.0#0.0

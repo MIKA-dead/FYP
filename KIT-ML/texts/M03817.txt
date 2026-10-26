@@ -1,1 +1,0 @@
-A person is walking slowly and strongly bent over forward while repeatedly dragging his arms to his hip.#A/DET person/NOUN is/AUX walk/VERB slowly/ADV and/CCONJ strongly/ADV bent/ADJ over/ADP forward/ADV while/SCONJ repeatedly/ADV drag/VERB his/DET arm/NOUN to/ADP his/DET hip/NOUN#0.0#0.0

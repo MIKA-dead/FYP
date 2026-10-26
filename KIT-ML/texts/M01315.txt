@@ -1,3 +1,0 @@
-A human raises their right foot and touches it with the left hand.#A/DET human/NOUN raise/VERB their/DET right/ADJ foot/NOUN and/CCONJ touch/VERB it/PRON with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
-a person is stomping with the right foot on the ground#a/DET person/NOUN is/AUX stomp/VERB with/ADP the/DET right/ADJ foot/NOUN on/ADP the/DET ground/NOUN#0.0#0.0
-a person stomps his right foot#a/DET person/NOUN stomp/VERB his/DET right/ADJ foot/NOUN#0.0#0.0

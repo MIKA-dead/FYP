@@ -1,4 +1,0 @@
-Someone is walking.#Someone/PRON is/AUX walk/VERB#0.0#0.0
-Someone is walking forward 4 steps starting with the left leg.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0
-a person walks forward quite slow#a/DET person/NOUN walk/VERB forward/ADV quite/ADV slow/ADJ#0.0#0.0
-Somebody walks lazy#Somebody/PRON walk/VERB lazy/ADJ#0.0#0.0

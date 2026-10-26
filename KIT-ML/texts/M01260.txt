@@ -1,4 +1,0 @@
-Subject throws with its right hand.#Subject/ADJ throw/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
-A person throws an object with the right hand.#A/DET person/NOUN throw/VERB an/DET object/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-A person is throwing something.#A/DET person/NOUN is/AUX throw/VERB something/PRON#0.0#0.0
-Throwing something with the right hand.#throw/VERB something/PRON with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

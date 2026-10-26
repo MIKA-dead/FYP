@@ -1,2 +1,0 @@
-A person walks in a counterclockwise circle.#A/DET person/NOUN walk/VERB in/ADP a/DET counterclockwise/ADJ circle/NOUN#0.0#0.0
-A human performs a full 360° curve to the left, ending where it started#A/DET human/ADJ perform/VERB a/DET full/ADJ curve/NOUN to/ADP the/DET left/NOUN end/VERB where/ADV it/PRON start/VERB#0.0#0.0

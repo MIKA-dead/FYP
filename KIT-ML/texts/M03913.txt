@@ -1,1 +1,0 @@
-A human is swimming#A/DET human/NOUN is/AUX swimming/NOUN#0.0#0.0

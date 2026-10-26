@@ -1,2 +1,0 @@
-A person walks forward at slow pace.#A/DET person/NOUN walk/VERB forward/ADV at/ADP slow/ADJ pace/NOUN#0.0#0.0
-a person walks forward very slow#a/DET person/NOUN walk/VERB forward/ADV very/ADV slow/ADJ#0.0#0.0

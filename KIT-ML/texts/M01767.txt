@@ -1,2 +1,0 @@
-A person walks forward and is pushed very gently from the behind#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB very/ADV gently/ADV from/ADP the/DET behind/NOUN#0.0#0.0
-A person walks forward, is pushed forward on the back and stumbles forward.#A/DET person/NOUN walk/VERB forward/ADV is/AUX push/VERB forward/ADV on/ADP the/DET back/NOUN and/CCONJ stumble/NOUN forward/ADV#0.0#0.0

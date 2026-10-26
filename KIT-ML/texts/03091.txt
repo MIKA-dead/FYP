@@ -1,1 +1,0 @@
-A man shaved off his mustache in front of a mirror#A/DET man/NOUN shave/VERB off/ADP his/DET mustache/NOUN in/ADP front/NOUN of/ADP a/DET mirror/NOUN#0.0#0.0

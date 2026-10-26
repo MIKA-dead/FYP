@@ -1,1 +1,0 @@
-A human performs gestures displaying frustration.#A/DET human/ADJ perform/VERB gesture/VERB display/VERB frustration/NOUN#0.0#0.0

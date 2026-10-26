@@ -1,1 +1,0 @@
-A person jumps approximately a meter forward with both feet.#A/DET person/NOUN jump/VERB approximately/ADV a/DET meter/NOUN forward/ADV with/ADP both/DET foot/NOUN#0.0#0.0

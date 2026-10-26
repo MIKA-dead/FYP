@@ -1,1 +1,0 @@
-A person walks forwards slowly.#A/DET person/NOUN walk/VERB forwards/ADV slowly/ADV#0.0#0.0

@@ -1,2 +1,0 @@
-A person stirs something#A/DET person/NOUN stir/VERB something/PRON#0.0#0.0
-Someone stirs with the right hand#Someone/PRON stir/VERB with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

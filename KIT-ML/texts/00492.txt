@@ -1,2 +1,0 @@
-A person walking in a curve to the left#A/DET person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-A person is slowly walking a quarter circle in five steps#A/DET person/NOUN is/AUX slowly/ADV walk/VERB a/DET quarter/NOUN circle/NOUN in/ADP five/NUM step/NOUN#0.0#0.0

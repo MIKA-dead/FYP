@@ -1,2 +1,0 @@
-A person plays golf.#A/DET person/NOUN play/VERB golf/NOUN#0.0#0.0
-a person plays golf#a/DET person/NOUN play/VERB golf/NOUN#0.0#0.0

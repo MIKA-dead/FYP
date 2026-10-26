@@ -1,2 +1,0 @@
-A person knees down with hand support#A/DET person/NOUN knee/VERB down/ADP with/ADP hand/NOUN support/NOUN#0.0#0.0
-Someone is kneeling down.#Someone/PRON is/AUX kneel/VERB down/ADP#0.0#0.0

@@ -1,3 +1,0 @@
-the person is first walking forward and then making u turn#the/DET person/NOUN is/AUX first/ADV walk/VERB forward/ADV and/CCONJ then/ADV make/VERB u/PRON turn/VERB#0.0#0.0
-A person turns on his left foot.#A/DET person/NOUN turn/VERB on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0
-a person walks forward takes a 180 degree turn to the left and keeps on walking#a/DET person/NOUN walk/VERB forward/ADV take/VERB a/DET degree/NOUN turn/NOUN to/ADP the/DET left/NOUN and/CCONJ keep/VERB on/ADP walk/VERB#0.0#0.0

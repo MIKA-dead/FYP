@@ -1,1 +1,0 @@
-A person is shuffling forward, making a jump into the air and continues shuffling forward.#A/DET person/NOUN is/AUX shuffle/VERB forward/ADV make/VERB a/DET jump/NOUN into/ADP the/DET air/NOUN and/CCONJ continue/VERB shuffle/VERB forward/ADV#0.0#0.0

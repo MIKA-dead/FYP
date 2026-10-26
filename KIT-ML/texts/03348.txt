@@ -1,1 +1,0 @@
-A person is doing a backward roll.#A/DET person/NOUN is/AUX do/VERB a/DET backward/ADJ roll/NOUN#0.0#0.0

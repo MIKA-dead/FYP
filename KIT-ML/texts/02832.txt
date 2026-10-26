@@ -1,1 +1,0 @@
-Someone walks one step forward, bends forward and uses his right hand to touch his left hand four times.#Someone/PRON walk/VERB one/NUM step/NOUN forward/ADV bend/VERB forward/ADV and/CCONJ use/VERB his/DET right/ADJ hand/NOUN to/PART touch/VERB his/DET left/ADJ hand/NOUN four/NUM time/NOUN#0.0#0.0

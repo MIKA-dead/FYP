@@ -1,5 +1,0 @@
-A person is playing golf.#A/DET person/NOUN is/AUX play/VERB golf/NOUN#0.0#0.0
-A person is golfing.#A/DET person/NOUN is/AUX golf/VERB#0.0#0.0
-A human performs a hit with a mingolf club and swings the club in front of its body from the left to the right.#A/DET human/NOUN perform/VERB a/DET hit/NOUN with/ADP a/DET mingolf/NOUN club/NOUN and/CCONJ swing/VERB the/DET club/NOUN in/ADP front/NOUN of/ADP its/DET body/NOUN from/ADP the/DET left/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-a person plays golf with its left hand#a/DET person/NOUN play/VERB golf/NOUN with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
-A person is performing a golf strike.#A/DET person/NOUN is/AUX perform/VERB a/DET golf/NOUN strike/NOUN#0.0#0.0

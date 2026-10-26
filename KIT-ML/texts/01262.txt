@@ -1,3 +1,0 @@
-human takes a bow#human/PROPN take/VERB a/DET bow/NOUN#0.0#0.0
-A human bows.#A/DET human/ADJ bow/NOUN#0.0#0.0
-A person bows.#A/DET person/NOUN bow/VERB#0.0#0.0

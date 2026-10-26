@@ -1,1 +1,0 @@
-A human walks backwards with a stoop.#A/DET human/NOUN walk/VERB backwards/ADV with/ADP a/DET stoop/NOUN#0.0#0.0

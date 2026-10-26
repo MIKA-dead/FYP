@@ -1,1 +1,0 @@
-A person jumping with both feet.#A/DET person/NOUN jump/VERB with/ADP both/DET foot/NOUN#0.0#0.0

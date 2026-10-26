@@ -1,2 +1,0 @@
-A person is walking listlessly#A/DET person/NOUN is/AUX walk/VERB listlessly/ADV#0.0#0.0
-A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0

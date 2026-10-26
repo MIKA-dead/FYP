@@ -1,2 +1,0 @@
-A person turns around a corner towards the right.#A/DET person/NOUN turn/VERB around/ADP a/DET corner/NOUN towards/ADP the/DET right/NOUN#0.0#0.0
-A person walks a 90 degree curve to the right.#A/DET person/NOUN walk/VERB a/DET degree/NOUN curve/NOUN to/ADP the/DET right/NOUN#0.0#0.0

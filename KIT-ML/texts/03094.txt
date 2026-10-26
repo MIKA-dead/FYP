@@ -1,1 +1,0 @@
-A person gets an arrow out of their quiver on the back, draws a bow and shoots.#A/DET person/NOUN get/VERB an/DET arrow/NOUN out/SCONJ of/ADP their/DET quiver/NOUN on/ADP the/DET back/NOUN draw/VERB a/DET bow/NOUN and/CCONJ shoot/NOUN#0.0#0.0

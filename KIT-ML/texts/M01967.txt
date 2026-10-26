@@ -1,3 +1,0 @@
-A human is running and stops.#A/DET human/NOUN is/AUX run/VERB and/CCONJ stop/NOUN#0.0#0.0
-A human runs a few steps, relatively slow.#A/DET human/NOUN run/VERB a/DET few/ADJ step/NOUN relatively/ADV slow/ADJ#0.0#0.0
-A person jogging forward in a straight line#A/DET person/NOUN jog/VERB forward/ADV in/ADP a/DET straight/ADJ line/NOUN#0.0#0.0

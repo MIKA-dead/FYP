@@ -1,3 +1,0 @@
-A person walks slowly 4 steps forward.#A/DET person/NOUN walk/VERB slowly/ADV step/NOUN forward/ADV#0.0#0.0
-A person walks slowly four steps forward.#A/DET person/NOUN walk/VERB slowly/ADV four/NUM step/NOUN forward/ADV#0.0#0.0
-A human is walking slowly putting the right foot directly in front of the left foot. Moving slightly to the left side.#A/DET human/NOUN is/AUX walk/VERB slowly/ADV put/VERB the/DET right/ADJ foot/NOUN directly/ADV in/ADP front/NOUN of/ADP the/DET left/ADJ foot/NOUN move/VERB slightly/ADV to/ADP the/DET left/ADJ side/NOUN#0.0#0.0

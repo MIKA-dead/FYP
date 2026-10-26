@@ -1,3 +1,0 @@
-A person walks slowly to the forward direction.#A/DET person/NOUN walk/VERB slowly/ADV to/ADP the/DET forward/ADJ direction/NOUN#0.0#0.0
-A person walks slowly forward.#A/DET person/NOUN walk/VERB slowly/ADV forward/ADV#0.0#0.0
-A person walks slowly.#A/DET person/NOUN walk/VERB slowly/ADV#0.0#0.0

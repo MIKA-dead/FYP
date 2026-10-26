@@ -1,2 +1,0 @@
-A person turns left.#A/DET person/NOUN turn/VERB left/VERB#0.0#0.0
-someone left something on the ground when he walks  a corner.#someone/PRON left/VERB something/PRON on/ADP the/DET ground/NOUN when/ADV he/PRON walk/VERB a/DET corner/NOUN#0.0#0.0

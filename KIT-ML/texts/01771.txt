@@ -1,3 +1,0 @@
-A person stumbles while walking forwards in a straight line.#A/DET person/NOUN stumble/VERB while/SCONJ walk/VERB forwards/ADV in/ADP a/DET straight/ADJ line/NOUN#0.0#0.0
-Someone walks forward and get pushed from behind#Someone/PRON walk/VERB forward/ADV and/CCONJ get/AUX push/VERB from/ADP behind/ADV#0.0#0.0
-A person is being pushed while walking#A/DET person/NOUN is/AUX being/AUX push/VERB while/SCONJ walk/VERB#0.0#0.0

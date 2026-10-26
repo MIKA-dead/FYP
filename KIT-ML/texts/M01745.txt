@@ -1,5 +1,0 @@
-A person is pushed from left.#A/DET person/NOUN is/AUX push/VERB from/ADP left/VERB#0.0#0.0
-A person walks 2 steps forward, 2 to the right side and 3 diagonally to the left forward, all the time facing the same direction.#A/DET person/NOUN walk/VERB step/NOUN forward/ADV to/ADP the/DET right/ADJ side/NOUN and/CCONJ diagonally/ADV to/ADP the/DET left/NOUN forward/ADV all/DET the/DET time/NOUN face/VERB the/DET same/ADJ direction/NOUN#0.0#0.0
-A human walks forward and is slightly shoved from the left while walking#A/DET human/NOUN walk/VERB forward/ADV and/CCONJ is/AUX slightly/ADV shove/VERB from/ADP the/DET left/NOUN while/SCONJ walk/VERB#0.0#0.0
-A person walks forward but is pushed to the right and the goes back on track again#A/DET person/NOUN walk/VERB forward/ADV but/CCONJ is/AUX push/VERB to/ADP the/DET right/NOUN and/CCONJ the/DET go/NOUN back/ADV on/ADP track/NOUN again/ADV#0.0#0.0
-human is pushed from its left hand side while walking#human/PROPN is/AUX push/VERB from/ADP its/DET left/ADJ hand/NOUN side/NOUN while/SCONJ walk/VERB#0.0#0.0

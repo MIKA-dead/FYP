@@ -1,1 +1,0 @@
-A person sneaking while crouched.#A/DET person/NOUN sneak/VERB while/SCONJ crouched/ADJ#0.0#0.0

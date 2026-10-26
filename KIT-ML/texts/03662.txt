@@ -1,1 +1,0 @@
-A person is slowly walking and turning in right angles.#A/DET person/NOUN is/AUX slowly/ADV walk/VERB and/CCONJ turn/VERB in/ADP right/ADJ angle/NOUN#0.0#0.0

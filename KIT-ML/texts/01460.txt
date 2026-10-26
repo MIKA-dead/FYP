@@ -1,4 +1,0 @@
-A human starts to play violin#A/DET human/NOUN start/VERB to/PART play/VERB violin/NOUN#0.0#0.0
-human plays the violin#human/PROPN play/VERB the/DET violin/NOUN#0.0#0.0
-The human is playing a violin#The/DET human/NOUN is/AUX play/VERB a/DET violin/NOUN#0.0#0.0
-Somebody sands something#Somebody/PRON sand/VERB something/PRON#0.0#0.0

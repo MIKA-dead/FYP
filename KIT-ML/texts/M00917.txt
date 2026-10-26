@@ -1,1 +1,0 @@
-human runs forward starting with left#human/ADJ run/NOUN forward/ADV start/VERB with/ADP left/ADJ#0.0#0.0

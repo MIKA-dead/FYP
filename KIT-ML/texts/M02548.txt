@@ -1,1 +1,0 @@
-A person is doing cartwheels back and forth.#A/DET person/NOUN is/AUX do/VERB cartwheel/NOUN back/ADV and/CCONJ forth/ADV#0.0#0.0

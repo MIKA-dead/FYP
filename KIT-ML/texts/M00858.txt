@@ -1,3 +1,0 @@
-Someone walks a quarter of a circle right.#Someone/PRON walk/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN right/NOUN#0.0#0.0
-A person walks in a 90° curve to his right#A/DET person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP his/DET right/NOUN#0.0#0.0
-a person walks to the right#a/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN#0.0#0.0

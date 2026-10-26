@@ -1,3 +1,0 @@
-A person walks 4 steps in the forward direction.#A/DET person/NOUN walk/VERB step/NOUN in/ADP the/DET forward/ADJ direction/NOUN#0.0#0.0
-The person walks four steps.#The/DET person/NOUN walk/VERB four/NUM step/NOUN#0.0#0.0
-A person is walking forward.#A/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0

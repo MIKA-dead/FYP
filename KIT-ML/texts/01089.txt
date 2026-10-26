@@ -1,4 +1,0 @@
-the person makes a u turn while walking forward#the/DET person/NOUN make/VERB a/DET u/NOUN turn/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0
-A human performs a tight 180° turn on the right foot while balancing with the right arm#A/DET human/NOUN perform/VERB a/DET tight/ADJ turn/VERB on/ADP the/DET right/ADJ foot/NOUN while/SCONJ balance/VERB with/ADP the/DET right/ADJ arm/NOUN#0.0#0.0
-a person walks forward and after a few steps turn 180 degrees to the right and does a few more steps#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ after/ADP a/DET few/ADJ step/NOUN turn/VERB degree/NOUN to/ADP the/DET right/NOUN and/CCONJ does/AUX a/DET few/ADJ more/ADJ step/NOUN#0.0#0.0
-Somebody turns swinging around clockwise.#Somebody/PRON turn/VERB swinge/VERB around/ADP clockwise/NOUN#0.0#0.0

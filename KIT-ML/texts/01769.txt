@@ -1,3 +1,0 @@
-a person stands and then walks a few steps forward#a/DET person/NOUN stand/VERB and/CCONJ then/ADV walk/VERB a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0
-A person makes two steps forward, stumbles and continues to move forward.#A/DET person/NOUN make/VERB two/NUM step/NOUN forward/ADV stumble/NOUN and/CCONJ continue/VERB to/PART move/VERB forward/ADV#0.0#0.0
-A person stumbles forward.#A/DET person/NOUN stumble/VERB forward/ADV#0.0#0.0

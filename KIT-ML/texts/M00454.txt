@@ -1,3 +1,0 @@
-a person starts sprinting and stops again.#a/DET person/NOUN start/VERB sprinting/NOUN and/CCONJ stop/VERB again/ADV#0.0#0.0
-A person is running.#A/DET person/NOUN is/AUX run/VERB#0.0#0.0
-human runs forward#human/ADJ run/NOUN forward/ADV#0.0#0.0

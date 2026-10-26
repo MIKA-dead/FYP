@@ -1,3 +1,0 @@
-Someone walks three steps in curve to the right#Someone/PRON walk/VERB three/NUM step/NOUN in/ADP curve/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A person walks a small half circle.#A/DET person/NOUN walk/VERB a/DET small/ADJ half/NOUN circle/NOUN#0.0#0.0
-Somebody walks a quarter circle in clockwise direction#Somebody/PRON walk/VERB a/DET quarter/NOUN circle/NOUN in/ADP clockwise/ADJ direction/NOUN#0.0#0.0

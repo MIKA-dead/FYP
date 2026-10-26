@@ -1,6 +1,0 @@
-A persons walks backward with medium speed.#A/DET person/NOUN walk/VERB backward/ADV with/ADP medium/ADJ speed/NOUN#0.0#0.0
-Someone is walking backwards starting with the right leg.#Someone/PRON is/AUX walk/VERB backwards/ADV start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
-a person walds backwards some steps#a/DET person/NOUN wald/VERB backwards/ADV some/DET step/NOUN#0.0#0.0
-Walking backwards for a few steps.#walk/VERB backwards/ADV for/ADP a/DET few/ADJ step/NOUN#0.0#0.0
-A person walks backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
-A person walks backwards for five steps.#A/DET person/NOUN walk/VERB backwards/ADV for/ADP five/NUM step/NOUN#0.0#0.0

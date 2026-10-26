@@ -1,2 +1,0 @@
-A persons performs a 180° turn.#A/DET person/NOUN perform/VERB a/DET turn/NOUN#0.0#0.0
-human performs a turn to its left side#human/ADJ perform/VERB a/DET turn/NOUN to/ADP its/DET left/ADJ side/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person walks while punching the air with his right hand one time.#A/DET person/NOUN walk/VERB while/SCONJ punch/VERB the/DET air/NOUN with/ADP his/DET right/ADJ hand/NOUN one/NUM time/NOUN#0.0#0.0

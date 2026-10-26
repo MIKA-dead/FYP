@@ -1,2 +1,0 @@
-A person walks to the left.#A/DET person/NOUN walk/VERB to/ADP the/DET left/NOUN#0.0#0.0
-A human walks in a circle#A/DET human/ADJ walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0

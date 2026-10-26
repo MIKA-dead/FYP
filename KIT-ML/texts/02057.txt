@@ -1,4 +1,0 @@
-A person does a T pose and then goes down on the knees#A/DET person/NOUN does/AUX a/DET t/NOUN pose/NOUN and/CCONJ then/ADV go/VERB down/ADP on/ADP the/DET knee/NOUN#0.0#0.0
-A person kneels down on the floor with the left hand as support.#A/DET person/NOUN kneel/VERB down/ADP on/ADP the/DET floor/NOUN with/ADP the/DET left/ADJ hand/NOUN as/SCONJ support/NOUN#0.0#0.0
-a person raises his arms like wings and then goes down to its knees#a/DET person/NOUN raise/VERB his/DET arm/NOUN like/SCONJ wing/NOUN and/CCONJ then/ADV go/VERB down/ADP to/ADP its/DET knee/NOUN#0.0#0.0
-Someone opens wide his arms and then kneels on the floor.#Someone/PRON open/VERB wide/ADJ his/DET arm/NOUN and/CCONJ then/ADV kneel/VERB on/ADP the/DET floor/NOUN#0.0#0.0

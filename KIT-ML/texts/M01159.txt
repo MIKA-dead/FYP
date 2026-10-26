@@ -1,3 +1,0 @@
-A person makes a sharp turn.#A/DET person/NOUN make/VERB a/DET sharp/ADJ turn/NOUN#0.0#0.0
-A person turns 180 degrees on his right foot.#A/DET person/NOUN turn/VERB degree/NOUN on/ADP his/DET right/ADJ foot/NOUN#0.0#0.0
-A person takes two steps forwards, turns around on one foot and takes another zwo steps.#A/DET person/NOUN take/VERB two/NUM step/NOUN forwards/ADV turn/VERB around/ADV on/ADP one/NUM foot/NOUN and/CCONJ take/VERB another/DET zwo/PROPN step/NOUN#0.0#0.0

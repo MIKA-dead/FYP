@@ -1,5 +1,0 @@
-A person walks two steps forwards, rotates to their left 180 degrees into the opposite direction and continues walking for two steps then stops.#A/DET person/NOUN walk/VERB two/NUM step/NOUN forwards/ADV rotate/VERB to/ADP their/DET left/ADJ degree/NOUN into/ADP the/DET opposite/ADJ direction/NOUN and/CCONJ continue/VERB walk/VERB for/ADP two/NUM step/NOUN then/ADV stop/VERB#0.0#0.0
-Someone walks forward and turn 180 degree and walks forward#Someone/PRON walk/VERB forward/ADV and/CCONJ turn/VERB degree/NOUN and/CCONJ walk/VERB forward/ADV#0.0#0.0
-a person walks forward takes a 180 degree turn to the left and walks some more steps#a/DET person/NOUN walk/VERB forward/ADV take/VERB a/DET degree/NOUN turn/NOUN to/ADP the/DET left/NOUN and/CCONJ walk/VERB some/DET more/ADJ step/NOUN#0.0#0.0
-The human perfoms a couple of steps turn around and walks back to starting point#The/DET human/ADJ perfom/NOUN a/DET couple/NOUN of/ADP step/NOUN turn/VERB around/ADP and/CCONJ walk/VERB back/ADV to/ADP starting/NOUN point/NOUN#0.0#0.0
-A person makes a sharp turn.#A/DET person/NOUN make/VERB a/DET sharp/ADJ turn/NOUN#0.0#0.0

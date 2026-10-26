@@ -1,2 +1,0 @@
-I person is doing a spot turn on his right leg.#I/PRON person/NOUN is/AUX do/VERB a/DET spot/NOUN turn/NOUN on/ADP his/DET right/ADJ leg/NOUN#0.0#0.0
-A human walks forward a few steps, turns 180 degrees right on his right foot and walks back#A/DET human/NOUN walk/VERB forward/ADV a/DET few/ADJ step/NOUN turn/VERB degree/NOUN right/ADJ on/ADP his/DET right/ADJ foot/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0

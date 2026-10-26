@@ -1,3 +1,0 @@
-a person sprints and stops#a/DET person/NOUN sprint/NOUN and/CCONJ stop/NOUN#0.0#0.0
-A person walking fast forward.#A/DET person/NOUN walk/VERB fast/ADV forward/ADV#0.0#0.0
-a person walks forward quite fast#a/DET person/NOUN walk/VERB forward/ADV quite/ADV fast/ADV#0.0#0.0

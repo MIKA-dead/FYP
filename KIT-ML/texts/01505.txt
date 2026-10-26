@@ -1,3 +1,0 @@
-the person is performing a circular motion with the left hand#the/DET person/NOUN is/AUX perform/VERB a/DET circular/ADJ motion/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
-A person is wiping something with his left hand.#A/DET person/NOUN is/AUX wipe/VERB something/PRON with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
-A person wipes an object with his left arm.#A/DET person/NOUN wipe/VERB an/DET object/NOUN with/ADP his/DET left/ADJ arm/NOUN#0.0#0.0

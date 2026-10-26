@@ -1,2 +1,0 @@
-A person stumbles backwards.#A/DET person/NOUN stumble/VERB backwards/ADV#0.0#0.0
-A person taking a step back#A/DET person/NOUN take/VERB a/DET step/NOUN back/ADV#0.0#0.0

@@ -1,5 +1,0 @@
-A person is walking backwards#A/DET person/NOUN is/AUX walk/VERB backwards/ADV#0.0#0.0
-A person walks backward#A/DET person/NOUN walk/VERB backward/ADV#0.0#0.0
-Someone walks backwards 4 steps starting with the left leg.#Someone/PRON walk/VERB backwards/ADV step/NOUN start/VERB with/ADP the/DET left/ADJ leg/NOUN#0.0#0.0
-The human perfoms a couple of steps backwards#The/DET human/ADJ perfom/NOUN a/DET couple/NOUN of/ADP step/NOUN backwards/ADV#0.0#0.0
-human goes backwards at medium velocity#human/ADJ go/VERB backwards/ADV at/ADP medium/ADJ velocity/NOUN#0.0#0.0

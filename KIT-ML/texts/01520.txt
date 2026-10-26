@@ -1,1 +1,0 @@
-A person wipes clockwise on a flat surface.#A/DET person/NOUN wipe/NOUN clockwise/VERB on/ADP a/DET flat/ADJ surface/NOUN#0.0#0.0

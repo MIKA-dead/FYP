@@ -1,4 +1,0 @@
-A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
-Person walking forwards#person/NOUN walk/VERB forwards/ADV#0.0#0.0
-A person makes 5 steps forward.#A/DET person/NOUN make/VERB step/NOUN forward/ADV#0.0#0.0
-a person walks forwards and stops after a few meters#a/DET person/NOUN walk/VERB forwards/ADJ and/CCONJ stop/NOUN after/ADP a/DET few/ADJ meter/NOUN#0.0#0.0

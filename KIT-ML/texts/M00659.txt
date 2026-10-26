@@ -1,1 +1,0 @@
-A person waves his left hand.#A/DET person/NOUN wave/VERB his/DET left/ADJ hand/NOUN#0.0#0.0

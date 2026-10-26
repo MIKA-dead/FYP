@@ -1,1 +1,0 @@
-A person sits on a high chair, walks a bit around and sits again#A/DET person/NOUN sit/VERB on/ADP a/DET high/ADJ chair/NOUN walk/VERB a/DET bit/NOUN around/ADV and/CCONJ sit/VERB again/ADV#0.0#0.0

@@ -1,1 +1,0 @@
-A human makes a throwing gesture with the left hand.#A/DET human/NOUN make/VERB a/DET throwing/NOUN gesture/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0

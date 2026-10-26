@@ -1,1 +1,0 @@
-A human stands up from a kneeling position.#A/DET human/NOUN stand/VERB up/ADP from/ADP a/DET kneeling/NOUN position/NOUN#0.0#0.0

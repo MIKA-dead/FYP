@@ -1,4 +1,0 @@
-a person performs a throwing motion with his left arm#a/DET person/NOUN perform/VERB a/DET throwing/NOUN motion/NOUN with/ADP his/DET left/ADJ arm/NOUN#0.0#0.0
-A human throws something#A/DET human/ADJ throw/NOUN something/PRON#0.0#0.0
-A human throws something away with its left hand.#A/DET human/ADJ throw/NOUN something/PRON away/ADV with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
-a person throws something with its left hand#a/DET person/NOUN throw/VERB something/PRON with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

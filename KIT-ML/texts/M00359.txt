@@ -1,2 +1,0 @@
-A person walks a quarter of a circle clockwise.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN of/ADP a/DET circle/NOUN clockwise/NOUN#0.0#0.0
-a human walks a quarter to the right#a/DET human/NOUN walk/VERB a/DET quarter/NOUN to/ADP the/DET right/NOUN#0.0#0.0

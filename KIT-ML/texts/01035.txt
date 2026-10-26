@@ -1,2 +1,0 @@
-A person makes four steps forward starting with the right foot.#A/DET person/NOUN make/VERB four/NUM step/NOUN forward/ADV start/VERB with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
-A person walking forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0

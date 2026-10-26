@@ -1,1 +1,0 @@
-A person moves crabwise to his left and back.#A/DET person/NOUN move/VERB crabwise/NOUN to/ADP his/DET left/NOUN and/CCONJ back/ADV#0.0#0.0

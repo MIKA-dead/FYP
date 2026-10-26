@@ -1,1 +1,0 @@
-A person is running.#A/DET person/NOUN is/AUX run/VERB#0.0#0.0

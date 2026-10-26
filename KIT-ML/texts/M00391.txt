@@ -1,4 +1,0 @@
-a person walks backwards#a/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
-a person walks backward#a/DET person/NOUN walk/VERB backward/ADV#0.0#0.0
-A person walks backwards#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
-human goes backwards#human/ADJ go/VERB backwards/ADV#0.0#0.0

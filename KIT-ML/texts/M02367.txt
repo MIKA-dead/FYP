@@ -1,1 +1,0 @@
-A person is shuffling forward then taking a turn to the left.#A/DET person/NOUN is/AUX shuffle/VERB forward/ADV then/ADV take/VERB a/DET turn/NOUN to/ADP the/DET left/NOUN#0.0#0.0

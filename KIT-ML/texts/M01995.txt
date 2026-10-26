@@ -1,2 +1,0 @@
-A person is walking forward then making a sharp turn.#A/DET person/NOUN is/AUX walk/VERB forward/ADV then/ADV make/VERB a/DET sharp/ADJ turn/NOUN#0.0#0.0
-a person walks a few steps forward then turns left 180 degrees and walks some more steps#a/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN forward/ADV then/ADV turn/VERB left/VERB degree/NOUN and/CCONJ walk/VERB some/DET more/ADJ step/NOUN#0.0#0.0

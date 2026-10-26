@@ -1,7 +1,0 @@
-human kicks something#human/ADJ kick/NOUN something/PRON#0.0#0.0
-A person performs a kick with their left leg.#A/DET person/NOUN perform/VERB a/DET kick/NOUN with/ADP their/DET left/ADJ leg/NOUN#0.0#0.0
-A person performs a kick with their left foot after taking a step forward with their right foot.#A/DET person/NOUN perform/VERB a/DET kick/NOUN with/ADP their/DET left/ADJ foot/NOUN after/ADP take/VERB a/DET step/NOUN forward/ADV with/ADP their/DET right/ADJ foot/NOUN#0.0#0.0
-A person performs a front kick.#A/DET person/NOUN perform/VERB a/DET front/ADJ kick/NOUN#0.0#0.0
-A human steps forward, holds its hands like it is protecting its face and makes a low kick with the sole of foot with its left foot.#A/DET human/ADJ step/NOUN forward/ADV hold/VERB its/DET hand/NOUN like/SCONJ it/PRON is/AUX protect/VERB its/DET face/NOUN and/CCONJ make/VERB a/DET low/ADJ kick/NOUN with/ADP the/DET sole/NOUN of/ADP foot/NOUN with/ADP its/DET left/ADJ foot/NOUN#0.0#0.0
-A person performing a left kick#A/DET person/NOUN perform/VERB a/DET left/ADJ kick/NOUN#0.0#0.0
-Somebody hits something with his left foot.#Somebody/PRON hit/VERB something/PRON with/ADP his/DET left/ADJ foot/NOUN#0.0#0.0

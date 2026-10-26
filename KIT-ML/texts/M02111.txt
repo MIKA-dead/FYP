@@ -1,3 +1,0 @@
-A human kneels down on the floor.#A/DET human/ADJ kneel/VERB down/ADP on/ADP the/DET floor/NOUN#0.0#0.0
-A person gets down on the knees.#A/DET person/NOUN get/VERB down/ADV on/ADP the/DET knee/NOUN#0.0#0.0
-a person gets to his knees while supported on his hands and then assumes an upleft posture#a/DET person/NOUN get/VERB to/ADP his/DET knee/NOUN while/SCONJ support/VERB on/ADP his/DET hand/NOUN and/CCONJ then/ADV assume/VERB an/DET upleft/ADJ posture/NOUN#0.0#0.0

@@ -1,4 +1,0 @@
-the person is quickly moving to the front little bit#the/DET person/NOUN is/AUX quickly/ADV move/VERB to/ADP the/DET front/ADJ little/ADJ bit/NOUN#0.0#0.0
-A human gets a gentle puch in the back and trips 2 steps forward.#A/DET human/NOUN get/VERB a/DET gentle/ADJ puch/NOUN in/ADP the/DET back/NOUN and/CCONJ trip/VERB step/NOUN forward/ADV#0.0#0.0
-A person is taking two quick steps forward.#A/DET person/NOUN is/AUX take/VERB two/NUM quick/ADJ step/NOUN forward/ADV#0.0#0.0
-A person quickly steps forward a few steps and then stops.#A/DET person/NOUN quickly/ADV step/VERB forward/ADV a/DET few/ADJ step/NOUN and/CCONJ then/ADV stop/VERB#0.0#0.0

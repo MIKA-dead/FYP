@@ -1,3 +1,0 @@
-A person walks forward at slow speed.#A/DET person/NOUN walk/VERB forward/ADV at/ADP slow/ADJ speed/NOUN#0.0#0.0
-Starting with the right leg someone is doing 6 steps forward very slowly.#start/VERB with/ADP the/DET right/ADJ leg/NOUN someone/PRON is/AUX do/VERB step/NOUN forward/ADV very/ADV slowly/ADV#0.0#0.0
-a man is walking carefully#a/DET man/NOUN is/AUX walk/VERB carefully/ADV#0.0#0.0

@@ -1,4 +1,0 @@
-A person performs a kicking motion.#A/DET person/NOUN perform/VERB a/DET kick/VERB motion/NOUN#0.0#0.0
-A person kicking something in front of him on the floor.#A/DET person/NOUN kick/VERB something/PRON in/ADP front/NOUN of/ADP him/PRON on/ADP the/DET floor/NOUN#0.0#0.0
-A human turns to the left and  makes a low kick with its right foot.#A/DET human/NOUN turn/VERB to/ADP the/DET left/NOUN and/CCONJ make/VERB a/DET low/ADJ kick/NOUN with/ADP its/DET right/ADJ foot/NOUN#0.0#0.0
-a human gives a sidekick into something#a/DET human/NOUN give/VERB a/DET sidekick/NOUN into/ADP something/PRON#0.0#0.0

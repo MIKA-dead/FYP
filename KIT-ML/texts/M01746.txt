@@ -1,3 +1,0 @@
-A person walks straight ahead and receives a slight push from the right.#A/DET person/NOUN walk/VERB straight/ADV ahead/ADV and/CCONJ receive/VERB a/DET slight/ADJ push/NOUN from/ADP the/DET right/NOUN#0.0#0.0
-a person walks forward and gets pushed to the left#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ get/VERB push/VERB to/ADP the/DET left/NOUN#0.0#0.0
-A human jumps to the left while walking#A/DET human/ADJ jump/NOUN to/ADP the/DET left/ADJ while/SCONJ walk/VERB#0.0#0.0

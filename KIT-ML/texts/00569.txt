@@ -1,2 +1,0 @@
-Some walks a distance of quarter of a circle to the right.#Some/DET walk/VERB a/DET distance/NOUN of/ADP quarter/NOUN of/ADP a/DET circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-Someone walks in a quater circle to the right.#Someone/PRON walk/VERB in/ADP a/DET quater/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0

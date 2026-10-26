@@ -1,1 +1,0 @@
-A person steps forwards then turns around and steps forwards again.#A/DET person/NOUN step/VERB forwards/ADJ then/ADV turn/VERB around/ADV and/CCONJ step/NOUN forwards/ADV again/ADV#0.0#0.0

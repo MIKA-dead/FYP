@@ -1,5 +1,0 @@
-A person plays the violin#A/DET person/NOUN play/VERB the/DET violin/NOUN#0.0#0.0
-Someone plays violin#Someone/PRON play/VERB violin/NOUN#0.0#0.0
-A person playing the violin holding it with his left arm and playing it with his right.#A/DET person/NOUN play/VERB the/DET violin/NOUN hold/VERB it/PRON with/ADP his/DET left/ADJ arm/NOUN and/CCONJ play/VERB it/PRON with/ADP his/DET right/NOUN#0.0#0.0
-A person performs arm motions as if playing the violin, holding it on the left side.#A/DET person/NOUN perform/VERB arm/NOUN motion/NOUN as/SCONJ if/SCONJ play/VERB the/DET violin/NOUN hold/VERB it/PRON on/ADP the/DET left/ADJ side/NOUN#0.0#0.0
-A person plays guitar#A/DET person/NOUN play/VERB guitar/NOUN#0.0#0.0

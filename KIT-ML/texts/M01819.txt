@@ -1,4 +1,0 @@
-A person stands and is pushed backwards#A/DET person/NOUN stand/VERB and/CCONJ is/AUX push/VERB backwards/ADV#0.0#0.0
-A person makes a small step to the rear.#A/DET person/NOUN make/VERB a/DET small/ADJ step/NOUN to/ADP the/DET rear/NOUN#0.0#0.0
-A human is being pushed on the left shoulder and does a sidestep to the right back side.#A/DET human/NOUN is/AUX being/AUX push/VERB on/ADP the/DET left/ADJ shoulder/NOUN and/CCONJ does/AUX a/DET sidestep/NOUN to/ADP the/DET right/ADJ back/ADJ side/NOUN#0.0#0.0
-A person lunges backwards to the right, as if he was pushed.#A/DET person/NOUN lunge/VERB backwards/ADV to/ADP the/DET right/NOUN as/SCONJ if/SCONJ he/PRON was/AUX push/VERB#0.0#0.0

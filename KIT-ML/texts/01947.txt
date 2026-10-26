@@ -1,2 +1,0 @@
-A human being pushed#A/DET human/ADJ being/NOUN push/VERB#0.0#0.0
-The human perfoms a step backwards#The/DET human/ADJ perfom/NOUN a/DET step/NOUN backwards/ADV#0.0#0.0

@@ -1,2 +1,0 @@
-the person is dancing#the/DET person/NOUN is/AUX dance/VERB#0.0#0.0
-a human is practicing waltz steps#a/DET human/NOUN is/AUX practice/VERB waltz/NOUN step/NOUN#0.0#0.0

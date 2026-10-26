@@ -1,5 +1,0 @@
-A person walks backwards#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
-Someone walks backward#Someone/PRON walk/VERB backward/ADV#0.0#0.0
-A human walks 3 bigger and 1 smaller steps backwards and is starting with its right foot.#A/DET human/NOUN walk/VERB bigger/ADJ and/CCONJ smaller/ADJ step/NOUN backwards/ADV and/CCONJ is/AUX start/VERB with/ADP its/DET right/ADJ foot/NOUN#0.0#0.0
-A person walks backwards.#A/DET person/NOUN walk/VERB backwards/ADV#0.0#0.0
-somebody walks slowly backwards.#somebody/PRON walk/VERB slowly/ADV backwards/ADV#0.0#0.0

@@ -1,1 +1,0 @@
-A person walks a quarter circle counter clockwise with 4 steps.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN counter/NOUN clockwise/NOUN with/ADP step/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person is walking up to sit on something, sits there for a short while and then stands up again and walks away.#A/DET person/NOUN is/AUX walk/VERB up/ADP to/PART sit/VERB on/ADP something/PRON sit/VERB there/ADV for/ADP a/DET short/ADJ while/NOUN and/CCONJ then/ADV stand/VERB up/ADP again/ADV and/CCONJ walk/VERB away/ADV#0.0#0.0

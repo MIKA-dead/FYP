@@ -1,2 +1,0 @@
-A human walks forward two steps, pivots 180 degrees, and walks two steps back to where they started.#A/DET human/NOUN walk/VERB forward/ADV two/NUM step/NOUN pivot/VERB degree/NOUN and/CCONJ walk/VERB two/NUM step/NOUN back/ADV to/ADP where/ADV they/PRON start/VERB#0.0#0.0
-human slowly goes forward, turns around partway, and goes back to the starting position#human/PROPN slowly/ADV go/VERB forward/ADV turn/VERB around/ADP partway/NOUN and/CCONJ go/VERB back/ADV to/ADP the/DET starting/NOUN position/NOUN#0.0#0.0

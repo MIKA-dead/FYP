@@ -1,2 +1,0 @@
-a person walks forward slowly, takes a few quick steps back and walks again forwards#a/DET person/NOUN walk/VERB forward/ADV slowly/ADV take/VERB a/DET few/ADJ quick/ADJ step/NOUN back/ADV and/CCONJ walk/VERB again/ADV forwards/ADP#0.0#0.0
-a person walks forwards gets pushed back and keeps on walking forwards#a/DET person/NOUN walk/VERB forwards/ADJ get/VERB push/VERB back/ADV and/CCONJ keep/VERB on/ADP walk/VERB forwards/ADV#0.0#0.0

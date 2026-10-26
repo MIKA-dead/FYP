@@ -1,1 +1,0 @@
-A person is walking sidewards to the right and the same way back to the left.#A/DET person/NOUN is/AUX walk/VERB sideward/NOUN to/ADP the/DET right/NOUN and/CCONJ the/DET same/ADJ way/NOUN back/ADV to/ADP the/DET left/NOUN#0.0#0.0

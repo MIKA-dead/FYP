@@ -1,7 +1,0 @@
-Person jumping forwards#person/NOUN jumping/NOUN forwards/ADV#0.0#0.0
-Someone jumps forward with both feed#Someone/PRON jump/VERB forward/ADV with/ADP both/DET feed/NOUN#0.0#0.0
-A person jumps with both legs approximately 20 centimeters forward.#A/DET person/NOUN jump/VERB with/ADP both/DET leg/NOUN approximately/ADV centimeter/NOUN forward/ADV#0.0#0.0
-A human performs a two legged hop to the front#A/DET human/NOUN perform/VERB a/DET two/NUM legged/ADJ hop/NOUN to/ADP the/DET front/NOUN#0.0#0.0
-a person jumps about 30cm to the front#a/DET person/NOUN jump/VERB about/ADV cm/NOUN to/ADP the/DET front/NOUN#0.0#0.0
-A person jumps approximatly 50cm forward.#A/DET person/NOUN jump/VERB approximatly/ADV cm/NOUN forward/ADV#0.0#0.0
-A person jumps forwards with both feet.#A/DET person/NOUN jump/VERB forwards/ADJ with/ADP both/DET foot/NOUN#0.0#0.0

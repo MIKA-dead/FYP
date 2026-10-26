@@ -1,1 +1,0 @@
-A person is jumping forward and doing a 90 degree twist.#A/DET person/NOUN is/AUX jump/VERB forward/ADV and/CCONJ do/VERB a/DET degree/NOUN twist/NOUN#0.0#0.0

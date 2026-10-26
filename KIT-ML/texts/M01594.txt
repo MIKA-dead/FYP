@@ -1,2 +1,0 @@
-A human walks forward while looking down.#A/DET human/NOUN walk/VERB forward/ADV while/SCONJ look/VERB down/ADV#0.0#0.0
-human goes downstairs#human/ADJ go/VERB downstairs/ADV#0.0#0.0

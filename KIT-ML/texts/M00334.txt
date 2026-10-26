@@ -1,5 +1,0 @@
-Someone is walking backwards four steps.#Someone/PRON is/AUX walk/VERB backwards/ADV four/NUM step/NOUN#0.0#0.0
-Someone does 4 steps backward starting with the right leg.#Someone/PRON does/AUX step/NOUN backward/ADV start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0
-A human is walking backwards#A/DET human/NOUN is/AUX walk/VERB backwards/ADV#0.0#0.0
-A person walks 4 steps backwards.#A/DET person/NOUN walk/VERB step/NOUN backwards/ADV#0.0#0.0
-A human is walking backwards#A/DET human/NOUN is/AUX walk/VERB backwards/ADV#0.0#0.0

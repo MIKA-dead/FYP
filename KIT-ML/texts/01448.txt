@@ -1,3 +1,0 @@
-A human playing a guitar#A/DET human/ADJ play/VERB a/DET guitar/NOUN#0.0#0.0
-A person plays an instrument.#A/DET person/NOUN play/VERB an/DET instrument/NOUN#0.0#0.0
-Somebody knocks with his left hand on something he is holding in his right hand.#Somebody/PRON knock/VERB with/ADP his/DET left/ADJ hand/NOUN on/ADP something/PRON he/PRON is/AUX hold/VERB in/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

@@ -1,5 +1,0 @@
-Person is playing guitar#person/NOUN is/AUX play/VERB guitar/NOUN#0.0#0.0
-a persons holds something with its right hand touches it along with its left hand#a/DET person/NOUN hold/VERB something/PRON with/ADP its/DET right/ADJ hand/NOUN touch/VERB it/PRON along/ADP with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
-The human is playing guitar#The/DET human/NOUN is/AUX play/VERB guitar/NOUN#0.0#0.0
-human performs a motion which resembles playing guitar left-handed#human/PROPN perform/VERB a/DET motion/NOUN which/DET resemble/VERB play/VERB guitar/NOUN lefthande/VERB#0.0#0.0
-Somebody knocks something with his left hand on something he is holding with his right hand.#Somebody/PRON knock/VERB something/PRON with/ADP his/DET left/ADJ hand/NOUN on/ADP something/PRON he/PRON is/AUX hold/VERB with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

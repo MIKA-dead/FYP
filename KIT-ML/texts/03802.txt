@@ -1,1 +1,0 @@
-human jumps forward#human/ADJ jump/VERB forward/ADV#0.0#0.0

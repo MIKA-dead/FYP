@@ -1,1 +1,0 @@
-a person opens a bottle and drinks#a/DET person/NOUN open/VERB a/DET bottle/NOUN and/CCONJ drink/NOUN#0.0#0.0

@@ -1,3 +1,0 @@
-Person wishing something with the right hand#person/NOUN wish/VERB something/PRON with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-Someone moves the right hand in a circular path#Someone/PRON move/VERB the/DET right/ADJ hand/NOUN in/ADP a/DET circular/ADJ path/NOUN#0.0#0.0
-A human wipes a table with his right hand#A/DET human/ADJ wipe/NOUN a/DET table/NOUN with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

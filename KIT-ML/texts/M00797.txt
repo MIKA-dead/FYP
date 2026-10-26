@@ -1,2 +1,0 @@
-A person walking in a curve to the right.#A/DET person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-a person walks a right turn of 90 degrees#a/DET person/NOUN walk/VERB a/DET right/ADJ turn/NOUN of/ADP degree/NOUN#0.0#0.0

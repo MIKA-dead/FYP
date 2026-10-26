@@ -1,6 +1,0 @@
-Somesone walks forward and makes a U-turn#somesone/NOUN walk/VERB forward/ADV and/CCONJ make/VERB a/DET Uturn/PROPN#0.0#0.0
-A human is performing a tight 180° curve on the right foot#A/DET human/NOUN is/AUX perform/VERB a/DET tight/ADJ curve/NOUN on/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
-a person walks forward takes a 180 degree turn to the right and walks some more steps#a/DET person/NOUN walk/VERB forward/ADV take/VERB a/DET degree/NOUN turn/NOUN to/ADP the/DET right/NOUN and/CCONJ walk/VERB some/DET more/ADJ step/NOUN#0.0#0.0
-A person turns around while walking#A/DET person/NOUN turn/VERB around/ADP while/SCONJ walk/VERB#0.0#0.0
-A person turns with his right foot.#A/DET person/NOUN turn/VERB with/ADP his/DET right/ADJ foot/NOUN#0.0#0.0
-human goes forward and turns around partway#human/PROPN go/VERB forward/ADV and/CCONJ turn/VERB around/ADP partway/NOUN#0.0#0.0

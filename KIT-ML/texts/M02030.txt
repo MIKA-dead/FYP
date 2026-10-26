@@ -1,9 +1,0 @@
-walk turn and walk back#walk/VERB turn/VERB and/CCONJ walk/VERB back/ADV#0.0#0.0
-Someone walks forward two steps and then turns around the left side and performs another two steps.#Someone/PRON walk/VERB forward/ADV two/NUM step/NOUN and/CCONJ then/ADV turn/VERB around/ADP the/DET left/ADJ side/NOUN and/CCONJ perform/VERB another/DET two/NUM step/NOUN#0.0#0.0
-An intially standing person takes two steps forward, turns around and walks two steps back to the inital position.#An/DET intially/ADV stand/VERB person/NOUN take/VERB two/NUM step/NOUN forward/ADV turn/VERB around/ADV and/CCONJ walk/VERB two/NUM step/NOUN back/ADV to/ADP the/DET inital/ADJ position/NOUN#0.0#0.0
-a person does a u-turn while walking#a/DET person/NOUN does/AUX a/DET uturn/NOUN while/SCONJ walk/VERB#0.0#0.0
-a person walks forwards a few steps then turns 180 degrees to the left on its left foot and keeps walking#a/DET person/NOUN walk/VERB forwards/ADV a/DET few/ADJ step/NOUN then/ADV turn/VERB degree/NOUN to/ADP the/DET left/NOUN on/ADP its/DET left/ADJ foot/NOUN and/CCONJ keep/VERB walk/VERB#0.0#0.0
-A person turns on his left foot.#A/DET person/NOUN turn/VERB on/ADP his/DET left/ADJ foot/NOUN#0.0#0.0
-A person walks 2 steps forward before turning 90° to his left and then walks 2 steps forward in the opposite direction#A/DET person/NOUN walk/VERB step/NOUN forward/ADV before/ADP turn/VERB to/ADP his/DET left/NOUN and/CCONJ then/ADV walk/VERB step/NOUN forward/ADV in/ADP the/DET opposite/ADJ direction/NOUN#0.0#0.0
-human performs a turn to the left while walking#human/ADJ perform/VERB a/DET turn/NOUN to/ADP the/DET left/ADJ while/SCONJ walk/VERB#0.0#0.0
-Someone walks forward, then quickly turns around and walks back.#Someone/PRON walk/VERB forward/ADV then/ADV quickly/ADV turn/VERB around/ADV and/CCONJ walk/VERB back/ADV#0.0#0.0

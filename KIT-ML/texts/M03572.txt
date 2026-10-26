@@ -1,1 +1,0 @@
-A human  is walking in a circle#A/DET human/ADJ is/AUX walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0

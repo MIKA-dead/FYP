@@ -1,1 +1,0 @@
-A person makes punch moves with his right hand like fencing.#A/DET person/NOUN make/VERB punch/VERB move/NOUN with/ADP his/DET right/ADJ hand/NOUN like/SCONJ fence/VERB#0.0#0.0

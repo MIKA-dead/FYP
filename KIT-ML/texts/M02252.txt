@@ -1,1 +1,0 @@
-A person sprints.#A/DET person/NOUN sprint/NOUN#0.0#0.0

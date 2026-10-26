@@ -1,3 +1,0 @@
-During walking forwards a person is pushed from the backside.#During/ADP walking/NOUN forwards/ADV a/DET person/NOUN is/AUX push/VERB from/ADP the/DET backside/NOUN#0.0#0.0
-a person walks forward and gets pushed from behind#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ get/VERB push/VERB from/ADP behind/ADV#0.0#0.0
-A person looks like he got shoved from behind while walking forward stands still after stumbling.#A/DET person/NOUN look/VERB like/SCONJ he/PRON get/VERB shove/VERB from/ADP behind/ADV while/SCONJ walk/VERB forward/ADV stand/VERB still/ADV after/ADP stumble/VERB#0.0#0.0

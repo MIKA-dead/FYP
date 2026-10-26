@@ -1,9 +1,0 @@
-The human walks a 90-degree right bend.#The/DET human/NOUN walk/VERB a/DET right/ADJ bend/NOUN#0.0#0.0
-A person walking to the right.#A/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN#0.0#0.0
-A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
-someone is walking half a round to his right side#someone/PRON is/AUX walk/VERB half/DET a/DET round/NOUN to/ADP his/DET right/ADJ side/NOUN#0.0#0.0
-A person walks and turns to the right#A/DET person/NOUN walk/VERB and/CCONJ turn/VERB to/ADP the/DET right/NOUN#0.0#0.0
-A person walks a quarter circle with a radius of approximately 1 meter to the right.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN with/ADP a/DET radius/NOUN of/ADP approximately/ADV meter/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-a person walks to the right in a quater circle#a/DET person/NOUN walk/VERB to/ADP the/DET right/NOUN in/ADP a/DET quater/NOUN circle/NOUN#0.0#0.0
-A person walking forward in a 90° curve.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET curve/NOUN#0.0#0.0
-The human perfoms a right turn#The/DET human/ADJ perfom/NOUN a/DET right/ADJ turn/NOUN#0.0#0.0

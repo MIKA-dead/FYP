@@ -1,1 +1,0 @@
-A person had opened a bottle of drink, then poured the drink into a cup and drank.#A/DET person/NOUN had/AUX open/VERB a/DET bottle/NOUN of/ADP drink/NOUN then/ADV pour/VERB the/DET drink/NOUN into/ADP a/DET cup/NOUN and/CCONJ drank/VERB#0.0#0.0

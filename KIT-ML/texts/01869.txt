@@ -1,3 +1,0 @@
-A human walks into an obstacle.#A/DET human/NOUN walk/VERB into/ADP an/DET obstacle/NOUN#0.0#0.0
-A human walks forward a few steps and is then shoved back from somebody in front of him#A/DET human/NOUN walk/VERB forward/ADV a/DET few/ADJ step/NOUN and/CCONJ is/AUX then/ADV shove/VERB back/ADV from/ADP somebody/PRON in/ADP front/NOUN of/ADP him/PRON#0.0#0.0
-A person hits an obstacle while moving forward.#A/DET person/NOUN hit/VERB an/DET obstacle/NOUN while/SCONJ move/VERB forward/ADV#0.0#0.0

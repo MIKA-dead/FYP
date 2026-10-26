@@ -1,5 +1,0 @@
-Someone sprints forwards#Someone/PRON sprint/NOUN forwards/ADV#0.0#0.0
-A human runs 4 steps forward in a fast speed.#A/DET human/NOUN run/VERB step/NOUN forward/ADV in/ADP a/DET fast/ADJ speed/NOUN#0.0#0.0
-A person is running forward.#A/DET person/NOUN is/AUX run/VERB forward/ADV#0.0#0.0
-a person runs forwards#a/DET person/NOUN run/VERB forwards/ADV#0.0#0.0
-A person walks fast.#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0

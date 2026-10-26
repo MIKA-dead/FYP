@@ -1,1 +1,0 @@
-A person jumps forward.#A/DET person/NOUN jump/VERB forward/ADV#0.0#0.0

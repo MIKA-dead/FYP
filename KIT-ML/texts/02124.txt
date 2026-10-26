@@ -1,1 +1,0 @@
-A person jumps in the air and walks forward.#A/DET person/NOUN jump/VERB in/ADP the/DET air/NOUN and/CCONJ walk/VERB forward/ADV#0.0#0.0

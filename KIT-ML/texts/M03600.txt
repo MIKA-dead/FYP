@@ -1,1 +1,0 @@
-A human walks up and down on a line with her head up.#A/DET human/NOUN walk/VERB up/ADV and/CCONJ down/ADV on/ADP a/DET line/NOUN with/ADP her/DET head/NOUN up/ADP#0.0#0.0

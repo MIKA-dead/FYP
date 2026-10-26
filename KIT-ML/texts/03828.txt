@@ -1,1 +1,0 @@
-A person steps on a step to the right in front of him.#A/DET person/NOUN step/VERB on/ADP a/DET step/NOUN to/ADP the/DET right/NOUN in/ADP front/NOUN of/ADP him/PRON#0.0#0.0

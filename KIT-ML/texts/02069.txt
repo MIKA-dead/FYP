@@ -1,2 +1,0 @@
-Subject starts on its knees and stands up.#Subject/ADJ start/VERB on/ADP its/DET knee/NOUN and/CCONJ stand/VERB up/ADP#0.0#0.0
-A person stands up#A/DET person/NOUN stand/VERB up/ADP#0.0#0.0

@@ -1,2 +1,0 @@
-A person walks forward and turns to the left.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
-Somebody walks a quarter circle anticlockwise.#Somebody/PRON walk/VERB a/DET quarter/NOUN circle/NOUN anticlockwise/NOUN#0.0#0.0

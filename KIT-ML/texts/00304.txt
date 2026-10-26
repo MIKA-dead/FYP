@@ -1,3 +1,0 @@
-A person walks forward while turning to the left#A/DET person/NOUN walk/VERB forward/ADV while/SCONJ turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
-A person walks a quater circle to the left in five forward steps.#A/DET person/NOUN walk/VERB a/DET quater/NOUN circle/NOUN to/ADP the/DET left/NOUN in/ADP five/NUM forward/ADJ step/NOUN#0.0#0.0
-The human perfoms a left turn#The/DET human/ADJ perfom/NOUN a/DET left/ADJ turn/NOUN#0.0#0.0

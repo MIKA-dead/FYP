@@ -1,3 +1,0 @@
-the person is running#the/DET person/NOUN is/AUX run/VERB#0.0#0.0
-A person sprints#A/DET person/NOUN sprint/VERB#0.0#0.0
-a person jogs forwards#a/DET person/NOUN jog/VERB forwards/ADV#0.0#0.0

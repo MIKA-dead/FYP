@@ -1,4 +1,0 @@
-Person boxing with the right hand#person/NOUN box/VERB with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-A person performs a punch with their right hand#A/DET person/NOUN perform/VERB a/DET punch/NOUN with/ADP their/DET right/ADJ hand/NOUN#0.0#0.0
-A person is boxing with his right hand.#A/DET person/NOUN is/AUX box/VERB with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0
-A person punches forward with his right hand.#A/DET person/NOUN punch/VERB forward/ADV with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0

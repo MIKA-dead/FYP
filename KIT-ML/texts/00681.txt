@@ -1,5 +1,0 @@
-Person standing and then walking a few steps#person/NOUN stand/VERB and/CCONJ then/ADV walk/VERB a/DET few/ADJ step/NOUN#0.0#0.0
-Someone walks forward#Someone/PRON walk/VERB forward/ADV#0.0#0.0
-a person walks forwards quite slowly#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV slowly/ADV#0.0#0.0
-A person stands still, then takes 5 steps.#A/DET person/NOUN stand/VERB still/ADV then/ADV take/VERB step/NOUN#0.0#0.0
-A person walks 5 steps forward#A/DET person/NOUN walk/VERB step/NOUN forward/ADV#0.0#0.0

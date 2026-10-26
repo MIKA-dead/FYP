@@ -1,2 +1,0 @@
-A human walking back and forward in a straight line#A/DET human/ADJ walking/NOUN back/ADV and/CCONJ forward/ADV in/ADP a/DET straight/ADJ line/NOUN#0.0#0.0
-human goes forward, turns around partways, and goes back to starting position#human/PROPN go/VERB forward/ADV turn/VERB around/ADP partway/NOUN and/CCONJ go/VERB back/ADV to/ADP start/VERB position/NOUN#0.0#0.0

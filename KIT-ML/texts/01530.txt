@@ -1,3 +1,0 @@
-A person wipes.#A/DET person/NOUN wipe/VERB#0.0#0.0
-A Person is wiping a surface with it's left Hand.#A/DET person/NOUN is/AUX wipe/VERB a/DET surface/NOUN with/ADP it/PRON left/VERB Hand/PROPN#0.0#0.0
-a person wipes something in front of it with the left hand#a/DET person/NOUN wipe/VERB something/PRON in/ADP front/NOUN of/ADP it/PRON with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0

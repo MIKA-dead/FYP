@@ -1,1 +1,0 @@
-A person goes back 4 steps.#A/DET person/NOUN go/VERB back/ADV step/NOUN#0.0#0.0

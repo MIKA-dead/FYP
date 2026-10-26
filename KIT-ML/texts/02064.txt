@@ -1,4 +1,0 @@
-A person stands up from a kneeling position with support of the right hand.#A/DET person/NOUN stand/VERB up/ADP from/ADP a/DET kneel/VERB position/NOUN with/ADP support/NOUN of/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-the person is standing up with the support of left hand#the/DET person/NOUN is/AUX stand/VERB up/ADP with/ADP the/DET support/NOUN of/ADP left/ADJ hand/NOUN#0.0#0.0
-Someone is standing up while kneeling.#Someone/PRON is/AUX stand/VERB up/ADP while/SCONJ kneel/VERB#0.0#0.0
-A person knees on the ground, then he stands up.#A/DET person/NOUN knee/VERB on/ADP the/DET ground/NOUN then/ADV he/PRON stand/VERB up/ADP#0.0#0.0

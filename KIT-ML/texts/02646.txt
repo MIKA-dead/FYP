@@ -1,1 +1,0 @@
-A person passes an obstacle by doing one step after another.#A/DET person/NOUN pass/VERB an/DET obstacle/NOUN by/ADP do/VERB one/NUM step/NOUN after/ADP another/DET#0.0#0.0

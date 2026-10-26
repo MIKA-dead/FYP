@@ -1,1 +1,0 @@
-A person performs swiping gestures with the right hand.#A/DET person/NOUN perform/VERB swiping/NOUN gesture/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

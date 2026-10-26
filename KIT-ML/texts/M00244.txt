@@ -1,2 +1,0 @@
-A person walks slowly in a circle in counterclockwise direction.#A/DET person/NOUN walk/VERB slowly/ADV in/ADP a/DET circle/NOUN in/ADP counterclockwise/ADJ direction/NOUN#0.0#0.0
-A human walks slowly a full circle to its left and ends up on the spot where it started.#A/DET human/NOUN walk/VERB slowly/ADV a/DET full/ADJ circle/NOUN to/ADP its/DET left/NOUN and/CCONJ end/VERB up/ADP on/ADP the/DET spot/NOUN where/ADV it/PRON start/VERB#0.0#0.0

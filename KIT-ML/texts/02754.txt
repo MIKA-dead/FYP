@@ -1,1 +1,0 @@
-A person is dancing some Latin or Standard dance.#A/DET person/NOUN is/AUX dance/VERB some/DET Latin/ADJ or/CCONJ Standard/ADJ dance/NOUN#0.0#0.0

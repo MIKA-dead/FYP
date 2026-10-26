@@ -1,2 +1,0 @@
-a person throws something on the grund using his right arm#a/DET person/NOUN throw/VERB something/PRON on/ADP the/DET grund/NOUN use/VERB his/DET right/ADJ arm/NOUN#0.0#0.0
-a person throws something on the floor with its right hand#a/DET person/NOUN throw/VERB something/PRON on/ADP the/DET floor/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0

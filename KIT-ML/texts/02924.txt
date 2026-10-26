@@ -1,1 +1,0 @@
-A human performs a jump kick.#A/DET human/NOUN perform/VERB a/DET jump/NOUN kick/NOUN#0.0#0.0

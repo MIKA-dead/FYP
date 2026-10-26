@@ -1,1 +1,0 @@
-A person lifts something heavy above its head.#A/DET person/NOUN lift/VERB something/PRON heavy/ADJ above/ADP its/DET head/NOUN#0.0#0.0

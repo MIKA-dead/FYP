@@ -1,1 +1,0 @@
-A person swims butterfly.#A/DET person/NOUN swim/VERB butterfly/NOUN#0.0#0.0

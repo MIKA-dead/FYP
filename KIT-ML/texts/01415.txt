@@ -1,5 +1,0 @@
-a person raises both arms and waves his hands at head hight#a/DET person/NOUN raise/VERB both/CCONJ arm/NOUN and/CCONJ wave/VERB his/DET hand/NOUN at/ADP head/NOUN hight/ADJ#0.0#0.0
-A person waves with both hands.#A/DET person/NOUN wave/VERB with/ADP both/DET hand/NOUN#0.0#0.0
-a person waves with its two hands#a/DET person/NOUN wave/VERB with/ADP its/DET two/NUM hand/NOUN#0.0#0.0
-A person waves with both hands.#A/DET person/NOUN wave/VERB with/ADP both/DET hand/NOUN#0.0#0.0
-human performs a waving motion with both arms#human/PROPN perform/VERB a/DET waving/ADJ motion/NOUN with/ADP both/DET arm/NOUN#0.0#0.0

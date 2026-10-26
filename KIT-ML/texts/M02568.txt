@@ -1,1 +1,0 @@
-A human boxes with his left hand.#A/DET human/ADJ box/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

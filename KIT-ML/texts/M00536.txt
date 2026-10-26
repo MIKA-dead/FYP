@@ -1,3 +1,0 @@
-Someone walks forward in a slow pace.#Someone/PRON walk/VERB forward/ADV in/ADP a/DET slow/ADJ pace/NOUN#0.0#0.0
-A person takes five slow steps forward.#A/DET person/NOUN take/VERB five/NUM slow/ADJ step/NOUN forward/ADV#0.0#0.0
-A person walks very slowly.#A/DET person/NOUN walk/VERB very/ADV slowly/ADV#0.0#0.0

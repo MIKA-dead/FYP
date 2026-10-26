@@ -1,1 +1,0 @@
-A person makes a sharp turn to the right while walking#A/DET person/NOUN make/VERB a/DET sharp/ADJ turn/NOUN to/ADP the/DET right/NOUN while/SCONJ walk/VERB#0.0#0.0

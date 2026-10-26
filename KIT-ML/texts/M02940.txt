@@ -1,1 +1,0 @@
-A human crouches down and searches the floor around her current location.#A/DET human/ADJ crouch/NOUN down/ADV and/CCONJ search/VERB the/DET floor/NOUN around/ADP her/DET current/ADJ location/NOUN#0.0#0.0

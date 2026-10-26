@@ -1,1 +1,0 @@
-A person is walking forward, picks something up from the ground and carries it back.#A/DET person/NOUN is/AUX walk/VERB forward/ADV pick/VERB something/PRON up/ADP from/ADP the/DET ground/NOUN and/CCONJ carry/VERB it/PRON back/ADV#0.0#0.0

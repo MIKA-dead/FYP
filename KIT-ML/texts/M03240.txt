@@ -1,1 +1,0 @@
-A person is holding a sqatted position.#A/DET person/NOUN is/AUX hold/VERB a/DET sqatte/VERB position/NOUN#0.0#0.0

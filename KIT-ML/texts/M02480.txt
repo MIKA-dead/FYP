@@ -1,1 +1,0 @@
-A person attentively follows an object that moves around it.#A/DET person/NOUN attentively/ADV follow/VERB an/DET object/NOUN that/DET move/VERB around/ADP it/PRON#0.0#0.0

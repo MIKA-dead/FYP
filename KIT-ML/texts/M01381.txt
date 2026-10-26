@@ -1,2 +1,0 @@
-the person is waving the left hand#the/DET person/NOUN is/AUX wave/VERB the/DET left/ADJ hand/NOUN#0.0#0.0
-a man is wawing with his left hand#a/DET man/NOUN is/AUX wawe/VERB with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

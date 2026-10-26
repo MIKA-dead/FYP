@@ -1,1 +1,0 @@
-A human performs a jump to the front.#A/DET human/NOUN perform/VERB a/DET jump/NOUN to/ADP the/DET front/NOUN#0.0#0.0

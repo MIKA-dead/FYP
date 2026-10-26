@@ -1,4 +1,0 @@
-A person is pushed from behind and makes a single step#A/DET person/NOUN is/AUX push/VERB from/ADP behind/ADV and/CCONJ make/VERB a/DET single/ADJ step/NOUN#0.0#0.0
-Subject takes one step forward with the right foot.#subject/NOUN take/VERB one/NUM step/NOUN forward/ADV with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
-A person stumbles forward.#A/DET person/NOUN stumble/VERB forward/ADV#0.0#0.0
-a person gets pushed forwards#a/DET person/NOUN get/VERB push/VERB forwards/ADV#0.0#0.0

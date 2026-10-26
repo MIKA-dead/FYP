@@ -1,1 +1,0 @@
-A person jumps with both legs approximately 30 centimeters forward.#A/DET person/NOUN jump/VERB with/ADP both/DET leg/NOUN approximately/ADV centimeter/NOUN forward/ADV#0.0#0.0

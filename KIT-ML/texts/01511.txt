@@ -1,2 +1,0 @@
-A person wipes a table.#A/DET person/NOUN wipe/VERB a/DET table/NOUN#0.0#0.0
-The human cleans a table#The/DET human/NOUN clean/VERB a/DET table/NOUN#0.0#0.0

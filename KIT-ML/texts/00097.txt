@@ -1,4 +1,0 @@
-human goes in quater circle clockwise#human/PROPN go/VERB in/ADP quater/NOUN circle/NOUN clockwise/NOUN#0.0#0.0
-A person walks a quarter circle to the right.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A person turns right.#A/DET person/NOUN turn/VERB right/ADJ#0.0#0.0
-A person walks slowly a right curve#A/DET person/NOUN walk/VERB slowly/ADV a/DET right/ADJ curve/NOUN#0.0#0.0

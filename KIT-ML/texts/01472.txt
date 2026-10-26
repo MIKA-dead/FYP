@@ -1,4 +1,0 @@
-A human playing a violin#A/DET human/ADJ play/VERB a/DET violin/NOUN#0.0#0.0
-A person is flexing their biceps.#A/DET person/NOUN is/AUX flex/VERB their/DET bicep/NOUN#0.0#0.0
-A person holds an object with his right hand and wipes it with its left hand.#A/DET person/NOUN hold/VERB an/DET object/NOUN with/ADP his/DET right/ADJ hand/NOUN and/CCONJ wipe/VERB it/PRON with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
-a person plays the violin with its left hand#a/DET person/NOUN play/VERB the/DET violin/NOUN with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

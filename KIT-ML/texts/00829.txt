@@ -1,2 +1,0 @@
-A persons performs a fast 180° turn.#A/DET person/NOUN perform/VERB a/DET fast/ADJ turn/VERB#0.0#0.0
-A person takes to steps forward, turns around and takes two steps backwards.#A/DET person/NOUN take/VERB to/ADP step/NOUN forward/ADV turn/VERB around/ADV and/CCONJ take/VERB two/NUM step/NOUN backwards/ADV#0.0#0.0

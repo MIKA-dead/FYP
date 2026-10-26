@@ -1,4 +1,0 @@
-Someone walks a clockwise circle#Someone/PRON walk/VERB a/DET clockwise/NOUN circle/NOUN#0.0#0.0
-a person is walking a clockwise circle#a/DET person/NOUN is/AUX walk/VERB a/DET clockwise/NOUN circle/NOUN#0.0#0.0
-A person walks in a circle.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0
-A human is walking in circle to the right#A/DET human/NOUN is/AUX walk/VERB in/ADP circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0

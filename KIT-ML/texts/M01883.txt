@@ -1,5 +1,0 @@
-A person being pushed while walking forwards#A/DET person/NOUN being/AUX push/VERB while/SCONJ walk/VERB forwards/ADV#0.0#0.0
-someone walks while doing one quick sidestep to his left side#someone/PRON walk/VERB while/SCONJ do/VERB one/NUM quick/ADJ sidestep/NOUN to/ADP his/DET left/ADJ side/NOUN#0.0#0.0
-A person walks forward and is pushed to the left.#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0
-The human walks like a alcoholized person#The/DET human/NOUN walk/VERB like/SCONJ a/DET alcoholize/VERB person/NOUN#0.0#0.0
-a man is walking straight, when he makes a step to the side#a/DET man/NOUN is/AUX walk/VERB straight/ADV when/ADV he/PRON make/VERB a/DET step/NOUN to/ADP the/DET side/NOUN#0.0#0.0

@@ -1,5 +1,0 @@
-A walking human is being pushed.#A/DET walk/VERB human/NOUN is/AUX being/AUX push/VERB#0.0#0.0
-A person walks forward when he gets shoved from his right and stumbles to his left before going back to his track.#A/DET person/NOUN walk/VERB forward/ADV when/ADV he/PRON get/VERB shove/VERB from/ADP his/DET right/NOUN and/CCONJ stumble/NOUN to/ADP his/DET left/NOUN before/ADP go/VERB back/ADV to/ADP his/DET track/NOUN#0.0#0.0
-A person is walking forward avoiding a moving obstacle.#A/DET person/NOUN is/AUX walk/VERB forward/ADV avoid/VERB a/DET move/VERB obstacle/NOUN#0.0#0.0
-A person is pushed to the left while slowly walking.#A/DET person/NOUN is/AUX push/VERB to/ADP the/DET left/ADJ while/SCONJ slowly/ADV walk/VERB#0.0#0.0
-The human walks very slowly. Then something happens and the human perfoms a left jump. The human is trying to go back to his previous direction#The/DET human/NOUN walk/VERB very/ADV slowly/ADV Then/ADV something/PRON happen/VERB and/CCONJ the/DET human/ADJ perfom/NOUN a/DET left/ADJ jump/NOUN The/DET human/NOUN is/AUX try/VERB to/PART go/VERB back/ADV to/ADP his/DET previous/ADJ direction/NOUN#0.0#0.0

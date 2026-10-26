@@ -1,3 +1,0 @@
-A person walking forwards on a kind of platform upwards.#A/DET person/NOUN walk/VERB forwards/ADV on/ADP a/DET kind/NOUN of/ADP platform/NOUN upward/NOUN#0.0#0.0
-A person walks forward#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
-A person walkes forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0

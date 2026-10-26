@@ -1,1 +1,0 @@
-human goes in a circle counterclockwise#human/PROPN go/VERB in/ADP a/DET circle/NOUN counterclockwise/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A human walks with very large steps.#A/DET human/NOUN walk/VERB with/ADP very/ADV large/ADJ step/NOUN#0.0#0.0

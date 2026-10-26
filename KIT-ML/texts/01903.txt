@@ -1,2 +1,0 @@
-A person walks a few steps forward, then a few steps backwards and then continuous to walk forward.#A/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN forward/ADV then/ADV a/DET few/ADJ step/NOUN backwards/ADV and/CCONJ then/ADV continuous/ADJ to/PART walk/VERB forward/ADV#0.0#0.0
-A person walks forwards, then a few steps backwards and then forwards again.#A/DET person/NOUN walk/VERB forwards/ADV then/ADV a/DET few/ADJ step/NOUN backwards/ADV and/CCONJ then/ADV forwards/ADV again/ADV#0.0#0.0

@@ -1,2 +1,0 @@
-Someone walks in a right bend#Someone/PRON walk/VERB in/ADP a/DET right/ADJ bend/NOUN#0.0#0.0
-A human is walking forward five steps, starting with the right foot and performing a right-turn of 90°.#A/DET human/NOUN is/AUX walk/VERB forward/ADV five/NUM step/NOUN start/VERB with/ADP the/DET right/ADJ foot/NOUN and/CCONJ perform/VERB a/DET rightturn/NOUN of/ADP#0.0#0.0

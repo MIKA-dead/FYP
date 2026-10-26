@@ -1,2 +1,0 @@
-A person slowly walking forwards for a few steps#A/DET person/NOUN slowly/ADV walk/VERB forwards/ADV for/ADP a/DET few/ADJ step/NOUN#0.0#0.0
-The human walks very slowly#The/DET human/NOUN walk/VERB very/ADV slowly/ADV#0.0#0.0

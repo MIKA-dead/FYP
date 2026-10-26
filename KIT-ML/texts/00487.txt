@@ -1,5 +1,0 @@
-A human turns left in 4 steps#A/DET human/NOUN turn/VERB left/VERB in/ADP step/NOUN#0.0#0.0
-A person walks in third of a circle.#A/DET person/NOUN walk/VERB in/ADP third/NOUN of/ADP a/DET circle/NOUN#0.0#0.0
-A person is taking a left turn while walking.#A/DET person/NOUN is/AUX take/VERB a/DET left/ADJ turn/NOUN while/SCONJ walk/VERB#0.0#0.0
-a person walks in a quarter circle to the left#a/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-The human perfoms a left turn#The/DET human/ADJ perfom/NOUN a/DET left/ADJ turn/NOUN#0.0#0.0

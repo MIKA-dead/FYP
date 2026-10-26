@@ -1,3 +1,0 @@
-A person moves a little bit and then stands by#A/DET person/NOUN move/VERB a/DET little/ADJ bit/NOUN and/CCONJ then/ADV stand/VERB by/ADP#0.0#0.0
-A person takes a lunge to the left and then returns to the initial position.#A/DET person/NOUN take/VERB a/DET lunge/NOUN to/ADP the/DET left/NOUN and/CCONJ then/ADV return/VERB to/ADP the/DET initial/ADJ position/NOUN#0.0#0.0
-a human makes a step back to the side and returns in his initial position#a/DET human/NOUN make/VERB a/DET step/NOUN back/ADV to/ADP the/DET side/NOUN and/CCONJ return/NOUN in/ADP his/DET initial/ADJ position/NOUN#0.0#0.0

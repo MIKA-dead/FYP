@@ -1,1 +1,0 @@
-A person jumps and turns 90 degrees to the right while in the air#A/DET person/NOUN jump/VERB and/CCONJ turn/VERB degree/NOUN to/ADP the/DET right/ADJ while/SCONJ in/ADP the/DET air/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person walks forward then turns around by its left side and then walks forward again.#A/DET person/NOUN walk/VERB forward/ADV then/ADV turn/VERB around/ADP by/ADP its/DET left/ADJ side/NOUN and/CCONJ then/ADV walk/VERB forward/ADV again/ADV#0.0#0.0

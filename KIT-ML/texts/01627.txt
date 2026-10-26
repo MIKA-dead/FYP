@@ -1,4 +1,0 @@
-A person steps on predefined waypoints.#A/DET person/NOUN step/VERB on/ADP predefine/VERB waypoint/NOUN#0.0#0.0
-A human is balancing while stepping on defined positions for the foots#A/DET human/NOUN is/AUX balance/VERB while/SCONJ step/VERB on/ADP define/VERB position/NOUN for/ADP the/DET foot/NOUN#0.0#0.0
-A person is walking over an obstacle.#A/DET person/NOUN is/AUX walk/VERB over/ADP an/DET obstacle/NOUN#0.0#0.0
-A person walks over a ledge.#A/DET person/NOUN walk/VERB over/ADP a/DET ledge/NOUN#0.0#0.0

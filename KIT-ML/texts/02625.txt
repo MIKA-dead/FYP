@@ -1,1 +1,0 @@
-Athlet jumping on a horizontal bar, actively swinging back and forth 3 times#Athlet/PROPN jump/VERB on/ADP a/DET horizontal/ADJ bar/NOUN actively/ADV swinge/VERB back/ADV and/CCONJ forth/ADV time/NOUN#0.0#0.0

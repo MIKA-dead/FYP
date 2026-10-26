@@ -1,3 +1,0 @@
-Subject walks forward and then turns right.#Subject/ADJ walk/VERB forward/ADV and/CCONJ then/ADV turn/VERB right/ADJ#0.0#0.0
-Someone walks in a quarter circle to the right.#Someone/PRON walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A person walks slowly right around a corner#A/DET person/NOUN walk/VERB slowly/ADV right/ADV around/ADP a/DET corner/NOUN#0.0#0.0

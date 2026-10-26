@@ -1,4 +1,0 @@
-human runs forward hasty#human/ADJ run/NOUN forward/ADV hasty/PROPN#0.0#0.0
-A person runs a few meters straight forward#A/DET person/NOUN run/VERB a/DET few/ADJ meter/NOUN straight/ADV forward/ADV#0.0#0.0
-A person is running, then stops abruptly.#A/DET person/NOUN is/AUX run/VERB then/ADV stop/VERB abruptly/ADV#0.0#0.0
-A person runs and comes to a full stop.#A/DET person/NOUN run/VERB and/CCONJ come/VERB to/ADP a/DET full/ADJ stop/NOUN#0.0#0.0

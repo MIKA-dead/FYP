@@ -1,2 +1,0 @@
-A person starts a circular movement towards the left.#A/DET person/NOUN start/VERB a/DET circular/ADJ movement/NOUN towards/ADP the/DET left/NOUN#0.0#0.0
-Someone walks a left turn#Someone/PRON walk/VERB a/DET left/ADJ turn/NOUN#0.0#0.0

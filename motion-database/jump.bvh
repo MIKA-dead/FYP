@@ -1,4 +1,0 @@
-MOTION: jump
-DURATION: 0.6s
-JOINTS: 15
-DESCRIPTION: 垂直跳跃，离地0.4m

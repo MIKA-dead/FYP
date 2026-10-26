@@ -1,1 +1,0 @@
-A person hops 4 times on the left leg forward#A/DET person/NOUN hop/VERB time/NOUN on/ADP the/DET left/ADJ leg/NOUN forward/ADV#0.0#0.0

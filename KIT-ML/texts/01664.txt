@@ -1,2 +1,0 @@
-A person goes around#A/DET person/NOUN go/VERB around/ADV#0.0#0.0
-a person walks a few steps forwards then turn 180 degrees and keeps on wlking#a/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN forwards/ADV then/ADV turn/VERB degree/NOUN and/CCONJ keep/VERB on/ADP wlke/VERB#0.0#0.0

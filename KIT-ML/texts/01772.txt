@@ -1,3 +1,0 @@
-Person stumbles forward.#person/NOUN stumble/VERB forward/ADV#0.0#0.0
-A human stumbles#A/DET human/ADJ stumble/NOUN#0.0#0.0
-A person trips a little.#A/DET person/NOUN trip/VERB a/DET little/ADJ#0.0#0.0

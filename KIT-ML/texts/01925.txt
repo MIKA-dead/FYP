@@ -1,2 +1,0 @@
-A person walks and gets kicked to the left.#A/DET person/NOUN walk/VERB and/CCONJ get/VERB kick/VERB to/ADP the/DET left/NOUN#0.0#0.0
-a person walks forward and gets pushed to the left#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ get/VERB push/VERB to/ADP the/DET left/NOUN#0.0#0.0

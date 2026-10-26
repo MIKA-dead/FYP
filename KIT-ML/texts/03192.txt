@@ -1,1 +1,0 @@
-A human shakes its body step by step from head to toe and performs knee bending afterwards#A/DET human/NOUN shake/VERB its/DET body/NOUN step/NOUN by/ADP step/NOUN from/ADP head/NOUN to/ADP toe/NOUN and/CCONJ perform/VERB knee/PROPN bend/VERB afterwards/ADV#0.0#0.0

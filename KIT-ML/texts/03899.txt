@@ -1,1 +1,0 @@
-A person makes moves like bouncing a basketball and throwing it to a basket.#A/DET person/NOUN make/VERB move/NOUN like/SCONJ bounce/VERB a/DET basketball/NOUN and/CCONJ throw/VERB it/PRON to/ADP a/DET basket/NOUN#0.0#0.0

@@ -1,3 +1,0 @@
-The person walks forwards and backwards.#The/DET person/NOUN walk/VERB forwards/ADJ and/CCONJ backwards/ADV#0.0#0.0
-A person goes three steps forward, one back, then forward again.#A/DET person/NOUN go/VERB three/NUM step/NOUN forward/ADV one/NUM back/NOUN then/ADV forward/ADV again/ADV#0.0#0.0
-A person is walking forwards and doing some backward steps and then again walking forwards.#A/DET person/NOUN is/AUX walk/VERB forwards/ADV and/CCONJ do/VERB some/DET backward/ADJ step/NOUN and/CCONJ then/ADV again/ADV walk/VERB forwards/ADV#0.0#0.0

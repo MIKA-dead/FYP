@@ -1,1 +1,0 @@
-A person walks forward during that the person is pushed forwards.#A/DET person/NOUN walk/VERB forward/ADV during/ADP that/SCONJ the/DET person/NOUN is/AUX push/VERB forwards/ADV#0.0#0.0

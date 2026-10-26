@@ -1,1 +1,0 @@
-Person taking a hand shower#person/NOUN take/VERB a/DET hand/NOUN shower/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-human goes forward starting with right leg#human/PROPN go/VERB forward/ADV start/VERB with/ADP right/ADJ leg/NOUN#0.0#0.0

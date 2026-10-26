@@ -1,1 +1,0 @@
-a human performs a back flip#a/DET human/ADJ perform/VERB a/DET back/NOUN flip/NOUN#0.0#0.0

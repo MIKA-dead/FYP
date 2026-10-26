@@ -1,4 +1,0 @@
-A person kneels down on hands an feet.#A/DET person/NOUN kneel/VERB down/ADP on/ADP hand/NOUN an/DET foot/NOUN#0.0#0.0
-A person gets on all fours, ready to crawl.#A/DET person/NOUN get/VERB on/ADP all/DET four/NOUN ready/ADJ to/PART crawl/VERB#0.0#0.0
-A person goes down to his knees.#A/DET person/NOUN go/VERB down/ADP to/ADP his/DET knee/NOUN#0.0#0.0
-A human goes down on all fours#A/DET human/NOUN go/VERB down/ADP on/ADP all/DET four/NOUN#0.0#0.0

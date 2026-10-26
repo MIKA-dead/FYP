@@ -1,1 +1,0 @@
-a person stirs with his left hand#a/DET person/NOUN stir/VERB with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

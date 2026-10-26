@@ -1,4 +1,0 @@
-A person does a quick and large step back.#A/DET person/NOUN does/AUX a/DET quick/ADJ and/CCONJ large/ADJ step/NOUN back/ADV#0.0#0.0
-human is pushed from front and counterbalances push by stepping backwards#human/PROPN is/AUX push/VERB from/ADP front/NOUN and/CCONJ counterbalance/NOUN push/VERB by/ADP step/VERB backwards/ADV#0.0#0.0
-a person gets pushed backwards#a/DET person/NOUN get/VERB push/VERB backwards/ADV#0.0#0.0
-a man makes one big step backwards, thean a litlle step#a/DET man/NOUN make/VERB one/NUM big/ADJ step/NOUN backwards/ADV thean/VERB a/DET litlle/PROPN step/NOUN#0.0#0.0

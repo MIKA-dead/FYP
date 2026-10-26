@@ -1,1 +1,0 @@
-A person briefly raises both hands and move them back down.#A/DET person/NOUN briefly/ADV raise/VERB both/DET hand/NOUN and/CCONJ move/VERB them/PRON back/ADV down/ADV#0.0#0.0

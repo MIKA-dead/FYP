@@ -1,4 +1,0 @@
-Someone plays a single tone on a violin.#Someone/PRON play/VERB a/DET single/ADJ tone/NOUN on/ADP a/DET violin/NOUN#0.0#0.0
-A human plays a violin#A/DET human/NOUN play/VERB a/DET violin/NOUN#0.0#0.0
-A person plays the violin#A/DET person/NOUN play/VERB the/DET violin/NOUN#0.0#0.0
-A person plays the violette.#A/DET person/NOUN play/VERB the/DET violette/NOUN#0.0#0.0

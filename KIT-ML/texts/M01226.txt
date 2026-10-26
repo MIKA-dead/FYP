@@ -1,3 +1,0 @@
-A person doing a cha cha move.#A/DET person/NOUN do/VERB a/DET cha/NOUN cha/PRON move/NOUN#0.0#0.0
-A person moves as if having a kite.#A/DET person/NOUN move/VERB as/SCONJ if/SCONJ have/VERB a/DET kite/NOUN#0.0#0.0
-Somebody is balancing something with his hands#Somebody/PRON is/AUX balance/VERB something/PRON with/ADP his/DET hand/NOUN#0.0#0.0

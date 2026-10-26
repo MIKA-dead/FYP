@@ -1,3 +1,0 @@
-A person walks forward and turns to the right#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ turn/VERB to/ADP the/DET right/NOUN#0.0#0.0
-A person walks a 90 degree curve to the right.#A/DET person/NOUN walk/VERB a/DET degree/NOUN curve/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A person walks a right curve at 100 degrees#A/DET person/NOUN walk/VERB a/DET right/ADJ curve/NOUN at/ADP degree/NOUN#0.0#0.0

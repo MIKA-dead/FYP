@@ -1,1 +1,0 @@
-A human slowly walks two steps.#A/DET human/NOUN slowly/ADV walk/VERB two/NUM step/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-A person makes 4 big steps forward.#A/DET person/NOUN make/VERB big/ADJ step/NOUN forward/ADV#0.0#0.0
-a person walks forwards quite fast#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV fast/ADV#0.0#0.0

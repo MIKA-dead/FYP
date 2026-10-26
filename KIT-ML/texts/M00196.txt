@@ -1,2 +1,0 @@
-Someone walks in a counterclockwise circle#Someone/PRON walk/VERB in/ADP a/DET counterclockwise/ADJ circle/NOUN#0.0#0.0
-human goes in a circle counterclockwise starting with left#human/PROPN go/VERB in/ADP a/DET circle/NOUN counterclockwise/NOUN start/VERB with/ADP left/ADJ#0.0#0.0

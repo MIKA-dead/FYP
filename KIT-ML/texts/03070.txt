@@ -1,1 +1,0 @@
-A human  is doing the chicken dance#A/DET human/ADJ is/AUX do/VERB the/DET chicken/NOUN dance/NOUN#0.0#0.0

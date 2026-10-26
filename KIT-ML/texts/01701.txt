@@ -1,3 +1,0 @@
-a person steps fast to the left due to strong push#a/DET person/NOUN step/VERB fast/ADV to/ADP the/DET left/ADJ due/ADP to/ADP strong/ADJ push/NOUN#0.0#0.0
-A person perfoms a fast step to his left.#A/DET person/NOUN perfom/VERB a/DET fast/ADJ step/NOUN to/ADP his/DET left/NOUN#0.0#0.0
-A standing person gets shoved from the right and stumbles to the left.#A/DET stand/VERB person/NOUN get/VERB shove/VERB from/ADP the/DET right/NOUN and/CCONJ stumble/NOUN to/ADP the/DET left/NOUN#0.0#0.0

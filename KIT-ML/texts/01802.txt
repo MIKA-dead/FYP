@@ -1,3 +1,0 @@
-a person gets pushed left and walks further.#a/DET person/NOUN get/VERB push/VERB left/VERB and/CCONJ walk/VERB further/ADV#0.0#0.0
-Someone is being pushed viciously from the right side while walking forwards and compensates the disturbance.#Someone/PRON is/AUX being/AUX push/VERB viciously/ADV from/ADP the/DET right/ADJ side/NOUN while/SCONJ walk/VERB forwards/ADV and/CCONJ compensate/VERB the/DET disturbance/NOUN#0.0#0.0
-A person gets pushed from his right side.#A/DET person/NOUN get/VERB push/VERB from/ADP his/DET right/ADJ side/NOUN#0.0#0.0

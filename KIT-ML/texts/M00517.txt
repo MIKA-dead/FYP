@@ -1,7 +1,0 @@
-Person is walking, turns left and stops#person/NOUN is/AUX walk/VERB turn/VERB left/VERB and/CCONJ stop/NOUN#0.0#0.0
-a person walks forward and the takes a turn to the left#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ the/DET take/VERB a/DET turn/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-A person walks a left turn of 90 degrees.#A/DET person/NOUN walk/VERB a/DET left/ADJ turn/NOUN of/ADP degree/NOUN#0.0#0.0
-The human subject walks a right bend.#The/DET human/ADJ subject/NOUN walk/VERB a/DET right/ADJ bend/NOUN#0.0#0.0
-human goes in a bending motion#human/ADJ go/VERB in/ADP a/DET bending/NOUN motion/NOUN#0.0#0.0
-A person takes 4 steps forward and then turns to the left.#A/DET person/NOUN take/VERB step/NOUN forward/ADV and/CCONJ then/ADV turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
-A person makes a turn left.#A/DET person/NOUN make/VERB a/DET turn/NOUN left/VERB#0.0#0.0

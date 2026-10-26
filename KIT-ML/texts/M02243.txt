@@ -1,1 +1,0 @@
-A person sitting on his knees is standing up by using both of his hands.#A/DET person/NOUN sit/VERB on/ADP his/DET knee/NOUN is/AUX stand/VERB up/ADP by/ADP use/VERB both/DET of/ADP his/DET hand/NOUN#0.0#0.0

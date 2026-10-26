@@ -1,2 +1,0 @@
-A human walks forwards for four steps and then stops.#A/DET human/NOUN walk/VERB forwards/ADJ for/ADP four/NUM step/NOUN and/CCONJ then/ADV stop/VERB#0.0#0.0
-Someone walks forward#Someone/PRON walk/VERB forward/ADV#0.0#0.0

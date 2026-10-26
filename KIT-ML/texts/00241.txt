@@ -1,4 +1,0 @@
-A person walks in a circle.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0
-Someone goes around in a circuit.#Someone/PRON go/VERB around/ADV in/ADP a/DET circuit/NOUN#0.0#0.0
-a person walks in a circle to the right#a/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A human is performing a right 360° curve#A/DET human/NOUN is/AUX perform/VERB a/DET right/ADJ curve/NOUN#0.0#0.0

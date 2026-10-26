@@ -1,2 +1,0 @@
-a human performs a left turn#a/DET human/ADJ perform/VERB a/DET left/ADJ turn/NOUN#0.0#0.0
-A person walks a quarter circle to the right.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0

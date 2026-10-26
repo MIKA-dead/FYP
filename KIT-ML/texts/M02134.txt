@@ -1,1 +1,0 @@
-A person seems to open something and then reaches for an object using the left hand.#A/DET person/NOUN seem/VERB to/PART open/VERB something/PRON and/CCONJ then/ADV reach/VERB for/ADP an/DET object/NOUN use/VERB the/DET left/ADJ hand/NOUN#0.0#0.0

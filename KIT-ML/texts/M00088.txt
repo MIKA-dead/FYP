@@ -1,1 +1,0 @@
-A person is turning left.#A/DET person/NOUN is/AUX turn/VERB left/ADV#0.0#0.0

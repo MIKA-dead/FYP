@@ -1,1 +1,0 @@
-A person looks around and then walks forward.#A/DET person/NOUN look/VERB around/ADV and/CCONJ then/ADV walk/VERB forward/ADV#0.0#0.0

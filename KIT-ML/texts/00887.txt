@@ -1,1 +1,0 @@
-A human makes a 180 degrees turn.#A/DET human/NOUN make/VERB a/DET degree/NOUN turn/VERB#0.0#0.0

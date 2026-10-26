@@ -1,5 +1,0 @@
-A person lifts the left arm straight into the air in a angle of about 100 degree between arm and left leg.#A/DET person/NOUN lift/VERB the/DET left/ADJ arm/NOUN straight/ADV into/ADP the/DET air/NOUN in/ADP a/DET angle/NOUN of/ADP about/ADV degree/NOUN between/ADP arm/NOUN and/CCONJ left/VERB leg/NOUN#0.0#0.0
-A human rises his left arm#A/DET human/NOUN rise/VERB his/DET left/ADJ arm/NOUN#0.0#0.0
-A person reaches for something with their left hand.#A/DET person/NOUN reach/VERB for/ADP something/PRON with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0
-The human lifts his left arm#The/DET human/NOUN lift/VERB his/DET left/ADJ arm/NOUN#0.0#0.0
-a person points in front of him with his left hand#a/DET person/NOUN point/VERB in/ADP front/NOUN of/ADP him/PRON with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

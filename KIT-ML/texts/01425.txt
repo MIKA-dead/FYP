@@ -1,4 +1,0 @@
-Subject is playing the guitar.#Subject/PROPN is/AUX play/VERB the/DET guitar/NOUN#0.0#0.0
-Someone is playing an air guitar.#Someone/PRON is/AUX play/VERB an/DET air/NOUN guitar/NOUN#0.0#0.0
-A person plays the guitar.#A/DET person/NOUN play/VERB the/DET guitar/NOUN#0.0#0.0
-a man plays the guitar#a/DET man/NOUN play/VERB the/DET guitar/NOUN#0.0#0.0

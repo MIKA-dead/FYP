@@ -1,3 +1,0 @@
-A person walks four steps to the diagonal right.#A/DET person/NOUN walk/VERB four/NUM step/NOUN to/ADP the/DET diagonal/ADJ right/NOUN#0.0#0.0
-a person walks down the stairs#a/DET person/NOUN walk/VERB down/ADP the/DET stair/NOUN#0.0#0.0
-A person walking down a small hill.#A/DET person/NOUN walk/VERB down/ADP a/DET small/ADJ hill/NOUN#0.0#0.0

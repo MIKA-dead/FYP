@@ -1,1 +1,0 @@
-A human stretches his arms in front of him, draws circles in the air and lowers his arms again.#A/DET human/NOUN stretch/VERB his/DET arm/NOUN in/ADP front/NOUN of/ADP him/PRON draw/VERB circle/NOUN in/ADP the/DET air/NOUN and/CCONJ lower/VERB his/DET arm/NOUN again/ADV#0.0#0.0

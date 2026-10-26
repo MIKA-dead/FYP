@@ -1,3 +1,0 @@
-A person takes a left turn.#A/DET person/NOUN take/VERB a/DET left/ADJ turn/NOUN#0.0#0.0
-A person walks a 90 degree turn to the left.#A/DET person/NOUN walk/VERB a/DET degree/NOUN turn/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-a person walks to the left in a quater circle#a/DET person/NOUN walk/VERB to/ADP the/DET left/NOUN in/ADP a/DET quater/NOUN circle/NOUN#0.0#0.0

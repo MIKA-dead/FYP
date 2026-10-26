@@ -1,1 +1,0 @@
-A person is doing some warmup fitness exercises.#A/DET person/NOUN is/AUX do/VERB some/DET warmup/PROPN fitness/NOUN exercise/VERB#0.0#0.0

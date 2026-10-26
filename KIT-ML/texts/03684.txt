@@ -1,1 +1,0 @@
-A person is jogging to the left.#A/DET person/NOUN is/AUX jog/VERB to/ADP the/DET left/NOUN#0.0#0.0

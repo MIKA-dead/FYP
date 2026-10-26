@@ -1,7 +1,0 @@
-A human is sprinting.#A/DET human/NOUN is/AUX sprint/VERB#0.0#0.0
-Someone is walking forward very fast doing 5 steps and then stopping.#Someone/PRON is/AUX walk/VERB forward/ADV very/ADV fast/ADV do/VERB step/NOUN and/CCONJ then/ADV stop/VERB#0.0#0.0
-A person is jogging a#A/DET person/NOUN is/AUX jog/VERB a/DET#0.0#0.0
-A person joggs forwards.#A/DET person/NOUN joggs/NOUN forwards/ADP#0.0#0.0
-A person is jogging.#A/DET person/NOUN is/AUX jog/VERB#0.0#0.0
-A person starts jogging.#A/DET person/NOUN start/VERB jog/VERB#0.0#0.0
-a person jogs frowards#a/DET person/NOUN jog/VERB frowards/PROPN#0.0#0.0

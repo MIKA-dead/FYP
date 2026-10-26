@@ -1,3 +1,0 @@
-A person raises his right hand and waves.#A/DET person/NOUN raise/VERB his/DET right/ADJ hand/NOUN and/CCONJ wave/NOUN#0.0#0.0
-A person waving his right hand to greet.#A/DET person/NOUN wave/VERB his/DET right/ADJ hand/NOUN to/PART greet/VERB#0.0#0.0
-a person waves with the right hand#a/DET person/NOUN wave/VERB with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

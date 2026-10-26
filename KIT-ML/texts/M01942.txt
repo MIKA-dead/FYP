@@ -1,3 +1,0 @@
-A person standing still, that might be pushed so that it takes one step backwards, or is just casually doing an awkward backstep#A/DET person/NOUN stand/VERB still/ADV that/DET may/VERB be/AUX push/VERB so/SCONJ that/SCONJ it/PRON take/VERB one/NUM step/NOUN backwards/ADV or/CCONJ is/AUX just/ADV casually/ADV do/VERB an/DET awkward/ADJ backstep/NOUN#0.0#0.0
-A human makes a step backwards and starting with its left food.#A/DET human/NOUN make/VERB a/DET step/NOUN backwards/ADV and/CCONJ start/VERB with/ADP its/DET left/ADJ food/NOUN#0.0#0.0
-a person gets pushed from the front#a/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person is walking forward very unsteady, turns around and walks back again.#A/DET person/NOUN is/AUX walk/VERB forward/ADV very/ADV unsteady/ADJ turn/VERB around/ADV and/CCONJ walk/VERB back/ADV again/ADV#0.0#0.0

@@ -1,3 +1,0 @@
-Person doing a wiping move with the left hand#person/NOUN do/VERB a/DET wipe/VERB move/NOUN with/ADP the/DET left/ADJ hand/NOUN#0.0#0.0
-Someone moves his hand in a circular path#Someone/PRON move/VERB his/DET hand/NOUN in/ADP a/DET circular/ADJ path/NOUN#0.0#0.0
-A person wipes a table one time.#A/DET person/NOUN wipe/VERB a/DET table/NOUN one/NUM time/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-A person dances a weird dance#A/DET person/NOUN dance/VERB a/DET weird/ADJ dance/NOUN#0.0#0.0
-A person performs the Egyptian move, first with the right hand front, then with the left hand front.#A/DET person/NOUN perform/VERB the/DET Egyptian/ADJ move/NOUN first/ADV with/ADP the/DET right/ADJ hand/NOUN front/NOUN then/ADV with/ADP the/DET left/ADJ hand/NOUN front/NOUN#0.0#0.0

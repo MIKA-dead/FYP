@@ -1,1 +1,0 @@
-A person plays basketball.#A/DET person/NOUN play/VERB basketball/NOUN#0.0#0.0

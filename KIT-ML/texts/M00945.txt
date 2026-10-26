@@ -1,2 +1,0 @@
-A person turns 90° to the right with medium speed.#A/DET person/NOUN turn/VERB to/ADP the/DET right/NOUN with/ADP medium/ADJ speed/NOUN#0.0#0.0
-A person is turning right while walking.#A/DET person/NOUN is/AUX turn/VERB right/ADV while/SCONJ walk/VERB#0.0#0.0

@@ -1,2 +1,0 @@
-A person performs one step forward and closes his feet.#A/DET person/NOUN perform/VERB one/NUM step/NOUN forward/ADV and/CCONJ close/VERB his/DET foot/NOUN#0.0#0.0
-a person stands still and gets pushed forward#a/DET person/NOUN stand/VERB still/ADV and/CCONJ get/VERB push/VERB forward/ADV#0.0#0.0

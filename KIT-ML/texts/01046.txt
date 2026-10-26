@@ -1,3 +1,0 @@
-A stationary human walks 2 meters straight ahead and then stops again.#A/DET stationary/ADJ human/NOUN walk/VERB meter/NOUN straight/ADV ahead/ADV and/CCONJ then/ADV stop/VERB again/ADV#0.0#0.0
-Someone walks forward#Someone/PRON walk/VERB forward/ADV#0.0#0.0
-a person walks forward a few steps#a/DET person/NOUN walk/VERB forward/ADV a/DET few/ADJ step/NOUN#0.0#0.0

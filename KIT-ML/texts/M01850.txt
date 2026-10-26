@@ -1,1 +1,0 @@
-A human is pushed to the left.#A/DET human/NOUN is/AUX push/VERB to/ADP the/DET left/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person walking cool from right to left.#A/DET person/NOUN walk/VERB cool/ADJ from/ADP right/NOUN to/ADP left/NOUN#0.0#0.0

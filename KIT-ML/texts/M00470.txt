@@ -1,3 +1,0 @@
-A person turns 180° to the left very fast.#A/DET person/NOUN turn/VERB to/ADP the/DET left/ADJ very/ADV fast/ADV#0.0#0.0
-a person walks forward turns 180 degrees to the left and keeps on walking#a/DET person/NOUN walk/VERB forward/ADV turn/VERB degree/NOUN to/ADP the/DET left/NOUN and/CCONJ keep/VERB on/ADP walk/VERB#0.0#0.0
-A person does a few steps and turns on his rigth foot.#A/DET person/NOUN does/AUX a/DET few/ADJ step/NOUN and/CCONJ turn/VERB on/ADP his/DET rigth/NOUN foot/NOUN#0.0#0.0

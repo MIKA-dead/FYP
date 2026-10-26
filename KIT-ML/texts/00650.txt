@@ -1,3 +1,0 @@
-A person raises both arms like jumping jack.#A/DET person/NOUN raise/VERB both/DET arm/NOUN like/SCONJ jump/VERB jack/NOUN#0.0#0.0
-someone lifts his arm over his head.#someone/PRON lift/VERB his/DET arm/NOUN over/ADP his/DET head/NOUN#0.0#0.0
-Somebody raises his hands in form of a circle#Somebody/PRON raise/VERB his/DET hand/NOUN in/ADP form/NOUN of/ADP a/DET circle/NOUN#0.0#0.0

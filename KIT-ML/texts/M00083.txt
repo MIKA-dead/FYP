@@ -1,2 +1,0 @@
-A human makes a right turn.#A/DET human/NOUN make/VERB a/DET right/ADJ turn/NOUN#0.0#0.0
-A person goes right around a corner#A/DET person/NOUN go/VERB right/ADV around/ADP a/DET corner/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-The human is pushed from the left side during walking.#The/DET human/NOUN is/AUX push/VERB from/ADP the/DET left/ADJ side/NOUN during/ADP walk/VERB#0.0#0.0
-A person walks as if drunk.#A/DET person/NOUN walk/VERB as/SCONJ if/SCONJ drunk/ADJ#0.0#0.0

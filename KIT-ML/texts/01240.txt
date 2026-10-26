@@ -1,6 +1,0 @@
-Person kicking with the left foot#person/NOUN kick/VERB with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0
-human performs a low kick with left leg#human/PROPN perform/VERB a/DET low/ADJ kick/NOUN with/ADP left/ADJ leg/NOUN#0.0#0.0
-A person kicking belly high in front of him while holding up his arms in defense.#A/DET person/NOUN kick/VERB belly/NOUN high/ADJ in/ADP front/NOUN of/ADP him/PRON while/SCONJ hold/VERB up/ADP his/DET arm/NOUN in/ADP defense/NOUN#0.0#0.0
-A person performs a kick.#A/DET person/NOUN perform/VERB a/DET kick/NOUN#0.0#0.0
-a person kicks something in front of it with its left foot#a/DET person/NOUN kick/VERB something/PRON in/ADP front/NOUN of/ADP it/PRON with/ADP its/DET left/ADJ foot/NOUN#0.0#0.0
-Somebody kicks something with his left foot.#Somebody/PRON kick/VERB something/PRON with/ADP his/DET left/ADJ foot/NOUN#0.0#0.0

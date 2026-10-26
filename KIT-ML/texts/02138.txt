@@ -1,1 +1,0 @@
-A person draws an imaginary horizontal line with the right hand from left to right and from top to bottom.#A/DET person/NOUN draw/VERB an/DET imaginary/ADJ horizontal/ADJ line/NOUN with/ADP the/DET right/ADJ hand/NOUN from/ADP left/NOUN to/ADP right/NOUN and/CCONJ from/ADP top/NOUN to/ADP bottom/NOUN#0.0#0.0

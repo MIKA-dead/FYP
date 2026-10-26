@@ -1,5 +1,0 @@
-A person wipes the table with their left hand#A/DET person/NOUN wipe/VERB the/DET table/NOUN with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0
-A person traveling with the right hand with a rubbing motion on a work surface.#A/DET person/NOUN travel/VERB with/ADP the/DET right/ADJ hand/NOUN with/ADP a/DET rub/VERB motion/NOUN on/ADP a/DET work/NOUN surface/NOUN#0.0#0.0
-A person wipes something#A/DET person/NOUN wipe/VERB something/PRON#0.0#0.0
-A person is wiping horizontal with its left hand on the same hight as its hips.#A/DET person/NOUN is/AUX wipe/VERB horizontal/ADJ with/ADP its/DET left/ADJ hand/NOUN on/ADP the/DET same/ADJ hight/NOUN as/SCONJ its/DET hip/NOUN#0.0#0.0
-A peron stirring with their left hand#A/DET peron/NOUN stir/VERB with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0

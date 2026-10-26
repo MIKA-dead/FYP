@@ -1,2 +1,0 @@
-Someone walks in a clockwise circle#Someone/PRON walk/VERB in/ADP a/DET clockwise/NOUN circle/NOUN#0.0#0.0
-human goes in a circle clockwise starting with right#human/PROPN go/VERB in/ADP a/DET circle/NOUN clockwise/NOUN start/VERB with/ADP right/ADJ#0.0#0.0

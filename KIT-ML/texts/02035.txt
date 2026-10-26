@@ -1,1 +1,0 @@
-Subject walks forward spins around and walks backwards.#Subject/ADJ walk/VERB forward/ADV spin/NOUN around/ADV and/CCONJ walk/VERB backwards/ADV#0.0#0.0

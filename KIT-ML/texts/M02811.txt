@@ -1,1 +1,0 @@
-A human boxes alternating with his right and left hand.#A/DET human/ADJ box/NOUN alternate/VERB with/ADP his/DET right/NOUN and/CCONJ left/VERB hand/NOUN#0.0#0.0

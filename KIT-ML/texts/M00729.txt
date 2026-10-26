@@ -1,2 +1,0 @@
-human goes forward starting with left, turns around and goes back to starting position#human/PROPN go/VERB forward/ADV start/VERB with/ADP left/NOUN turn/VERB around/ADV and/CCONJ go/VERB back/ADV to/ADP start/VERB position/NOUN#0.0#0.0
-A person turns 180 degrees on his right foot.#A/DET person/NOUN turn/VERB degree/NOUN on/ADP his/DET right/ADJ foot/NOUN#0.0#0.0

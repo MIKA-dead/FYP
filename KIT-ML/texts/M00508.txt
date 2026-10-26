@@ -1,2 +1,0 @@
-human runs for about five steps starting with left foot#human/ADJ run/VERB for/ADP about/ADV five/NUM step/NOUN start/VERB with/ADP left/ADJ foot/NOUN#0.0#0.0
-Somebody runs straight on.#Somebody/PRON run/VERB straight/ADV on/ADV#0.0#0.0

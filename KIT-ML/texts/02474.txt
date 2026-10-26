@@ -1,1 +1,0 @@
-a person walks, picks up an object and inspects it#a/DET person/NOUN walk/VERB pick/VERB up/ADP an/DET object/NOUN and/CCONJ inspect/VERB it/PRON#0.0#0.0

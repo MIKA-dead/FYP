@@ -1,4 +1,0 @@
-A person accelerates forward and then slows down again#A/DET person/NOUN accelerate/VERB forward/ADV and/CCONJ then/ADV slow/VERB down/ADP again/ADV#0.0#0.0
-A person walks forward.#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
-a person running energetically and brakes abruptly.#a/DET person/NOUN run/VERB energetically/ADV and/CCONJ brake/NOUN abruptly/ADV#0.0#0.0
-The human is running#The/DET human/NOUN is/AUX run/VERB#0.0#0.0

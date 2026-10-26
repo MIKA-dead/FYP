@@ -1,1 +1,0 @@
-A human performs one large step forwards and rightwards.#A/DET human/ADJ perform/VERB one/NUM large/ADJ step/NOUN forward/NOUN and/CCONJ rightward/NOUN#0.0#0.0

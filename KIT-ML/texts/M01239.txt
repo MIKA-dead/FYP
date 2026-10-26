@@ -1,2 +1,0 @@
-A person lifting the arms in a boxing manner and kicking with the left foot.#A/DET person/NOUN lift/VERB the/DET arm/NOUN in/ADP a/DET boxing/NOUN manner/NOUN and/CCONJ kick/VERB with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0
-a person kicks something with its left foot#a/DET person/NOUN kick/VERB something/PRON with/ADP its/DET left/ADJ foot/NOUN#0.0#0.0

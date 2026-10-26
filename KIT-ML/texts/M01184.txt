@@ -1,2 +1,0 @@
-A person walks slowly#A/DET person/NOUN walk/VERB slowly/ADV#0.0#0.0
-A person is slowly walking forward.#A/DET person/NOUN is/AUX slowly/ADV walk/VERB forward/ADV#0.0#0.0

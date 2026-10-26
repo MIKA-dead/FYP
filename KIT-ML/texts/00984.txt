@@ -1,2 +1,0 @@
-A person walks a distance of a quarter of a circle to the right.#A/DET person/NOUN walk/VERB a/DET distance/NOUN of/ADP a/DET quarter/NOUN of/ADP a/DET circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-A person is walking in a curve to the right.#A/DET person/NOUN is/AUX walk/VERB in/ADP a/DET curve/NOUN to/ADP the/DET right/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-A human running#A/DET human/ADJ running/NOUN#0.0#0.0
-A person running forward.#A/DET person/NOUN run/VERB forward/ADV#0.0#0.0

@@ -1,2 +1,0 @@
-a person walks a few steps#a/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN#0.0#0.0
-a person walks forwards quite easy#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV easy/ADJ#0.0#0.0

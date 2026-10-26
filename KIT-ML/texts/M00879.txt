@@ -1,2 +1,0 @@
-a person walks forward, turns around and takes a few steps forward again#a/DET person/NOUN walk/VERB forward/ADV turn/VERB around/ADV and/CCONJ take/VERB a/DET few/ADJ step/NOUN forward/ADV again/ADV#0.0#0.0
-A human walks forwards, turn and walks back#A/DET human/ADJ walk/VERB forwards/ADV turn/VERB and/CCONJ walk/VERB back/ADV#0.0#0.0

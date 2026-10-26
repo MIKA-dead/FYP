@@ -1,3 +1,0 @@
-A person walks forward and is pushed to the right#A/DET person/NOUN walk/VERB forward/ADV and/CCONJ is/AUX push/VERB to/ADP the/DET right/NOUN#0.0#0.0
-A person gets pushed from the left while walking forward.#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET left/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0
-a person walks forwards but gets pushed from the left and stumbles right#a/DET person/NOUN walk/VERB forwards/ADV but/CCONJ get/VERB push/VERB from/ADP the/DET left/NOUN and/CCONJ stumble/NOUN right/ADJ#0.0#0.0

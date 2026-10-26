@@ -1,1 +1,0 @@
-A person walking forwards, turning on the left foot and then walking back again#A/DET person/NOUN walk/VERB forwards/ADV turn/VERB on/ADP the/DET left/ADJ foot/NOUN and/CCONJ then/ADV walk/VERB back/ADV again/ADV#0.0#0.0

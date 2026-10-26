@@ -1,4 +1,0 @@
-A persons walks fast straightforward#A/DET person/NOUN walk/VERB fast/ADJ straightforward/NOUN#0.0#0.0
-A person is walking forward.#A/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0
-A person walks fast.#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0
-a person walks forward a few steps#a/DET person/NOUN walk/VERB forward/ADV a/DET few/ADJ step/NOUN#0.0#0.0

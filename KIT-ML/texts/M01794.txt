@@ -1,1 +1,0 @@
-A person walks straight, recovers from a hard pushed from the right, and returns to the original path.#A/DET person/NOUN walk/VERB straight/ADV recover/NOUN from/ADP a/DET hard/ADJ push/VERB from/ADP the/DET right/NOUN and/CCONJ return/VERB to/ADP the/DET original/ADJ path/NOUN#0.0#0.0

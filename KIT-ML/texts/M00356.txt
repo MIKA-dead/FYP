@@ -1,2 +1,0 @@
-A person walks in a circle.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0
-A human performs a jump to the right.#A/DET human/NOUN perform/VERB a/DET jump/NOUN to/ADP the/DET right/NOUN#0.0#0.0

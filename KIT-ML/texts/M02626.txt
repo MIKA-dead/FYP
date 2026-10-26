@@ -1,1 +1,0 @@
-A person performes multiple dance moves#A/DET person/NOUN perform/VERB multiple/ADJ dance/NOUN move/NOUN#0.0#0.0

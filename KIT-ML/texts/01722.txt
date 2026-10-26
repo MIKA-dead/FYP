@@ -1,2 +1,0 @@
-Someone gets pushed backwards.#Someone/PRON get/VERB push/VERB backwards/ADV#0.0#0.0
-A person gets pushed from the front a few meters back#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN a/DET few/ADJ meter/NOUN back/ADV#0.0#0.0

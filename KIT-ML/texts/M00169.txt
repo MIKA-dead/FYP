@@ -1,3 +1,0 @@
-A person walking backwards 4 steps with relatively small steps#A/DET person/NOUN walk/VERB backwards/ADV step/NOUN with/ADP relatively/ADV small/ADJ step/NOUN#0.0#0.0
-A person takes 4 steps backwards starting with the right foot.#A/DET person/NOUN take/VERB step/NOUN backwards/ADV start/VERB with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
-A person takes five backward steps.#A/DET person/NOUN take/VERB five/NUM backward/ADJ step/NOUN#0.0#0.0

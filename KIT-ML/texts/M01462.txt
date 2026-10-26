@@ -1,5 +1,0 @@
-A person plays violin.#A/DET person/NOUN play/VERB violin/NOUN#0.0#0.0
-A human performs 5 strokes on a violine#A/DET human/ADJ perform/VERB stroke/NOUN on/ADP a/DET violine/NOUN#0.0#0.0
-a person plays the violin#a/DET person/NOUN play/VERB the/DET violin/NOUN#0.0#0.0
-A person plays the violin while holding it with his right hand and playing it with his left arm.#A/DET person/NOUN play/VERB the/DET violin/NOUN while/SCONJ hold/VERB it/PRON with/ADP his/DET right/ADJ hand/NOUN and/CCONJ play/VERB it/PRON with/ADP his/DET left/ADJ arm/NOUN#0.0#0.0
-someone wipes a surface with the same height of his neck.#someone/PRON wipe/VERB a/DET surface/NOUN with/ADP the/DET same/ADJ height/NOUN of/ADP his/DET neck/NOUN#0.0#0.0

@@ -1,3 +1,0 @@
-a person goes down on all fours and starts crawling#a/DET person/NOUN go/VERB down/ADP on/ADP all/DET four/NOUN and/CCONJ start/VERB crawl/VERB#0.0#0.0
-A standing person going down on his knees and hands to crawl forward.#A/DET stand/VERB person/NOUN go/VERB down/ADP on/ADP his/DET knee/NOUN and/CCONJ hand/NOUN to/PART crawl/VERB forward/ADV#0.0#0.0
-human kneels down and crawls on the ground#human/ADJ kneel/VERB down/ADP and/CCONJ crawl/VERB on/ADP the/DET ground/NOUN#0.0#0.0

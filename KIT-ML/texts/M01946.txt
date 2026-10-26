@@ -1,3 +1,0 @@
-A person gets pushed from the front and recovers in 1 step.#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN and/CCONJ recover/NOUN in/ADP step/NOUN#0.0#0.0
-A person takes a large and a small step backward.#A/DET person/NOUN take/VERB a/DET large/ADJ and/CCONJ a/DET small/ADJ step/NOUN backward/ADV#0.0#0.0
-a person gets pushed from the front#a/DET person/NOUN get/VERB push/VERB from/ADP the/DET front/NOUN#0.0#0.0

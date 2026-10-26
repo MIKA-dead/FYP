@@ -1,3 +1,0 @@
-A person makes one big step an one small step backwards.#A/DET person/NOUN make/VERB one/NUM big/ADJ step/NOUN an/DET one/NUM small/ADJ step/NOUN backwards/ADV#0.0#0.0
-A human is pushed from the front#A/DET human/NOUN is/AUX push/VERB from/ADP the/DET front/NOUN#0.0#0.0
-a person stands still and gets pushed backwards#a/DET person/NOUN stand/VERB still/ADV and/CCONJ get/VERB push/VERB backwards/ADV#0.0#0.0

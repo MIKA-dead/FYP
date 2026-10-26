@@ -1,5 +1,0 @@
-A person stomps down his right foot.#A/DET person/NOUN stomp/VERB down/ADP his/DET right/ADJ foot/NOUN#0.0#0.0
-human stomps its right foot on the ground#human/ADJ stomps/PROPN its/DET right/ADJ foot/NOUN on/ADP the/DET ground/NOUN#0.0#0.0
-A person lifts the right foot and sets it back to the ground again.#A/DET person/NOUN lift/VERB the/DET right/ADJ foot/NOUN and/CCONJ set/VERB it/PRON back/ADV to/ADP the/DET ground/NOUN again/ADV#0.0#0.0
-A human lifts its right foot and stomps with the foot on the ground.#A/DET human/ADJ lift/VERB its/DET right/ADJ foot/NOUN and/CCONJ stomp/NOUN with/ADP the/DET foot/NOUN on/ADP the/DET ground/NOUN#0.0#0.0
-A person stamps the ground with his right foot.#A/DET person/NOUN stamp/VERB the/DET ground/NOUN with/ADP his/DET right/ADJ foot/NOUN#0.0#0.0

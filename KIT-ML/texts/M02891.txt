@@ -1,1 +1,0 @@
-A human performs a kick with the left foot.#A/DET human/NOUN perform/VERB a/DET kick/NOUN with/ADP the/DET left/ADJ foot/NOUN#0.0#0.0

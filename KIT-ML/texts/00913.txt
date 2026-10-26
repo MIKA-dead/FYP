@@ -1,3 +1,0 @@
-A person standing still, then running for a few steps and standing still again.#A/DET person/NOUN stand/VERB still/ADV then/ADV run/VERB for/ADP a/DET few/ADJ step/NOUN and/CCONJ stand/VERB still/ADV again/ADV#0.0#0.0
-a person walks forwards quite fast but not running#a/DET person/NOUN walk/VERB forwards/ADV quite/ADV fast/ADV but/CCONJ not/PART run/VERB#0.0#0.0
-A person walks fast#A/DET person/NOUN walk/VERB fast/ADV#0.0#0.0

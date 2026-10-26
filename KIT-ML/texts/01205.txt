@@ -1,3 +1,0 @@
-human dances basic movement of slow waltz#human/ADJ dance/NOUN basic/ADJ movement/NOUN of/ADP slow/ADJ waltz/PROPN#0.0#0.0
-a persons dances with another person#a/DET person/NOUN dance/VERB with/ADP another/DET person/NOUN#0.0#0.0
-A human is practicing waltz steps.#A/DET human/NOUN is/AUX practice/VERB waltz/NOUN step/NOUN#0.0#0.0

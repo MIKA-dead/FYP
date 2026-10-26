@@ -1,2 +1,0 @@
-A human is being pushed from the left side, so that it stumbles to the right, balancing itself#A/DET human/NOUN is/AUX being/AUX push/VERB from/ADP the/DET left/ADJ side/NOUN so/SCONJ that/SCONJ it/PRON stumble/VERB to/ADP the/DET right/NOUN balance/VERB itself/PRON#0.0#0.0
-Somebody is pushed on his left shoulder to the right.#Somebody/PRON is/AUX push/VERB on/ADP his/DET left/ADJ shoulder/NOUN to/ADP the/DET right/NOUN#0.0#0.0

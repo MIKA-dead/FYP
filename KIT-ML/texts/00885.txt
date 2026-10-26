@@ -1,3 +1,0 @@
-A person walks forward, turns around on the spot and walks back#A/DET person/NOUN walk/VERB forward/ADV turn/VERB around/ADP on/ADP the/DET spot/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
-human goes forward, turns around partway, and goes back to the starting point#human/PROPN go/VERB forward/ADV turn/VERB around/ADP partway/NOUN and/CCONJ go/VERB back/ADV to/ADP the/DET starting/NOUN point/NOUN#0.0#0.0
-a person walks forwards a few step the turn 180 degrees to the left and keeps walking#a/DET person/NOUN walk/VERB forwards/ADV a/DET few/ADJ step/NOUN the/DET turn/NOUN degree/NOUN to/ADP the/DET left/NOUN and/CCONJ keep/VERB walk/VERB#0.0#0.0

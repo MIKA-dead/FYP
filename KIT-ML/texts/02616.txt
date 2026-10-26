@@ -1,1 +1,0 @@
-A person is walking forward while looking around.#A/DET person/NOUN is/AUX walk/VERB forward/ADV while/SCONJ look/VERB around/ADV#0.0#0.0

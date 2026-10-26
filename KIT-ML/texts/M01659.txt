@@ -1,2 +1,0 @@
-A person walks forward#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0
-human goes forward starting with left#human/PROPN go/VERB forward/ADV start/VERB with/ADP left/ADJ#0.0#0.0

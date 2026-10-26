@@ -1,2 +1,0 @@
-human goes in a circle clockwise#human/PROPN go/VERB in/ADP a/DET circle/NOUN clockwise/NOUN#0.0#0.0
-A human is walking in a circle to its right.#A/DET human/NOUN is/AUX walk/VERB in/ADP a/DET circle/NOUN to/ADP its/DET right/NOUN#0.0#0.0

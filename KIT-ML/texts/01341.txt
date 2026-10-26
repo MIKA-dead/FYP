@@ -1,2 +1,0 @@
-A human is playing golf.#A/DET human/NOUN is/AUX play/VERB golf/NOUN#0.0#0.0
-A person makes minigolf playing motions#A/DET person/NOUN make/VERB minigolf/NOUN play/VERB motion/NOUN#0.0#0.0

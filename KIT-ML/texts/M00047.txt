@@ -1,3 +1,0 @@
-A person is walking a right-turn#A/DET person/NOUN is/AUX walk/VERB a/DET rightturn/NOUN#0.0#0.0
-A person walking forward in a 90° curve.#A/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET curve/NOUN#0.0#0.0
-A person walks a quarter circle to the left, taking four steps.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN take/VERB four/NUM step/NOUN#0.0#0.0

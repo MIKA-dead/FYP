@@ -1,1 +1,0 @@
-A person throws an object with the right hand.#A/DET person/NOUN throw/VERB an/DET object/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person is moving slowly forward while holding his injured leg with hands.#A/DET person/NOUN is/AUX move/VERB slowly/ADV forward/ADV while/SCONJ hold/VERB his/DET injured/ADJ leg/NOUN with/ADP hand/NOUN#0.0#0.0

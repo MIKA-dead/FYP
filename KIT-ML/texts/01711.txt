@@ -1,2 +1,0 @@
-a person gets shoved from the back#a/DET person/NOUN get/VERB shove/VERB from/ADP the/DET back/NOUN#0.0#0.0
-a human makes one step forward, as if he was pushed in the back.#a/DET human/NOUN make/VERB one/NUM step/VERB forward/ADV as/SCONJ if/SCONJ he/PRON was/AUX push/VERB in/ADP the/DET back/NOUN#0.0#0.0

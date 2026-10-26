@@ -1,3 +1,0 @@
-A human walking slowly#A/DET human/ADJ walking/NOUN slowly/ADV#0.0#0.0
-A person performs seven rather slow forward steps.#A/DET person/NOUN perform/VERB seven/NUM rather/ADV slow/ADJ forward/ADV step/NOUN#0.0#0.0
-A person walks forward#A/DET person/NOUN walk/VERB forward/ADV#0.0#0.0

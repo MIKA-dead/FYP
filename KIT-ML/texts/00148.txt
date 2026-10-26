@@ -1,2 +1,0 @@
-A person walks in a quarter circle clockwise with 4 steps.#A/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN clockwise/NOUN with/ADP step/NOUN#0.0#0.0
-A person walks a quarter, right sided circle#A/DET person/NOUN walk/VERB a/DET quarter/NOUN right/ADJ side/VERB circle/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-A human makes a squat.#A/DET human/NOUN make/VERB a/DET squat/NOUN#0.0#0.0
-A person does a squad exercise#A/DET person/NOUN does/AUX a/DET squad/NOUN exercise/NOUN#0.0#0.0

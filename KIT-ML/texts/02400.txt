@@ -1,1 +1,0 @@
-A person is doing punch moves while stepping forward and backward again.#A/DET person/NOUN is/AUX do/VERB punch/NOUN move/NOUN while/SCONJ step/VERB forward/ADV and/CCONJ backward/ADV again/ADV#0.0#0.0

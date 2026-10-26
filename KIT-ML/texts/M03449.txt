@@ -1,1 +1,0 @@
-The human dances a weird dance.#The/DET human/NOUN dance/VERB a/DET weird/ADJ dance/NOUN#0.0#0.0

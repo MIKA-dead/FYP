@@ -1,1 +1,0 @@
-A human catches a basketball and dribbles with the ball.#A/DET human/ADJ catch/NOUN a/DET basketball/NOUN and/CCONJ dribble/NOUN with/ADP the/DET ball/NOUN#0.0#0.0

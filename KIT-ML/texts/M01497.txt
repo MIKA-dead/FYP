@@ -1,6 +1,0 @@
-Person stirring something#person/NOUN stir/VERB something/PRON#0.0#0.0
-A person wipes with their right hand.#A/DET person/NOUN wipe/VERB with/ADP their/DET right/ADJ hand/NOUN#0.0#0.0
-A person is turning a wheel#A/DET person/NOUN is/AUX turn/VERB a/DET wheel/NOUN#0.0#0.0
-a person wipes something away with its right hand#a/DET person/NOUN wipe/VERB something/PRON away/ADV with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
-A person is wiping with his right hand.#A/DET person/NOUN is/AUX wipe/VERB with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0
-The human moves his arm to the right#The/DET human/NOUN move/VERB his/DET arm/NOUN to/ADP the/DET right/NOUN#0.0#0.0

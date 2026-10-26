@@ -1,1 +1,0 @@
-A person walks carefully 4 steps forward.#A/DET person/NOUN walk/VERB carefully/ADV step/NOUN forward/ADV#0.0#0.0

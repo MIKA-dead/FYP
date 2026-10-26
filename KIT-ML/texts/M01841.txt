@@ -1,3 +1,0 @@
-A subject being pushed#A/DET subject/ADJ being/AUX push/VERB#0.0#0.0
-A person is pushed away and  tumbles backwards.#A/DET person/NOUN is/AUX push/VERB away/ADV and/CCONJ tumble/NOUN backwards/ADV#0.0#0.0
-a person gets pushed backwards#a/DET person/NOUN get/VERB push/VERB backwards/ADV#0.0#0.0

@@ -1,3 +1,0 @@
-A human beats with his right arm.#A/DET human/ADJ beat/NOUN with/ADP his/DET right/ADJ arm/NOUN#0.0#0.0
-Someone is throwing a ball with his right hand or playing tennis.#Someone/PRON is/AUX throw/VERB a/DET ball/NOUN with/ADP his/DET right/ADJ hand/NOUN or/CCONJ playing/NOUN tennis/NOUN#0.0#0.0
-a person throws something with its right arm#a/DET person/NOUN throw/VERB something/PRON with/ADP its/DET right/ADJ arm/NOUN#0.0#0.0

@@ -1,2 +1,0 @@
-A person stumbles forward while walking.#A/DET person/NOUN stumble/VERB forward/ADV while/SCONJ walk/VERB#0.0#0.0
-a person walks forward and gets pushed from behind and stumbles a few meters#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ get/VERB push/VERB from/ADP behind/ADV and/CCONJ stumble/VERB a/DET few/ADJ meter/NOUN#0.0#0.0

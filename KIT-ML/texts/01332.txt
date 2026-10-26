@@ -1,2 +1,0 @@
-A person jumps to the left.#A/DET person/NOUN jump/VERB to/ADP the/DET left/NOUN#0.0#0.0
-The human perfoms a jump to the left#The/DET human/ADJ perfom/NOUN a/DET jump/NOUN to/ADP the/DET left/NOUN#0.0#0.0

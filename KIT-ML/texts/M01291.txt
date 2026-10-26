@@ -1,3 +1,0 @@
-A person performs a slight kick with the right foot.#A/DET person/NOUN perform/VERB a/DET slight/ADJ kick/NOUN with/ADP the/DET right/ADJ foot/NOUN#0.0#0.0
-someone gives a kick.#someone/PRON give/VERB a/DET kick/NOUN#0.0#0.0
-Somone is raising his fists in front of his upper body and doing a low kick with his right foot.#Somone/PROPN is/AUX raise/VERB his/DET fist/NOUN in/ADP front/NOUN of/ADP his/DET upper/ADJ body/NOUN and/CCONJ do/VERB a/DET low/ADJ kick/NOUN with/ADP his/DET right/ADJ foot/NOUN#0.0#0.0

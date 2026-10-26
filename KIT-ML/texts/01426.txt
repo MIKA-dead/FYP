@@ -1,3 +1,0 @@
-A person plays the air guitar.#A/DET person/NOUN play/VERB the/DET air/NOUN guitar/NOUN#0.0#0.0
-A human is striking a guitare with the right hand#A/DET human/NOUN is/AUX strike/VERB a/DET guitare/NOUN with/ADP the/DET right/ADJ hand/NOUN#0.0#0.0
-A standing person moves its hands as if playing the guitar.#A/DET stand/VERB person/NOUN move/VERB its/DET hand/NOUN as/SCONJ if/SCONJ play/VERB the/DET guitar/NOUN#0.0#0.0

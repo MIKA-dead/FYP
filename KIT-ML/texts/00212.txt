@@ -1,1 +1,0 @@
-A person walking a few steps#A/DET person/NOUN walk/VERB a/DET few/ADJ step/NOUN#0.0#0.0

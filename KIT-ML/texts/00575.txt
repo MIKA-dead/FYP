@@ -1,4 +1,0 @@
-A human turning left#A/DET human/ADJ turning/NOUN left/NOUN#0.0#0.0
-A person walks in a quarter of a little circle#A/DET person/NOUN walk/VERB in/ADP a/DET quarter/NOUN of/ADP a/DET little/ADJ circle/NOUN#0.0#0.0
-A person walks a quarter circle to the left, taking five steps.#A/DET person/NOUN walk/VERB a/DET quarter/NOUN circle/NOUN to/ADP the/DET left/NOUN take/VERB five/NUM step/NOUN#0.0#0.0
-Somebody walks straight on and a quarter circle againgst clockwise direction after this.#Somebody/PRON walk/VERB straight/ADV on/ADV and/CCONJ a/DET quarter/NOUN circle/NOUN againgst/NOUN clockwise/NOUN direction/NOUN after/ADP this/DET#0.0#0.0

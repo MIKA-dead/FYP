@@ -1,3 +1,0 @@
-A person is walking in small circles.#A/DET person/NOUN is/AUX walk/VERB in/ADP small/ADJ circle/NOUN#0.0#0.0
-someone walks in a circle clockwise three consecutive times.#someone/PRON walk/VERB in/ADP a/DET circle/NOUN clockwise/ADP three/NUM consecutive/ADJ time/NOUN#0.0#0.0
-a person walks in a circle to the right 3 times#a/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN to/ADP the/DET right/ADJ time/NOUN#0.0#0.0

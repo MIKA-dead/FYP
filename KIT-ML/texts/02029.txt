@@ -1,9 +1,0 @@
-A person walks forward first and then turns around.#A/DET person/NOUN walk/VERB forward/ADV first/ADV and/CCONJ then/ADV turn/VERB around/ADV#0.0#0.0
-A human walks and turns on the spot.#A/DET human/ADJ walk/NOUN and/CCONJ turn/VERB on/ADP the/DET spot/NOUN#0.0#0.0
-A human goes back and forth.#A/DET human/NOUN go/VERB back/ADV and/CCONJ forth/ADV#0.0#0.0
-Person walking and then turning on one foot and walking back#person/NOUN walk/VERB and/CCONJ then/ADV turn/VERB on/ADP one/NUM foot/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
-a person walks streight ahead at a certain point turning around an walking in the reverse direction#a/DET person/NOUN walk/VERB streight/ADJ ahead/ADV at/ADP a/DET certain/ADJ point/NOUN turn/VERB around/ADP an/DET walking/NOUN in/ADP the/DET reverse/ADJ direction/NOUN#0.0#0.0
-someone is looking to the ground by beeing a flip-flopper#someone/PRON is/AUX look/VERB to/ADP the/DET ground/NOUN by/ADP beee/VERB a/DET flipflopper/NOUN#0.0#0.0
-A person walks little bit to the front and then makes a sharp turn to the right#A/DET person/NOUN walk/VERB little/ADJ bit/NOUN to/ADP the/DET front/NOUN and/CCONJ then/ADV make/VERB a/DET sharp/ADJ turn/NOUN to/ADP the/DET right/NOUN#0.0#0.0
-a person walks forward takes a 180 degree turn to the right and keeps on walking#a/DET person/NOUN walk/VERB forward/ADV take/VERB a/DET degree/NOUN turn/NOUN to/ADP the/DET right/NOUN and/CCONJ keep/VERB on/ADP walk/VERB#0.0#0.0
-human goes forward and turns around partway#human/PROPN go/VERB forward/ADV and/CCONJ turn/VERB around/ADP partway/NOUN#0.0#0.0

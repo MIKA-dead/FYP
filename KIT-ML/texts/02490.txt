@@ -1,1 +1,0 @@
-A person is bent over walking to the right then to the left.#A/DET person/NOUN is/AUX bent/ADJ over/ADP walk/VERB to/ADP the/DET right/NOUN then/ADV to/ADP the/DET left/NOUN#0.0#0.0

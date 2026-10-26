@@ -1,4 +1,0 @@
-Subject runs forward.#Subject/ADJ run/VERB forward/ADV#0.0#0.0
-A standing person takes five running steps forward and comes to rest again.#A/DET stand/VERB person/NOUN take/VERB five/NUM running/ADJ step/NOUN forward/ADV and/CCONJ come/VERB to/PART rest/VERB again/ADV#0.0#0.0
-a person jogs forwards some steps#a/DET person/NOUN jog/VERB forward/VERB some/DET step/NOUN#0.0#0.0
-A person is running forward.#A/DET person/NOUN is/AUX run/VERB forward/ADV#0.0#0.0

@@ -1,1 +1,0 @@
-A person is going around a left corner.#A/DET person/NOUN is/AUX go/VERB around/ADV a/DET left/ADJ corner/NOUN#0.0#0.0

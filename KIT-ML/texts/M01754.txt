@@ -1,2 +1,0 @@
-Person is making 3 steps forward, 2 steps back and than again forward#person/NOUN is/AUX make/VERB step/NOUN forward/ADV step/NOUN back/ADV and/CCONJ than/SCONJ again/ADV forward/ADV#0.0#0.0
-Someone is beeing pushed from the front while walking forward.#Someone/PRON is/AUX beee/VERB push/VERB from/ADP the/DET front/NOUN while/SCONJ walk/VERB forward/ADV#0.0#0.0

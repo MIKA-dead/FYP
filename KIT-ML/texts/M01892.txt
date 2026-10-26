@@ -1,2 +1,0 @@
-a person reacts to perturbation during walking#a/DET person/NOUN react/VERB to/PART perturbation/VERB during/ADP walk/VERB#0.0#0.0
-a person walks forwards and gets pushed hard from the left#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ get/VERB push/VERB hard/ADV from/ADP the/DET left/NOUN#0.0#0.0

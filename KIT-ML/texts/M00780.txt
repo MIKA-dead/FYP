@@ -1,4 +1,0 @@
-Someone moves forward in a jog.#Someone/PRON move/VERB forward/ADV in/ADP a/DET jog/NOUN#0.0#0.0
-A human starts jogging, moving up its hands and stopping the jogging movement#A/DET human/NOUN start/VERB jogging/NOUN move/VERB up/ADP its/DET hand/NOUN and/CCONJ stop/VERB the/DET jogging/NOUN movement/NOUN#0.0#0.0
-a person jogs for some meters#a/DET person/NOUN jog/VERB for/ADP some/DET meter/NOUN#0.0#0.0
-A Person jogs a few steps.#A/DET person/NOUN jog/VERB a/DET few/ADJ step/NOUN#0.0#0.0

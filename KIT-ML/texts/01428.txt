@@ -1,6 +1,0 @@
-a human plays guitar.#a/DET human/ADJ play/NOUN guitar/NOUN#0.0#0.0
-A person plays the guitar.#A/DET person/NOUN play/VERB the/DET guitar/NOUN#0.0#0.0
-a person plays the guitar with its right hand#a/DET person/NOUN play/VERB the/DET guitar/NOUN with/ADP its/DET right/ADJ hand/NOUN#0.0#0.0
-A person makes guitar playing motions#A/DET person/NOUN make/VERB guitar/NOUN playing/NOUN motion/NOUN#0.0#0.0
-Someone plays guitar with his right hand.#Someone/PRON play/VERB guitar/NOUN with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0
-Someone is beating something#Someone/PRON is/AUX beat/VERB something/PRON#0.0#0.0

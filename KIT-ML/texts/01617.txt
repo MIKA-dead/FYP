@@ -1,6 +1,0 @@
-Subject is walking placing its feet on objects#Subject/PROPN is/AUX walk/VERB place/VERB its/DET foot/NOUN on/ADP object/NOUN#0.0#0.0
-A person walking very carefully above a platform while looking at the ground.#A/DET person/NOUN walk/VERB very/ADV carefully/ADV above/ADP a/DET platform/NOUN while/SCONJ look/VERB at/ADP the/DET ground/NOUN#0.0#0.0
-A person walks over stepping stones.#A/DET person/NOUN walk/VERB over/ADP stepping/ADJ stone/NOUN#0.0#0.0
-a person walks over some obstacles#a/DET person/NOUN walk/VERB over/ADP some/DET obstacle/NOUN#0.0#0.0
-A person walks over an obstacle.#A/DET person/NOUN walk/VERB over/ADP an/DET obstacle/NOUN#0.0#0.0
-The human walks like a alcoholized person#The/DET human/NOUN walk/VERB like/SCONJ a/DET alcoholize/VERB person/NOUN#0.0#0.0

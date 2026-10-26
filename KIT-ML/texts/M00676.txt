@@ -1,3 +1,0 @@
-The human plays air guitar and sways.#The/DET human/ADJ play/VERB air/PROPN guitar/PROPN and/CCONJ sway/NOUN#0.0#0.0
-a person plays the guitar with its left hand#a/DET person/NOUN play/VERB the/DET guitar/NOUN with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0
-A person plays an instrument.#A/DET person/NOUN play/VERB an/DET instrument/NOUN#0.0#0.0

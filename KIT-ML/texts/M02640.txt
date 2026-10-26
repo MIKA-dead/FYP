@@ -1,1 +1,0 @@
-A person walks in a clockwise square while also stepping over an obstacle.#A/DET person/NOUN walk/VERB in/ADP a/DET clockwise/ADJ square/NOUN while/SCONJ also/ADV step/VERB over/ADP an/DET obstacle/NOUN#0.0#0.0

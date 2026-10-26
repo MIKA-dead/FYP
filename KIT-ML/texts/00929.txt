@@ -1,2 +1,0 @@
-Subject walks in a quarter circle clockwise.#Subject/ADJ walk/VERB in/ADP a/DET quarter/NOUN circle/NOUN clockwise/NOUN#0.0#0.0
-Someone is walking forward 4 steps starting with the right leg and performing a right turn.#Someone/PRON is/AUX walk/VERB forward/ADV step/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN and/CCONJ perform/VERB a/DET right/ADJ turn/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person is shaking arms and legs like doing a warming up.#A/DET person/NOUN is/AUX shake/VERB arm/NOUN and/CCONJ leg/NOUN like/SCONJ do/VERB a/DET warming/NOUN up/ADP#0.0#0.0

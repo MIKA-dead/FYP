@@ -1,3 +1,0 @@
-A human is tapping his left arm while facing right.#A/DET human/NOUN is/AUX tap/VERB his/DET left/ADJ arm/NOUN while/SCONJ face/VERB right/ADV#0.0#0.0
-A person plays the guitar with his left hand.#A/DET person/NOUN play/VERB the/DET guitar/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0
-A person plays an instument with his left hand.#A/DET person/NOUN play/VERB an/DET instument/NOUN with/ADP his/DET left/ADJ hand/NOUN#0.0#0.0

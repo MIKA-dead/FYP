@@ -1,1 +1,0 @@
-A person is doing a pirouette.#A/DET person/NOUN is/AUX do/VERB a/DET pirouette/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A human sits down on the floor and stands up again.#A/DET human/NOUN sit/VERB down/ADP on/ADP the/DET floor/NOUN and/CCONJ stand/VERB up/ADP again/ADV#0.0#0.0

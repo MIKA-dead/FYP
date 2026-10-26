@@ -1,5 +1,0 @@
-A human sprints#A/DET human/ADJ sprint/NOUN#0.0#0.0
-A person makes a few fast steps forward, a bit like running.#A/DET person/NOUN make/VERB a/DET few/ADJ fast/ADJ step/NOUN forward/ADV a/DET bit/NOUN like/SCONJ run/VERB#0.0#0.0
-A person is running a few steps forward.#A/DET person/NOUN is/AUX run/VERB a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0
-The human is running#The/DET human/NOUN is/AUX run/VERB#0.0#0.0
-Someone starts running and then stops.#Someone/PRON start/VERB run/VERB and/CCONJ then/ADV stop/VERB#0.0#0.0

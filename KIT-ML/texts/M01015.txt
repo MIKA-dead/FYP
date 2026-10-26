@@ -1,2 +1,0 @@
-a person raises both hands above his head, lowers them and takes a step forward#a/DET person/NOUN raise/VERB both/DET hand/NOUN above/ADP his/DET head/NOUN lower/VERB them/PRON and/CCONJ take/VERB a/DET step/NOUN forward/ADV#0.0#0.0
-A person claps its hands over its head and then makes a step forward.#A/DET person/NOUN clap/VERB its/DET hand/NOUN over/ADP its/DET head/NOUN and/CCONJ then/ADV make/VERB a/DET step/NOUN forward/ADV#0.0#0.0

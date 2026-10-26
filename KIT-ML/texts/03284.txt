@@ -1,1 +1,0 @@
-A person is doing a diagonal step approximately 30 centimeters to the right and front starting with his left foot.#A/DET person/NOUN is/AUX do/VERB a/DET diagonal/ADJ step/NOUN approximately/ADV centimeter/NOUN to/ADP the/DET right/ADJ and/CCONJ front/NOUN start/VERB with/ADP his/DET left/ADJ foot/NOUN#0.0#0.0

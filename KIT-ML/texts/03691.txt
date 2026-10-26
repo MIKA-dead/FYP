@@ -1,1 +1,0 @@
-A human jogs.#A/DET human/ADJ jog/NOUN#0.0#0.0

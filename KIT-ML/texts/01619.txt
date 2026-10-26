@@ -1,2 +1,0 @@
-A person walks over uneven terrain.#A/DET person/NOUN walk/VERB over/ADP uneven/ADJ terrain/NOUN#0.0#0.0
-a person walks over some obstacles#a/DET person/NOUN walk/VERB over/ADP some/DET obstacle/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person walks slowly in a counterclockwise small circle.#A/DET person/NOUN walk/VERB slowly/ADV in/ADP a/DET counterclockwise/ADJ small/ADJ circle/NOUN#0.0#0.0

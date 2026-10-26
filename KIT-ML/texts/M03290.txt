@@ -1,1 +1,0 @@
-A human turns 360° rightwards while jumping in the air.#A/DET human/NOUN turn/VERB rightwards/ADV while/SCONJ jump/VERB in/ADP the/DET air/NOUN#0.0#0.0

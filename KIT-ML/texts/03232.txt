@@ -1,1 +1,0 @@
-The person performs a careful step forward of about 0.5 meters starting with the right leg#The/DET person/NOUN perform/VERB a/DET careful/ADJ step/NOUN forward/ADV of/ADP about/ADP meter/NOUN start/VERB with/ADP the/DET right/ADJ leg/NOUN#0.0#0.0

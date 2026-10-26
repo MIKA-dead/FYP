@@ -1,1 +1,0 @@
-A person gets pushed from the right while standing and performs a recovery step to the left.#A/DET person/NOUN get/VERB push/VERB from/ADP the/DET right/NOUN while/SCONJ stand/VERB and/CCONJ perform/VERB a/DET recovery/NOUN step/NOUN to/ADP the/DET left/NOUN#0.0#0.0

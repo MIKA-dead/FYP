@@ -1,2 +1,0 @@
-Subject walks forward.#Subject/ADJ walk/VERB forward/ADV#0.0#0.0
-A human is walking forward#A/DET human/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0

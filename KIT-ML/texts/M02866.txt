@@ -1,1 +1,0 @@
-A person is doing a swing movement like hitting a ball with a golf club.#A/DET person/NOUN is/AUX do/VERB a/DET swing/NOUN movement/NOUN like/SCONJ hit/VERB a/DET ball/NOUN with/ADP a/DET golf/NOUN club/NOUN#0.0#0.0

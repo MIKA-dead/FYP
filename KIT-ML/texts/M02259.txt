@@ -1,1 +1,0 @@
-A person hops forward with both feet for 4 hops, turns around hops back, turns around and hops forward for 3 hops again.#A/DET person/NOUN hop/VERB forward/ADV with/ADP both/DET foot/NOUN for/ADP hop/NOUN turn/VERB around/ADV hop/NOUN back/ADV turn/VERB around/ADV and/CCONJ hop/VERB forward/ADV for/ADP hop/NOUN again/ADV#0.0#0.0

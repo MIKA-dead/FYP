@@ -1,1 +1,0 @@
-A person walking in a circle to the right.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN to/ADP the/DET right/NOUN#0.0#0.0

@@ -1,1 +1,0 @@
-A person is slowly jogging forward.#A/DET person/NOUN is/AUX slowly/ADV jog/VERB forward/ADV#0.0#0.0

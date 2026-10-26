@@ -1,3 +1,0 @@
-A person walks in counterclockwise circle and stops facing 90 degrees to the right relative from the starting position.#A/DET person/NOUN walk/VERB in/ADP counterclockwise/PROPN circle/NOUN and/CCONJ stop/NOUN face/VERB degree/NOUN to/ADP the/DET right/ADJ relative/NOUN from/ADP the/DET start/VERB position/NOUN#0.0#0.0
-A human is walking three quarter of a circle to its left.#A/DET human/NOUN is/AUX walk/VERB three/NUM quarter/NOUN of/ADP a/DET circle/NOUN to/ADP its/DET left/NOUN#0.0#0.0
-A person walks in a circle.#A/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN#0.0#0.0

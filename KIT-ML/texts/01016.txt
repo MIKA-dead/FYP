@@ -1,3 +1,0 @@
-Person stumbling to the left#person/NOUN stumble/VERB to/ADP the/DET left/NOUN#0.0#0.0
-Someone gets pushed from the right then get back to position#Someone/PRON get/VERB push/VERB from/ADP the/DET right/NOUN then/ADV get/AUX back/ADV to/ADP position/NOUN#0.0#0.0
-a person takes a step to the left and a step to the right again#a/DET person/NOUN take/VERB a/DET step/NOUN to/ADP the/DET left/NOUN and/CCONJ a/DET step/NOUN to/ADP the/DET right/NOUN again/ADV#0.0#0.0

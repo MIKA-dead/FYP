@@ -1,1 +1,0 @@
-A person walks straight and walks afterwards upstairs.#A/DET person/NOUN walk/VERB straight/ADV and/CCONJ walk/VERB afterwards/ADV upstairs/ADV#0.0#0.0

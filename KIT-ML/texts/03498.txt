@@ -1,1 +1,0 @@
-A little bit bent forward person is jumping and running forward.#A/DET little/ADJ bit/NOUN bent/ADJ forward/ADP person/NOUN is/AUX jump/VERB and/CCONJ run/VERB forward/ADV#0.0#0.0

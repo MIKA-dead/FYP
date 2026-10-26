@@ -1,3 +1,0 @@
-A human turning right#A/DET human/ADJ turning/NOUN right/ADV#0.0#0.0
-A human performs a 90° right curve#A/DET human/NOUN perform/VERB a/DET right/ADJ curve/NOUN#0.0#0.0
-A person walks in a curve to the right.#A/DET person/NOUN walk/VERB in/ADP a/DET curve/NOUN to/ADP the/DET right/NOUN#0.0#0.0

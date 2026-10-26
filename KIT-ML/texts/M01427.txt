@@ -1,5 +1,0 @@
-A person plays a small guitar.#A/DET person/NOUN play/VERB a/DET small/ADJ guitar/NOUN#0.0#0.0
-A person plays the air guitar.#A/DET person/NOUN play/VERB the/DET air/NOUN guitar/NOUN#0.0#0.0
-Someone is playing an air banjo.#Someone/PRON is/AUX play/VERB an/DET air/NOUN banjo/NOUN#0.0#0.0
-A person plays guitar.#A/DET person/NOUN play/VERB guitar/NOUN#0.0#0.0
-A person plays the guitar with its left hand#A/DET person/NOUN play/VERB the/DET guitar/NOUN with/ADP its/DET left/ADJ hand/NOUN#0.0#0.0

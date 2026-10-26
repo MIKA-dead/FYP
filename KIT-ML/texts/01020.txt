@@ -1,2 +1,0 @@
-A person stumbling a few steps to the left#A/DET person/NOUN stumble/VERB a/DET few/ADJ step/NOUN to/ADP the/DET left/NOUN#0.0#0.0
-A person jumps to the left and walks back to his original position.#A/DET person/NOUN jump/VERB to/ADP the/DET left/NOUN and/CCONJ walk/VERB back/ADV to/ADP his/DET original/ADJ position/NOUN#0.0#0.0

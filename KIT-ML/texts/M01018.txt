@@ -1,2 +1,0 @@
-a person step to the right due to a push#a/DET person/NOUN step/NOUN to/ADP the/DET right/NOUN due/ADP to/ADP a/DET push/NOUN#0.0#0.0
-a person takes a shuffle step to the right and moves back to his starting point#a/DET person/NOUN take/VERB a/DET shuffle/NOUN step/NOUN to/ADP the/DET right/NOUN and/CCONJ move/VERB back/ADV to/ADP his/DET starting/NOUN point/NOUN#0.0#0.0

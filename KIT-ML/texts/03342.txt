@@ -1,1 +1,0 @@
-A person is doing multiple warmup fitness exercises like preparing for sport.#A/DET person/NOUN is/AUX do/VERB multiple/ADJ warmup/PROPN fitness/NOUN exercise/VERB like/SCONJ prepare/VERB for/ADP sport/NOUN#0.0#0.0

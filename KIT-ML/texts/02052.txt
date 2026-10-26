@@ -1,4 +1,0 @@
-A person raises his hands in a T pose and kneels down.#A/DET person/NOUN raise/VERB his/DET hand/NOUN in/ADP a/DET t/NOUN pose/NOUN and/CCONJ kneel/VERB down/ADP#0.0#0.0
-someone is kneeling down after performing a T-pose.#someone/PRON is/AUX kneel/VERB down/ADP after/ADP perform/VERB a/DET Tpose/PROPN#0.0#0.0
-A human extends his arms outwards and then goes down on both knees.#A/DET human/NOUN extend/VERB his/DET arm/NOUN outward/NOUN and/CCONJ then/ADV go/VERB down/ADP on/ADP both/DET knee/NOUN#0.0#0.0
-A person goes down to his knees and stretches his body.#A/DET person/NOUN go/VERB down/ADP to/ADP his/DET knee/NOUN and/CCONJ stretch/VERB his/DET body/NOUN#0.0#0.0

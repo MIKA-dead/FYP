@@ -1,2 +1,0 @@
-A person walks and turns on the spot#A/DET person/NOUN walk/VERB and/CCONJ turn/VERB on/ADP the/DET spot/NOUN#0.0#0.0
-Subject walks forward spins around and walks back.#Subject/ADJ walk/VERB forward/ADV spin/NOUN around/ADV and/CCONJ walk/VERB back/ADV#0.0#0.0
