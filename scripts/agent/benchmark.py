@@ -12,9 +12,13 @@ reports the quantitative metrics the advisor asked for:
   module (c) captioning   BLEU-1..4, ROUGE-L, CIDEr-D on held-out HumanML3D
                           clips with ground-truth captions
   loop                    success rate, edits to success, alignment gain,
-                          tool calls, wall time, tokens
+                          tool calls, wall time, tokens,
+                          instruction coverage (how many edit instructions were
+                          inside the tool's ability at all) and agent/checker
+                          agreement (was the controller calibrated?)
 
   python scripts/agent/benchmark.py --n 4 --max-edits 2 --out outputs/agent_bench
+  python scripts/agent/benchmark.py --goals-file test-samples/agent/goals_20.json --max-edits 2
   python scripts/agent/benchmark.py --no-llm --generator dataset   # baseline
 """
 from __future__ import annotations
@@ -85,7 +89,8 @@ def _diversity(clips: List[np.ndarray], frames: int = 32) -> Dict[str, float]:
 
 
 def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: bool,
-                  out_dir: Path, skip_caption_bench: bool = False) -> Dict[str, Any]:
+                  out_dir: Path, skip_caption_bench: bool = False,
+                  caption_n: int = 8) -> Dict[str, Any]:
     out_dir.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     episodes: List[Dict[str, Any]] = []
@@ -125,17 +130,27 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
             before = obs.get("before") or {}
             after = obs.get("after") or {}
             ok = bool(obs.get("ok"))
+            err = obs.get("error")
+            if ok:
+                status = "applied"
+            elif err == "unsupported_instruction":
+                status = "unsupported"
+            elif obs.get("invalid"):
+                status = "invalid_clip"
+            else:
+                status = "session_error"
             row = {
                 "goal": goal,
                 "instruction": obs.get("instruction") or st.get("args", {}).get("instruction"),
-                "status": "applied" if ok else (
-                    "invalid_clip" if obs.get("invalid") else "session_error"
-                ),
-                "error": obs.get("error"),
+                "family": obs.get("family"),
+                "status": status,
+                "error": err,
                 "invalid": obs.get("invalid") or [],
                 "rolled_back": bool(obs.get("rolled_back")),
                 "followed": bool((obs.get("instruction_following") or {}).get("followed")),
+                "verifiable": (obs.get("instruction_following") or {}).get("verifiable", True),
                 "no_change": bool(obs.get("no_change")),
+                "frames_ratio": obs.get("frames_ratio"),
                 "target_vs_rest": (obs.get("preservation") or {}).get("target_vs_rest"),
                 "non_target_mpjpe_norm": (obs.get("preservation") or {}).get("non_target_mpjpe_norm"),
                 "jerk_before": before.get("jerk"),
@@ -178,6 +193,10 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
         loop_rows.append({
             "goal": ep["goal"],
             "satisfied": ep["summary"]["satisfied"],
+            "agent_claim_satisfied": ep["summary"].get("agent_claim_satisfied"),
+            "checker_satisfied": ep["summary"].get("checker_satisfied"),
+            "agreement": ep["summary"].get("agreement"),
+            "check_calls": ep["summary"].get("check_calls"),
             "edits": ep["summary"]["edits"],
             "edit_attempts": sum(1 for s in ep["steps"] if s["action"] == "edit_motion"),
             "steps": len(ep["steps"]),
@@ -218,12 +237,27 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
             "n_rolled_back": sum(1 for r in attempt_rows if r["rolled_back"]),
             "n_invalid_clip": sum(1 for r in attempt_rows if r["status"] == "invalid_clip"),
             "n_session_error": sum(1 for r in attempt_rows if r["status"] == "session_error"),
+            "n_unsupported": sum(1 for r in attempt_rows if r["status"] == "unsupported"),
+            "instruction_coverage": round(
+                float(sum(1 for r in attempt_rows if r["status"] != "unsupported"))
+                / len(attempt_rows), 3
+            ) if attempt_rows else None,
             "instruction_following_rate": round(
-                float(np.mean([r["followed"] for r in edit_rows])), 3
-            ) if edit_rows else None,
+                float(np.mean([r["followed"] for r in edit_rows if r.get("verifiable", True)])), 3
+            ) if any(r.get("verifiable", True) for r in edit_rows) else None,
+            "n_unverifiable_edits": sum(1 for r in edit_rows if not r.get("verifiable", True)),
             "no_change_rate": round(
                 float(np.mean([r["no_change"] for r in edit_rows])), 3
             ) if edit_rows else None,
+            "mean_frame_retention": round(
+                float(np.mean([float(r["frames_ratio"]) for r in edit_rows
+                               if r.get("frames_ratio") is not None])), 3
+            ) if any(r.get("frames_ratio") is not None for r in edit_rows) else None,
+            "n_truncating_edits": sum(
+                1 for r in edit_rows
+                if r.get("frames_ratio") is not None and float(r["frames_ratio"]) < 0.70
+                and (r.get("family") or "") not in ("trim_trailing", "sit_remove_preamble")
+            ),
             "mean_non_target_mpjpe_norm": round(
                 float(np.mean([float(r["non_target_mpjpe_norm"]) for r in edit_rows
                                if r["non_target_mpjpe_norm"] is not None])), 4
@@ -237,6 +271,12 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
         "loop": {
             "rows": loop_rows,
             "success_rate": round(float(np.mean([r["satisfied"] for r in loop_rows])), 3),
+            "agreement_rate": round(
+                float(np.mean([r["agreement"] for r in loop_rows if r["agreement"] is not None])), 3
+            ) if any(r["agreement"] is not None for r in loop_rows) else None,
+            "check_coverage": round(
+                float(np.mean([bool(r["check_calls"]) for r in loop_rows])), 3
+            ) if loop_rows else None,
             "mean_edits": round(float(np.mean([r["edits"] for r in loop_rows])), 2),
             "mean_edit_attempts": round(float(np.mean([r["edit_attempts"] for r in loop_rows])), 2),
             "mean_steps": round(float(np.mean([r["steps"] for r in loop_rows])), 2),
@@ -249,7 +289,7 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
 
     if not skip_caption_bench:
         try:
-            report["module_c_caption"] = caption_benchmark(8)
+            report["module_c_caption"] = caption_benchmark(caption_n)
         except Exception as exc:  # noqa: BLE001
             report["module_c_caption"] = {"error": str(exc)}
 
@@ -292,13 +332,17 @@ def render_report(r: Dict[str, Any]) -> str:
         "",
         f"- attempts: {b['n_attempts']} · applied: {b['n']} · rolled back: {b['n_rolled_back']} "
         f"(invalid clip {b['n_invalid_clip']}, session error {b['n_session_error']})",
+        f"- unsupported instructions rejected before the backend: {b.get('n_unsupported')} "
+        f"· instruction coverage: **{b.get('instruction_coverage')}**",
         f"- instruction-following rate (applied edits only): **{b['instruction_following_rate']}** "
         f"· no-change rate: {b.get('no_change_rate')}",
+        f"- mean frame retention: {b.get('mean_frame_retention')} "
+        f"· truncating edits (kept <70% frames without a trim instruction): {b.get('n_truncating_edits')}",
         f"- mean non-target MPJPE (normalised by height): {b['mean_non_target_mpjpe_norm']}",
         f"- mean target/rest change ratio: {b['mean_target_vs_rest']}",
         "",
-        "| goal | instruction | status | followed | no change | target/rest | non-target MPJPE | jerk Δ |",
-        "|---|---|---|---|---|---|---|---|",
+        "| goal | instruction | family | status | followed | no change | target/rest | non-target MPJPE | jerk Δ |",
+        "|---|---|---|---|---|---|---|---|---|",
     ]
     for row in b["attempts"]:
         jd = None
@@ -306,7 +350,7 @@ def render_report(r: Dict[str, Any]) -> str:
             jd = round(float(row["jerk_after"]) - float(row["jerk_before"]), 4)
         status = row["status"] + (" (rollback)" if row["rolled_back"] else "")
         lines.append(
-            f"| {row['goal']} | {row['instruction']} | {status} | "
+            f"| {row['goal']} | {row['instruction']} | {row.get('family')} | {status} | "
             f"{row['followed']} | "
             f"{row.get('no_change')} | {row['target_vs_rest']} | "
             f"{row['non_target_mpjpe_norm']} | {jd} |"
@@ -332,14 +376,17 @@ def render_report(r: Dict[str, Any]) -> str:
         f"- success rate: **{loop['success_rate']}** · mean applied edits: {loop['mean_edits']} "
         f"· mean edit attempts: {loop['mean_edit_attempts']} "
         f"· mean steps: {loop['mean_steps']} · mean alignment gain: {loop['mean_alignment_gain']}",
+        f"- check_coverage (episodes that consulted the checker): {loop.get('check_coverage')} "
+        f"· agent/checker agreement: {loop.get('agreement_rate')}",
         f"- mean wall time: {loop['mean_seconds']} s · total tokens: {loop['total_tokens']}",
         "",
-        "| goal | satisfied | applied edits | attempts | steps | alignment trajectory | final caption |",
-        "|---|---|---|---|---|---|---|",
+        "| goal | satisfied | agent claim | checker | agreement | applied edits | attempts | steps | alignment trajectory | final caption |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for row in loop["rows"]:
         lines.append(
-            f"| {row['goal']} | {row['satisfied']} | {row['edits']} | {row['edit_attempts']} | {row['steps']} | "
+            f"| {row['goal']} | {row['satisfied']} | {row.get('agent_claim_satisfied')} | "
+            f"{row.get('checker_satisfied')} | {row.get('agreement')} | {row['edits']} | {row['edit_attempts']} | {row['steps']} | "
             f"{row['alignment_trajectory']} | {row['final_caption']} |"
         )
     return "\n".join(lines) + "\n"
@@ -348,14 +395,24 @@ def render_report(r: Dict[str, Any]) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser(description="Agentic pipeline benchmark")
     ap.add_argument("--goals", nargs="*", default=None)
+    ap.add_argument("--goals-file", type=Path, default=None,
+                    help="JSON list of goal strings (scales the retrieval battery)")
     ap.add_argument("--n", type=int, default=4)
     ap.add_argument("--max-edits", type=int, default=2)
     ap.add_argument("--generator", choices=["mld", "dataset"], default="mld")
     ap.add_argument("--no-llm", action="store_true")
     ap.add_argument("--skip-caption-bench", action="store_true")
+    ap.add_argument("--caption-n", type=int, default=8,
+                    help="held-out HumanML3D clips for the caption benchmark")
     ap.add_argument("--out", type=Path, default=None)
     args = ap.parse_args()
-    goals = args.goals or DEFAULT_GOALS[: args.n]
+    if args.goals_file:
+        goals = json.loads(args.goals_file.read_text(encoding="utf-8-sig"))
+        if isinstance(goals, dict):
+            goals = goals.get("goals") or []
+        goals = [str(g) for g in goals]
+    else:
+        goals = args.goals or DEFAULT_GOALS[: args.n]
     out = args.out or REPO / "outputs" / "agent_bench" / datetime.now().strftime("%Y%m%d-%H%M%S")
     report = run_benchmark(
         goals,
@@ -364,6 +421,7 @@ def main() -> None:
         use_llm=not args.no_llm,
         out_dir=out,
         skip_caption_bench=args.skip_caption_bench,
+        caption_n=args.caption_n,
     )
     print(json.dumps({k: report[k] for k in ("module_a_generation", "module_b_editing", "loop")},
                      ensure_ascii=False, indent=2)[:4000])

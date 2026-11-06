@@ -210,6 +210,11 @@ body {
 }
 .send:disabled { opacity: .45; cursor: wait; }
 .send:hover:not(:disabled) { filter: brightness(1.05); }
+.send.ghost {
+  background: #16222b; color: var(--text);
+  border: 1px solid #2a3a46;
+}
+.send.ghost:hover:not(:disabled) { background: #1d2c37; }
 
 /* RIGHT preview */
 .stage {
@@ -421,6 +426,7 @@ body {
             <input type="checkbox" id="demoCache" checked /> 快速演示
           </label>
           <span class="spacer"></span>
+          <button class="send ghost" id="iterate" title="用 M2T 描述当前动作，LLM 与上一句对比后提出下一轮编辑">自动迭代</button>
           <button class="send" id="send">发送</button>
         </div>
       </div>
@@ -487,7 +493,11 @@ function clearEmpty() {
 function renderReasoning(reasoning) {
   if (!reasoning) return "";
   const steps = reasoning.steps || [];
-  let html = `<details class="reasoning"><summary>Reasoning · prompt / RAG · modules</summary><div class="body">`;
+  const hasCompose = steps.some(ph => ph.phase === "compose");
+  const summary = hasCompose
+    ? "修改过程 · 解析 / 选参考 / 数据集门 / 拆分 / 组合 / 测试 / 修改 / 输出"
+    : "Reasoning · prompt / RAG / modules";
+  let html = `<details class="reasoning" ${hasCompose ? "open" : ""}><summary>${summary}</summary><div class="body">`;
   for (const ph of steps) {
     html += `<div class="phase"><h4>${escapeHtml(ph.title || ph.phase)}</h4>`;
     if (ph.phase === "skill_warmup") {
@@ -545,6 +555,7 @@ function appendMessage(msg) {
 function setBusy(on) {
   state.busy = on;
   $("send").disabled = on;
+  if ($("iterate")) $("iterate").disabled = on;
   $("busy").classList.toggle("on", on);
   $("statusBadge").textContent = on ? "running" : "idle";
   $("statusBadge").className = "badge" + (on ? " warn" : "");
@@ -594,8 +605,8 @@ function updateStage(session) {
   $("qualityPanel").innerHTML = qHtml;
 
   state.primaryAction = (session.intent || {}).primary_action || state.primaryAction;
-  // Demo / live responses carry run_dir — keep timeline buttons enabled.
-  if (session.run_dir) state.previousRun = session.run_dir;
+  const hasClip = session.ok || (session.artifacts && session.artifacts.edited_npy);
+  if (session.run_dir && hasClip) state.previousRun = session.run_dir;
   renderTimeline(session.timeline || q.timeline);
 
   const badge = $("statusBadge");
@@ -780,6 +791,7 @@ async function send(extra) {
   const useDemoCache = (extra && extra.refine) ? false : $("demoCache").checked;
 
   appendMessage({ role: "user", content: prompt || "[timeline]", model, mode });
+  if (prompt) state.lastPrompt = prompt;
   if (!extra) $("prompt").value = "";
   setBusy(true);
   try {
@@ -805,6 +817,53 @@ async function send(extra) {
     if (out.previous_run) $("mode").value = "revise";
     appendMessage(out.assistant_message);
     updateStage(out.assistant_message.session);
+  } catch (e) {
+    appendMessage({ role: "assistant", content: "错误：" + e.message });
+    $("statusBadge").textContent = "error";
+    $("statusBadge").className = "badge bad";
+  } finally {
+    setBusy(false);
+  }
+}
+
+async function iterateRounds() {
+  if (state.busy) return;
+  if (!state.previousRun) {
+    appendMessage({ role: "assistant", content: "先生成或改进一次，再自动迭代。" });
+    return;
+  }
+  const goal = $("prompt").value.trim() || state.lastPrompt || state.primaryAction || "";
+  if (!goal) {
+    appendMessage({ role: "assistant", content: "请先在输入框写下目标动作，再自动迭代。" });
+    return;
+  }
+  appendMessage({ role: "user", content: `[自动迭代] ${goal}` });
+  setBusy(true);
+  try {
+    const out = await api("/api/iterate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ run_dir: state.previousRun, goal, max_iters: 2 }),
+    });
+    const log = out.log || {};
+    const rounds = (log.iterations || []).map((it) => {
+      const proposal = it.proposal || {};
+      const next = proposal.done ? "（判定已达成，停止）" : (proposal.next_edit_prompt || "—");
+      const who = proposal.source === "llm" ? "LLM" : "规则兜底";
+      const after = it.caption_after || it.caption || "—";
+      const score = (it.quality_score_after != null) ? it.quality_score_after : it.quality_score;
+      return `第 ${it.iteration} 轮（${who}）\n编辑前：${it.caption_before || "—"}\n下一句：${next}\n编辑后：${after}\n分数：${score ?? "—"}${it.result ? "｜" + it.result : ""}`;
+    }).join("\n\n");
+    const stop = log.stopped || "达到轮数上限";
+    appendMessage({
+      role: "assistant",
+      content: `自动迭代（M2T 描述 + LLM 提议）\n\n${rounds || "（没有执行编辑）"}\n\n停止：${stop}\n最终描述：${log.final_caption || "—"}`,
+    });
+    if (out.session) {
+      updateStage(out.session);
+      if (out.session.run_dir) state.previousRun = out.session.run_dir;
+      $("mode").value = "revise";
+    }
   } catch (e) {
     appendMessage({ role: "assistant", content: "错误：" + e.message });
     $("statusBadge").textContent = "error";
@@ -887,6 +946,7 @@ async function init() {
     box.appendChild(b);
   }
   $("send").onclick = send;
+  if ($("iterate")) $("iterate").onclick = iterateRounds;
   $("prompt").addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();

@@ -1355,10 +1355,10 @@ def parse_args():
     )
     p.add_argument(
         "--edit-mode",
-        choices=["auto", "diffusion", "speed", "kinematic"],
+        choices=["auto", "diffusion", "speed", "kinematic", "geometric_only", "geometric"],
         default="auto",
-        help="auto: speed→geometric; else MotionsFix diffusion+SDEdit "
-        "(kinematic only via --edit-mode kinematic)",
+        help="auto: speed→geometric; else MotionsFix diffusion+SDEdit. "
+        "geometric_only is an alias of kinematic and never runs diffusion.",
     )
     p.add_argument(
         "--canonicalize",
@@ -1503,6 +1503,13 @@ def main():
     speed_scale = args.speed_scale
     edit_mode = args.edit_mode
     kinematic_intent: Optional[str] = None
+    # The intent planner emits "geometric_only" when diffusion must not run at
+    # all. It used to fall through to the diffusion branch and silently ignore
+    # the plan, which is how a "sit lower" edit produced a clip 2.5 heights
+    # underground. Map it explicitly, and refuse unknown modes instead of
+    # guessing.
+    if edit_mode in ("geometric_only", "geometric"):
+        edit_mode = "kinematic"
     if speed_scale is not None:
         edit_mode = "speed"
     elif edit_mode == "auto":
@@ -1513,7 +1520,19 @@ def main():
         )
         edit_mode = "speed" if speed_scale is not None else "diffusion"
     elif edit_mode == "kinematic":
-        kinematic_intent = kin_from_user or infer_kinematic_intent(args.text) or "wave"
+        kinematic_intent = kin_from_user or infer_kinematic_intent(args.text)
+    if edit_mode not in ("speed", "kinematic", "diffusion"):
+        raise SystemExit(
+            f"[motionfix_edit] unknown --edit-mode {edit_mode!r}; "
+            "expected diffusion | kinematic | geometric_only | speed | auto"
+        )
+    if edit_mode == "kinematic" and kinematic_intent is None:
+        kinematic_intent = kin_from_user or infer_kinematic_intent(args.text)
+        if kinematic_intent is None:
+            raise SystemExit(
+                "[motionfix_edit] geometric edit has no matching operator for "
+                f"text={args.text!r}; supported: wave / sit / turn / turn_left / turn_right"
+            )
 
     if edit_mode == "diffusion":
         if args.sdedit_strength is None:
@@ -1660,6 +1679,26 @@ def main():
             print(f"[motionfix_edit] joint FK skipped: {exc}")
             joints = None
     t_inf = time.time() - t_inf0
+
+    # MotionsFix-native / restored sources can keep the root at the origin, so
+    # SMPL FK returns a body whose feet are ~0.8 m below the floor. One rigid
+    # vertical shift puts the clip back on the ground; the pose transl is moved
+    # with the joints so the saved 135-D pose and the joints agree.
+    if joints is not None:
+        try:
+            from motion_validity import offset_to_ground, up_axis
+
+            shift = offset_to_ground(np.asarray(joints))
+            if shift:
+                axis = up_axis(np.asarray(joints))
+                joints = np.asarray(joints, dtype=np.float32).copy()
+                joints[:, :, axis] += shift
+                pose = np.asarray(pose, dtype=np.float32).copy()
+                pose[:, axis] += shift
+                edit_meta["ground_shift"] = round(float(shift), 3)
+                print(f"[motionfix_edit] grounded clip: shifted +{shift:.3f} m on axis {axis}")
+        except Exception as exc:  # noqa: BLE001
+            print(f"[motionfix_edit] grounding skipped: {exc}")
 
     out = args.out
     if out is None:

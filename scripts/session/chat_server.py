@@ -28,6 +28,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 SESSION_DIR = Path(__file__).resolve().parent
 UI_DIR = SESSION_DIR / "ui"
 INTENT_DIR = REPO_ROOT / "scripts" / "intent"
+ORCH_DIR = REPO_ROOT / "scripts" / "orchestrator"
 OUT_SESSION = REPO_ROOT / "outputs" / "session"
 PORT = int(os.environ.get("SESSION_UI_PORT", "8787"))
 
@@ -147,6 +148,7 @@ def _build_reasoning(
     *,
     agent_trace: Optional[List[Dict[str, Any]]] = None,
     module_results: Optional[List[Dict[str, Any]]] = None,
+    compose: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     intent = bundle.get("intent") or {}
     plan = bundle.get("motion_edit_plan") or {}
@@ -204,6 +206,17 @@ def _build_reasoning(
             ],
         },
     ]
+    if compose and compose.get("stages"):
+        steps.append(
+            {
+                "phase": "compose",
+                "title": "修改过程 · 解析 / 选参考 / 数据集门 / 拆分 / 组合 / 测试 / 修改 / 输出",
+                "items": [
+                    {"k": f"{s.get('step')}. {s.get('name')}", "v": s.get("detail")}
+                    for s in compose["stages"]
+                ],
+            }
+        )
     if agent_trace:
         steps.append(
             {
@@ -421,15 +434,20 @@ def handle_chat(body: Dict[str, Any]) -> Dict[str, Any]:
     if refine_override is not None:
         use_demo_cache = False
         force_full = True
-    previous_run = body.get("previous_run")
+    from run_session import resolve_clip_run
 
+    requested_prev = body.get("previous_run")
     with _LOCK:
         thread = _THREADS.setdefault(
             thread_id,
             {"messages": [], "previous_run": None, "model": model_id},
         )
-        if mode == "revise" and not previous_run:
-            previous_run = thread.get("previous_run")
+        if mode == "revise" and not requested_prev:
+            requested_prev = thread.get("previous_run")
+    previous_run = None
+    if mode == "revise" and requested_prev:
+        resolved = resolve_clip_run(Path(str(requested_prev)))
+        previous_run = str(resolved) if resolved is not None else str(requested_prev)
 
     task_id = f"UI_{datetime.now().strftime('%Y%m%d-%H%M%S')}"
     prev_action = None
@@ -521,11 +539,24 @@ def handle_chat(body: Dict[str, Any]) -> Dict[str, Any]:
 
     _ensure_timeline(session_resp)
 
+    compose = None
+    run_dir = session_resp.get("run_dir")
+    if run_dir:
+        compose_path = Path(run_dir) / "03_edited.dataset.json"
+        if not compose_path.is_file():
+            compose_path = Path(run_dir) / "03_edited.constraint.json"
+        if compose_path.is_file():
+            try:
+                compose = json.loads(compose_path.read_text(encoding="utf-8-sig"))
+            except Exception:  # noqa: BLE001
+                compose = None
+
     reasoning = _build_reasoning(
         bundle,
         model_id,
         agent_trace=session_resp.get("agent_trace"),
         module_results=session_resp.get("module_results"),
+        compose=compose,
     )
 
     preview_url = _rel_url(arts.get("preview_gif"))
@@ -536,6 +567,7 @@ def handle_chat(body: Dict[str, Any]) -> Dict[str, Any]:
         session_resp,
         reasoning,
         plan=bundle.get("motion_edit_plan") or {},
+        compose=compose,
     )
 
     msg_user = {
@@ -598,10 +630,11 @@ def handle_chat(body: Dict[str, Any]) -> Dict[str, Any]:
         thread = _THREADS[thread_id]
         thread["messages"].extend([msg_user, msg_asst])
         thread["model"] = model_id
-        # Only advance previous_run on success (failed dirs lack summary.json).
-        if session_resp.get("ok") and session_resp.get("run_dir"):
-            thread["previous_run"] = session_resp["run_dir"]
-        elif previous_run and not thread.get("previous_run"):
+        # A failed coder run has no 03_edited.npy. Keep the last run that does.
+        new_run = session_resp.get("run_dir")
+        if new_run and (Path(str(new_run)) / "03_edited.npy").is_file():
+            thread["previous_run"] = new_run
+        elif previous_run:
             thread["previous_run"] = previous_run
 
     return {
@@ -623,6 +656,7 @@ def _compose_assistant_text(
     reasoning: Dict[str, Any],
     *,
     plan: Optional[Dict[str, Any]] = None,
+    compose: Optional[Dict[str, Any]] = None,
 ) -> str:
     intent = session.get("intent") or {}
     plan = plan or {}
@@ -657,6 +691,16 @@ def _compose_assistant_text(
         lines.append(f"Refine 来源：{src_note}（source={src}）。")
     if refine.get("matched_recipes"):
         lines.append(f"匹配配方：{', '.join(str(x) for x in refine['matched_recipes'])}。")
+    stages = (compose or {}).get("stages") or []
+    if stages:
+        lines.append("修改过程：")
+        for s in stages:
+            lines.append(f"{s.get('step')}. {s.get('name')}：{s.get('detail')}")
+    stages = session.get("stages") or []
+    if stages:
+        lines.append("生成过程：")
+        for s in stages:
+            lines.append(f"{s.get('step')}. {s.get('name')}：{s.get('detail')}")
     if q:
         lines.append(
             f"质量门：passed={q.get('passed')} score={q.get('score')}"
@@ -677,11 +721,18 @@ def _compose_assistant_text(
             ]
             lines.append("时间轴问题段：" + "；".join(bits) + "（见预览下方进度条）。")
         else:
+            nphase = len(tl.get("phases") or [])
+            extra = ""
+            if tl.get("sit_start") is not None:
+                extra = (
+                    f" sit_start=f{tl.get('sit_start')} contact=f{tl.get('contact')}"
+                )
             lines.append(
-                f"时间轴：sit_start=f{tl.get('sit_start')} contact=f{tl.get('contact')} "
-                f"T={tl.get('T')}（预览下方可查看阶段条）。"
+                f"时间轴：{nphase} 段 T={tl.get('T')}{extra}（预览下方可查看阶段条）。"
             )
-    if session.get("error") and not session.get("ok"):
+    if session.get("error") == "edit_not_applied":
+        lines.append("这次生成没有产出新片段，预览保持上一份动作。可以继续在这份动作上修改。")
+    elif session.get("error") and not session.get("ok"):
         err = str(session.get("error"))
         lines.append(f"错误：{err}")
         if "v05_pipeline failed" in err:
@@ -803,6 +854,64 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 out = handle_chat(body)
                 self._json(200, out)
+            except Exception as exc:  # noqa: BLE001
+                self._json(
+                    500,
+                    {"ok": False, "error": str(exc), "traceback": traceback.format_exc()[-2000:]},
+                )
+            return
+        if parsed.path == "/api/iterate":
+            # Pipeline v1: M2T caption → LLM next edit → revise, a few rounds.
+            try:
+                run_dir = str(body.get("run_dir") or "").strip()
+                goal = str(body.get("goal") or "").strip()
+                rd = Path(run_dir) if run_dir else None
+                if rd is not None and not rd.is_absolute():
+                    rd = REPO_ROOT / rd
+                if rd is None or not rd.is_dir():
+                    self._json(400, {"ok": False, "error": "run_dir must be an existing run"})
+                    return
+                run_dir = str(rd.resolve())
+                if not goal:
+                    self._json(400, {"ok": False, "error": "goal is required"})
+                    return
+                for p in (str(ORCH_DIR), str(INTENT_DIR)):
+                    if p not in sys.path:
+                        sys.path.insert(0, p)
+                from run_loop import iterate
+
+                log = iterate(
+                    goal=goal,
+                    start_run=Path(run_dir),
+                    max_iters=int(body.get("max_iters") or 2),
+                    skip_viz=bool(body.get("skip_viz")),
+                )
+                session: Dict[str, Any] = {}
+                final = log.get("final_run")
+                if final:
+                    resp_path = Path(final) / "session_response.json"
+                    if resp_path.is_file():
+                        try:
+                            session = json.loads(resp_path.read_text(encoding="utf-8-sig"))
+                        except Exception:  # noqa: BLE001
+                            session = {}
+                    if not session:
+                        session = {
+                            "ok": (Path(final) / "03_edited.npy").is_file(),
+                            "run_dir": final,
+                            "artifacts": {},
+                            "intent": {},
+                            "quality": {},
+                        }
+                    session["preview_url"] = _rel_url(
+                        str((Path(final) / "03_edited_preview.gif"))
+                    )
+                    session["pipeline_v1"] = {
+                        "final_caption": log.get("final_caption"),
+                        "stopped": log.get("stopped"),
+                        "iterations": len(log.get("iterations") or []),
+                    }
+                self._json(200, {"ok": True, "log": log, "session": session})
             except Exception as exc:  # noqa: BLE001
                 self._json(
                     500,

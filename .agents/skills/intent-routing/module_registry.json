@@ -81,6 +81,32 @@
       "description": "Action-agnostic phase speed / drop for wave, walk, turn timelines."
     },
     {
+      "id": "dataset_edit",
+      "name": "Dataset Retrieve or Cycle Repeat",
+      "owner_agent": "motion-coder",
+      "inputs": ["previous_npy", "retrieval_text", "cycle_count"],
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/dataset_edit.py",
+      "env": "motionfix",
+      "description": "Parse the revise into segments. Extend the current clip, or attach a dataset clip that passed the skeleton gate. Chain the same performance, transition a new action, then test and keep the last pass."
+    },
+    {
+      "id": "constraint_postprocess",
+      "name": "Refine Constraint Postprocess",
+      "owner_agent": "motion-coder",
+      "inputs": ["edited_npy", "refine.forbid"],
+      "parallel_safe": false,
+      "revision_targets": ["motion"],
+      "mock": false,
+      "backend": true,
+      "script": "scripts/backends/constraint_postprocess.py",
+      "env": "motionfix",
+      "description": "Action-agnostic geometric fixes for refine.forbid (yaw_spin: hold facing and straighten the root path)."
+    },
+    {
       "id": "wave_walk_postprocess",
       "name": "Wave Walk Postprocess",
       "owner_agent": "motion-coder",

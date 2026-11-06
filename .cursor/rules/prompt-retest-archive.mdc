@@ -1,0 +1,13 @@
+---
+description: 改动作问题后要在 Motion Studio 网页上重放提示词，并且每一步留档
+alwaysApply: true
+---
+
+# 提示词复测留档
+
+改完拼接、修订或预览问题后，若要确认提示词是否生效，在网页上重放，不要只跑脚本。
+
+- 打开 http://127.0.0.1:8787 ，用页面上的输入框和发送。生成用 demo 或 generate，改进用 revise，接着上一段，中途不刷新。
+- 一次只发一条。等状态从 running 结束，再发下一条。
+- 每一步写入 `outputs/session/prompt_logs/<日期>-<主题>/log.json`：序号、提示词、generate 或 revise、run_dir、ok 或 error、分数、关键过程、预览文件。页面截图放在同一目录。
+- 失败的一步也留档，再决定下一条还接不接这一段。

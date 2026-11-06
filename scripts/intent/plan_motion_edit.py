@@ -407,7 +407,53 @@ def intent_to_motion_edit_plan(
     if mem.get("sdedit_strength") is not None and not force_wave_walk_fix:
         recipe["sdedit_strength"] = mem["sdedit_strength"]
 
-    if is_motion_revise and force_wave_walk_fix:
+    segments = list(refine.get("segments") or [])
+    needs_assemble = any(
+        s.get("relation") == "attach" or s.get("count") or s.get("repeat_more")
+        for s in segments
+    )
+    data_edit = bool(
+        needs_assemble
+        or refine.get("cycle_count")
+        or refine.get("repeat_more")
+        or "repeat_cycle" in refine_ops
+        or "retrieve" in refine_ops
+    )
+    if is_motion_revise and data_edit and not force_wave_walk_fix:
+        edit_mode = "dataset"
+        source_policy = "dataset_or_cycle"
+        edit_source = "dataset"
+        preferred_id = None
+        warn = (
+            "Revise parses the prompt into segments. An extension uses the "
+            "current clip. A new action comes from the dataset only after the "
+            "skeleton gate. Same-action units are chained. A different action "
+            "gets a transition. A failed test keeps the last clip that passed."
+        )
+    elif is_motion_revise and isinstance(refine.get("arm_raise"), dict):
+        # "Raise the right arm high" is a measurement on the clip already on
+        # screen: no MLD rebuild, no dataset swap, no diffusion. The geometric
+        # arm layer runs at the end (constraint_postprocess) and the rest of the
+        # motion is untouched.
+        raise_spec = refine["arm_raise"]
+        side_cn = {"left": "左", "right": "右", "both": "双"}.get(
+            str(raise_spec.get("side") or "right"), "右"
+        )
+        edit_mode = "geometric_only"
+        source_policy = "reuse_previous_edited"
+        edit_source = "bridged_npy"
+        preferred_id = None
+        span = "none"
+        mld_text = ""
+        mf_text = f"raise the {raise_spec.get('side') or 'right'} arm ({raise_spec.get('level') or 'high'})"
+        recipe["keep_lower"] = True
+        recipe["freeze_xy"] = True
+        warn = (
+            f"Arm-raise revise: keep the current clip and rotate the {side_cn}臂 "
+            f"about the shoulder to {raise_spec.get('level') or 'high'}. "
+            "MLD/diffusion are skipped because they rebuild the whole motion."
+        )
+    elif is_motion_revise and force_wave_walk_fix:
         # Prefer MLD forward-walk rebuild; orchestrator falls back to previous clip if MLD fails.
         edit_mode = "kinematic"
         source_policy = "mld_walk_kinematic_wave"
@@ -450,8 +496,8 @@ def intent_to_motion_edit_plan(
             )
         else:
             warn = (
-                "Revise uses geometric_only postprocess (sit_hold); "
-                "skip MotionsFix diffusion to avoid destroying the sit."
+                "Revise keeps the previous clip and applies geometric constraints "
+                "from refine.forbid; MotionsFix diffusion is skipped."
             )
     elif is_motion_revise and force_diffusion:
         edit_mode = "diffusion"
@@ -553,7 +599,9 @@ def intent_to_motion_edit_plan(
     if "motionfix_semantic_edit" not in plan["modules"] and edit_mode == "diffusion":
         plan["modules"].insert(0, "motionfix_semantic_edit")
     # Sit hold when geometric refine / restore
-    need_hold = (action or "").startswith("sit") and (
+    need_hold = (action or "").startswith("sit") and not (
+        isinstance(refine.get("arm_raise"), dict)
+    ) and (
         edit_mode == "geometric_only"
         or bool(refine.get("phase_speed"))
         or bool(refine.get("drop_phases"))
@@ -595,17 +643,42 @@ def intent_to_motion_edit_plan(
         plan["modules"] = [m for m in plan["modules"] if m != "sit_hold_postprocess"]
     if need_timeline and "timeline_postprocess" not in plan["modules"]:
         plan["modules"].append("timeline_postprocess")
-    need_wave_walk = (action or "").startswith("wave") and (
-        force_kinematic_walk_wave
-        or "wave_walk_fix" in refine_ops
-        or bool(refine.get("prefer_kinematic_walk_wave"))
+    # An arm raise is applied by the geometric layer; without this the module can
+    # be missing when the clip's own timeline raised no yaw problem, and the plan
+    # then looks valid while nothing ever raises the arm.
+    if isinstance(refine.get("arm_raise"), dict) and "constraint_postprocess" not in plan["modules"]:
+        plan["modules"].append("constraint_postprocess")
+    has_attach = any(
+        isinstance(s, dict) and s.get("relation") == "attach"
+        for s in (refine.get("segments") or [])
+    )
+    if (
+        "yaw_spin" in (refine.get("forbid") or [])
+        and "constraint_postprocess" not in plan["modules"]
+        and not has_attach
+    ):
+        plan["modules"].append("constraint_postprocess")
+    if edit_mode == "dataset" and "dataset_edit" not in plan["modules"]:
+        plan["modules"].append("dataset_edit")
+    arm_raise_req = isinstance(refine.get("arm_raise"), dict)
+    need_wave_walk = (
+        (action or "").startswith("wave")
+        and not arm_raise_req
+        and (
+            force_kinematic_walk_wave
+            or "wave_walk_fix" in refine_ops
+            or bool(refine.get("prefer_kinematic_walk_wave"))
+        )
     )
     if need_wave_walk and "wave_walk_postprocess" not in plan["modules"]:
         plan["modules"].append("wave_walk_postprocess")
     if "quality_check" not in plan["modules"]:
         plan["modules"].append("quality_check")
     plan["edit_mode"] = edit_mode
-    if force_wave_walk_fix:
+    # The wave rebuild is a whole-motion replacement; an arm raise is a local
+    # measurement on the current clip, so it must win even when the timeline
+    # flags the wave (wave_right/wave_left) as a problem.
+    if force_wave_walk_fix and not arm_raise_req:
         plan["force_bridged_walk"] = True
         plan["source_policy"] = "mld_walk_kinematic_wave"
         plan["mld_text"] = mld_text or "a person walks forward."

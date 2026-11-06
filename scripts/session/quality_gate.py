@@ -25,6 +25,9 @@ from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+for _p in (REPO_ROOT / "scripts" / "backends", REPO_ROOT / "scripts" / "session"):
+    if str(_p) not in sys.path:
+        sys.path.insert(0, str(_p))
 
 # SMPL-22 / HumanML3D
 J_PELVIS, J_HEAD = 0, 15
@@ -42,6 +45,20 @@ def _horiz(up: int) -> List[int]:
     return [0, 1] if up == 2 else [0, 2]
 
 
+def _path_lateral(root: np.ndarray, hz: List[int]) -> float:
+    delta = root[-1, hz] - root[0, hz]
+    travel = float(np.linalg.norm(delta))
+    rel = root[:, hz] - root[0, hz]
+    if len(rel) == 0:
+        return 0.0
+    if travel < 1e-4:
+        return float(np.linalg.norm(rel, axis=-1).max())
+    direction = delta / travel
+    along = rel @ direction
+    lat = rel - along[:, None] * direction
+    return float(np.linalg.norm(lat, axis=-1).max())
+
+
 def _yaw(joints: np.ndarray) -> np.ndarray:
     """Facing angle from shoulder girdle (fallback: hips)."""
     sh = joints[:, J_R_SHOULDER] - joints[:, J_L_SHOULDER]
@@ -52,6 +69,30 @@ def _yaw(joints: np.ndarray) -> np.ndarray:
     hip_h = np.linalg.norm(hips[:, :2], axis=-1).mean()
     v = sh if sh_h >= hip_h else hips
     return np.arctan2(v[:, 1], v[:, 0])
+
+
+def _body_motion_count(joints: np.ndarray, hz: List[int]) -> int:
+    """Joints that still move after the body's facing is removed.
+
+    A repeated pose that is only spun or dropped counts as zero. Sit and turn
+    cannot pass on yaw or pelvis drop alone.
+    """
+    shoulder = joints[:, J_R_SHOULDER] - joints[:, J_L_SHOULDER]
+    yaw = np.unwrap(np.arctan2(shoulder[:, hz[1]], shoulder[:, hz[0]]))
+    face = yaw - yaw[0]
+    cosine, sine = np.cos(-face), np.sin(-face)
+    rel = joints - joints[:, J_PELVIS : J_PELVIS + 1]
+    moving = 0
+    for joint in range(1, joints.shape[1]):
+        local = np.array(rel[:, joint], dtype=np.float64, copy=True)
+        x = local[:, hz[0]].copy()
+        y = local[:, hz[1]].copy()
+        local[:, hz[0]] = cosine * x - sine * y
+        local[:, hz[1]] = sine * x + cosine * y
+        path = float(np.linalg.norm(np.diff(local, axis=0), axis=-1).sum())
+        if path > 0.25:
+            moving += 1
+    return moving
 
 
 def load_joints(path: Path) -> Tuple[np.ndarray, str]:
@@ -132,6 +173,29 @@ def evaluate_joints(
     len_ok = T >= 30
     checks.append(_check("min_frames", len_ok, f"T={T} (need ≥30)"))
 
+    # Ground clearance. This gate used to ignore the floor entirely, so a clip
+    # whose feet were 2.5 body-heights underground still scored 100. A rigid
+    # offset (restored source with its root at the origin) is reported as such;
+    # deforming penetration fails hard.
+    greport: Optional[Dict[str, Any]] = None
+    try:
+        from motion_validity import MAX_PENETRATION, ground_report
+
+        greport = ground_report(joints, up)
+        pen = float(greport["penetration"])
+        checks.append(
+            _check(
+                "ground_clearance",
+                pen <= MAX_PENETRATION,
+                f"penetration={pen:.3f} heights below floor "
+                f"(mode={greport['mode']}, raw={greport['penetration_raw']:.3f} m; "
+                f"want ≤{MAX_PENETRATION})",
+                hard=True,
+            )
+        )
+    except Exception as exc:  # noqa: BLE001
+        checks.append(_check("ground_clearance", False, f"check failed: {exc}", hard=False))
+
     root = joints[:, J_PELVIS]
     travel = float(np.linalg.norm(root[-1, hz] - root[0, hz]))
     step = np.linalg.norm(np.diff(root[:, hz], axis=0), axis=-1)
@@ -150,6 +214,7 @@ def evaluate_joints(
 
     yaw = np.unwrap(_yaw(joints))
     yaw_span_deg = float(np.degrees(np.ptp(yaw)))
+    body_moving = _body_motion_count(joints, hz)
 
     contact = _sit_contact_frame(pelvis_z) if action in ("sit_down", "sit") else T // 2
     hold = joints[contact:]
@@ -173,13 +238,54 @@ def evaluate_joints(
         "foot_slide_mean": round(foot_slide, 4),
         "wrist_up_span": round(wrist_span, 4),
         "yaw_span_deg": round(yaw_span_deg, 2),
+        "body_moving": int(body_moving),
+        "path_lateral_max": round(_path_lateral(root, hz), 4),
         "sit_contact_frame": int(contact),
         "sit_rebound": round(rebound, 4),
         "sit_hold_wrist_vel": round(float(wvel), 5),
         "refine_forbid": sorted(forbid),
     }
+    if greport is not None:
+        metrics["ground_mode"] = greport["mode"]
+        metrics["ground_penetration"] = greport["penetration"]
+        metrics["ground_offset"] = greport["offset"]
+    arm_raise = refine.get("arm_raise") if isinstance(refine.get("arm_raise"), dict) else None
+    if arm_raise:
+        side = str(arm_raise.get("side") or "right").lower()
+        if side == "both":
+            side_metrics = {
+                "left": joints[:, J_L_WRIST, up] - joints[:, J_L_SHOULDER, up],
+                "right": joints[:, J_R_WRIST, up] - joints[:, J_R_SHOULDER, up],
+            }
+            raise_lift = float(
+                min(np.percentile(v, 90) for v in side_metrics.values())
+            )
+            head_span = float(
+                min(
+                    np.percentile(joints[:, J_HEAD, up] - joints[:, s, up], 90)
+                    for s in (J_L_SHOULDER, J_R_SHOULDER)
+                )
+            )
+        else:
+            w, sh = (J_L_WRIST, J_L_SHOULDER) if side == "left" else (J_R_WRIST, J_R_SHOULDER)
+            raise_lift = float(np.percentile(joints[:, w, up] - joints[:, sh, up], 90))
+            head_span = float(np.percentile(joints[:, J_HEAD, up] - joints[:, sh, up], 90))
+        head_span = max(head_span, 0.05)
+        metrics["arm_raise_lift"] = round(raise_lift, 4)
+        metrics["arm_raise_side"] = side
+        metrics["arm_raise_head_span"] = round(head_span, 4)
+        # ≥1.0 means the wrist is at head height; >1.0 means above the head.
+        metrics["arm_raise_ratio"] = round(raise_lift / head_span, 3)
 
     # --- action-specific ---
+    if action in ("sit_down", "sit", "turn_in_place", "turn"):
+        checks.append(
+            _check(
+                "body_performance",
+                body_moving >= 8,
+                f"body_moving={body_moving} (want ≥8 joints still moving after facing is removed)",
+            )
+        )
     if action in ("sit_down", "sit"):
         # In-place sit: little XY travel; pelvis should drop.
         slide_ok = travel < 0.55 and step_p95 < 0.08
@@ -360,6 +466,45 @@ def evaluate_joints(
             )
         )
 
+    # Forbid flags apply to every action. Turn requests still want yaw unless
+    # the revise explicitly forbids it.
+    if "yaw_spin" in forbid:
+        yaw_ok = yaw_span_deg < 35.0
+        checks.append(
+            _check(
+                "forbid_yaw_spin",
+                yaw_ok,
+                f"yaw_span={yaw_span_deg:.1f}° (want <35 when yaw_spin is forbidden)",
+                hard=True,
+            )
+        )
+        if travel > 0.2:
+            lat = float(metrics["path_lateral_max"])
+            path_ok = lat < 0.15
+            checks.append(
+                _check(
+                    "forbid_curved_path",
+                    path_ok,
+                    f"path_lateral_max={lat:.3f} (want <0.15 when yaw_spin is forbidden)",
+                    hard=True,
+                )
+            )
+
+    if arm_raise:
+        lift = float(metrics.get("arm_raise_lift") or 0.0)
+        ratio = float(metrics.get("arm_raise_ratio") or 0.0)
+        checks.append(
+            _check(
+                "arm_raise_applied",
+                lift > 0.02,
+                (
+                    f"wrist_lift={lift:.3f} above shoulder, ratio={ratio:.2f} of head "
+                    "(want >0.02 lift; ratio ≥1.0 means at/above head)"
+                ),
+                hard=True,
+            )
+        )
+
     hard_fail = [c for c in checks if c["hard"] and not c["ok"]]
     soft_fail = [c for c in checks if (not c["hard"]) and not c["ok"]]
     passed = len(hard_fail) == 0
@@ -390,6 +535,30 @@ def evaluate_file(
 ) -> Dict[str, Any]:
     joints, src = load_joints(edited)
     report = evaluate_joints(joints, action=action, refine=refine)
+    side = edited.with_suffix(".dataset.json")
+    if side.is_file():
+        try:
+            meta = json.loads(side.read_text(encoding="utf-8-sig"))
+        except Exception:  # noqa: BLE001
+            meta = {}
+        if str(meta.get("method") or "").startswith("rejected"):
+            reason = (meta.get("retrieval") or {}).get("reason") or meta.get("method")
+            report["checks"].append(
+                {
+                    "id": "dataset_rejected",
+                    "ok": False,
+                    "hard": True,
+                    "detail": (
+                        f"compose rejected ({reason}); "
+                        "kept the current motion because the join did not pass"
+                    ),
+                }
+            )
+            report["hard_failures"] = list(report.get("hard_failures") or []) + [
+                "dataset_rejected"
+            ]
+            report["passed"] = False
+            report["score"] = int(max(0, int(report.get("score") or 0) - 25))
     report["edited"] = str(edited)
     report["joints_source"] = src
     return report

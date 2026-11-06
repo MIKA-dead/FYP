@@ -72,7 +72,8 @@ def analyze_sit_timeline(
                 break
     sit_start = int(np.clip(sit_start, 0, max(0, contact - 5)))
 
-    # Hold end: shortly after contact; trailing = after hold
+    # Hold end: shortly after contact; trailing = after hold.
+    # If the body is already still, the rest of the clip is the sit, not extra motion.
     hold_end = min(T, contact + max(12, int(0.25 * (T - contact + 1))))
     hold_end = int(np.clip(hold_end, contact + 1, T))
 
@@ -82,30 +83,35 @@ def analyze_sit_timeline(
         w = j[hold_end:, [20, 21]]
         if w.shape[0] > 1:
             post_wrist = float(np.linalg.norm(np.diff(w, axis=0), axis=-1).mean())
+    if post_wrist <= 0.01 and "post_sit_extra" not in forbid and "post_sit_limb_rebound" not in forbid:
+        hold_end = T
+        post_wrist = 0.0
 
     problems: List[str] = []
-    if pre_travel > 0.18 or sit_start > int(0.2 * T):
+    # A still prefix is the sit's own start, not a walk. Only real horizontal
+    # travel counts as locomotion.
+    locomotion = pre_travel > 0.12
+    if locomotion:
         problems.append("pre_sit_locomotion")
     if "pre_sit_locomotion" in forbid and pre_travel > 0.12:
         problems.append("pre_sit_locomotion")
     if T - hold_end > 15 and post_wrist > 0.02:
         problems.append("post_sit_extra")
     if "yaw_spin" in forbid:
-        problems.append("yaw_spin")
+        sh = j[:, 17] - j[:, 16]
+        yaw = np.unwrap(np.arctan2(sh[:, 1], sh[:, 0]))
+        if float(np.degrees(np.ptp(yaw))) > 35.0:
+            problems.append("yaw_spin")
     if "post_sit_limb_rebound" in forbid:
         problems.append("post_sit_limb_rebound")
 
     phases = [
         {
             "id": "preamble",
-            "label": "坐下前（走动等）",
+            "label": "坐下前走动" if locomotion else "准备",
             "start": 0,
             "end": sit_start,
-            "problem": sit_start > 3 and (
-                "pre_sit_locomotion" in forbid
-                or pre_travel > 0.18
-                or sit_start > int(0.2 * T)
-            ),
+            "problem": bool(locomotion),
         },
         {
             "id": "descend",
@@ -227,7 +233,9 @@ def analyze_wave_timeline(
         if pid == "walk_forward" and travel < 0.12:
             problem = True
             label_zh = "向前走（位移不足）"
-        if pid == "idle" and (i - j0) > max(8, T // 5):
+        # A stop only at the start or the end is the clip easing in or out.
+        # A pause between two moving parts is the link fault.
+        if pid == "idle" and (i - j0) > max(8, T // 5) and j0 > 2 and i < T - 2:
             problem = True
         raw_phases.append(
             {
@@ -518,7 +526,9 @@ def apply_phase_speed(
         if s > cursor:
             parts.append(joints[cursor:s])
         chunk = joints[s:e]
-        scale = float(phase_speed.get(pid) or 1.0)
+        # "*" is a wildcard used when the refine asks for a tempo change but no
+        # concrete phase is known yet (the timeline is only analysed here).
+        scale = float(phase_speed.get(pid, phase_speed.get("*", 1.0)) or 1.0)
         if abs(scale - 1.0) > 0.02 and chunk.shape[0] >= 2:
             new_len = int(max(2, min(400, round(chunk.shape[0] / max(scale, 1e-3)))))
             chunk = _resample_slice(chunk, new_len)

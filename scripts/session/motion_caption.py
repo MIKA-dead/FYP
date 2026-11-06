@@ -1,11 +1,18 @@
 """
-Motion → textual feedback for the agent (pipeline v1 style).
+Motion → textual feedback for the agent (pipeline v1).
 
-Primary path (always available): synthesize an English caption + issue list from
-quality metrics + motion timeline (no VLM, no MotionsFix).
+Backends, in the order ``caption_edited`` tries them:
 
-Optional path: external TM2T / MotionGPT via env MOTION_CAPTION_CMD, e.g.
-  MOTION_CAPTION_CMD="python path/to/tm2t_infer.py --in {npy} --out {txt}"
+1. ``tm2t`` — the learned motion-to-text model in ``scripts/backends/tm2t_infer.py``
+   (TM2T M2T transformer + VQ tokenizer). Default when its checkpoints exist and
+   ``M2T_BACKEND`` is not set to something else.
+2. ``external`` — any command via ``MOTION_CAPTION_CMD``, e.g.
+   ``MOTION_CAPTION_CMD="python path/to/m2t.py --in {npy} --out {txt}"``.
+3. ``rules`` — deterministic sentence from quality metrics + timeline. Always
+   available; keeps the loop running when no model is installed.
+
+``M2T_BACKEND=rules`` forces the rule sentence, ``M2T_BACKEND=external`` forces
+the command hook, ``M2T_BACKEND=tm2t`` refuses to fall back silently.
 
   python scripts/session/motion_caption.py \\
       --edited outputs/.../03_edited.npy --quality 04_quality.json --out 06_caption.json
@@ -93,6 +100,13 @@ def caption_from_quality_timeline(
     else:
         bits.append(f"root travel {travel:.2f}")
 
+    yaw = float(metrics.get("yaw_span_deg") or 0)
+    lateral = float(metrics.get("path_lateral_max") or 0)
+    if "turn" not in str(action) and yaw >= 40:
+        bits.append(f"body yaw changes about {yaw:.0f} degrees")
+    if travel > 0.2 and lateral >= 0.15:
+        bits.append(f"the path bends sideways (lateral {lateral:.2f})")
+
     phase_labels = [
         str(p.get("label") or p.get("id"))
         for p in (timeline.get("phases") or [])
@@ -159,6 +173,69 @@ def try_external_caption(edited_npy: Path, out_txt: Path) -> Optional[str]:
     return None
 
 
+def try_tm2t_caption(edited_npy: Path, *, cache_dir: Optional[Path] = None) -> Optional[Dict[str, Any]]:
+    """Learned M2T: TM2T M2T transformer on the edited joints.
+
+    Cached per clip under ``cache_dir/06_motion_caption.tm2t.json`` so a loop that
+    re-reads the same clip does not reload the checkpoints.
+    """
+    cache = None
+    if cache_dir:
+        cache = Path(cache_dir) / "06_motion_caption.tm2t.json"
+        if cache.is_file():
+            try:
+                data = json.loads(cache.read_text(encoding="utf-8-sig"))
+                if data.get("caption"):
+                    return data
+            except Exception:  # noqa: BLE001
+                pass
+    backends = REPO_ROOT / "scripts" / "backends"
+    if str(backends) not in sys.path:
+        sys.path.insert(0, str(backends))
+    data: Optional[Dict[str, Any]] = None
+    try:
+        import torch  # noqa: F401  (TM2T needs torch; the base interpreter may not have it)
+        from tm2t_infer import describe, m2t_ready
+
+        ready, _why = m2t_ready()
+        if not ready:
+            return None
+        data = describe(Path(edited_npy))
+    except ImportError:
+        # Run the M2T model in the conda env that owns torch, then read its JSON.
+        py = os.environ.get("MOTIONFIX_PYTHON") or str(
+            Path.home() / "miniconda3" / "envs" / "motionfix" / "python.exe"
+        )
+        if not Path(py).is_file():
+            return None
+        tmp = Path(cache_dir or edited_npy.parent) / "_tm2t_caption.json"
+        tmp.parent.mkdir(parents=True, exist_ok=True)
+        env = os.environ.copy()
+        env.setdefault("PYTHONUTF8", "1")
+        try:
+            proc = subprocess.run(
+                [py, str(backends / "tm2t_infer.py"), "--npy", str(edited_npy), "--out", str(tmp)],
+                cwd=str(REPO_ROOT), env=env, timeout=300,
+            )
+            if proc.returncode != 0 or not tmp.is_file():
+                return None
+            data = json.loads(tmp.read_text(encoding="utf-8-sig"))
+        except Exception as exc:  # noqa: BLE001
+            print(f"[motion_caption] tm2t subprocess failed: {exc}", flush=True)
+            return None
+    except SystemExit as exc:
+        print(f"[motion_caption] tm2t unavailable: {exc}", flush=True)
+        return None
+    except Exception as exc:  # noqa: BLE001
+        print(f"[motion_caption] tm2t failed: {exc}", flush=True)
+        return None
+    if cache is not None and data and data.get("caption"):
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    return data
+
+
+
 def caption_edited(
     edited_npy: Path,
     *,
@@ -185,17 +262,37 @@ def caption_edited(
     )
 
     if edited_npy.is_file():
-        tmp = (run_dir or edited_npy.parent) / "_ext_caption.txt"
-        ext = try_external_caption(edited_npy, tmp)
-        if ext:
-            base["external_caption"] = ext
-            base["caption"] = ext
-            base["source"] = "external_MOTION_CAPTION_CMD"
-            base["critique"] = (
-                f"User wanted: {intent_text.strip()[:160]}. "
-                f"Observed (TM2T/external): {ext}. "
-                f"Issues: {', '.join(base.get('problems') or []) or 'n/a'}."
-            )
+        mode = (os.environ.get("M2T_BACKEND") or "auto").strip().lower()
+        if mode in ("rules", "off", "none"):
+            return base
+        if mode in ("auto", "tm2t"):
+            learned = try_tm2t_caption(edited_npy, cache_dir=run_dir or edited_npy.parent)
+            if learned and learned.get("caption"):
+                sentence = str(learned["caption"]).strip()
+                base["m2t"] = learned
+                base["caption"] = sentence
+                base["source"] = "tm2t_m2t_transformer"
+                base["critique"] = (
+                    f"User wanted: {intent_text.strip()[:160]}. "
+                    f"Observed (TM2T): {sentence}. "
+                    f"Issues: {', '.join(base.get('problems') or []) or 'n/a'}."
+                )
+                return base
+            if mode == "tm2t":
+                base["m2t_error"] = "TM2T checkpoints missing or inference failed"
+                return base
+        if mode in ("auto", "external"):
+            tmp = (run_dir or edited_npy.parent) / "_ext_caption.txt"
+            ext = try_external_caption(edited_npy, tmp)
+            if ext:
+                base["external_caption"] = ext
+                base["caption"] = ext
+                base["source"] = "external_MOTION_CAPTION_CMD"
+                base["critique"] = (
+                    f"User wanted: {intent_text.strip()[:160]}. "
+                    f"Observed (TM2T/external): {ext}. "
+                    f"Issues: {', '.join(base.get('problems') or []) or 'n/a'}."
+                )
     return base
 
 

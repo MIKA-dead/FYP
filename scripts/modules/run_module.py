@@ -252,6 +252,30 @@ def run_sit_hold_postprocess(args: Dict[str, Any]) -> Dict[str, Any]:
     return _ok("sit_hold_postprocess", {"edited_npy": str(out)}, t0)
 
 
+def run_sit_deepen_postprocess(args: Dict[str, Any]) -> Dict[str, Any]:
+    t0 = time.time()
+    inp = Path(args["input"] if "input" in args else args["in"])
+    out = Path(args["out"])
+    py = _env_python("motionfix")
+    cmd = [
+        py,
+        str(BACKENDS / "sit_deepen_postprocess.py"),
+        "--input",
+        str(inp),
+        "--out",
+        str(out),
+        "--delta",
+        str(float(args.get("delta") or 0.10)),
+    ]
+    if args.get("contact_frame") is not None:
+        cmd += ["--contact-frame", str(int(args["contact_frame"]))]
+    try:
+        _run(cmd)
+    except Exception as exc:  # noqa: BLE001
+        return _fail("sit_deepen_postprocess", str(exc), t0)
+    return _ok("sit_deepen_postprocess", {"edited_npy": str(out)}, t0)
+
+
 def run_timeline_postprocess(args: Dict[str, Any]) -> Dict[str, Any]:
     t0 = time.time()
     inp = Path(args["input"] if "input" in args else args["in"])
@@ -354,6 +378,61 @@ def run_motion_caption(args: Dict[str, Any]) -> Dict[str, Any]:
     return _ok("motion_caption", {"motion_caption": str(out)}, t0)
 
 
+def run_dataset_edit(args: Dict[str, Any]) -> Dict[str, Any]:
+    t0 = time.time()
+    inp = Path(args["input"] if "input" in args else args["in"])
+    out = Path(args["out"])
+    py = _env_python("motionfix")
+    cmd = [
+        py,
+        str(BACKENDS / "dataset_edit.py"),
+        "--in",
+        str(inp),
+        "--out",
+        str(out),
+    ]
+    if args.get("intent_json"):
+        cmd += ["--intent-json", str(args["intent_json"])]
+    if args.get("cycle_count") is not None:
+        cmd += ["--cycle-count", str(args["cycle_count"])]
+    if args.get("retrieval_text"):
+        cmd += ["--retrieval-text", str(args["retrieval_text"])]
+    if args.get("repeat_more"):
+        cmd.append("--repeat-more")
+    try:
+        _run(cmd)
+    except Exception as exc:  # noqa: BLE001
+        return _fail("dataset_edit", str(exc), t0)
+    return _ok("dataset_edit", {"edited_npy": str(out)}, t0)
+
+
+def run_constraint_postprocess(args: Dict[str, Any]) -> Dict[str, Any]:
+    t0 = time.time()
+    inp = Path(args["input"] if "input" in args else args["in"])
+    out = Path(args["out"])
+    py = _env_python("motionfix")
+    cmd = [
+        py,
+        str(BACKENDS / "constraint_postprocess.py"),
+        "--in",
+        str(inp),
+        "--out",
+        str(out),
+    ]
+    if args.get("intent_json"):
+        cmd += ["--intent-json", str(args["intent_json"])]
+    if args.get("forbid"):
+        forbid = args["forbid"]
+        if isinstance(forbid, list):
+            forbid = ",".join(str(x) for x in forbid)
+        cmd += ["--forbid", str(forbid)]
+    try:
+        _run(cmd)
+    except Exception as exc:  # noqa: BLE001
+        return _fail("constraint_postprocess", str(exc), t0)
+    return _ok("constraint_postprocess", {"edited_npy": str(out)}, t0)
+
+
 def run_simmotion_edit(args: Dict[str, Any]) -> Dict[str, Any]:
     t0 = time.time()
     source = Path(args.get("source_npy") or args.get("input") or args.get("in"))
@@ -389,8 +468,11 @@ HANDLERS = {
     "motionfix_semantic_edit": run_motionfix_edit,
     "speed_edit": run_speed_edit,
     "sit_hold_postprocess": run_sit_hold_postprocess,
+    "sit_deepen_postprocess": run_sit_deepen_postprocess,
     "timeline_postprocess": run_timeline_postprocess,
     "wave_walk_postprocess": run_wave_walk_postprocess,
+    "dataset_edit": run_dataset_edit,
+    "constraint_postprocess": run_constraint_postprocess,
     "quality_gate": run_quality_gate,
     "motion_caption": run_motion_caption,
     "simmotion_edit": run_simmotion_edit,

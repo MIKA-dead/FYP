@@ -29,6 +29,9 @@ HumanML3D/
 
 # Optional heavy third-party checkouts (clone locally; see backends/README_*.md)
 third_party/SimMotionEdit/
+third_party/TM2T/checkpoints/
+third_party/TM2T/*.zip
+third_party/TM2T/*.part
 
 # 输出产物（生成的 BVH / npy 可选择性传，建议先忽略避免杂乱）
 outputs/

@@ -163,6 +163,33 @@ def yaw_span(j: np.ndarray) -> float:
     return float(np.degrees(yaw.max() - yaw.min()))
 
 
+def ankle_lift(j: np.ndarray, up: int, side: str = "right") -> float:
+    """How far that ankle rises off its own lowest point, in body heights.
+
+    A kick lifts the striking foot well clear of the ground while the supporting
+    foot stays down, so this separates it from walking (both feet alternate).
+    """
+    idx = J_R_FOOT if side == "right" else J_L_FOOT
+    ankle = j[:, idx, up]
+    return float((ankle - ankle.min()).max() / _height(j, up))
+
+
+def jump_rise(j: np.ndarray, up: int) -> Tuple[float, float]:
+    """``(pelvis_rise, apex_clearance)`` in body heights.
+
+    A jump raises the pelvis above its starting height *and* leaves the floor at
+    that apex with both feet — standing up also raises the pelvis, but keeps the
+    feet planted, so the pair separates the two.
+    """
+    h = _height(j, up)
+    pel = j[:, J_PELVIS, up]
+    floor = j[:, :, up].min(axis=1)
+    apex = int(np.argmax(pel))
+    rise = (float(pel.max()) - float(pel[0])) / h
+    clearance = (float(floor[apex]) - float(np.percentile(floor, 5))) / h
+    return float(rise), float(clearance)
+
+
 def kinematic_summary(j: np.ndarray) -> Dict[str, float]:
     up = up_axis(j)
     hz = horiz(up)
@@ -184,6 +211,10 @@ def kinematic_summary(j: np.ndarray) -> Dict[str, float]:
         "arm_raise_left": round(arm_raise_ratio(j, up, "left"), 3),
         "wrist_above_head_right": round(wrist_above_head(j, up, "right"), 3),
         "wrist_above_head_left": round(wrist_above_head(j, up, "left"), 3),
+        "ankle_lift_right": round(ankle_lift(j, up, "right"), 3),
+        "ankle_lift_left": round(ankle_lift(j, up, "left"), 3),
+        "jump_rise": round(jump_rise(j, up)[0], 3),
+        "jump_clearance": round(jump_rise(j, up)[1], 3),
     }
 
 
@@ -281,32 +312,60 @@ def instruction_following(
     after: Dict[str, float],
     pres: Dict[str, Any],
 ) -> Dict[str, Any]:
-    """Did the requested attribute move in the requested direction?"""
+    """Did the requested attribute move in the requested direction?
+
+    Matching is on whole words: "slower" must not be read as an instruction to
+    go *lower*, and "sitting" must not be read as *sit down*.
+    """
     t = (instruction or "").lower()
     checks: List[Dict[str, Any]] = []
+
+    def word(*cands: str) -> bool:
+        return any(re.search(rf"\b{re.escape(c)}\b", t) for c in cands)
 
     def add(name: str, ok: bool, delta: float, need: str) -> None:
         checks.append({"attribute": name, "ok": bool(ok), "delta": round(float(delta), 4), "expected": need})
 
-    if "arm" in t or "wave" in t or "hand" in t:
-        side = "left" if "left" in t else "right"
+    if word("arm", "wave", "hand"):
+        side = "left" if word("left") else "right"
         key = f"arm_raise_{side}"
         d = float(after.get(key, 0)) - float(before.get(key, 0))
-        higher = "higher" in t or "raise" in t or "up" in t or "overhead" in t
+        higher = word("higher", "raise", "up", "overhead")
         add(key, d > 0.05 if higher else abs(d) > 0.03, d, "> +0.05" if higher else "|Δ| > 0.03")
-    if any(w in t for w in ("walk", "forward", "further", "step")):
-        d = float(after.get("root_travel", 0)) - float(before.get("root_travel", 0))
-        add("root_travel", d > 0.04, d, "> +0.04 m")
+    if word("walk", "forward", "further", "step"):
+        tb = max(1.0, float(before.get("T") or 1))
+        ta = max(1.0, float(after.get("T") or 1))
+        sb = float(before.get("root_travel", 0)) / tb
+        sa = float(after.get("root_travel", 0)) / ta
+        if word("slower", "slow"):
+            # A slowed walk covers less ground per frame, but the clip gets
+            # longer, so total travel can be unchanged. Compare speed, not
+            # distance, or a correct slow-down reads as a failure.
+            add("speed_per_frame", sa < sb - 1e-3, sa - sb, "< 0 m/frame")
+        elif word("faster", "quicker", "speed", "up"):
+            add("speed_per_frame", sa > sb + 1e-3, sa - sb, "> 0 m/frame")
+        else:
+            d = float(after.get("root_travel", 0)) - float(before.get("root_travel", 0))
+            add("root_travel", d > 0.04, d, "> +0.04 m")
     if any(w in t for w in ("stop", "straight", "no spin", "do not spin")):
         d = float(after.get("yaw_span_deg", 0)) - float(before.get("yaw_span_deg", 0))
         add("yaw_span_deg", d < -3.0, d, "< -3 deg")
-    if any(w in t for w in ("sit", "lower", "down")):
+    if word("sit") and word("down", "lower", "deeper", "seat") or word("crouch", "squat", "lower"):
         d = float(after.get("pelvis_drop", 0)) - float(before.get("pelvis_drop", 0))
         add("pelvis_drop", d > 0.02, d, "> +0.02 m")
-    if any(w in t for w in ("faster", "slower", "speed")):
+    if word("faster", "slower", "speed"):
         d = float(after.get("T", 0)) - float(before.get("T", 0))
         add("duration_frames", abs(d) > 1.0, d, "changed duration")
+    if word("trim", "shorten", "cut", "remove") and word("motion", "extra", "tail", "end"):
+        d = float(after.get("T", 0)) - float(before.get("T", 0))
+        add("duration_frames", d < -1.0, d, "shorter clip")
+    if any(p in t for p in ("walk in place", "step in place", "stay in place",
+                            "without moving", "keep the root", "do not move",
+                            "don't move", "in place without")):
+        d = float(after.get("root_travel", 0))
+        add("root_travel", d <= 0.25, d, "<= 0.25 m (in place)")
 
+    verifiable = True
     if not checks:
         ratio = pres.get("target_vs_rest")
         checks.append({
@@ -315,7 +374,11 @@ def instruction_following(
             "delta": ratio,
             "expected": "> 1.2",
         })
-    return {"checks": checks, "followed": all(c["ok"] for c in checks)}
+        # No attribute test applies and the localisation ratio is unavailable
+        # (an edit that changed nothing, for instance). Say so instead of
+        # counting an unmeasurable instruction as a failure.
+        verifiable = ratio is not None
+    return {"checks": checks, "followed": all(c["ok"] for c in checks), "verifiable": verifiable}
 
 
 # --------------------------------------------------------------------------

@@ -35,6 +35,21 @@ J_L_SHOULDER, J_R_SHOULDER = 16, 17
 J_L_WRIST, J_R_WRIST = 20, 21
 J_L_FOOT, J_R_FOOT = 10, 11
 ARM_J = [16, 17, 18, 19, 20, 21]
+# Root-anchored arm chains (clavicle, shoulder, elbow, wrist). Lengths are
+# restored from the contact frame after the soft blend moves the joints.
+ARM_CHAINS = ((13, 16, 18, 20), (14, 17, 19, 21))
+
+
+def _restore_chain_lengths(frame: np.ndarray, ref: np.ndarray, chains) -> None:
+    """Reset a chain's bone lengths to the reference frame, keeping direction."""
+    for chain in chains:
+        for a, b in zip(chain[:-1], chain[1:]):
+            length = float(np.linalg.norm(ref[b] - ref[a]))
+            v = frame[b] - frame[a]
+            n = float(np.linalg.norm(v))
+            if n < 1e-6 or length < 1e-6:
+                continue
+            frame[b] = frame[a] + v * (length / n)
 
 
 def _up_axis(joints: np.ndarray) -> int:
@@ -153,17 +168,40 @@ def apply_sit_hold(
     # --- soft hold after contact (no hard freeze, no trim) ---
     if any(f in forbid for f in ("post_sit_limb_rebound", "post_sit_stretch")):
         hold = j[contact].copy()
+        # Clamp pelvic rebound with the leg IK: the pelvis may only rise 3 cm
+        # above its contact height, and the drop is spread over the hips with
+        # the ankles planted — moving the pelvis joint alone would stretch its
+        # three child bones, moving the whole body would push the feet through
+        # the floor.
+        cap = float(hold[J_PELVIS, up]) + 0.03
+        drop = np.zeros(T, dtype=np.float32)
         for t in range(contact, T):
-            # Clamp pelvis rebound only
-            j[t, J_PELVIS, hz[0]] = 0.7 * j[t, J_PELVIS, hz[0]] + 0.3 * hold[J_PELVIS, hz[0]]
-            j[t, J_PELVIS, hz[1]] = 0.7 * j[t, J_PELVIS, hz[1]] + 0.3 * hold[J_PELVIS, hz[1]]
-            j[t, J_PELVIS, up] = min(float(j[t, J_PELVIS, up]), float(hold[J_PELVIS, up]) + 0.03)
+            over = float(j[t, J_PELVIS, up]) - cap
+            if over > 1e-4:
+                drop[t] = 0.3 * over
+        if float(drop.max()) > 1e-4:
+            try:
+                from sit_deepen_postprocess import deepen_sit
+
+                j, rebound_meta = deepen_sit(
+                    j, contact_frame=contact, delta_per_frame=drop
+                )
+                meta["rebound_clamp"] = rebound_meta
+            except Exception as exc:  # noqa: BLE001
+                meta["rebound_clamp_error"] = str(exc)
+            hold = j[contact].copy()
+        for t in range(contact, T):
             # Soft blend arms toward contact offsets (keeps small motion)
             alpha = min(0.65, 0.15 + 0.1 * (t - contact))
             for ji in ARM_J:
                 rel = hold[ji] - hold[J_PELVIS]
                 target = j[t, J_PELVIS] + rel
                 j[t, ji] = (1 - alpha) * j[t, ji] + alpha * target
+            # Linear blending of joints is not a rotation: re-impose the bone
+            # lengths of each arm chain, keeping its direction. Without this the
+            # arm bones stretch by up to 30% and a valid clip is rejected as
+            # bone_rigid.
+            _restore_chain_lengths(j[t], hold, ARM_CHAINS)
         meta["soft_hold"] = True
         # Trim ONLY if explicitly allowed (timeline_trim forbid means DO NOT trim)
         if allow_trim and "timeline_trim" not in forbid and T - contact > 40:

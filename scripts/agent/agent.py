@@ -52,7 +52,8 @@ SYSTEM = (
     + "\n\nMANDATORY ORDER\n"
     "1. With no clip: call generate_motion.\n"
     "2. After any clip is produced or edited: call describe_motion before judging it.\n"
-    "3. Then either edit_motion (one change) or finish.\n\n"
+    "3. Before finish: call check_requirement and read its verdict.\n"
+    "4. Then either edit_motion (one change) or finish.\n\n"
     "HOW TO JUDGE\n"
     "- The learned caption is coarse; joint measurements are ground truth when "
     "they disagree. arm_raise_ratio >= 1.8 and wrist_above_head (metres) > 0 both "
@@ -64,22 +65,29 @@ SYSTEM = (
     "head; do not demand a 360° spin or a specific style the user never asked for.\n"
     "- `missing` lists concrete unmet requirements, not general quality comments.\n"
     "- `next_edit` is ONE relative instruction for the current clip.\n"
+    "- The decision is yours: check_requirement reports measurements, it does not "
+    "command you. If you disagree with it, say why in `thought`, but never claim a "
+    "measurement that the observation contradicts.\n"
     "- If an observation says no_change=true, that instruction cannot be applied; "
     "never repeat it — try a different supported edit or finish with the gap.\n"
-    "- A clip with valid=false (ground_penetration > 0.10 or bone_cv > 0.08) is "
-    "broken: never accept it. You may call generate_motion again with a simpler "
-    "prompt, or finish and report the failure.\n"
+    "- An edit that returns unsupported_instruction never reached the backend. Do "
+    "not rephrase the same impossible request; finish and name it as out of scope.\n"
+    "- A clip with valid=false is physically broken: never accept it. You may call "
+    "generate_motion again with a simpler prompt, or finish and report the failure.\n"
+    "- quality_passed=false lists the gate's failed checks; weigh them but they are "
+    "not the user's request — the requirement checks are.\n"
+    "- edit_motion reports new_hard_failures and pre_existing_hard_failures: only "
+    "the new ones are damage from your instruction; the pre-existing ones were "
+    "already true of the clip you started from, so do not 'fix' them with an "
+    "unrelated edit.\n"
     "- If two consecutive edits failed to raise alignment, finish and say so; "
-    "do not loop forever.\n"
-    "- `finish` is verified against the joint measurements. If it is rejected you "
-    "will see `verification_failed` with the exact failing check; either fix that "
-    "check with one edit, or call `finish` again to report the limitation.\n\n"
+    "do not loop forever.\n\n"
     + SUPPORTED_EDITS
     + "\n\nReply with JSON only, no markdown:\n"
     '{"thought": "one or two sentences", '
     '"assessment": {"alignment": 0, "satisfied": false, "matches": [], '
     '"missing": [], "next_edit": ""}, '
-    '"action": "generate_motion|describe_motion|edit_motion|finish", '
+    '"action": "generate_motion|describe_motion|check_requirement|edit_motion|finish", '
     '"args": {}}'
 )
 
@@ -157,52 +165,6 @@ def chat(messages: List[Dict[str, str]], *, timeout_s: float = 180.0) -> Tuple[D
 # --------------------------------------------------------------------------
 # scripted baseline (no LLM): same tools, deterministic gap→edit rules
 # --------------------------------------------------------------------------
-def verify_goal(goal: str, obs: Dict[str, Any]) -> Dict[str, Any]:
-    """Measure the goal against the joints, not the caption.
-
-    This is the acceptance test the controller cannot talk its way out of: a
-    `finish` is only accepted when the measured attributes satisfy the request.
-    The caption is deliberately not used here — it is coarse and sometimes wrong.
-    """
-    m = obs.get("metrics") or {}
-    g = (goal or "").lower()
-    checks: List[Dict[str, Any]] = []
-
-    def add(name: str, ok: bool, value: Any, need: str) -> None:
-        checks.append({"check": name, "ok": bool(ok), "value": value, "expected": need})
-
-    side = "left" if "left" in g else "right"
-    if any(w in g for w in ("arm", "hand", "wave", "raise", "overhead")):
-        high = any(w in g for w in ("high", "above", "overhead", "up"))
-        need = 1.8 if high else 0.5
-        ratio = float(m.get(f"arm_raise_{side}") or 0)
-        above = float(m.get(f"wrist_above_head_{side}") or 0)
-        add(f"arm_raise_{side}", ratio >= need or (high and above >= 0.05), ratio,
-            f">= {need}")
-    if any(w in g for w in ("walk", "forward", "step")) and "in place" not in g:
-        travel = float(m.get("root_travel") or 0)
-        add("root_travel", travel >= 0.5, travel, ">= 0.5 m")
-    if any(w in g for w in ("sit", "sitting", "crouch")):
-        drop = float(m.get("pelvis_drop") or 0)
-        add("pelvis_drop", drop >= 0.15, drop, ">= 0.15 m")
-    if any(w in g for w in ("turn", "spin", "rotate")):
-        yaw = float(m.get("yaw_span_deg") or 0)
-        add("yaw_span_deg", yaw >= 90, yaw, ">= 90 deg")
-
-    # A clip that is anatomically or physically broken is never acceptable.
-    pen = float(m.get("ground_penetration") or 0)
-    add("ground_penetration", pen <= 0.10, pen, "<= 0.10 body heights")
-    bcv = float(m.get("bone_cv") or 0)
-    add("bone_cv", bcv <= 0.08, bcv, "<= 0.08")
-
-    failed = [c for c in checks if not c["ok"]]
-    return {
-        "ok": not failed,
-        "checks": checks,
-        "reasons": [f"{c['check']}={c['value']} does not meet {c['expected']}" for c in failed],
-    }
-
-
 def _rule_assess(goal: str, obs: Dict[str, Any], edits: int, max_edits: int,
                  failed: Optional[set] = None) -> Dict[str, Any]:
     failed = failed or set()
@@ -287,6 +249,9 @@ def run_agent(
     finish_rejections = 0
     verified_success = False
     accepted_finish = False
+    last_check: Dict[str, Any] = {}
+    applied_ok = 0
+    attempted_unsupported = 0
     rule_mode = not (use_llm and llm_available())
     t0 = time.time()
 
@@ -353,6 +318,9 @@ def run_agent(
         elif tools.run_dir is not None and tools.described_at is None and action not in ("describe_motion", "generate_motion"):
             action, args = "describe_motion", {}
             thought += " [corrected: describe the new clip first]"
+        elif action == "finish" and tools.checked_at is None:
+            action, args = "check_requirement", {}
+            thought += " [corrected: measure the requirement before finishing]"
         if action == "edit_motion" and tools.edits >= max_edits:
             action = "finish"
             args = {"reason": f"edit budget reached ({max_edits})"}
@@ -363,6 +331,9 @@ def run_agent(
             obs = tools.generate_motion(str(args.get("prompt") or goal))
         elif action == "describe_motion":
             obs = tools.describe_motion(goal)
+        elif action == "check_requirement":
+            obs = tools.check_requirement(goal)
+            last_check = obs
         elif action == "edit_motion":
             instruction = str(args.get("instruction") or "").strip()
             if not instruction:
@@ -370,36 +341,48 @@ def run_agent(
             else:
                 obs = tools.edit_motion(instruction)
                 tools.history.append({"instruction": instruction, **obs})
+                if obs.get("ok"):
+                    applied_ok += 1
+                elif obs.get("error") == "unsupported_instruction":
+                    attempted_unsupported += 1
         elif action == "finish":
-            verdict = verify_goal(goal, last_obs)
-            if verdict["ok"]:
-                obs = tools.finish(str(args.get("reason") or ""))
-                obs["verification"] = verdict
-                verified_success = True
-                accepted_finish = True
-            else:
+            claim = bool(assessment.get("satisfied"))
+            checker = last_check or {}
+            checker_ok = checker.get("satisfied")
+            broken = not bool((last_obs or {}).get("valid", True))
+            limitation = bool(args.get("limitation"))
+            disagree = claim and checker_ok is False and not limitation
+            if disagree and finish_rejections < 1:
+                # Not a veto: the agent is told what the measurement says and may
+                # still stop, but must say it is reporting a limitation.
                 finish_rejections += 1
-                if finish_rejections >= 2:
-                    obs = {
-                        "ok": True,
-                        "finished": True,
-                        "verified": False,
-                        "verification": verdict,
-                        "reason": "verification_failed: " + "; ".join(verdict["reasons"]),
-                    }
-                    accepted_finish = True
-                else:
-                    obs = {
-                        "ok": False,
-                        "error": "verification_failed",
-                        "verification": verdict,
-                        "note": (
-                            "The measurements contradict 'satisfied'. Fix the first "
-                            "unmet check with edit_motion, or finish again to report "
-                            "this as a limitation."
-                        ),
-                    }
-                    accepted_finish = False
+                obs = {
+                    "ok": False,
+                    "error": "checker_disagrees",
+                    "checker_satisfied": False,
+                    "agent_claim_satisfied": True,
+                    "reasons": checker.get("reasons") or [],
+                    "note": (
+                        "You claimed the clip satisfies the request; the measurement "
+                        "does not. Fix the first failing check with one edit, or call "
+                        "finish again with args.{\"limitation\": true} to stop and "
+                        "report this as a limitation."
+                    ),
+                }
+                accepted_finish = False
+            else:
+                obs = tools.finish(str(args.get("reason") or ""))
+                obs.update({
+                    "agent_claim_satisfied": claim,
+                    "checker_satisfied": checker_ok,
+                    "checker_reasons": checker.get("reasons") or [],
+                    "limitation": limitation,
+                    "agreement": (checker_ok is not None and claim == bool(checker_ok)),
+                })
+                if broken:
+                    obs["physical_veto"] = True
+                verified_success = bool(claim and checker_ok) and not broken
+                accepted_finish = True
         else:
             obs = {"ok": False, "error": f"unknown action {action!r}"}
 
@@ -465,9 +448,18 @@ def run_agent(
             "stopped": trace[-1].get("action") if trace else None,
             "satisfied": bool(verified_success),
             "verified": bool(verified_success),
+            "agent_claim_satisfied": bool((final_assessment or {}).get("satisfied")),
+            "checker_satisfied": bool(last_check.get("satisfied")) if last_check else None,
+            "agreement": (
+                bool((final_assessment or {}).get("satisfied")) == bool(last_check.get("satisfied"))
+                if last_check else None
+            ),
+            "check_calls": sum(1 for t in trace if t["action"] == "check_requirement"),
             "finish_rejections": finish_rejections,
             "final_alignment": (final_assessment or {}).get("alignment"),
             "edits": tools.edits,
+            "edits_applied": applied_ok,
+            "edits_unsupported": attempted_unsupported,
             "tool_calls": len(tools.calls),
             "llm_rounds": sum(1 for t in trace if t["policy"] == "llm"),
             "seconds": round(time.time() - t0, 2),
@@ -503,6 +495,8 @@ def render_markdown(result: Dict[str, Any]) -> str:
                       f"non-target={ (obs.get('preservation') or {}).get('non_target_mpjpe') }"
         elif st["action"] == "generate_motion":
             summary = f"generator={obs.get('generator_used')}, frames={obs.get('frames')}"
+        elif st["action"] == "check_requirement":
+            summary = f"satisfied={obs.get('satisfied')} " + "; ".join(obs.get("reasons") or [])[:120]
         else:
             summary = str(obs.get("reason") or "")
         lines.append(

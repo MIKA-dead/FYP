@@ -88,7 +88,9 @@ def _cfg() -> Dict[str, str]:
     ).rstrip("/")
     default_model = "deepseek-chat"
     if "opencode.ai" in base:
-        default_model = "deepseek-v4-flash"
+        # OpenCode's Go catalog rotates; deepseek-v4-flash was retired and now
+        # answers "Model is unavailable". glm-5.3-flash is on both plans.
+        default_model = "glm-5.3-flash"
     model = (
         os.environ.get("REFINE_LLM_MODEL")
         or os.environ.get("DEEPSEEK_MODEL")

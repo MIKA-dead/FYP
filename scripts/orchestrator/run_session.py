@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import sys
 import time
@@ -21,14 +22,18 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+import numpy as np
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
 INTENT_DIR = REPO_ROOT / "scripts" / "intent"
 MODULES_DIR = REPO_ROOT / "scripts" / "modules"
 SESSION_DIR = REPO_ROOT / "scripts" / "session"
+BACKENDS_DIR = REPO_ROOT / "scripts" / "backends"
 
 sys.path.insert(0, str(INTENT_DIR))
 sys.path.insert(0, str(MODULES_DIR))
 sys.path.insert(0, str(SESSION_DIR))
+sys.path.insert(0, str(BACKENDS_DIR))
 
 from plan_motion_edit import build_full_agent_bundle  # noqa: E402
 from run_module import run_module  # noqa: E402
@@ -46,6 +51,80 @@ def _abs(p: Optional[Path], cwd: Path) -> Optional[Path]:
     if p is None:
         return None
     return p if p.is_absolute() else (cwd / p).resolve()
+
+
+def _load_edited_joints(path: Path) -> np.ndarray:
+    """Joints from an edited clip, refusing anything that is not (T, J, 3)."""
+    raw = np.load(path, allow_pickle=True)
+    if raw.dtype == object:
+        obj = raw.item() if raw.shape == () else raw
+        if isinstance(obj, dict):
+            for key in ("joint_positions", "joints", "pose_joints"):
+                if obj.get(key) is not None:
+                    return np.asarray(obj[key], dtype=np.float32)
+        raise ValueError(f"no joint_positions in {path}")
+    j = np.asarray(raw, dtype=np.float32)
+    return j.reshape(j.shape[0], -1, 3) if j.ndim == 2 else j
+
+
+def _save_edited_joints(path: Path, joints: np.ndarray, shift: float) -> None:
+    """Move the whole clip up by ``shift`` on its vertical axis, in place.
+
+    Both the joints and the payload's pose transl are shifted, so the saved
+    joints and the 135-D pose stay consistent for any later backend.
+    """
+    raw = np.load(path, allow_pickle=True)
+    joints = np.asarray(joints, dtype=np.float32).copy()
+    up = int(np.argmax(np.abs((joints[:, 15] - joints[:, 0]).mean(axis=0))))
+    joints[:, :, up] += shift
+    if raw.dtype == object:
+        obj = raw.item() if raw.shape == () else raw
+        if not isinstance(obj, dict):
+            np.save(path, joints)
+            return
+        payload = dict(obj)
+        for key in ("joint_positions", "joints", "pose_joints"):
+            if payload.get(key) is not None:
+                payload[key] = joints
+                break
+        pose = payload.get("pose")
+        if isinstance(pose, np.ndarray) and pose.ndim == 2 and pose.shape[1] >= 4:
+            pose = pose.copy()
+            pose[:, up] += shift
+            payload["pose"] = pose
+        payload["ground_shift"] = round(float(shift), 4)
+        np.save(path, payload)
+        return
+    np.save(path, joints)
+
+
+def resolve_clip_run(start: Optional[Path]) -> Optional[Path]:
+    """Nearest run directory that actually contains 03_edited.npy.
+
+    A failed revise is still linked through summary.json previous_run.
+    Follow that link instead of treating the empty directory as the clip.
+    """
+    seen = set()
+    cur = start
+    while cur is not None and str(cur) not in seen:
+        seen.add(str(cur))
+        if (cur / "03_edited.npy").is_file():
+            return cur
+        nxt = None
+        for name in ("summary.json", "session_response.json"):
+            path = cur / name
+            if not path.is_file():
+                continue
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8-sig"))
+            except Exception:  # noqa: BLE001
+                continue
+            hop = payload.get("previous_run")
+            if hop:
+                nxt = Path(str(hop))
+                break
+        cur = nxt
+    return None
 
 
 def _trace_step(
@@ -142,6 +221,9 @@ def _build_coder_steps(
     edit_source_id: Optional[str],
 ) -> List[Dict[str, Any]]:
     """Expand MotionEditPlan into ordered run_module calls (v05-equivalent)."""
+    # Generate uses the four-stage draft path and must not enter speed/dataset revise.
+    if mode == "generate":
+        return []
     steps: List[Dict[str, Any]] = []
     edit_mode = plan.get("edit_mode") or "diffusion"
     is_speed = edit_mode == "speed"
@@ -154,11 +236,13 @@ def _build_coder_steps(
         in ("mld_walk_kinematic_wave", "reuse_previous_wave_fix")
         or (edit_mode == "kinematic" and str(plan.get("primary_action") or "").startswith("wave"))
     )
+    is_data = edit_mode == "dataset" or plan.get("source_policy") == "dataset_or_cycle"
     native = (
         _use_native(plan, force_bridged, edit_source_id)
         and not is_speed
         and not is_geo
         and not force_walk_wave
+        and not is_data
     )
     native_id = edit_source_id or plan.get("preferred_source_id")
     intent_plan = run_dir / "00_motion_edit_plan.json"
@@ -167,6 +251,7 @@ def _build_coder_steps(
     mld_text = plan.get("mld_text") or plan.get("raw_prompt") or ""
     refine = plan.get("refine") or {}
     refine_ops = set(refine.get("ops") or [])
+    arm_raise = refine.get("arm_raise") if isinstance(refine.get("arm_raise"), dict) else None
 
     if force_walk_wave:
         # Prefer MLD walk → bridge → kinematic wave; soft-fail each step.
@@ -239,9 +324,10 @@ def _build_coder_steps(
     elif is_speed:
         # Seed source from previous edited
         source = run_dir / "02_motionfix_source.npy"
-        if not prev_dir:
-            raise ValueError("speed revise requires previous_run")
-        prev_edited = prev_dir / "03_edited.npy"
+        clip_run = resolve_clip_run(prev_dir)
+        if clip_run is None:
+            raise ValueError("speed revise requires an earlier 03_edited.npy")
+        prev_edited = clip_run / "03_edited.npy"
         steps.append(
             {
                 "kind": "copy",
@@ -262,6 +348,22 @@ def _build_coder_steps(
                     "intent_json": str(intent_plan),
                     "edit_mode": "speed",
                     "speed_scale": cons.get("speed_scale"),
+                },
+            }
+        )
+    elif is_data and mode == "revise":
+        clip_run = resolve_clip_run(prev_dir)
+        if clip_run is None:
+            raise ValueError("dataset revise requires an earlier 03_edited.npy")
+        steps.append(
+            {
+                "kind": "module",
+                "id": "dataset_edit",
+                "title": "Assemble segments: gate, split, join, test, revise",
+                "args": {
+                    "input": str(clip_run / "03_edited.npy"),
+                    "out": str(edited),
+                    "intent_json": str(intent_plan),
                 },
             }
         )
@@ -293,24 +395,25 @@ def _build_coder_steps(
                         "dst": str(edited),
                     }
                 )
-            elif prev_dir and (prev_dir / "03_edited.npy").is_file():
+            elif resolve_clip_run(prev_dir) is not None:
                 steps.append(
                     {
                         "kind": "copy",
                         "title": "Seed from previous edited (fallback)",
-                        "src": str(prev_dir / "03_edited.npy"),
+                        "src": str(resolve_clip_run(prev_dir) / "03_edited.npy"),
                         "dst": str(edited),
                     }
                 )
         else:
-            if not prev_dir or not (prev_dir / "03_edited.npy").is_file():
-                raise ValueError("geometric_only revise requires previous_run/03_edited.npy")
+            clip_run = resolve_clip_run(prev_dir)
+            if clip_run is None:
+                raise ValueError("geometric_only revise requires an earlier 03_edited.npy")
             # If previous already failed sit, hop to last good
-            seed = prev_dir / "03_edited.npy"
+            seed = clip_run / "03_edited.npy"
             qprev = prev_dir / "04_quality.json"
             # Only hop when sit itself is gone — not when yaw soft/hard alone fails.
             bad = False
-            if qprev.is_file():
+            if qprev.is_file() and not arm_raise:
                 try:
                     q = json.loads(qprev.read_text(encoding="utf-8-sig"))
                     drop = float((q.get("metrics") or {}).get("pelvis_drop") or 0)
@@ -471,6 +574,23 @@ def _build_coder_steps(
                 },
             }
         )
+        # "sit lower / deeper": depth change with a 2-bone leg IK. It must run
+        # after the sit-hold re-grounding, otherwise that step lifts the pelvis
+        # back up and the edit silently becomes a no-op.
+        deepen = float(refine.get("sit_deepen") or 0.0)
+        if deepen > 0:
+            steps.append(
+                {
+                    "kind": "module",
+                    "id": "sit_deepen_postprocess",
+                    "title": f"Deepen the seat by {deepen:.2f} m (feet planted, IK)",
+                    "args": {
+                        "input": str(edited),
+                        "out": str(edited),
+                        "delta": deepen,
+                    },
+                }
+            )
     elif need_timeline_edit:
         # wave / walk / turn / generic: apply phase speed or drop without sit-hold
         tl_json = None
@@ -491,8 +611,10 @@ def _build_coder_steps(
             }
         )
 
+    arm_raise = refine.get("arm_raise") if isinstance(refine.get("arm_raise"), dict) else None
     need_wave_walk = (
         primary.startswith("wave")
+        and not arm_raise
         and (
             force_walk_wave
             or "wave_walk_postprocess" in (plan.get("modules") or [])
@@ -500,6 +622,21 @@ def _build_coder_steps(
             or bool(refine.get("prefer_kinematic_walk_wave"))
         )
     )
+    # Any action: realize forbid flags that have a geometric implementation.
+    if "yaw_spin" in (refine.get("forbid") or []) or refine.get("limb_match") or arm_raise:
+        steps.append(
+            {
+                "kind": "module",
+                "id": "constraint_postprocess",
+                "title": "Apply refine.forbid geometric constraints",
+                "args": {
+                    "input": str(edited),
+                    "out": str(edited),
+                    "intent_json": str(intent_plan),
+                },
+            }
+        )
+
     if need_wave_walk:
         side = "left" if "left" in primary else "right"
         steps.append(
@@ -562,6 +699,16 @@ def run_orchestrated_session(
     prev = _abs(Path(request["previous_run"]) if request.get("previous_run") else None, cwd)
     if mode == "revise" and prev is None:
         return _err("revise requires previous_run", mode=mode, prompt=prompt, run_dir=run_dir)
+    if mode == "revise":
+        resolved = resolve_clip_run(prev)
+        if resolved is None:
+            return _err(
+                "revise has no 03_edited.npy to continue from",
+                mode=mode,
+                prompt=prompt,
+                run_dir=run_dir,
+            )
+        prev = resolved
 
     agent_trace: List[Dict[str, Any]] = []
     module_results: List[Dict[str, Any]] = []
@@ -688,6 +835,47 @@ def run_orchestrated_session(
     edited = run_dir / "03_edited.npy"
     preview = run_dir / "03_edited_preview.gif"
     coder_ok = True
+    pipeline_stages: List[Dict[str, Any]] = []
+    if mode == "generate":
+        backends = REPO_ROOT / "scripts" / "backends"
+        if str(backends) not in sys.path:
+            sys.path.insert(0, str(backends))
+        t_stage = time.time()
+        try:
+            from stage_generate import generate_stages
+
+            stage_info = generate_stages(
+                run_dir,
+                prompt,
+                str(plan.get("primary_action") or ""),
+                skip_viz=skip_viz,
+                generator=str(request.get("generator") or os.environ.get("GEN_BACKEND") or "dataset"),
+            )
+            pipeline_stages = list(stage_info.get("stages") or [])
+            agent_trace.append(
+                _trace_step(
+                    "motion-coder",
+                    "stages",
+                    "Fast draft, observe, edit, visualize",
+                    ok=edited.is_file(),
+                    detail={"draft": stage_info.get("draft"), "edit": stage_info.get("edit")},
+                    seconds=round(time.time() - t_stage, 3),
+                    artifacts={"edited_npy": str(edited), "preview_gif": str(preview)},
+                )
+            )
+        except Exception as exc:  # noqa: BLE001
+            coder_ok = False
+            agent_trace.append(
+                _trace_step(
+                    "motion-coder",
+                    "stages",
+                    "Fast draft, observe, edit, visualize",
+                    ok=False,
+                    detail=str(exc),
+                    seconds=round(time.time() - t_stage, 3),
+                )
+            )
+        coder_steps = []
     for step in coder_steps:
         if step["kind"] in ("copy", "ensure_copy"):
             src, dst = Path(step["src"]), Path(step["dst"])
@@ -760,7 +948,58 @@ def run_orchestrated_session(
             coder_ok = False
             break
 
+    kept_previous = False
+    if not edited.is_file() and prev is not None and (prev / "03_edited.npy").is_file():
+        shutil.copy2(prev / "03_edited.npy", edited)
+        prev_gif = prev / "03_edited_preview.gif"
+        if prev_gif.is_file() and not preview.is_file():
+            shutil.copy2(prev_gif, preview)
+        kept_previous = True
+        agent_trace.append(
+            _trace_step(
+                "motion-coder",
+                "coder",
+                "Keep the last clip that has joint data",
+                ok=True,
+                detail="The new edit produced no 03_edited.npy. The previous clip stays on screen.",
+                artifacts={"edited_npy": str(edited)},
+            )
+        )
+
     # --- Tester ---
+    # A source clip (restored native, reused session, geometric seed) can be
+    # rigidly displaced: the skeleton is fine but the whole body sits below the
+    # floor, because the source keeps its root at the origin. That is a
+    # translation, not a broken motion, so ground it once here — before the
+    # gate judges it — instead of failing a clip no edit damaged.
+    ground_shift = 0.0
+    if edited.is_file():
+        try:
+            from motion_validity import offset_to_ground
+
+            j_now = _load_edited_joints(edited)
+            shift = offset_to_ground(j_now)
+            if shift:
+                _save_edited_joints(edited, j_now, shift)
+                ground_shift = float(shift)
+                agent_trace.append(
+                    _trace_step(
+                        "motion-coder",
+                        "coder",
+                        f"Ground the clip (+{shift:.3f} m)",
+                        ok=True,
+                        detail="The source kept its root at the origin; one vertical "
+                               "shift puts the skeleton on the floor without "
+                               "changing the pose.",
+                        artifacts={"edited_npy": str(edited)},
+                    )
+                )
+        except Exception as exc:  # noqa: BLE001
+            agent_trace.append(
+                _trace_step("motion-coder", "coder", "grounding skipped",
+                            ok=False, detail=str(exc))
+            )
+
     quality_path = run_dir / "04_quality.json"
     quality: Dict[str, Any] = {
         "passed": False,
@@ -783,6 +1022,25 @@ def run_orchestrated_session(
             quality = json.loads(quality_path.read_text(encoding="utf-8-sig"))
         elif q_res.get("report"):
             quality = q_res["report"]
+        if kept_previous:
+            quality["passed"] = False
+            quality["hard_failures"] = [
+                x
+                for x in list(quality.get("hard_failures") or [])
+                if x != "missing_edited"
+            ] + ["edit_not_applied"]
+            quality["score"] = int(min(int(quality.get("score") or 0), 70))
+            quality["checks"] = list(quality.get("checks") or []) + [
+                {
+                    "id": "edit_not_applied",
+                    "ok": False,
+                    "hard": True,
+                    "detail": "The new edit produced no clip. The previous motion stays on screen.",
+                }
+            ]
+            quality_path.write_text(
+                json.dumps(quality, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
         agent_trace.append(
             _trace_step(
                 "motion-tester",
@@ -946,6 +1204,7 @@ def run_orchestrated_session(
             "motion_caption": str(caption_path) if caption_path.is_file() else None,
         },
         "motion_caption": caption or None,
+        "stages": pipeline_stages,
         "intent": {
             "primary_action": plan.get("primary_action"),
             "modules": plan.get("modules"),
@@ -987,18 +1246,24 @@ def run_orchestrated_session(
         "total_seconds": round(time.time() - t0, 3),
         "next_revise": {
             "mode": "revise",
-            "previous_run": str(run_dir),
+            "previous_run": str(run_dir)
+            if (run_dir / "03_edited.npy").is_file()
+            else (str(prev) if prev else None),
             "prompt": "<user improvement text>",
         },
         "error": None
         if ok
         else (
-            "coder_failed"
-            if not coder_ok
+            "edit_not_applied"
+            if kept_previous
             else (
-                "quality_gate_failed"
-                if edited.is_file()
-                else "missing_edited_npy"
+                "coder_failed"
+                if not coder_ok
+                else (
+                    "quality_gate_failed"
+                    if edited.is_file()
+                    else "missing_edited_npy"
+                )
             )
         ),
         "orchestrator": True,

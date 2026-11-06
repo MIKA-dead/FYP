@@ -16,7 +16,8 @@
         "删去坐下前",
         "去掉走动",
         "不要先走",
-        "trim walk before sit"
+        "trim walk before sit",
+        "remove the walking before the sit"
       ],
       "ops": [
         "geometric_only",
@@ -36,8 +37,8 @@
         "delete_shorten": 1.85
       },
       "prefer_diffusion": false,
-      "weight": 1.0,
-      "success_count": 0,
+      "weight": 1.32,
+      "success_count": 4,
       "fail_count": 0
     },
     {
@@ -52,7 +53,8 @@
       "prompt_hints": [
         "下降慢",
         "坐下过程放慢",
-        "slow the sit"
+        "slow the sit",
+        "下降部分再慢一点。"
       ],
       "ops": [
         "geometric_only",
@@ -71,7 +73,42 @@
         "fast": 1.75
       },
       "prefer_diffusion": false,
-      "weight": 1.0,
+      "weight": 1.27,
+      "success_count": 4,
+      "fail_count": 1
+    },
+    {
+      "id": "sit.deepen",
+      "action": "sit_down",
+      "intents": [
+        "lower",
+        "deepen"
+      ],
+      "phases": [
+        "descend",
+        "seated_hold"
+      ],
+      "prompt_hints": [
+        "sit lower",
+        "sit deeper",
+        "lower the hips",
+        "坐低一点",
+        "坐得更低",
+        "再坐下去一点"
+      ],
+      "ops": [
+        "geometric_only",
+        "sit_deepen"
+      ],
+      "forbid": [],
+      "phase_speed": {},
+      "drop_phases": [],
+      "mf_hints": [
+        "sit down and lower the hips into a deeper seated position"
+      ],
+      "strength": {},
+      "prefer_diffusion": false,
+      "weight": 1.2,
       "success_count": 0,
       "fail_count": 0
     },
@@ -88,7 +125,8 @@
       "prompt_hints": [
         "删去坐下后",
         "去掉多余",
-        "end after seated"
+        "end after seated",
+        "remove the extra motion after sitting"
       ],
       "ops": [
         "geometric_only",
@@ -104,8 +142,8 @@
       ],
       "strength": {},
       "prefer_diffusion": false,
-      "weight": 1.0,
-      "success_count": 0,
+      "weight": 1.64,
+      "success_count": 8,
       "fail_count": 0
     },
     {
@@ -189,7 +227,6 @@
         "walk_forward"
       ],
       "prompt_hints": [
-        "行走不够",
         "左右跳",
         "跳跃",
         "没有走",
@@ -200,7 +237,8 @@
         "lateral",
         "jumping",
         "现在生成动作没有走动，而是在左右跳跃，同时双臂同时挥舞。现在需要人物向前走右臂挥",
-        "效果稍微有改进，但是左臂没有跟随人移动，而且移动过程中双腿也没有来回前进的动作"
+        "效果稍微有改进，但是左臂没有跟随人移动，而且移动过程中双腿也没有来回前进的动作",
+        "walk forward while waving"
       ],
       "ops": [
         "wave_walk_fix"
@@ -218,8 +256,8 @@
         "slow": 0.45,
         "fast": 1.55
       },
-      "weight": 1.74,
-      "success_count": 3,
+      "weight": 1.82,
+      "success_count": 4,
       "fail_count": 0
     },
     {
@@ -233,10 +271,6 @@
         "wave_right"
       ],
       "prompt_hints": [
-        "只挥右手",
-        "不要双臂",
-        "单手挥",
-        "双臂",
         "两只手",
         "only right hand",
         "both arm",
@@ -244,7 +278,11 @@
         "one arm",
         "left arm",
         "right arm",
-        "现在生成动作没有走动，而是在左右跳跃，同时双臂同时挥舞。现在需要人物向前走右臂挥"
+        "现在生成动作没有走动，而是在左右跳跃，同时双臂同时挥舞。现在需要人物向前走右臂挥",
+        "再挥一下。",
+        "raise the right arm high overhead",
+        "raise both arms overhead",
+        "raise the right arm higher"
       ],
       "ops": [
         "wave_walk_fix"
@@ -259,8 +297,8 @@
       "prefer_kinematic_walk_wave": true,
       "force_bridged_walk": true,
       "strength": {},
-      "weight": 1.66,
-      "success_count": 2,
+      "weight": 3.0,
+      "success_count": 22,
       "fail_count": 0
     },
     {
@@ -310,7 +348,8 @@
       ],
       "prompt_hints": [
         "转身慢",
-        "转慢一点"
+        "转慢一点",
+        "slow down a bit"
       ],
       "ops": [
         "geometric_only",
@@ -329,8 +368,8 @@
         "fast": 1.65
       },
       "prefer_diffusion": false,
-      "weight": 1.0,
-      "success_count": 0,
+      "weight": 1.08,
+      "success_count": 1,
       "fail_count": 0
     },
     {
