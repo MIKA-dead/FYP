@@ -18,7 +18,9 @@ Here the list is executable, single-source, and used three ways:
 """
 from __future__ import annotations
 
+import os
 import re
+import sys
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -233,6 +235,8 @@ def classify(instruction: str) -> Dict[str, Any]:
                 "canonical": None,
                 "reason": f"{fam.canonical}: {fam.note}",
                 "suggestion": fam.suggestion or _closest(text, SUPPORTED),
+                "open_vocab": bool(open_vocab_available()
+                                   and fam.name not in NEVER_OPEN_VOCAB),
             }
     return {
         "supported": False,
@@ -240,7 +244,45 @@ def classify(instruction: str) -> Dict[str, Any]:
         "canonical": None,
         "reason": "no operator matches this instruction",
         "suggestion": _closest(text, SUPPORTED),
+        # Unknown wording is exactly what a generative editor is for: it takes
+        # the sentence as-is, so this is routable when that backend is present.
+        "open_vocab": bool(open_vocab_available()),
     }
+
+
+_OPEN_VOCAB_CACHE: Optional[bool] = None
+
+
+def open_vocab_available(refresh: bool = False) -> bool:
+    """Whether an open-vocabulary editor (SimMotionEdit) can take raw text.
+
+    Off by default: the closed-set registry is what the benchmark measures. Set
+    ``AGENT_OPEN_VOCAB_EDIT=1`` (or ``auto``) to let instructions outside the
+    registry be routed to the generative backend instead of rejected, provided
+    that backend reports itself ready (see ``backends/simmotion_edit.py``).
+    """
+    global _OPEN_VOCAB_CACHE
+    mode = (os.environ.get("AGENT_OPEN_VOCAB_EDIT") or "off").strip().lower()
+    if mode in ("0", "false", "off", "no"):
+        return False
+    if _OPEN_VOCAB_CACHE is not None and not refresh:
+        return _OPEN_VOCAB_CACHE
+    backends = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "backends")
+    if backends not in sys.path:
+        sys.path.insert(0, backends)
+    try:
+        import simmotion_edit  # noqa: WPS433
+
+        _OPEN_VOCAB_CACHE = bool(simmotion_edit.discover().get("ready"))
+    except Exception:  # noqa: BLE001
+        _OPEN_VOCAB_CACHE = False
+    return _OPEN_VOCAB_CACHE
+
+
+# Families that no open-vocabulary motion editor can satisfy: the request is
+# about something the clip does not contain at all (props, camera, identity) or
+# about a whole new action, not an edit of this one.
+NEVER_OPEN_VOCAB = ("object", "camera", "appearance", "body")
 
 
 def capability_text() -> str:
@@ -254,6 +296,13 @@ def capability_text() -> str:
                  + "; ".join(f.canonical for f in BLOCKERS) + ".")
     lines.append("If the request needs one of those, finish and say it is out of scope — "
                  "do not spend an edit on it.")
+    if open_vocab_available():
+        lines.append(
+            "An open-vocabulary editor (SimMotionEdit) IS available: wording outside "
+            "this list that only reshapes the body (style, tempo, posture) will be "
+            "sent to it as written. Props, camera, appearance and body shape remain "
+            "impossible."
+        )
     return "\n".join(lines)
 
 

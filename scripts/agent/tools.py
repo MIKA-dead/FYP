@@ -51,6 +51,7 @@ from metrics import (  # noqa: E402
     text_similarity,
 )
 from motion_validity import physical_report, reground  # noqa: E402
+import sampling  # noqa: E402
 from verify import requirement_gap, verify_goal  # noqa: E402
 
 MAX_RESAMPLES = 2
@@ -208,6 +209,7 @@ class MotionTools:
         draft = stages.get("draft") or {}
         m = kinematic_summary(j)
         rep = physical_report(j)
+        rejection = draft.get("rejection") or None
         return {
             "run_dir": str(run_dir),
             "frames": int(j.shape[0]),
@@ -222,6 +224,7 @@ class MotionTools:
             "invalid_checks": rep["invalid_checks"],
             "ground": rep["ground"],
             "metrics": m,
+            **({"draft_rejection": rejection} if rejection else {}),
         }
     # -- tools -------------------------------------------------------------
     def _generate_into(self, prompt: str, out_dir: Path,
@@ -332,33 +335,45 @@ class MotionTools:
         base = self.episode_dir / f"step{self.step:02d}_resample"
         base.mkdir(parents=True, exist_ok=True)
         t0 = time.time()
-        drawn = self._draw_samples(goal, n, base / "draw") if self.generator == "mld" else []
+        plan = sampling.plan(goal, want=n, batches_left=1)
         cands: List[Dict[str, Any]] = []
-        for i in range(1, n + 1):
-            d = base / f"cand{i}"
-            d.mkdir(parents=True, exist_ok=True)
-            sample = drawn[i - 1] if i - 1 < len(drawn) else None
-            ok, used, resp = self._generate_into(goal, d, draft_joints=sample)
-            if not ok:
-                cands.append({"cand": i, "run_dir": str(d), "ok": False,
-                              "error": resp.get("error") or "no clip"})
-                continue
-            j = load_joints(d / "03_edited.npy")
-            m = kinematic_summary(j)
-            rep = physical_report(j)
-            v = verify_goal(goal, {"metrics": m})
-            cands.append({
-                "cand": i,
-                "run_dir": str(d),
-                "ok": True,
-                "generator_used": used,
-                "from_generator": sample is not None,
-                "valid": bool(rep["valid"]),
-                "satisfied": bool(v["ok"]),
-                "reasons": v["reasons"],
-                "gap": round(requirement_gap(goal, {"metrics": m}), 4),
-                "measured": _candidate_metrics(m),
-            })
+        batches_used = 0
+        accepted: List[Dict[str, Any]] = []
+        while batches_used < plan["batches"] and not accepted:
+            batches_used += 1
+            batch_dir = base if batches_used == 1 else base / f"batch{batches_used}"
+            batch_dir.mkdir(parents=True, exist_ok=True)
+            drawn = (
+                self._draw_samples(goal, n, batch_dir / "draw")
+                if self.generator == "mld" else []
+            )
+            for k in range(1, n + 1):
+                i = (batches_used - 1) * n + k
+                d = batch_dir / f"cand{k}"
+                d.mkdir(parents=True, exist_ok=True)
+                sample = drawn[k - 1] if k - 1 < len(drawn) else None
+                ok, used, resp = self._generate_into(goal, d, draft_joints=sample)
+                if not ok:
+                    cands.append({"cand": i, "run_dir": str(d), "ok": False,
+                                  "error": resp.get("error") or "no clip"})
+                    continue
+                j = load_joints(d / "03_edited.npy")
+                m = kinematic_summary(j)
+                rep = physical_report(j)
+                cands.append({
+                    "cand": i,
+                    "run_dir": str(d),
+                    "ok": True,
+                    "batch": batches_used,
+                    "generator_used": used,
+                    "from_generator": sample is not None,
+                    "valid": bool(rep["valid"]),
+                    "metrics": m,
+                })
+            ranked = sampling.rank(goal, cands)
+            accepted = [c for c in ranked if c.get("satisfied") and c.get("valid")]
+            if accepted or batches_used >= plan["batches"]:
+                break
         usable = [c for c in cands if c.get("ok")]
         if not usable:
             obs = {"ok": False, "error": "resample produced no clip",
@@ -385,25 +400,35 @@ class MotionTools:
             }
             self._record("resample_motion", {"prompt": goal, "n": n}, obs)
             return obs
-        usable.sort(key=lambda c: (not c["valid"], c["gap"], not c["satisfied"]))
-        best = usable[0]
+        best = (accepted or sampling.rank(goal, cands))[0]
         self.resamples += 1
         self.run_dir = Path(best["run_dir"])
         self.described_at = None
         self.checked_at = None
-        distinct = len({json.dumps(c.get("measured"), sort_keys=True) for c in usable})
+        distinct = len({json.dumps(_candidate_metrics(c["metrics"]), sort_keys=True)
+                        for c in usable})
+        round_summary = sampling.summary(goal, cands, best)
         obs = self._observe_clip(self.run_dir, goal)
         obs.update({
             "ok": True,
-            "candidates": cands,
+            "candidates": [
+                {k: v for k, v in c.items() if k != "metrics"}
+                | {"measured": _candidate_metrics(c.get("metrics") or {})}
+                for c in cands
+            ],
             "chosen": best["cand"],
             "chosen_gap": best["gap"],
             "chosen_satisfied": best["satisfied"],
+            "accepted": len(accepted),
             "distinct_candidates": distinct,
+            "batches": batches_used,
+            "acceptance": round_summary["acceptance"],
             "resamples_left": max(0, MAX_RESAMPLES - self.resamples),
             "seconds": round(time.time() - t0, 2),
             "note": (
-                "Kept the closest draft (lowest requirement gap, valid first). "
+                f"Kept cand{best['cand']} (valid first, then lowest requirement gap). "
+                f"{len(accepted)}/{len(usable)} drafts already satisfied: "
+                f"{round_summary['acceptance'] or 'no measurable constraint'}. "
                 "No caption for it yet — call describe_motion, then compare it with "
                 "the candidates list before deciding."
                 if distinct > 1
@@ -474,6 +499,11 @@ class MotionTools:
             return {"ok": False, "error": "no clip yet; call generate_motion first"}
         cls = classify(instruction)
         if not cls["supported"]:
+            if cls.get("open_vocab"):
+                # The closed set cannot apply it, but a generative editor takes
+                # the sentence as written. Its result is judged by the same
+                # measurement and rollback rule as any other edit.
+                return self._edit_open_vocab(str(instruction), cls)
             # Reject before spending a backend pass: the editor cannot apply this.
             obs = {
                 "ok": False,
@@ -538,22 +568,94 @@ class MotionTools:
         self.described_at = None
         self.checked_at = None
         self.edits += 1
+        kb = kinematic_summary(before)
+        return self._assess_after(
+            before=before, kb=kb, before_dir=before_dir, out_dir=out_dir,
+            instruction=str(instruction), cls=cls, t0=t0,
+            grounded_offset=0.0, backend="session",
+        )
+
+    def _edit_open_vocab(self, instruction: str, cls: Dict[str, Any]) -> Dict[str, Any]:
+        """Send an out-of-registry instruction to the generative editor.
+
+        SimMotionEdit consumes the sentence directly, so this is the one path
+        where the instruction is neither matched nor rejected. Everything after
+        the backend call is deliberately identical to the closed-set path: the
+        same grounding repair, the same before/after measurement, and the same
+        rollback if the edit *introduces* physical damage.
+        """
+        if self.run_dir is None:
+            return {"ok": False, "error": "no clip yet; call generate_motion first"}
+        t0 = time.time()
+        before_dir = self.run_dir
+        before = load_joints(before_dir / "03_edited.npy")
+        out_dir = self._next_dir("edit_oov")
+        out_npy = out_dir / "03_edited.npy"
+        backends = str(REPO / "scripts" / "backends")
+        if backends not in sys.path:
+            sys.path.insert(0, backends)
+        try:
+            import simmotion_edit  # noqa: WPS433
+        except Exception as exc:  # noqa: BLE001
+            obs = {"ok": False, "error": "open_vocab_backend_missing",
+                   "detail": str(exc), "instruction": instruction}
+            self._record("edit_motion", {"instruction": instruction}, obs)
+            return obs
+        res = simmotion_edit.run_edit(
+            source_npy=before_dir / "03_edited.npy",
+            text=instruction,
+            out_npy=out_npy,
+        )
+        if not res.get("ok") or not out_npy.is_file():
+            obs = {
+                "ok": False,
+                "error": res.get("error") or "open_vocab_edit_failed",
+                "backend": "simmotion",
+                "instruction": instruction,
+                "family": cls.get("family"),
+                "hint": res.get("hint"),
+                "seconds": round(time.time() - t0, 2),
+                "note": "The open-vocabulary editor did not produce a clip. Do not "
+                        "repeat this instruction; edit within the supported set or "
+                        "finish naming the gap.",
+            }
+            self._record("edit_motion", {"instruction": instruction}, obs)
+            return obs
+        self.run_dir = out_dir
+        self.described_at = None
+        self.checked_at = None
+        self.edits += 1
+        kb = kinematic_summary(before)
+        return self._assess_after(
+            before=before, kb=kb, before_dir=before_dir, out_dir=out_dir,
+            instruction=instruction,
+            cls={"family": cls.get("family") or "open_vocab", "supported": True},
+            t0=t0, grounded_offset=0.0, backend="simmotion",
+        )
+
+    def _assess_after(self, *, before: np.ndarray, kb: Dict[str, Any],
+                      before_dir: Path, out_dir: Path, instruction: str,
+                      cls: Dict[str, Any], t0: float,
+                      grounded_offset: float = 0.0,
+                      backend: str = "session") -> Dict[str, Any]:
+        """Measure an edit's result and roll it back if it *introduced* damage.
+
+        Shared by the closed-set session editor and the open-vocabulary backend,
+        so both are judged by exactly the same rule: inherited defects are
+        reported, new ones restore the previous clip.
+        """
         after_f = out_dir / "03_edited.npy"
         after = load_joints(after_f)
-        # A restored/diffused source can come back with its root at the origin
-        # instead of on the floor. That is a rigid offset: repair it. Deforming
-        # penetration is not repaired — see physical_report().
-        grounded_offset = 0.0
         rep = physical_report(after)
         if rep["ground"]["mode"] == "offset":
-            fixed, grounded_offset = reground(after)
-            if grounded_offset:
+            fixed, shift = reground(after)
+            if shift:
                 np.save(after_f, fixed)
                 after = fixed
                 rep = physical_report(after)
-        kb = kinematic_summary(before)
-        ka = kinematic_summary(after)
+                grounded_offset = shift
         rep_before = physical_report(before)
+        ka = kinematic_summary(after)
         # Only *damage* justifies a rollback. If the source was already invalid
         # (a sit draft whose legs sink through the floor, say), refusing every
         # edit would lock the agent out of improving it — report the inherited
@@ -567,6 +669,7 @@ class MotionTools:
             obs = {
                 "ok": False,
                 "error": "edit_produced_invalid_clip",
+                "backend": backend,
                 "invalid": rep["invalid_checks"],
                 "ground": rep["ground"],
                 "rolled_back": True,
@@ -607,6 +710,7 @@ class MotionTools:
             "ok": True,
             "instruction": str(instruction),
             "family": cls["family"],
+            "backend": backend,
             "run_dir": str(out_dir),
             "frames": int(after.shape[0]),
             "frames_ratio": frames_ratio,

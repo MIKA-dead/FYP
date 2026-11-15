@@ -11,6 +11,22 @@ Thin wrappers around third-party models. Envs:
 | Diagnose | `motionfix` | `diagnose_v05.py` |
 | Full pipe | host Python 3 | `v05_pipeline.py` (spawns both envs) |
 
+**`mld` env + Windows Application Control.** Three compiled extensions
+(`thinc/backends/linalg`, `blis/py`, `spacy/…/span_group`) can be refused at load
+time with `WinError 4551 应用程序控制策略已阻止此文件`; reinstalling the same
+wheel reproduces it because the verdict follows the file hash. Text→motion does
+not need spaCy, so the vendored MLD imports it lazily inside
+`RawTextDataset` (`third_party/motion-latent-diffusion/mld/data/humanml/data/dataset.py`).
+The pair that loads on this machine is `thinc 8.3.14` + `blis 1.2.0`; verify with
+`python -c "from thinc.api import NumpyOps; NumpyOps()"` inside the env. If MLD
+still fails, `generate_motion` falls back to the in-repo dataset draft and the
+trace records `generator_used=dataset_fallback` (never silently).
+
+**Rejection sampling on the generator.** `generate_motion` draws a batch (3
+drafts, one MLD process) when the prompt names a measurable attribute, and keeps
+the draft closest to it — see `scripts/agent/sampling.py`. `AGENT_REJECTION=off`
+restores single-draw behaviour, `AGENT_REJECTION_BATCH=N` changes the batch.
+
 See `third_party/INSTALL_STATUS.md` for install status.
 
 ## End-to-end (recommended)

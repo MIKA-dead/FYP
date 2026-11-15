@@ -409,7 +409,8 @@ body {
     <div class="messages" id="messages">
       <div class="empty-hint">
         左侧对话 · 右侧动作预览<br />
-        试试下方 demo，或输入提示词。当前模型均为启发式编排（未接在线 LLM）。
+        试试下方 demo，或输入提示词。模式选 <b>agent（工具循环）</b> 可看 LLM 自己调用
+        generate / describe / check / edit 的完整轨迹。
       </div>
     </div>
     <div class="composer">
@@ -421,6 +422,7 @@ body {
           <select class="select" id="mode">
             <option value="generate">generate</option>
             <option value="revise">revise</option>
+            <option value="agent">agent（工具循环）</option>
           </select>
           <label class="toggle" title="匹配 demo 提示词时用缓存 GIF（快）">
             <input type="checkbox" id="demoCache" checked /> 快速演示
@@ -795,6 +797,30 @@ async function send(extra) {
   if (!extra) $("prompt").value = "";
   setBusy(true);
   try {
+    if (mode === "agent") {
+      // Tool-calling loop: the controller picks generate/describe/check/edit
+      // and the server returns the whole trace plus the final clip.
+      const outAgent = await api("/api/agent", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          prompt,
+          thread_id: state.threadId,
+          max_edits: 2,
+          max_steps: 10,
+          generator: "mld",
+        }),
+      });
+      state.threadId = outAgent.thread_id;
+      $("threadMeta").textContent = (state.threadId || "").slice(0, 8) + "…";
+      appendMessage(outAgent.assistant_message);
+      if (outAgent.previous_run) {
+        state.previousRun = outAgent.previous_run;
+        $("mode").value = "agent";
+      }
+      updateStage(outAgent.assistant_message.session);
+      return;
+    }
     const body = {
       prompt: prompt || "[timeline]",
       model,

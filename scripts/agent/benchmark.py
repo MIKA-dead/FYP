@@ -190,6 +190,9 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
                  if s.get("action") in ("edit_motion", "finish")
                  and isinstance(s.get("assessment"), dict)]
         align = [a for a in align if isinstance(a, (int, float))]
+        gen_obs = (next((s for s in ep["steps"]
+                         if s["action"] == "generate_motion"), {}) or {}).get("observation") or {}
+        rej = gen_obs.get("draft_rejection") or {}
         loop_rows.append({
             "goal": ep["goal"],
             "satisfied": ep["summary"]["satisfied"],
@@ -197,6 +200,8 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
             "checker_satisfied": ep["summary"].get("checker_satisfied"),
             "agreement": ep["summary"].get("agreement"),
             "check_calls": ep["summary"].get("check_calls"),
+            "drafts_drawn": rej.get("drawn"),
+            "drafts_rejected": rej.get("rejected"),
             "edits": ep["summary"]["edits"],
             "edit_attempts": sum(1 for s in ep["steps"] if s["action"] == "edit_motion"),
             "resamples": ep["summary"].get("resamples", 0),
@@ -281,6 +286,8 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
             "mean_edits": round(float(np.mean([r["edits"] for r in loop_rows])), 2),
             "mean_edit_attempts": round(float(np.mean([r["edit_attempts"] for r in loop_rows])), 2),
             "n_resampled_episodes": sum(1 for r in loop_rows if r.get("resamples")),
+            "n_rejection_episodes": sum(1 for r in loop_rows if (r.get("drafts_drawn") or 1) > 1),
+            "n_drafts_rejected": sum((r.get("drafts_rejected") or 0) for r in loop_rows),
             "mean_steps": round(float(np.mean([r["steps"] for r in loop_rows])), 2),
             "mean_alignment_gain": round(float(np.mean(gains)), 1) if gains else None,
             "mean_seconds": round(float(np.mean([r["seconds"] for r in loop_rows])), 1),

@@ -91,9 +91,22 @@ def draft_clip(
 
 
 def _mld_draft(prompt: str, *, run_dir: Optional[Path]) -> Tuple[np.ndarray, Dict[str, Any]]:
-    """Text → MLD diffusion → joints, then map into the preview skeleton."""
+    """Text → MLD diffusion → joints, then map into the preview skeleton.
+
+    When the prompt names a measurable attribute the editor cannot create
+    ("in place", "turns left", "jumps"), more than one draft is drawn in a single
+    MLD process and the closest one is kept — generation-side rejection sampling
+    (``scripts/agent/sampling.py``). One draw cannot distinguish "the model
+    cannot do it" from "this draw missed": the same "walks in place" prompt gave
+    1.35 m, 0.12 m and 0.02 m of travel on three draws.
+    """
     import os
     import subprocess
+
+    _agent_dir = REPO / "scripts" / "agent"
+    if str(_agent_dir) not in sys.path:
+        sys.path.insert(0, str(_agent_dir))
+    import sampling
 
     py = os.environ.get("MLD_PYTHON") or str(
         Path.home() / "miniconda3" / "envs" / "mld" / "python.exe"
@@ -102,37 +115,83 @@ def _mld_draft(prompt: str, *, run_dir: Optional[Path]) -> Tuple[np.ndarray, Dic
     out.parent.mkdir(parents=True, exist_ok=True)
     env = os.environ.copy()
     env.setdefault("PYTHONUTF8", "1")
-    proc = subprocess.run(
-        [
-            py,
-            str(REPO / "scripts" / "backends" / "mld_generate.py"),
-            "--text",
-            prompt,
-            "--length",
-            "60",
-            "--out",
-            str(out),
-        ],
-        cwd=str(REPO),
-        env=env,
-        timeout=600,
-    )
+    want = sampling.batch_size(prompt)
+    cmd = [
+        py,
+        str(REPO / "scripts" / "backends" / "mld_generate.py"),
+        "--text",
+        prompt,
+        "--length",
+        "60",
+        "--out",
+        str(out),
+    ]
+    if want > 1:
+        cmd += ["--samples", str(want)]
+    proc = subprocess.run(cmd, cwd=str(REPO), env=env, timeout=900)
     if proc.returncode != 0 or not out.is_file():
         raise RuntimeError(f"MLD generation failed (exit {proc.returncode})")
-    raw = np.load(out)
-    if raw.dtype == object:
-        raw = np.asarray(raw.item().get("joint_positions"))
-    joints, converted = align_to_source(np.asarray(raw, dtype=np.float32), _reference())
-    if joints.shape[0] > MAX_FRAMES:
-        joints = joints[:MAX_FRAMES]
+
+    # One draw, or every draw of the batch, mapped into the preview skeleton.
+    paths = [out]
+    meta_path = out.with_suffix(".json")
+    if meta_path.is_file():
+        try:
+            meta_json = json.loads(meta_path.read_text(encoding="utf-8-sig"))
+            paths = [Path(p) for p in (meta_json.get("samples") or [])] or [out]
+        except Exception:  # noqa: BLE001
+            paths = [out]
+
+    from metrics import kinematic_summary
+    from motion_validity import physical_report, reground
+
+    cands: List[Dict[str, Any]] = []
+    drafts: List[Tuple[np.ndarray, Dict[str, Any]]] = []
+    for i, path in enumerate(paths, start=1):
+        if not Path(path).is_file():
+            continue
+        raw = np.load(path, allow_pickle=True)
+        if raw.dtype == object:
+            raw = np.asarray(raw.item().get("joint_positions"))
+        joints, converted = align_to_source(np.asarray(raw, dtype=np.float32), _reference())
+        if joints.shape[0] > MAX_FRAMES:
+            joints = joints[:MAX_FRAMES]
+        grounded, _shift = reground(joints)
+        m = kinematic_summary(grounded)
+        cands.append({
+            "cand": i,
+            "ok": True,
+            "valid": bool(physical_report(grounded)["valid"]),
+            "metrics": m,
+            "path": str(path),
+        })
+        drafts.append((joints, {"converted_up_axis": bool(converted),
+                               "T": int(joints.shape[0]), "sample": i, "path": str(path)}))
+    if not drafts:
+        raise RuntimeError("MLD produced no readable sample")
+
+    best, accepted = sampling.select(prompt, cands)
+    pick = int((best or cands[0])["cand"]) - 1
+    joints, info = drafts[pick]
+    rejection = None
+    if len(cands) > 1:
+        rejection = sampling.summary(prompt, cands, best)
+        rejection["chosen"] = pick + 1
+        rejection["paths"] = [c["path"] for c in cands]
+        rejection["per_candidate"] = [
+            {"cand": c["cand"], "gap": c["gap"], "satisfied": c["satisfied"],
+             "valid": c["valid"]}
+            for c in sampling.rank(prompt, cands)
+        ]
     meta = {
         "source_id": "mld",
         "caption": prompt,
         "text_score": 1.0,
-        "converted_up_axis": bool(converted),
-        "T": int(joints.shape[0]),
+        "converted_up_axis": bool(info["converted_up_axis"]),
+        "T": int(info["T"]),
         "generator": "mld",
-        "mld_out": str(out),
+        "mld_out": info["path"],
+        "rejection": rejection,
     }
     return joints.astype(np.float32), meta
 

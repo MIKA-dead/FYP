@@ -29,11 +29,14 @@ SESSION_DIR = Path(__file__).resolve().parent
 UI_DIR = SESSION_DIR / "ui"
 INTENT_DIR = REPO_ROOT / "scripts" / "intent"
 ORCH_DIR = REPO_ROOT / "scripts" / "orchestrator"
+AGENT_DIR = REPO_ROOT / "scripts" / "agent"
 OUT_SESSION = REPO_ROOT / "outputs" / "session"
 PORT = int(os.environ.get("SESSION_UI_PORT", "8787"))
 
 sys.path.insert(0, str(INTENT_DIR))
 sys.path.insert(0, str(SESSION_DIR))
+sys.path.insert(0, str(ORCH_DIR))
+sys.path.insert(0, str(AGENT_DIR))
 
 from plan_motion_edit import build_full_agent_bundle  # noqa: E402
 from session_api import run_session  # noqa: E402
@@ -651,6 +654,172 @@ def handle_chat(body: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def _agent_step_line(i: int, step: Dict[str, Any]) -> str:
+    """One compact line per tool call, for the chat bubble."""
+    action = str(step.get("action") or "")
+    obs = step.get("observation") or {}
+    if action == "generate_motion":
+        rej = obs.get("draft_rejection") or {}
+        extra = (
+            f", 抽 {rej.get('drawn')} 稿 / 弃 {rej.get('rejected')} 稿"
+            if rej.get("drawn") else ""
+        )
+        detail = f"generator={obs.get('generator_used')}, {obs.get('frames')} 帧{extra}"
+    elif action == "resample_motion":
+        detail = (f"保留 cand{obs.get('chosen')}（gap={obs.get('chosen_gap')}, "
+                  f"满足={obs.get('chosen_satisfied')}）")
+    elif action == "describe_motion":
+        detail = f"「{obs.get('caption') or '—'}」"
+    elif action == "check_requirement":
+        ok = obs.get("satisfied")
+        detail = ("满足 ✓" if ok else "未满足：") + "; ".join(obs.get("reasons") or [])[:160]
+    elif action == "edit_motion":
+        if obs.get("ok"):
+            fol = (obs.get("instruction_following") or {}).get("followed")
+            detail = f"已应用（跟随={fol}）"
+        else:
+            detail = f"{obs.get('error') or 'failed'}"
+    else:
+        detail = str(obs.get("reason") or "")
+    return f"{i}. {action} → {detail}"
+
+
+def handle_agent(body: Dict[str, Any]) -> Dict[str, Any]:
+    """Run the tool-calling agent loop (generate → describe → check → edit).
+
+    This is the same loop the benchmark measures; the UI only changes who types
+    the goal. The response is shaped like ``/api/chat`` so the page reuses its
+    message + stage rendering: ``assistant_message.session`` drives the preview,
+    and ``trace`` lists every tool call for the bubble.
+    """
+    goal = str(body.get("prompt") or "").strip()
+    if not goal:
+        return {"ok": False, "error": "empty prompt"}
+    from agent import run_agent
+
+    thread_id = body.get("thread_id") or str(uuid.uuid4())
+    task_id = f"UI_AGENT_{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+    episode = OUT_SESSION / "ui_runs" / f"{thread_id[:8]}_{task_id}"
+    res = run_agent(
+        goal,
+        out_dir=episode,
+        max_steps=int(body.get("max_steps") or 10),
+        max_edits=int(body.get("max_edits") or 2),
+        generator=str(body.get("generator") or "mld"),
+        skip_viz=bool(body.get("skip_viz")),
+        use_llm=bool(body.get("use_llm", True)),
+        verbose=False,
+    )
+
+    steps = res.get("steps") or []
+    trace = [
+        {
+            "step": s.get("step"),
+            "action": s.get("action"),
+            "thought": s.get("thought"),
+            "policy": s.get("policy"),
+            "ok": (s.get("observation") or {}).get("ok"),
+            "line": _agent_step_line(int(s.get("step") or i + 1), s),
+        }
+        for i, s in enumerate(steps)
+    ]
+
+    # The final clip is whatever run_dir the agent kept last.
+    final_run = None
+    for s in reversed(steps):
+        rd = (s.get("observation") or {}).get("run_dir")
+        if rd and Path(rd).is_dir():
+            final_run = Path(rd)
+            break
+    plan: Dict[str, Any] = {}
+    quality: Dict[str, Any] = {}
+    preview_url = None
+    if final_run is not None:
+        p = final_run / "00_motion_edit_plan.json"
+        if p.is_file():
+            try:
+                plan = json.loads(p.read_text(encoding="utf-8-sig"))
+            except Exception:  # noqa: BLE001
+                plan = {}
+        q = final_run / "04_quality.json"
+        if q.is_file():
+            try:
+                quality = json.loads(q.read_text(encoding="utf-8-sig"))
+            except Exception:  # noqa: BLE001
+                quality = {}
+        preview_url = _rel_url(str(final_run / "03_edited_preview.gif"))
+
+    session = {
+        "ok": bool((final_run or Path(".")).is_dir()),
+        "run_dir": str(final_run) if final_run else None,
+        "preview_url": preview_url,
+        "intent": {
+            "primary_action": plan.get("primary_action"),
+            "mf_text": plan.get("mf_text"),
+            "source_policy": plan.get("source_policy"),
+            "preferred_source_id": plan.get("preferred_source_id"),
+        },
+        "quality": {
+            "passed": quality.get("passed"),
+            "score": quality.get("score"),
+            "hard_failures": quality.get("hard_failures"),
+            "soft_failures": quality.get("soft_failures"),
+            "metrics": quality.get("metrics"),
+        },
+        "artifacts": {
+            "edited_npy": str(final_run / "03_edited.npy") if final_run else None,
+            "preview_gif": str(final_run / "03_edited_preview.gif") if final_run else None,
+            "quality": str(final_run / "04_quality.json") if final_run else None,
+        },
+    }
+
+    summary = res.get("summary") or {}
+    lines = [
+        f"Agent 循环 · 目标「{goal}」",
+        f"策略 {res.get('policy')} · 抽稿/编辑 {summary.get('edits')} 次 · "
+        f"{summary.get('seconds')}s",
+        "",
+    ]
+    lines += [t["line"] for t in trace]
+    lines.append("")
+    verdict = "满足" if summary.get("satisfied") else "未完全满足"
+    lines.append(
+        f"结果：{verdict}（checker={summary.get('checker_satisfied')}, "
+        f"agent={summary.get('agent_claim_satisfied')}, "
+        f"一致={summary.get('agreement')}）"
+    )
+    if res.get("final_caption"):
+        lines.append(f"最终动作描述：{res['final_caption']}")
+
+    with _LOCK:
+        _THREADS.setdefault(thread_id, {"messages": [], "previous_run": None})
+        _THREADS[thread_id]["messages"].append({"role": "user", "content": goal})
+        _THREADS[thread_id]["messages"].append(
+            {"role": "assistant", "content": "\n".join(lines)}
+        )
+        if session["run_dir"]:
+            _THREADS[thread_id]["previous_run"] = session["run_dir"]
+
+    return {
+        "ok": True,
+        "thread_id": thread_id,
+        "task_id": task_id,
+        "episode_dir": str(episode),
+        "mode": "agent",
+        "prompt": goal,
+        "previous_run": session["run_dir"],
+        "assistant_message": {
+            "role": "assistant",
+            "content": "\n".join(lines),
+            "model": "agent-loop",
+            "session": session,
+        },
+        "trace": trace,
+        "summary": summary,
+        "final_caption": res.get("final_caption"),
+    }
+
+
 def _compose_assistant_text(
     session: Dict[str, Any],
     reasoning: Dict[str, Any],
@@ -853,6 +1022,17 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/api/chat":
             try:
                 out = handle_chat(body)
+                self._json(200, out)
+            except Exception as exc:  # noqa: BLE001
+                self._json(
+                    500,
+                    {"ok": False, "error": str(exc), "traceback": traceback.format_exc()[-2000:]},
+                )
+            return
+        if parsed.path == "/api/agent":
+            # Tool-calling loop: the LLM chooses generate/describe/check/edit.
+            try:
+                out = handle_agent(body)
                 self._json(200, out)
             except Exception as exc:  # noqa: BLE001
                 self._json(

@@ -125,6 +125,36 @@ def main() -> int:
     check("split_allinone_4d", len(_split_samples(four_d)) == 3,
           f"shape_in={four_d.shape}")
 
+    # 5) the generation-side policy: what a draft is filtered on, and how a
+    #    batch is sized (this is what stage_generate._mld_draft consults).
+    import os
+
+    import sampling  # noqa: E402
+
+    names = [c["check"] for c in sampling.constraints("a person walks in place")]
+    check("constraint_in_place", names == ["root_travel"], str(names))
+    check("constraint_turn", "yaw_span_deg" in
+          [c["check"] for c in sampling.constraints("a person turns left 90 degrees")],
+          str(sampling.acceptance("a person turns left 90 degrees")["text"]))
+    check("no_constraint_is_single_draw",
+          sampling.batch_size("a person moves gracefully") == 1,
+          f"n={sampling.batch_size('a person moves gracefully')}")
+    check("constrained_goal_batches",
+          sampling.batch_size("a person walks in place") >= 2,
+          f"n={sampling.batch_size('a person walks in place')}")
+    os.environ["AGENT_REJECTION"] = "off"
+    check("rejection_can_be_disabled",
+          sampling.batch_size("a person walks in place") == 1,
+          "AGENT_REJECTION=off")
+    os.environ.pop("AGENT_REJECTION", None)
+    best, accepted = sampling.select(GOAL, [
+        {"cand": 1, "ok": True, "valid": True, "metrics": {"root_travel": 1.4}},
+        {"cand": 2, "ok": True, "valid": True, "metrics": {"root_travel": 0.05}},
+        {"cand": 3, "ok": True, "valid": True, "metrics": {"root_travel": 0.4}},
+    ])
+    check("select_prefers_accepted", (best or {}).get("cand") == 2
+          and len(accepted) == 1, f"best={best and best['cand']} n={len(accepted)}")
+
     report = {"checks": CHECKS, "passed": sum(c["ok"] for c in CHECKS), "n": len(CHECKS)}
     (tmp / "resample_checks.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
