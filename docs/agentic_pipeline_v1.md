@@ -771,6 +771,9 @@ python scripts/tests/test_open_vocab.py
 # the UI's agent mode without a browser (same handler the page calls)
 python -c "import sys; sys.path[:0]=['scripts/session']; from chat_server import handle_agent; print(handle_agent({'prompt':'a person waves with the right hand','max_edits':1,'generator':'mld'})['assistant_message']['content'])"
 
+# the contract behind both review points, checked against code + a finished run
+python scripts/tests/test_agentic_contract.py
+
 # scripted baseline with the same tools (no LLM)
 conda run -n motionfix python scripts/agent/agent.py ^
   --goal "..." --no-llm --generator mld
