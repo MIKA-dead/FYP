@@ -1,4 +1,4 @@
-# Agentic pipeline v1.3 — the LLM calls (a), (b), (c) by itself
+# Agentic pipeline v1.4 — the LLM calls (a), (b), (c) by itself
 
 This note answers the two review comments on the previous experiment.
 
@@ -55,6 +55,19 @@ things:
   0.0 m travel) are refused before the backend runs, instead of damaging the
   clip.
 
+**v1.4 gives the controller a way to act on a generation-side gap** (details in
+§1 and §7):
+
+- the editor is *relative*, so no edit can create travel or rotation that the
+  draft does not contain. `resample_motion(prompt, n)` draws `n` drafts of one
+  prompt in a single MLD process (one model load), measures each with the same
+  requirement the checker uses plus a relative `requirement_gap`, adopts the
+  closest valid one, and reports every candidate it rejected. Two per episode;
+- if no draft came from a fresh draw — the generator is down and everything fell
+  back to the retrieved clip — the tool returns `resample_unavailable` and does
+  not charge the budget, so a deterministic repeat can never masquerade as a
+  successful resample.
+
 ```
 free-form goal
      │
@@ -63,6 +76,7 @@ free-form goal
 │  thought → tool choice → arguments          (JSON action, one per turn)  │
 │                                                                          │
 │  ① generate_motion(prompt)    ── MLD text→motion ──► 03_edited.npy       │
+│  ①' resample_motion(prompt,n) ── n drafts, keep closest ──► draft         │
 │  ② describe_motion()          ── TM2T M2T ────────► caption + metrics    │
 │  ③ check_requirement()        ── measure the request against the joints  │
 │  ④ judge: caption + metrics vs. goal ────────────► alignment, gap        │
@@ -82,6 +96,7 @@ controller never handles a path; it only writes the text the tool consumes.
 | Tool | Backend | Arguments | Observation given to the LLM |
 |---|---|---|---|
 | `generate_motion` | MLD (`mld_generate.py`, conda env `mld`) | `prompt` | frames, generator used, kinematic summary, preview path |
+| `resample_motion` | MLD `--replication n --allinone` (one model load) | `prompt`, `n` (2–4) | every draft's measured attributes, requirement gap, which draft was kept |
 | `describe_motion` | TM2T `M2T_EL4_DL4_NH8_PS` + VQ tokenizer | — | caption, caption source, GloVe/token similarity to the goal, kinematic summary |
 | `check_requirement` | `scripts/agent/verify.py` (joint measurements) | — | pass/fail per requirement, the measured value, the physical validity report |
 | `edit_motion` | session revise (intent compiler → geometric edit / MotionFix) | `instruction` | before/after metrics, target change, non-target MPJPE, instruction-following checks, `no_change` flag, instruction family, grounding offset |
@@ -90,6 +105,20 @@ controller never handles a path; it only writes the text the tool consumes.
 If MLD fails, `generate_motion` retries with the in-repo dataset draft and
 records `generator_used = dataset_fallback`; the trace never hides which backend
 produced the clip.
+
+`resample_motion` exists because the editor is *relative*: it can scale or
+reshape motion that is already present, but it cannot add travel, add a turn, or
+remove locomotion. When the measurement says an attribute is missing outright
+(`root_travel 0.0`, `yaw_span 10°`), the only honest remedy is another draw from
+the generator. The tool asks MLD for `n` samples in **one** process
+(`--replication n --allinone`, one ~30 s model load), runs each through the
+pipeline, measures each with `verify.verify_goal` plus a relative
+`requirement_gap`, and adopts the closest valid draft while reporting every
+candidate. If no candidate came from a fresh draw — the generator is down and
+everything fell back to the retrieved clip — it returns
+`resample_unavailable` and does **not** charge the budget, so the controller
+cannot mistake a deterministic repeat for a successful resample. The budget is
+two resamples per episode.
 
 `edit_motion` is gated by `scripts/agent/edits.py`, a registry that maps wording
 to a supported operator family (`arm_raise`, `wave`, `walk`, `speed`, `turn`,
@@ -107,7 +136,7 @@ The controller's JSON contract is
 {"thought": "...",
  "assessment": {"alignment": 0, "satisfied": false, "matches": [],
                 "missing": [], "next_edit": ""},
- "action": "generate_motion | describe_motion | check_requirement | edit_motion | finish",
+ "action": "generate_motion | resample_motion | describe_motion | check_requirement | edit_motion | finish",
  "args": {}}
 ```
 
@@ -663,6 +692,12 @@ conda run -n motionfix python scripts/agent/agent.py ^
   --goal "a person walks forward and waves with the right hand" ^
   --generator mld --max-edits 2
 
+# resample tool: rank N drafts of one prompt (real MLD, ~60 s)
+conda run -n motionfix python scripts/tests/probe_resample.py "a person walks in place" 3
+
+# resample tool: ranking / availability / budget, no MLD needed (8 checks)
+python scripts/tests/test_resample.py
+
 # scripted baseline with the same tools (no LLM)
 conda run -n motionfix python scripts/agent/agent.py ^
   --goal "..." --no-llm --generator mld
@@ -740,12 +775,22 @@ Still open, in order of expected value:
   "walks in place" (1.54–1.97 m of travel, and 0.12 m on one lucky re-sample),
   and an under-rotated turn for "turns left 90°" (45–81°). No relative operator
   can add locomotion or rotation that is not there, and the registry now says so
-  instead of pretending. The honest fixes are a `resample` action (the
-  controller already calls `generate_motion` again) and, better, a
-  generation-side constraint: prompt-conditioned sampling with a rejection
-  filter on the measured attribute. Because these are sampling-dependent, the
-  success rate itself moves between runs (0.85 ↔ 0.90 at n = 20); a battery with
-  repeated samples per goal would make the number stable.
+  instead of pretending. v1.4 adds the `resample_motion` action: `n` drafts of
+  one prompt from a single MLD process, each measured, the closest valid one
+  adopted (`distinct_candidates` shows whether the draws differed at all). What
+  is still missing is a *generation-side* constraint — rejection sampling on the
+  measured attribute before the draft ever reaches the pipeline — and a battery
+  with repeated samples per goal, which is what would make the success rate
+  stable (0.85 ↔ 0.90 at n = 20 today).
+- **The MLD environment can be blocked by Windows.** App Control occasionally
+  refuses a compiled `thinc` module, so `demo.py` dies with
+  `DLL load failed while importing linalg: application control policy blocked
+  this file`; `mld_generate.py` retries three times, then the pipeline falls
+  back to the retrieved clip and the trace says `dataset_fallback`. While that
+  policy is active, no MLD result can be measured — and `resample_motion`
+  correctly reports `resample_unavailable` instead of pretending. Fix on the
+  machine, not in the code: allow the `miniconda3/envs/mld` folder in Windows
+  security, or repair the env (`conda run -n mld pip install -U spacy thinc`).
 - **The generator sometimes returns a static clip.** On "a person stands up from
   a chair" MLD produced 60 frames whose largest pelvis-relative joint path was
   0.21 m (`body_moving = 0`) — a seated pose, not a movement. The gate now says

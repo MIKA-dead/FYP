@@ -51,7 +51,20 @@ from metrics import (  # noqa: E402
     text_similarity,
 )
 from motion_validity import physical_report, reground  # noqa: E402
-from verify import verify_goal  # noqa: E402
+from verify import requirement_gap, verify_goal  # noqa: E402
+
+MAX_RESAMPLES = 2
+
+
+def _candidate_metrics(m: Dict[str, Any]) -> Dict[str, Any]:
+    """The handful of measurements a draft is ranked on, kept short for the LLM."""
+    keys = (
+        "root_travel", "yaw_span_deg", "pelvis_drop",
+        "arm_raise_left", "arm_raise_right",
+        "ankle_lift_left", "ankle_lift_right",
+        "jump_rise", "jump_clearance", "ground_penetration",
+    )
+    return {k: m.get(k) for k in keys if m.get(k) is not None}
 
 TOOL_SPECS = [
     {
@@ -80,6 +93,21 @@ TOOL_SPECS = [
             "recorded next to your own judgment."
         ),
         "args": {},
+    },
+    {
+        "name": "resample_motion",
+        "description": (
+            "Draw several independent drafts of the same prompt and keep the one "
+            "closest to the goal. Use this when the checker says a measurable "
+            "attribute is missing (too little travel, too little turn) and no edit "
+            "can add it — the generator is stochastic, so one draft cannot tell a "
+            "capability limit from bad luck. Costs one step, not an edit. At most "
+            "2 per episode."
+        ),
+        "args": {
+            "prompt": "str — the text to draw (defaults to the user goal)",
+            "n": "int — 2..4 drafts, default 3",
+        },
     },
     {
         "name": "edit_motion",
@@ -125,16 +153,19 @@ def _read_quality(run_dir: Optional[Path], key: Optional[str] = None):
 class MotionTools:
     """Stateful tool environment for one agent episode."""
 
-    def __init__(self, episode_dir: Path, *, generator: str = "mld", skip_viz: bool = False) -> None:
+    def __init__(self, episode_dir: Path, *, generator: str = "mld",
+                 skip_viz: bool = False, goal: str = "") -> None:
         self.episode_dir = Path(episode_dir)
         self.episode_dir.mkdir(parents=True, exist_ok=True)
         self.generator = generator
         self.skip_viz = skip_viz
+        self.goal = goal
         self.run_dir: Optional[Path] = None
         self.step = 0
         self.described_at: Optional[int] = None
         self.checked_at: Optional[int] = None
         self.edits = 0
+        self.resamples = 0
         self.calls: List[Dict[str, Any]] = []
         self.history: List[Dict[str, Any]] = []
 
@@ -193,11 +224,11 @@ class MotionTools:
             "metrics": m,
         }
     # -- tools -------------------------------------------------------------
-    def generate_motion(self, prompt: str) -> Dict[str, Any]:
+    def _generate_into(self, prompt: str, out_dir: Path,
+                       draft_joints: Optional[Path] = None) -> tuple:
+        """Run the generator into ``out_dir``; returns (ok, generator_used, resp)."""
         from session_api import run_session
 
-        t0 = time.time()
-        out_dir = self._next_dir("generate")
         req = {
             "prompt": str(prompt),
             "mode": "generate",
@@ -207,13 +238,62 @@ class MotionTools:
             "backend": "orchestrator",
             "generator": self.generator,
         }
+        if draft_joints is not None:
+            # Already drawn (one of several MLD samples): skip diffusion and let
+            # the pipeline observe/edit/visualise this exact clip.
+            req["draft_joints"] = str(draft_joints)
         resp = run_session(req, cwd=REPO)
         used = self.generator
         if not (out_dir / "03_edited.npy").is_file() and self.generator == "mld":
             # MLD is slow/heavy; keep the episode alive with the dataset draft.
             resp = run_session({**req, "generator": "dataset"}, cwd=REPO)
             used = "dataset_fallback"
-        if not (out_dir / "03_edited.npy").is_file():
+        return (out_dir / "03_edited.npy").is_file(), used, resp
+
+    def _draw_samples(self, prompt: str, n: int, out_dir: Path) -> List[Path]:
+        """Draw ``n`` samples of one prompt with a single model load.
+
+        MLD's demo already loops ``cfg.DEMO.REPLICATION`` times over the
+        denoiser, so asking for ``--replication n --allinone`` costs one ~30 s
+        model load instead of ``n``. The samples share a text and a length, so
+        any difference between them is sampling noise — exactly the variance a
+        resample is meant to explore.
+        """
+        import os
+        import subprocess
+
+        py = os.environ.get("MLD_PYTHON") or str(
+            Path.home() / "miniconda3" / "envs" / "mld" / "python.exe"
+        )
+        out_dir.mkdir(parents=True, exist_ok=True)
+        first = out_dir / "mld_sample1.npy"
+        env = os.environ.copy()
+        env.setdefault("PYTHONUTF8", "1")
+        try:
+            proc = subprocess.run(
+                [py, str(REPO / "scripts" / "backends" / "mld_generate.py"),
+                 "--text", str(prompt), "--length", "60",
+                 "--out", str(first), "--samples", str(n)],
+                cwd=str(REPO), env=env, timeout=1800,
+            )
+        except Exception:  # noqa: BLE001
+            return []
+        if proc.returncode != 0:
+            return []
+        meta_path = first.with_suffix(".json")
+        if not meta_path.is_file():
+            return []
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8-sig"))
+        except Exception:  # noqa: BLE001
+            return []
+        return [Path(p) for p in (meta.get("samples") or []) if Path(p).is_file()]
+
+    def generate_motion(self, prompt: str) -> Dict[str, Any]:
+        t0 = time.time()
+        out_dir = self._next_dir("generate")
+        ok, used, resp = self._generate_into(str(prompt), out_dir)
+        if not ok:
             obs = {"ok": False, "error": resp.get("error") or "generation produced no clip"}
         else:
             self.run_dir = out_dir
@@ -228,6 +308,111 @@ class MotionTools:
                 "note": "No caption yet — call describe_motion before judging.",
             })
         self._record("generate_motion", {"prompt": prompt}, obs)
+        return obs
+
+    def resample_motion(self, prompt: str = "", n: int = 3) -> Dict[str, Any]:
+        """Draw ``n`` drafts of one prompt and keep the one closest to the goal.
+
+        One draft cannot separate "this generator cannot do it" from "this draw
+        missed". Every candidate is measured with the same requirement the
+        checker uses, the best is adopted (valid first, then lowest relative
+        shortfall), and all of them are reported so the controller sees what it
+        rejected instead of guessing from a single text.
+        """
+        goal = str(prompt or self.goal or "")
+        if self.resamples >= MAX_RESAMPLES:
+            return {
+                "ok": False,
+                "error": "resample_budget_reached",
+                "note": f"{MAX_RESAMPLES} resamples already used. Edit, accept what "
+                        "you have, or finish naming the gap.",
+            }
+        n = max(2, min(4, int(n or 3)))
+        self.step += 1
+        base = self.episode_dir / f"step{self.step:02d}_resample"
+        base.mkdir(parents=True, exist_ok=True)
+        t0 = time.time()
+        drawn = self._draw_samples(goal, n, base / "draw") if self.generator == "mld" else []
+        cands: List[Dict[str, Any]] = []
+        for i in range(1, n + 1):
+            d = base / f"cand{i}"
+            d.mkdir(parents=True, exist_ok=True)
+            sample = drawn[i - 1] if i - 1 < len(drawn) else None
+            ok, used, resp = self._generate_into(goal, d, draft_joints=sample)
+            if not ok:
+                cands.append({"cand": i, "run_dir": str(d), "ok": False,
+                              "error": resp.get("error") or "no clip"})
+                continue
+            j = load_joints(d / "03_edited.npy")
+            m = kinematic_summary(j)
+            rep = physical_report(j)
+            v = verify_goal(goal, {"metrics": m})
+            cands.append({
+                "cand": i,
+                "run_dir": str(d),
+                "ok": True,
+                "generator_used": used,
+                "from_generator": sample is not None,
+                "valid": bool(rep["valid"]),
+                "satisfied": bool(v["ok"]),
+                "reasons": v["reasons"],
+                "gap": round(requirement_gap(goal, {"metrics": m}), 4),
+                "measured": _candidate_metrics(m),
+            })
+        usable = [c for c in cands if c.get("ok")]
+        if not usable:
+            obs = {"ok": False, "error": "resample produced no clip",
+                   "candidates": cands, "seconds": round(time.time() - t0, 2)}
+            self._record("resample_motion", {"prompt": goal, "n": n}, obs)
+            return obs
+        if not any(c.get("from_generator") for c in usable):
+            # No candidate came from a fresh draw: either the diffusion
+            # generator is down (each run fell back to the retrieved clip) or
+            # this path is deterministic. Extra draws would repeat the same clip,
+            # so say that instead of charging the budget for a no-op.
+            obs = {
+                "ok": False,
+                "error": "resample_unavailable",
+                "candidates": cands,
+                "seconds": round(time.time() - t0, 2),
+                "note": (
+                    "No draft came from the diffusion generator (all candidates "
+                    "reused the deterministic retrieved clip), so another resample "
+                    "would return the same motion. Edit, change the prompt, or "
+                    "finish naming the gap. If the generator should be running, "
+                    "check its environment (MLD_PYTHON / the `mld` conda env)."
+                ),
+            }
+            self._record("resample_motion", {"prompt": goal, "n": n}, obs)
+            return obs
+        usable.sort(key=lambda c: (not c["valid"], c["gap"], not c["satisfied"]))
+        best = usable[0]
+        self.resamples += 1
+        self.run_dir = Path(best["run_dir"])
+        self.described_at = None
+        self.checked_at = None
+        distinct = len({json.dumps(c.get("measured"), sort_keys=True) for c in usable})
+        obs = self._observe_clip(self.run_dir, goal)
+        obs.update({
+            "ok": True,
+            "candidates": cands,
+            "chosen": best["cand"],
+            "chosen_gap": best["gap"],
+            "chosen_satisfied": best["satisfied"],
+            "distinct_candidates": distinct,
+            "resamples_left": max(0, MAX_RESAMPLES - self.resamples),
+            "seconds": round(time.time() - t0, 2),
+            "note": (
+                "Kept the closest draft (lowest requirement gap, valid first). "
+                "No caption for it yet — call describe_motion, then compare it with "
+                "the candidates list before deciding."
+                if distinct > 1
+                else "Every draft measured identically, so another draw of this "
+                     "prompt will only repeat it. Edit, change the prompt, or "
+                     "finish naming the gap."
+            ),
+        })
+        self._record("resample_motion", {"prompt": goal, "n": n}, obs)
         return obs
 
     def describe_motion(self, goal: str) -> Dict[str, Any]:

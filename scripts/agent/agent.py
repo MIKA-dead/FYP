@@ -53,7 +53,7 @@ SYSTEM = (
     "1. With no clip: call generate_motion.\n"
     "2. After any clip is produced or edited: call describe_motion before judging it.\n"
     "3. Before finish: call check_requirement and read its verdict.\n"
-    "4. Then either edit_motion (one change) or finish.\n\n"
+    "4. Then either edit_motion (one change), resample_motion, or finish.\n\n"
     "HOW TO JUDGE\n"
     "- The learned caption is coarse; joint measurements are ground truth when "
     "they disagree. arm_raise_ratio >= 1.8 and wrist_above_head (metres) > 0 both "
@@ -70,6 +70,13 @@ SYSTEM = (
     "measurement that the observation contradicts.\n"
     "- If an observation says no_change=true, that instruction cannot be applied; "
     "never repeat it — try a different supported edit or finish with the gap.\n"
+    "- The editing tools are RELATIVE: they scale or reshape motion that is already "
+    "in the clip. They can never add travel, add a turn, or remove locomotion. When "
+    "the measurement says an attribute is missing entirely (root_travel 0.0, "
+    "yaw_span 10 deg, no knee lift) and no edit can create it, call resample_motion "
+    "to draw several drafts of the same prompt and keep the closest — do not spend "
+    "edits on something an edit cannot do, and do not repeat generate_motion one "
+    "prompt at a time.\n"
     "- An edit that returns unsupported_instruction never reached the backend. Do "
     "not rephrase the same impossible request; finish and name it as out of scope.\n"
     "- A clip with valid=false is physically broken: never accept it. You may call "
@@ -87,7 +94,7 @@ SYSTEM = (
     '{"thought": "one or two sentences", '
     '"assessment": {"alignment": 0, "satisfied": false, "matches": [], '
     '"missing": [], "next_edit": ""}, '
-    '"action": "generate_motion|describe_motion|check_requirement|edit_motion|finish", '
+    '"action": "generate_motion|resample_motion|describe_motion|check_requirement|edit_motion|finish", '
     '"args": {}}'
 )
 
@@ -236,7 +243,7 @@ def run_agent(
     episode = Path(out_dir) if out_dir else REPO / "outputs" / "agent_runs" / f"{stamp}_{_slug(goal)}"
     episode.mkdir(parents=True, exist_ok=True)
 
-    tools = MotionTools(episode, generator=generator, skip_viz=skip_viz)
+    tools = MotionTools(episode, generator=generator, skip_viz=skip_viz, goal=goal)
     trace: List[Dict[str, Any]] = []
     messages: List[Dict[str, str]] = [
         {"role": "system", "content": SYSTEM},
@@ -315,7 +322,7 @@ def run_agent(
         if tools.run_dir is None and action != "generate_motion":
             action, args = "generate_motion", {"prompt": goal}
             thought += " [corrected: no clip yet]"
-        elif tools.run_dir is not None and tools.described_at is None and action not in ("describe_motion", "generate_motion"):
+        elif tools.run_dir is not None and tools.described_at is None and action not in ("describe_motion", "generate_motion", "resample_motion"):
             action, args = "describe_motion", {}
             thought += " [corrected: describe the new clip first]"
         elif action == "finish" and tools.checked_at is None:
@@ -329,6 +336,10 @@ def run_agent(
         # ---- execute ----
         if action == "generate_motion":
             obs = tools.generate_motion(str(args.get("prompt") or goal))
+        elif action == "resample_motion":
+            obs = tools.resample_motion(
+                str(args.get("prompt") or ""), int(args.get("n") or 3)
+            )
         elif action == "describe_motion":
             obs = tools.describe_motion(goal)
         elif action == "check_requirement":
@@ -460,6 +471,7 @@ def run_agent(
             "edits": tools.edits,
             "edits_applied": applied_ok,
             "edits_unsupported": attempted_unsupported,
+            "resamples": tools.resamples,
             "tool_calls": len(tools.calls),
             "llm_rounds": sum(1 for t in trace if t["policy"] == "llm"),
             "seconds": round(time.time() - t0, 2),
@@ -495,6 +507,11 @@ def render_markdown(result: Dict[str, Any]) -> str:
                       f"non-target={ (obs.get('preservation') or {}).get('non_target_mpjpe') }"
         elif st["action"] == "generate_motion":
             summary = f"generator={obs.get('generator_used')}, frames={obs.get('frames')}"
+        elif st["action"] == "resample_motion":
+            summary = (
+                f"chosen cand{obs.get('chosen')} gap={obs.get('chosen_gap')} "
+                f"satisfied={obs.get('chosen_satisfied')}"
+            )
         elif st["action"] == "check_requirement":
             summary = f"satisfied={obs.get('satisfied')} " + "; ".join(obs.get("reasons") or [])[:120]
         else:

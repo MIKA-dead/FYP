@@ -38,12 +38,38 @@ def draft_clip(
     *,
     run_dir: Optional[Path] = None,
     generator: str = "dataset",
+    draft_joints: Optional[Path] = None,
 ) -> Tuple[np.ndarray, Dict[str, Any]]:
     """First caption match, aligned to the preview skeleton. No diffusion.
 
     ``generator="mld"`` runs the MLD latent-diffusion text→motion model first
     and uses that clip as the draft (slow, ~30 s, needs the ``mld`` env).
+
+    ``draft_joints`` takes an already-generated joint array instead (one of the
+    samples from ``mld_generate --samples N``). MLD seeds the RNG at import
+    (``mld/utils/fixseed.py``), so re-running the same text reproduces the same
+    clip; drawing several samples inside one process is the only way to get
+    independent drafts, and this is how they re-enter the pipeline.
     """
+    if draft_joints is not None:
+        path = Path(draft_joints)
+        if not path.is_file():
+            raise FileNotFoundError(f"draft_joints not found: {path}")
+        raw = np.load(path, allow_pickle=True)
+        if raw.dtype == object:
+            raw = np.asarray(raw.item().get("joint_positions"))
+        joints, converted = align_to_source(np.asarray(raw, dtype=np.float32), _reference())
+        if joints.shape[0] > MAX_FRAMES:
+            joints = joints[:MAX_FRAMES]
+        return joints.astype(np.float32), {
+            "source_id": "mld_sample",
+            "caption": prompt,
+            "text_score": 1.0,
+            "converted_up_axis": bool(converted),
+            "T": int(joints.shape[0]),
+            "generator": "mld",
+            "mld_out": str(path),
+        }
     if generator == "mld":
         return _mld_draft(prompt, run_dir=run_dir)
     ranked = _rank_captions(prompt, limit=5)
@@ -182,11 +208,13 @@ def generate_stages(
     *,
     skip_viz: bool = False,
     generator: str = "dataset",
+    draft_joints: Optional[Path] = None,
 ) -> Dict[str, Any]:
     """Write draft, observation, edited clip, and preview. Return the four notes."""
     run_dir = Path(run_dir)
     run_dir.mkdir(parents=True, exist_ok=True)
-    draft, draft_meta = draft_clip(prompt, run_dir=run_dir, generator=generator)
+    draft, draft_meta = draft_clip(prompt, run_dir=run_dir, generator=generator,
+                                   draft_joints=draft_joints)
     _save(run_dir / "01_draft.npy", draft, draft_meta)
     observation = _observe(draft, action, prompt)
     (run_dir / "01_observation.json").write_text(

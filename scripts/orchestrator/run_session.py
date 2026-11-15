@@ -850,6 +850,9 @@ def run_orchestrated_session(
                 str(plan.get("primary_action") or ""),
                 skip_viz=skip_viz,
                 generator=str(request.get("generator") or os.environ.get("GEN_BACKEND") or "dataset"),
+                draft_joints=(
+                    Path(request["draft_joints"]) if request.get("draft_joints") else None
+                ),
             )
             pipeline_stages = list(stage_info.get("stages") or [])
             agent_trace.append(
