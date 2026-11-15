@@ -88,9 +88,76 @@ def _diversity(clips: List[np.ndarray], frames: int = 32) -> Dict[str, float]:
     return {"mean_pairwise": round(float(np.mean(d)), 4)}
 
 
+def _episode_job(goal: str, ep_dir: str, max_edits: int, generator: str,
+                 use_llm: bool, conn) -> None:
+    """Run one episode in a child process so a hung backend cannot stall the run."""
+    try:
+        ep = run_agent(goal, out_dir=Path(ep_dir), max_edits=max_edits,
+                       generator=generator, use_llm=use_llm, skip_viz=False)
+        conn.send({"ok": True, "ep": ep})
+    except BaseException as exc:  # noqa: BLE001 — the parent needs a message
+        conn.send({"ok": False, "error": f"{type(exc).__name__}: {exc}"})
+    finally:
+        conn.close()
+
+
+def _timed_out_episode(goal: str, ep_dir: Path, seconds: float, why: str) -> Dict[str, Any]:
+    return {
+        "goal": goal,
+        "steps": [],
+        "episode_dir": str(ep_dir),
+        "final_caption": None,
+        "error": why,
+        "summary": {
+            "satisfied": False, "agreement": None, "checker_satisfied": None,
+            "agent_claim_satisfied": None, "edits": 0, "tool_calls": 0,
+            "check_calls": 0, "resamples": 0, "restores": 0,
+            "best_gap_seen": None, "final_gap": None,
+            "final_alignment": None, "seconds": round(seconds, 2),
+            "tokens": {"total_tokens": 0},
+        },
+    }
+
+
+def _run_one(goal: str, ep_dir: Path, *, max_edits: int, generator: str,
+             use_llm: bool, timeout: float) -> Dict[str, Any]:
+    """Run one episode with a hard wall-clock limit (a backend can hang)."""
+    import multiprocessing as mp
+    import time as _time
+
+    ctx = mp.get_context("spawn")
+    parent, child = ctx.Pipe(duplex=False)
+    proc = ctx.Process(target=_episode_job,
+                       args=(goal, str(ep_dir), max_edits, generator, use_llm, child),
+                       daemon=True)
+    t0 = _time.time()
+    proc.start()
+    child.close()
+    try:
+        if parent.poll(timeout):
+            msg = parent.recv()
+            proc.join(15)
+        else:
+            msg = {"ok": False, "error": f"timeout after {int(timeout)} s"}
+    except EOFError:
+        msg = {"ok": False, "error": "worker died without a result"}
+    finally:
+        if proc.is_alive():
+            proc.terminate()
+            proc.join(15)
+        parent.close()
+    if msg.get("ok"):
+        return msg["ep"]
+    ep = _timed_out_episode(goal, ep_dir, _time.time() - t0, str(msg.get("error")))
+    ep["episode_dir"] = str(ep_dir)
+    return ep
+
+
 def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: bool,
                   out_dir: Path, skip_caption_bench: bool = False,
-                  caption_n: int = 8) -> Dict[str, Any]:
+                  caption_n: int = 8,
+                  edit_report: Path | None = None,
+                  goal_timeout: float = 900.0) -> Dict[str, Any]:
     out_dir.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     episodes: List[Dict[str, Any]] = []
@@ -102,14 +169,10 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
 
     for i, goal in enumerate(goals, 1):
         print(f"[benchmark] {i}/{len(goals)}: {goal}", flush=True)
-        ep = run_agent(
-            goal,
-            out_dir=out_dir / f"ep{i:02d}_{stamp}",
-            max_edits=max_edits,
-            generator=generator,
-            use_llm=use_llm,
-            skip_viz=False,
-        )
+        ep = _run_one(goal, out_dir / f"ep{i:02d}_{stamp}", max_edits=max_edits,
+                      generator=generator, use_llm=use_llm, timeout=goal_timeout)
+        if ep.get("error"):
+            print(f"[benchmark]   episode error: {ep['error']}", flush=True)
         episodes.append(ep)
 
         # Initial clip = first generate step; its first caption comes from the
@@ -205,6 +268,9 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
             "edits": ep["summary"]["edits"],
             "edit_attempts": sum(1 for s in ep["steps"] if s["action"] == "edit_motion"),
             "resamples": ep["summary"].get("resamples", 0),
+            "restores": ep["summary"].get("restores", 0),
+            "best_gap_seen": ep["summary"].get("best_gap_seen"),
+            "final_gap": ep["summary"].get("final_gap"),
             "steps": len(ep["steps"]),
             "tool_calls": ep["summary"]["tool_calls"],
             "seconds": ep["summary"]["seconds"],
@@ -213,6 +279,7 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
             "final_alignment": ep["summary"].get("final_alignment"),
             "final_caption": ep.get("final_caption"),
             "episode_dir": ep["episode_dir"],
+            "error": ep.get("error"),
         })
     gains = []
     for row in loop_rows:
@@ -286,8 +353,15 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
             "mean_edits": round(float(np.mean([r["edits"] for r in loop_rows])), 2),
             "mean_edit_attempts": round(float(np.mean([r["edit_attempts"] for r in loop_rows])), 2),
             "n_resampled_episodes": sum(1 for r in loop_rows if r.get("resamples")),
+            "n_restored_episodes": sum(1 for r in loop_rows if r.get("restores")),
+            "n_worse_than_best": sum(
+                1 for r in loop_rows
+                if r.get("best_gap_seen") is not None and r.get("final_gap") is not None
+                and float(r["final_gap"]) > float(r["best_gap_seen"]) + 1e-6
+            ),
             "n_rejection_episodes": sum(1 for r in loop_rows if (r.get("drafts_drawn") or 1) > 1),
             "n_drafts_rejected": sum((r.get("drafts_rejected") or 0) for r in loop_rows),
+            "n_episode_errors": sum(1 for r in loop_rows if r.get("error")),
             "mean_steps": round(float(np.mean([r["steps"] for r in loop_rows])), 2),
             "mean_alignment_gain": round(float(np.mean(gains)), 1) if gains else None,
             "mean_seconds": round(float(np.mean([r["seconds"] for r in loop_rows])), 1),
@@ -302,11 +376,42 @@ def run_benchmark(goals: List[str], *, max_edits: int, generator: str, use_llm: 
         except Exception as exc:  # noqa: BLE001
             report["module_c_caption"] = {"error": str(exc)}
 
+    # Module (b) needs edits that must change something, and the loop only edits
+    # when a draft misses. Fold the dedicated battery in so the reported editing
+    # numbers are not a pass rate over n=2.
+    if edit_report and Path(edit_report).is_file():
+        try:
+            bat = json.loads(Path(edit_report).read_text(encoding="utf-8-sig"))
+            report["module_b_editing"]["in_loop"] = {
+                "n": report["module_b_editing"]["n"],
+                "instruction_following_rate":
+                    report["module_b_editing"]["instruction_following_rate"],
+                "mean_non_target_mpjpe_norm":
+                    report["module_b_editing"]["mean_non_target_mpjpe_norm"],
+            }
+            report["module_b_editing"]["battery"] = {
+                "source": str(edit_report),
+                "schema_version": bat.get("schema_version"),
+                "aggregate": bat.get("aggregate"),
+                "by_family": bat.get("by_family"),
+            }
+        except Exception as exc:  # noqa: BLE001
+            report["module_b_editing"]["battery"] = {"error": str(exc)}
+
     (out_dir / "report.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     (out_dir / "report.md").write_text(render_report(report), encoding="utf-8")
     return report
+
+
+def rat(num, den) -> str:
+    """Share as a three-decimal string, or '—' when the denominator is zero."""
+    try:
+        n, d = float(num), float(den)
+    except (TypeError, ValueError):
+        return "—"
+    return f"{n / d:.3f}" if d else "—"
 
 
 def render_report(r: Dict[str, Any]) -> str:
@@ -338,6 +443,34 @@ def render_report(r: Dict[str, Any]) -> str:
     lines += [
         "",
         "## Module (b) — motion editing",
+        "",
+    ]
+    bat = (b.get("battery") or {})
+    bagg = (bat.get("aggregate") or {})
+    if bagg:
+        lines += [
+            f"Dedicated must-edit battery (n = {bagg.get('n_scenarios')} scenarios, "
+            f"{bagg.get('n_applicable')} applicable + "
+            f"{bagg.get('n_expected_refusals')} expected refusals):",
+            "",
+            "| coverage | refusal honesty | following rate | no-effect rate | rollback rate | target/rest | non-target MPJPE | frame retention |",
+            "|---|---|---|---|---|---|---|---|",
+            f"| {bagg.get('instruction_coverage')} | {bagg.get('refusal_honesty')} | "
+            f"{bagg.get('instruction_following_rate')} | "
+            f"{(rat(bagg.get('n_no_effect'), bagg.get('n_attempts')))} | "
+            f"{bagg.get('rollback_rate')} | "
+            f"{bagg.get('mean_target_vs_rest')} | {bagg.get('mean_non_target_mpjpe_norm')} | "
+            f"{bagg.get('mean_frame_retention')} |",
+            "",
+            f"Coverage = applied / cases that should be applicable; refusal honesty = "
+            f"named refusals / cases that should be refused. {bagg.get('n_no_change')} "
+            f"silent no-ops, {bagg.get('n_no_effect')} edits that changed nothing the "
+            f"instruction named (both restored the previous clip), "
+            f"{bagg.get('n_skipped_no_source')} skipped for a missing source precondition.",
+            "",
+        ]
+    lines += [
+        f"In-loop edits (n = {b['n']} applied of {b['n_attempts']} attempts):",
         "",
         f"- attempts: {b['n_attempts']} · applied: {b['n']} · rolled back: {b['n_rolled_back']} "
         f"(invalid clip {b['n_invalid_clip']}, session error {b['n_session_error']})",
@@ -387,6 +520,8 @@ def render_report(r: Dict[str, Any]) -> str:
         f"· mean steps: {loop['mean_steps']} · mean alignment gain: {loop['mean_alignment_gain']}",
         f"- check_coverage (episodes that consulted the checker): {loop.get('check_coverage')} "
         f"· agent/checker agreement: {loop.get('agreement_rate')}",
+        f"- episodes that restored an earlier clip: {loop.get('n_restored_episodes')} "
+        f"· episodes that ended worse than their best measured clip: {loop.get('n_worse_than_best')}",
         f"- mean wall time: {loop['mean_seconds']} s · total tokens: {loop['total_tokens']}",
         "",
         "| goal | satisfied | agent claim | checker | agreement | applied edits | attempts | steps | alignment trajectory | final caption |",
@@ -413,6 +548,10 @@ def main() -> None:
     ap.add_argument("--skip-caption-bench", action="store_true")
     ap.add_argument("--caption-n", type=int, default=8,
                     help="held-out HumanML3D clips for the caption benchmark")
+    ap.add_argument("--edit-bench", type=Path, default=None,
+                    help="report.json from edit_benchmark.py, folded in as module (b)")
+    ap.add_argument("--goal-timeout", type=float, default=900.0,
+                    help="hard wall-clock limit per goal, seconds (a backend can hang)")
     ap.add_argument("--out", type=Path, default=None)
     args = ap.parse_args()
     if args.goals_file:
@@ -431,6 +570,8 @@ def main() -> None:
         out_dir=out,
         skip_caption_bench=args.skip_caption_bench,
         caption_n=args.caption_n,
+        edit_report=args.edit_bench,
+        goal_timeout=args.goal_timeout,
     )
     print(json.dumps({k: report[k] for k in ("module_a_generation", "module_b_editing", "loop")},
                      ensure_ascii=False, indent=2)[:4000])

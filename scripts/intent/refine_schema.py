@@ -470,7 +470,14 @@ def _cycle_request_from_text(text: str) -> tuple:
             found.append(n)
     if found:
         return found[-1], False
-    if re.search(r"多走|几步|再走|more steps|a few more steps|another few", raw, flags=re.I):
+    if re.search(r"多走|几步|再走|more steps|a few more steps|another few|"
+                 r"further|farther|走远|更远|再远",
+                 raw, flags=re.I):
+        return None, True
+    # "longer" is ambiguous ("hold longer" vs "walk longer"), so it only counts
+    # when the sentence is about locomotion.
+    if re.search(r"walk|step|stride|distance|pace|走|步", raw, flags=re.I) and \
+            re.search(r"\blonger\b|\bmore distance\b", raw, flags=re.I):
         return None, True
     return None, False
 

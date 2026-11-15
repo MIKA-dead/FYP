@@ -51,7 +51,8 @@ SUPPORTED: Tuple[Family, ...] = (
     ),
     Family(
         "sit_remove_preamble",
-        r"\b(no|remove|without|skip)\b.*\bwalk(ing)?\b.*\bsit\b|\bsit\b.*\b(immediately|in place)\b",
+        r"\b(no|remove|without|skip)\b.*\bwalk(ing)?\b.*\bsitt?(ing)?\b"
+        r"|\bsitt?(ing)?\b.*\b(immediately|in place)\b",
         "sit down immediately, no walking before sitting",
         "Trims the walking preamble of a sit clip.",
     ),
@@ -63,17 +64,18 @@ SUPPORTED: Tuple[Family, ...] = (
     ),
     Family(
         "arm_raise",
-        r"\b(raise|lift|put)\b.*\b(arm|hand|wrist)\b|\b(arm|hand)\b.*\b(higher|up|above)\b",
+        r"\b(raise|lift|put)\b.*\b(arms?|hands?|wrists?)\b|\b(arms?|hands?)\b.*\b(higher|up|above)\b",
         "raise the right arm higher",
-        "One arm at a time; the other arm is preserved.",
-        {"side": "left|right", "level": "higher|high"},
+        "One arm at a time, or both when the sentence says 'both'; the other "
+        "arm is preserved.",
+        {"side": "left|right|both", "level": "higher|high"},
     ),
     Family(
         "arm_lower",
-        r"\b(lower|drop|put down|bring down)\b.*\b(arm|hand)\b",
+        r"\b(lower|drop|put down|bring down)\b.*\b(arms?|hands?)\b",
         "lower the right arm",
         "One arm at a time.",
-        {"side": "left|right"},
+        {"side": "left|right|both"},
     ),
     Family(
         "wave",

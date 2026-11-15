@@ -23,6 +23,8 @@ Two postconditions guard the state the controller is allowed to see:
 from __future__ import annotations
 
 import json
+import re
+import shutil
 import sys
 import time
 from datetime import datetime
@@ -43,11 +45,13 @@ for _p in (
 
 from edits import capability_text, classify  # noqa: E402
 from metrics import (  # noqa: E402
+    caption_signals,
     infer_target_joints,
     instruction_following,
     kinematic_summary,
     load_joints,
     preservation,
+    structured_caption,
     text_similarity,
 )
 from motion_validity import physical_report, reground  # noqa: E402
@@ -55,26 +59,35 @@ import sampling  # noqa: E402
 from verify import requirement_gap, verify_goal  # noqa: E402
 
 MAX_RESAMPLES = 2
+MAX_RESTORES = 2
 
 
 def _candidate_metrics(m: Dict[str, Any]) -> Dict[str, Any]:
     """The handful of measurements a draft is ranked on, kept short for the LLM."""
     keys = (
-        "root_travel", "yaw_span_deg", "pelvis_drop",
+        "root_travel", "yaw_span_deg", "yaw_net_deg", "pelvis_drop",
         "arm_raise_left", "arm_raise_right",
         "ankle_lift_left", "ankle_lift_right",
-        "jump_rise", "jump_clearance", "ground_penetration",
+        "jump_rise", "jump_clearance", "ground_penetration", "bone_cv",
     )
     return {k: m.get(k) for k in keys if m.get(k) is not None}
+
 
 TOOL_SPECS = [
     {
         "name": "generate_motion",
         "description": (
             "Text→motion. Call once at the start with the user's request, lightly "
-            "rewritten as a plain motion sentence (keep every requested detail)."
+            "rewritten as a plain motion sentence (keep every requested detail). "
+            "generator='mld' diffuses a new clip; generator='dataset' retrieves a "
+            "real HumanML3D clip whose caption matches the prompt. Use the "
+            "retrieval path when several diffusion drafts systematically lack a "
+            "measured attribute (zero travel, a turn that never happens)."
         ),
-        "args": {"prompt": "str — the text to generate"},
+        "args": {
+            "prompt": "str — the text to generate",
+            "generator": "str — optional: 'mld' (diffusion, default) or 'dataset' (retrieval)",
+        },
     },
     {
         "name": "describe_motion",
@@ -117,6 +130,16 @@ TOOL_SPECS = [
             "free text but must be one change the backend supports (see capabilities)."
         ),
         "args": {"instruction": "str — e.g. 'raise the right arm higher'"},
+    },
+    {
+        "name": "restore_motion",
+        "description": (
+            "Go back to the closest clip you already produced in this episode. Use "
+            "it after an edit or resample made the measurement worse: a clip you "
+            "already had is never lost, and you may not finish on a clip that is "
+            "further from the goal than one you already saw. At most 2 per episode."
+        ),
+        "args": {"reason": "str — why you go back (one sentence)"},
     },
     {
         "name": "finish",
@@ -166,9 +189,66 @@ class MotionTools:
         self.described_at: Optional[int] = None
         self.checked_at: Optional[int] = None
         self.edits = 0
-        self.resamples = 0
+        self.resamples = 0          # resamples that replaced the clip
+        self.resample_attempts = 0  # every call that actually drew drafts
+        self.restores = 0
         self.calls: List[Dict[str, Any]] = []
         self.history: List[Dict[str, Any]] = []
+        # Every clip state this episode has measured, so a worse edit or a bad
+        # resample can never destroy a closer draft (ep12 lost an 88° turn that
+        # way) and so ``finish`` can be refused on a clip known to be worse.
+        self.archive: List[Dict[str, Any]] = []
+
+    # -- clip archive ------------------------------------------------------
+    def _snapshot(self, tag: str = "") -> Dict[str, Any]:
+        """Measure the current clip against the goal and remember it."""
+        if self.run_dir is None:
+            return {}
+        edited = Path(self.run_dir) / "03_edited.npy"
+        if not edited.is_file():
+            return {}
+        j = load_joints(edited)
+        m = kinematic_summary(j)
+        obs = {"metrics": m}
+        v = verify_goal(self.goal, obs)
+        rep = physical_report(j)
+        snap = {
+            "tag": tag,
+            "step": self.step,
+            "run_dir": str(self.run_dir),
+            "satisfied": bool(v["ok"]),
+            "gap": round(requirement_gap(self.goal, obs), 4),
+            "valid": bool(rep["valid"]),
+            "failed": [c["check"] for c in v["checks"] if not c["ok"]],
+            "measured": _candidate_metrics(m),
+        }
+        self.archive = [a for a in self.archive if a.get("run_dir") != snap["run_dir"]]
+        self.archive.append(snap)
+        return snap
+
+    @staticmethod
+    def _rank_key(a: Dict[str, Any]) -> tuple:
+        """Closest first: valid, then satisfied, then smallest requirement gap."""
+        return (0 if a.get("valid") else 1, 0 if a.get("satisfied") else 1,
+                float(a.get("gap") or 0.0), -int(a.get("step") or 0))
+
+    def best_snapshot(self) -> Dict[str, Any]:
+        if not self.archive:
+            return {}
+        return sorted(self.archive, key=self._rank_key)[0]
+
+    def current_snapshot(self) -> Dict[str, Any]:
+        if self.run_dir is None:
+            return {}
+        return next((a for a in self.archive if a.get("run_dir") == str(self.run_dir)), {})
+
+    def archive_summary(self, limit: int = 4) -> List[Dict[str, Any]]:
+        """Compact best-first list for the controller (no paths it cannot use)."""
+        return [
+            {k: a.get(k) for k in ("tag", "step", "satisfied", "gap", "valid", "failed")}
+            | {"current": a.get("run_dir") == str(self.run_dir)}
+            for a in sorted(self.archive, key=self._rank_key)[:limit]
+        ]
 
     # -- helpers -----------------------------------------------------------
     def _next_dir(self, tag: str) -> Path:
@@ -178,12 +258,18 @@ class MotionTools:
         return d
 
     def _caption(self, run_dir: Path, goal: str) -> Dict[str, Any]:
-        """Refresh the caption with the learned M2T model and score the text."""
+        """Refresh the caption with the learned M2T model and score the text.
+
+        Two captions are returned, because they disagree in an informative way:
+        the learned M2T sentence is what module (c) is scored on, while the
+        rule sentence is built from the same measurements the checker reads. The
+        controller is asked to compare *both* with the goal before deciding that
+        a fix is needed, and the measurements stay the tie-breaker.
+        """
         from motion_caption import caption_edited
 
         quality = _read_json(run_dir / "04_quality.json")
         plan = _read_json(run_dir / "00_motion_edit_plan.json")
-        summary = _read_json(run_dir / "summary.json")
         edited = run_dir / "03_edited.npy"
         cap = caption_edited(
             edited,
@@ -195,7 +281,37 @@ class MotionTools:
         (run_dir / "06_motion_caption.json").write_text(
             json.dumps(cap, ensure_ascii=False, indent=2), encoding="utf-8"
         )
-        cap["similarity"] = text_similarity(goal, str(cap.get("caption") or ""))
+        learned = str(cap.get("caption") or "")
+        rule_text = structured_caption(kinematic_summary(load_joints(edited)))
+        cap["similarity"] = text_similarity(goal, learned)
+        cap["rule_caption"] = rule_text
+        cap["rule_similarity"] = text_similarity(goal, rule_text)
+        # The caption half of the fix decision. The rule caption is built from
+        # the same measurements the checker reads, so a disagreement between the
+        # two captions is a reason to verify, not to edit.
+        learned_check = caption_signals(goal, learned)
+        rule_check = caption_signals(goal, rule_text)
+        if rule_check["needs_fix"]:
+            level, needs_fix = "mismatch", True
+        elif learned_check["needs_fix"]:
+            level, needs_fix = "uncertain", False
+        else:
+            level, needs_fix = "match", False
+        cap["caption_check"] = learned_check
+        cap["rule_caption_check"] = rule_check
+        cap["caption_verdict"] = {
+            "level": level,
+            "needs_fix": needs_fix,
+            "learned_says": learned_check["needs_fix"],
+            "rule_says": rule_check["needs_fix"],
+            "because": rule_check["because"] or learned_check["because"],
+            "note": (
+                "Caption-level signal only. 'uncertain' means the learned caption "
+                "reads wrong while the measurement-grounded caption reads right — "
+                "confirm with check_requirement before editing; 'mismatch' means "
+                "both captions disagree with the goal."
+            ),
+        }
         return cap
 
     def _observe_clip(self, run_dir: Path, goal: str) -> Dict[str, Any]:
@@ -228,10 +344,12 @@ class MotionTools:
         }
     # -- tools -------------------------------------------------------------
     def _generate_into(self, prompt: str, out_dir: Path,
-                       draft_joints: Optional[Path] = None) -> tuple:
+                       draft_joints: Optional[Path] = None,
+                       generator: Optional[str] = None) -> tuple:
         """Run the generator into ``out_dir``; returns (ok, generator_used, resp)."""
         from session_api import run_session
 
+        gen = str(generator or self.generator)
         req = {
             "prompt": str(prompt),
             "mode": "generate",
@@ -239,15 +357,15 @@ class MotionTools:
             "skip_review": True,
             "skip_viz": self.skip_viz,
             "backend": "orchestrator",
-            "generator": self.generator,
+            "generator": gen,
         }
         if draft_joints is not None:
             # Already drawn (one of several MLD samples): skip diffusion and let
             # the pipeline observe/edit/visualise this exact clip.
             req["draft_joints"] = str(draft_joints)
         resp = run_session(req, cwd=REPO)
-        used = self.generator
-        if not (out_dir / "03_edited.npy").is_file() and self.generator == "mld":
+        used = gen
+        if not (out_dir / "03_edited.npy").is_file() and gen == "mld":
             # MLD is slow/heavy; keep the episode alive with the dataset draft.
             resp = run_session({**req, "generator": "dataset"}, cwd=REPO)
             used = "dataset_fallback"
@@ -292,10 +410,13 @@ class MotionTools:
             return []
         return [Path(p) for p in (meta.get("samples") or []) if Path(p).is_file()]
 
-    def generate_motion(self, prompt: str) -> Dict[str, Any]:
+    def generate_motion(self, prompt: str, generator: Optional[str] = None) -> Dict[str, Any]:
         t0 = time.time()
+        gen = str(generator or self.generator or "mld").strip().lower()
+        if gen not in ("mld", "dataset"):
+            gen = self.generator
         out_dir = self._next_dir("generate")
-        ok, used, resp = self._generate_into(str(prompt), out_dir)
+        ok, used, resp = self._generate_into(str(prompt), out_dir, generator=gen)
         if not ok:
             obs = {"ok": False, "error": resp.get("error") or "generation produced no clip"}
         else:
@@ -303,14 +424,18 @@ class MotionTools:
             self.described_at = None
             self.checked_at = None
             obs = self._observe_clip(out_dir, str(prompt))
+            snap = self._snapshot("generate")
             obs.update({
                 "ok": True,
                 "requested_prompt": prompt,
                 "generator_used": used,
+                "requirement": {"satisfied": snap.get("satisfied"),
+                                "gap": snap.get("gap"),
+                                "failed": snap.get("failed")},
                 "seconds": round(time.time() - t0, 2),
                 "note": "No caption yet — call describe_motion before judging.",
             })
-        self._record("generate_motion", {"prompt": prompt}, obs)
+        self._record("generate_motion", {"prompt": prompt, "generator": gen}, obs)
         return obs
 
     def resample_motion(self, prompt: str = "", n: int = 3) -> Dict[str, Any]:
@@ -323,7 +448,10 @@ class MotionTools:
         rejected instead of guessing from a single text.
         """
         goal = str(prompt or self.goal or "")
-        if self.resamples >= MAX_RESAMPLES:
+        # The budget caps *attempts*, not replacements: a resample that keeps the
+        # clip it already had still cost a generator load, and charging only
+        # adopted clips let a controller draw forever without ever improving.
+        if self.resample_attempts >= MAX_RESAMPLES:
             return {
                 "ok": False,
                 "error": "resample_budget_reached",
@@ -332,14 +460,31 @@ class MotionTools:
             }
         n = max(2, min(4, int(n or 3)))
         self.step += 1
+        self.resample_attempts += 1
         base = self.episode_dir / f"step{self.step:02d}_resample"
         base.mkdir(parents=True, exist_ok=True)
         t0 = time.time()
         plan = sampling.plan(goal, want=n, batches_left=1)
         cands: List[Dict[str, Any]] = []
+        # The clip already in hand competes with the new drafts. Without this a
+        # resample could silently replace a closer clip with a worse one (ep12
+        # went 88° -> 72° and lost the draft that nearly met the goal).
+        if self.run_dir is not None and (self.run_dir / "03_edited.npy").is_file():
+            j0 = load_joints(self.run_dir / "03_edited.npy")
+            cands.append({
+                "cand": 0,
+                "run_dir": str(self.run_dir),
+                "ok": True,
+                "batch": 0,
+                "generator_used": "current_clip",
+                "from_generator": False,
+                "baseline": True,
+                "valid": bool(physical_report(j0)["valid"]),
+                "metrics": kinematic_summary(j0),
+            })
         batches_used = 0
         accepted: List[Dict[str, Any]] = []
-        while batches_used < plan["batches"] and not accepted:
+        while batches_used < plan["batches"]:
             batches_used += 1
             batch_dir = base if batches_used == 1 else base / f"batch{batches_used}"
             batch_dir.mkdir(parents=True, exist_ok=True)
@@ -380,7 +525,8 @@ class MotionTools:
                    "candidates": cands, "seconds": round(time.time() - t0, 2)}
             self._record("resample_motion", {"prompt": goal, "n": n}, obs)
             return obs
-        if not any(c.get("from_generator") for c in usable):
+        fresh = [c for c in usable if c.get("from_generator")]
+        if not fresh:
             # No candidate came from a fresh draw: either the diffusion
             # generator is down (each run fell back to the retrieved clip) or
             # this path is deterministic. Extra draws would repeat the same clip,
@@ -393,22 +539,26 @@ class MotionTools:
                 "note": (
                     "No draft came from the diffusion generator (all candidates "
                     "reused the deterministic retrieved clip), so another resample "
-                    "would return the same motion. Edit, change the prompt, or "
-                    "finish naming the gap. If the generator should be running, "
-                    "check its environment (MLD_PYTHON / the `mld` conda env)."
+                    "would return the same motion. The current clip is unchanged. "
+                    "Edit, change the prompt, or finish naming the gap. If the "
+                    "generator should be running, check its environment "
+                    "(MLD_PYTHON / the `mld` conda env)."
                 ),
             }
             self._record("resample_motion", {"prompt": goal, "n": n}, obs)
             return obs
         best = (accepted or sampling.rank(goal, cands))[0]
-        self.resamples += 1
-        self.run_dir = Path(best["run_dir"])
-        self.described_at = None
-        self.checked_at = None
+        kept_current = bool(best.get("baseline"))
+        if not kept_current:
+            self.resamples += 1
+            self.run_dir = Path(best["run_dir"])
+            self.described_at = None
+            self.checked_at = None
         distinct = len({json.dumps(_candidate_metrics(c["metrics"]), sort_keys=True)
                         for c in usable})
         round_summary = sampling.summary(goal, cands, best)
         obs = self._observe_clip(self.run_dir, goal)
+        snap = self._snapshot("resample_keep" if kept_current else "resample")
         obs.update({
             "ok": True,
             "candidates": [
@@ -419,25 +569,85 @@ class MotionTools:
             "chosen": best["cand"],
             "chosen_gap": best["gap"],
             "chosen_satisfied": best["satisfied"],
+            "kept_current": kept_current,
             "accepted": len(accepted),
             "distinct_candidates": distinct,
             "batches": batches_used,
             "acceptance": round_summary["acceptance"],
-            "resamples_left": max(0, MAX_RESAMPLES - self.resamples),
+            "resamples_left": max(0, MAX_RESAMPLES - self.resample_attempts),
+            "requirement": {"satisfied": snap.get("satisfied"),
+                            "gap": snap.get("gap"), "failed": snap.get("failed")},
             "seconds": round(time.time() - t0, 2),
             "note": (
-                f"Kept cand{best['cand']} (valid first, then lowest requirement gap). "
-                f"{len(accepted)}/{len(usable)} drafts already satisfied: "
-                f"{round_summary['acceptance'] or 'no measurable constraint'}. "
-                "No caption for it yet — call describe_motion, then compare it with "
-                "the candidates list before deciding."
-                if distinct > 1
-                else "Every draft measured identically, so another draw of this "
-                     "prompt will only repeat it. Edit, change the prompt, or "
-                     "finish naming the gap."
+                "Every new draft was further from the goal than the clip you "
+                "already had, so the current clip was kept (cand0). No describe is "
+                "needed for it. Edit, accept it, or finish naming the gap."
+                if kept_current
+                else (
+                    f"Kept cand{best['cand']} (valid first, then lowest requirement gap). "
+                    f"{len(accepted)}/{len(usable)} drafts already satisfied: "
+                    f"{round_summary['acceptance'] or 'no measurable constraint'}. "
+                    "No caption for it yet — call describe_motion, then compare it with "
+                    "the candidates list before deciding."
+                    if distinct > 1
+                    else "Every draft measured identically, so another draw of this "
+                         "prompt will only repeat it. Edit, change the prompt, or "
+                         "finish naming the gap."
+                )
             ),
         })
         self._record("resample_motion", {"prompt": goal, "n": n}, obs)
+        return obs
+
+    def restore_motion(self, reason: str = "") -> Dict[str, Any]:
+        """Go back to the closest clip this episode has already measured."""
+        if self.run_dir is None:
+            return {"ok": False, "error": "no clip yet; call generate_motion first"}
+        if self.restores >= MAX_RESTORES:
+            return {
+                "ok": False,
+                "error": "restore_budget_reached",
+                "note": f"{MAX_RESTORES} restores already used. Work with the "
+                        "current clip or finish naming the gap.",
+            }
+        cur = self.current_snapshot() or self._snapshot("current")
+        best = self.best_snapshot()
+        if not best or best.get("run_dir") == str(self.run_dir):
+            return {
+                "ok": False,
+                "error": "already_best",
+                "note": "The current clip is already the closest one measured. "
+                        "Nothing to restore.",
+                "archive": self.archive_summary(),
+            }
+        better = (best.get("satisfied") and not cur.get("satisfied")) or (
+            float(best.get("gap") or 0) + 1e-6 < float(cur.get("gap") or 0)
+        )
+        if not better:
+            return {
+                "ok": False,
+                "error": "already_best",
+                "note": "No earlier clip is closer to the goal than the current one.",
+                "archive": self.archive_summary(),
+            }
+        self.restores += 1
+        self.run_dir = Path(str(best["run_dir"]))
+        self.described_at = None
+        self.checked_at = None
+        obs = self._observe_clip(self.run_dir, self.goal)
+        obs.update({
+            "ok": True,
+            "restored": True,
+            "reason": reason,
+            "restored_from_step": best.get("step"),
+            "gap_before": cur.get("gap"),
+            "gap_after": best.get("gap"),
+            "restore_budget_left": max(0, MAX_RESTORES - self.restores),
+            "archive": self.archive_summary(),
+            "note": "The earlier clip is back. Call describe_motion, then "
+                    "check_requirement before deciding.",
+        })
+        self._record("restore_motion", {"reason": reason}, obs)
         return obs
 
     def describe_motion(self, goal: str) -> Dict[str, Any]:
@@ -446,12 +656,18 @@ class MotionTools:
         t0 = time.time()
         cap = self._caption(self.run_dir, goal)
         obs = self._observe_clip(self.run_dir, goal)
+        snap = self._snapshot("describe")
         obs.update({
             "ok": True,
             "caption": cap.get("caption"),
             "caption_source": cap.get("source"),
             "caption_problems": cap.get("problems") or [],
             "similarity": cap.get("similarity"),
+            "rule_caption": cap.get("rule_caption"),
+            "rule_similarity": cap.get("rule_similarity"),
+            "caption_verdict": cap.get("caption_verdict"),
+            "requirement": {"satisfied": snap.get("satisfied"),
+                            "gap": snap.get("gap"), "failed": snap.get("failed")},
             "seconds": round(time.time() - t0, 2),
         })
         self.described_at = self.step
@@ -466,9 +682,12 @@ class MotionTools:
         m = kinematic_summary(j)
         rep = physical_report(j)
         verdict = verify_goal(goal, {"metrics": m})
+        gap = requirement_gap(goal, {"metrics": m})
+        self._snapshot("check")
         obs = {
             "ok": True,
             "satisfied": bool(verdict["ok"]),
+            "requirement_gap": round(gap, 4),
             "checks": verdict["checks"],
             "reasons": verdict["reasons"],
             "measured": {
@@ -493,6 +712,58 @@ class MotionTools:
         self.checked_at = self.step
         self._record("check_requirement", {}, obs)
         return obs
+
+    def _edit_precondition(self, family: str, instruction: str,
+                           kb: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """Refuse an edit the clip cannot support, before any backend runs.
+
+        These operators are *relative*: they scale or extend motion that is
+        already in the clip. Running one on a clip that lacks that motion
+        returns an identical file, which used to be reported as a successful
+        edit. Naming the missing precondition is more useful than a no-op.
+        """
+        txt = (instruction or "").lower()
+        yaw = abs(float(kb.get("yaw_span_deg") or 0))
+        travel = float(kb.get("root_travel") or 0)
+        drop = float(kb.get("pelvis_drop") or 0)
+        feet = max(float(kb.get("ankle_lift_right") or 0),
+                   float(kb.get("ankle_lift_left") or 0))
+        if family == "turn" and yaw < 20:
+            wants_more = re.search(r"further|more|bigger|larger|again|再", txt) is not None
+            return {
+                "ok": False,
+                "error": "edit_needs_existing_turn",
+                "instruction": instruction,
+                "yaw_span_deg": round(yaw, 1),
+                "reason": "this clip does not turn, and the turn operator can only "
+                          "stop or limit a turn that is already there",
+                "suggestion": ("ask generate_motion for a turning clip, then edit it"
+                               if wants_more else
+                               "skip this edit; the clip has no turn to stop"),
+                "note": "Do not repeat this instruction on this clip.",
+            }
+        if family == "speed" and travel < 0.1 and feet < 0.1:
+            return {
+                "ok": False,
+                "error": "edit_needs_existing_motion",
+                "instruction": instruction,
+                "root_travel": round(travel, 3),
+                "reason": "a tempo change retimes motion; this clip barely moves",
+                "suggestion": "generate a moving clip first, then retime it",
+                "note": "Do not repeat this instruction on this clip.",
+            }
+        if family in ("stand_up", "sit_deeper", "sit_remove_preamble") and drop < 0.05:
+            return {
+                "ok": False,
+                "error": "edit_needs_seated_clip",
+                "instruction": instruction,
+                "pelvis_drop": round(drop, 3),
+                "reason": "this clip is not seated, so there is no sit to deepen "
+                          "or stand up from",
+                "suggestion": "generate a sitting clip first, then edit it",
+                "note": "Do not repeat this instruction on this clip.",
+            }
+        return None
 
     def edit_motion(self, instruction: str) -> Dict[str, Any]:
         if self.run_dir is None:
@@ -546,6 +817,12 @@ class MotionTools:
                 }
                 self._record("edit_motion", {"instruction": instruction}, obs)
                 return obs
+        pre = self._edit_precondition(str(cls["family"]), str(instruction),
+                                      kinematic_summary(before))
+        if pre is not None:
+            pre["seconds"] = round(time.time() - t0, 2)
+            self._record("edit_motion", {"instruction": instruction}, pre)
+            return pre
         out_dir = self._next_dir("edit")
         resp = run_session(
             {
@@ -686,6 +963,42 @@ class MotionTools:
         target, region = infer_target_joints(instruction)
         pres = preservation(before, after, target)
         follow = instruction_following(instruction, kb, ka, pres)
+        gap_before = round(requirement_gap(self.goal, {"metrics": kb}), 4)
+        gap_after = round(requirement_gap(self.goal, {"metrics": ka}), 4)
+        # A clip can come back *different* without doing what it was told: the
+        # walk assembler rejects its own 4-cycle repeat and returns the source,
+        # a stand-up only trims frames, a "stop turning" leaves the yaw alone.
+        # Keeping that result would silently trade correct motion for nothing,
+        # so restore the source and say which attribute did not move.
+        named_fails = [
+            c for c in (follow.get("checks") or [])
+            if c.get("ok") is False
+            and c.get("attribute") not in ("target_vs_rest", "non_target_mpjpe_norm")
+        ]
+        if follow.get("verifiable") and named_fails and gap_after >= gap_before - 1e-6:
+            self.run_dir = before_dir
+            self.described_at = None
+            self.checked_at = None
+            obs = {
+                "ok": False,
+                "error": "edit_did_not_follow_instruction",
+                "instruction": str(instruction),
+                "family": cls["family"],
+                "backend": backend,
+                "failed_checks": named_fails,
+                "no_change": True,
+                "rolled_back": True,
+                "run_dir": str(before_dir),
+                "gap_before": gap_before,
+                "gap_after": gap_before,
+                "instruction_following": follow,
+                "seconds": round(time.time() - t0, 2),
+                "note": "The clip changed but the attribute you named did not "
+                        "move the requested way; the previous clip is restored. "
+                        "Do not repeat this instruction — regenerate instead.",
+            }
+            self._record("edit_motion", {"instruction": instruction}, obs)
+            return obs
         # The session gate may already fail on the source clip (a static sit
         # draft, for instance). An edit must not be blamed for a defect it did
         # not introduce, so report only the delta and let the controller decide.
@@ -706,6 +1019,33 @@ class MotionTools:
         shrunk = (
             frames_ratio < 0.70 and cls["family"] not in ("trim_trailing", "sit_remove_preamble")
         )
+        if no_change:
+            # A byte-identical output is not an edit. Keep the source as the
+            # state and say so, instead of letting the controller score a
+            # silent no-op as success.
+            self.run_dir = before_dir
+            self.described_at = None
+            self.checked_at = None
+            obs = {
+                "ok": False,
+                "error": "edit_had_no_effect",
+                "instruction": str(instruction),
+                "family": cls["family"],
+                "backend": backend,
+                "no_change": True,
+                "rolled_back": True,
+                "run_dir": str(before_dir),
+                "gap_before": gap_before,
+                "gap_after": gap_before,
+                "instruction_following": follow,
+                "seconds": round(time.time() - t0, 2),
+                "note": "The output was identical to the input: this operator "
+                        "cannot make the requested change on this clip. Do not "
+                        "repeat it; try a different edit or regenerate.",
+            }
+            self._record("edit_motion", {"instruction": instruction}, obs)
+            return obs
+        snap = self._snapshot("edit")
         obs = {
             "ok": True,
             "instruction": str(instruction),
@@ -723,6 +1063,11 @@ class MotionTools:
             "preservation": pres,
             "instruction_following": follow,
             "no_change": bool(no_change),
+            "gap_before": gap_before,
+            "gap_after": gap_after,
+            "worse_than_before": bool(gap_after > gap_before + 1e-6),
+            "requirement": {"satisfied": snap.get("satisfied"),
+                            "gap": snap.get("gap"), "failed": snap.get("failed")},
             "physically_valid": bool(rep["valid"]),
             "inherited_invalidity": [c for c in rep["invalid_checks"]],
             "quality_passed": (q_after or {}).get("passed"),
@@ -747,7 +1092,13 @@ class MotionTools:
                             f"({', '.join(rep['invalid_checks'])}); the edit did not make it "
                             "worse. The defect is inherited from the source, not caused here."
                             if rep["invalid_checks"]
-                            else "No caption of the new clip yet — call describe_motion."
+                            else (
+                                f"This edit moved the clip further from the goal "
+                                f"(gap {gap_before:.2f} -> {gap_after:.2f}); an earlier "
+                                "clip is closer. Call restore_motion to go back."
+                                if gap_after > gap_before + 1e-6
+                                else "No caption of the new clip yet — call describe_motion."
+                            )
                         )
                     )
                 )

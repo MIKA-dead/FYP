@@ -142,9 +142,9 @@
       ],
       "strength": {},
       "prefer_diffusion": false,
-      "weight": 1.64,
+      "weight": 1.59,
       "success_count": 8,
-      "fail_count": 0
+      "fail_count": 1
     },
     {
       "id": "wave.slow_wave",
@@ -298,7 +298,7 @@
       "force_bridged_walk": true,
       "strength": {},
       "weight": 3.0,
-      "success_count": 24,
+      "success_count": 27,
       "fail_count": 0
     },
     {

@@ -41,7 +41,8 @@ for _p in (
         sys.path.insert(0, str(_p))
 
 from metrics import kinematic_summary, load_joints, text_similarity  # noqa: E402
-from tools import SUPPORTED_EDITS, TOOL_SPECS, MotionTools  # noqa: E402
+from verify import verify_goal  # noqa: E402
+from tools import MAX_RESTORES, SUPPORTED_EDITS, TOOL_SPECS, MotionTools  # noqa: E402
 
 SYSTEM = (
     "You are the controller of a text-driven 3D motion agent. You never write "
@@ -58,7 +59,15 @@ SYSTEM = (
     "- The learned caption is coarse; joint measurements are ground truth when "
     "they disagree. arm_raise_ratio >= 1.8 and wrist_above_head (metres) > 0 both "
     "mean the wrist is above the head. root_travel is metres travelled; "
-    "pelvis_drop is how far the hips descend; yaw_span_deg is how much the body turns.\n"
+    "pelvis_drop is how far the hips descend; yaw_span_deg is how much the body "
+    "turns and yaw_net_deg is the signed net rotation (positive = left).\n"
+    "- describe_motion returns TWO captions and a caption_verdict: `caption` from "
+    "the learned M2T model, `rule_caption` built from the same measurements the "
+    "checker reads, and their similarity to the goal. The verdict is three-way: "
+    "`match` (both agree), `uncertain` (only the learned caption looks wrong — it is "
+    "usually too coarse; verify with check_requirement and do not edit on that "
+    "basis) and `mismatch` (both captions disagree with the goal — that is a reason "
+    "to look at the measurements, still not a verdict on its own).\n"
     "- alignment (0-100) must cite both the caption and at least one measurement.\n"
     "- Judge the user's actual wording, not an idealized version: 'turns around' is "
     "met by a visible ~180° turn, and 'raises the arm' is met by one arm above the "
@@ -73,17 +82,31 @@ SYSTEM = (
     "- The editing tools are RELATIVE: they scale or reshape motion that is already "
     "in the clip. They can never add travel, add a turn, or remove locomotion. When "
     "the measurement says an attribute is missing entirely (root_travel 0.0, "
-    "yaw_span 10 deg, no knee lift) and no edit can create it, call resample_motion "
-    "to draw several drafts of the same prompt and keep the closest — do not spend "
-    "edits on something an edit cannot do, and do not repeat generate_motion one "
-    "prompt at a time.\n"
+    "yaw_span 10 deg, no knee lift) and no edit can create it, first call "
+    "resample_motion to draw several drafts of the same prompt and keep the closest; "
+    "if every draw still lacks it, that is a generator limit — call generate_motion "
+    "again with generator=\"dataset\", which retrieves a real HumanML3D clip whose "
+    "caption matches the prompt and can contain the missing attribute. Do not spend "
+    "edits on something an edit cannot do.\n"
     "- Generation already rejection-samples: when the prompt names a measurable "
     "attribute, several drafts are drawn and the closest is kept, reported as "
     "draft_rejection (drawn / accepted / rejected). If that report says the goal was "
-    "still not met after N drafts, the model itself is the limit — a resample will "
-    "not help; say so instead of looping.\n"
+    "still not met after N drafts, the diffusion model is the limit — a resample of "
+    "the same prompt will not help; try generator=\"dataset\", or say so and finish.\n"
+    "- Every clip you have produced stays available. If an edit moved the "
+    "measurement away from the goal (worse_than_before=true, or gap_after > "
+    "gap_before), call restore_motion to go back to the closest one instead of "
+    "stacking edits on a clip you already know is worse. You may not finish on a "
+    "clip that is further from the goal than one you already had.\n"
     "- An edit that returns unsupported_instruction never reached the backend. Do "
     "not rephrase the same impossible request; finish and name it as out of scope.\n"
+    "- Three edit errors mean 'this clip cannot take this operator': "
+    "edit_needs_existing_locomotion, edit_needs_existing_turn, "
+    "edit_needs_existing_motion, edit_needs_seated_clip. The previous clip is kept. "
+    "Use generate_motion with the full goal instead of retrying the edit.\n"
+    "- edit_had_no_effect / edit_did_not_follow_instruction mean the backend ran but "
+    "the attribute you named did not move; the previous clip is restored. Do not "
+    "repeat the instruction — regenerate with a prompt that asks for it directly.\n"
     "- A clip with valid=false is physically broken: never accept it. You may call "
     "generate_motion again with a simpler prompt, or finish and report the failure.\n"
     "- quality_passed=false lists the gate's failed checks; weigh them but they are "
@@ -99,7 +122,8 @@ SYSTEM = (
     '{"thought": "one or two sentences", '
     '"assessment": {"alignment": 0, "satisfied": false, "matches": [], '
     '"missing": [], "next_edit": ""}, '
-    '"action": "generate_motion|resample_motion|describe_motion|check_requirement|edit_motion|finish", '
+    '"action": "generate_motion|resample_motion|restore_motion|describe_motion|'
+    'check_requirement|edit_motion|finish", '
     '"args": {}}'
 )
 
@@ -178,42 +202,49 @@ def chat(messages: List[Dict[str, str]], *, timeout_s: float = 180.0) -> Tuple[D
 # scripted baseline (no LLM): same tools, deterministic gap→edit rules
 # --------------------------------------------------------------------------
 def _rule_assess(goal: str, obs: Dict[str, Any], edits: int, max_edits: int,
-                 failed: Optional[set] = None) -> Dict[str, Any]:
+                 failed: Optional[set] = None,
+                 metrics: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    """Scripted baseline policy, answered by the same measurements as the tools.
+
+    ``metrics`` is the current clip's kinematic summary. It is passed in
+    explicitly because observations differ by tool (``check_requirement``
+    reports ``measured``, not ``metrics``) and reading the wrong key silently
+    scored every clip as "no turn at all".
+    """
     failed = failed or set()
-    m = obs.get("metrics") or {}
+    m = metrics or obs.get("metrics") or obs.get("measured") or {}
     cap = str(obs.get("caption") or "")
     g = (goal or "").lower()
     missing: List[str] = []
     instruction = ""
     side = "left" if "left" in g else "right"
-    if any(w in g for w in ("arm", "hand", "wave", "raise")):
-        ratio = float(m.get(f"arm_raise_{side}") or 0)
-        above = float(m.get(f"wrist_above_head_{side}") or 0)
-        if ratio < 1.8 and above < 0.05:
-            missing.append(
-                f"{side} arm not above the head (ratio {ratio:.2f} < 1.8, "
-                f"wrist {above:.2f} m above head)"
-            )
-            instruction = f"raise the {side} arm higher"
-    if any(w in g for w in ("walk", "step", "forward")):
-        travel = float(m.get("root_travel") or 0)
-        if travel < 0.5:
-            missing.append(f"too little forward travel ({travel:.2f} m)")
-            instruction = "walk forward further"
-    if "sit" in g:
-        drop = float(m.get("pelvis_drop") or 0)
-        if drop < 0.10:
-            missing.append(f"hips do not lower enough (drop {drop:.2f} m)")
-            instruction = "sit down lower"
-    if "turn" in g:
-        yaw = float(m.get("yaw_span_deg") or 0)
-        if yaw < 90:
-            missing.append(f"turn is too small ({yaw:.0f} deg)")
-            instruction = "turn further"
-    if float(m.get("yaw_span_deg") or 0) > 60 and "turn" not in g and "spin" not in g:
+    verdict = verify_goal(goal, {"metrics": m})
+    reasons = {c["check"]: c for c in verdict["checks"] if not c["ok"]}
+
+    def need(name: str, text: str, edit: str) -> None:
+        if name in reasons:
+            c = reasons[name]
+            missing.append(f"{text} (measured {c['value']}, needs {c['expected']})")
+            return edit
+        return ""
+
+    instruction = need(f"arm_raise_{side}", f"{side} arm not high enough",
+                       f"raise the {side} arm higher") or instruction
+    instruction = need("root_travel", "forward travel is too small",
+                       "walk forward further") or instruction
+    instruction = need("pelvis_drop", "hips do not lower enough",
+                       "sit down lower") or instruction
+    instruction = need("yaw_span_deg", "turn is too small", "turn further") or instruction
+    instruction = need("ankle_lift_right", "right leg does not kick",
+                       "kick with the right leg") or instruction
+    instruction = need("ankle_lift_left", "left leg does not kick",
+                       "kick with the left leg") or instruction
+    instruction = need("jump_rise", "no jump", "jump higher") or instruction
+    if not missing and float(m.get("yaw_span_deg") or 0) > 60 and "turn" not in g and "spin" not in g:
         missing.append("unwanted spinning")
         instruction = "keep facing the same direction, do not spin"
 
+    missing = [r for r in verdict["reasons"] if r not in missing] + missing
     alignment = max(0, 100 - 25 * len(missing))
     if not missing:
         return {"alignment": 92, "satisfied": True, "matches": [cap] if cap else [],
@@ -276,8 +307,10 @@ def run_agent(
                 "step": step,
                 "edits_used": tools.edits,
                 "edits_left": max(0, max_edits - tools.edits),
+                "restores_left": max(0, MAX_RESTORES - tools.restores),
                 "has_clip": tools.run_dir is not None,
                 "current_clip_described": tools.described_at is not None,
+                "closest_clip_so_far": tools.archive_summary(limit=3),
                 "tried_edits": [
                     {"instruction": h.get("instruction"), "followed": (h.get("following") or {}).get("followed")}
                     for h in tools.history
@@ -309,6 +342,8 @@ def run_agent(
                 assess = _rule_assess(
                     goal, last_obs, tools.edits, max_edits,
                     failed={h.get("instruction") for h in tools.history if h.get("no_change")},
+                    metrics=(tools.current_snapshot() or {}).get("measured")
+                    or (last_obs or {}).get("metrics"),
                 )
                 if assess["satisfied"] or not assess["next_edit"]:
                     decision = {"thought": "Rule assessment: " + "; ".join(assess["missing"]) or "goal met",
@@ -337,10 +372,30 @@ def run_agent(
             action = "finish"
             args = {"reason": f"edit budget reached ({max_edits})"}
             thought += " [corrected: edit budget reached]"
+        # Never stop on a clip that is further from the goal than one already
+        # measured in this episode: the archive still holds it, so going back is
+        # one cheap step (this is what ep12 needed after an edit erased an 88° turn).
+        if action == "finish" and tools.restores < MAX_RESTORES:
+            cur = tools.current_snapshot()
+            best = tools.best_snapshot()
+            if cur and best and best.get("run_dir") != cur.get("run_dir"):
+                better = (
+                    (best.get("satisfied") and not cur.get("satisfied"))
+                    or float(best.get("gap") or 0) + 1e-6 < float(cur.get("gap") or 0)
+                )
+                if better:
+                    action = "restore_motion"
+                    args = {"reason": "an earlier clip is closer to the goal"}
+                    thought += (" [corrected: an earlier clip is closer to the goal "
+                                "(gap %.2f < %.2f); restore it before finishing]"
+                                % (float(best.get("gap") or 0), float(cur.get("gap") or 0)))
 
         # ---- execute ----
         if action == "generate_motion":
-            obs = tools.generate_motion(str(args.get("prompt") or goal))
+            obs = tools.generate_motion(
+                str(args.get("prompt") or goal),
+                generator=args.get("generator"),
+            )
         elif action == "resample_motion":
             obs = tools.resample_motion(
                 str(args.get("prompt") or ""), int(args.get("n") or 3)
@@ -350,13 +405,22 @@ def run_agent(
         elif action == "check_requirement":
             obs = tools.check_requirement(goal)
             last_check = obs
+        elif action == "restore_motion":
+            obs = tools.restore_motion(str(args.get("reason") or ""))
+            if obs.get("ok"):
+                last_check = {}
         elif action == "edit_motion":
             instruction = str(args.get("instruction") or "").strip()
             if not instruction:
                 obs = {"ok": False, "error": "edit_motion needs a non-empty instruction"}
             else:
                 obs = tools.edit_motion(instruction)
-                tools.history.append({"instruction": instruction, **obs})
+                tools.history.append({
+                    **obs,
+                    "instruction": instruction,
+                    "following": obs.get("instruction_following") or {},
+                    "no_change": bool(obs.get("no_change")),
+                })
                 if obs.get("ok"):
                     applied_ok += 1
                 elif obs.get("error") == "unsupported_instruction":
@@ -435,6 +499,35 @@ def run_agent(
             # Keep the system prompt and the last observations only.
             messages = [messages[0]] + messages[-12:]
 
+    # If the budget ran out on a clip that is worse than one already measured,
+    # deliver the closest clip instead of the last one. This is the same rule the
+    # finish guard enforces; it only fires when the loop ended without finishing.
+    if tools.run_dir is not None and not verified_success:
+        cur = tools.current_snapshot()
+        best = tools.best_snapshot()
+        if (
+            cur and best and best.get("run_dir") != cur.get("run_dir")
+            and (
+                (best.get("satisfied") and not cur.get("satisfied"))
+                or float(best.get("gap") or 0) + 1e-6 < float(cur.get("gap") or 0)
+            )
+        ):
+            obs = tools.restore_motion("loop budget exhausted; deliver the closest clip")
+            if obs.get("ok"):
+                trace.append({
+                    "step": len(trace) + 1,
+                    "thought": "Budget exhausted. The closest clip measured in this "
+                               "episode is restored as the result.",
+                    "assessment": final_assessment if trace else {},
+                    "action": "restore_motion",
+                    "args": {"reason": "loop budget exhausted"},
+                    "observation": obs,
+                    "usage": {},
+                    "policy": "auto",
+                    "auto": True,
+                    "seconds": obs.get("seconds"),
+                })
+
     final_run = tools.run_dir
     final_metrics = {}
     final_caption = ""
@@ -477,6 +570,9 @@ def run_agent(
             "edits_applied": applied_ok,
             "edits_unsupported": attempted_unsupported,
             "resamples": tools.resamples,
+            "restores": tools.restores,
+            "best_gap_seen": (tools.best_snapshot() or {}).get("gap"),
+            "final_gap": (tools.current_snapshot() or {}).get("gap"),
             "tool_calls": len(tools.calls),
             "llm_rounds": sum(1 for t in trace if t["policy"] == "llm"),
             "seconds": round(time.time() - t0, 2),

@@ -8,10 +8,22 @@ whether the agent was calibrated instead of silently overriding it.
 
 The caption is deliberately never used here: it is coarse and sometimes wrong,
 and a model that trusts a wrong caption would be rewarded for agreeing with it.
+
+Thresholds follow the user's wording, with a measurement tolerance: a request
+for "90 degrees" is met by 77° or more, because the *measured* span of a clip
+whose own caption says "turns left" is 89.5° while the net body rotation is
+87.2°. Failing an 88° turn on a 90° request is a checker bug, not a finding.
 """
 from __future__ import annotations
 
+import re
 from typing import Any, Dict, List
+
+# "90 degrees", "180 deg", "90°"
+_TURN_DEG = re.compile(r"(\d{2,3})\s*(?:°|deg\b|degree)")
+# Relative measurement tolerance: a 90° request passes from 77°.
+TOLERANCE = 0.85
+
 
 
 def verify_goal(goal: str, obs: Dict[str, Any]) -> Dict[str, Any]:
@@ -20,9 +32,18 @@ def verify_goal(goal: str, obs: Dict[str, Any]) -> Dict[str, Any]:
     checks: List[Dict[str, Any]] = []
 
     def add(name: str, ok: bool, value: Any, need: str,
-            target: float = None, higher: bool = True) -> None:
-        checks.append({"check": name, "ok": bool(ok), "value": value, "expected": need,
-                       "target": target, "higher_is_better": bool(higher)})
+            target: float = None, higher: bool = True,
+            gap: float = None) -> None:
+        """Record one check.
+
+        ``gap`` overrides the relative-shortfall formula for checks whose value
+        is signed (a turn direction), where "how far short" is not a difference.
+        """
+        entry = {"check": name, "ok": bool(ok), "value": value, "expected": need,
+                 "target": target, "higher_is_better": bool(higher)}
+        if gap is not None:
+            entry["gap"] = gap
+        checks.append(entry)
 
     side = "left" if "left" in g else "right"
     if any(w in g for w in ("arm", "hand", "wave", "raise", "overhead")):
@@ -47,7 +68,31 @@ def verify_goal(goal: str, obs: Dict[str, Any]) -> Dict[str, Any]:
         add("pelvis_drop", drop >= 0.15, drop, ">= 0.15 m", target=0.15)
     if any(w in g for w in ("turn", "spin", "rotate")):
         yaw = float(m.get("yaw_span_deg") or 0)
-        add("yaw_span_deg", yaw >= 90, yaw, ">= 90 deg", target=90.0)
+        asked = _TURN_DEG.search(g)
+        if asked:
+            target = float(min(360, max(45, int(asked.group(1)))))
+            need = TOLERANCE * target
+            note = f">= {need:.0f} deg (requested {target:.0f} deg)"
+        elif any(w in g for w in ("around", "half", "180")):
+            target = 150.0
+            need = target
+            note = f">= {need:.0f} deg (a turn-around)"
+        else:
+            target = 90.0
+            need = target
+            note = f">= {need:.0f} deg"
+        add("yaw_span_deg", yaw >= need, yaw, note, target=need)
+        net = float(m.get("yaw_net_deg") or 0)
+        # Direction: span cannot tell a left turn from a right one, and the net
+        # rotation is signed (positive = left). Only checked when the user named
+        # a side, and the shortfall is measured against the 30° direction target.
+        if re.search(r"\bleft\b", g):
+            add("yaw_net_deg", net >= 30.0, net, "> +30 deg (turns left)",
+                target=30.0, gap=max(0.0, (30.0 - net) / 30.0))
+        elif re.search(r"\bright\b", g):
+            add("yaw_net_deg", net <= -30.0, net, "< -30 deg (turns right)",
+                target=30.0, higher=False,
+                gap=max(0.0, (30.0 + net) / 30.0))
     if any(w in g for w in ("kick", "kicks", "kicking")):
         other = "left" if side == "right" else "right"
         lift = float(m.get(f"ankle_lift_{side}") or 0)
@@ -90,6 +135,9 @@ def requirement_gap(goal: str, obs: Dict[str, Any]) -> float:
     gap = 0.0
     for c in v["checks"]:
         if c["ok"] or c.get("target") in (None, 0):
+            continue
+        if c.get("gap") is not None:
+            gap += max(0.0, float(c["gap"]))
             continue
         val = float(c["value"] or 0.0)
         tgt = float(c["target"])

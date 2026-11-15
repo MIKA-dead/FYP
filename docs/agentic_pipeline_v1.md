@@ -1,4 +1,4 @@
-# Agentic pipeline v1.5 — the LLM calls (a), (b), (c) by itself
+﻿# Agentic pipeline v1.6 — the LLM calls (a), (b), (c) by itself
 
 This note answers the two review comments on the previous experiment.
 
@@ -109,7 +109,8 @@ free-form goal
 │  ③ check_requirement()        ── measure the request against the joints  │
 │  ④ judge: caption + metrics vs. goal ────────────► alignment, gap        │
 │  ⑤ edit_motion(instruction)   ── session revise ──► new 03_edited.npy    │
-│  ↺ ②–⑤ until `finish` or budget                                          │
+│  ⑥ restore_motion()           ── archive ─────────► closest clip so far  │
+│  ↺ ②–⑥ until `finish` or budget                                          │
 └──────────────────────────────────────────────────────────────────────────┘
      │
      ▼
@@ -123,12 +124,13 @@ controller never handles a path; it only writes the text the tool consumes.
 
 | Tool | Backend | Arguments | Observation given to the LLM |
 |---|---|---|---|
-| `generate_motion` | MLD (`mld_generate.py`, conda env `mld`) | `prompt` | frames, generator used, kinematic summary, `draft_rejection` (drawn / accepted / rejected / chosen) when a batch was drawn, preview path |
-| `resample_motion` | MLD `--replication n --allinone` (one model load) | `prompt`, `n` (2–4) | every draft's measured attributes, requirement gap, which draft was kept |
-| `describe_motion` | TM2T `M2T_EL4_DL4_NH8_PS` + VQ tokenizer | — | caption, caption source, GloVe/token similarity to the goal, kinematic summary |
-| `check_requirement` | `scripts/agent/verify.py` (joint measurements) | — | pass/fail per requirement, the measured value, the physical validity report |
-| `edit_motion` | session revise (intent compiler → geometric edit / MotionFix) | `instruction` | before/after metrics, target change, non-target MPJPE, instruction-following checks, `no_change` flag, instruction family, grounding offset |
-| `finish` | — | `reason`, `limitation` | agent claim vs. checker verdict, agreement |
+| `generate_motion` | MLD (`mld_generate.py`, conda env `mld`); `generator="dataset"` retrieves a HumanML3D clip by caption match | `prompt`, `generator` (optional) | frames, generator used, kinematic summary, `requirement` (satisfied / gap / failed checks), `draft_rejection` (drawn / accepted / rejected / chosen) when a batch was drawn, preview path |
+| `resample_motion` | MLD `--replication n --allinone` (one model load); the current clip competes as candidate 0 | `prompt`, `n` (2–4) | every draft's measured attributes, requirement gap, which draft was kept, `kept_current` when every new draft was worse |
+| `describe_motion` | TM2T `M2T_EL4_DL4_NH8_PS` + VQ tokenizer, plus a measurement-grounded rule caption | — | both captions, GloVe / content-recall / action-family similarity to the goal, `caption_verdict` (match / uncertain / mismatch), kinematic summary |
+| `check_requirement` | `scripts/agent/verify.py` (joint measurements) | — | pass/fail per requirement, the measured value, the relative `requirement_gap`, the physical validity report |
+| `restore_motion` | the episode's own archive of measured clips | `reason` | restored clip's run dir, gap before/after, remaining restore budget |
+| `edit_motion` | session revise (intent compiler → geometric edit / MotionFix) | `instruction` | before/after metrics, target change, non-target MPJPE, instruction-following checks, `no_change`, `gap_before`/`gap_after`, `worse_than_before`, instruction family, grounding offset |
+| `finish` | — | `reason`, `limitation` | agent claim vs. checker verdict, agreement; refused while an earlier clip is closer |
 
 If MLD fails, `generate_motion` retries with the in-repo dataset draft and
 records `generator_used = dataset_fallback`; the trace never hides which backend
@@ -256,8 +258,11 @@ pipeline outputs joints; we did not add a joints→SMPL fit just for the report.
 | Bone-length drift | `bone_cv` after − before | Anatomical damage |
 | Smoothness Δ | `jerk` after − before | New jitter introduced by the edit |
 | `no_change` rate | Fraction of edits whose output is byte-identical to the input | Silent editor failures, which the agent must see |
-| `instruction_coverage` | Supported instructions ÷ all instructions the controller attempted | How much of what the controller wants is inside the tool's ability at all |
+| `instruction_coverage` | Applied ÷ cases that should be applicable | Whether the editor can do what was asked, measured on a declared battery |
+| `refusal_honesty` | Named refusals ÷ cases that should be refused | Does the editor say *why* instead of no-opping? |
+| No-effect count | Edits that returned a different clip without moving the named attribute | Silent "looks edited" results; they are rolled back |
 | Unsupported count | Instructions rejected by the registry before the backend ran | Wasted steps avoided, and a map of what users ask for but the editor cannot do |
+| `n_skipped_no_source` | Cases whose source clip lacked the precondition (no travel / turn / sit) | Distinguishes "operator failed" from "source could not support it" |
 
 The DTW alignment makes the preservation metric fair when the edit changes
 speed: frames are matched by pose, not by index.
@@ -271,6 +276,16 @@ travel: a correct slow-down lengthens the clip and can leave total travel
 unchanged, so a distance test marks the right edit as a failure. An edit with no
 applicable attribute and no localisation ratio is reported as **unverifiable**
 and left out of the following rate instead of being counted as a miss.
+
+v1.6 adds the part the metric set was missing: an edit is only counted as
+applied if it **moved the attribute the instruction names**. Three outcomes are
+now distinct and all are visible to the controller — `refused` (the operator
+cannot do it on this clip: no travel to extend, no turn to stop, no sit to
+deepen, or outside the registry), `no_effect` (the backend ran but the named
+attribute did not move, or the output was byte-identical) and `applied`. The
+first two restore the previous clip, so a failed edit cannot quietly replace
+correct motion; `scripts/agent/edit_benchmark.py` reports them separately
+instead of folding them into a coverage number.
 
 The `sit lower` case is why this layer exists. The wording used to be mapped to
 the recipe `sit.slow_descend` (which listed `"sit lower"` among its hints), so
@@ -339,6 +354,14 @@ This battery is the controlled one; Battery A is the realistic one.
 Common settings:
 
 - Captioner: TM2T M2T transformer (`M2T_EL4_DL4_NH8_PS`), beam 2, cached model.
+  `third_party/TM2T` is an upstream checkout, not a submodule: clone it there and
+  put the released `M2T_EL4_DL4_NH8_PS` checkpoint plus its VQ tokenizer under
+  `third_party/TM2T/checkpoints/` (git ignores the directory, the checkpoints and
+  the zips; the GloVe table it ships is what §2 (c) scores with). Without the
+  checkout `caption_edited` falls back to the quality/timeline template and
+  records that in `source`, while the measurement-grounded rule caption and the
+  `caption_verdict` are still produced — the loop keeps running and the missing
+  model is visible in the artifact rather than silently implied.
 - Editor: the session revise path (intent compiler → geometric operator or
   MotionFix). `geometric_only` in a plan now means *exactly* that: the editor
   routes it to the kinematic branch and raises on an unknown mode instead of
@@ -707,6 +730,70 @@ stretched (its ankles sit 1.37 m below the pelvis on a 0.47 m torso), and that
 one still *reports* a floor failure — correctly, because a rigid lift cannot fix
 a stretched skeleton.
 
+### 4.9 The v1.6 run: the numbers that go with the four fixes
+
+Run: `outputs/agent_bench/_v3_final10` (same 20 goals, same controller, MLD with
+generation-side rejection sampling, the v1.6 editor and dual caption). Each
+episode runs in its own process with a 600 s watchdog, so a hung backend
+reports `episode error` instead of freezing the suite.
+
+| Quantity | v1.6 (`_v3_final10`) | v1.5 (`_v3_final7`) |
+|---|---|---|
+| Goal satisfaction | **20 / 20 = 1.00** | 18 / 20 = 0.90 |
+| Caption-mediated R@1 / R@3 | 0.35 / 0.65 | 0.25 / 0.65 |
+| Mean prompt↔caption GloVe cosine | 0.887 | 0.881 |
+| Batch diversity (mean pairwise) | 0.129 | 0.143 |
+| Foot slide / jerk / floor penetration (mean) | 0.0058 / 0.0044 / 0.0046 body-heights | 0.0093 / 0.0053 / 0.0033 |
+| Episodes that drew a batch / drafts rejected | 19 / 17 | 19 / 16 |
+| Edits per goal · episodes that resampled | 0.05 · 2 | 0.10 · 2 |
+| Mean controller steps per goal | 4.25 | 4.40 |
+| Checker consulted / agent↔checker agreement | 1.00 / 1.00 | 1.00 / 1.00 |
+| Episodes that ended worse than their best measured clip | **0** | 0 |
+| Mean seconds and tokens per goal | 33.7 s / 21 888 | 31.8 s / 19 236 |
+| Wall time (20 goals, incl. module (c) bench) | 689 s | 635 s |
+
+**1.00 here is one draw of n = 20, not a saturation claim.** The same suite
+reads 0.90 (`_v3_final5`), 0.90 (`_v3_final7`) and 1.00 (`_v3_final10`); the
+mechanism that moved it is rejection sampling at the source plus the
+no-worse-than-best archive, and the per-goal column in `report.md` is the
+result to read. Mean edits fell to 0.05 because only one goal still needed the
+editor (goal 16, "sits down and raises the right arm"): three drafts were
+rejected and one edit closed the gap, which is exactly the split the two
+modules are supposed to have.
+
+**Module (b) on its own, 21 declared cases** (`outputs/edit_bench3/report.json`,
+schema `edit_bench_v2`, every case staged from its own copy of the source):
+
+| Quantity | Value | Meaning |
+|---|---|---|
+| Cases / expected refusals | 21 / 8 | fixed battery over 8 operator families |
+| Instruction coverage | 0.615 (8 / 13) | applied / cases that should be applicable |
+| Refusal honesty | **1.00 (8 / 8)** | every rejection carries a named reason |
+| Instruction following (applied edits) | **1.00** | the named attribute moved in the named direction |
+| Silent no-ops | **0** | output identical to input |
+| No-effect edits | 5 | ran, but the named attribute did not move → rolled back |
+| Rollback rate (new physical damage) | 0.00 | no applied edit introduced a hard failure |
+| Target / rest motion ratio | 79.2 | localisation of the change |
+| Non-target MPJPE (height-normalised) | 0.0077 | collateral displacement |
+| Frame retention | 1.021 | truncating edits would show < 1 |
+| Mean seconds per case | 10.4 | one backend call + measurement |
+
+Per family: `arm_raise` 4 / 4 applied (ratio 111.8), `sit_deeper` 1 / 1 (25.9),
+`sit_remove_preamble` 1 / 1 (1.9), `speed` 2 / 2, and the eight `refuse` cases
+0 / 8 applied with 8 named refusals. The five `no_effect` rows are the honest
+middle: `stand_up` on a clip that is already standing, `turn` on a seated clip,
+`walk faster` on a still clip, `trim_trailing` on a clip with no tail, and one
+`sit` depth that the leg reach clamps to zero. Each is reported with the
+attribute it expected and the previous clip is restored, so a zero here is
+visible in the table rather than scored as a success.
+
+**The contract behind both review points** is executable:
+`python scripts/tests/test_agentic_contract.py` runs 58 checks against the code,
+`report.json` and one finished UI episode, and reads **58 / 58 passed**
+(`contract_checks.json`). It fails the build if the battery drops below 15
+cases, if a refusal is unnamed, if a finish lands on a clip worse than one the
+episode already measured, or if the UI episode never calls the editor.
+
 ## 5. What the trace looks like
 
 `outputs/agent_bench/<run>/epNN_*/agent_run.md` is the human-readable version of
@@ -743,11 +830,29 @@ itself.
 ## 6. Reproduction
 
 ```powershell
-# Battery A: MLD generator, 20 goals, <=2 edits, module (c) on 20 clips
+# Battery A: MLD generator, 20 goals, <=2 edits, module (c) on 20 clips.
+# --goal-timeout puts every episode in its own process with a watchdog, so a
+# hung backend is reported as an episode error instead of freezing the suite.
 conda run -n motionfix python scripts/agent/benchmark.py ^
   --goals-file test-samples/agent/goals_20.json ^
-  --generator mld --max-edits 2 --caption-n 20 ^
-  --out outputs/agent_bench/_v3_final7
+  --generator mld --max-edits 2 --caption-n 20 --goal-timeout 600 ^
+  --out outputs/agent_bench/_v3_final10
+
+# module (b) alone: 21 declared must-edit cases over 8 families
+conda run -n motionfix python scripts/agent/edit_benchmark.py ^
+  --out outputs/edit_bench3
+
+# the same benchmark, with that battery folded into report.json / report.md
+conda run -n motionfix python scripts/agent/benchmark.py ^
+  --goals-file test-samples/agent/goals_20.json --generator mld ^
+  --edit-bench outputs/edit_bench3/report.json ^
+  --out outputs/agent_bench/_v3_final10
+
+# one acceptance page from a finished run (self-contained HTML)
+python scripts/agent/build_acceptance.py ^
+  --report outputs/agent_bench/_v3_final10/report.json ^
+  --episode outputs/session/ui_runs/<episode> ^
+  --out outputs/agent_bench/_v3_final10/acceptance.html
 
 # Battery B: fixed dataset draft (controller is the only variable)
 conda run -n motionfix python scripts/agent/benchmark.py ^
@@ -796,7 +901,13 @@ Artifacts per run:
 - `<out>/epNN_*/agent_run.json` — full controller trace (thought, action, args,
   observation, assessment, token usage);
 - `<out>/epNN_*/agent_run.md` — same trace as a table;
-- `<out>/epNN_*/stepNN_*/03_edited_preview.gif` — per-step clips.
+- `<out>/epNN_*/stepNN_*/03_edited_preview.gif` — per-step clips;
+- `<out>/contract_checks.json` — the 58 contract checks, one line of evidence
+  each, written by `scripts/tests/test_agentic_contract.py`;
+- `outputs/session/prompt_logs/<date>-<topic>/log.json` + `*.png` — the manual
+  web replay, one message per step, with the run dir, trace, score, previews and
+  screenshots of the page at that point (v1.6: four messages, two of which the
+  controller finished without an edit because the measurement already passed).
 
 ## 7. Limitations and next steps
 
@@ -878,8 +989,48 @@ Fixed in v1.5:
   the benchmark's contract is the closed set, and a half-installed backend must
   not turn honest rejections into `simmotion_infer_failed` noise.
 
-Still open, in order of expected value:
+Fixed in v1.6 (all four items from the review, each with a re-runnable check):
 
+- **The editing claim now has a sample.** `scripts/agent/edit_benchmark.py` was
+  rebuilt: 21 declared cases over 8 operator families, every case starting from
+  its own copy of the source clip (the old battery edited a clip a previous case
+  had already changed), and every case declaring what a correct outcome is —
+  `apply` (the registry accepts it and the attribute must move) or `refuse` (the
+  editor cannot do it and must say why). The report separates
+  `instruction_coverage` (applied / applicable), `refusal_honesty` (named
+  refusals / cases that should be refused), `instruction_following_rate`,
+  `no_change_rate`, `n_no_effect`, `mean_target_vs_rest`,
+  `mean_non_target_mpjpe_norm`, `mean_frame_retention`, `rollback_rate` and
+  per-family aggregates. The three `refuse` cases added for *preconditions*
+  ("stop turning" on a clip that does not turn, "walk faster" on a still clip,
+  "stand up" on a walk) are the ones the old battery scored as silent successes.
+- **The caption is no longer either/or.** `describe_motion` returns a learned
+  M2T sentence *and* a caption written from the same joints the checker reads
+  (`metrics.structured_caption`, e.g. "a person right arm raised, right hand
+  above the head"), then compares both with the goal on GloVe cosine, content
+  recall and action-family overlap. The tri-state `caption_verdict` fuses them:
+  `match` (both agree), `uncertain` (the learned caption reads coarse while the
+  measured one agrees — verify, do not edit) and `mismatch` (both disagree —
+  edit). On the run's own first episode the learned caption says "a person wave
+  with their right hand" for a clip whose measured arm is overhead; the old
+  bag-of-words score reads that as a match (GloVe 0.87), content recall reads it
+  as 0.17, and the verdict is `uncertain`, which is correct.
+- **Signed turns, and an archive that cannot end worse than its best clip.**
+  `yaw_net_deg` (signed, unwrapped shoulder-vector rotation) is measured next to
+  `yaw_span_deg`, `verify_goal` checks the direction of a "turns left/right N
+  degrees" request and accepts 88.1° for 90° while rejecting 71.9°, and every
+  candidate clip is archived with its metrics. `restore_motion` is a tool, and
+  the controller's `finish` is redirected to it when an earlier clip has a
+  smaller requirement gap, so no episode ends on a clip worse than the best one
+  it measured.
+- **No silent no-ops, and both arms are checked.** An operator that would no-op
+  now refuses with a named precondition, and an edit that returns a *different*
+  clip without moving the attribute the instruction names is rolled back
+  (`edit_did_not_follow_instruction`), as is one that returns the input
+  byte-for-byte (`edit_had_no_effect`). `raise both arms` is measured on both
+  arms instead of defaulting to one side.
+
+Still open, in order of expected value:
 - **Success is still one draw per run in Battery A.** Rejection sampling cuts
   the variance of a single draft, but the headline rate is still measured on 20
   goals × 1 run. A battery with k draws per goal (k · 20 episodes) is what would
@@ -910,10 +1061,12 @@ Still open, in order of expected value:
   references per clip: the references exist, but the model paraphrases and its
   sentences are longer, so few 3-gram matches survive and the brevity penalty
   compounds it. ROUGE-L, CIDEr-D and GloVe cosine are the metrics to quote at
-  this size; a caption–kinematics consistency check ("does the caption's verb
-  match the measured attribute?") is the metric that would actually validate
-  the loop's use of the caption — and `agreement` only measures the controller,
-  not the captioner.
+  this size. The caption–kinematics consistency check the earlier draft of this
+  list asked for is what v1.6 adds (`structured_caption` +
+  `caption_verdict`), but it is a *decision* signal for the controller, not yet
+  a reported accuracy number: pairing it with the held-out references is the
+  next measurement.
 - **Battery B is not a generation result.** Its success rate must not be
   compared with Battery A's as if the controller improved; the draft is fixed
   and easier. The comparable quantity is the trace, not the headline rate.
+

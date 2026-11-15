@@ -158,9 +158,27 @@ def wrist_above_head(j: np.ndarray, up: int, side: str = "right") -> float:
 
 
 def yaw_span(j: np.ndarray) -> float:
+    """Total rotation about the vertical axis, in degrees (unsigned)."""
+    up = up_axis(j)
+    hz = horiz(up)
     v = j[:, J_R_SHOULDER] - j[:, J_L_SHOULDER]
-    yaw = np.unwrap(np.arctan2(v[:, 1], v[:, 0]))
+    yaw = np.unwrap(np.arctan2(v[:, hz[1]], v[:, hz[0]]))
     return float(np.degrees(yaw.max() - yaw.min()))
+
+
+def yaw_net(j: np.ndarray) -> float:
+    """Signed net rotation: final shoulder axis minus the first, in degrees.
+
+    Positive is a left turn (counter-clockwise seen from above), which was
+    checked against HumanML3D clips whose captions say "turns left" (+87°) and
+    "turns right" (-28°). Span alone cannot tell a left turn from a right one.
+    """
+    up = up_axis(j)
+    hz = horiz(up)
+    v = j[:, J_R_SHOULDER] - j[:, J_L_SHOULDER]
+    yaw = np.unwrap(np.arctan2(v[:, hz[1]], v[:, hz[0]]))
+    return float(np.degrees(yaw[-1] - yaw[0]))
+
 
 
 def ankle_lift(j: np.ndarray, up: int, side: str = "right") -> float:
@@ -203,6 +221,7 @@ def kinematic_summary(j: np.ndarray) -> Dict[str, float]:
         "root_travel": round(travel, 4),
         "pelvis_drop": round(float(root[0, up] - root[:, up].min()), 4),
         "yaw_span_deg": round(yaw_span(j), 2),
+        "yaw_net_deg": round(yaw_net(j), 2),
         "foot_slide": round(foot_slide(j, up), 5),
         "ground_penetration": round(ground_penetration(j, up), 5),
         "bone_cv": round(bone_cv(j), 5),
@@ -326,13 +345,28 @@ def instruction_following(
     def add(name: str, ok: bool, delta: float, need: str) -> None:
         checks.append({"attribute": name, "ok": bool(ok), "delta": round(float(delta), 4), "expected": need})
 
-    if word("arm", "wave", "hand"):
-        side = "left" if word("left") else "right"
-        key = f"arm_raise_{side}"
-        d = float(after.get(key, 0)) - float(before.get(key, 0))
-        higher = word("higher", "raise", "up", "overhead")
-        add(key, d > 0.05 if higher else abs(d) > 0.03, d, "> +0.05" if higher else "|Δ| > 0.03")
-    if word("walk", "forward", "further", "step"):
+    if word("arm", "arms", "wave", "hand", "hands", "wrist", "wrists"):
+        # "both arms" is two target attributes, not a localisation ratio: the
+        # edit passes only if each named arm moves the requested way.
+        both = word("both", "arms", "hands", "wrists")
+        sides = ["left", "right"] if both else [("left" if word("left") else "right")]
+        higher = word("higher", "raise", "up", "overhead", "above")
+        for side in sides:
+            key = f"arm_raise_{side}"
+            d = float(after.get(key, 0)) - float(before.get(key, 0))
+            add(key, d > 0.05 if higher else abs(d) > 0.03,
+                d, "> +0.05" if higher else "|Δ| > 0.03")
+    # "turn further" used to fall into the walk rule, because "further" was in
+    # its word list, and was then judged on root travel. Decide the verb first.
+    turns = word("turn", "turning", "spin", "rotate", "rotation")
+    walks = word("walk", "walking", "step", "steps", "forward", "march")
+    if turns and not walks:
+        d = float(after.get("yaw_span_deg", 0)) - float(before.get("yaw_span_deg", 0))
+        if word("stop", "straight", "no", "without", "keep"):
+            add("yaw_span_deg", d < -3.0, d, "< -3 deg (stop turning)")
+        else:
+            add("yaw_span_deg", d > 5.0, d, "> +5 deg (turn further)")
+    if walks and (not turns or word("walk", "walking", "step", "steps")):
         tb = max(1.0, float(before.get("T") or 1))
         ta = max(1.0, float(after.get("T") or 1))
         sb = float(before.get("root_travel", 0)) / tb
@@ -347,12 +381,18 @@ def instruction_following(
         else:
             d = float(after.get("root_travel", 0)) - float(before.get("root_travel", 0))
             add("root_travel", d > 0.04, d, "> +0.04 m")
-    if any(w in t for w in ("stop", "straight", "no spin", "do not spin")):
+    if any(w in t for w in ("stop", "straight", "no spin", "do not spin")) and not turns:
         d = float(after.get("yaw_span_deg", 0)) - float(before.get("yaw_span_deg", 0))
         add("yaw_span_deg", d < -3.0, d, "< -3 deg")
-    if word("sit") and word("down", "lower", "deeper", "seat") or word("crouch", "squat", "lower"):
+    if (word("sit") and word("down", "lower", "deeper", "seat")) or \
+            (word("crouch", "squat") or
+             (word("lower") and word("hip", "hips", "seat", "body", "butt"))):
         d = float(after.get("pelvis_drop", 0)) - float(before.get("pelvis_drop", 0))
         add("pelvis_drop", d > 0.02, d, "> +0.02 m")
+    if (word("stand", "rise", "upright") or (word("up") and not word("arm", "hand", "raise"))) \
+            and not word("arm", "hand", "wave"):
+        d = float(after.get("pelvis_drop", 0)) - float(before.get("pelvis_drop", 0))
+        add("pelvis_drop", d < -0.02, d, "< -0.02 m (the hips rise)")
     if word("faster", "slower", "speed"):
         d = float(after.get("T", 0)) - float(before.get("T", 0))
         add("duration_frames", abs(d) > 1.0, d, "changed duration")
@@ -427,14 +467,154 @@ def cosine(a: np.ndarray, b: np.ndarray) -> float:
 
 
 def text_similarity(a: str, b: str) -> Dict[str, float]:
+    """Goal↔caption similarity.
+
+    ``glove_cosine`` is the classic embedding measure, but a mean bag of word
+    vectors is dominated by the words every motion caption shares ("a person
+    ... with"), so it reads 0.90 for a caption that describes the wrong action.
+    ``content_recall`` drops those function words and asks how much of the
+    goal's *content* the caption mentions; ``action_jaccard`` compares the
+    action verbs, which is the part a fix decision actually turns on.
+    """
     ta, tb = set(tokenize(a)), set(tokenize(b))
     inter = len(ta & tb)
     union = len(ta | tb) or 1
+    ca = content_words(a)
+    cb = content_words(b)
+    fa = action_families(a)
+    fb = action_families(b)
     return {
         "glove_cosine": round(cosine(embed(a), embed(b)), 4),
         "token_jaccard": round(inter / union, 4),
         "token_recall": round(inter / max(1, len(tb)), 4),
+        "content_recall": round(len(ca & cb) / max(1, len(ca)), 4),
+        "action_jaccard": round(len(fa & fb) / max(1, len(fa | fb)), 4) if (fa or fb) else 0.0,
     }
+
+
+# Words every motion caption shares; they make a bag-of-words similarity look
+# high even when the action is wrong.
+STOPWORDS = {
+    "a", "an", "the", "is", "are", "was", "were", "be", "been", "being",
+    "with", "their", "his", "her", "its", "and", "then", "of", "to", "that",
+    "this", "does", "do", "some", "very", "while", "as", "he", "she", "they",
+    "it", "person", "people", "man", "woman", "body", "motion",
+}
+
+ACTION_FAMILIES: Dict[str, Tuple[str, ...]] = {
+    "walk": ("walk", "walks", "walking", "step", "steps", "stepping", "stride",
+             "strides", "march", "marches", "marching", "stroll", "strolls"),
+    "turn": ("turn", "turns", "turning", "spin", "spins", "spinning", "rotate",
+             "rotates", "rotating", "pivot", "pivots"),
+    "sit": ("sit", "sits", "sitting", "seated", "seat", "squat", "squats",
+            "squatting", "crouch", "crouches", "crouching"),
+    "stand": ("stand", "stands", "standing", "rise", "rises", "rising", "upright"),
+    "wave": ("wave", "waves", "waving", "swing", "swings", "swinging"),
+    "raise": ("raise", "raises", "raising", "raised", "lift", "lifts", "lifting",
+              "lifted", "overhead"),
+    "jump": ("jump", "jumps", "jumping", "leap", "leaps", "leaping", "hop",
+             "hops", "hopping"),
+    "kick": ("kick", "kicks", "kicking"),
+}
+
+
+def content_words(text: str) -> set:
+    return {w for w in tokenize(text) if w not in STOPWORDS}
+
+
+def action_families(text: str) -> set:
+    t = (text or "").lower()
+    words = set(tokenize(t))
+    return {fam for fam, forms in ACTION_FAMILIES.items() if words & set(forms)}
+
+
+def structured_caption(m: Dict[str, float]) -> str:
+    """A caption written from the same joint measurements the checker uses.
+
+    The learned caption is coarse ("a person waves with their right hand" for a
+    clip whose hand is nowhere near the head); this one names what was actually
+    measured, so comparing the two tells a narrow instruction apart from a clip
+    that is merely not described well enough.
+    """
+    bits: List[str] = []
+    if float(m.get("pelvis_drop", 0) or 0) >= 0.15:
+        bits.append("sitting down")
+    elif float(m.get("pelvis_drop", 0) or 0) >= 0.05:
+        bits.append("lowering the hips")
+    if float(m.get("jump_rise", 0) or 0) >= 0.15:
+        bits.append("jumping")
+    yaw = abs(float(m.get("yaw_span_deg", 0) or 0))
+    net = float(m.get("yaw_net_deg", 0) or 0)
+    if yaw >= 60:
+        side = "left" if net > 15 else "right" if net < -15 else "either way"
+        bits.append(f"turning {side} ({yaw:.0f} deg)")
+    if _v(m, "arm_raise_right") >= 1.0:
+        bits.append("right arm raised")
+    elif _v(m, "arm_raise_left") >= 1.0:
+        bits.append("left arm raised")
+    if _v(m, "wrist_above_head_right") >= 0.05 or _v(m, "wrist_above_head_left") >= 0.05:
+        who = "right" if _v(m, "wrist_above_head_right") >= _v(m, "wrist_above_head_left") else "left"
+        bits.append(f"{who} hand above the head")
+    if _v(m, "ankle_lift_right") >= 0.25:
+        bits.append("right foot off the ground")
+    elif _v(m, "ankle_lift_left") >= 0.25:
+        bits.append("left foot off the ground")
+    # Travel is the weakest signal, so it is only named when nothing more
+    # specific was measured; otherwise "standing in place" would dilute the
+    # action word that the goal is compared against.
+    travel = float(m.get("root_travel", 0) or 0)
+    if travel >= 0.5:
+        bits.append("walking forward")
+    elif not bits:
+        bits.append("standing in place")
+    if not bits:
+        bits.append("moving with no large joint displacement")
+    return "a person " + ", ".join(bits)
+
+
+def _v(m: Dict[str, float], k: str) -> float:
+    try:
+        return float(m.get(k, -9) or -9)
+    except (TypeError, ValueError):
+        return -9.0
+
+
+def caption_signals(goal: str, caption: str) -> Dict[str, Any]:
+    """Does the caption, compared with the goal, say a fix is needed?
+
+    This is the (c)-driven half of the loop's judgment: the caption is the only
+    view of the clip that is *about the action* rather than about numbers. It is
+    deliberately a signal, not a verdict — the learned M2T model is coarse
+    ("a person squat down and stand back up" for a clip that sits and raises an
+    arm), so ``check_requirement`` remains ground truth. ``because`` says which
+    comparison fired so the controller can quote it.
+    """
+    sim = text_similarity(goal, caption)
+    fam_goal = action_families(goal)
+    fam_cap = action_families(caption)
+    because: List[str] = []
+    if fam_goal and fam_cap and not (fam_goal & fam_cap):
+        because.append(
+            "caption names a different action ("
+            + ", ".join(sorted(fam_cap)) + " vs " + ", ".join(sorted(fam_goal)) + ")"
+        )
+    if sim["content_recall"] < 0.25:
+        because.append(
+            f"caption mentions little of the goal's content "
+            f"(content_recall {sim['content_recall']:.2f})"
+        )
+    return {
+        "needs_fix": bool(because),
+        "because": because,
+        "signal": {
+            "goal_actions": sorted(fam_goal),
+            "caption_actions": sorted(fam_cap),
+            "content_recall": sim["content_recall"],
+            "action_jaccard": sim["action_jaccard"],
+            "glove_cosine": sim["glove_cosine"],
+        },
+    }
+
 
 
 def _ngrams(tokens: Sequence[str], n: int) -> Counter:

@@ -29,6 +29,7 @@ HumanML3D/
 
 # Optional heavy third-party checkouts (clone locally; see backends/README_*.md)
 third_party/SimMotionEdit/
+third_party/TM2T/
 third_party/TM2T/checkpoints/
 third_party/TM2T/*.zip
 third_party/TM2T/*.part
