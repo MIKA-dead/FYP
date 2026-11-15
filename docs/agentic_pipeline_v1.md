@@ -371,7 +371,7 @@ sampling on: 19 of 20 goals drew 3 drafts, 16 drafts rejected in total).
 | Non-target MPJPE (height-normalised) | 0.0023 | 0.0099 |
 | Mean controller steps per goal | 4.40 | 5.35 |
 | Checker consulted / agent↔checker agreement | 1.00 / 1.00 | 1.00 / 1.00 |
-| Drafts drawn / rejected / episodes resampled | 60 / 16 / 2 | — |
+| Drafts drawn at generation / rejected / episodes that resampled | 57 / 16 / 2 | — |
 | Mean seconds and tokens per goal | 31.8 s / 19 236 | 38.8 s / 21 190 |
 | Wall time (20 goals, incl. module (c) bench) | 635 s | 776 s |
 
