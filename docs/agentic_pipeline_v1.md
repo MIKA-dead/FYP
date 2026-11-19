@@ -295,7 +295,7 @@ version's claim against its own artifacts.
 | v1.5 | One draw cannot separate "the model cannot" from "this draw missed" (1.35 / 0.12 / 0.02 m on the same prompt) | Rejection sampling inside (a) (`sampling.py`), 3 drafts for a measurable prompt | 17 drafts rejected in `_v3_final10` (§5.1) |
 | v1.5 | The loop existed only in scripts; the UI demo was a different path | `agent` mode in the UI → `POST /api/agent`, the same tools | §6 replay |
 | v1.6 | The editing claim rested on n = 2 in-loop edits; the old battery edited a clip a previous case had already changed, and scored refusals as successes | 21 declared cases over 8 families, one source copy per case, `expect=apply` or `refuse`; three outcomes (`applied`, `no_effect`, `refused`) | §5.9 battery table; `edit_battery_*` checks |
-| v1.6 | The learned caption said "wave" for a clip whose wrist was 0.22 m above the head, and a bag-of-words score read that as a match (GloVe 0.87) | Dual caption plus a tri-state `caption_verdict`; content recall and action families alongside GloVe | §6 step 2; `content_recall_beats_bag_of_words` |
+| v1.6 | The learned caption said "wave" for a clip whose wrist was 0.22 m above the head, and a bag-of-words score read that as a match (GloVe 0.90, content recall 0.25) | Dual caption plus a tri-state `caption_verdict`; content recall and action families alongside GloVe | §6 step 2; `content_recall_beats_bag_of_words` |
 | v1.6 | An edit that returned a different clip without moving the named attribute was counted as applied | `edit_did_not_follow_instruction` and `edit_had_no_effect` roll the clip back; the 5 such cases stay visible in the battery | §5.9; `no_effect_is_reported` |
 | v1.6 | A hung backend froze the whole 20-goal suite mid-run | Per-episode subprocess with a watchdog (`--goal-timeout`) | `_v3_final10` finished with 0 episode errors |
 | v1.6 | `resample_motion` capped *replacements* rather than attempts, so a resample that kept the current clip was free and the budget could never be reached | The budget counts attempts; `resamples` still counts adopted clips | `test_resample.py` 15/16 → 16/16 |
@@ -321,14 +321,14 @@ preserve the skeleton they correct, and the regression suite reports 33/33.
 The lesson kept in the code: a post-process that "only fixes jitter" still has
 to be measured against bone lengths.
 
-**The caption that was not evidence (v1.6).** On a clip with the wrist 0.22 m
+**The caption that was not evidence (v1.6).** On a clip with the wrist 0.216 m
 above the head, the learned caption read "a person wave with their right hand",
-and the previous bag-of-words comparison scored that 0.87 — a match, so no edit.
-Content recall on the same pair is 0.17, and the action-family overlap is 0. The
-caption is now only one of two signals: the measurement-grounded caption and the
-checker decide, and the three-way verdict says which of the two disagreed. This
-is also why `caption_verdict` has a `needs_fix` boolean rather than only a
-label: a decision that the controller must act on has to be a field, not prose.
+and a bag-of-words comparison scored that 0.90 — a match, so no edit. Content
+recall on the same pair is 0.25 and the action-family overlap is 0. The caption
+is now only one of two signals: the measurement-grounded caption and the checker
+decide, and the three-way verdict says which of the two disagreed. This is also
+why `caption_verdict` has a `needs_fix` boolean rather than only a label: a
+decision that the controller must act on has to be a field, not prose.
 
 **The budget that never ran out (v1.6, found while re-checking this report).**
 `resample_motion` returned `kept_current` when every fresh draft was worse, and
