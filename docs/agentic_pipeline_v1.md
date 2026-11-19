@@ -1,100 +1,39 @@
-﻿# Agentic pipeline v1.6 — the LLM calls (a), (b), (c) by itself
+# Agentic pipeline v1.6 — free-form text in, one LLM calls (a), (b), (c)
 
-This note answers the two review comments on the previous experiment.
+A user writes an ordinary sentence. An LLM controller decides which backend to
+call next, reads what that backend measured, writes the next edit instruction
+itself, and stops only when the measurement it was shown agrees with the
+request. The three modules are tools, not stages: `generate_motion` (a),
+`describe_motion` (c) and `edit_motion` (b) are chosen one call at a time, and
+each choice and its reason are in `agent_run.json`.
 
-> *"The experiment seems to be separately done on each module (a) MLD,
-> (b) MotionFix, (c) M2TCaption. We want the pipeline to be agentic, so that the
-> LLM will call (a)(b)(c) by itself automatically."*
+This version also replaces the old `SCORE` — 100 whenever the hard validity
+checks passed — with measurements per module and for the loop.
 
-The previous experiment measured each backend in isolation and reported a
-`SCORE` that is 100 whenever the hard validity checks pass. That score says
-nothing about whether the motion matches the request. This version changes two
-things:
+## 0. Requirement map: every line of the review → implementation → evidence
 
-1. **One agent, three tools.** The user writes a free-form sentence. An LLM
-   controller chooses `generate_motion` (a), then `describe_motion` (c), reads
-   the caption and the joint measurements, writes the remaining gap in text,
-   calls `edit_motion` (b), and repeats until it judges the clip satisfies the
-   request (or the budget ends). The loop is not hard-coded: the controller
-   decides every next call and writes every edit instruction.
-2. **Quantitative metrics per module and for the loop**, computed from the
-   artifacts (joints, captions, tool trace). The saturated `SCORE` is replaced
-   by retrieval / alignment / preservation / captioning metrics and by
-   loop-level success and convergence numbers.
+| Review line | Where it lives | Re-runnable check | Evidence in this report |
+|---|---|---|---|
+| **i)** quantitative metrics per module, instead of a `SCORE` that is 100 most of the time | `scripts/agent/metrics.py`; `report.json` has four blocks (`module_a_generation`, `module_b_editing`, `module_c_caption`, `loop`) and no field named `score` | `no_saturating_score_field`, `metrics_are_kinematic`, `gen_metric_*`, `edit_metric_*`, `caption_metric_glove`, `loop_metric_*` | Definitions §2, values §5.1–§5.3 and §5.9. 19 measured attributes per clip (`root_travel`, `pelvis_drop`, `yaw_net_deg`, `arm_raise_right`, …), plus R@1/R@3, BLEU/ROUGE/CIDEr/GloVe, instruction following, non-target MPJPE, success and agreement |
+| **ii)** the user input is free-form text | UI input → `POST /api/agent` (`prompt`) → `agent.py --goal`; no template, no slot filling | `free_text_goal` | The replay's goal is verbatim "a person sits down and raises the right arm", and the controller chose all six tool calls (§6) |
+| **1)** the agent first reasons about the requirement, then uses (a) to generate | `SYSTEM` in `agent.py` (a `thought` plus one JSON action) and the rail "with no clip: `generate_motion`"; generation-side rejection sampling runs inside (a) | `mandatory_order_in_prompt`, `episode_follows_the_mandatory_order`, `every_step_gives_a_reason` | Step 1 thought: "No clip yet; generate the requested motion." MLD drew 3 drafts, rejected 3, kept the closest (§5.9, §6) |
+| **2)** it checks the result with (c), compares the caption with the user input, and decides whether a fix is needed | `describe_motion` returns the learned M2T caption **and** a caption written from the same joints the checker reads, their GloVe / content-recall / action-family similarity to the goal, and `caption_verdict {level, needs_fix}`; `check_requirement` adds the measured verdict | `caption_compared_with_goal`, `two_captions_and_a_verdict`, `content_recall_beats_bag_of_words`, `verdict_is_a_decision` | Step 2: learned caption "a person stand with their arm out…" for a seated clip with a low arm → GloVe 0.898 but content recall 0.40 and action overlap 0.0 → verdict `mismatch`, `needs_fix = true` (§6) |
+| **3)** it writes in text what must be fixed, then applies (b) | the controller's `assessment.next_edit` and the `instruction` argument of `edit_motion`; the registry refuses impossible wording, and `_assess_after` rolls back an edit that did not move the named attribute | `edit_text_written_by_controller`, `edit_followed_the_instruction`, `preconditions_are_named`, `no_effect_is_reported` | Step 3: instruction "raise the right arm higher", `arm_raise_right` Δ 2.044, gap 0.848 → 0.0, no new hard failure (§6) |
+| **\*)** loop steps 2–3 until the agent judges that the clip fits | rails only for ordering (describe after an edit, check before finish, a worse clip cannot be final, budgets); everything else is the controller's call; `restore_motion` plus the clip archive mean an episode cannot end on a clip worse than the best it measured | `loop_capped`, `check_before_finish_enforced`, `worse_clip_cannot_be_final`, `loop_stopped_when_measured`, `loop_repeats_check_and_edit`, `final_clip_is_never_worse_than_best_seen` | 20/20 episodes ended on `finish` after `check_requirement`; ep16 looped describe → edit → describe → check → finish; 0 episodes ended worse than their best clip (§5.1, §5.9) |
+| restructure the report: how the work was done, then current problems and next goals | §3, §7 and §8 of this file | `report_has_a_process_section`, `report_states_open_problems`, `report_has_next_steps_with_dod` | §3 defect → change → proof table; §7 severity-ranked defects with evidence; §8 ordered goals, each with a definition of done |
 
-**v1.2 changes the four things v1.1 listed as known gaps** (details in §7):
+How the rest of this note is organised:
 
-- the geometric sit operator now has a real *depth* edit (2-bone leg IK with
-  planted feet), so `sit lower` no longer sinks the body through the floor;
-- the editor's ability is an executable registry (`scripts/agent/edits.py`),
-  so an impossible instruction is rejected in milliseconds instead of after a
-  wasted backend pass, and `instruction_coverage` is measured;
-- the acceptance check is a **tool** (`check_requirement`), not a hidden veto:
-  the controller must consult it, sees the measurements, and its own claim is
-  recorded next to the verdict (`agreement`);
-- `quality_gate` now checks the floor, and both it and the agent share one
-  definition of physical validity (`scripts/backends/motion_validity.py`).
-
-**v1.3 closes the rollbacks and the blind checks that the 20-goal run exposed**
-(details in §4.6, §4.7 and §7):
-
-- a restored MotionsFix-native source keeps its root at the origin, so SMPL FK
-  returned a body 0.8 m below the floor and the agent rolled back a *correct*
-  edit. Sources are now rigidly regrounded once (`offset_to_ground`), and an
-  edit is only blamed for gate failures it introduced (`new_hard_failures` vs
-  `pre_existing_hard_failures`);
-- the post-contact sit hold was moving the pelvis joint alone (stretching its
-  child bones) and blending arms linearly (up to +30 % bone length), so the
-  arm-raise edit on a sit clip failed `bone_rigid`. Both stages now preserve the
-  skeleton, and the 20-goal run applies that edit cleanly;
-- "kicks" and "jumps" used to pass because **nothing measured them**. They are
-  now checked (`ankle_lift`, `jump_rise` / `jump_clearance`), so a goal the
-  checker cannot see is no longer a default success;
-- a relative operator cannot undo what the clip already does, so contradictions
-  ("walk in place") and edits with no material to work on (`walk` on a clip with
-  0.0 m travel) are refused before the backend runs, instead of damaging the
-  clip.
-
-**v1.4 gives the controller a way to act on a generation-side gap** (details in
-§1 and §7):
-
-- the editor is *relative*, so no edit can create travel or rotation that the
-  draft does not contain. `resample_motion(prompt, n)` draws `n` drafts of one
-  prompt in a single MLD process (one model load), measures each with the same
-  requirement the checker uses plus a relative `requirement_gap`, adopts the
-  closest valid one, and reports every candidate it rejected. Two per episode;
-- if no draft came from a fresh draw — the generator is down and everything fell
-  back to the retrieved clip — the tool returns `resample_unavailable` and does
-  not charge the budget, so a deterministic repeat can never masquerade as a
-  successful resample.
-
-**v1.5 moves the filtering to the generator itself, and opens the editor beyond
-the closed set** (details in §1 and §7):
-
-- the `mld` environment works again. The blocker was Windows Application Control
-  refusing to load three compiled extensions (`thinc/backends/linalg`,
-  `blis/py`, `spacy/…/span_group`) — reinstalling the same wheels reproduces the
-  same block, because the policy decision follows the file. Nothing on the
-  text→motion path needs spaCy, so the vendored MLD keeps its only `spacy` import
-  lazy (inside `RawTextDataset`), and `thinc 8.3.14` + `blis 1.2.0` were the pair
-  whose binaries the policy accepts. `demo.py` now runs end to end again, which
-  is what makes the numbers below real MLD numbers rather than `dataset_fallback`;
-- **generation-side rejection sampling**: when the prompt names a measurable
-  attribute, one MLD process draws a batch of drafts and `scripts/agent/sampling.py`
-  keeps the closest one *before the clip enters the loop*. This is the same
-  "walks in place" prompt that produced 1.35 m, 0.12 m and 0.02 m of travel on
-  three consecutive draws — a single draw cannot tell "the model cannot do it"
-  from "this draw missed";
-- `resample_motion` now uses that same policy (shared `sampling.rank` /
-  `select`), draws a second batch when the first contains nothing acceptable, and
-  reports `accepted` / `batches` alongside the candidates it rejected;
-- the Web UI can drive the loop (`agent` in the mode picker → `POST /api/agent`):
-  the trace, the final caption and the preview come back in one response, so the
-  demo is the benchmark's loop, not a separate script;
-- `edit_motion` can route instructions *outside* the closed registry to the
-  open-vocabulary editor (SimMotionEdit) when `AGENT_OPEN_VOCAB_EDIT=1` and the
-  backend reports itself ready. The result is judged by the same measurement and
-  rollback rule as a closed-set edit; props/camera/appearance stay impossible.
+- **§1** the tool contract — what the controller can call, and the four rails
+  that are the only fixed rules;
+- **§2** the metrics — why the old score could not compare methods, and the
+  definition of every number reported later;
+- **§3** how the work was completed — each observed defect, what was changed,
+  and the check that proves the change, including judgement calls that turned
+  out wrong;
+- **§4–§6** setup, results, and one verbatim loop trace from the UI;
+- **§7** what is still wrong, by severity; **§8** what comes next, each item
+  with a definition of done; **§9** reproduction commands and artifacts.
 
 ```
 free-form goal
@@ -110,7 +49,7 @@ free-form goal
 │  ④ judge: caption + metrics vs. goal ────────────► alignment, gap        │
 │  ⑤ edit_motion(instruction)   ── session revise ──► new 03_edited.npy    │
 │  ⑥ restore_motion()           ── archive ─────────► closest clip so far  │
-│  ↺ ②–⑥ until `finish` or budget                                          │
+│  ↺ ②–⑥ until finish or budget                                            │
 └──────────────────────────────────────────────────────────────────────────┘
      │
      ▼
@@ -145,7 +84,7 @@ on three consecutive draws, so a single draw cannot separate "the model cannot"
 from "this draw missed". The observation carries `draft_rejection` with the
 number drawn, rejected and chosen; `AGENT_REJECTION=off` restores one draw and
 `AGENT_REJECTION_BATCH=N` changes the batch size, which is the ablation switch
-for §4.1.
+for §5.1.
 
 `resample_motion` exists because the editor is *relative*: it can scale or
 reshape motion that is already present, but it cannot add travel, add a turn, or
@@ -201,7 +140,7 @@ controller was right on its own.
 
 `quality_gate` answers "is this a valid clip?" (finite joints, minimum length,
 foot sliding, sit depth, turn anti-slide). It returns 100 as soon as no rule
-fires. Two measurements from the runs in §4 show why that number cannot be the
+fires. Two measurements from the runs in §5 show why that number cannot be the
 experiment:
 
 - Every generated clip scored **100** while the semantic alignment the
@@ -334,7 +273,90 @@ the report also lists the measured quantities it cites (arm ratio, travel, yaw,
 caption). The judge is constrained by a rubric and told that measurements win
 over the coarse caption.
 
-## 3. Experimental setup
+## 3. How the work was completed
+
+This section is the audit trail: what was observed, what was changed, and the
+check that makes the change re-verifiable. None of the numbers in §5 came from a
+first attempt; each one followed a defect found by running the previous
+version's claim against its own artifacts.
+
+### 3.1 Defect → change → proof
+
+| Version | Defect observed (evidence) | Change | Proof it is fixed |
+|---|---|---|---|
+| v1.1 | Each backend was measured alone; the loop's "satisfaction" was the controller's own claim, and `finish` was silently overruled by `verify_goal` | The three backends became tools; `check_requirement` became a tool the controller must call; claim and verdict are recorded separately (`agreement`) | §5.5 trace; `check_before_finish_enforced` |
+| v1.2 | `sit lower` put the body 2.47 body-heights underground while `quality_gate` still returned 100 | `sit.deepen` implemented as 2-bone leg IK; the gate shares `ground_clearance`; an executable capability registry rejects impossible wording before the backend runs | §5.4; `pelvis_drop 0.367 → 0.467 m` with penetration 0.000 |
+| v1.3 | A *correct* arm edit was rolled back twice (`ep16`, `ep17`) because the restored source sat 0.8 m below the floor | Sources are regrounded once (`offset_to_ground`); an edit is blamed only for failures it introduced (`new_hard_failures` vs `pre_existing_hard_failures`) | §5.6; the same edit now gives `pelvis_drop 0.0055 → 0.1055 m` |
+| v1.3 | The sit rebound stage moved the pelvis joint alone and blended arms linearly, stretching arm bones by up to 30 % (`bone_cv 0.0851`) | The clamp is a per-frame drop through the same leg IK; arm chains are re-lengthed to the contact frame | §5.7; `bone_cv 0.0197`, the edit applies, `arm_raise_right = 1.969` |
+| v1.3 | "kicks" and "jumps" passed because nothing measured them | `ankle_lift_{left,right}`, `jump_rise`, `jump_clearance` added to the checker | §5.1 per-goal column |
+| v1.3 | "walk in place" scored a success on a 1.97 m forward walk | Goal checks invert where the wording inverts (`root_travel ≤ 0.25 m`) | §5.1 goal 10 |
+| v1.4 | The editor is relative, so it cannot add travel or rotation the draft lacks, and the controller kept trying | `resample_motion` draws n drafts in one model load, measures each, keeps the closest, and reports the rejected ones | §5.1 goals 12–13 |
+| v1.5 | MLD could not run at all: Windows Application Control blocked three compiled extensions in the `mld` environment | Lazy `spacy` import inside the vendored MLD, plus the accepted `thinc` / `blis` pair | §5.1 is real MLD output, not `dataset_fallback` |
+| v1.5 | One draw cannot separate "the model cannot" from "this draw missed" (1.35 / 0.12 / 0.02 m on the same prompt) | Rejection sampling inside (a) (`sampling.py`), 3 drafts for a measurable prompt | 17 drafts rejected in `_v3_final10` (§5.1) |
+| v1.5 | The loop existed only in scripts; the UI demo was a different path | `agent` mode in the UI → `POST /api/agent`, the same tools | §6 replay |
+| v1.6 | The editing claim rested on n = 2 in-loop edits; the old battery edited a clip a previous case had already changed, and scored refusals as successes | 21 declared cases over 8 families, one source copy per case, `expect=apply` or `refuse`; three outcomes (`applied`, `no_effect`, `refused`) | §5.9 battery table; `edit_battery_*` checks |
+| v1.6 | The learned caption said "wave" for a clip whose wrist was 0.22 m above the head, and a bag-of-words score read that as a match (GloVe 0.87) | Dual caption plus a tri-state `caption_verdict`; content recall and action families alongside GloVe | §6 step 2; `content_recall_beats_bag_of_words` |
+| v1.6 | An edit that returned a different clip without moving the named attribute was counted as applied | `edit_did_not_follow_instruction` and `edit_had_no_effect` roll the clip back; the 5 such cases stay visible in the battery | §5.9; `no_effect_is_reported` |
+| v1.6 | A hung backend froze the whole 20-goal suite mid-run | Per-episode subprocess with a watchdog (`--goal-timeout`) | `_v3_final10` finished with 0 episode errors |
+| v1.6 | `resample_motion` capped *replacements* rather than attempts, so a resample that kept the current clip was free and the budget could never be reached | The budget counts attempts; `resamples` still counts adopted clips | `test_resample.py` 15/16 → 16/16 |
+
+### 3.2 Four diagnoses worth keeping
+
+**The rollback that blamed the wrong layer (v1.3).** Two sit edits were rolled
+back as "produced an invalid clip". The instruction was not the cause: the
+restored MotionsFix-native source kept its root at the origin, so SMPL FK put
+the feet 0.77 m below the floor before any edit ran, and the depth operator then
+had a floor 0.8 m too low to plant against. The fix was to ground the source
+once, at the door, and to compare the edit's physical report with the source's
+instead of with an absolute rule. The general lesson is in the metric design:
+`new_hard_failures` is a *delta*, and a delta is the only thing an edit can be
+blamed for.
+
+**The stage that changed the skeleton (v1.3).** The arm-raise edit produced the
+requested pose and was still rejected for `bone_rigid`. Applied alone to the
+same input, it changed `bone_cv` by 0.000; the damage came from the sit-hold
+stage that ran after it, which translated the pelvis joint (owner of three
+bones) and blended arms linearly instead of rotating them. Both stages now
+preserve the skeleton they correct, and the regression suite reports 33/33.
+The lesson kept in the code: a post-process that "only fixes jitter" still has
+to be measured against bone lengths.
+
+**The caption that was not evidence (v1.6).** On a clip with the wrist 0.22 m
+above the head, the learned caption read "a person wave with their right hand",
+and the previous bag-of-words comparison scored that 0.87 — a match, so no edit.
+Content recall on the same pair is 0.17, and the action-family overlap is 0. The
+caption is now only one of two signals: the measurement-grounded caption and the
+checker decide, and the three-way verdict says which of the two disagreed. This
+is also why `caption_verdict` has a `needs_fix` boolean rather than only a
+label: a decision that the controller must act on has to be a field, not prose.
+
+**The budget that never ran out (v1.6, found while re-checking this report).**
+`resample_motion` returned `kept_current` when every fresh draft was worse, and
+that path did not increment `resamples` — so the controller could draw batches
+forever while the counter stayed at 0. `test_resample.py` caught it as the one
+failing check of 16. The budget now counts attempts (the work) separately from
+adoptions (the effect), which is also the honest split for the report.
+
+### 3.3 Claims this work had to take back
+
+- **"The pipeline is agentic" (v1.1) was only half true.** The controller chose
+  the steps, but `finish` was overruled by a hidden `verify_goal` call, so the
+  loop could not tell "my judgement is wrong" from "the tool refused". v1.2
+  made the checker a tool, and `agreement` exists because the old claim hid the
+  disagreement.
+- **"0.90 success" was one draw.** The same suite has read 0.90, 0.90 and 1.00
+  (`_v3_final5/7/10`). The mechanism that moved it is rejection sampling at the
+  source plus the no-worse-than-best archive, not a better judge; §8.1 is how to
+  replace the single number with an interval.
+- **The old editing battery's "100 %" measured the wrong thing.** Cases edited a
+  clip an earlier case had already modified, and refusals counted as successes.
+  The current battery reports 0.615 coverage and 8/8 honest refusals instead.
+- **A metric can be numerically fine and still be the wrong metric.** `bone_cv`
+  is ≈0 for every valid clip, so it belongs in a validity guard, not in a
+  ranking; `glove_cos` is high for boilerplate, so content recall had to be
+  added next to it. Both are stated in §2 as such.
+
+## 4. Experimental setup
 
 Two batteries are reported. Neither one runs a module in isolation: in both,
 the same free-form sentence enters the same controller and every backend is
@@ -375,9 +397,9 @@ Common settings:
 - Budget: ≤ 8 controller steps, ≤ 2 edits and ≤ 2 resamples per goal.
 - Machine: one Windows workstation, RTX GPU for MLD / TM2T.
 
-## 4. Results
+## 5. Results
 
-### 4.1 Battery A — MLD generator (20 goals, LLM controller)
+### 5.1 Battery A — MLD generator (20 goals, LLM controller)
 
 Run: `outputs/agent_bench/_v3_final7` (MLD working, generation-side rejection
 sampling on: 19 of 20 goals drew 3 drafts, 16 drafts rejected in total).
@@ -437,7 +459,7 @@ slide rose from 0.0056 to 0.0093 because the selected drafts include more
 locomotion than before (mean travel 0.54 m); all 20 clips still pass the 0.03
 threshold.
 
-This run is also the first with a working `mld` environment (§7): every
+This run is also the first with a working `mld` environment (§3.1): every
 generation in the table is a real diffusion sample, not `dataset_fallback`.
 
 **Run-to-run spread.** Three runs of this suite now read 17, 18 and 18 of 20
@@ -493,7 +515,7 @@ limit rather than a bookkeeping artefact:
 denominator approaches zero, so the ratio is unstable by construction.
 `non_target_mpjpe_norm` is the preservation number to use.
 
-### 4.2 Battery B — fixed draft (4 goals, LLM controller)
+### 5.2 Battery B — fixed draft (4 goals, LLM controller)
 
 | Quantity | Value |
 |---|---|
@@ -514,9 +536,9 @@ right arm high" was captioned "raise their right hand up to their head" with
 `arm_raise_right = 1.37`; the controller judged alignment 70, wrote
 `raise the right arm higher`, the editor applied it, and the re-description
 raised alignment to 90 while the non-target joints moved only 0.5 % of body
-height. The trace is in §5.
+height. The trace is in §6.
 
-### 4.3 Module (c) — captioning against held-out references
+### 5.3 Module (c) — captioning against held-out references
 
 Module (c) is evaluated on 20 held-out HumanML3D test clips with their
 ground-truth sentences, so the number does not depend on the generator:
@@ -533,7 +555,7 @@ that the captioner is broken. ROUGE-L, CIDEr-D and GloVe cosine are the metrics
 to quote at this reference size; BLEU-4 becomes usable with the full
 ~30-clip HumanML3D test split.
 
-### 4.4 The failure case, and the fix it produced
+### 5.4 The failure case, and the fix it produced
 
 The most informative v1.1 episode was the sit edit (`ep03` in
 `outputs/agent_bench/final_llm_v2`). The trace, verbatim:
@@ -571,15 +593,15 @@ Following that episode produced four fixes, each verified separately:
    displaced 0.0 m and 54 frames in / 54 out (no spurious retime).
 4. **The gate could not see the floor.** `quality_gate` scored the underground
    clip 100. It now runs the shared `ground_clearance` check and fails it hard;
-   re-scoring the old artifact gives `passed=False, score=67,
-   hard_failures=["ground_clearance"]`, while the healthy clips still score 100.
+   re-scoring the old artifact gives `passed=False, score=67, hard_failures=["ground_clearance"]`,
+   while the healthy clips still score 100.
 
 The v1.1 lesson — the bottleneck was in the sit backend, not the controller —
 was right, but it was only half the story: the planner, the editor's mode
 router and the recipe file each contributed to the same failure. That is what
 the per-layer metrics are for.
 
-### 4.5 The checker is a tool, not a veto
+### 5.5 The checker is a tool, not a veto
 
 In v1.1 the controller's `finish` was silently overruled by `verify_goal()`, and
 a rejected finish forced another iteration. The controller could not tell the
@@ -604,7 +626,7 @@ judgment said "not satisfied" on a clip whose measurements passed every
 requirement, i.e. `agreement = False` — a real calibration error that the old
 aggregate hid.
 
-### 4.6 The two remaining rollbacks: a source that sits at the origin
+### 5.6 The two remaining rollbacks: a source that sits at the origin
 
 The 20-goal run left two failures, both on sit edits (`ep16`, `ep17`):
 
@@ -657,9 +679,9 @@ What is left is upstream and belongs in the generator, not in the controller:
 MLD occasionally returns a nearly static sit draft, and the 2-bone depth
 operator can only deepen a movement that is there.
 
-### 4.7 The sit hold stretched arm bones
+### 5.7 The sit hold stretched arm bones
 
-Re-running the 20 goals after §4.6 (`_v3_final3`) exposed one more sit defect.
+Re-running the 20 goals after §5.6 (`_v3_final3`) exposed one more sit defect.
 On "a person sits down and raises the right arm", the arm-raise edit produced a
 correct pose — wrist 0.40 m above the head — and the agent rolled it back:
 
@@ -699,9 +721,9 @@ Re-running the same instruction on the same clip now gives `valid=True`,
 the controller asked for, on a clip the gate accepts. A `sit lower` edit on the
 same clip still works (`pelvis_drop 0.432 → 0.582 m`, `valid=True`).
 
-### 4.8 Grounding belongs at the door, not in the edit
+### 5.8 Grounding belongs at the door, not in the edit
 
-§4.6 fixed the offset where the agent noticed it (the edit). The arm-raise
+§5.6 fixed the offset where the agent noticed it (the edit). The arm-raise
 regression suite showed the same defect arriving through the other door: two of
 the stored UI bases are displaced 0.85–0.88 m below the floor before any edit
 runs, so a *correct* geometric arm edit inherited a hard `ground_clearance`
@@ -730,7 +752,7 @@ stretched (its ankles sit 1.37 m below the pelvis on a 0.47 m torso), and that
 one still *reports* a floor failure — correctly, because a rigid lift cannot fix
 a stretched skeleton.
 
-### 4.9 The v1.6 run: the numbers that go with the four fixes
+### 5.9 The v1.6 run: the numbers that go with the four fixes
 
 Run: `outputs/agent_bench/_v3_final10` (same 20 goals, same controller, MLD with
 generation-side rejection sampling, the v1.6 editor and dual caption). Each
@@ -788,13 +810,16 @@ attribute it expected and the previous clip is restored, so a zero here is
 visible in the table rather than scored as a success.
 
 **The contract behind both review points** is executable:
-`python scripts/tests/test_agentic_contract.py` runs 58 checks against the code,
-`report.json` and one finished UI episode, and reads **58 / 58 passed**
-(`contract_checks.json`). It fails the build if the battery drops below 15
-cases, if a refusal is unnamed, if a finish lands on a clip worse than one the
-episode already measured, or if the UI episode never calls the editor.
+`python scripts/tests/test_agentic_contract.py` runs 66 checks against the code,
+`report.json`, one finished UI episode and this document, and reads
+**66 / 66 passed** (`contract_checks.json`). It fails the build if the battery
+drops below 15 cases, if a refusal is unnamed, if a finish lands on a clip worse
+than one the episode already measured, if the UI episode never calls the editor,
+if a step carries no reason, if a reported number cannot be recomputed from its
+clip, or if this note loses its requirement map (§0), its process table (§3), its
+severity-ranked problems (§7) or its definitions of done (§8).
 
-## 5. What the trace looks like
+## 6. What the trace looks like
 
 `outputs/agent_bench/<run>/epNN_*/agent_run.md` is the human-readable version of
 the JSON trace. One real episode (`final_dataset_llm/ep01`), verbatim:
@@ -824,10 +849,123 @@ step 5  finish
 
 The caption is not trusted blindly, and neither is the first judge: the same
 episode shows a low-confidence caption being overruled by the measured wrist
-height, and in the failure case of §4.4 the verifier overrules the controller
+height, and in the failure case of §5.4 the verifier overrules the controller
 itself.
 
-## 6. Reproduction
+## 7. What is still wrong (by severity)
+
+Severity here is how much a defect can mislead a reader, not how hard it is to
+fix. Each row says where it is visible.
+
+### P0 — would change the conclusion if ignored
+
+| Defect | Evidence | Why it matters |
+|---|---|---|
+| The success rate is a single draw of n = 20 | 0.90 (`_v3_final5`), 0.90 (`_v3_final7`), 1.00 (`_v3_final10`) | 1.00 is not a saturation claim. Without k draws per goal there is no interval and no pass@k, so a 2-goal swing is indistinguishable from noise. §8.1 |
+| The 0–100 alignment is an LLM judgement | `agreement = 1.00` says the judge matched the checker on these 20 clips, not that either is right | It can only be validated against human ratings. §8.2 |
+| Caption metrics are dataset-level | BLEU/ROUGE/CIDEr/GloVe are computed on 20 held-out HumanML3D clips with references | Pipeline clips have no reference sentence, so nothing in §5.3 measures the caption of a *generated* clip. §8.5 |
+| The open-vocabulary editor is routing, not a result | `test_open_vocab.py` 10/10 with a fake backend | SimMotionEdit consumes MotionFix-style SMPL features; the joints→SMPL fit and the checkpoint are still missing, so no open-vocabulary edit has ever run on a real backend. §8.4 |
+| BLEU-3/4 are ≈0 at this reference size | §5.3 | Quoting them as a caption regression would be wrong; they only become usable on the full test split. |
+
+### P1 — capability edges the tables already show
+
+| Defect | Evidence | Consequence |
+|---|---|---|
+| MLD sometimes returns a near-static draft | goal 17 in `_v3_final3`: 60 frames, largest pelvis-relative joint path 0.21 m, `body_moving = 0` | No relative operator can add motion the draft does not contain; the honest remedy is another draw, not an edit. |
+| `sit lower` is a constant drop | `edits.py`: 0.15 m, 0.18 m for "much lower", clamped by leg reach | "a little" and "a lot" are not parsed. §8.6 |
+| 5 of 21 battery cases are `no_effect` | §5.9 per-case table | These are real capability edges (stand up on a standing clip, turn on a seated clip, walk faster on a still clip, trim a clip with no tail, a depth clamped to zero). They are reported, not hidden, but coverage 0.615 is the honest number. |
+| An applied edit can be unverifiable | `n_unverifiable_edits = 0` today; the category exists | If a future family has no localisation ratio, it would be excluded from the following rate rather than counted as a miss — visible, but easy to misread. |
+| Speed and duration edits change frame count | frame retention 1.02 in the battery | Sub-clip extraction (trim, remove a preamble) is measured by retention, not by pose error; a purely temporal case can only be judged by the following check. |
+
+### P2 — engineering debt
+
+| Defect | Evidence | Consequence |
+|---|---|---|
+| `third_party/TM2T` is a local checkout, not a submodule | `.gitignore` ignores the tree and the checkpoints | A fresh clone has no learned caption until it is cloned there; `caption_edited` falls back and records `source`, but the report's learned-caption column would quietly become a template. |
+| There is no CI | `test_agentic_contract.py` is run by hand and writes `contract_checks.json` | Drift between the claim and the code is caught only when someone remembers to run it. §8.7 |
+| The UI replay is manual | `outputs/session/prompt_logs/…` lives under the git-ignored `outputs/` | The screenshots in §6 cannot be regenerated from a clone without redoing the clicks. |
+| `benchmark.py` runs episodes serially | 689 s for 20 goals | A k = 5 battery is ~1 h; parallel episodes over one GPU would need model-server work. |
+| The acceptance page is generated from one episode | `build_acceptance.py --episode <dir>` | It is only as current as the run it was pointed at; the numbers come from `report.json`, but the trace does not. |
+
+## 8. Next steps, each with a definition of done
+
+Ordered by how much each one changes what the experiment can claim. "Done" means
+the check lives in the repo and fails when the property is broken — the same
+standard as §3, not "we plan to".
+
+### 8.1 k draws per goal, reported as pass@k with an interval
+
+Why: turns §7's P0 into a measured distribution, and separates "the model
+cannot" from "this draw missed" at the episode level rather than the draft
+level. Method: freeze the controller, run `benchmark.py` with k = 5 seeds
+(100 episodes), report per-goal pass@1/5, mean ± 95 % Wilson interval, and the
+per-goal flip matrix. DoD: `report.json` carries `k`, `pass_at_1`, `pass_at_k`
+and the interval; `test_agentic_contract.py` requires `k ≥ 5` and n ≥ 100
+before the headline number is printed. Cost: ~1 h of GPU per battery; the
+watchdog already exists.
+
+### 8.2 Human rating of the final clips
+
+Why: the alignment judge has never been validated (§7 P0). Method: 40 final
+clips (2 per goal), two raters, 5-point "does this motion do what the sentence
+says", blind to the controller's score. DoD: Spearman ρ between the judge and
+the mean human score is reported, the 5 largest disagreements are listed with
+their measurements, and ρ ≥ 0.7 is the acceptance bar for quoting the judge at
+all. Risk: rater availability; a single rater still gives a ceiling on the
+claim.
+
+### 8.3 TMR R-Precision and FID through a joints→SMPL fit
+
+Why: R@1 at n = 20 has a 0.05 resolution and all goals are in-distribution
+(§2 (a)). Method: fit SMPL 6-D poses to the pipeline's joints, then run the TMR
+evaluator already vendored under `third_party/motionfix/eval-deps`. DoD: FID and
+R-Precision (top-1/2/3) on the full test split, plus the fit residual, so a bad
+fit cannot be mistaken for a bad generator. Risk: the fit is a new source of
+error and needs its own check (re-projected MPJPE < 0.05 body heights).
+
+### 8.4 Real SimMotionEdit edits
+
+Why: the open-vocabulary path is plumbing (§7 P0). Method: complete the
+joints→SMPL fit from §8.3, supply `preproc.sim_file` and the checkpoint, and
+route one instruction outside the registry through it. DoD: an `expect=apply`
+case in the battery whose `backend` is `simmotion`, judged by the same
+measurement and rollback rule; if it fails, the failure is a named refusal in
+the same table. Risk: their preprocessing expects MotionFix features; a
+conversion mismatch would show up as a constant offset, which the measurement
+would catch but not fix.
+
+### 8.5 Caption consistency as an accuracy number
+
+Why: `caption_verdict` is a decision signal, never scored (§7 P0). Method:
+label 60 (clip, goal) pairs as fit / not fit from the measurements, then score
+the verdict's `needs_fix` as precision/recall against those labels, and report
+learned-vs-rule agreement per class. DoD: a table with precision, recall and the
+confusion matrix; `caption_verdict` is quoted in the report only when recall on
+"needs_fix" ≥ 0.9. Risk: the labels come from the same measurements the checker
+uses, so this measures consistency, not truth — §8.2 is the truth anchor.
+
+### 8.6 Amount-aware depth, and the rest of the P1 list
+
+Why: `sit lower` is a constant (§7 P1), and "a little" / "a lot" is the most
+common phrasing a user will try. Method: parse the amount into δ, clamp against
+the leg reach the IK already computes, and add two declared battery cases
+(`sit a little lower`, `sit much lower`) whose expected deltas differ by ≥ 2×.
+DoD: both cases pass with distinct `pelvis_drop` values, and the clamp is
+asserted on a short-legged source. Also in this tranche: a `speed ×0.5` case
+whose check is speed, not distance, so the temporal family has a positive
+example.
+
+### 8.7 Continuous integration
+
+Why: the contract is only as good as the last manual run (§7 P2). Method: run
+`test_agentic_contract.py`, `test_agent_edits.py`, `test_resample.py` and
+`test_open_vocab.py` (no GPU) on every push, with the GPU suites nightly on a
+self-hosted runner. DoD: a red check on a deliberately broken contract (e.g.
+remove a rail) before the workflow is trusted; the badge is linked from this
+note. Risk: the GPU suites need the `mld` / `motionfix` environments, so the
+nightly job must pin them.
+
+## 9. Reproduction
 
 ```powershell
 # Battery A: MLD generator, 20 goals, <=2 edits, module (c) on 20 clips.
@@ -897,176 +1035,14 @@ python scripts/tests/probe_revise.py ^
 
 Artifacts per run:
 
-- `<out>/report.md`, `report.json` — the tables in §4;
+- `<out>/report.md`, `report.json` — the tables in §5;
 - `<out>/epNN_*/agent_run.json` — full controller trace (thought, action, args,
   observation, assessment, token usage);
 - `<out>/epNN_*/agent_run.md` — same trace as a table;
 - `<out>/epNN_*/stepNN_*/03_edited_preview.gif` — per-step clips;
-- `<out>/contract_checks.json` — the 58 contract checks, one line of evidence
+- `<out>/contract_checks.json` — the 66 contract checks, one line of evidence
   each, written by `scripts/tests/test_agentic_contract.py`;
 - `outputs/session/prompt_logs/<date>-<topic>/log.json` + `*.png` — the manual
   web replay, one message per step, with the run dir, trace, score, previews and
   screenshots of the page at that point (v1.6: four messages, two of which the
   controller finished without an edit because the measurement already passed).
-
-## 7. Limitations and next steps
-
-Fixed in v1.2 (each verified, not just described):
-
-- **Sit depth.** `sit lower` now runs a real depth operator with planted feet
-  and preserved bone lengths; the underground clips of v1.1 are gone, and
-  `quality_gate` fails any clip that still goes through the floor.
-- **Mode routing.** `geometric_only` no longer means "run diffusion anyway";
-  unknown modes raise instead of silently choosing a backend.
-- **Impossible instructions.** Rejected by the executable capability registry
-  before any backend work, with a reason and a suggestion, and counted in
-  `instruction_coverage`.
-- **The acceptance check.** It is a tool the controller must consult, its
-  verdict is returned to the model, and the controller's own claim is recorded
-  next to it (`agreement`), instead of being silently overridden.
-
-Fixed in v1.3:
-
-- **Restored sources at the origin.** A MotionsFix-native clip keeps its root at
-  0, so FK lands the body ~0.8 m below the floor; that was the real cause of the
-  last two rollbacks. `offset_to_ground` lifts such a source once (joints and
-  pose transl together), and the agent still rejects genuine articulation
-  failures because those start on the floor.
-- **Attribution of gate failures.** `edit_motion` splits gate failures into
-  `new_hard_failures` and `pre_existing_hard_failures`. A near-static MLD draft
-  that already fails `body_performance` no longer makes a correct depth edit
-  look destructive.
-- **The sit hold stretched bones.** The post-contact rebound clamp moved the
-  pelvis joint alone (lengthening its three child bones) and blended the arms
-  linearly (up to +30 % bone length). It now lowers the pelvis through the leg
-  IK and restores each arm chain's bone lengths, so the arm-raise edit on a sit
-  clip passes `bone_rigid` instead of being rolled back.
-- **Instruction gate: contradictions and empty locomotion.** "Walk in place,
-  keep the root planted" is now rejected as `in_place` (a relative operator
-  cannot remove travel), `verify_goal` reads "in place" as a *max* on travel,
-  and a `walk` edit on a clip with < 0.15 m of travel returns
-  `edit_needs_existing_locomotion` instead of rebuilding the clip and erasing
-  a 186° turn.
-- **Sit depth matched to the wording.** `sit lower` now drops 0.15 m (0.18 m
-  for "much lower") instead of 0.10 m, so one edit clears the 0.15 m acceptance
-  threshold instead of needing a second identical pass.
-- **Goals the checker could not see no longer pass by default.** `ankle_lift`
-  and `jump_rise` / `jump_clearance` are measured, so "kicks" and "jumps" have
-  to be visible in the joints. Two of the 20 goals used to succeed purely
-  because nothing tested them.
-
-Fixed in v1.4:
-
-- **A generation-side gap had no action.** `resample_motion(prompt, n)` draws
-  `n` drafts of the same prompt from a single MLD process, measures each with
-  the checker's own requirement plus a relative gap, adopts the closest valid
-  one and reports the rest; `resample_unavailable` when every candidate fell
-  back to the retrieved clip, without charging the budget.
-
-Fixed in v1.5:
-
-- **The MLD environment.** The blocked file was `thinc/backends/linalg`
-  (`WinError 4551`), and reinstalling the same wheels reproduces the block
-  because the verdict follows the file. Text→motion never needs spaCy, so the
-  vendored MLD imports it lazily, and `thinc 8.3.14` + `blis 1.2.0` are the
-  binaries this policy loads; `demo.py` runs again, so Battery A is real MLD
-  rather than `dataset_fallback`.
-- **Rejection sampling happens where the constraint can still be satisfied.**
-  `scripts/agent/sampling.py` is the single policy: `constraints(goal)` comes
-  from the same `verify_goal` the checker uses, `rank` orders drafts by physical
-  validity then relative gap, and `_mld_draft` draws a batch when the goal names
-  a measurable attribute, keeping the closest draft *before* the pipeline runs.
-  The same prompt that gave 1.35 m / 0.12 m / 0.02 m of travel on three draws is
-  now filtered at the source.
-- **The loop is reachable from the UI.** `agent` in the mode picker posts to
-  `/api/agent`; the response carries the trace (`step / action / thought /
-  line`), the final caption and a session block, so the preview and quality
-  panels are the real artifacts of the same loop the benchmark measures.
-- **The editor can leave the closed set.** With `AGENT_OPEN_VOCAB_EDIT=1` and a
-  ready SimMotionEdit checkout, wording outside the registry is routed to it as
-  written and judged by the same measurement + rollback rule
-  (`backend: "simmotion"` in the observation). It stays off by default because
-  the benchmark's contract is the closed set, and a half-installed backend must
-  not turn honest rejections into `simmotion_infer_failed` noise.
-
-Fixed in v1.6 (all four items from the review, each with a re-runnable check):
-
-- **The editing claim now has a sample.** `scripts/agent/edit_benchmark.py` was
-  rebuilt: 21 declared cases over 8 operator families, every case starting from
-  its own copy of the source clip (the old battery edited a clip a previous case
-  had already changed), and every case declaring what a correct outcome is —
-  `apply` (the registry accepts it and the attribute must move) or `refuse` (the
-  editor cannot do it and must say why). The report separates
-  `instruction_coverage` (applied / applicable), `refusal_honesty` (named
-  refusals / cases that should be refused), `instruction_following_rate`,
-  `no_change_rate`, `n_no_effect`, `mean_target_vs_rest`,
-  `mean_non_target_mpjpe_norm`, `mean_frame_retention`, `rollback_rate` and
-  per-family aggregates. The three `refuse` cases added for *preconditions*
-  ("stop turning" on a clip that does not turn, "walk faster" on a still clip,
-  "stand up" on a walk) are the ones the old battery scored as silent successes.
-- **The caption is no longer either/or.** `describe_motion` returns a learned
-  M2T sentence *and* a caption written from the same joints the checker reads
-  (`metrics.structured_caption`, e.g. "a person right arm raised, right hand
-  above the head"), then compares both with the goal on GloVe cosine, content
-  recall and action-family overlap. The tri-state `caption_verdict` fuses them:
-  `match` (both agree), `uncertain` (the learned caption reads coarse while the
-  measured one agrees — verify, do not edit) and `mismatch` (both disagree —
-  edit). On the run's own first episode the learned caption says "a person wave
-  with their right hand" for a clip whose measured arm is overhead; the old
-  bag-of-words score reads that as a match (GloVe 0.87), content recall reads it
-  as 0.17, and the verdict is `uncertain`, which is correct.
-- **Signed turns, and an archive that cannot end worse than its best clip.**
-  `yaw_net_deg` (signed, unwrapped shoulder-vector rotation) is measured next to
-  `yaw_span_deg`, `verify_goal` checks the direction of a "turns left/right N
-  degrees" request and accepts 88.1° for 90° while rejecting 71.9°, and every
-  candidate clip is archived with its metrics. `restore_motion` is a tool, and
-  the controller's `finish` is redirected to it when an earlier clip has a
-  smaller requirement gap, so no episode ends on a clip worse than the best one
-  it measured.
-- **No silent no-ops, and both arms are checked.** An operator that would no-op
-  now refuses with a named precondition, and an edit that returns a *different*
-  clip without moving the attribute the instruction names is rolled back
-  (`edit_did_not_follow_instruction`), as is one that returns the input
-  byte-for-byte (`edit_had_no_effect`). `raise both arms` is measured on both
-  arms instead of defaulting to one side.
-
-Still open, in order of expected value:
-- **Success is still one draw per run in Battery A.** Rejection sampling cuts
-  the variance of a single draft, but the headline rate is still measured on 20
-  goals × 1 run. A battery with k draws per goal (k · 20 episodes) is what would
-  separate "the model cannot" from "this run drew badly"; `distinct_candidates`
-  and `drafts_rejected` in the report are the inputs for that analysis.
-- **The generator sometimes returns a static clip.** On "a person stands up from
-  a chair" MLD produced 60 frames whose largest pelvis-relative joint path was
-  0.21 m (`body_moving = 0`) — a seated pose, not a movement. The gate now says
-  so and the agent no longer blames the edit, but no operator can add motion the
-  draft does not contain, and the in-place filter has nothing to select.
-- **The open-vocabulary path is plumbing, not a result.** `simmotion_edit.py`
-  speaks joints-in/joints-out, while SimMotionEdit consumes MotionFix-style
-  SMPL features; a real run needs a joints→SMPL fit plus their checkpoint and
-  `preproc.sim_file`. `test_open_vocab.py` proves routing, capability text and
-  failure reporting with a fake backend, and the docs state the requirement —
-  it does not yet claim better edits than the geometric operators.
-- **The sit depth is a constant.** `sit lower` drops a fixed 0.15 m (0.18 m for
-  "much lower") rather than parsing "a little" or "a lot"; the IK already
-  computes the reachable range, so clamping δ against it is the natural next
-  step. It now clamps against the leg reach, so a short-legged draft gets less.
-- **R@1 is still coarse at n = 20.** Resolution 0.05, and all goals are
-  in-distribution by design. Quote it as a between-battery signal. TMR-based
-  R-Precision / FID needs a joints→SMPL fit and is the correct next measurement.
-- **The alignment score is a judge.** `agreement` reports how often it matched
-  the measurement, which is a calibration number, not an accuracy number. A
-  human rating of the final clips on a 5-point scale is the right validation.
-- **Caption metrics are dataset-level.** BLEU-3/4 are near 0 with three short
-  references per clip: the references exist, but the model paraphrases and its
-  sentences are longer, so few 3-gram matches survive and the brevity penalty
-  compounds it. ROUGE-L, CIDEr-D and GloVe cosine are the metrics to quote at
-  this size. The caption–kinematics consistency check the earlier draft of this
-  list asked for is what v1.6 adds (`structured_caption` +
-  `caption_verdict`), but it is a *decision* signal for the controller, not yet
-  a reported accuracy number: pairing it with the held-out references is the
-  next measurement.
-- **Battery B is not a generation result.** Its success rate must not be
-  compared with Battery A's as if the controller improved; the draft is fixed
-  and easier. The comparable quantity is the trace, not the headline rate.
-

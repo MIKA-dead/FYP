@@ -65,6 +65,25 @@ def main() -> int:
     # free-form text reaches the controller unchanged
     check("free_text_goal", "USER GOAL: {goal}" in src)
 
+    # --- the report structure the review asked for ------------------------
+    doc_path = REPO / "docs" / "agentic_pipeline_v1.md"
+    doc = doc_path.read_text(encoding="utf-8") if doc_path.is_file() else ""
+    check("report_has_a_requirement_map",
+          "## 0. Requirement map" in doc
+          and all(f"**{k})**" in doc for k in ("i", "ii", "1", "2", "3")),
+          "each review line mapped to code, check and evidence")
+    check("report_has_a_process_section",
+          "## 3. How the work was completed" in doc
+          and "Defect observed" in doc and "Proof it is fixed" in doc,
+          "defect → change → proof table, not a changelog")
+    check("report_states_open_problems",
+          "## 7. What is still wrong" in doc
+          and all(f"### {p}" in doc for p in ("P0", "P1", "P2")),
+          "severity-ranked with evidence")
+    check("report_has_next_steps_with_dod",
+          "## 8. Next steps" in doc and doc.count("DoD:") >= 6,
+          f"{doc.count('DoD:')} definitions of done")
+
     # --- (i) metrics come from measurements, per module -------------------
     from metrics import (caption_signals, kinematic_summary, load_joints,
                          text_similarity)
@@ -148,6 +167,15 @@ def main() -> int:
     check("report_has_four_sections",
           {"module_a_generation", "module_b_editing", "module_c_caption", "loop"}
           <= set(report))
+    # A reported number must be recomputable from the artifact it describes.
+    if clip is not None:
+        rep_row = report["module_a_generation"]["rows"][0]["metrics"]
+        recalc = kinematic_summary(load_joints(clip))
+        same = abs(float(rep_row.get("root_travel") or 0)
+                   - float(recalc.get("root_travel") or 0)) <= 0.01
+        check("reported_metric_is_recomputable", same,
+              f"report root_travel={rep_row.get('root_travel')} "
+              f"recomputed={round(float(recalc.get('root_travel') or 0), 5)}")
     check("no_saturating_score_field",
           "score" not in {k for k in report if k != "wall_seconds"},
           ", ".join(k for k in report))
@@ -221,6 +249,9 @@ def main() -> int:
                    for a, act in enumerate(actions) if act == "edit_motion"
                ))
     check("episode_follows_the_mandatory_order", ordered, " → ".join(actions))
+    check("every_step_gives_a_reason",
+          all(str(s.get("thought") or "").strip() for s in ep["steps"]),
+          f"{len(ep['steps'])} steps, e.g. “{str(ep['steps'][0].get('thought'))[:60]}”")
     desc = [s for s in ep["steps"] if s["action"] == "describe_motion"]
     check("caption_compared_with_goal",
           bool(desc) and all("similarity" in (s["observation"] or {}) for s in desc),
@@ -230,6 +261,10 @@ def main() -> int:
           bool(desc) and all({"rule_caption", "caption_verdict"} <= set(s["observation"] or {})
                              for s in desc),
           str(desc[0]["observation"].get("caption_verdict", {}).get("level")) if desc else "")
+    check("verdict_is_a_decision",
+          bool(desc) and all("needs_fix" in (s["observation"].get("caption_verdict") or {})
+                             for s in desc),
+          str([(s["observation"]["caption_verdict"] or {}).get("needs_fix") for s in desc]))
     check("rule_caption_names_a_measurement",
           bool(desc) and any(
               any(w in str(s["observation"].get("rule_caption") or "")
@@ -249,6 +284,24 @@ def main() -> int:
     check("loop_stopped_when_measured",
           ep["summary"]["satisfied"] and ep["summary"]["agreement"],
           f"checker={ep['summary']['checker_satisfied']}")
+
+    # --- the loop really is a loop: check → edit → check, in one episode --
+    repeated = []
+    for row in loop["rows"]:
+        if int(row.get("edits") or 0) < 1:
+            continue
+        ep_dir_row = Path(str(row.get("episode_dir") or ""))
+        f = ep_dir_row / "agent_run.json"
+        if not f.is_file():
+            continue
+        acts = [s["action"] for s in
+                json.loads(f.read_text(encoding="utf-8-sig"))["steps"]]
+        if (acts.count("describe_motion") >= 2
+                and acts.count("check_requirement") >= 1
+                and acts[-1] == "finish"):
+            repeated.append(" → ".join(acts))
+    check("loop_repeats_check_and_edit", bool(repeated),
+          repeated[0] if repeated else "no episode described twice and then finished")
 
     # --- no episode may end on a clip worse than the best it measured -----
     worst = [

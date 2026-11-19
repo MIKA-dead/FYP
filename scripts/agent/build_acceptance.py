@@ -109,21 +109,95 @@ def build(report_path: Path, episode_dir: Path, out: Path) -> Path:
     n_goals = len(loop["rows"])
     n_ok = sum(1 for r in loop["rows"] if r.get("satisfied"))
     check_rows = [
-        ["自由文本输入", "UI 输入框 → <code>goal</code> 字符串",
+        ["i) 量化指标代替 SCORE",
+         "<code>metrics.py</code>；<code>report.json</code> 四段，无 <code>score</code> 字段",
+         "下方 §3 四表：19 个关节测量量 + R@1/R@3 + BLEU/ROUGE/CIDEr + instruction following + non-target MPJPE"],
+        ["ii) 用户输入是自由文本", "UI 输入框 → <code>goal</code> 字符串",
          f"本页目标「{esc(ep['goal'])}」，无人写死步骤"],
-        ["LLM 自己选工具 (a)(b)(c)",
-         "<code>agent.py</code> SYSTEM + TOOL_SPECS，一次一个动作",
-         f"本次 {ep['summary']['tool_calls']} 次工具调用全部由控制器选出"],
-        ["(a) 生成动作", "<code>generate_motion</code> → MLD / 检索",
-         "生成端按测量属性拒绝采样，先把最接近的一稿交给循环"],
-        ["(c) 描述 + 相似度判断", "<code>describe_motion</code> → 学习 caption + 测量 grounded caption",
-         "两段 caption 各自与目标做 GloVe / content recall / action family 比较，给出 match / uncertain / mismatch"],
-        ["写成文本再 (b) 修改", "<code>edit_motion(instruction)</code>",
+        ["1) 先推理需求，再用 (a) 生成",
+         "<code>agent.py</code> SYSTEM（thought + 一个动作）+ 生成端拒绝采样",
+         "第 1 步 thought「No clip yet; generate the requested motion.」→ 抽 3 稿、弃 3 稿"],
+        ["2) 用 (c) 检查并比较 caption 与输入",
+         "<code>describe_motion</code> 双 caption + GloVe/content recall/action family + <code>caption_verdict.needs_fix</code>",
+         "学习 caption 与测量 caption 不一致时判 mismatch，而不是直接信文字"],
+        ["3) 写成文本，再用 (b) 修改",
+         "<code>edit_motion(instruction)</code>，指令由控制器写",
          "判断缺什么就写哪一句；编辑后 gap 变大时归档里仍留着更近的一稿"],
-        ["循环直到满足", "MANDATORY ORDER: describe → check → edit / restore / finish",
+        ["*) 循环 2)–3) 直到判断满足",
+         "MANDATORY ORDER: describe → check → edit / restore / finish",
          "finish 前必须 check；若存在更近的旧稿，finish 被纠正为 restore_motion"],
-        ["(i) 量化指标代替 SCORE", "report.json 的 module_a/b/c + loop 四段",
-         "下方四表：无 SCORE 字段，全部为可复算指标"],
+        ["报告结构：过程 / 问题 / 下一步",
+         "<code>docs/agentic_pipeline_v1.md</code> 的 §0、§3、§7、§8",
+         "§3 缺陷→修法→验证；§7 按严重度；§8 每条带完成判据（本页 §5–§6 是摘要）"],
+    ]
+
+    timeline_rows = [
+        ["v1.2", "sit lower 把身体压到地下 2.47 身高，而 quality_gate 仍给 100",
+         "sit.deepen 用 2-bone IK；gate 共用 ground_clearance；能力注册表先拒绝不可能指令",
+         "pelvis_drop 0.367→0.467，穿地 0.000"],
+        ["v1.3", "一次正确的抬臂编辑被回滚两次（ep16/ep17）",
+         "源片段统一落地 offset_to_ground；只按新增硬伤归责（new vs pre_existing）",
+         "同一编辑 pelvis_drop 0.0055→0.1055"],
+        ["v1.3", "sit hold 单独平移 pelvis 关节并线性混合手臂，骨长最大 +30%",
+         "改为逐帧经同一套 leg IK 下降；手臂链按接触帧复位骨长",
+         "bone_cv 0.0197，编辑应用，arm_raise 1.969"],
+        ["v1.3", "kick / jump 没有测量，任何合法片段都算成功",
+         "新增 ankle_lift、jump_rise、jump_clearance",
+         "20 目标表逐条可查"],
+        ["v1.4", "编辑器是相对算子，造不出草稿里没有的位移或转向",
+         "resample_motion：一次加载抽 n 稿，逐稿测量，留最接近的",
+         "目标 12/13 由重采样解决"],
+        ["v1.5", "MLD 环境被 Windows Application Control 拦下，跑不出真样本",
+         "vendored MLD 的 spacy 导入改为惰性；thinc/blis 换到策略接受的一对",
+         "本页数字是真 MLD 输出而非 dataset_fallback"],
+        ["v1.5", "单次抽样分不清「模型不会」和「这次没抽到」（同一提示 1.35/0.12/0.02 m）",
+         "生成端拒绝采样（sampling.py），可测量提示抽 3 稿",
+         "本次 17 稿被弃"],
+        ["v1.6", "编辑结论只有循环内 2 次编辑；旧基准在同一片段上叠加编辑，还把拒绝算成成功",
+         "21 例 / 8 族 / 每例独立源副本 / 声明 apply 或 refuse；三种结局",
+         "coverage 0.615，拒绝诚实度 8/8，静默空操作 0"],
+        ["v1.6", "学习 caption 把「腕高于头」说成 wave，词袋分数仍读成 match（0.87）",
+         "双 caption + 三态 verdict，content recall 与 action family 并列",
+         "本页第 2 步 verdict=mismatch"],
+        ["v1.6", "resample 预算只记「替换成功」，保留原片段的抽样不计数，可无限抽",
+         "预算改为记尝试次数，resamples 仍只记采用",
+         "test_resample 15/16 → 16/16"],
+    ]
+
+    problems_rows = [
+        ["P0", "成功率是 n=20 的单次抽样", "同套件读过 0.90 / 0.90 / 1.00",
+         "没有区间与 pass@k，2 个目标的波动无法与噪声区分"],
+        ["P0", "0–100 对齐分是 LLM 判断", "agreement=1.00 只说明它与 checker 在这 20 条上一致",
+         "只能用人工评分验证"],
+        ["P0", "caption 指标只到数据集级", "BLEU/ROUGE 用 20 条带参考的 HumanML3D 片段",
+         "生成片段没有参考句，§3 的 caption 数不是「生成片段的 caption 准确率」"],
+        ["P0", "开放词汇编辑只是路由", "test_open_vocab 用假后端 10/10",
+         "没有 joints→SMPL fit 与 checkpoint，真实后端一次都没跑过"],
+        ["P1", "MLD 偶尔给近静止草稿", "60 帧最大关节路径 0.21 m，body_moving=0",
+         "相对算子无法无中生有，只能重抽"],
+        ["P1", "sit lower 是固定深度", "0.15 m / 0.18 m，未解析 a little / a lot",
+         "用户措辞无法映射到幅度"],
+        ["P2", "TM2T 是本地 checkout，不在仓库里", ".gitignore 忽略整棵树与权重",
+         "新克隆没有学习 caption，会静默退回模板并只记 source"],
+        ["P2", "没有 CI，契约测试靠手动跑", "test_agentic_contract.py 写 contract_checks.json",
+         "契约漂移要等人想起来才被发现"],
+    ]
+
+    next_rows = [
+        ["k 次抽样 / 目标", "k=5，100 episodes，报 pass@1/pass@k 与 Wilson 区间",
+         "report.json 带 k / pass_at_k / 区间；契约测试要求 k≥5 且 n≥100"],
+        ["人工评分", "40 条终稿，2 位评分者，5 分制，盲评",
+         "报告 judge 与人工分的 Spearman ρ；ρ≥0.7 才允许引用该分数"],
+        ["TMR R-Precision / FID", "joints→SMPL 拟合后跑已 vendored 的 TMR 评测",
+         "全测试集 FID 与 R@1/2/3，同时报拟合残差"],
+        ["真实 SimMotionEdit", "补齐 joints→SMPL 与 checkpoint，走一条闭集外指令",
+         "基准里出现 backend=simmotion 的 expect=apply 用例，同一套回退规则"],
+        ["caption 一致性准确率", "60 对 (clip, goal) 由测量打标，评 needs_fix 的 precision/recall",
+         "precision/recall 与混淆矩阵；recall≥0.9 才在报告里引用 verdict"],
+        ["幅度感知的 sit depth", "解析 a little / a lot，按腿长 clamp；新增两例",
+         "两例 pelvis_drop 相差 ≥2×，短腿源上验证 clamp"],
+        ["CI", "每次 push 跑 4 个无 GPU 套件，夜间跑 GPU 套件",
+         "故意破坏一条 rail 时 CI 必须变红"],
     ]
 
     battery_table = ""
@@ -300,10 +374,11 @@ def build(report_path: Path, episode_dir: Path, out: Path) -> Path:
            padding: 10px 14px; margin-top: 12px; font-size: 13px; }}
 </style></head>
 <body>
-<h1>学长的两条要求：实现位置与实测结果</h1>
+<h1>学长要求：agentic 管线 + 逐模块量化指标</h1>
 <div class="sub">现场 episode <code>{esc(Path(episode_dir).name)}</code> ·
   20-goal 报告 <code>{esc(Path(report_path).parent.name)}</code> ·
   policy <code>{esc(report['config']['policy'])}</code></div>
+<div class=sub>本页结构：§1 要求对照 · §2 一次循环 · §3 模块指标 · §4 20 目标 · §5 工作过程 · §6 问题与下一步</div>
 
 <h2>1. 要求 → 代码位置 → 本次证据</h2>
 <div class="card">
@@ -335,6 +410,27 @@ caption、工具轨迹重算。失败也如实计入：{failed_txt}
 <h2>4. {n_goals} 个自由文本目标的结果（同一控制器与工具）</h2>
 <div class="card">
 {table(["#", "goal（自由文本）", "编辑", "重采样", "回退", "最接近 gap", "最终 gap", "达成", "对齐", "秒"], goal_rows)}
+</div>
+
+<h2>5. 这些工作是怎么完成的（缺陷 → 修法 → 验证）</h2>
+<div class="card" id="process">
+{table(["版本", "观察到的缺陷（证据）", "改了什么", "怎么证明改好了"], timeline_rows)}
+  <div class="muted" style="margin-top:8px">
+    完整版在 <code>docs/agentic_pipeline_v1.md</code> §3：3.1 全表、3.2 四个诊断过程、
+    3.3 被推翻的三个判断（包括「pipeline 是 agentic 的」在 v1.1 只算半真）。
+  </div>
+</div>
+
+<h2>6. 现在的问题 / 下一步（每条都带完成判据）</h2>
+<div class="grid2">
+  <div class="card" id="problems">
+    <h3>现在的问题 <span class="muted">按严重度：会不会改变结论</span></h3>
+    {table(["级别", "问题", "证据", "影响"], problems_rows)}
+  </div>
+  <div class="card" id="next">
+    <h3>下一步目标 <span class="muted">Done = 仓库里有会变红的检查</span></h3>
+    {table(["目标", "方法", "完成判据"], next_rows)}
+  </div>
 </div>
 
 <div class="muted" style="margin-top:18px">
