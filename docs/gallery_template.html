@@ -1,0 +1,121 @@
+﻿<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Motion gallery - __NAME__</title>
+<style>
+  :root { --ink:#14181d; --muted:#6b7280; --line:#e2e6ea; --blue:#1f4e79;
+          --green:#0b6b3a; --red:#a3261b; --amber:#b4581f; --bg:#f6f7f9; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.5 "Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+         color:var(--ink); background:var(--bg); display:flex; height:100vh; overflow:hidden; }
+  #side { width:315px; flex:0 0 315px; background:#fff; border-right:1px solid var(--line);
+          display:flex; flex-direction:column; }
+  #side h1 { font-size:15px; margin:0; padding:16px 16px 4px; }
+  #side .sum { color:var(--muted); font-size:12px; padding:0 16px 12px; }
+  #list { overflow:auto; flex:1; border-top:1px solid var(--line); }
+  .item { padding:9px 14px; border-bottom:1px solid #f0f2f5; cursor:pointer;
+          display:flex; gap:8px; align-items:flex-start; }
+  .item:hover { background:#f7f9fc; }
+  .item.on { background:#eaf1f8; box-shadow:inset 3px 0 0 var(--blue); }
+  .item .n { color:var(--muted); font-size:11px; width:18px; flex:0 0 18px; padding-top:2px; }
+  .item .t { flex:1; font-size:12.5px; }
+  .item .b { font-size:11px; color:var(--muted); }
+  .ok { color:var(--green); font-weight:600; }
+  .bad { color:var(--red); font-weight:600; }
+  #main { flex:1; overflow:auto; padding:22px 26px 40px; }
+  .goal { font-size:19px; font-weight:600; margin:0 0 4px; }
+  .sub { color:var(--muted); font-size:12.5px; margin-bottom:16px; }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+  .chip { background:#fff; border:1px solid var(--line); border-radius:999px;
+          padding:3px 10px; font-size:12px; }
+  .row { display:flex; gap:14px; overflow-x:auto; padding-bottom:12px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px;
+          padding:10px 12px; flex:0 0 272px; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+  .card h3 { font-size:12px; margin:0 0 2px; color:var(--blue); }
+  .card .why { font-size:11.5px; color:var(--muted); min-height:46px; margin:0 0 8px; }
+  .card img { width:100%; border-radius:6px; background:#eef1f4; display:block; }
+  .card .instr { font-size:12px; background:#fdf1ea; color:var(--amber);
+                 border-radius:6px; padding:4px 7px; margin:7px 0; }
+  .kv { display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
+  .nocap { height:132px; border-radius:6px; background:#f2f5f8; color:#8a9199;
+           font-size:11.5px; display:flex; align-items:center; justify-content:center; }
+  .kv span { font-size:11px; background:#f2f5f8; border-radius:5px; padding:2px 6px; }
+  .verdict { font-size:11px; color:var(--muted); margin-top:6px; }
+  .note { background:#fff8e6; border:1px solid #f0d9a6; border-radius:8px;
+          padding:10px 14px; font-size:12.5px; margin-top:6px; max-width:920px; }
+</style></head><body>
+<div id="side">
+  <h1>Motion gallery</h1>
+  <div class="sum"><b>__OK__/__TOTAL__</b> goals satisfied &middot; __NAME__<br>
+    click a goal to replay draft, edits, final</div>
+  <div id="list"></div>
+</div>
+<div id="main"></div>
+<script>
+const GOALS = __PAYLOAD__;
+const LIST = document.getElementById('list');
+const MAIN = document.getElementById('main');
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g,
+  function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function num(v) { return Number(v || 0).toFixed(3); }
+
+GOALS.forEach(function (g, idx) {
+  const d = document.createElement('div');
+  d.className = 'item';
+  d.dataset.i = idx;
+  d.innerHTML = '<div class="n">' + g.n + '</div><div><div class="t">' + esc(g.goal) +
+    '</div><div class="b">' + (g.satisfied ? '<span class="ok">satisfied</span>' :
+    '<span class="bad">not satisfied</span>') + ' &middot; ' + g.edits + ' edit(s) &middot; ' +
+    g.resamples + ' resample(s)</div></div>';
+  d.onclick = function () { select(idx); };
+  LIST.appendChild(d);
+});
+
+function select(idx) {
+  document.querySelectorAll('.item').forEach(function (e) {
+    e.classList.toggle('on', Number(e.dataset.i) === idx);
+  });
+  const g = GOALS[idx];
+  const cards = g.steps.filter(function (s) {
+    return s.action !== 'check_requirement' && s.action !== 'finish';
+  }).map(function (s) {
+    const kv = s.metrics.map(function (m) {
+      return '<span>' + esc(m[0]) + ' ' + esc(m[1]) + '</span>';
+    }).join('');
+    const gapTxt = (s.gap == null) ? '' : '<span>gap ' + num(s.gap) + '</span>';
+    const sim = (s.similarity && s.similarity.glove_cosine != null) ?
+      '<div class="verdict">caption "' + esc(s.caption) + '"<br>GloVe ' +
+      Number(s.similarity.glove_cosine).toFixed(2) + ' &middot; content recall ' +
+      Number(s.similarity.content_recall || 0).toFixed(2) + ' &middot; verdict <b>' +
+      esc(s.verdict) + '</b></div>' : '';
+    return '<div class="card"><h3>step ' + s.step + ' &middot; ' + esc(s.action) + '</h3>' +
+      '<p class="why">' + esc(s.thought) + '</p>' +
+      (s.instruction ? '<div class="instr">instruction: "' + esc(s.instruction) + '"</div>' : '') +
+      (s.gif ? '<img src="' + s.gif + '" alt="step ' + s.step + '">' :
+        '<div class="nocap">no clip at this step</div>') +
+      '<div class="kv">' + kv + gapTxt + '</div>' + sim + '</div>';
+  }).join('');
+
+  let note = 'The draft satisfied every check, so the agent did not edit. That is the expected ' +
+             'case, not a skipped step.';
+  if (g.edits > 0) {
+    note = 'Compare the last two clips: this is where the agent corrected itself. The numbers ' +
+           'under each clip say whether the change was local (target moved, the rest did not).';
+  } else if (g.resamples > 0) {
+    note = 'No edit could fix this draft (a relative operator cannot add motion), so the agent ' +
+           'asked the generator for another draw.';
+  }
+
+  MAIN.innerHTML = '<h2 class="goal">' + esc(g.goal) + '</h2>' +
+    '<div class="sub">goal #' + g.n + ' &middot; final gap ' + num(g.gap) +
+    ' &middot; ' + Math.round(g.seconds || 0) + ' s' +
+    (g.caption ? ' &middot; final caption "' + esc(g.caption) + '"' : '') + '</div>' +
+    '<div class="chips">' +
+      '<span class="chip">' + (g.satisfied ? '<span class="ok">satisfied</span>' :
+        '<span class="bad">not satisfied</span>') + ' by the checker</span>' +
+      '<span class="chip">' + g.edits + ' edits</span>' +
+      '<span class="chip">' + g.resamples + ' resamples</span>' +
+      '<span class="chip">' + g.restores + ' restores</span>' +
+    '</div><div class="row">' + cards + '</div><div class="note">' + esc(note) + '</div>';
+}
+select(0);
+</script>
+</body></html>

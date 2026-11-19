@@ -186,6 +186,15 @@ judge — the measurement under each strip is what `check_requirement` read.
 **6. Animated comparison.** `docs/figures/fig06_ep16_before_after.gif` is the
 draft and the edited clip playing side by side, same camera, 18 fps.
 
+**7. The same thing, clickable.** `outputs/agent_gallery/index.html` lists all 20
+goals; one click shows that goal's draft, every edit and every description as
+cards, with the measurement under each clip. Rebuild with
+`python scripts/agent/build_motion_gallery.py`. This is the page to open when
+the question is "which failure do we fix next": pick a goal, watch the clip,
+read the number the checker read.
+
+![fig7](docs/figures/fig07_gallery.png)
+
 ## 6. One loop, verbatim
 
 `outputs/session/ui_runs/0e68ce14_UI_AGENT_20261115-224751`, goal
